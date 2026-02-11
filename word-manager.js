@@ -25,12 +25,11 @@ const WordManager = {
      */
     loadAll: async function() {
         try {
-            // 각 월드의 JSON 파일 경로
-            const files = [
-                { worldId: 1, path: 'world1.json' },
-                { worldId: 2, path: 'world2.json' },
-                { worldId: 3, path: 'world3.json' }
-            ];
+            // 각 월드의 JSON 파일 경로 (CONFIG.WORLDS에서 동적 생성)
+            const files = CONFIG.WORLDS.map(w => ({
+                worldId: w.id,
+                path: `world${w.id}.json`
+            }));
             
             // 병렬로 모든 파일 로드
             const loadPromises = files.map(async (file) => {

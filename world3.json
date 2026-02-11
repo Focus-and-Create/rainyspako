@@ -1,206 +1,406 @@
 {
   "world": 3,
-  "name": "Avanzado",
-  "nameKo": "심화",
+  "name": "Personas",
+  "nameKo": "사람",
   "stages": [
     {
       "stage": 1,
       "words": [
-        { "es": "pensar", "ko": "생각하다" },
-        { "es": "creer", "ko": "믿다" },
-        { "es": "sentir", "ko": "느끼다" },
-        { "es": "recordar", "ko": "기억하다" },
-        { "es": "olvidar", "ko": "잊다" }
+        { "es": "persona", "ko": "사람" },
+        { "es": "hombre", "ko": "남자" },
+        { "es": "mujer", "ko": "여자" },
+        { "es": "niño", "ko": "소년" },
+        { "es": "niña", "ko": "소녀" },
+        { "es": "bebé", "ko": "아기" },
+        { "es": "adulto", "ko": "어른" },
+        { "es": "joven", "ko": "젊은이" },
+        { "es": "anciano", "ko": "노인" },
+        { "es": "nombre", "ko": "이름" },
+        { "es": "edad", "ko": "나이" },
+        { "es": "género", "ko": "성별" },
+        { "es": "identidad", "ko": "정체성" },
+        { "es": "nacionalidad", "ko": "국적" },
+        { "es": "ciudadano", "ko": "시민" }
       ]
     },
     {
       "stage": 2,
       "words": [
-        { "es": "esperar", "ko": "기다리다" },
-        { "es": "buscar", "ko": "찾다" },
-        { "es": "encontrar", "ko": "발견하다" },
-        { "es": "perder", "ko": "잃다" },
-        { "es": "ganar", "ko": "이기다" }
+        { "es": "cabeza", "ko": "머리" },
+        { "es": "cara", "ko": "얼굴" },
+        { "es": "ojo", "ko": "눈" },
+        { "es": "nariz", "ko": "코" },
+        { "es": "boca", "ko": "입" },
+        { "es": "oreja", "ko": "귀" },
+        { "es": "diente", "ko": "이" },
+        { "es": "lengua", "ko": "혀" },
+        { "es": "labio", "ko": "입술" },
+        { "es": "mejilla", "ko": "볼" },
+        { "es": "frente", "ko": "이마" },
+        { "es": "barbilla", "ko": "턱" },
+        { "es": "ceja", "ko": "눈썹" },
+        { "es": "pestaña", "ko": "속눈썹" },
+        { "es": "cabello", "ko": "머리카락" }
       ]
     },
     {
       "stage": 3,
       "words": [
-        { "es": "comenzar", "ko": "시작하다" },
-        { "es": "terminar", "ko": "끝내다" },
-        { "es": "continuar", "ko": "계속하다" },
-        { "es": "cambiar", "ko": "바꾸다" },
-        { "es": "mejorar", "ko": "개선하다" }
+        { "es": "cuerpo", "ko": "몸" },
+        { "es": "brazo", "ko": "팔" },
+        { "es": "pierna", "ko": "다리" },
+        { "es": "mano", "ko": "손" },
+        { "es": "pie", "ko": "발" },
+        { "es": "dedo", "ko": "손가락" },
+        { "es": "hombro", "ko": "어깨" },
+        { "es": "espalda", "ko": "등" },
+        { "es": "pecho", "ko": "가슴" },
+        { "es": "cuello", "ko": "목" },
+        { "es": "rodilla", "ko": "무릎" },
+        { "es": "codo", "ko": "팔꿈치" },
+        { "es": "muñeca", "ko": "손목" },
+        { "es": "tobillo", "ko": "발목" },
+        { "es": "cadera", "ko": "엉덩이" }
       ]
     },
     {
       "stage": 4,
       "words": [
-        { "es": "necesitar", "ko": "필요하다" },
-        { "es": "preferir", "ko": "선호하다" },
-        { "es": "decidir", "ko": "결정하다" },
-        { "es": "intentar", "ko": "시도하다" },
-        { "es": "conseguir", "ko": "얻다" }
+        { "es": "corazón", "ko": "심장" },
+        { "es": "cerebro", "ko": "뇌" },
+        { "es": "pulmón", "ko": "폐" },
+        { "es": "estómago", "ko": "위" },
+        { "es": "sangre", "ko": "피" },
+        { "es": "hueso", "ko": "뼈" },
+        { "es": "músculo", "ko": "근육" },
+        { "es": "piel", "ko": "피부" },
+        { "es": "nervio", "ko": "신경" },
+        { "es": "vista", "ko": "시력" },
+        { "es": "oído", "ko": "청각" },
+        { "es": "olfato", "ko": "후각" },
+        { "es": "gusto", "ko": "미각" },
+        { "es": "tacto", "ko": "촉각" },
+        { "es": "hígado", "ko": "간" }
       ]
     },
     {
       "stage": 5,
       "words": [
-        { "es": "conocer", "ko": "알다" },
-        { "es": "entender", "ko": "이해하다" },
-        { "es": "aprender", "ko": "배우다" },
-        { "es": "enseñar", "ko": "가르치다" },
-        { "es": "estudiar", "ko": "공부하다" }
+        { "es": "alto", "ko": "키가 큰" },
+        { "es": "bajo", "ko": "키가 작은" },
+        { "es": "gordo", "ko": "뚱뚱한" },
+        { "es": "delgado", "ko": "날씬한" },
+        { "es": "guapo", "ko": "잘생긴" },
+        { "es": "bonita", "ko": "예쁜" },
+        { "es": "feo", "ko": "못생긴" },
+        { "es": "fuerte", "ko": "강한" },
+        { "es": "débil", "ko": "약한" },
+        { "es": "rubio", "ko": "금발의" },
+        { "es": "moreno", "ko": "갈색 머리의" },
+        { "es": "calvo", "ko": "대머리의" },
+        { "es": "barba", "ko": "수염" },
+        { "es": "arruga", "ko": "주름" },
+        { "es": "cicatriz", "ko": "흉터" }
       ]
     },
     {
       "stage": 6,
       "words": [
-        { "es": "preguntar", "ko": "묻다" },
-        { "es": "responder", "ko": "대답하다" },
-        { "es": "explicar", "ko": "설명하다" },
-        { "es": "contar", "ko": "세다" },
-        { "es": "describir", "ko": "묘사하다" }
+        { "es": "amable", "ko": "친절한" },
+        { "es": "generoso", "ko": "관대한" },
+        { "es": "honesto", "ko": "정직한" },
+        { "es": "valiente", "ko": "용감한" },
+        { "es": "inteligente", "ko": "똑똑한" },
+        { "es": "paciente", "ko": "인내심 있는" },
+        { "es": "responsable", "ko": "책임감 있는" },
+        { "es": "simpático", "ko": "상냥한" },
+        { "es": "alegre", "ko": "쾌활한" },
+        { "es": "sincero", "ko": "진실한" },
+        { "es": "humilde", "ko": "겸손한" },
+        { "es": "leal", "ko": "충실한" },
+        { "es": "optimista", "ko": "낙관적인" },
+        { "es": "creativo", "ko": "창의적인" },
+        { "es": "trabajador", "ko": "부지런한" }
       ]
     },
     {
       "stage": 7,
       "words": [
-        { "es": "importante", "ko": "중요한" },
-        { "es": "necesario", "ko": "필요한" },
-        { "es": "posible", "ko": "가능한" },
-        { "es": "imposible", "ko": "불가능한" },
-        { "es": "difícil", "ko": "어려운" }
+        { "es": "egoísta", "ko": "이기적인" },
+        { "es": "mentiroso", "ko": "거짓말쟁이" },
+        { "es": "perezoso", "ko": "게으른" },
+        { "es": "cobarde", "ko": "겁쟁이" },
+        { "es": "terco", "ko": "고집스러운" },
+        { "es": "orgulloso", "ko": "거만한" },
+        { "es": "tacaño", "ko": "인색한" },
+        { "es": "cruel", "ko": "잔인한" },
+        { "es": "impaciente", "ko": "성급한" },
+        { "es": "celoso", "ko": "질투하는" },
+        { "es": "pesimista", "ko": "비관적인" },
+        { "es": "tímido", "ko": "소심한" },
+        { "es": "grosero", "ko": "무례한" },
+        { "es": "irresponsable", "ko": "무책임한" },
+        { "es": "desconfiado", "ko": "의심 많은" }
       ]
     },
     {
       "stage": 8,
       "words": [
-        { "es": "fácil", "ko": "쉬운" },
-        { "es": "rápido", "ko": "빠른" },
-        { "es": "lento", "ko": "느린" },
-        { "es": "fuerte", "ko": "강한" },
-        { "es": "débil", "ko": "약한" }
+        { "es": "felicidad", "ko": "행복" },
+        { "es": "amor", "ko": "사랑" },
+        { "es": "alegría", "ko": "기쁨" },
+        { "es": "esperanza", "ko": "희망" },
+        { "es": "orgullo", "ko": "자부심" },
+        { "es": "gratitud", "ko": "감사" },
+        { "es": "emoción", "ko": "감동" },
+        { "es": "paz", "ko": "평화" },
+        { "es": "confianza", "ko": "신뢰" },
+        { "es": "satisfacción", "ko": "만족" },
+        { "es": "ternura", "ko": "다정함" },
+        { "es": "entusiasmo", "ko": "열정" },
+        { "es": "alivio", "ko": "안도" },
+        { "es": "cariño", "ko": "애정" },
+        { "es": "ilusión", "ko": "설렘" }
       ]
     },
     {
       "stage": 9,
       "words": [
-        { "es": "triste", "ko": "슬픈" },
-        { "es": "enfadado", "ko": "화난" },
-        { "es": "cansado", "ko": "피곤한" },
-        { "es": "tranquilo", "ko": "평온한" },
-        { "es": "nervioso", "ko": "긴장한" }
+        { "es": "tristeza", "ko": "슬픔" },
+        { "es": "miedo", "ko": "두려움" },
+        { "es": "enojo", "ko": "분노" },
+        { "es": "ansiedad", "ko": "불안" },
+        { "es": "vergüenza", "ko": "부끄러움" },
+        { "es": "culpa", "ko": "죄책감" },
+        { "es": "soledad", "ko": "외로움" },
+        { "es": "odio", "ko": "증오" },
+        { "es": "envidia", "ko": "부러움" },
+        { "es": "frustración", "ko": "좌절" },
+        { "es": "aburrimiento", "ko": "지루함" },
+        { "es": "desesperación", "ko": "절망" },
+        { "es": "nostalgia", "ko": "향수" },
+        { "es": "decepción", "ko": "실망" },
+        { "es": "dolor", "ko": "고통" }
       ]
     },
     {
       "stage": 10,
       "words": [
-        { "es": "problema", "ko": "문제" },
-        { "es": "solución", "ko": "해결책" },
-        { "es": "razón", "ko": "이유" },
-        { "es": "resultado", "ko": "결과" },
-        { "es": "ejemplo", "ko": "예시" }
+        { "es": "familia", "ko": "가족" },
+        { "es": "padre", "ko": "아버지" },
+        { "es": "madre", "ko": "어머니" },
+        { "es": "hijo", "ko": "아들" },
+        { "es": "hija", "ko": "딸" },
+        { "es": "hermano", "ko": "형제" },
+        { "es": "hermana", "ko": "자매" },
+        { "es": "abuelo", "ko": "할아버지" },
+        { "es": "abuela", "ko": "할머니" },
+        { "es": "tío", "ko": "삼촌" },
+        { "es": "tía", "ko": "이모" },
+        { "es": "primo", "ko": "사촌" },
+        { "es": "sobrino", "ko": "조카" },
+        { "es": "esposo", "ko": "남편" },
+        { "es": "esposa", "ko": "아내" }
       ]
     },
     {
       "stage": 11,
       "words": [
-        { "es": "gobierno", "ko": "정부" },
-        { "es": "sociedad", "ko": "사회" },
-        { "es": "cultura", "ko": "문화" },
-        { "es": "historia", "ko": "역사" },
-        { "es": "política", "ko": "정치" }
+        { "es": "amigo", "ko": "친구" },
+        { "es": "compañero", "ko": "동료" },
+        { "es": "vecino", "ko": "이웃" },
+        { "es": "novio", "ko": "남자친구" },
+        { "es": "novia", "ko": "여자친구" },
+        { "es": "pareja", "ko": "연인" },
+        { "es": "jefe", "ko": "상사" },
+        { "es": "enemigo", "ko": "적" },
+        { "es": "conocido", "ko": "지인" },
+        { "es": "socio", "ko": "동업자" },
+        { "es": "equipo", "ko": "팀" },
+        { "es": "grupo", "ko": "그룹" },
+        { "es": "comunidad", "ko": "공동체" },
+        { "es": "extraño", "ko": "낯선 사람" },
+        { "es": "invitado", "ko": "손님" }
       ]
     },
     {
       "stage": 12,
       "words": [
-        { "es": "economía", "ko": "경제" },
-        { "es": "empresa", "ko": "기업" },
-        { "es": "negocio", "ko": "사업" },
-        { "es": "mercado", "ko": "시장" },
-        { "es": "industria", "ko": "산업" }
+        { "es": "nacimiento", "ko": "출생" },
+        { "es": "infancia", "ko": "유아기" },
+        { "es": "niñez", "ko": "어린 시절" },
+        { "es": "adolescencia", "ko": "청소년기" },
+        { "es": "juventud", "ko": "청춘" },
+        { "es": "madurez", "ko": "성숙" },
+        { "es": "vejez", "ko": "노년" },
+        { "es": "muerte", "ko": "죽음" },
+        { "es": "boda", "ko": "결혼식" },
+        { "es": "embarazo", "ko": "임신" },
+        { "es": "jubilación", "ko": "은퇴" },
+        { "es": "cumpleaños", "ko": "생일" },
+        { "es": "crecimiento", "ko": "성장" },
+        { "es": "vida", "ko": "삶" },
+        { "es": "generación", "ko": "세대" }
       ]
     },
     {
       "stage": 13,
       "words": [
-        { "es": "educación", "ko": "교육" },
-        { "es": "universidad", "ko": "대학교" },
-        { "es": "ciencia", "ko": "과학" },
-        { "es": "tecnología", "ko": "기술" },
-        { "es": "investigación", "ko": "연구" }
+        { "es": "salud", "ko": "건강" },
+        { "es": "ejercicio", "ko": "운동" },
+        { "es": "dieta", "ko": "식단" },
+        { "es": "descanso", "ko": "휴식" },
+        { "es": "sueño", "ko": "수면" },
+        { "es": "peso", "ko": "체중" },
+        { "es": "energía", "ko": "에너지" },
+        { "es": "higiene", "ko": "위생" },
+        { "es": "bienestar", "ko": "웰빙" },
+        { "es": "vitamina", "ko": "비타민" },
+        { "es": "nutrición", "ko": "영양" },
+        { "es": "inmunidad", "ko": "면역" },
+        { "es": "respiración", "ko": "호흡" },
+        { "es": "digestión", "ko": "소화" },
+        { "es": "postura", "ko": "자세" }
       ]
     },
     {
       "stage": 14,
       "words": [
-        { "es": "naturaleza", "ko": "자연" },
-        { "es": "ambiente", "ko": "환경" },
-        { "es": "montaña", "ko": "산" },
-        { "es": "río", "ko": "강" },
-        { "es": "mar", "ko": "바다" }
+        { "es": "enfermedad", "ko": "질병" },
+        { "es": "fiebre", "ko": "열" },
+        { "es": "tos", "ko": "기침" },
+        { "es": "gripe", "ko": "독감" },
+        { "es": "resfriado", "ko": "감기" },
+        { "es": "herida", "ko": "상처" },
+        { "es": "infección", "ko": "감염" },
+        { "es": "alergia", "ko": "알레르기" },
+        { "es": "mareo", "ko": "어지러움" },
+        { "es": "náusea", "ko": "메스꺼움" },
+        { "es": "fatiga", "ko": "피로" },
+        { "es": "fractura", "ko": "골절" },
+        { "es": "inflamación", "ko": "염증" },
+        { "es": "estrés", "ko": "스트레스" },
+        { "es": "insomnio", "ko": "불면증" }
       ]
     },
     {
       "stage": 15,
       "words": [
-        { "es": "bosque", "ko": "숲" },
-        { "es": "playa", "ko": "해변" },
-        { "es": "isla", "ko": "섬" },
-        { "es": "desierto", "ko": "사막" },
-        { "es": "lago", "ko": "호수" }
+        { "es": "medicina", "ko": "약" },
+        { "es": "hospital", "ko": "병원" },
+        { "es": "médico", "ko": "의사" },
+        { "es": "enfermero", "ko": "간호사" },
+        { "es": "cirugía", "ko": "수술" },
+        { "es": "receta", "ko": "처방전" },
+        { "es": "vacuna", "ko": "백신" },
+        { "es": "diagnóstico", "ko": "진단" },
+        { "es": "tratamiento", "ko": "치료" },
+        { "es": "pastilla", "ko": "알약" },
+        { "es": "inyección", "ko": "주사" },
+        { "es": "ambulancia", "ko": "구급차" },
+        { "es": "farmacia", "ko": "약국" },
+        { "es": "consulta", "ko": "진료" },
+        { "es": "recuperación", "ko": "회복" }
       ]
     },
     {
       "stage": 16,
       "words": [
-        { "es": "animal", "ko": "동물" },
-        { "es": "perro", "ko": "개" },
-        { "es": "gato", "ko": "고양이" },
-        { "es": "pájaro", "ko": "새" },
-        { "es": "caballo", "ko": "말" }
+        { "es": "profesor", "ko": "교사" },
+        { "es": "abogado", "ko": "변호사" },
+        { "es": "ingeniero", "ko": "엔지니어" },
+        { "es": "policía", "ko": "경찰" },
+        { "es": "bombero", "ko": "소방관" },
+        { "es": "cocinero", "ko": "요리사" },
+        { "es": "conductor", "ko": "운전사" },
+        { "es": "vendedor", "ko": "판매원" },
+        { "es": "periodista", "ko": "기자" },
+        { "es": "científico", "ko": "과학자" },
+        { "es": "artista", "ko": "예술가" },
+        { "es": "músico", "ko": "음악가" },
+        { "es": "escritor", "ko": "작가" },
+        { "es": "arquitecto", "ko": "건축가" },
+        { "es": "agricultor", "ko": "농부" }
       ]
     },
     {
       "stage": 17,
       "words": [
-        { "es": "salud", "ko": "건강" },
-        { "es": "enfermedad", "ko": "질병" },
-        { "es": "médico", "ko": "의사" },
-        { "es": "medicina", "ko": "약" },
-        { "es": "dolor", "ko": "통증" }
+        { "es": "dentista", "ko": "치과의사" },
+        { "es": "piloto", "ko": "조종사" },
+        { "es": "soldado", "ko": "군인" },
+        { "es": "empresario", "ko": "사업가" },
+        { "es": "contador", "ko": "회계사" },
+        { "es": "fotógrafo", "ko": "사진작가" },
+        { "es": "programador", "ko": "프로그래머" },
+        { "es": "diseñador", "ko": "디자이너" },
+        { "es": "carpintero", "ko": "목수" },
+        { "es": "electricista", "ko": "전기기사" },
+        { "es": "mecánico", "ko": "정비사" },
+        { "es": "cartero", "ko": "우체부" },
+        { "es": "peluquero", "ko": "미용사" },
+        { "es": "veterinario", "ko": "수의사" },
+        { "es": "traductor", "ko": "번역가" }
       ]
     },
     {
       "stage": 18,
       "words": [
-        { "es": "derecho", "ko": "권리" },
-        { "es": "libertad", "ko": "자유" },
-        { "es": "justicia", "ko": "정의" },
-        { "es": "ley", "ko": "법" },
-        { "es": "paz", "ko": "평화" }
+        { "es": "comportamiento", "ko": "행동" },
+        { "es": "costumbre", "ko": "습관" },
+        { "es": "actitud", "ko": "태도" },
+        { "es": "carácter", "ko": "성격" },
+        { "es": "voluntad", "ko": "의지" },
+        { "es": "paciencia", "ko": "인내" },
+        { "es": "coraje", "ko": "용기" },
+        { "es": "disciplina", "ko": "규율" },
+        { "es": "respeto", "ko": "존경" },
+        { "es": "honradez", "ko": "정직" },
+        { "es": "modestia", "ko": "겸손" },
+        { "es": "ambición", "ko": "야망" },
+        { "es": "perseverancia", "ko": "끈기" },
+        { "es": "prudencia", "ko": "신중함" },
+        { "es": "tolerancia", "ko": "관용" }
       ]
     },
     {
       "stage": 19,
       "words": [
-        { "es": "guerra", "ko": "전쟁" },
-        { "es": "victoria", "ko": "승리" },
-        { "es": "derrota", "ko": "패배" },
-        { "es": "éxito", "ko": "성공" },
-        { "es": "fracaso", "ko": "실패" }
+        { "es": "hablar", "ko": "말하다" },
+        { "es": "escuchar", "ko": "듣다" },
+        { "es": "preguntar", "ko": "질문하다" },
+        { "es": "responder", "ko": "대답하다" },
+        { "es": "explicar", "ko": "설명하다" },
+        { "es": "contar", "ko": "이야기하다" },
+        { "es": "gritar", "ko": "소리치다" },
+        { "es": "susurrar", "ko": "속삭이다" },
+        { "es": "discutir", "ko": "토론하다" },
+        { "es": "opinar", "ko": "의견을 말하다" },
+        { "es": "mentir", "ko": "거짓말하다" },
+        { "es": "confesar", "ko": "고백하다" },
+        { "es": "prometer", "ko": "약속하다" },
+        { "es": "negar", "ko": "부정하다" },
+        { "es": "convencer", "ko": "설득하다" }
       ]
     },
     {
       "stage": 20,
       "words": [
-        { "es": "futuro", "ko": "미래" },
-        { "es": "pasado", "ko": "과거" },
-        { "es": "presente", "ko": "현재" },
-        { "es": "esperanza", "ko": "희망" },
-        { "es": "sueño", "ko": "꿈" }
+        { "es": "saludar", "ko": "인사하다" },
+        { "es": "despedirse", "ko": "작별하다" },
+        { "es": "presentar", "ko": "소개하다" },
+        { "es": "agradecer", "ko": "감사하다" },
+        { "es": "disculparse", "ko": "사과하다" },
+        { "es": "invitar", "ko": "초대하다" },
+        { "es": "abrazar", "ko": "포옹하다" },
+        { "es": "felicitar", "ko": "축하하다" },
+        { "es": "ayudar", "ko": "돕다" },
+        { "es": "compartir", "ko": "나누다" },
+        { "es": "cooperar", "ko": "협력하다" },
+        { "es": "respetar", "ko": "존중하다" },
+        { "es": "perdonar", "ko": "용서하다" },
+        { "es": "confiar", "ko": "신뢰하다" },
+        { "es": "acompañar", "ko": "동행하다" }
       ]
     }
   ]

@@ -331,15 +331,21 @@ const App = {
     startSelectedStage: function() {
         // 모달 숨기기
         this.hideStageModal();
-        
+
+        // 단어 참조 패널 채우기
+        this.populateWordPanels(
+            this.selectedStage.worldId,
+            this.selectedStage.stageNum
+        );
+
         // 게임 화면으로 전환
         this.showScreen('game');
-        
+
         // 입력 필드 초기화
         if (this.elements.inputField) {
             this.elements.inputField.value = '';
         }
-        
+
         // 게임 시작
         Game.startStage(
             this.selectedStage.worldId,
@@ -347,19 +353,49 @@ const App = {
             this.currentMode
         );
     },
+
+    /**
+     * 단어 참조 패널 채우기
+     * @param {number} worldId - 월드 ID
+     * @param {number} stageNum - 스테이지 번호
+     */
+    populateWordPanels: function(worldId, stageNum) {
+        const words = WordManager.getStageWords(worldId, stageNum);
+        const leftList = document.getElementById('word-list-left');
+        const rightList = document.getElementById('word-list-right');
+        if (!leftList || !rightList) return;
+
+        // 단어를 반으로 나눠서 양쪽 패널에 배치
+        const mid = Math.ceil(words.length / 2);
+        const leftWords = words.slice(0, mid);
+        const rightWords = words.slice(mid);
+
+        const buildHTML = (wordArr) => wordArr.map(w =>
+            `<div class="word-pair"><span class="word-es">${w.es}</span><span class="word-arrow">&rarr;</span><span class="word-ko">${w.ko}</span></div>`
+        ).join('');
+
+        leftList.innerHTML = buildHTML(leftWords);
+        rightList.innerHTML = buildHTML(rightWords);
+    },
     
     /**
      * 현재 스테이지 재시도
      */
     retryStage: function() {
+        // 단어 패널 채우기
+        this.populateWordPanels(
+            this.selectedStage.worldId,
+            this.selectedStage.stageNum
+        );
+
         // 게임 화면으로 전환
         this.showScreen('game');
-        
+
         // 입력 필드 초기화
         if (this.elements.inputField) {
             this.elements.inputField.value = '';
         }
-        
+
         // 게임 시작
         Game.startStage(
             this.selectedStage.worldId,
@@ -398,14 +434,17 @@ const App = {
             stageNum: nextStageNum
         };
         
+        // 단어 패널 채우기
+        this.populateWordPanels(nextWorldId, nextStageNum);
+
         // 게임 화면으로 전환
         this.showScreen('game');
-        
+
         // 입력 필드 초기화
         if (this.elements.inputField) {
             this.elements.inputField.value = '';
         }
-        
+
         // 게임 시작
         Game.startStage(nextWorldId, nextStageNum, this.currentMode);
     },

@@ -19,41 +19,24 @@ const CONFIG = {
     // 월드 설정
     // =========================================
     WORLDS: [
-        {
-            id: 1,
-            name: 'Fundamentos',       // 기초
-            nameKo: '기초',
-            stages: 20,                // 스테이지 수
-            baseSpeed: 0.5,            // 기본 낙하 속도 (px/frame)
-            speedIncrement: 0.02,      // 스테이지 내 속도 증가율
-            color: '#4a9c6d'           // 월드 테마 색상 (초록)
-        },
-        {
-            id: 2,
-            name: 'Vida Diaria',       // 일상
-            nameKo: '일상',
-            stages: 20,
-            baseSpeed: 0.8,
-            speedIncrement: 0.025,
-            color: '#c9a227'           // 월드 테마 색상 (금색)
-        },
-        {
-            id: 3,
-            name: 'Avanzado',          // 심화
-            nameKo: '심화',
-            stages: 20,
-            baseSpeed: 1.1,
-            speedIncrement: 0.03,
-            color: '#a23b72'           // 월드 테마 색상 (자주)
-        }
+        { id: 1,  name: 'Fundamentos',   nameKo: '기초',     stages: 20, baseSpeed: 0.3,  speedIncrement: 0.015, color: '#4a9c6d' },
+        { id: 2,  name: 'Vida Cotidiana', nameKo: '일상생활', stages: 20, baseSpeed: 0.35, speedIncrement: 0.018, color: '#c9a227' },
+        { id: 3,  name: 'Personas',       nameKo: '사람',     stages: 20, baseSpeed: 0.4,  speedIncrement: 0.02,  color: '#a23b72' },
+        { id: 4,  name: 'Naturaleza',     nameKo: '자연',     stages: 20, baseSpeed: 0.45, speedIncrement: 0.02,  color: '#2e86ab' },
+        { id: 5,  name: 'Ciudad',         nameKo: '도시',     stages: 20, baseSpeed: 0.5,  speedIncrement: 0.022, color: '#e07a5f' },
+        { id: 6,  name: 'Comida',         nameKo: '음식',     stages: 20, baseSpeed: 0.55, speedIncrement: 0.022, color: '#81b29a' },
+        { id: 7,  name: 'Trabajo',        nameKo: '직업',     stages: 20, baseSpeed: 0.6,  speedIncrement: 0.025, color: '#f2cc8f' },
+        { id: 8,  name: 'Ocio',           nameKo: '여가',     stages: 20, baseSpeed: 0.65, speedIncrement: 0.025, color: '#6d6875' },
+        { id: 9,  name: 'Sociedad',       nameKo: '사회',     stages: 20, baseSpeed: 0.7,  speedIncrement: 0.028, color: '#e63946' },
+        { id: 10, name: 'Ciencia',        nameKo: '과학',     stages: 20, baseSpeed: 0.75, speedIncrement: 0.03,  color: '#457b9d' }
     ],
 
     // =========================================
     // 스테이지 설정
     // =========================================
     STAGE: {
-        WORDS_PER_STAGE: 5,            // 스테이지당 학습 단어 수
-        WORDS_TO_CLEAR: 15,            // 클리어에 필요한 정답 수 (같은 단어 반복 포함)
+        WORDS_PER_STAGE: 15,           // 스테이지당 학습 단어 수
+        WORDS_TO_CLEAR: 20,            // 클리어에 필요한 정답 수 (같은 단어 반복 포함)
         MAX_ACTIVE_WORDS: 3,           // 동시에 화면에 표시되는 최대 단어 수
         SPAWN_INTERVAL_MS: 2000,       // 새 단어 생성 간격 (밀리초)
         MIN_SPAWN_INTERVAL_MS: 800     // 최소 생성 간격 (속도 증가 시)
