@@ -27,9 +27,9 @@ const WordManager = {
         try {
             // 각 월드의 JSON 파일 경로
             const files = [
-                { worldId: 1, path: 'data/world1.json' },
-                { worldId: 2, path: 'data/world2.json' },
-                { worldId: 3, path: 'data/world3.json' }
+                { worldId: 1, path: 'world1.json' },
+                { worldId: 2, path: 'world2.json' },
+                { worldId: 3, path: 'world3.json' }
             ];
             
             // 병렬로 모든 파일 로드
