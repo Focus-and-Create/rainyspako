@@ -84,7 +84,15 @@ const App = {
         
         if (!loaded) {
             console.error('App: 단어 데이터 로드 실패');
-            alert('단어 데이터를 불러오는데 실패했습니다.');
+            // 로딩 화면에 에러 메시지 표시
+            const loadingText = document.querySelector('.loading-text');
+            if (loadingText) {
+                loadingText.textContent = '데이터 로드에 실패했습니다. 페이지를 새로고침해 주세요.';
+            }
+            const loadingProgress = document.querySelector('.loading-progress');
+            if (loadingProgress) {
+                loadingProgress.style.animationPlayState = 'paused';
+            }
             return;
         }
         
