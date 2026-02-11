@@ -1,0 +1,207 @@
+{
+  "world": 2,
+  "name": "Vida Diaria",
+  "nameKo": "일상",
+  "stages": [
+    {
+      "stage": 1,
+      "words": [
+        { "es": "desayuno", "ko": "아침식사" },
+        { "es": "almuerzo", "ko": "점심식사" },
+        { "es": "cena", "ko": "저녁식사" },
+        { "es": "hambre", "ko": "배고픔" },
+        { "es": "sed", "ko": "갈증" }
+      ]
+    },
+    {
+      "stage": 2,
+      "words": [
+        { "es": "carne", "ko": "고기" },
+        { "es": "pescado", "ko": "생선" },
+        { "es": "pollo", "ko": "닭고기" },
+        { "es": "arroz", "ko": "쌀" },
+        { "es": "verdura", "ko": "채소" }
+      ]
+    },
+    {
+      "stage": 3,
+      "words": [
+        { "es": "fruta", "ko": "과일" },
+        { "es": "manzana", "ko": "사과" },
+        { "es": "naranja", "ko": "오렌지" },
+        { "es": "plátano", "ko": "바나나" },
+        { "es": "uva", "ko": "포도" }
+      ]
+    },
+    {
+      "stage": 4,
+      "words": [
+        { "es": "restaurante", "ko": "식당" },
+        { "es": "tienda", "ko": "가게" },
+        { "es": "supermercado", "ko": "슈퍼마켓" },
+        { "es": "banco", "ko": "은행" },
+        { "es": "hospital", "ko": "병원" }
+      ]
+    },
+    {
+      "stage": 5,
+      "words": [
+        { "es": "escuela", "ko": "학교" },
+        { "es": "trabajo", "ko": "일" },
+        { "es": "oficina", "ko": "사무실" },
+        { "es": "hotel", "ko": "호텔" },
+        { "es": "aeropuerto", "ko": "공항" }
+      ]
+    },
+    {
+      "stage": 6,
+      "words": [
+        { "es": "coche", "ko": "자동차" },
+        { "es": "autobús", "ko": "버스" },
+        { "es": "tren", "ko": "기차" },
+        { "es": "avión", "ko": "비행기" },
+        { "es": "bicicleta", "ko": "자전거" }
+      ]
+    },
+    {
+      "stage": 7,
+      "words": [
+        { "es": "habitación", "ko": "방" },
+        { "es": "cocina", "ko": "부엌" },
+        { "es": "baño", "ko": "화장실" },
+        { "es": "dormitorio", "ko": "침실" },
+        { "es": "jardín", "ko": "정원" }
+      ]
+    },
+    {
+      "stage": 8,
+      "words": [
+        { "es": "mesa", "ko": "테이블" },
+        { "es": "silla", "ko": "의자" },
+        { "es": "cama", "ko": "침대" },
+        { "es": "puerta", "ko": "문" },
+        { "es": "ventana", "ko": "창문" }
+      ]
+    },
+    {
+      "stage": 9,
+      "words": [
+        { "es": "ropa", "ko": "옷" },
+        { "es": "camisa", "ko": "셔츠" },
+        { "es": "pantalón", "ko": "바지" },
+        { "es": "zapato", "ko": "신발" },
+        { "es": "sombrero", "ko": "모자" }
+      ]
+    },
+    {
+      "stage": 10,
+      "words": [
+        { "es": "dinero", "ko": "돈" },
+        { "es": "precio", "ko": "가격" },
+        { "es": "barato", "ko": "싼" },
+        { "es": "caro", "ko": "비싼" },
+        { "es": "comprar", "ko": "사다" }
+      ]
+    },
+    {
+      "stage": 11,
+      "words": [
+        { "es": "vender", "ko": "팔다" },
+        { "es": "pagar", "ko": "지불하다" },
+        { "es": "tarjeta", "ko": "카드" },
+        { "es": "efectivo", "ko": "현금" },
+        { "es": "cuenta", "ko": "계산서" }
+      ]
+    },
+    {
+      "stage": 12,
+      "words": [
+        { "es": "tiempo", "ko": "시간" },
+        { "es": "hora", "ko": "시" },
+        { "es": "minuto", "ko": "분" },
+        { "es": "segundo", "ko": "초" },
+        { "es": "reloj", "ko": "시계" }
+      ]
+    },
+    {
+      "stage": 13,
+      "words": [
+        { "es": "semana", "ko": "주" },
+        { "es": "mes", "ko": "월" },
+        { "es": "año", "ko": "년" },
+        { "es": "lunes", "ko": "월요일" },
+        { "es": "martes", "ko": "화요일" }
+      ]
+    },
+    {
+      "stage": 14,
+      "words": [
+        { "es": "miércoles", "ko": "수요일" },
+        { "es": "jueves", "ko": "목요일" },
+        { "es": "viernes", "ko": "금요일" },
+        { "es": "sábado", "ko": "토요일" },
+        { "es": "domingo", "ko": "일요일" }
+      ]
+    },
+    {
+      "stage": 15,
+      "words": [
+        { "es": "enero", "ko": "1월" },
+        { "es": "febrero", "ko": "2월" },
+        { "es": "marzo", "ko": "3월" },
+        { "es": "abril", "ko": "4월" },
+        { "es": "mayo", "ko": "5월" }
+      ]
+    },
+    {
+      "stage": 16,
+      "words": [
+        { "es": "junio", "ko": "6월" },
+        { "es": "julio", "ko": "7월" },
+        { "es": "agosto", "ko": "8월" },
+        { "es": "septiembre", "ko": "9월" },
+        { "es": "octubre", "ko": "10월" }
+      ]
+    },
+    {
+      "stage": 17,
+      "words": [
+        { "es": "noviembre", "ko": "11월" },
+        { "es": "diciembre", "ko": "12월" },
+        { "es": "primavera", "ko": "봄" },
+        { "es": "verano", "ko": "여름" },
+        { "es": "otoño", "ko": "가을" }
+      ]
+    },
+    {
+      "stage": 18,
+      "words": [
+        { "es": "invierno", "ko": "겨울" },
+        { "es": "sol", "ko": "태양" },
+        { "es": "luna", "ko": "달" },
+        { "es": "estrella", "ko": "별" },
+        { "es": "lluvia", "ko": "비" }
+      ]
+    },
+    {
+      "stage": 19,
+      "words": [
+        { "es": "nieve", "ko": "눈" },
+        { "es": "viento", "ko": "바람" },
+        { "es": "calor", "ko": "더위" },
+        { "es": "frío", "ko": "추위" },
+        { "es": "nube", "ko": "구름" }
+      ]
+    },
+    {
+      "stage": 20,
+      "words": [
+        { "es": "teléfono", "ko": "전화기" },
+        { "es": "ordenador", "ko": "컴퓨터" },
+        { "es": "internet", "ko": "인터넷" },
+        { "es": "correo", "ko": "이메일" },
+        { "es": "mensaje", "ko": "메시지" }
+      ]
+    }
+  ]
+}

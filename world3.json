@@ -1,0 +1,207 @@
+{
+  "world": 3,
+  "name": "Avanzado",
+  "nameKo": "심화",
+  "stages": [
+    {
+      "stage": 1,
+      "words": [
+        { "es": "pensar", "ko": "생각하다" },
+        { "es": "creer", "ko": "믿다" },
+        { "es": "sentir", "ko": "느끼다" },
+        { "es": "recordar", "ko": "기억하다" },
+        { "es": "olvidar", "ko": "잊다" }
+      ]
+    },
+    {
+      "stage": 2,
+      "words": [
+        { "es": "esperar", "ko": "기다리다" },
+        { "es": "buscar", "ko": "찾다" },
+        { "es": "encontrar", "ko": "발견하다" },
+        { "es": "perder", "ko": "잃다" },
+        { "es": "ganar", "ko": "이기다" }
+      ]
+    },
+    {
+      "stage": 3,
+      "words": [
+        { "es": "comenzar", "ko": "시작하다" },
+        { "es": "terminar", "ko": "끝내다" },
+        { "es": "continuar", "ko": "계속하다" },
+        { "es": "cambiar", "ko": "바꾸다" },
+        { "es": "mejorar", "ko": "개선하다" }
+      ]
+    },
+    {
+      "stage": 4,
+      "words": [
+        { "es": "necesitar", "ko": "필요하다" },
+        { "es": "preferir", "ko": "선호하다" },
+        { "es": "decidir", "ko": "결정하다" },
+        { "es": "intentar", "ko": "시도하다" },
+        { "es": "conseguir", "ko": "얻다" }
+      ]
+    },
+    {
+      "stage": 5,
+      "words": [
+        { "es": "conocer", "ko": "알다" },
+        { "es": "entender", "ko": "이해하다" },
+        { "es": "aprender", "ko": "배우다" },
+        { "es": "enseñar", "ko": "가르치다" },
+        { "es": "estudiar", "ko": "공부하다" }
+      ]
+    },
+    {
+      "stage": 6,
+      "words": [
+        { "es": "preguntar", "ko": "묻다" },
+        { "es": "responder", "ko": "대답하다" },
+        { "es": "explicar", "ko": "설명하다" },
+        { "es": "contar", "ko": "세다" },
+        { "es": "describir", "ko": "묘사하다" }
+      ]
+    },
+    {
+      "stage": 7,
+      "words": [
+        { "es": "importante", "ko": "중요한" },
+        { "es": "necesario", "ko": "필요한" },
+        { "es": "posible", "ko": "가능한" },
+        { "es": "imposible", "ko": "불가능한" },
+        { "es": "difícil", "ko": "어려운" }
+      ]
+    },
+    {
+      "stage": 8,
+      "words": [
+        { "es": "fácil", "ko": "쉬운" },
+        { "es": "rápido", "ko": "빠른" },
+        { "es": "lento", "ko": "느린" },
+        { "es": "fuerte", "ko": "강한" },
+        { "es": "débil", "ko": "약한" }
+      ]
+    },
+    {
+      "stage": 9,
+      "words": [
+        { "es": "triste", "ko": "슬픈" },
+        { "es": "enfadado", "ko": "화난" },
+        { "es": "cansado", "ko": "피곤한" },
+        { "es": "tranquilo", "ko": "평온한" },
+        { "es": "nervioso", "ko": "긴장한" }
+      ]
+    },
+    {
+      "stage": 10,
+      "words": [
+        { "es": "problema", "ko": "문제" },
+        { "es": "solución", "ko": "해결책" },
+        { "es": "razón", "ko": "이유" },
+        { "es": "resultado", "ko": "결과" },
+        { "es": "ejemplo", "ko": "예시" }
+      ]
+    },
+    {
+      "stage": 11,
+      "words": [
+        { "es": "gobierno", "ko": "정부" },
+        { "es": "sociedad", "ko": "사회" },
+        { "es": "cultura", "ko": "문화" },
+        { "es": "historia", "ko": "역사" },
+        { "es": "política", "ko": "정치" }
+      ]
+    },
+    {
+      "stage": 12,
+      "words": [
+        { "es": "economía", "ko": "경제" },
+        { "es": "empresa", "ko": "기업" },
+        { "es": "negocio", "ko": "사업" },
+        { "es": "mercado", "ko": "시장" },
+        { "es": "industria", "ko": "산업" }
+      ]
+    },
+    {
+      "stage": 13,
+      "words": [
+        { "es": "educación", "ko": "교육" },
+        { "es": "universidad", "ko": "대학교" },
+        { "es": "ciencia", "ko": "과학" },
+        { "es": "tecnología", "ko": "기술" },
+        { "es": "investigación", "ko": "연구" }
+      ]
+    },
+    {
+      "stage": 14,
+      "words": [
+        { "es": "naturaleza", "ko": "자연" },
+        { "es": "ambiente", "ko": "환경" },
+        { "es": "montaña", "ko": "산" },
+        { "es": "río", "ko": "강" },
+        { "es": "mar", "ko": "바다" }
+      ]
+    },
+    {
+      "stage": 15,
+      "words": [
+        { "es": "bosque", "ko": "숲" },
+        { "es": "playa", "ko": "해변" },
+        { "es": "isla", "ko": "섬" },
+        { "es": "desierto", "ko": "사막" },
+        { "es": "lago", "ko": "호수" }
+      ]
+    },
+    {
+      "stage": 16,
+      "words": [
+        { "es": "animal", "ko": "동물" },
+        { "es": "perro", "ko": "개" },
+        { "es": "gato", "ko": "고양이" },
+        { "es": "pájaro", "ko": "새" },
+        { "es": "caballo", "ko": "말" }
+      ]
+    },
+    {
+      "stage": 17,
+      "words": [
+        { "es": "salud", "ko": "건강" },
+        { "es": "enfermedad", "ko": "질병" },
+        { "es": "médico", "ko": "의사" },
+        { "es": "medicina", "ko": "약" },
+        { "es": "dolor", "ko": "통증" }
+      ]
+    },
+    {
+      "stage": 18,
+      "words": [
+        { "es": "derecho", "ko": "권리" },
+        { "es": "libertad", "ko": "자유" },
+        { "es": "justicia", "ko": "정의" },
+        { "es": "ley", "ko": "법" },
+        { "es": "paz", "ko": "평화" }
+      ]
+    },
+    {
+      "stage": 19,
+      "words": [
+        { "es": "guerra", "ko": "전쟁" },
+        { "es": "victoria", "ko": "승리" },
+        { "es": "derrota", "ko": "패배" },
+        { "es": "éxito", "ko": "성공" },
+        { "es": "fracaso", "ko": "실패" }
+      ]
+    },
+    {
+      "stage": 20,
+      "words": [
+        { "es": "futuro", "ko": "미래" },
+        { "es": "pasado", "ko": "과거" },
+        { "es": "presente", "ko": "현재" },
+        { "es": "esperanza", "ko": "희망" },
+        { "es": "sueño", "ko": "꿈" }
+      ]
+    }
+  ]
+}

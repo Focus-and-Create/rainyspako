@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Spanish Rain - 스페인어 단어 게임</title>
+    
+    <!-- 폰트 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&display=swap" rel="stylesheet">
+    
+    <!-- 스타일시트 -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- ========================================= -->
+    <!-- 로딩 화면 -->
+    <!-- ========================================= -->
+    <div id="loading-screen" class="screen">
+        <div class="loading-content">
+            <h1 class="loading-title">Spanish Rain</h1>
+            <p class="loading-text">Loading...</p>
+            <div class="loading-bar">
+                <div class="loading-progress"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ========================================= -->
+    <!-- 맵 화면 -->
+    <!-- ========================================= -->
+    <div id="map-screen" class="screen hidden">
+        <div class="screen-header">
+            <h1 class="app-title">Spanish Rain</h1>
+            <button id="stats-btn" class="icon-btn" aria-label="통계">
+                <span>Stats</span>
+            </button>
+        </div>
+        
+        <div class="canvas-container">
+            <canvas id="map-canvas"></canvas>
+        </div>
+    </div>
+
+    <!-- ========================================= -->
+    <!-- 게임 화면 -->
+    <!-- ========================================= -->
+    <div id="game-screen" class="screen hidden">
+        <!-- 게임 헤더 -->
+        <div class="game-header">
+            <div class="game-stat">
+                <span class="stat-label">Score</span>
+                <span id="score-display" class="stat-value">0</span>
+            </div>
+            
+            <div class="game-stat lives">
+                <span id="lives-display" class="lives-hearts"></span>
+            </div>
+            
+            <button id="pause-btn" class="icon-btn" aria-label="일시정지">II</button>
+        </div>
+        
+        <!-- 진행도 바 -->
+        <div class="progress-container">
+            <div id="progress-bar" class="progress-fill"></div>
+        </div>
+        
+        <!-- 콤보 표시 -->
+        <div id="combo-display" class="combo-display hidden"></div>
+        
+        <!-- 게임 캔버스 -->
+        <div class="canvas-container">
+            <canvas id="game-canvas"></canvas>
+        </div>
+        
+        <!-- 입력 필드 (모바일용) -->
+        <div class="input-container">
+            <input 
+                type="text" 
+                id="input-field" 
+                class="game-input"
+                placeholder="정답을 입력하세요"
+                autocomplete="off"
+                autocapitalize="off"
+                spellcheck="false"
+            >
+        </div>
+    </div>
+
+    <!-- ========================================= -->
+    <!-- 결과 화면 -->
+    <!-- ========================================= -->
+    <div id="result-screen" class="screen hidden">
+        <div class="result-content">
+            <h2 id="result-title" class="result-title">Stage Clear!</h2>
+            
+            <!-- 별점 -->
+            <div id="result-stars" class="result-stars"></div>
+            
+            <!-- 통계 -->
+            <div class="result-stats">
+                <div class="result-stat">
+                    <span class="result-stat-label">Score</span>
+                    <span id="result-score" class="result-stat-value">0</span>
+                </div>
+                <div class="result-stat">
+                    <span class="result-stat-label">Accuracy</span>
+                    <span id="result-accuracy" class="result-stat-value">0%</span>
+                </div>
+                <div class="result-stat">
+                    <span class="result-stat-label">Max Combo</span>
+                    <span id="result-combo" class="result-stat-value">0</span>
+                </div>
+            </div>
+            
+            <!-- 버튼들 -->
+            <div class="result-buttons">
+                <button id="next-btn" class="btn btn-primary">Next Stage</button>
+                <button id="retry-btn" class="btn btn-secondary">Retry</button>
+                <button id="map-btn" class="btn btn-secondary">Map</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- ========================================= -->
+    <!-- 스테이지 선택 모달 -->
+    <!-- ========================================= -->
+    <div id="stage-modal" class="modal hidden">
+        <div class="modal-backdrop"></div>
+        <div class="modal-content">
+            <button id="close-modal-btn" class="modal-close" aria-label="닫기">X</button>
+            
+            <h3 id="modal-title" class="modal-title">Stage 1-1</h3>
+            
+            <span id="review-badge" class="review-badge hidden">Review Stage</span>
+            
+            <p id="best-score" class="best-score">First Try!</p>
+            
+            <!-- 모드 선택 -->
+            <div class="mode-select-container">
+                <label for="mode-select" class="mode-label">Mode</label>
+                <select id="mode-select" class="mode-select">
+                    <option value="es-to-ko">Spanish → Korean</option>
+                    <option value="ko-to-es">Korean → Spanish</option>
+                </select>
+            </div>
+            
+            <button id="start-btn" class="btn btn-primary btn-large">Start</button>
+        </div>
+    </div>
+
+    <!-- ========================================= -->
+    <!-- 스크립트 로드 (순서 중요) -->
+    <!-- ========================================= -->
+    <script src="js/config.js"></script>
+    <script src="js/storage.js"></script>
+    <script src="js/word-manager.js"></script>
+    <script src="js/game.js"></script>
+    <script src="js/stage-map.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

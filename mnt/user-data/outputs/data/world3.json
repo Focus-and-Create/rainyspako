@@ -1,0 +1,207 @@
+{
+  "world": 3,
+  "name": "Avanzado",
+  "nameKo": "심화",
+  "stages": [
+    {
+      "stage": 1,
+      "words": [
+        { "es": "pensar", "ko": "생각하다" },
+        { "es": "creer", "ko": "믿다" },
+        { "es": "sentir", "ko": "느끼다" },
+        { "es": "recordar", "ko": "기억하다" },
+        { "es": "olvidar", "ko": "잊다" }
+      ]
+    },
+    {
+      "stage": 2,
+      "words": [
+        { "es": "entender", "ko": "이해하다" },
+        { "es": "aprender", "ko": "배우다" },
+        { "es": "enseñar", "ko": "가르치다" },
+        { "es": "estudiar", "ko": "공부하다" },
+        { "es": "practicar", "ko": "연습하다" }
+      ]
+    },
+    {
+      "stage": 3,
+      "words": [
+        { "es": "explicar", "ko": "설명하다" },
+        { "es": "preguntar", "ko": "질문하다" },
+        { "es": "responder", "ko": "대답하다" },
+        { "es": "discutir", "ko": "토론하다" },
+        { "es": "acordar", "ko": "동의하다" }
+      ]
+    },
+    {
+      "stage": 4,
+      "words": [
+        { "es": "decidir", "ko": "결정하다" },
+        { "es": "elegir", "ko": "선택하다" },
+        { "es": "cambiar", "ko": "바꾸다" },
+        { "es": "mantener", "ko": "유지하다" },
+        { "es": "mejorar", "ko": "개선하다" }
+      ]
+    },
+    {
+      "stage": 5,
+      "words": [
+        { "es": "desarrollar", "ko": "발전시키다" },
+        { "es": "crear", "ko": "만들다" },
+        { "es": "construir", "ko": "건설하다" },
+        { "es": "destruir", "ko": "파괴하다" },
+        { "es": "reparar", "ko": "수리하다" }
+      ]
+    },
+    {
+      "stage": 6,
+      "words": [
+        { "es": "gobierno", "ko": "정부" },
+        { "es": "sociedad", "ko": "사회" },
+        { "es": "cultura", "ko": "문화" },
+        { "es": "historia", "ko": "역사" },
+        { "es": "tradición", "ko": "전통" }
+      ]
+    },
+    {
+      "stage": 7,
+      "words": [
+        { "es": "economía", "ko": "경제" },
+        { "es": "empresa", "ko": "기업" },
+        { "es": "negocio", "ko": "사업" },
+        { "es": "mercado", "ko": "시장" },
+        { "es": "comercio", "ko": "무역" }
+      ]
+    },
+    {
+      "stage": 8,
+      "words": [
+        { "es": "educación", "ko": "교육" },
+        { "es": "universidad", "ko": "대학교" },
+        { "es": "carrera", "ko": "직업" },
+        { "es": "profesión", "ko": "전문직" },
+        { "es": "experiencia", "ko": "경험" }
+      ]
+    },
+    {
+      "stage": 9,
+      "words": [
+        { "es": "conocimiento", "ko": "지식" },
+        { "es": "habilidad", "ko": "능력" },
+        { "es": "talento", "ko": "재능" },
+        { "es": "esfuerzo", "ko": "노력" },
+        { "es": "éxito", "ko": "성공" }
+      ]
+    },
+    {
+      "stage": 10,
+      "words": [
+        { "es": "fracaso", "ko": "실패" },
+        { "es": "problema", "ko": "문제" },
+        { "es": "solución", "ko": "해결책" },
+        { "es": "oportunidad", "ko": "기회" },
+        { "es": "desafío", "ko": "도전" }
+      ]
+    },
+    {
+      "stage": 11,
+      "words": [
+        { "es": "libertad", "ko": "자유" },
+        { "es": "justicia", "ko": "정의" },
+        { "es": "igualdad", "ko": "평등" },
+        { "es": "derecho", "ko": "권리" },
+        { "es": "responsabilidad", "ko": "책임" }
+      ]
+    },
+    {
+      "stage": 12,
+      "words": [
+        { "es": "ambiente", "ko": "환경" },
+        { "es": "naturaleza", "ko": "자연" },
+        { "es": "contaminación", "ko": "오염" },
+        { "es": "reciclaje", "ko": "재활용" },
+        { "es": "energía", "ko": "에너지" }
+      ]
+    },
+    {
+      "stage": 13,
+      "words": [
+        { "es": "tecnología", "ko": "기술" },
+        { "es": "ciencia", "ko": "과학" },
+        { "es": "investigación", "ko": "연구" },
+        { "es": "descubrimiento", "ko": "발견" },
+        { "es": "invención", "ko": "발명" }
+      ]
+    },
+    {
+      "stage": 14,
+      "words": [
+        { "es": "comunicación", "ko": "의사소통" },
+        { "es": "información", "ko": "정보" },
+        { "es": "noticia", "ko": "뉴스" },
+        { "es": "opinión", "ko": "의견" },
+        { "es": "verdad", "ko": "진실" }
+      ]
+    },
+    {
+      "stage": 15,
+      "words": [
+        { "es": "mentira", "ko": "거짓말" },
+        { "es": "confianza", "ko": "신뢰" },
+        { "es": "respeto", "ko": "존경" },
+        { "es": "amistad", "ko": "우정" },
+        { "es": "amor", "ko": "사랑" }
+      ]
+    },
+    {
+      "stage": 16,
+      "words": [
+        { "es": "odio", "ko": "증오" },
+        { "es": "miedo", "ko": "두려움" },
+        { "es": "esperanza", "ko": "희망" },
+        { "es": "tristeza", "ko": "슬픔" },
+        { "es": "alegría", "ko": "기쁨" }
+      ]
+    },
+    {
+      "stage": 17,
+      "words": [
+        { "es": "salud", "ko": "건강" },
+        { "es": "enfermedad", "ko": "질병" },
+        { "es": "medicina", "ko": "의학" },
+        { "es": "tratamiento", "ko": "치료" },
+        { "es": "recuperación", "ko": "회복" }
+      ]
+    },
+    {
+      "stage": 18,
+      "words": [
+        { "es": "viaje", "ko": "여행" },
+        { "es": "aventura", "ko": "모험" },
+        { "es": "destino", "ko": "목적지" },
+        { "es": "turismo", "ko": "관광" },
+        { "es": "extranjero", "ko": "외국인" }
+      ]
+    },
+    {
+      "stage": 19,
+      "words": [
+        { "es": "idioma", "ko": "언어" },
+        { "es": "traducción", "ko": "번역" },
+        { "es": "vocabulario", "ko": "어휘" },
+        { "es": "gramática", "ko": "문법" },
+        { "es": "pronunciación", "ko": "발음" }
+      ]
+    },
+    {
+      "stage": 20,
+      "words": [
+        { "es": "futuro", "ko": "미래" },
+        { "es": "pasado", "ko": "과거" },
+        { "es": "presente", "ko": "현재" },
+        { "es": "sueño", "ko": "꿈" },
+        { "es": "realidad", "ko": "현실" }
+      ]
+    }
+  ]
+}

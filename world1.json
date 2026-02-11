@@ -1,0 +1,207 @@
+{
+  "world": 1,
+  "name": "Fundamentos",
+  "nameKo": "기초",
+  "stages": [
+    {
+      "stage": 1,
+      "words": [
+        { "es": "hola", "ko": "안녕" },
+        { "es": "adiós", "ko": "안녕히" },
+        { "es": "sí", "ko": "예" },
+        { "es": "no", "ko": "아니오" },
+        { "es": "gracias", "ko": "감사합니다" }
+      ]
+    },
+    {
+      "stage": 2,
+      "words": [
+        { "es": "por favor", "ko": "제발" },
+        { "es": "perdón", "ko": "죄송합니다" },
+        { "es": "buenos días", "ko": "좋은 아침" },
+        { "es": "buenas noches", "ko": "안녕히 주무세요" },
+        { "es": "hasta luego", "ko": "나중에 봐요" }
+      ]
+    },
+    {
+      "stage": 3,
+      "words": [
+        { "es": "yo", "ko": "나" },
+        { "es": "tú", "ko": "너" },
+        { "es": "él", "ko": "그" },
+        { "es": "ella", "ko": "그녀" },
+        { "es": "nosotros", "ko": "우리" }
+      ]
+    },
+    {
+      "stage": 4,
+      "words": [
+        { "es": "uno", "ko": "하나" },
+        { "es": "dos", "ko": "둘" },
+        { "es": "tres", "ko": "셋" },
+        { "es": "cuatro", "ko": "넷" },
+        { "es": "cinco", "ko": "다섯" }
+      ]
+    },
+    {
+      "stage": 5,
+      "words": [
+        { "es": "seis", "ko": "여섯" },
+        { "es": "siete", "ko": "일곱" },
+        { "es": "ocho", "ko": "여덟" },
+        { "es": "nueve", "ko": "아홉" },
+        { "es": "diez", "ko": "열" }
+      ]
+    },
+    {
+      "stage": 6,
+      "words": [
+        { "es": "agua", "ko": "물" },
+        { "es": "comida", "ko": "음식" },
+        { "es": "pan", "ko": "빵" },
+        { "es": "leche", "ko": "우유" },
+        { "es": "café", "ko": "커피" }
+      ]
+    },
+    {
+      "stage": 7,
+      "words": [
+        { "es": "casa", "ko": "집" },
+        { "es": "calle", "ko": "거리" },
+        { "es": "ciudad", "ko": "도시" },
+        { "es": "país", "ko": "나라" },
+        { "es": "mundo", "ko": "세계" }
+      ]
+    },
+    {
+      "stage": 8,
+      "words": [
+        { "es": "familia", "ko": "가족" },
+        { "es": "madre", "ko": "어머니" },
+        { "es": "padre", "ko": "아버지" },
+        { "es": "hijo", "ko": "아들" },
+        { "es": "hija", "ko": "딸" }
+      ]
+    },
+    {
+      "stage": 9,
+      "words": [
+        { "es": "hermano", "ko": "형제" },
+        { "es": "hermana", "ko": "자매" },
+        { "es": "abuelo", "ko": "할아버지" },
+        { "es": "abuela", "ko": "할머니" },
+        { "es": "amigo", "ko": "친구" }
+      ]
+    },
+    {
+      "stage": 10,
+      "words": [
+        { "es": "rojo", "ko": "빨간" },
+        { "es": "azul", "ko": "파란" },
+        { "es": "verde", "ko": "초록" },
+        { "es": "amarillo", "ko": "노란" },
+        { "es": "negro", "ko": "검은" }
+      ]
+    },
+    {
+      "stage": 11,
+      "words": [
+        { "es": "blanco", "ko": "흰" },
+        { "es": "grande", "ko": "큰" },
+        { "es": "pequeño", "ko": "작은" },
+        { "es": "nuevo", "ko": "새로운" },
+        { "es": "viejo", "ko": "오래된" }
+      ]
+    },
+    {
+      "stage": 12,
+      "words": [
+        { "es": "bueno", "ko": "좋은" },
+        { "es": "malo", "ko": "나쁜" },
+        { "es": "bonito", "ko": "예쁜" },
+        { "es": "feo", "ko": "못생긴" },
+        { "es": "feliz", "ko": "행복한" }
+      ]
+    },
+    {
+      "stage": 13,
+      "words": [
+        { "es": "comer", "ko": "먹다" },
+        { "es": "beber", "ko": "마시다" },
+        { "es": "dormir", "ko": "자다" },
+        { "es": "hablar", "ko": "말하다" },
+        { "es": "escuchar", "ko": "듣다" }
+      ]
+    },
+    {
+      "stage": 14,
+      "words": [
+        { "es": "leer", "ko": "읽다" },
+        { "es": "escribir", "ko": "쓰다" },
+        { "es": "ver", "ko": "보다" },
+        { "es": "ir", "ko": "가다" },
+        { "es": "venir", "ko": "오다" }
+      ]
+    },
+    {
+      "stage": 15,
+      "words": [
+        { "es": "tener", "ko": "가지다" },
+        { "es": "hacer", "ko": "하다" },
+        { "es": "poder", "ko": "할 수 있다" },
+        { "es": "querer", "ko": "원하다" },
+        { "es": "saber", "ko": "알다" }
+      ]
+    },
+    {
+      "stage": 16,
+      "words": [
+        { "es": "hoy", "ko": "오늘" },
+        { "es": "mañana", "ko": "내일" },
+        { "es": "ayer", "ko": "어제" },
+        { "es": "ahora", "ko": "지금" },
+        { "es": "siempre", "ko": "항상" }
+      ]
+    },
+    {
+      "stage": 17,
+      "words": [
+        { "es": "nunca", "ko": "절대로" },
+        { "es": "aquí", "ko": "여기" },
+        { "es": "allí", "ko": "거기" },
+        { "es": "mucho", "ko": "많이" },
+        { "es": "poco", "ko": "조금" }
+      ]
+    },
+    {
+      "stage": 18,
+      "words": [
+        { "es": "qué", "ko": "무엇" },
+        { "es": "quién", "ko": "누구" },
+        { "es": "dónde", "ko": "어디" },
+        { "es": "cuándo", "ko": "언제" },
+        { "es": "cómo", "ko": "어떻게" }
+      ]
+    },
+    {
+      "stage": 19,
+      "words": [
+        { "es": "por qué", "ko": "왜" },
+        { "es": "cuánto", "ko": "얼마나" },
+        { "es": "este", "ko": "이것" },
+        { "es": "ese", "ko": "그것" },
+        { "es": "aquel", "ko": "저것" }
+      ]
+    },
+    {
+      "stage": 20,
+      "words": [
+        { "es": "y", "ko": "그리고" },
+        { "es": "o", "ko": "또는" },
+        { "es": "pero", "ko": "하지만" },
+        { "es": "porque", "ko": "왜냐하면" },
+        { "es": "con", "ko": "함께" }
+      ]
+    }
+  ]
+}
