@@ -1,0 +1,407 @@
+{
+  "world": 8,
+  "name": "Ocio",
+  "nameKo": "여가",
+  "stages": [
+    {
+      "stage": 1,
+      "words": [
+        { "es": "tiempo libre", "ko": "여가 시간" },
+        { "es": "ocio", "ko": "여가" },
+        { "es": "pasatiempo", "ko": "취미" },
+        { "es": "diversión", "ko": "재미" },
+        { "es": "entretenimiento", "ko": "오락" },
+        { "es": "descanso", "ko": "휴식" },
+        { "es": "relajación", "ko": "휴양" },
+        { "es": "vacaciones", "ko": "휴가" },
+        { "es": "fin de semana", "ko": "주말" },
+        { "es": "actividad", "ko": "활동" },
+        { "es": "afición", "ko": "취미 활동" },
+        { "es": "recreo", "ko": "레크리에이션" },
+        { "es": "juego", "ko": "놀이" },
+        { "es": "aventura", "ko": "모험" },
+        { "es": "experiencia", "ko": "경험" }
+      ]
+    },
+    {
+      "stage": 2,
+      "words": [
+        { "es": "fútbol", "ko": "축구" },
+        { "es": "baloncesto", "ko": "농구" },
+        { "es": "béisbol", "ko": "야구" },
+        { "es": "voleibol", "ko": "배구" },
+        { "es": "tenis", "ko": "테니스" },
+        { "es": "golf", "ko": "골프" },
+        { "es": "rugby", "ko": "럭비" },
+        { "es": "bádminton", "ko": "배드민턴" },
+        { "es": "ping-pong", "ko": "탁구" },
+        { "es": "balonmano", "ko": "핸드볼" },
+        { "es": "polo acuático", "ko": "수구" },
+        { "es": "pelota", "ko": "공" },
+        { "es": "portería", "ko": "골대" },
+        { "es": "cancha", "ko": "경기장" },
+        { "es": "equipo", "ko": "팀" }
+      ]
+    },
+    {
+      "stage": 3,
+      "words": [
+        { "es": "natación", "ko": "수영" },
+        { "es": "atletismo", "ko": "육상" },
+        { "es": "ciclismo", "ko": "사이클" },
+        { "es": "boxeo", "ko": "복싱" },
+        { "es": "esgrima", "ko": "펜싱" },
+        { "es": "gimnasia", "ko": "체조" },
+        { "es": "patinaje", "ko": "스케이팅" },
+        { "es": "esquí", "ko": "스키" },
+        { "es": "judo", "ko": "유도" },
+        { "es": "taekwondo", "ko": "태권도" },
+        { "es": "tiro con arco", "ko": "양궁" },
+        { "es": "halterofilia", "ko": "역도" },
+        { "es": "lucha", "ko": "레슬링" },
+        { "es": "escalada", "ko": "암벽 등반" },
+        { "es": "maratón", "ko": "마라톤" }
+      ]
+    },
+    {
+      "stage": 4,
+      "words": [
+        { "es": "ejercicio", "ko": "운동" },
+        { "es": "gimnasio", "ko": "체육관" },
+        { "es": "yoga", "ko": "요가" },
+        { "es": "pilates", "ko": "필라테스" },
+        { "es": "pesas", "ko": "덤벨" },
+        { "es": "cinta de correr", "ko": "러닝머신" },
+        { "es": "abdominales", "ko": "복근 운동" },
+        { "es": "sentadilla", "ko": "스쿼트" },
+        { "es": "flexión", "ko": "팔굽혀펴기" },
+        { "es": "estiramiento", "ko": "스트레칭" },
+        { "es": "entrenador", "ko": "트레이너" },
+        { "es": "resistencia", "ko": "지구력" },
+        { "es": "fuerza", "ko": "근력" },
+        { "es": "calentamiento", "ko": "준비 운동" },
+        { "es": "sudor", "ko": "땀" }
+      ]
+    },
+    {
+      "stage": 5,
+      "words": [
+        { "es": "guitarra", "ko": "기타" },
+        { "es": "piano", "ko": "피아노" },
+        { "es": "violín", "ko": "바이올린" },
+        { "es": "batería", "ko": "드럼" },
+        { "es": "flauta", "ko": "플루트" },
+        { "es": "trompeta", "ko": "트럼펫" },
+        { "es": "saxofón", "ko": "색소폰" },
+        { "es": "pop", "ko": "팝" },
+        { "es": "rock", "ko": "록" },
+        { "es": "jazz", "ko": "재즈" },
+        { "es": "clásica", "ko": "클래식" },
+        { "es": "hip hop", "ko": "힙합" },
+        { "es": "electrónica", "ko": "일렉트로닉" },
+        { "es": "reggaetón", "ko": "레게톤" },
+        { "es": "melodía", "ko": "멜로디" }
+      ]
+    },
+    {
+      "stage": 6,
+      "words": [
+        { "es": "concierto", "ko": "콘서트" },
+        { "es": "cantante", "ko": "가수" },
+        { "es": "canción", "ko": "노래" },
+        { "es": "letra", "ko": "가사" },
+        { "es": "escenario", "ko": "무대" },
+        { "es": "micrófono", "ko": "마이크" },
+        { "es": "amplificador", "ko": "앰프" },
+        { "es": "coro", "ko": "합창단" },
+        { "es": "orquesta", "ko": "오케스트라" },
+        { "es": "compositor", "ko": "작곡가" },
+        { "es": "ritmo", "ko": "리듬" },
+        { "es": "álbum", "ko": "앨범" },
+        { "es": "gira", "ko": "투어" },
+        { "es": "público", "ko": "관객" },
+        { "es": "aplauso", "ko": "박수" }
+      ]
+    },
+    {
+      "stage": 7,
+      "words": [
+        { "es": "pintura", "ko": "그림" },
+        { "es": "dibujo", "ko": "소묘" },
+        { "es": "escultura", "ko": "조각" },
+        { "es": "lienzo", "ko": "캔버스" },
+        { "es": "pincel", "ko": "붓" },
+        { "es": "acuarela", "ko": "수채화" },
+        { "es": "óleo", "ko": "유화" },
+        { "es": "museo", "ko": "박물관" },
+        { "es": "galería", "ko": "갤러리" },
+        { "es": "artista", "ko": "예술가" },
+        { "es": "exposición", "ko": "전시회" },
+        { "es": "retrato", "ko": "초상화" },
+        { "es": "paisaje", "ko": "풍경화" },
+        { "es": "paleta", "ko": "팔레트" },
+        { "es": "obra de arte", "ko": "예술 작품" }
+      ]
+    },
+    {
+      "stage": 8,
+      "words": [
+        { "es": "película", "ko": "영화" },
+        { "es": "cine", "ko": "영화관" },
+        { "es": "director", "ko": "감독" },
+        { "es": "actor", "ko": "배우" },
+        { "es": "actriz", "ko": "여배우" },
+        { "es": "guion", "ko": "각본" },
+        { "es": "escena", "ko": "장면" },
+        { "es": "taquilla", "ko": "매표소" },
+        { "es": "palomitas", "ko": "팝콘" },
+        { "es": "subtítulo", "ko": "자막" },
+        { "es": "tráiler", "ko": "예고편" },
+        { "es": "estreno", "ko": "개봉" },
+        { "es": "comedia", "ko": "코미디" },
+        { "es": "terror", "ko": "공포" },
+        { "es": "documental", "ko": "다큐멘터리" }
+      ]
+    },
+    {
+      "stage": 9,
+      "words": [
+        { "es": "televisión", "ko": "텔레비전" },
+        { "es": "serie", "ko": "드라마" },
+        { "es": "canal", "ko": "채널" },
+        { "es": "programa", "ko": "프로그램" },
+        { "es": "noticias", "ko": "뉴스" },
+        { "es": "episodio", "ko": "에피소드" },
+        { "es": "temporada", "ko": "시즌" },
+        { "es": "mando a distancia", "ko": "리모컨" },
+        { "es": "pantalla", "ko": "화면" },
+        { "es": "transmisión en vivo", "ko": "실시간 방송" },
+        { "es": "suscripción", "ko": "구독" },
+        { "es": "plataforma", "ko": "플랫폼" },
+        { "es": "contenido", "ko": "콘텐츠" },
+        { "es": "reality show", "ko": "리얼리티 쇼" },
+        { "es": "presentador", "ko": "진행자" }
+      ]
+    },
+    {
+      "stage": 10,
+      "words": [
+        { "es": "libro", "ko": "책" },
+        { "es": "novela", "ko": "소설" },
+        { "es": "poesía", "ko": "시" },
+        { "es": "autor", "ko": "작가" },
+        { "es": "lector", "ko": "독자" },
+        { "es": "biblioteca", "ko": "도서관" },
+        { "es": "librería", "ko": "서점" },
+        { "es": "página", "ko": "페이지" },
+        { "es": "capítulo", "ko": "챕터" },
+        { "es": "portada", "ko": "표지" },
+        { "es": "editorial", "ko": "출판사" },
+        { "es": "cuento", "ko": "동화" },
+        { "es": "ensayo", "ko": "에세이" },
+        { "es": "cómic", "ko": "만화" },
+        { "es": "marcapáginas", "ko": "책갈피" }
+      ]
+    },
+    {
+      "stage": 11,
+      "words": [
+        { "es": "fotografía", "ko": "사진" },
+        { "es": "cámara", "ko": "카메라" },
+        { "es": "objetivo", "ko": "렌즈" },
+        { "es": "flash", "ko": "플래시" },
+        { "es": "enfoque", "ko": "초점" },
+        { "es": "exposición fotográfica", "ko": "노출" },
+        { "es": "encuadre", "ko": "구도" },
+        { "es": "trípode", "ko": "삼각대" },
+        { "es": "retoque", "ko": "보정" },
+        { "es": "filtro", "ko": "필터" },
+        { "es": "resolución", "ko": "해상도" },
+        { "es": "disparo", "ko": "촬영" },
+        { "es": "fotógrafo", "ko": "사진작가" },
+        { "es": "autorretrato", "ko": "셀카" },
+        { "es": "álbum de fotos", "ko": "사진첩" }
+      ]
+    },
+    {
+      "stage": 12,
+      "words": [
+        { "es": "videojuego", "ko": "비디오 게임" },
+        { "es": "ajedrez", "ko": "체스" },
+        { "es": "dado", "ko": "주사위" },
+        { "es": "ficha", "ko": "게임 말" },
+        { "es": "tablero", "ko": "보드판" },
+        { "es": "baraja", "ko": "카드 한 벌" },
+        { "es": "rompecabezas", "ko": "퍼즐" },
+        { "es": "jugador", "ko": "플레이어" },
+        { "es": "turno", "ko": "차례" },
+        { "es": "puntuación", "ko": "점수" },
+        { "es": "nivel", "ko": "레벨" },
+        { "es": "partida", "ko": "게임 한 판" },
+        { "es": "regla", "ko": "규칙" },
+        { "es": "ganador", "ko": "승자" },
+        { "es": "perdedor", "ko": "패자" }
+      ]
+    },
+    {
+      "stage": 13,
+      "words": [
+        { "es": "senderismo", "ko": "하이킹" },
+        { "es": "bicicleta", "ko": "자전거" },
+        { "es": "picnic", "ko": "소풍" },
+        { "es": "parque", "ko": "공원" },
+        { "es": "montaña", "ko": "산" },
+        { "es": "bosque", "ko": "숲" },
+        { "es": "lago", "ko": "호수" },
+        { "es": "río", "ko": "강" },
+        { "es": "pesca", "ko": "낚시" },
+        { "es": "cometa", "ko": "연" },
+        { "es": "columpio", "ko": "그네" },
+        { "es": "mochila", "ko": "배낭" },
+        { "es": "brújula", "ko": "나침반" },
+        { "es": "sendero", "ko": "산책로" },
+        { "es": "mirador", "ko": "전망대" }
+      ]
+    },
+    {
+      "stage": 14,
+      "words": [
+        { "es": "playa", "ko": "해변" },
+        { "es": "surf", "ko": "서핑" },
+        { "es": "buceo", "ko": "다이빙" },
+        { "es": "esnórquel", "ko": "스노클링" },
+        { "es": "kayak", "ko": "카약" },
+        { "es": "vela", "ko": "요트" },
+        { "es": "arena", "ko": "모래" },
+        { "es": "ola", "ko": "파도" },
+        { "es": "protector solar", "ko": "자외선 차단제" },
+        { "es": "toalla", "ko": "수건" },
+        { "es": "sombrilla", "ko": "파라솔" },
+        { "es": "traje de baño", "ko": "수영복" },
+        { "es": "tabla de surf", "ko": "서핑 보드" },
+        { "es": "chaleco salvavidas", "ko": "구명조끼" },
+        { "es": "castillo de arena", "ko": "모래성" }
+      ]
+    },
+    {
+      "stage": 15,
+      "words": [
+        { "es": "campamento", "ko": "캠핑장" },
+        { "es": "tienda de campaña", "ko": "텐트" },
+        { "es": "saco de dormir", "ko": "침낭" },
+        { "es": "fogata", "ko": "모닥불" },
+        { "es": "linterna", "ko": "손전등" },
+        { "es": "caminata", "ko": "도보 여행" },
+        { "es": "cumbre", "ko": "정상" },
+        { "es": "acantilado", "ko": "절벽" },
+        { "es": "cascada", "ko": "폭포" },
+        { "es": "cueva", "ko": "동굴" },
+        { "es": "leña", "ko": "장작" },
+        { "es": "navaja", "ko": "주머니칼" },
+        { "es": "cantimplora", "ko": "물통" },
+        { "es": "tirolina", "ko": "짚라인" },
+        { "es": "hamaca", "ko": "해먹" }
+      ]
+    },
+    {
+      "stage": 16,
+      "words": [
+        { "es": "festival", "ko": "축제" },
+        { "es": "fiesta", "ko": "파티" },
+        { "es": "desfile", "ko": "퍼레이드" },
+        { "es": "carnaval", "ko": "카니발" },
+        { "es": "fuegos artificiales", "ko": "불꽃놀이" },
+        { "es": "disfraz", "ko": "의상" },
+        { "es": "máscara", "ko": "가면" },
+        { "es": "decoración", "ko": "장식" },
+        { "es": "globo", "ko": "풍선" },
+        { "es": "celebración", "ko": "축하" },
+        { "es": "invitación", "ko": "초대장" },
+        { "es": "banquete", "ko": "연회" },
+        { "es": "brindis", "ko": "건배" },
+        { "es": "confeti", "ko": "색종이 조각" },
+        { "es": "sorpresa", "ko": "깜짝" }
+      ]
+    },
+    {
+      "stage": 17,
+      "words": [
+        { "es": "danza", "ko": "춤" },
+        { "es": "ballet", "ko": "발레" },
+        { "es": "teatro", "ko": "연극" },
+        { "es": "obra de teatro", "ko": "희곡" },
+        { "es": "coreografía", "ko": "안무" },
+        { "es": "bailarín", "ko": "무용가" },
+        { "es": "ensayo", "ko": "리허설" },
+        { "es": "telón", "ko": "막" },
+        { "es": "vestuario", "ko": "무대 의상" },
+        { "es": "maquillaje", "ko": "분장" },
+        { "es": "protagonista", "ko": "주인공" },
+        { "es": "acto", "ko": "막(연극)" },
+        { "es": "musical", "ko": "뮤지컬" },
+        { "es": "ópera", "ko": "오페라" },
+        { "es": "butaca", "ko": "좌석" }
+      ]
+    },
+    {
+      "stage": 18,
+      "words": [
+        { "es": "colección", "ko": "수집" },
+        { "es": "sello", "ko": "우표" },
+        { "es": "moneda", "ko": "동전" },
+        { "es": "antigüedad", "ko": "골동품" },
+        { "es": "manualidad", "ko": "공예품" },
+        { "es": "costura", "ko": "바느질" },
+        { "es": "tejido", "ko": "뜨개질" },
+        { "es": "cerámica", "ko": "도자기" },
+        { "es": "origami", "ko": "종이접기" },
+        { "es": "bordado", "ko": "자수" },
+        { "es": "joyería", "ko": "보석 공예" },
+        { "es": "carpintería", "ko": "목공" },
+        { "es": "hilo", "ko": "실" },
+        { "es": "aguja", "ko": "바늘" },
+        { "es": "pegamento", "ko": "접착제" }
+      ]
+    },
+    {
+      "stage": 19,
+      "words": [
+        { "es": "red social", "ko": "소셜 미디어" },
+        { "es": "internet", "ko": "인터넷" },
+        { "es": "publicación", "ko": "게시물" },
+        { "es": "seguidores", "ko": "팔로워" },
+        { "es": "me gusta", "ko": "좋아요" },
+        { "es": "comentario", "ko": "댓글" },
+        { "es": "compartir", "ko": "공유" },
+        { "es": "hashtag", "ko": "해시태그" },
+        { "es": "perfil", "ko": "프로필" },
+        { "es": "blog", "ko": "블로그" },
+        { "es": "podcast", "ko": "팟캐스트" },
+        { "es": "en directo", "ko": "라이브" },
+        { "es": "viral", "ko": "바이럴" },
+        { "es": "influencer", "ko": "인플루언서" },
+        { "es": "descargar", "ko": "다운로드" }
+      ]
+    },
+    {
+      "stage": 20,
+      "words": [
+        { "es": "jugar", "ko": "놀다" },
+        { "es": "cantar", "ko": "노래하다" },
+        { "es": "bailar", "ko": "춤추다" },
+        { "es": "dibujar", "ko": "그리다" },
+        { "es": "pintar", "ko": "칠하다" },
+        { "es": "tocar", "ko": "연주하다" },
+        { "es": "nadar", "ko": "수영하다" },
+        { "es": "correr", "ko": "달리다" },
+        { "es": "saltar", "ko": "뛰다" },
+        { "es": "leer", "ko": "읽다" },
+        { "es": "escribir", "ko": "쓰다" },
+        { "es": "viajar", "ko": "여행하다" },
+        { "es": "fotografiar", "ko": "사진 찍다" },
+        { "es": "acampar", "ko": "캠핑하다" },
+        { "es": "disfrutar", "ko": "즐기다" }
+      ]
+    }
+  ]
+}

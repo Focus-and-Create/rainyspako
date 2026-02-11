@@ -68,10 +68,25 @@
         
         <!-- 콤보 표시 -->
         <div id="combo-display" class="combo-display hidden"></div>
-        
-        <!-- 게임 캔버스 -->
-        <div class="canvas-container">
-            <canvas id="game-canvas"></canvas>
+
+        <!-- 게임 본문 (단어 패널 + 캔버스) -->
+        <div class="game-body">
+            <!-- 왼쪽 단어 참조 패널 -->
+            <div id="word-panel-left" class="word-panel">
+                <div class="word-panel-title">Words</div>
+                <div class="word-panel-list" id="word-list-left"></div>
+            </div>
+
+            <!-- 게임 캔버스 -->
+            <div class="canvas-container">
+                <canvas id="game-canvas"></canvas>
+            </div>
+
+            <!-- 오른쪽 단어 참조 패널 -->
+            <div id="word-panel-right" class="word-panel">
+                <div class="word-panel-title">Words</div>
+                <div class="word-panel-list" id="word-list-right"></div>
+            </div>
         </div>
         
         <!-- 입력 필드 (모바일용) -->

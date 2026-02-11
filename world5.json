@@ -1,0 +1,407 @@
+{
+  "world": 5,
+  "name": "Ciudad",
+  "nameKo": "도시",
+  "stages": [
+    {
+      "stage": 1,
+      "words": [
+        { "es": "ciudad", "ko": "도시" },
+        { "es": "pueblo", "ko": "마을" },
+        { "es": "calle", "ko": "거리" },
+        { "es": "plaza", "ko": "광장" },
+        { "es": "barrio", "ko": "동네" },
+        { "es": "centro", "ko": "중심" },
+        { "es": "avenida", "ko": "대로" },
+        { "es": "manzana", "ko": "블록" },
+        { "es": "zona", "ko": "구역" },
+        { "es": "capital", "ko": "수도" },
+        { "es": "metrópoli", "ko": "대도시" },
+        { "es": "distrito", "ko": "지구" },
+        { "es": "urbanización", "ko": "주택단지" },
+        { "es": "vecindario", "ko": "이웃" },
+        { "es": "habitante", "ko": "주민" }
+      ]
+    },
+    {
+      "stage": 2,
+      "words": [
+        { "es": "edificio", "ko": "건물" },
+        { "es": "hospital", "ko": "병원" },
+        { "es": "escuela", "ko": "학교" },
+        { "es": "iglesia", "ko": "교회" },
+        { "es": "banco", "ko": "은행" },
+        { "es": "biblioteca", "ko": "도서관" },
+        { "es": "museo", "ko": "박물관" },
+        { "es": "teatro", "ko": "극장" },
+        { "es": "restaurante", "ko": "식당" },
+        { "es": "tienda", "ko": "가게" },
+        { "es": "farmacia", "ko": "약국" },
+        { "es": "supermercado", "ko": "슈퍼마켓" },
+        { "es": "oficina", "ko": "사무실" },
+        { "es": "hotel", "ko": "호텔" },
+        { "es": "ayuntamiento", "ko": "시청" }
+      ]
+    },
+    {
+      "stage": 3,
+      "words": [
+        { "es": "estación", "ko": "역" },
+        { "es": "aeropuerto", "ko": "공항" },
+        { "es": "correos", "ko": "우체국" },
+        { "es": "comisaría", "ko": "경찰서" },
+        { "es": "bomberos", "ko": "소방서" },
+        { "es": "gasolinera", "ko": "주유소" },
+        { "es": "gimnasio", "ko": "체육관" },
+        { "es": "estadio", "ko": "경기장" },
+        { "es": "cementerio", "ko": "묘지" },
+        { "es": "mercado", "ko": "시장" },
+        { "es": "guardería", "ko": "어린이집" },
+        { "es": "universidad", "ko": "대학교" },
+        { "es": "embajada", "ko": "대사관" },
+        { "es": "tribunal", "ko": "법원" },
+        { "es": "prisión", "ko": "감옥" }
+      ]
+    },
+    {
+      "stage": 4,
+      "words": [
+        { "es": "coche", "ko": "자동차" },
+        { "es": "autobús", "ko": "버스" },
+        { "es": "tren", "ko": "기차" },
+        { "es": "metro", "ko": "지하철" },
+        { "es": "taxi", "ko": "택시" },
+        { "es": "bicicleta", "ko": "자전거" },
+        { "es": "motocicleta", "ko": "오토바이" },
+        { "es": "avión", "ko": "비행기" },
+        { "es": "barco", "ko": "배" },
+        { "es": "tranvía", "ko": "트램" },
+        { "es": "camión", "ko": "트럭" },
+        { "es": "ambulancia", "ko": "구급차" },
+        { "es": "helicóptero", "ko": "헬리콥터" },
+        { "es": "patinete", "ko": "킥보드" },
+        { "es": "furgoneta", "ko": "승합차" }
+      ]
+    },
+    {
+      "stage": 5,
+      "words": [
+        { "es": "puente", "ko": "다리" },
+        { "es": "túnel", "ko": "터널" },
+        { "es": "autopista", "ko": "고속도로" },
+        { "es": "semáforo", "ko": "신호등" },
+        { "es": "parada", "ko": "정류장" },
+        { "es": "cruce", "ko": "교차로" },
+        { "es": "rotonda", "ko": "로터리" },
+        { "es": "acera", "ko": "인도" },
+        { "es": "carril", "ko": "차선" },
+        { "es": "peaje", "ko": "톨게이트" },
+        { "es": "paso de peatones", "ko": "횡단보도" },
+        { "es": "aparcamiento", "ko": "주차장" },
+        { "es": "carretera", "ko": "도로" },
+        { "es": "vía", "ko": "선로" },
+        { "es": "terminal", "ko": "터미널" }
+      ]
+    },
+    {
+      "stage": 6,
+      "words": [
+        { "es": "norte", "ko": "북쪽" },
+        { "es": "sur", "ko": "남쪽" },
+        { "es": "este", "ko": "동쪽" },
+        { "es": "oeste", "ko": "서쪽" },
+        { "es": "derecha", "ko": "오른쪽" },
+        { "es": "izquierda", "ko": "왼쪽" },
+        { "es": "arriba", "ko": "위" },
+        { "es": "abajo", "ko": "아래" },
+        { "es": "cerca", "ko": "가까이" },
+        { "es": "lejos", "ko": "멀리" },
+        { "es": "enfrente", "ko": "맞은편" },
+        { "es": "detrás", "ko": "뒤" },
+        { "es": "esquina", "ko": "모퉁이" },
+        { "es": "al lado", "ko": "옆" },
+        { "es": "entre", "ko": "사이" }
+      ]
+    },
+    {
+      "stage": 7,
+      "words": [
+        { "es": "camino", "ko": "길" },
+        { "es": "callejón", "ko": "골목" },
+        { "es": "bulevar", "ko": "큰길" },
+        { "es": "paseo", "ko": "산책로" },
+        { "es": "glorieta", "ko": "원형광장" },
+        { "es": "farola", "ko": "가로등" },
+        { "es": "banco público", "ko": "벤치" },
+        { "es": "buzón", "ko": "우체통" },
+        { "es": "alcantarilla", "ko": "하수구" },
+        { "es": "bordillo", "ko": "연석" },
+        { "es": "señal", "ko": "표지판" },
+        { "es": "pavimento", "ko": "포장도로" },
+        { "es": "atasco", "ko": "교통체증" },
+        { "es": "peatón", "ko": "보행자" },
+        { "es": "bocacalle", "ko": "골목 입구" }
+      ]
+    },
+    {
+      "stage": 8,
+      "words": [
+        { "es": "policía", "ko": "경찰" },
+        { "es": "bombero", "ko": "소방관" },
+        { "es": "basura", "ko": "쓰레기" },
+        { "es": "reciclaje", "ko": "재활용" },
+        { "es": "electricidad", "ko": "전기" },
+        { "es": "agua potable", "ko": "수돗물" },
+        { "es": "alcantarillado", "ko": "하수도" },
+        { "es": "transporte público", "ko": "대중교통" },
+        { "es": "emergencia", "ko": "응급" },
+        { "es": "impuesto", "ko": "세금" },
+        { "es": "servicio", "ko": "서비스" },
+        { "es": "gobierno", "ko": "정부" },
+        { "es": "alcalde", "ko": "시장님" },
+        { "es": "ciudadano", "ko": "시민" },
+        { "es": "funcionario", "ko": "공무원" }
+      ]
+    },
+    {
+      "stage": 9,
+      "words": [
+        { "es": "vuelo", "ko": "항공편" },
+        { "es": "equipaje", "ko": "짐" },
+        { "es": "maleta", "ko": "여행가방" },
+        { "es": "pasaporte", "ko": "여권" },
+        { "es": "embarque", "ko": "탑승" },
+        { "es": "aterrizaje", "ko": "착륙" },
+        { "es": "despegue", "ko": "이륙" },
+        { "es": "aduana", "ko": "세관" },
+        { "es": "piloto", "ko": "조종사" },
+        { "es": "azafata", "ko": "승무원" },
+        { "es": "pista", "ko": "활주로" },
+        { "es": "tarjeta de embarque", "ko": "탑승권" },
+        { "es": "facturación", "ko": "체크인" },
+        { "es": "puerta de embarque", "ko": "탑승구" },
+        { "es": "escala", "ko": "경유" }
+      ]
+    },
+    {
+      "stage": 10,
+      "words": [
+        { "es": "billete", "ko": "표" },
+        { "es": "andén", "ko": "플랫폼" },
+        { "es": "horario", "ko": "시간표" },
+        { "es": "asiento", "ko": "좌석" },
+        { "es": "ventanilla", "ko": "매표소" },
+        { "es": "pasajero", "ko": "승객" },
+        { "es": "conductor", "ko": "운전사" },
+        { "es": "destino", "ko": "목적지" },
+        { "es": "llegada", "ko": "도착" },
+        { "es": "salida", "ko": "출발" },
+        { "es": "ida", "ko": "편도" },
+        { "es": "ida y vuelta", "ko": "왕복" },
+        { "es": "retraso", "ko": "지연" },
+        { "es": "conexión", "ko": "환승" },
+        { "es": "taquilla", "ko": "매표창구" }
+      ]
+    },
+    {
+      "stage": 11,
+      "words": [
+        { "es": "habitación", "ko": "객실" },
+        { "es": "reserva", "ko": "예약" },
+        { "es": "recepción", "ko": "프런트" },
+        { "es": "llave", "ko": "열쇠" },
+        { "es": "huésped", "ko": "투숙객" },
+        { "es": "alojamiento", "ko": "숙소" },
+        { "es": "pensión", "ko": "민박" },
+        { "es": "hostal", "ko": "호스텔" },
+        { "es": "suite", "ko": "스위트룸" },
+        { "es": "desayuno incluido", "ko": "조식 포함" },
+        { "es": "registro", "ko": "체크인 수속" },
+        { "es": "salida del hotel", "ko": "체크아웃" },
+        { "es": "servicio de habitaciones", "ko": "룸서비스" },
+        { "es": "ascensor", "ko": "엘리베이터" },
+        { "es": "conserjería", "ko": "안내 데스크" }
+      ]
+    },
+    {
+      "stage": 12,
+      "words": [
+        { "es": "turista", "ko": "관광객" },
+        { "es": "monumento", "ko": "기념물" },
+        { "es": "catedral", "ko": "대성당" },
+        { "es": "castillo", "ko": "성" },
+        { "es": "palacio", "ko": "궁전" },
+        { "es": "ruinas", "ko": "유적" },
+        { "es": "guía", "ko": "가이드" },
+        { "es": "recuerdo", "ko": "기념품" },
+        { "es": "excursión", "ko": "소풍" },
+        { "es": "fotografía", "ko": "사진" },
+        { "es": "mirador", "ko": "전망대" },
+        { "es": "patrimonio", "ko": "유산" },
+        { "es": "templo", "ko": "사원" },
+        { "es": "estatua", "ko": "동상" },
+        { "es": "torre", "ko": "탑" }
+      ]
+    },
+    {
+      "stage": 13,
+      "words": [
+        { "es": "mapa", "ko": "지도" },
+        { "es": "brújula", "ko": "나침반" },
+        { "es": "ruta", "ko": "경로" },
+        { "es": "dirección", "ko": "방향" },
+        { "es": "coordenadas", "ko": "좌표" },
+        { "es": "navegador", "ko": "내비게이션" },
+        { "es": "ubicación", "ko": "위치" },
+        { "es": "distancia", "ko": "거리감" },
+        { "es": "kilómetro", "ko": "킬로미터" },
+        { "es": "plano", "ko": "도면" },
+        { "es": "punto de referencia", "ko": "랜드마크" },
+        { "es": "itinerario", "ko": "여행 일정" },
+        { "es": "atajo", "ko": "지름길" },
+        { "es": "desvío", "ko": "우회로" },
+        { "es": "indicación", "ko": "안내" }
+      ]
+    },
+    {
+      "stage": 14,
+      "words": [
+        { "es": "tráfico", "ko": "교통" },
+        { "es": "ruido", "ko": "소음" },
+        { "es": "contaminación", "ko": "오염" },
+        { "es": "multitud", "ko": "군중" },
+        { "es": "prisa", "ko": "서두름" },
+        { "es": "vivienda", "ko": "주거" },
+        { "es": "alquiler", "ko": "임대" },
+        { "es": "piso", "ko": "아파트" },
+        { "es": "comunidad", "ko": "공동체" },
+        { "es": "convivencia", "ko": "공존" },
+        { "es": "ocio", "ko": "여가" },
+        { "es": "vida nocturna", "ko": "야간 생활" },
+        { "es": "trabajo", "ko": "일" },
+        { "es": "commuter", "ko": "통근자" },
+        { "es": "rascacielos", "ko": "고층 빌딩" }
+      ]
+    },
+    {
+      "stage": 15,
+      "words": [
+        { "es": "campo", "ko": "시골" },
+        { "es": "granja", "ko": "농장" },
+        { "es": "aldea", "ko": "작은 마을" },
+        { "es": "suburbio", "ko": "교외" },
+        { "es": "naturaleza", "ko": "자연" },
+        { "es": "bosque", "ko": "숲" },
+        { "es": "río", "ko": "강" },
+        { "es": "montaña", "ko": "산" },
+        { "es": "lago", "ko": "호수" },
+        { "es": "pradera", "ko": "초원" },
+        { "es": "cosecha", "ko": "수확" },
+        { "es": "ganado", "ko": "가축" },
+        { "es": "huerto", "ko": "과수원" },
+        { "es": "tranquilidad", "ko": "평온" },
+        { "es": "paisaje", "ko": "풍경" }
+      ]
+    },
+    {
+      "stage": 16,
+      "words": [
+        { "es": "construcción", "ko": "건설" },
+        { "es": "arquitecto", "ko": "건축가" },
+        { "es": "plano arquitectónico", "ko": "설계도" },
+        { "es": "ladrillo", "ko": "벽돌" },
+        { "es": "cemento", "ko": "시멘트" },
+        { "es": "acero", "ko": "철강" },
+        { "es": "grúa", "ko": "크레인" },
+        { "es": "andamio", "ko": "비계" },
+        { "es": "cimiento", "ko": "기초" },
+        { "es": "techo", "ko": "지붕" },
+        { "es": "muro", "ko": "벽" },
+        { "es": "columna", "ko": "기둥" },
+        { "es": "escalera", "ko": "계단" },
+        { "es": "obrero", "ko": "노동자" },
+        { "es": "renovación", "ko": "리모델링" }
+      ]
+    },
+    {
+      "stage": 17,
+      "words": [
+        { "es": "parque", "ko": "공원" },
+        { "es": "jardín", "ko": "정원" },
+        { "es": "fuente", "ko": "분수" },
+        { "es": "césped", "ko": "잔디" },
+        { "es": "columpio", "ko": "그네" },
+        { "es": "tobogán", "ko": "미끄럼틀" },
+        { "es": "piscina", "ko": "수영장" },
+        { "es": "sendero", "ko": "오솔길" },
+        { "es": "lago artificial", "ko": "인공 호수" },
+        { "es": "zona infantil", "ko": "놀이터" },
+        { "es": "área de picnic", "ko": "피크닉 구역" },
+        { "es": "cancha", "ko": "운동장" },
+        { "es": "árbol", "ko": "나무" },
+        { "es": "flor", "ko": "꽃" },
+        { "es": "banco del parque", "ko": "공원 벤치" }
+      ]
+    },
+    {
+      "stage": 18,
+      "words": [
+        { "es": "velocidad", "ko": "속도" },
+        { "es": "multa", "ko": "벌금" },
+        { "es": "permiso de conducir", "ko": "운전면허" },
+        { "es": "cinturón de seguridad", "ko": "안전벨트" },
+        { "es": "adelantamiento", "ko": "추월" },
+        { "es": "freno", "ko": "브레이크" },
+        { "es": "volante", "ko": "핸들" },
+        { "es": "gasolina", "ko": "휘발유" },
+        { "es": "neumático", "ko": "타이어" },
+        { "es": "accidente", "ko": "사고" },
+        { "es": "seguro", "ko": "보험" },
+        { "es": "matrícula", "ko": "번호판" },
+        { "es": "retrovisor", "ko": "백미러" },
+        { "es": "intermitente", "ko": "방향지시등" },
+        { "es": "límite de velocidad", "ko": "속도 제한" }
+      ]
+    },
+    {
+      "stage": 19,
+      "words": [
+        { "es": "mudanza", "ko": "이사" },
+        { "es": "dirección postal", "ko": "주소" },
+        { "es": "código postal", "ko": "우편번호" },
+        { "es": "inquilino", "ko": "세입자" },
+        { "es": "propietario", "ko": "집주인" },
+        { "es": "contrato", "ko": "계약" },
+        { "es": "depósito", "ko": "보증금" },
+        { "es": "inmobiliaria", "ko": "부동산" },
+        { "es": "hipoteca", "ko": "주택담보대출" },
+        { "es": "vecino", "ko": "이웃 사람" },
+        { "es": "empadronamiento", "ko": "주민등록" },
+        { "es": "casa", "ko": "집" },
+        { "es": "paquete", "ko": "택배" },
+        { "es": "cartero", "ko": "우편배달부" },
+        { "es": "portero", "ko": "경비원" }
+      ]
+    },
+    {
+      "stage": 20,
+      "words": [
+        { "es": "pobreza", "ko": "빈곤" },
+        { "es": "delincuencia", "ko": "범죄" },
+        { "es": "desempleo", "ko": "실업" },
+        { "es": "desigualdad", "ko": "불평등" },
+        { "es": "sobrepoblación", "ko": "과밀" },
+        { "es": "smog", "ko": "스모그" },
+        { "es": "congestión", "ko": "혼잡" },
+        { "es": "gentrificación", "ko": "젠트리피케이션" },
+        { "es": "sostenibilidad", "ko": "지속 가능성" },
+        { "es": "energía renovable", "ko": "재생 에너지" },
+        { "es": "zona verde", "ko": "녹지" },
+        { "es": "transporte sostenible", "ko": "친환경 교통" },
+        { "es": "reciclaje urbano", "ko": "도시 재활용" },
+        { "es": "vivienda social", "ko": "공공 주택" },
+        { "es": "planificación urbana", "ko": "도시 계획" }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,407 @@
+{
+  "world": 7,
+  "name": "Trabajo",
+  "nameKo": "직업",
+  "stages": [
+    {
+      "stage": 1,
+      "words": [
+        { "es": "trabajo", "ko": "일" },
+        { "es": "empleo", "ko": "직장" },
+        { "es": "oficina", "ko": "사무실" },
+        { "es": "jefe", "ko": "상사" },
+        { "es": "empleado", "ko": "직원" },
+        { "es": "salario", "ko": "급여" },
+        { "es": "horario", "ko": "근무 시간" },
+        { "es": "contrato", "ko": "계약" },
+        { "es": "empresa", "ko": "회사" },
+        { "es": "compañero", "ko": "동료" },
+        { "es": "tarea", "ko": "업무" },
+        { "es": "proyecto", "ko": "프로젝트" },
+        { "es": "vacaciones", "ko": "휴가" },
+        { "es": "experiencia", "ko": "경험" },
+        { "es": "responsabilidad", "ko": "책임" }
+      ]
+    },
+    {
+      "stage": 2,
+      "words": [
+        { "es": "escritorio", "ko": "책상" },
+        { "es": "silla", "ko": "의자" },
+        { "es": "reunión", "ko": "회의" },
+        { "es": "departamento", "ko": "부서" },
+        { "es": "recepción", "ko": "접수처" },
+        { "es": "ascensor", "ko": "엘리베이터" },
+        { "es": "pasillo", "ko": "복도" },
+        { "es": "sala de conferencias", "ko": "회의실" },
+        { "es": "almacén", "ko": "창고" },
+        { "es": "cafetería", "ko": "구내식당" },
+        { "es": "parking", "ko": "주차장" },
+        { "es": "seguridad", "ko": "보안" },
+        { "es": "entrada", "ko": "입구" },
+        { "es": "salida", "ko": "출구" },
+        { "es": "planta", "ko": "층" }
+      ]
+    },
+    {
+      "stage": 3,
+      "words": [
+        { "es": "bolígrafo", "ko": "볼펜" },
+        { "es": "papel", "ko": "종이" },
+        { "es": "carpeta", "ko": "폴더" },
+        { "es": "grapadora", "ko": "스테이플러" },
+        { "es": "tijeras", "ko": "가위" },
+        { "es": "cinta adhesiva", "ko": "테이프" },
+        { "es": "sobre", "ko": "봉투" },
+        { "es": "sello", "ko": "도장" },
+        { "es": "calendario", "ko": "달력" },
+        { "es": "pizarra", "ko": "화이트보드" },
+        { "es": "rotulador", "ko": "마커" },
+        { "es": "lápiz", "ko": "연필" },
+        { "es": "cuaderno", "ko": "공책" },
+        { "es": "impresora", "ko": "프린터" },
+        { "es": "fotocopiadora", "ko": "복사기" }
+      ]
+    },
+    {
+      "stage": 4,
+      "words": [
+        { "es": "computadora", "ko": "컴퓨터" },
+        { "es": "teclado", "ko": "키보드" },
+        { "es": "ratón", "ko": "마우스" },
+        { "es": "pantalla", "ko": "화면" },
+        { "es": "correo electrónico", "ko": "이메일" },
+        { "es": "archivo", "ko": "파일" },
+        { "es": "contraseña", "ko": "비밀번호" },
+        { "es": "internet", "ko": "인터넷" },
+        { "es": "software", "ko": "소프트웨어" },
+        { "es": "base de datos", "ko": "데이터베이스" },
+        { "es": "red", "ko": "네트워크" },
+        { "es": "servidor", "ko": "서버" },
+        { "es": "programa", "ko": "프로그램" },
+        { "es": "sitio web", "ko": "웹사이트" },
+        { "es": "aplicación", "ko": "앱" }
+      ]
+    },
+    {
+      "stage": 5,
+      "words": [
+        { "es": "camarero", "ko": "웨이터" },
+        { "es": "vendedor", "ko": "판매원" },
+        { "es": "peluquero", "ko": "미용사" },
+        { "es": "conductor", "ko": "운전사" },
+        { "es": "policía", "ko": "경찰" },
+        { "es": "bombero", "ko": "소방관" },
+        { "es": "cartero", "ko": "우체부" },
+        { "es": "cocinero", "ko": "요리사" },
+        { "es": "limpiador", "ko": "청소부" },
+        { "es": "guardia", "ko": "경비원" },
+        { "es": "recepcionista", "ko": "접수원" },
+        { "es": "dependiente", "ko": "점원" },
+        { "es": "taxista", "ko": "택시 기사" },
+        { "es": "piloto", "ko": "조종사" },
+        { "es": "guía turístico", "ko": "관광 가이드" }
+      ]
+    },
+    {
+      "stage": 6,
+      "words": [
+        { "es": "ingeniero", "ko": "엔지니어" },
+        { "es": "programador", "ko": "프로그래머" },
+        { "es": "técnico", "ko": "기술자" },
+        { "es": "electricista", "ko": "전기 기사" },
+        { "es": "mecánico", "ko": "정비사" },
+        { "es": "arquitecto", "ko": "건축가" },
+        { "es": "científico", "ko": "과학자" },
+        { "es": "investigador", "ko": "연구원" },
+        { "es": "farmacéutico", "ko": "약사" },
+        { "es": "veterinario", "ko": "수의사" },
+        { "es": "químico", "ko": "화학자" },
+        { "es": "biólogo", "ko": "생물학자" },
+        { "es": "matemático", "ko": "수학자" },
+        { "es": "físico", "ko": "물리학자" },
+        { "es": "analista", "ko": "분석가" }
+      ]
+    },
+    {
+      "stage": 7,
+      "words": [
+        { "es": "artista", "ko": "예술가" },
+        { "es": "músico", "ko": "음악가" },
+        { "es": "escritor", "ko": "작가" },
+        { "es": "actor", "ko": "배우" },
+        { "es": "fotógrafo", "ko": "사진작가" },
+        { "es": "diseñador", "ko": "디자이너" },
+        { "es": "periodista", "ko": "기자" },
+        { "es": "director", "ko": "감독" },
+        { "es": "pintor", "ko": "화가" },
+        { "es": "escultor", "ko": "조각가" },
+        { "es": "cantante", "ko": "가수" },
+        { "es": "bailarín", "ko": "무용가" },
+        { "es": "poeta", "ko": "시인" },
+        { "es": "editor", "ko": "편집자" },
+        { "es": "traductor", "ko": "번역가" }
+      ]
+    },
+    {
+      "stage": 8,
+      "words": [
+        { "es": "médico", "ko": "의사" },
+        { "es": "enfermero", "ko": "간호사" },
+        { "es": "dentista", "ko": "치과의사" },
+        { "es": "cirujano", "ko": "외과의사" },
+        { "es": "psicólogo", "ko": "심리학자" },
+        { "es": "abogado", "ko": "변호사" },
+        { "es": "juez", "ko": "판사" },
+        { "es": "fiscal", "ko": "검사" },
+        { "es": "terapeuta", "ko": "치료사" },
+        { "es": "pediatra", "ko": "소아과의사" },
+        { "es": "oftalmólogo", "ko": "안과의사" },
+        { "es": "paramédico", "ko": "응급구조사" },
+        { "es": "notario", "ko": "공증인" },
+        { "es": "asesor legal", "ko": "법률 고문" },
+        { "es": "patólogo", "ko": "병리학자" }
+      ]
+    },
+    {
+      "stage": 9,
+      "words": [
+        { "es": "negocio", "ko": "사업" },
+        { "es": "cliente", "ko": "고객" },
+        { "es": "producto", "ko": "제품" },
+        { "es": "mercado", "ko": "시장" },
+        { "es": "competencia", "ko": "경쟁" },
+        { "es": "ganancia", "ko": "이익" },
+        { "es": "pérdida", "ko": "손실" },
+        { "es": "importación", "ko": "수입" },
+        { "es": "exportación", "ko": "수출" },
+        { "es": "proveedor", "ko": "공급업체" },
+        { "es": "publicidad", "ko": "광고" },
+        { "es": "marca", "ko": "브랜드" },
+        { "es": "estrategia", "ko": "전략" },
+        { "es": "socio", "ko": "파트너" },
+        { "es": "sucursal", "ko": "지점" }
+      ]
+    },
+    {
+      "stage": 10,
+      "words": [
+        { "es": "banco", "ko": "은행" },
+        { "es": "cuenta", "ko": "계좌" },
+        { "es": "préstamo", "ko": "대출" },
+        { "es": "interés", "ko": "이자" },
+        { "es": "inversión", "ko": "투자" },
+        { "es": "ahorro", "ko": "저축" },
+        { "es": "deuda", "ko": "부채" },
+        { "es": "impuesto", "ko": "세금" },
+        { "es": "factura", "ko": "청구서" },
+        { "es": "presupuesto", "ko": "예산" },
+        { "es": "tarjeta de crédito", "ko": "신용카드" },
+        { "es": "cajero automático", "ko": "현금인출기" },
+        { "es": "cheque", "ko": "수표" },
+        { "es": "hipoteca", "ko": "담보대출" },
+        { "es": "acción", "ko": "주식" }
+      ]
+    },
+    {
+      "stage": 11,
+      "words": [
+        { "es": "presentación", "ko": "발표" },
+        { "es": "agenda", "ko": "안건" },
+        { "es": "propuesta", "ko": "제안" },
+        { "es": "acuerdo", "ko": "합의" },
+        { "es": "debate", "ko": "토론" },
+        { "es": "opinión", "ko": "의견" },
+        { "es": "objetivo", "ko": "목표" },
+        { "es": "resultado", "ko": "결과" },
+        { "es": "gráfico", "ko": "그래프" },
+        { "es": "diapositiva", "ko": "슬라이드" },
+        { "es": "micrófono", "ko": "마이크" },
+        { "es": "proyector", "ko": "프로젝터" },
+        { "es": "informe", "ko": "보고서" },
+        { "es": "conclusión", "ko": "결론" },
+        { "es": "participante", "ko": "참가자" }
+      ]
+    },
+    {
+      "stage": 12,
+      "words": [
+        { "es": "currículum", "ko": "이력서" },
+        { "es": "entrevista", "ko": "면접" },
+        { "es": "candidato", "ko": "지원자" },
+        { "es": "solicitud", "ko": "지원서" },
+        { "es": "oferta de empleo", "ko": "채용 공고" },
+        { "es": "carrera", "ko": "경력" },
+        { "es": "ascenso", "ko": "승진" },
+        { "es": "despido", "ko": "해고" },
+        { "es": "jubilación", "ko": "퇴직" },
+        { "es": "renuncia", "ko": "사직" },
+        { "es": "habilidad", "ko": "능력" },
+        { "es": "cualificación", "ko": "자격" },
+        { "es": "referencia", "ko": "추천서" },
+        { "es": "formación", "ko": "교육 훈련" },
+        { "es": "puesto", "ko": "직위" }
+      ]
+    },
+    {
+      "stage": 13,
+      "words": [
+        { "es": "escuela", "ko": "학교" },
+        { "es": "profesor", "ko": "선생님" },
+        { "es": "estudiante", "ko": "학생" },
+        { "es": "clase", "ko": "수업" },
+        { "es": "aula", "ko": "교실" },
+        { "es": "libro de texto", "ko": "교과서" },
+        { "es": "deberes", "ko": "숙제" },
+        { "es": "uniforme", "ko": "교복" },
+        { "es": "mochila", "ko": "책가방" },
+        { "es": "recreo", "ko": "쉬는 시간" },
+        { "es": "timbre", "ko": "종" },
+        { "es": "patio", "ko": "운동장" },
+        { "es": "biblioteca", "ko": "도서관" },
+        { "es": "laboratorio", "ko": "실험실" },
+        { "es": "gimnasio", "ko": "체육관" }
+      ]
+    },
+    {
+      "stage": 14,
+      "words": [
+        { "es": "matemáticas", "ko": "수학" },
+        { "es": "ciencias", "ko": "과학" },
+        { "es": "historia", "ko": "역사" },
+        { "es": "geografía", "ko": "지리" },
+        { "es": "literatura", "ko": "문학" },
+        { "es": "inglés", "ko": "영어" },
+        { "es": "educación física", "ko": "체육" },
+        { "es": "música", "ko": "음악" },
+        { "es": "arte", "ko": "미술" },
+        { "es": "biología", "ko": "생물" },
+        { "es": "química", "ko": "화학" },
+        { "es": "física", "ko": "물리" },
+        { "es": "informática", "ko": "정보" },
+        { "es": "filosofía", "ko": "철학" },
+        { "es": "economía", "ko": "경제" }
+      ]
+    },
+    {
+      "stage": 15,
+      "words": [
+        { "es": "universidad", "ko": "대학교" },
+        { "es": "facultad", "ko": "학부" },
+        { "es": "licenciatura", "ko": "학사" },
+        { "es": "maestría", "ko": "석사" },
+        { "es": "doctorado", "ko": "박사" },
+        { "es": "beca", "ko": "장학금" },
+        { "es": "matrícula", "ko": "등록금" },
+        { "es": "semestre", "ko": "학기" },
+        { "es": "crédito", "ko": "학점" },
+        { "es": "tesis", "ko": "논문" },
+        { "es": "catedrático", "ko": "교수" },
+        { "es": "campus", "ko": "캠퍼스" },
+        { "es": "graduación", "ko": "졸업" },
+        { "es": "conferencia", "ko": "강연" },
+        { "es": "dormitorio", "ko": "기숙사" }
+      ]
+    },
+    {
+      "stage": 16,
+      "words": [
+        { "es": "examen", "ko": "시험" },
+        { "es": "nota", "ko": "성적" },
+        { "es": "aprobado", "ko": "합격" },
+        { "es": "suspenso", "ko": "불합격" },
+        { "es": "respuesta", "ko": "답" },
+        { "es": "pregunta", "ko": "질문" },
+        { "es": "prueba", "ko": "테스트" },
+        { "es": "calificación", "ko": "평가" },
+        { "es": "promedio", "ko": "평균" },
+        { "es": "puntuación", "ko": "점수" },
+        { "es": "repaso", "ko": "복습" },
+        { "es": "error", "ko": "오류" },
+        { "es": "corrección", "ko": "수정" },
+        { "es": "plazo", "ko": "기한" },
+        { "es": "certificado", "ko": "자격증" }
+      ]
+    },
+    {
+      "stage": 17,
+      "words": [
+        { "es": "investigación", "ko": "연구" },
+        { "es": "estudio", "ko": "학습" },
+        { "es": "datos", "ko": "데이터" },
+        { "es": "método", "ko": "방법" },
+        { "es": "teoría", "ko": "이론" },
+        { "es": "hipótesis", "ko": "가설" },
+        { "es": "experimento", "ko": "실험" },
+        { "es": "análisis", "ko": "분석" },
+        { "es": "fuente", "ko": "출처" },
+        { "es": "bibliografía", "ko": "참고문헌" },
+        { "es": "estadística", "ko": "통계" },
+        { "es": "encuesta", "ko": "설문조사" },
+        { "es": "descubrimiento", "ko": "발견" },
+        { "es": "publicación", "ko": "출판" },
+        { "es": "resumen", "ko": "요약" }
+      ]
+    },
+    {
+      "stage": 18,
+      "words": [
+        { "es": "trabajar", "ko": "일하다" },
+        { "es": "estudiar", "ko": "공부하다" },
+        { "es": "enseñar", "ko": "가르치다" },
+        { "es": "aprender", "ko": "배우다" },
+        { "es": "contratar", "ko": "고용하다" },
+        { "es": "despedir", "ko": "해고하다" },
+        { "es": "renunciar", "ko": "사직하다" },
+        { "es": "producir", "ko": "생산하다" },
+        { "es": "organizar", "ko": "조직하다" },
+        { "es": "dirigir", "ko": "관리하다" },
+        { "es": "colaborar", "ko": "협력하다" },
+        { "es": "negociar", "ko": "협상하다" },
+        { "es": "capacitar", "ko": "훈련하다" },
+        { "es": "supervisar", "ko": "감독하다" },
+        { "es": "planificar", "ko": "계획하다" }
+      ]
+    },
+    {
+      "stage": 19,
+      "words": [
+        { "es": "plazo de entrega", "ko": "납기" },
+        { "es": "cuota de mercado", "ko": "시장 점유율" },
+        { "es": "valor añadido", "ko": "부가가치" },
+        { "es": "ventaja competitiva", "ko": "경쟁 우위" },
+        { "es": "cadena de suministro", "ko": "공급망" },
+        { "es": "margen de beneficio", "ko": "이윤" },
+        { "es": "plan de negocios", "ko": "사업 계획서" },
+        { "es": "recursos humanos", "ko": "인사부" },
+        { "es": "servicio al cliente", "ko": "고객 서비스" },
+        { "es": "control de calidad", "ko": "품질 관리" },
+        { "es": "comercio electrónico", "ko": "전자 상거래" },
+        { "es": "propiedad intelectual", "ko": "지적 재산권" },
+        { "es": "desarrollo sostenible", "ko": "지속 가능한 발전" },
+        { "es": "responsabilidad social", "ko": "사회적 책임" },
+        { "es": "sede central", "ko": "본사" }
+      ]
+    },
+    {
+      "stage": 20,
+      "words": [
+        { "es": "trabajo en equipo", "ko": "팀워크" },
+        { "es": "liderazgo", "ko": "리더십" },
+        { "es": "comunicación", "ko": "소통" },
+        { "es": "puntualidad", "ko": "시간 엄수" },
+        { "es": "productividad", "ko": "생산성" },
+        { "es": "eficiencia", "ko": "효율성" },
+        { "es": "creatividad", "ko": "창의성" },
+        { "es": "motivación", "ko": "동기 부여" },
+        { "es": "estrés laboral", "ko": "업무 스트레스" },
+        { "es": "equilibrio", "ko": "균형" },
+        { "es": "diversidad", "ko": "다양성" },
+        { "es": "ética profesional", "ko": "직업 윤리" },
+        { "es": "ambiente laboral", "ko": "근무 환경" },
+        { "es": "bienestar", "ko": "복지" },
+        { "es": "compromiso", "ko": "헌신" }
+      ]
+    }
+  ]
+}
