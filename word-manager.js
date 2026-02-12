@@ -30,33 +30,34 @@ const WordManager = {
                 worldId: w.id,
                 path: `world${w.id}.json`
             }));
-            
-            // 병렬로 모든 파일 로드
-            const loadPromises = files.map(async (file) => {
-                // fetch로 JSON 파일 요청
+
+            // 병렬로 모든 파일 로드 (일부 실패해도 나머지는 사용)
+            const results = await Promise.allSettled(files.map(async (file) => {
                 const response = await fetch(file.path);
-                
-                // 응답 실패 시 에러 발생
                 if (!response.ok) {
                     throw new Error(`${file.path} 로드 실패: ${response.status}`);
                 }
-                
-                // JSON 파싱
                 const data = await response.json();
-                
-                // 월드 데이터 저장
                 this._wordData[file.worldId] = data.stages;
-            });
-            
-            // 모든 로드 완료 대기
-            await Promise.all(loadPromises);
-            
-            // 로드 완료 플래그 설정
+                return file.worldId;
+            }));
+
+            // 성공/실패 카운트
+            const loaded = results.filter(r => r.status === 'fulfilled').length;
+            const failed = results.filter(r => r.status === 'rejected');
+
+            if (failed.length > 0) {
+                failed.forEach(r => console.warn('WordManager:', r.reason?.message));
+            }
+
+            if (loaded === 0) {
+                throw new Error('로드된 월드 데이터 없음');
+            }
+
             this._isLoaded = true;
-            
-            console.log('WordManager: 모든 단어 데이터 로드 완료');
+            console.log(`WordManager: ${loaded}/${files.length} 월드 로드 완료`);
             return true;
-            
+
         } catch (error) {
             console.error('WordManager: 단어 데이터 로드 실패', error);
             return false;

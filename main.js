@@ -225,6 +225,28 @@ const App = {
                 this.currentMode = e.target.value;
             });
         }
+
+        // Stats 버튼
+        const statsBtn = document.getElementById('stats-btn');
+        if (statsBtn) {
+            statsBtn.addEventListener('click', () => {
+                this.showStatsModal();
+            });
+        }
+
+        // Stats 모달 닫기 버튼들
+        const closeStatsBtn = document.getElementById('close-stats-btn');
+        if (closeStatsBtn) {
+            closeStatsBtn.addEventListener('click', () => {
+                this.hideStatsModal();
+            });
+        }
+        const statsCloseAction = document.getElementById('stats-close-action');
+        if (statsCloseAction) {
+            statsCloseAction.addEventListener('click', () => {
+                this.hideStatsModal();
+            });
+        }
     },
 
     // =========================================
@@ -355,7 +377,7 @@ const App = {
     },
 
     /**
-     * 단어 참조 패널 채우기
+     * 단어 참조 패널 채우기 (단어만 표시, 뜻 없음)
      * @param {number} worldId - 월드 ID
      * @param {number} stageNum - 스테이지 번호
      */
@@ -370,8 +392,10 @@ const App = {
         const leftWords = words.slice(0, mid);
         const rightWords = words.slice(mid);
 
+        // 모드에 따라 표시 단어 결정 (뜻 없이 단어만)
+        const isEsToKo = this.currentMode === 'es-to-ko';
         const buildHTML = (wordArr) => wordArr.map(w =>
-            `<div class="word-pair"><span class="word-es">${w.es}</span><span class="word-arrow">&rarr;</span><span class="word-ko">${w.ko}</span></div>`
+            `<div class="word-item"><span class="word-es">${isEsToKo ? w.es : w.ko}</span></div>`
         ).join('');
 
         leftList.innerHTML = buildHTML(leftWords);
@@ -540,6 +564,55 @@ const App = {
         }
     },
     
+    // =========================================
+    // 통계 모달
+    // =========================================
+
+    /**
+     * 통계 모달 표시
+     */
+    showStatsModal: function() {
+        const stats = Storage.getStats();
+        const progress = Storage.getCurrentProgress();
+
+        // 값 채우기
+        document.getElementById('stats-total-games').textContent = stats.totalGames || 0;
+        document.getElementById('stats-total-score').textContent = (stats.totalScore || 0).toLocaleString();
+        document.getElementById('stats-total-correct').textContent = stats.totalCorrect || 0;
+        document.getElementById('stats-total-wrong').textContent = stats.totalWrong || 0;
+        document.getElementById('stats-streak').textContent = stats.currentStreak || 0;
+
+        // 정확도 계산
+        const total = (stats.totalCorrect || 0) + (stats.totalWrong || 0);
+        const accuracy = total > 0 ? Math.round((stats.totalCorrect / total) * 100) : 0;
+        document.getElementById('stats-accuracy').textContent = `${accuracy}%`;
+
+        // 진행률 계산
+        const totalStages = CONFIG.WORLDS.reduce((sum, w) => sum + w.stages, 0);
+        let clearedCount = 0;
+        CONFIG.WORLDS.forEach(w => {
+            for (let s = 1; s <= w.stages; s++) {
+                const stageId = getStageId(w.id, s);
+                const result = Storage.getStageResult(stageId);
+                if (result && result.stars > 0) clearedCount++;
+            }
+        });
+        document.getElementById('stats-cleared-count').textContent = clearedCount;
+        document.getElementById('stats-total-stages').textContent = totalStages;
+        const progressPct = totalStages > 0 ? Math.round((clearedCount / totalStages) * 100) : 0;
+        document.getElementById('stats-progress-fill').style.width = `${progressPct}%`;
+
+        // 모달 표시
+        document.getElementById('stats-modal').classList.remove('hidden');
+    },
+
+    /**
+     * 통계 모달 숨기기
+     */
+    hideStatsModal: function() {
+        document.getElementById('stats-modal').classList.add('hidden');
+    },
+
     /**
      * 결과 화면 표시
      * @param {Object} result - 게임 결과
