@@ -89,7 +89,7 @@ const CONFIG = {
     // 스테이지 맵 설정
     // =========================================
     MAP: {
-        NODE_RADIUS: 20,               // 스테이지 노드 반지름
+        NODE_RADIUS: 28,               // 스테이지 노드 반지름
         NODE_SPACING_X: 80,            // 노드 간 X 간격
         NODE_SPACING_Y: 100,           // 노드 간 Y 간격
         PATH_COLOR: '#3d3d5c',         // 경로 선 색상

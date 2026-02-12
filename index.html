@@ -166,6 +166,59 @@
     </div>
 
     <!-- ========================================= -->
+    <!-- 통계 모달 -->
+    <!-- ========================================= -->
+    <div id="stats-modal" class="modal hidden">
+        <div class="modal-backdrop"></div>
+        <div class="modal-content stats-modal-content">
+            <button id="close-stats-btn" class="modal-close" aria-label="닫기">X</button>
+
+            <h3 class="modal-title">Stats</h3>
+
+            <div class="stats-grid">
+                <div class="stats-item">
+                    <span class="stats-item-value" id="stats-total-games">0</span>
+                    <span class="stats-item-label">Games Played</span>
+                </div>
+                <div class="stats-item">
+                    <span class="stats-item-value" id="stats-total-score">0</span>
+                    <span class="stats-item-label">Total Score</span>
+                </div>
+                <div class="stats-item">
+                    <span class="stats-item-value" id="stats-total-correct">0</span>
+                    <span class="stats-item-label">Correct</span>
+                </div>
+                <div class="stats-item">
+                    <span class="stats-item-value" id="stats-total-wrong">0</span>
+                    <span class="stats-item-label">Wrong</span>
+                </div>
+                <div class="stats-item">
+                    <span class="stats-item-value" id="stats-accuracy">0%</span>
+                    <span class="stats-item-label">Accuracy</span>
+                </div>
+                <div class="stats-item">
+                    <span class="stats-item-value" id="stats-streak">0</span>
+                    <span class="stats-item-label">Day Streak</span>
+                </div>
+            </div>
+
+            <div class="stats-progress-section">
+                <h4 class="stats-section-title">Progress</h4>
+                <div id="stats-progress-bar-container" class="stats-progress-bar-container">
+                    <div class="stats-progress-label">
+                        <span id="stats-cleared-count">0</span> / <span id="stats-total-stages">0</span> stages
+                    </div>
+                    <div class="stats-progress-track">
+                        <div id="stats-progress-fill" class="stats-progress-fill"></div>
+                    </div>
+                </div>
+            </div>
+
+            <button id="stats-close-action" class="btn btn-secondary" style="width:100%">Close</button>
+        </div>
+    </div>
+
+    <!-- ========================================= -->
     <!-- 스크립트 로드 (순서 중요) -->
     <!-- ========================================= -->
     <script src="config.js"></script>

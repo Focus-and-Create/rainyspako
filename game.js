@@ -61,9 +61,12 @@ const Game = {
     
     /** @type {string} 현재 사용자 입력 */
     currentInput: '',
-    
+
     /** @type {number} 다음 단어 ID */
     nextWordId: 1,
+
+    /** @type {Array<Object>} 화면에 표시할 피드백 메시지들 */
+    feedbacks: [],
 
     // =========================================
     // 애니메이션
@@ -149,6 +152,7 @@ const Game = {
         this.activeWords = [];
         this.currentInput = '';
         this.nextWordId = 1;
+        this.feedbacks = [];
         
         // 단어 풀 생성
         if (WordManager.isReviewStage(worldId, stageNum)) {
@@ -526,10 +530,28 @@ const Game = {
     handleWrongAnswer: function() {
         // 콤보 리셋
         this.state.combo = 0;
-        
+
         // 오답 카운트 증가
         this.state.wrongCount += 1;
-        
+
+        // 피드백 메시지 표시 (화면에 있는 단어 중 가장 가까운 것의 뜻 보여주기)
+        const isEsToKo = this.state.mode === 'es-to-ko';
+        if (this.activeWords.length > 0) {
+            // 현재 입력과 가장 가까운 단어 찾기
+            const hints = this.activeWords.map(w => {
+                const display = isEsToKo ? w.spanish : w.korean;
+                const answer = isEsToKo ? w.korean : w.spanish;
+                return `${display} = ${answer}`;
+            }).join('  |  ');
+
+            this.feedbacks.push({
+                text: hints,
+                y: CONFIG.CANVAS.HEIGHT - 100,
+                alpha: 1.0,
+                time: performance.now()
+            });
+        }
+
         console.log('오답');
     },
     
@@ -540,16 +562,24 @@ const Game = {
     handleMissedWord: function(word) {
         // 라이프 감소
         this.state.lives -= 1;
-        
+
         // 콤보 리셋
         this.state.combo = 0;
-        
+
         // 오답 카운트 증가
         this.state.wrongCount += 1;
-        
+
         // 틀린 단어 기록
         Storage.recordWrongWord(word.spanish, word.korean);
-        
+
+        // 놓친 단어 피드백 표시
+        this.feedbacks.push({
+            text: `${word.spanish} = ${word.korean}`,
+            y: CONFIG.CANVAS.DEATH_LINE_Y - 30,
+            alpha: 1.0,
+            time: performance.now()
+        });
+
         console.log(`놓침: ${word.spanish} (라이프 ${this.state.lives})`);
         
         // 게임 오버 체크
@@ -698,7 +728,10 @@ const Game = {
         
         // 떨어지는 단어들 렌더링
         this.renderWords();
-        
+
+        // 피드백 메시지 렌더링
+        this.renderFeedbacks();
+
         // 현재 입력 표시
         this.renderInput();
     },
@@ -790,10 +823,36 @@ const Game = {
         }
     },
 
+    /**
+     * 피드백 메시지 렌더링
+     */
+    renderFeedbacks: function() {
+        const ctx = this.ctx;
+        const now = performance.now();
+
+        // 만료된 피드백 제거 (2초 후 사라짐)
+        this.feedbacks = this.feedbacks.filter(f => now - f.time < 2000);
+
+        this.feedbacks.forEach(f => {
+            const elapsed = now - f.time;
+            f.alpha = Math.max(0, 1 - elapsed / 2000);
+            f.y -= 0.3; // 천천히 위로 올라감
+
+            ctx.save();
+            ctx.globalAlpha = f.alpha;
+            ctx.font = `bold 16px ${CONFIG.RENDER.FONT_FAMILY}`;
+            ctx.textAlign = 'center';
+            ctx.textBaseline = 'middle';
+            ctx.fillStyle = '#ff6b6b';
+            ctx.fillText(f.text, CONFIG.CANVAS.WIDTH / 2, f.y);
+            ctx.restore();
+        });
+    },
+
     // =========================================
     // 상태 조회
     // =========================================
-    
+
     /**
      * UI 표시용 상태 가져오기
      * @returns {Object} 표시용 상태 객체

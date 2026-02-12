@@ -182,15 +182,15 @@ const StageMap = {
         const x = e.clientX - rect.left;
         const y = e.clientY - rect.top + this.scrollY;
         
-        // 월드 전환 화살표 체크
-        if (y < 60) {
+        // 월드 전환 화살표 체크 (넓은 클릭 영역)
+        if (y < 80) {
             // 이전 월드 화살표
-            if (x < 50 && this.currentWorldId > 1) {
+            if (x < 80 && this.currentWorldId > 1) {
                 this.prevWorld();
                 return;
             }
             // 다음 월드 화살표
-            if (x > CONFIG.CANVAS.WIDTH - 50 && this.currentWorldId < CONFIG.WORLDS.length) {
+            if (x > CONFIG.CANVAS.WIDTH - 80 && this.currentWorldId < CONFIG.WORLDS.length) {
                 this.nextWorld();
                 return;
             }
@@ -201,7 +201,7 @@ const StageMap = {
             const dx = x - node.x;
             const dy = y - node.y;
             const distance = Math.sqrt(dx * dx + dy * dy);
-            return distance <= node.radius + 10; // 약간의 여유
+            return distance <= node.radius + 15; // 넉넉한 클릭 영역
         });
         
         if (clickedNode) {
@@ -406,9 +406,15 @@ const StageMap = {
             ctx.fillStyle = nodeColor;
             ctx.fill();
             
-            // 테두리
-            ctx.strokeStyle = isUnlocked ? '#ffffff' : '#333333';
-            ctx.lineWidth = 2;
+            // 테두리 (복습 스테이지는 빨간 테두리)
+            const isReview = WordManager.isReviewStage(node.worldId, node.stageNum);
+            if (isReview && isUnlocked) {
+                ctx.strokeStyle = '#ff6b6b';
+                ctx.lineWidth = 3;
+            } else {
+                ctx.strokeStyle = isUnlocked ? '#ffffff' : '#333333';
+                ctx.lineWidth = 2;
+            }
             ctx.stroke();
             
             // 현재 위치 강조 (펄스 효과)
@@ -421,7 +427,7 @@ const StageMap = {
             }
             
             // 스테이지 번호 텍스트
-            ctx.font = 'bold 14px sans-serif';
+            ctx.font = 'bold 16px sans-serif';
             ctx.fillStyle = isUnlocked ? '#000000' : '#666666';
             ctx.textAlign = 'center';
             ctx.textBaseline = 'middle';
@@ -494,14 +500,17 @@ const StageMap = {
      */
     renderReviewBadge: function(x, y) {
         const ctx = this.ctx;
-        
-        // R 배지
+
+        // R 배지 (더 크게)
         ctx.beginPath();
-        ctx.arc(x, y, 8, 0, Math.PI * 2);
+        ctx.arc(x, y, 11, 0, Math.PI * 2);
         ctx.fillStyle = '#ff6b6b';
         ctx.fill();
-        
-        ctx.font = 'bold 10px sans-serif';
+        ctx.strokeStyle = '#ffffff';
+        ctx.lineWidth = 1.5;
+        ctx.stroke();
+
+        ctx.font = 'bold 12px sans-serif';
         ctx.fillStyle = '#ffffff';
         ctx.textAlign = 'center';
         ctx.textBaseline = 'middle';
@@ -534,19 +543,31 @@ const StageMap = {
         ctx.fillStyle = '#888888';
         ctx.fillText(world.nameKo, CONFIG.CANVAS.WIDTH / 2, 50);
         
-        // 이전/다음 월드 화살표
+        // 이전/다음 월드 화살표 (큰 버튼)
         if (this.currentWorldId > 1) {
-            ctx.font = '20px sans-serif';
+            // 배경 원
+            ctx.beginPath();
+            ctx.arc(35, 30, 22, 0, Math.PI * 2);
+            ctx.fillStyle = 'rgba(255, 255, 255, 0.1)';
+            ctx.fill();
+            ctx.font = 'bold 28px sans-serif';
             ctx.fillStyle = '#ffffff';
-            ctx.textAlign = 'left';
-            ctx.fillText('<', 20, 30);
+            ctx.textAlign = 'center';
+            ctx.textBaseline = 'middle';
+            ctx.fillText('<', 35, 30);
         }
-        
+
         if (this.currentWorldId < CONFIG.WORLDS.length) {
-            ctx.font = '20px sans-serif';
+            // 배경 원
+            ctx.beginPath();
+            ctx.arc(CONFIG.CANVAS.WIDTH - 35, 30, 22, 0, Math.PI * 2);
+            ctx.fillStyle = 'rgba(255, 255, 255, 0.1)';
+            ctx.fill();
+            ctx.font = 'bold 28px sans-serif';
             ctx.fillStyle = '#ffffff';
-            ctx.textAlign = 'right';
-            ctx.fillText('>', CONFIG.CANVAS.WIDTH - 20, 30);
+            ctx.textAlign = 'center';
+            ctx.textBaseline = 'middle';
+            ctx.fillText('>', CONFIG.CANVAS.WIDTH - 35, 30);
         }
     },
     
