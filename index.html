@@ -11,7 +11,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&display=swap" rel="stylesheet">
     
     <!-- 스타일시트 -->
-    <link rel="stylesheet" href="style.css?v=2">
+    <link rel="stylesheet" href="style.css?v=3">
 </head>
 <body>
     <!-- ========================================= -->
@@ -33,9 +33,14 @@
     <div id="map-screen" class="screen hidden">
         <div class="screen-header">
             <h1 class="app-title">Spanish Rain</h1>
-            <button id="stats-btn" class="icon-btn" aria-label="통계">
-                <span>Stats</span>
-            </button>
+            <div class="header-buttons">
+                <button id="review-btn" class="icon-btn" aria-label="복습">
+                    <span>Review</span>
+                </button>
+                <button id="stats-btn" class="icon-btn" aria-label="통계">
+                    <span>Stats</span>
+                </button>
+            </div>
         </div>
         
         <div class="canvas-container">
@@ -221,11 +226,11 @@
     <!-- ========================================= -->
     <!-- 스크립트 로드 (순서 중요) -->
     <!-- ========================================= -->
-    <script src="config.js?v=2"></script>
-    <script src="storage.js?v=2"></script>
-    <script src="word-manager.js?v=2"></script>
-    <script src="game.js?v=2"></script>
-    <script src="stage-map.js?v=2"></script>
-    <script src="main.js?v=2"></script>
+    <script src="config.js?v=3"></script>
+    <script src="storage.js?v=3"></script>
+    <script src="word-manager.js?v=3"></script>
+    <script src="game.js?v=3"></script>
+    <script src="stage-map.js?v=3"></script>
+    <script src="main.js?v=3"></script>
 </body>
 </html>
