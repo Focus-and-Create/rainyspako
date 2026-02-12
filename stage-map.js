@@ -75,7 +75,12 @@ const StageMap = {
         this.canvas.addEventListener('click', (e) => {
             this.handleClick(e);
         });
-        
+
+        // 마우스 이동 (커서 변경)
+        this.canvas.addEventListener('mousemove', (e) => {
+            this.handleMouseMove(e);
+        });
+
         // 마우스 휠 스크롤
         this.canvas.addEventListener('wheel', (e) => {
             e.preventDefault();
@@ -209,6 +214,38 @@ const StageMap = {
         }
     },
     
+    /**
+     * 마우스 이동 처리 (커서 변경)
+     * @param {MouseEvent} e - 마우스 이벤트
+     */
+    handleMouseMove: function(e) {
+        const rect = this.canvas.getBoundingClientRect();
+        const x = e.clientX - rect.left;
+        const y = e.clientY - rect.top + this.scrollY;
+
+        let isOverClickable = false;
+
+        // 월드 전환 화살표 체크
+        if (y - this.scrollY < 60) {
+            if (x < 70 && this.currentWorldId > 1) isOverClickable = true;
+            if (x > CONFIG.CANVAS.WIDTH - 70 && this.currentWorldId < CONFIG.WORLDS.length) isOverClickable = true;
+        }
+
+        // 노드 호버 체크
+        if (!isOverClickable) {
+            const hovered = this.nodePositions.find(node => {
+                const dx = x - node.x;
+                const dy = y - node.y;
+                return Math.sqrt(dx * dx + dy * dy) <= node.radius + 15;
+            });
+            if (hovered && Storage.isStageUnlocked(hovered.worldId, hovered.stageNum)) {
+                isOverClickable = true;
+            }
+        }
+
+        this.canvas.style.cursor = isOverClickable ? 'pointer' : 'default';
+    },
+
     /**
      * 노드 클릭 처리
      * @param {Object} node - 클릭된 노드
@@ -446,6 +483,30 @@ const StageMap = {
             // 복습 스테이지 표시
             if (WordManager.isReviewStage(node.worldId, node.stageNum) && isUnlocked) {
                 this.renderReviewBadge(node.x + node.radius, node.y - node.radius);
+            }
+
+            // 단어 미리보기 (잠금해제된 스테이지)
+            if (isUnlocked && WordManager.isLoaded()) {
+                const isReview = WordManager.isReviewStage(node.worldId, node.stageNum);
+                const labelY = result && result.stars > 0
+                    ? node.y + node.radius + 28
+                    : node.y + node.radius + 18;
+
+                if (isReview) {
+                    ctx.font = '11px sans-serif';
+                    ctx.fillStyle = '#ff6b6b';
+                    ctx.textAlign = 'center';
+                    ctx.fillText('복습 스테이지', node.x, labelY);
+                } else {
+                    const words = WordManager.getStageWords(node.worldId, node.stageNum);
+                    if (words.length > 0) {
+                        const preview = words.slice(0, 3).map(w => w.es).join(', ');
+                        ctx.font = '11px sans-serif';
+                        ctx.fillStyle = '#888888';
+                        ctx.textAlign = 'center';
+                        ctx.fillText(preview, node.x, labelY);
+                    }
+                }
             }
         });
     },

@@ -79,12 +79,17 @@ body {
 }
 
 /* 스크롤바 숨기기 */
-* {
-    scrollbar-width: none; /* Firefox */
-    -ms-overflow-style: none; /* IE/Edge */
+html, body, * {
+    scrollbar-width: none !important; /* Firefox */
+    -ms-overflow-style: none !important; /* IE/Edge */
 }
+html::-webkit-scrollbar,
+body::-webkit-scrollbar,
 *::-webkit-scrollbar {
-    display: none; /* Chrome/Safari */
+    display: none !important; /* Chrome/Safari */
+    width: 0 !important;
+    height: 0 !important;
+    background: transparent !important;
 }
 
 /* ========================================= */
@@ -171,6 +176,11 @@ body {
     color: var(--color-accent);
 }
 
+.header-buttons {
+    display: flex;
+    gap: var(--spacing-sm);
+}
+
 /* ========================================= */
 /* 캔버스 컨테이너 */
 /* ========================================= */
@@ -186,13 +196,13 @@ canvas {
     max-width: 100%;
     max-height: 100%;
     border-radius: 8px;
-    cursor: pointer;
 }
 
-/* 모든 클릭 가능 요소에 포인터 커서 */
+/* 클릭 가능 요소에만 포인터 커서 */
 button,
 select,
-[role="button"] {
+[role="button"],
+a {
     cursor: pointer;
 }
 

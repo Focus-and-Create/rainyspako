@@ -125,13 +125,16 @@ const Game = {
      * @param {number} worldId - 월드 ID
      * @param {number} stageNum - 스테이지 번호
      * @param {string} mode - 게임 모드 ('es-to-ko' 또는 'ko-to-es')
+     * @param {Array|null} customPool - 커스텀 단어 풀 (복습 모드용)
      */
-    startStage: function(worldId, stageNum, mode = 'es-to-ko') {
+    startStage: function(worldId, stageNum, mode = 'es-to-ko', customPool = null) {
         // 상태 초기화
+        const worldConfig = getWorldConfig(worldId);
         this.state = {
             isRunning: true,
             isPaused: false,
             isGameOver: false,
+            isReviewMode: customPool !== null,
             worldId: worldId,
             stageNum: stageNum,
             mode: mode,
@@ -145,20 +148,23 @@ const Game = {
             startTime: performance.now(),
             elapsedTime: 0,
             lastSpawnTime: 0,
-            currentSpeed: getWorldConfig(worldId).baseSpeed
+            currentSpeed: worldConfig ? worldConfig.baseSpeed : 0.4
         };
-        
+
         // 게임 오브젝트 초기화
         this.activeWords = [];
         this.currentInput = '';
         this.nextWordId = 1;
         this.feedbacks = [];
-        
+
         // 단어 풀 생성
-        if (WordManager.isReviewStage(worldId, stageNum)) {
+        if (customPool) {
+            // 커스텀 풀 (Quick Review 등)
+            this.wordPool = customPool;
+        } else if (WordManager.isReviewStage(worldId, stageNum)) {
             // 복습 스테이지
             this.wordPool = WordManager.createReviewPool();
-            
+
             // 복습 단어가 부족하면 일반 스테이지로 진행
             if (this.wordPool.length === 0) {
                 this.wordPool = WordManager.createWordPool(worldId, stageNum);
@@ -167,12 +173,12 @@ const Game = {
             // 일반 스테이지
             this.wordPool = WordManager.createWordPool(worldId, stageNum);
         }
-        
+
         // 게임 루프 시작
         this.lastFrameTime = performance.now();
         this.gameLoop();
-        
-        console.log(`Game: 스테이지 ${worldId}-${stageNum} 시작 (모드: ${mode})`);
+
+        console.log(`Game: ${customPool ? 'Review' : `스테이지 ${worldId}-${stageNum}`} 시작 (모드: ${mode})`);
     },
     
     /**
@@ -598,23 +604,25 @@ const Game = {
     handleStageClear: function() {
         // 게임 정지
         this.stop();
-        
+
         // 별점 계산
         const stars = this.calculateStars();
-        
-        // 결과 저장
-        const stageId = getStageId(this.state.worldId, this.state.stageNum);
-        Storage.saveStageResult(stageId, stars, this.state.score);
-        
-        // 통계 업데이트
+
+        // 결과 저장 (리뷰 모드가 아닐 때만 스테이지 결과 저장)
+        if (!this.state.isReviewMode) {
+            const stageId = getStageId(this.state.worldId, this.state.stageNum);
+            Storage.saveStageResult(stageId, stars, this.state.score);
+        }
+
+        // 통계 업데이트 (항상)
         Storage.updateStats(
             this.state.score,
             this.state.correctCount,
             this.state.wrongCount
         );
-        
-        console.log(`스테이지 클리어! 별 ${stars}개, 점수 ${this.state.score}`);
-        
+
+        console.log(`${this.state.isReviewMode ? '복습' : '스테이지'} 클리어! 별 ${stars}개, 점수 ${this.state.score}`);
+
         // 콜백 호출
         if (this.onStageClear) {
             this.onStageClear({
@@ -624,7 +632,8 @@ const Game = {
                 score: this.state.score,
                 maxCombo: this.state.maxCombo,
                 accuracy: this.calculateAccuracy(),
-                elapsedTime: this.state.elapsedTime
+                elapsedTime: this.state.elapsedTime,
+                isReviewMode: this.state.isReviewMode
             });
         }
     },
@@ -655,7 +664,8 @@ const Game = {
                 stageNum: this.state.stageNum,
                 score: this.state.score,
                 correctCount: this.state.correctCount,
-                wrongCount: this.state.wrongCount
+                wrongCount: this.state.wrongCount,
+                isReviewMode: this.state.isReviewMode
             });
         }
     },

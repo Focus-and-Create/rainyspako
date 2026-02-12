@@ -226,6 +226,14 @@ const App = {
             });
         }
 
+        // Review 버튼
+        const reviewBtn = document.getElementById('review-btn');
+        if (reviewBtn) {
+            reviewBtn.addEventListener('click', () => {
+                this.startQuickReview();
+            });
+        }
+
         // Stats 버튼
         const statsBtn = document.getElementById('stats-btn');
         if (statsBtn) {
@@ -377,7 +385,7 @@ const App = {
     },
 
     /**
-     * 단어 참조 패널 채우기 (단어만 표시, 뜻 없음)
+     * 단어 참조 패널 채우기 (단어 + 뜻 표시)
      * @param {number} worldId - 월드 ID
      * @param {number} stageNum - 스테이지 번호
      */
@@ -392,10 +400,8 @@ const App = {
         const leftWords = words.slice(0, mid);
         const rightWords = words.slice(mid);
 
-        // 모드에 따라 표시 단어 결정 (뜻 없이 단어만)
-        const isEsToKo = this.currentMode === 'es-to-ko';
         const buildHTML = (wordArr) => wordArr.map(w =>
-            `<div class="word-item"><span class="word-es">${isEsToKo ? w.es : w.ko}</span></div>`
+            `<div class="word-pair"><span class="word-es">${w.es}</span><span class="word-arrow">→</span><span class="word-ko">${w.ko}</span></div>`
         ).join('');
 
         leftList.innerHTML = buildHTML(leftWords);
@@ -614,6 +620,40 @@ const App = {
     },
 
     /**
+     * Quick Review 시작 (틀린 단어 복습)
+     */
+    startQuickReview: function() {
+        const reviewPool = WordManager.createReviewPool();
+        if (reviewPool.length === 0) {
+            alert('복습할 단어가 없습니다! 게임을 더 플레이해 보세요.');
+            return;
+        }
+
+        // 복습 단어를 word panel에 표시
+        const reviewWords = Storage.getWordsForReview(10);
+        const leftList = document.getElementById('word-list-left');
+        const rightList = document.getElementById('word-list-right');
+        if (leftList && rightList) {
+            const mid = Math.ceil(reviewWords.length / 2);
+            const buildHTML = (arr) => arr.map(w =>
+                `<div class="word-pair"><span class="word-es">${w.es}</span><span class="word-arrow">→</span><span class="word-ko">${w.ko}</span></div>`
+            ).join('');
+            leftList.innerHTML = buildHTML(reviewWords.slice(0, mid));
+            rightList.innerHTML = buildHTML(reviewWords.slice(mid));
+        }
+
+        // 게임 화면 전환
+        this.showScreen('game');
+        if (this.elements.inputField) {
+            this.elements.inputField.value = '';
+        }
+
+        // 복습 모드로 게임 시작 (커스텀 풀 전달)
+        const progress = Storage.getCurrentProgress();
+        Game.startStage(progress.worldId, progress.stageNum, this.currentMode, reviewPool);
+    },
+
+    /**
      * 결과 화면 표시
      * @param {Object} result - 게임 결과
      * @param {boolean} isCleared - 클리어 여부
@@ -649,15 +689,22 @@ const App = {
             this.elements.resultCombo.textContent = result.maxCombo || 0;
         }
         
-        // 다음 버튼 표시/숨기기
+        // 리뷰 모드 여부 확인
+        const isReview = result.isReviewMode;
+
+        // 다음 버튼 표시/숨기기 (리뷰 모드에서는 항상 숨김)
         if (this.elements.nextBtn) {
-            this.elements.nextBtn.classList.toggle('hidden', !isCleared);
+            this.elements.nextBtn.classList.toggle('hidden', !isCleared || isReview);
         }
-        
+
         // 결과 타이틀
         const resultTitle = document.getElementById('result-title');
         if (resultTitle) {
-            resultTitle.textContent = isCleared ? 'Stage Clear!' : 'Game Over';
+            if (isReview) {
+                resultTitle.textContent = isCleared ? 'Review Complete!' : 'Review Over';
+            } else {
+                resultTitle.textContent = isCleared ? 'Stage Clear!' : 'Game Over';
+            }
             resultTitle.classList.toggle('cleared', isCleared);
             resultTitle.classList.toggle('failed', !isCleared);
         }

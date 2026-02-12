@@ -120,29 +120,28 @@ const WordManager = {
     createWordPool: function(worldId, stageNum) {
         // 스테이지 기본 단어 가져오기
         const stageWords = this.getStageWords(worldId, stageNum);
-        
+
         // 결과 배열 (각 단어를 기본 1회 포함)
         const pool = stageWords.map(word => ({
             es: word.es,
             ko: word.ko,
             isReview: false
         }));
-        
+
         // 틀린 단어 목록 가져오기
         const wrongWords = Storage.getWrongWords();
-        
-        // 스테이지 단어 중 틀린 적 있는 단어 찾기
+        const stageWordSet = new Set(stageWords.map(w => w.es));
+
+        // 현재 스테이지 단어 중 틀린 적 있는 단어 (빈도 부스트)
         stageWords.forEach(word => {
-            // 틀린 단어 목록에서 검색
             const wrongRecord = wrongWords.find(w => w.es === word.es);
-            
+
             if (wrongRecord) {
-                // 틀린 횟수만큼 추가 (빈도 증가)
                 const extraCount = Math.min(
                     wrongRecord.wrongCount * CONFIG.REVIEW.WRONG_WORD_FREQUENCY_BOOST,
-                    10  // 최대 10회까지만 추가
+                    10
                 );
-                
+
                 for (let i = 0; i < extraCount; i++) {
                     pool.push({
                         es: word.es,
@@ -152,7 +151,22 @@ const WordManager = {
                 }
             }
         });
-        
+
+        // 다른 스테이지에서 틀린 단어도 섞기 (간격 반복 학습)
+        wrongWords.forEach(w => {
+            if (!stageWordSet.has(w.es)) {
+                // 틀린 횟수에 비례하여 추가 (최소 1, 최대 3)
+                const count = Math.min(Math.max(1, w.wrongCount), 3);
+                for (let i = 0; i < count; i++) {
+                    pool.push({
+                        es: w.es,
+                        ko: w.ko,
+                        isReview: true
+                    });
+                }
+            }
+        });
+
         return pool;
     },
     
