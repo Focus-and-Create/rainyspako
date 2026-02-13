@@ -417,6 +417,7 @@ const StageMap = {
             // 클리어 정보 가져오기
             const stageId = getStageId(node.worldId, node.stageNum);
             const result = Storage.getStageResult(stageId);
+            const isReview = WordManager.isReviewStage(node.worldId, node.stageNum);
             
             // 현재 진행 위치인지 확인
             const progress = Storage.getCurrentProgress();
@@ -442,7 +443,6 @@ const StageMap = {
             ctx.fill();
             
             // 테두리 (복습 스테이지는 빨간 테두리)
-            const isReview = WordManager.isReviewStage(node.worldId, node.stageNum);
             if (isReview && isUnlocked) {
                 ctx.strokeStyle = '#ff6b6b';
                 ctx.lineWidth = 3;
@@ -485,7 +485,6 @@ const StageMap = {
 
             // 카테고리 라벨
             {
-                const isReview = WordManager.isReviewStage(node.worldId, node.stageNum);
                 const labelY = result && result.stars > 0
                     ? node.y + node.radius + 28
                     : node.y + node.radius + 18;
