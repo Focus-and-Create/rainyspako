@@ -366,8 +366,6 @@ const StageMap = {
         // 월드 헤더 (고정 위치)
         this.renderWorldHeader(world);
         
-        // 스크롤 인디케이터
-        this.renderScrollIndicator();
     },
     
     /**
@@ -485,28 +483,20 @@ const StageMap = {
                 this.renderReviewBadge(node.x + node.radius, node.y - node.radius);
             }
 
-            // 단어 미리보기 (잠금해제된 스테이지)
-            if (isUnlocked && WordManager.isLoaded()) {
+            // 카테고리 라벨
+            {
                 const isReview = WordManager.isReviewStage(node.worldId, node.stageNum);
                 const labelY = result && result.stars > 0
                     ? node.y + node.radius + 28
                     : node.y + node.radius + 18;
+                const categoryLabel = isReview
+                    ? '복습 스테이지'
+                    : WordManager.getStageCategory(node.worldId, node.stageNum);
 
-                if (isReview) {
-                    ctx.font = '11px sans-serif';
-                    ctx.fillStyle = '#ff6b6b';
-                    ctx.textAlign = 'center';
-                    ctx.fillText('복습 스테이지', node.x, labelY);
-                } else {
-                    const words = WordManager.getStageWords(node.worldId, node.stageNum);
-                    if (words.length > 0) {
-                        const preview = words.slice(0, 3).map(w => w.es).join(', ');
-                        ctx.font = '11px sans-serif';
-                        ctx.fillStyle = '#888888';
-                        ctx.textAlign = 'center';
-                        ctx.fillText(preview, node.x, labelY);
-                    }
-                }
+                ctx.font = '11px sans-serif';
+                ctx.fillStyle = isReview ? '#ff6b6b' : (isUnlocked ? '#888888' : '#555555');
+                ctx.textAlign = 'center';
+                ctx.fillText(categoryLabel, node.x, labelY);
             }
         });
     },
@@ -631,34 +621,6 @@ const StageMap = {
             ctx.fillText('>', CONFIG.CANVAS.WIDTH - 35, 30);
         }
     },
-    
-    /**
-     * 스크롤 인디케이터 렌더링
-     */
-    renderScrollIndicator: function() {
-        // 스크롤 필요 없으면 표시 안 함
-        if (this.maxScrollY <= 0) return;
-        
-        const ctx = this.ctx;
-        
-        // 스크롤바 위치 계산
-        const barHeight = 100;
-        const barX = CONFIG.CANVAS.WIDTH - 10;
-        const barY = 80;
-        const trackHeight = CONFIG.CANVAS.HEIGHT - 160;
-        
-        // 트랙 (배경)
-        ctx.fillStyle = 'rgba(255, 255, 255, 0.1)';
-        ctx.fillRect(barX, barY, 5, trackHeight);
-        
-        // 핸들 위치 계산
-        const handleRatio = this.scrollY / this.maxScrollY;
-        const handleY = barY + handleRatio * (trackHeight - barHeight);
-        
-        // 핸들
-        ctx.fillStyle = 'rgba(255, 255, 255, 0.3)';
-        ctx.fillRect(barX, handleY, 5, barHeight);
-    }
 };
 
 // 모듈 내보내기 (ES6 모듈 사용 시)

@@ -107,6 +107,30 @@ const WordManager = {
         return stageData.words || [];
     },
 
+
+    /**
+     * 스테이지 카테고리 이름 가져오기
+     * @param {number} worldId - 월드 ID
+     * @param {number} stageNum - 스테이지 번호
+     * @returns {string} 카테고리 이름
+     */
+    getStageCategory: function(worldId, stageNum) {
+        const world = getWorldConfig(worldId);
+
+        if (!this._isLoaded) {
+            return world ? `${world.nameKo} ${stageNum}` : `스테이지 ${stageNum}`;
+        }
+
+        const worldData = this._wordData[worldId];
+        const stageData = worldData ? worldData[stageNum - 1] : null;
+
+        if (stageData && typeof stageData.category === 'string' && stageData.category.trim()) {
+            return stageData.category.trim();
+        }
+
+        return world ? `${world.nameKo} ${stageNum}` : `스테이지 ${stageNum}`;
+    },
+
     // =========================================
     // 게임용 단어 선택
     // =========================================
