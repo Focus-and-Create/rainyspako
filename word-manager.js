@@ -89,15 +89,8 @@ const WordManager = {
             return [];
         }
         
-        // 월드 데이터 확인
-        const worldData = this._wordData[worldId];
-        if (!worldData) {
-            console.warn(`WordManager: 월드 ${worldId} 데이터 없음`);
-            return [];
-        }
-        
-        // 스테이지 데이터 확인 (배열 인덱스는 0부터)
-        const stageData = worldData[stageNum - 1];
+        // 스테이지 데이터 확인
+        const stageData = this.getStageData(worldId, stageNum);
         if (!stageData) {
             console.warn(`WordManager: 스테이지 ${worldId}-${stageNum} 데이터 없음`);
             return [];
@@ -115,18 +108,39 @@ const WordManager = {
      * @returns {string} 카테고리 이름
      */
     getStageCategory: function(worldId, stageNum) {
+        const world = getWorldConfig(worldId);
+
         if (!this._isLoaded) {
-            return `카테고리 ${stageNum}`;
+            return world ? `${world.nameKo} ${stageNum}` : `스테이지 ${stageNum}`;
         }
 
-        const worldData = this._wordData[worldId];
-        const stageData = worldData ? worldData[stageNum - 1] : null;
+        const stageData = this.getStageData(worldId, stageNum);
 
         if (stageData && typeof stageData.category === 'string' && stageData.category.trim()) {
             return stageData.category.trim();
         }
 
-        return `카테고리 ${stageNum}`;
+        return world ? `${world.nameKo} ${stageNum}` : `스테이지 ${stageNum}`;
+    },
+
+
+    /**
+     * 특정 스테이지 데이터 가져오기
+     * @param {number} worldId - 월드 ID
+     * @param {number} stageNum - 스테이지 번호
+     * @returns {Object|null} 스테이지 데이터
+     */
+    getStageData: function(worldId, stageNum) {
+        if (!this._isLoaded) {
+            return null;
+        }
+
+        const worldData = this._wordData[worldId];
+        if (!worldData) {
+            return null;
+        }
+
+        return worldData[stageNum - 1] || null;
     },
 
     // =========================================
