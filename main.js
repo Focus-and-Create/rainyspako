@@ -226,14 +226,6 @@ const App = {
             });
         }
 
-        // Review 버튼
-        const reviewBtn = document.getElementById('review-btn');
-        if (reviewBtn) {
-            reviewBtn.addEventListener('click', () => {
-                this.startQuickReview();
-            });
-        }
-
         // Stats 버튼
         const statsBtn = document.getElementById('stats-btn');
         if (statsBtn) {
@@ -317,8 +309,10 @@ const App = {
         // 모달 제목 업데이트
         const world = getWorldConfig(worldId);
         if (this.elements.modalTitle) {
-            this.elements.modalTitle.textContent = 
-                `Stage ${worldId}-${stageNum}`;
+            const category = WordManager.getStageCategory(worldId, stageNum);
+            this.elements.modalTitle.textContent = WordManager.isReviewStage(worldId, stageNum)
+                ? `Stage ${worldId}-${stageNum} · Review`
+                : `Stage ${worldId}-${stageNum} · ${category}`;
         }
         
         // 복습 스테이지 표시
@@ -617,40 +611,6 @@ const App = {
      */
     hideStatsModal: function() {
         document.getElementById('stats-modal').classList.add('hidden');
-    },
-
-    /**
-     * Quick Review 시작 (틀린 단어 복습)
-     */
-    startQuickReview: function() {
-        const reviewPool = WordManager.createReviewPool();
-        if (reviewPool.length === 0) {
-            alert('복습할 단어가 없습니다! 게임을 더 플레이해 보세요.');
-            return;
-        }
-
-        // 복습 단어를 word panel에 표시
-        const reviewWords = Storage.getWordsForReview(10);
-        const leftList = document.getElementById('word-list-left');
-        const rightList = document.getElementById('word-list-right');
-        if (leftList && rightList) {
-            const mid = Math.ceil(reviewWords.length / 2);
-            const buildHTML = (arr) => arr.map(w =>
-                `<div class="word-pair"><span class="word-es">${w.es}</span><span class="word-arrow">→</span><span class="word-ko">${w.ko}</span></div>`
-            ).join('');
-            leftList.innerHTML = buildHTML(reviewWords.slice(0, mid));
-            rightList.innerHTML = buildHTML(reviewWords.slice(mid));
-        }
-
-        // 게임 화면 전환
-        this.showScreen('game');
-        if (this.elements.inputField) {
-            this.elements.inputField.value = '';
-        }
-
-        // 복습 모드로 게임 시작 (커스텀 풀 전달)
-        const progress = Storage.getCurrentProgress();
-        Game.startStage(progress.worldId, progress.stageNum, this.currentMode, reviewPool);
     },
 
     /**
