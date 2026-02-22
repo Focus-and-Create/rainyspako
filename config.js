@@ -11,7 +11,7 @@ const CONFIG = {
     CANVAS: {
         WIDTH: 800,                    // 게임 캔버스 너비 (px)
         HEIGHT: 600,                   // 게임 캔버스 높이 (px)
-        BACKGROUND_COLOR: '#1a1a2e',   // 게임 배경색 (어두운 남색)
+        BACKGROUND_COLOR: '#0f172a',   // 게임 배경색 (딥 네이비)
         DEATH_LINE_Y: 550              // 이 Y좌표 아래로 떨어지면 단어 놓침
     },
 
@@ -78,25 +78,25 @@ const CONFIG = {
     // =========================================
     RENDER: {
         FONT_FAMILY: "'Noto Sans KR', sans-serif",
-        WORD_FONT_SIZE: 24,            // 떨어지는 단어 폰트 크기
-        INPUT_FONT_SIZE: 28,           // 입력창 폰트 크기
-        WORD_COLOR: '#ffffff',         // 단어 기본 색상
-        WORD_MATCHED_COLOR: '#4ade80', // 매칭된 글자 색상 (초록)
-        WORD_SHADOW_COLOR: 'rgba(0, 0, 0, 0.5)'
+        WORD_FONT_SIZE: 22,            // 떨어지는 단어 폰트 크기
+        INPUT_FONT_SIZE: 24,           // 입력창 폰트 크기
+        WORD_COLOR: '#f1f5f9',         // 단어 기본 색상
+        WORD_MATCHED_COLOR: '#34d399', // 매칭된 글자 색상 (에메랄드)
+        WORD_SHADOW_COLOR: 'rgba(0, 0, 0, 0.4)'
     },
 
     // =========================================
     // 스테이지 맵 설정
     // =========================================
     MAP: {
-        NODE_RADIUS: 28,               // 스테이지 노드 반지름
+        NODE_RADIUS: 26,               // 스테이지 노드 반지름
         NODE_SPACING_X: 80,            // 노드 간 X 간격
         NODE_SPACING_Y: 100,           // 노드 간 Y 간격
-        PATH_COLOR: '#3d3d5c',         // 경로 선 색상
-        PATH_WIDTH: 4,                 // 경로 선 두께
-        LOCKED_COLOR: '#555555',       // 잠긴 스테이지 색상
-        UNLOCKED_COLOR: '#ffffff',     // 잠금해제 스테이지 색상
-        CURRENT_COLOR: '#ffd700'       // 현재 스테이지 강조 색상
+        PATH_COLOR: 'rgba(255, 255, 255, 0.08)', // 경로 선 색상
+        PATH_WIDTH: 3,                 // 경로 선 두께
+        LOCKED_COLOR: '#1e293b',       // 잠긴 스테이지 색상
+        UNLOCKED_COLOR: '#334155',     // 잠금해제 스테이지 색상
+        CURRENT_COLOR: '#fbbf24'       // 현재 스테이지 강조 색상
     },
 
     // =========================================

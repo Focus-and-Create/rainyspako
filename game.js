@@ -721,21 +721,45 @@ const Game = {
      */
     render: function() {
         const ctx = this.ctx;
-        
-        // 배경 클리어
-        ctx.fillStyle = CONFIG.CANVAS.BACKGROUND_COLOR;
-        ctx.fillRect(0, 0, CONFIG.CANVAS.WIDTH, CONFIG.CANVAS.HEIGHT);
-        
-        // 데스라인 표시 (희미하게)
-        ctx.strokeStyle = 'rgba(255, 100, 100, 0.3)';
-        ctx.lineWidth = 2;
-        ctx.setLineDash([10, 5]);
+        const W = CONFIG.CANVAS.WIDTH;
+        const H = CONFIG.CANVAS.HEIGHT;
+
+        // 배경 그라데이션
+        const bgGrad = ctx.createLinearGradient(0, 0, 0, H);
+        bgGrad.addColorStop(0, '#0f172a');
+        bgGrad.addColorStop(0.5, '#111827');
+        bgGrad.addColorStop(1, '#1e293b');
+        ctx.fillStyle = bgGrad;
+        ctx.fillRect(0, 0, W, H);
+
+        // 미세한 격자 패턴 (깊이감)
+        ctx.strokeStyle = 'rgba(255, 255, 255, 0.015)';
+        ctx.lineWidth = 1;
+        for (let x = 0; x < W; x += 80) {
+            ctx.beginPath();
+            ctx.moveTo(x, 0);
+            ctx.lineTo(x, H);
+            ctx.stroke();
+        }
+
+        // 데스라인 표시 (그라데이션 경고 영역)
+        const deathY = CONFIG.CANVAS.DEATH_LINE_Y;
+        const dangerGrad = ctx.createLinearGradient(0, deathY - 40, 0, deathY);
+        dangerGrad.addColorStop(0, 'rgba(239, 68, 68, 0)');
+        dangerGrad.addColorStop(1, 'rgba(239, 68, 68, 0.06)');
+        ctx.fillStyle = dangerGrad;
+        ctx.fillRect(0, deathY - 40, W, 40);
+
+        // 데스라인
+        ctx.strokeStyle = 'rgba(239, 68, 68, 0.25)';
+        ctx.lineWidth = 1;
+        ctx.setLineDash([8, 6]);
         ctx.beginPath();
-        ctx.moveTo(0, CONFIG.CANVAS.DEATH_LINE_Y);
-        ctx.lineTo(CONFIG.CANVAS.WIDTH, CONFIG.CANVAS.DEATH_LINE_Y);
+        ctx.moveTo(0, deathY);
+        ctx.lineTo(W, deathY);
         ctx.stroke();
         ctx.setLineDash([]);
-        
+
         // 떨어지는 단어들 렌더링
         this.renderWords();
 
@@ -752,45 +776,59 @@ const Game = {
     renderWords: function() {
         const ctx = this.ctx;
         const isEsToKo = this.state.mode === 'es-to-ko';
-        
-        // 폰트 설정
-        ctx.font = `${CONFIG.RENDER.WORD_FONT_SIZE}px ${CONFIG.RENDER.FONT_FAMILY}`;
-        ctx.textAlign = 'center';
-        ctx.textBaseline = 'middle';
-        
+
         // 각 단어 렌더링
         this.activeWords.forEach(word => {
-            // 표시할 텍스트 (모드에 따라)
             const displayText = isEsToKo ? word.spanish : word.korean;
-            
-            // 그림자 효과
-            ctx.shadowColor = CONFIG.RENDER.WORD_SHADOW_COLOR;
-            ctx.shadowBlur = 4;
-            ctx.shadowOffsetX = 2;
-            ctx.shadowOffsetY = 2;
-            
-            // 매칭 상태에 따른 색상
-            if (word.matched.length > 0) {
-                // 매칭된 부분은 초록색
-                ctx.fillStyle = CONFIG.RENDER.WORD_MATCHED_COLOR;
-            } else {
-                // 기본 흰색
-                ctx.fillStyle = CONFIG.RENDER.WORD_COLOR;
-            }
-            
-            // 복습 단어는 약간 다른 스타일 (밑줄)
+            const fontSize = CONFIG.RENDER.WORD_FONT_SIZE;
+
+            // 배경 캡슐
+            ctx.font = `bold ${fontSize}px ${CONFIG.RENDER.FONT_FAMILY}`;
+            ctx.textAlign = 'center';
+            ctx.textBaseline = 'middle';
+            const textWidth = ctx.measureText(displayText).width;
+            const capsuleW = textWidth + 28;
+            const capsuleH = fontSize + 16;
+            const capsuleX = word.x - capsuleW / 2;
+            const capsuleY = word.y - capsuleH / 2;
+            const capsuleR = capsuleH / 2;
+
+            // 캡슐 배경색 결정
+            let bgColor, borderColor, textColor;
             if (word.isReview) {
-                ctx.fillStyle = '#ffd700'; // 금색
+                bgColor = 'rgba(251, 191, 36, 0.15)';
+                borderColor = 'rgba(251, 191, 36, 0.5)';
+                textColor = '#fbbf24';
+            } else if (word.matched.length > 0) {
+                bgColor = 'rgba(16, 185, 129, 0.15)';
+                borderColor = 'rgba(16, 185, 129, 0.6)';
+                textColor = '#34d399';
+            } else {
+                bgColor = 'rgba(255, 255, 255, 0.06)';
+                borderColor = 'rgba(255, 255, 255, 0.12)';
+                textColor = '#f1f5f9';
             }
-            
+
+            // 캡슐 그리기 (둥근 사각형)
+            ctx.beginPath();
+            ctx.moveTo(capsuleX + capsuleR, capsuleY);
+            ctx.lineTo(capsuleX + capsuleW - capsuleR, capsuleY);
+            ctx.arcTo(capsuleX + capsuleW, capsuleY, capsuleX + capsuleW, capsuleY + capsuleR, capsuleR);
+            ctx.arcTo(capsuleX + capsuleW, capsuleY + capsuleH, capsuleX + capsuleW - capsuleR, capsuleY + capsuleH, capsuleR);
+            ctx.lineTo(capsuleX + capsuleR, capsuleY + capsuleH);
+            ctx.arcTo(capsuleX, capsuleY + capsuleH, capsuleX, capsuleY + capsuleR, capsuleR);
+            ctx.arcTo(capsuleX, capsuleY, capsuleX + capsuleR, capsuleY, capsuleR);
+            ctx.closePath();
+
+            ctx.fillStyle = bgColor;
+            ctx.fill();
+            ctx.strokeStyle = borderColor;
+            ctx.lineWidth = 1.5;
+            ctx.stroke();
+
             // 텍스트 그리기
+            ctx.fillStyle = textColor;
             ctx.fillText(displayText, word.x, word.y);
-            
-            // 그림자 효과 리셋
-            ctx.shadowColor = 'transparent';
-            ctx.shadowBlur = 0;
-            ctx.shadowOffsetX = 0;
-            ctx.shadowOffsetY = 0;
         });
     },
     
@@ -799,37 +837,55 @@ const Game = {
      */
     renderInput: function() {
         const ctx = this.ctx;
-        
-        // 입력창 배경
-        const inputY = CONFIG.CANVAS.HEIGHT - 50;
-        const inputWidth = 300;
-        const inputHeight = 40;
-        const inputX = (CONFIG.CANVAS.WIDTH - inputWidth) / 2;
-        
-        // 배경 박스
-        ctx.fillStyle = 'rgba(255, 255, 255, 0.1)';
-        ctx.fillRect(inputX, inputY - inputHeight / 2, inputWidth, inputHeight);
-        
-        // 테두리
-        ctx.strokeStyle = 'rgba(255, 255, 255, 0.3)';
-        ctx.lineWidth = 1;
-        ctx.strokeRect(inputX, inputY - inputHeight / 2, inputWidth, inputHeight);
-        
+        const W = CONFIG.CANVAS.WIDTH;
+        const H = CONFIG.CANVAS.HEIGHT;
+
+        // 입력창 영역
+        const inputY = H - 50;
+        const inputWidth = 320;
+        const inputHeight = 42;
+        const inputX = (W - inputWidth) / 2;
+        const radius = inputHeight / 2;
+
+        // 둥근 입력창 배경
+        ctx.beginPath();
+        ctx.moveTo(inputX + radius, inputY - inputHeight / 2);
+        ctx.lineTo(inputX + inputWidth - radius, inputY - inputHeight / 2);
+        ctx.arcTo(inputX + inputWidth, inputY - inputHeight / 2, inputX + inputWidth, inputY, radius);
+        ctx.arcTo(inputX + inputWidth, inputY + inputHeight / 2, inputX + inputWidth - radius, inputY + inputHeight / 2, radius);
+        ctx.lineTo(inputX + radius, inputY + inputHeight / 2);
+        ctx.arcTo(inputX, inputY + inputHeight / 2, inputX, inputY, radius);
+        ctx.arcTo(inputX, inputY - inputHeight / 2, inputX + radius, inputY - inputHeight / 2, radius);
+        ctx.closePath();
+
+        ctx.fillStyle = 'rgba(15, 23, 42, 0.7)';
+        ctx.fill();
+
+        // 테두리 (입력이 있으면 accent 색상)
+        if (this.currentInput) {
+            ctx.strokeStyle = 'rgba(16, 185, 129, 0.5)';
+            ctx.lineWidth = 1.5;
+        } else {
+            ctx.strokeStyle = 'rgba(255, 255, 255, 0.15)';
+            ctx.lineWidth = 1;
+        }
+        ctx.stroke();
+
         // 입력 텍스트
-        ctx.font = `${CONFIG.RENDER.INPUT_FONT_SIZE}px ${CONFIG.RENDER.FONT_FAMILY}`;
-        ctx.fillStyle = '#ffffff';
         ctx.textAlign = 'center';
         ctx.textBaseline = 'middle';
-        
-        // 입력이 있으면 표시, 없으면 플레이스홀더
+
         if (this.currentInput) {
-            ctx.fillText(this.currentInput, CONFIG.CANVAS.WIDTH / 2, inputY);
+            ctx.font = `bold ${CONFIG.RENDER.INPUT_FONT_SIZE}px ${CONFIG.RENDER.FONT_FAMILY}`;
+            ctx.fillStyle = '#f1f5f9';
+            ctx.fillText(this.currentInput, W / 2, inputY);
         } else {
-            ctx.fillStyle = 'rgba(255, 255, 255, 0.5)';
-            const placeholder = this.state.mode === 'es-to-ko' 
-                ? '한국어로 입력하세요' 
+            ctx.font = `${CONFIG.RENDER.INPUT_FONT_SIZE - 4}px ${CONFIG.RENDER.FONT_FAMILY}`;
+            ctx.fillStyle = 'rgba(148, 163, 184, 0.5)';
+            const placeholder = this.state.mode === 'es-to-ko'
+                ? '한국어로 입력하세요'
                 : 'Escribe en español';
-            ctx.fillText(placeholder, CONFIG.CANVAS.WIDTH / 2, inputY);
+            ctx.fillText(placeholder, W / 2, inputY);
         }
     },
 
@@ -840,20 +896,46 @@ const Game = {
         const ctx = this.ctx;
         const now = performance.now();
 
-        // 만료된 피드백 제거 (2초 후 사라짐)
-        this.feedbacks = this.feedbacks.filter(f => now - f.time < 2000);
+        // 만료된 피드백 제거 (2.5초 후 사라짐)
+        this.feedbacks = this.feedbacks.filter(f => now - f.time < 2500);
 
         this.feedbacks.forEach(f => {
             const elapsed = now - f.time;
-            f.alpha = Math.max(0, 1 - elapsed / 2000);
-            f.y -= 0.3; // 천천히 위로 올라감
+            f.alpha = Math.max(0, 1 - elapsed / 2500);
+            f.y -= 0.25;
 
             ctx.save();
             ctx.globalAlpha = f.alpha;
-            ctx.font = `bold 16px ${CONFIG.RENDER.FONT_FAMILY}`;
+
+            // 배경 박스
+            ctx.font = `bold 14px ${CONFIG.RENDER.FONT_FAMILY}`;
+            const textWidth = ctx.measureText(f.text).width;
+            const boxW = textWidth + 24;
+            const boxH = 30;
+            const boxX = CONFIG.CANVAS.WIDTH / 2 - boxW / 2;
+            const boxY = f.y - boxH / 2;
+            const boxR = 6;
+
+            ctx.beginPath();
+            ctx.moveTo(boxX + boxR, boxY);
+            ctx.lineTo(boxX + boxW - boxR, boxY);
+            ctx.arcTo(boxX + boxW, boxY, boxX + boxW, boxY + boxR, boxR);
+            ctx.arcTo(boxX + boxW, boxY + boxH, boxX + boxW - boxR, boxY + boxH, boxR);
+            ctx.lineTo(boxX + boxR, boxY + boxH);
+            ctx.arcTo(boxX, boxY + boxH, boxX, boxY + boxR, boxR);
+            ctx.arcTo(boxX, boxY, boxX + boxR, boxY, boxR);
+            ctx.closePath();
+
+            ctx.fillStyle = 'rgba(239, 68, 68, 0.12)';
+            ctx.fill();
+            ctx.strokeStyle = 'rgba(239, 68, 68, 0.3)';
+            ctx.lineWidth = 1;
+            ctx.stroke();
+
+            // 텍스트
             ctx.textAlign = 'center';
             ctx.textBaseline = 'middle';
-            ctx.fillStyle = '#ff6b6b';
+            ctx.fillStyle = '#fca5a5';
             ctx.fillText(f.text, CONFIG.CANVAS.WIDTH / 2, f.y);
             ctx.restore();
         });
