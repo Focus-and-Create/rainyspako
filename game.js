@@ -163,6 +163,9 @@ const Game = {
         if (customPool) {
             // 커스텀 풀 (Quick Review 등)
             this.wordPool = customPool;
+        } else if (WordManager.isBossStage(worldId, stageNum)) {
+            // 에피소드 보스: 누적 100단어 기반 회상
+            this.wordPool = WordManager.createBossPool(worldId, stageNum);
         } else if (WordManager.isReviewStage(worldId, stageNum)) {
             // 복습 스테이지
             this.wordPool = WordManager.createReviewPool();

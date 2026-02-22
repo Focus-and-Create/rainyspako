@@ -5,403 +5,2641 @@
   "stages": [
     {
       "stage": 1,
+      "category": "에피소드 1 · 세트 1",
+      "type": "learning",
       "words": [
-        { "es": "hola", "ko": "안녕" },
-        { "es": "adiós", "ko": "안녕히 가세요" },
-        { "es": "buenos días", "ko": "좋은 아침" },
-        { "es": "buenas tardes", "ko": "좋은 오후" },
-        { "es": "buenas noches", "ko": "좋은 밤" },
-        { "es": "sí", "ko": "네" },
-        { "es": "no", "ko": "아니요" },
-        { "es": "por favor", "ko": "제발" },
-        { "es": "gracias", "ko": "감사합니다" },
-        { "es": "de nada", "ko": "천만에요" },
-        { "es": "perdón", "ko": "죄송합니다" },
-        { "es": "lo siento", "ko": "미안합니다" },
-        { "es": "bienvenido", "ko": "환영합니다" },
-        { "es": "hasta luego", "ko": "나중에 봐요" },
-        { "es": "hasta mañana", "ko": "내일 봐요" }
+        {
+          "es": "hola",
+          "ko": "안녕"
+        },
+        {
+          "es": "adiós",
+          "ko": "안녕히 가세요"
+        },
+        {
+          "es": "buenos días",
+          "ko": "좋은 아침"
+        },
+        {
+          "es": "buenas tardes",
+          "ko": "좋은 오후"
+        },
+        {
+          "es": "buenas noches",
+          "ko": "좋은 밤"
+        },
+        {
+          "es": "sí",
+          "ko": "네"
+        },
+        {
+          "es": "no",
+          "ko": "아니요"
+        },
+        {
+          "es": "por favor",
+          "ko": "제발"
+        },
+        {
+          "es": "gracias",
+          "ko": "감사합니다"
+        },
+        {
+          "es": "de nada",
+          "ko": "천만에요"
+        }
       ]
     },
     {
       "stage": 2,
+      "category": "에피소드 1 · 세트 2",
+      "type": "learning",
       "words": [
-        { "es": "¿cómo estás?", "ko": "어떻게 지내?" },
-        { "es": "bien", "ko": "좋아요" },
-        { "es": "mal", "ko": "나빠요" },
-        { "es": "más o menos", "ko": "그저 그래요" },
-        { "es": "mucho gusto", "ko": "만나서 반갑습니다" },
-        { "es": "igualmente", "ko": "저도요" },
-        { "es": "con permiso", "ko": "실례합니다" },
-        { "es": "disculpe", "ko": "실례지만" },
-        { "es": "salud", "ko": "건강" },
-        { "es": "felicidades", "ko": "축하합니다" },
-        { "es": "buena suerte", "ko": "행운을 빌어요" },
-        { "es": "nos vemos", "ko": "또 만나요" },
-        { "es": "cuídate", "ko": "몸 조심해" },
-        { "es": "buen viaje", "ko": "좋은 여행 되세요" },
-        { "es": "¡claro!", "ko": "물론이죠!" }
+        {
+          "es": "perdón",
+          "ko": "죄송합니다"
+        },
+        {
+          "es": "lo siento",
+          "ko": "미안합니다"
+        },
+        {
+          "es": "bienvenido",
+          "ko": "환영합니다"
+        },
+        {
+          "es": "hasta luego",
+          "ko": "나중에 봐요"
+        },
+        {
+          "es": "hasta mañana",
+          "ko": "내일 봐요"
+        },
+        {
+          "es": "¿cómo estás?",
+          "ko": "어떻게 지내?"
+        },
+        {
+          "es": "bien",
+          "ko": "좋아요"
+        },
+        {
+          "es": "mal",
+          "ko": "나빠요"
+        },
+        {
+          "es": "más o menos",
+          "ko": "그저 그래요"
+        },
+        {
+          "es": "mucho gusto",
+          "ko": "만나서 반갑습니다"
+        }
       ]
     },
     {
       "stage": 3,
+      "category": "에피소드 1 · 세트 3",
+      "type": "learning",
       "words": [
-        { "es": "yo", "ko": "나" },
-        { "es": "tú", "ko": "너" },
-        { "es": "él", "ko": "그" },
-        { "es": "ella", "ko": "그녀" },
-        { "es": "nosotros", "ko": "우리" },
-        { "es": "ellos", "ko": "그들" },
-        { "es": "usted", "ko": "당신" },
-        { "es": "ustedes", "ko": "당신들" },
-        { "es": "esto", "ko": "이것" },
-        { "es": "eso", "ko": "그것" },
-        { "es": "aquello", "ko": "저것" },
-        { "es": "aquí", "ko": "여기" },
-        { "es": "ahí", "ko": "거기" },
-        { "es": "allí", "ko": "저기" },
-        { "es": "mi", "ko": "나의" }
+        {
+          "es": "igualmente",
+          "ko": "저도요"
+        },
+        {
+          "es": "con permiso",
+          "ko": "실례합니다"
+        },
+        {
+          "es": "disculpe",
+          "ko": "실례지만"
+        },
+        {
+          "es": "salud",
+          "ko": "건강"
+        },
+        {
+          "es": "felicidades",
+          "ko": "축하합니다"
+        },
+        {
+          "es": "buena suerte",
+          "ko": "행운을 빌어요"
+        },
+        {
+          "es": "nos vemos",
+          "ko": "또 만나요"
+        },
+        {
+          "es": "cuídate",
+          "ko": "몸 조심해"
+        },
+        {
+          "es": "buen viaje",
+          "ko": "좋은 여행 되세요"
+        },
+        {
+          "es": "¡claro!",
+          "ko": "물론이죠!"
+        }
       ]
     },
     {
       "stage": 4,
+      "category": "에피소드 1 · 세트 4",
+      "type": "learning",
       "words": [
-        { "es": "uno", "ko": "일" },
-        { "es": "dos", "ko": "이" },
-        { "es": "tres", "ko": "삼" },
-        { "es": "cuatro", "ko": "사" },
-        { "es": "cinco", "ko": "오" },
-        { "es": "seis", "ko": "육" },
-        { "es": "siete", "ko": "칠" },
-        { "es": "ocho", "ko": "팔" },
-        { "es": "nueve", "ko": "구" },
-        { "es": "diez", "ko": "십" },
-        { "es": "once", "ko": "십일" },
-        { "es": "doce", "ko": "십이" },
-        { "es": "trece", "ko": "십삼" },
-        { "es": "catorce", "ko": "십사" },
-        { "es": "quince", "ko": "십오" }
+        {
+          "es": "yo",
+          "ko": "나"
+        },
+        {
+          "es": "tú",
+          "ko": "너"
+        },
+        {
+          "es": "él",
+          "ko": "그"
+        },
+        {
+          "es": "ella",
+          "ko": "그녀"
+        },
+        {
+          "es": "nosotros",
+          "ko": "우리"
+        },
+        {
+          "es": "ellos",
+          "ko": "그들"
+        },
+        {
+          "es": "usted",
+          "ko": "당신"
+        },
+        {
+          "es": "ustedes",
+          "ko": "당신들"
+        },
+        {
+          "es": "esto",
+          "ko": "이것"
+        },
+        {
+          "es": "eso",
+          "ko": "그것"
+        }
       ]
     },
     {
       "stage": 5,
+      "category": "에피소드 1 · 세트 5",
+      "type": "learning",
       "words": [
-        { "es": "dieciséis", "ko": "십육" },
-        { "es": "diecisiete", "ko": "십칠" },
-        { "es": "dieciocho", "ko": "십팔" },
-        { "es": "diecinueve", "ko": "십구" },
-        { "es": "veinte", "ko": "이십" },
-        { "es": "veintiuno", "ko": "이십일" },
-        { "es": "treinta", "ko": "삼십" },
-        { "es": "cuarenta", "ko": "사십" },
-        { "es": "cincuenta", "ko": "오십" },
-        { "es": "sesenta", "ko": "육십" },
-        { "es": "setenta", "ko": "칠십" },
-        { "es": "ochenta", "ko": "팔십" },
-        { "es": "noventa", "ko": "구십" },
-        { "es": "cien", "ko": "백" },
-        { "es": "mil", "ko": "천" }
+        {
+          "es": "aquello",
+          "ko": "저것"
+        },
+        {
+          "es": "aquí",
+          "ko": "여기"
+        },
+        {
+          "es": "ahí",
+          "ko": "거기"
+        },
+        {
+          "es": "allí",
+          "ko": "저기"
+        },
+        {
+          "es": "mi",
+          "ko": "나의"
+        },
+        {
+          "es": "uno",
+          "ko": "일"
+        },
+        {
+          "es": "dos",
+          "ko": "이"
+        },
+        {
+          "es": "tres",
+          "ko": "삼"
+        },
+        {
+          "es": "cuatro",
+          "ko": "사"
+        },
+        {
+          "es": "cinco",
+          "ko": "오"
+        }
       ]
     },
     {
       "stage": 6,
+      "category": "에피소드 1 · 세트 6",
+      "type": "learning",
       "words": [
-        { "es": "primero", "ko": "첫 번째" },
-        { "es": "segundo", "ko": "두 번째" },
-        { "es": "tercero", "ko": "세 번째" },
-        { "es": "cuarto", "ko": "네 번째" },
-        { "es": "quinto", "ko": "다섯 번째" },
-        { "es": "sexto", "ko": "여섯 번째" },
-        { "es": "séptimo", "ko": "일곱 번째" },
-        { "es": "octavo", "ko": "여덟 번째" },
-        { "es": "noveno", "ko": "아홉 번째" },
-        { "es": "décimo", "ko": "열 번째" },
-        { "es": "último", "ko": "마지막" },
-        { "es": "medio", "ko": "반" },
-        { "es": "doble", "ko": "두 배" },
-        { "es": "par", "ko": "짝수" },
-        { "es": "impar", "ko": "홀수" }
+        {
+          "es": "seis",
+          "ko": "육"
+        },
+        {
+          "es": "siete",
+          "ko": "칠"
+        },
+        {
+          "es": "ocho",
+          "ko": "팔"
+        },
+        {
+          "es": "nueve",
+          "ko": "구"
+        },
+        {
+          "es": "diez",
+          "ko": "십"
+        },
+        {
+          "es": "once",
+          "ko": "십일"
+        },
+        {
+          "es": "doce",
+          "ko": "십이"
+        },
+        {
+          "es": "trece",
+          "ko": "십삼"
+        },
+        {
+          "es": "catorce",
+          "ko": "십사"
+        },
+        {
+          "es": "quince",
+          "ko": "십오"
+        }
       ]
     },
     {
       "stage": 7,
+      "category": "에피소드 1 · 세트 7",
+      "type": "learning",
       "words": [
-        { "es": "rojo", "ko": "빨간색" },
-        { "es": "azul", "ko": "파란색" },
-        { "es": "verde", "ko": "초록색" },
-        { "es": "amarillo", "ko": "노란색" },
-        { "es": "negro", "ko": "검은색" },
-        { "es": "blanco", "ko": "흰색" },
-        { "es": "gris", "ko": "회색" },
-        { "es": "marrón", "ko": "갈색" },
-        { "es": "naranja", "ko": "주황색" },
-        { "es": "rosa", "ko": "분홍색" },
-        { "es": "morado", "ko": "보라색" },
-        { "es": "celeste", "ko": "하늘색" },
-        { "es": "dorado", "ko": "금색" },
-        { "es": "plateado", "ko": "은색" },
-        { "es": "oscuro", "ko": "어두운" }
+        {
+          "es": "dieciséis",
+          "ko": "십육"
+        },
+        {
+          "es": "diecisiete",
+          "ko": "십칠"
+        },
+        {
+          "es": "dieciocho",
+          "ko": "십팔"
+        },
+        {
+          "es": "diecinueve",
+          "ko": "십구"
+        },
+        {
+          "es": "veinte",
+          "ko": "이십"
+        },
+        {
+          "es": "veintiuno",
+          "ko": "이십일"
+        },
+        {
+          "es": "treinta",
+          "ko": "삼십"
+        },
+        {
+          "es": "cuarenta",
+          "ko": "사십"
+        },
+        {
+          "es": "cincuenta",
+          "ko": "오십"
+        },
+        {
+          "es": "sesenta",
+          "ko": "육십"
+        }
       ]
     },
     {
       "stage": 8,
+      "category": "에피소드 1 · 세트 8",
+      "type": "learning",
       "words": [
-        { "es": "grande", "ko": "큰" },
-        { "es": "pequeño", "ko": "작은" },
-        { "es": "largo", "ko": "긴" },
-        { "es": "corto", "ko": "짧은" },
-        { "es": "alto", "ko": "높은" },
-        { "es": "bajo", "ko": "낮은" },
-        { "es": "nuevo", "ko": "새로운" },
-        { "es": "viejo", "ko": "오래된" },
-        { "es": "joven", "ko": "젊은" },
-        { "es": "bueno", "ko": "좋은" },
-        { "es": "malo", "ko": "나쁜" },
-        { "es": "bonito", "ko": "예쁜" },
-        { "es": "feo", "ko": "못생긴" },
-        { "es": "fácil", "ko": "쉬운" },
-        { "es": "difícil", "ko": "어려운" }
+        {
+          "es": "setenta",
+          "ko": "칠십"
+        },
+        {
+          "es": "ochenta",
+          "ko": "팔십"
+        },
+        {
+          "es": "noventa",
+          "ko": "구십"
+        },
+        {
+          "es": "cien",
+          "ko": "백"
+        },
+        {
+          "es": "mil",
+          "ko": "천"
+        },
+        {
+          "es": "primero",
+          "ko": "첫 번째"
+        },
+        {
+          "es": "segundo",
+          "ko": "두 번째"
+        },
+        {
+          "es": "tercero",
+          "ko": "세 번째"
+        },
+        {
+          "es": "cuarto",
+          "ko": "네 번째"
+        },
+        {
+          "es": "quinto",
+          "ko": "다섯 번째"
+        }
       ]
     },
     {
       "stage": 9,
+      "category": "에피소드 1 · 세트 9",
+      "type": "learning",
       "words": [
-        { "es": "caliente", "ko": "뜨거운" },
-        { "es": "frío", "ko": "차가운" },
-        { "es": "rápido", "ko": "빠른" },
-        { "es": "lento", "ko": "느린" },
-        { "es": "redondo", "ko": "둥근" },
-        { "es": "cuadrado", "ko": "네모난" },
-        { "es": "ancho", "ko": "넓은" },
-        { "es": "estrecho", "ko": "좁은" },
-        { "es": "pesado", "ko": "무거운" },
-        { "es": "ligero", "ko": "가벼운" },
-        { "es": "duro", "ko": "단단한" },
-        { "es": "suave", "ko": "부드러운" },
-        { "es": "lleno", "ko": "가득 찬" },
-        { "es": "vacío", "ko": "빈" },
-        { "es": "limpio", "ko": "깨끗한" }
+        {
+          "es": "sexto",
+          "ko": "여섯 번째"
+        },
+        {
+          "es": "séptimo",
+          "ko": "일곱 번째"
+        },
+        {
+          "es": "octavo",
+          "ko": "여덟 번째"
+        },
+        {
+          "es": "noveno",
+          "ko": "아홉 번째"
+        },
+        {
+          "es": "décimo",
+          "ko": "열 번째"
+        },
+        {
+          "es": "último",
+          "ko": "마지막"
+        },
+        {
+          "es": "medio",
+          "ko": "반"
+        },
+        {
+          "es": "doble",
+          "ko": "두 배"
+        },
+        {
+          "es": "par",
+          "ko": "짝수"
+        },
+        {
+          "es": "impar",
+          "ko": "홀수"
+        }
       ]
     },
     {
       "stage": 10,
+      "category": "에피소드 1 · 세트 10",
+      "type": "learning",
       "words": [
-        { "es": "ser", "ko": "~이다" },
-        { "es": "estar", "ko": "~에 있다" },
-        { "es": "tener", "ko": "가지다" },
-        { "es": "hacer", "ko": "하다" },
-        { "es": "ir", "ko": "가다" },
-        { "es": "venir", "ko": "오다" },
-        { "es": "querer", "ko": "원하다" },
-        { "es": "poder", "ko": "할 수 있다" },
-        { "es": "saber", "ko": "알다" },
-        { "es": "hablar", "ko": "말하다" },
-        { "es": "comer", "ko": "먹다" },
-        { "es": "beber", "ko": "마시다" },
-        { "es": "dormir", "ko": "자다" },
-        { "es": "ver", "ko": "보다" },
-        { "es": "dar", "ko": "주다" }
+        {
+          "es": "rojo",
+          "ko": "빨간색"
+        },
+        {
+          "es": "azul",
+          "ko": "파란색"
+        },
+        {
+          "es": "verde",
+          "ko": "초록색"
+        },
+        {
+          "es": "amarillo",
+          "ko": "노란색"
+        },
+        {
+          "es": "negro",
+          "ko": "검은색"
+        },
+        {
+          "es": "blanco",
+          "ko": "흰색"
+        },
+        {
+          "es": "gris",
+          "ko": "회색"
+        },
+        {
+          "es": "marrón",
+          "ko": "갈색"
+        },
+        {
+          "es": "naranja",
+          "ko": "주황색"
+        },
+        {
+          "es": "rosa",
+          "ko": "분홍색"
+        }
       ]
     },
     {
       "stage": 11,
+      "category": "에피소드 1 보스 · 누적 복습",
+      "type": "boss",
       "words": [
-        { "es": "poner", "ko": "놓다" },
-        { "es": "decir", "ko": "말하다" },
-        { "es": "salir", "ko": "나가다" },
-        { "es": "llevar", "ko": "가져가다" },
-        { "es": "llamar", "ko": "부르다" },
-        { "es": "pasar", "ko": "지나가다" },
-        { "es": "seguir", "ko": "따르다" },
-        { "es": "creer", "ko": "믿다" },
-        { "es": "encontrar", "ko": "찾다" },
-        { "es": "pensar", "ko": "생각하다" },
-        { "es": "sentir", "ko": "느끼다" },
-        { "es": "vivir", "ko": "살다" },
-        { "es": "morir", "ko": "죽다" },
-        { "es": "nacer", "ko": "태어나다" },
-        { "es": "trabajar", "ko": "일하다" }
+        {
+          "es": "hola",
+          "ko": "안녕"
+        },
+        {
+          "es": "adiós",
+          "ko": "안녕히 가세요"
+        },
+        {
+          "es": "buenos días",
+          "ko": "좋은 아침"
+        },
+        {
+          "es": "buenas tardes",
+          "ko": "좋은 오후"
+        },
+        {
+          "es": "buenas noches",
+          "ko": "좋은 밤"
+        },
+        {
+          "es": "sí",
+          "ko": "네"
+        },
+        {
+          "es": "no",
+          "ko": "아니요"
+        },
+        {
+          "es": "por favor",
+          "ko": "제발"
+        },
+        {
+          "es": "gracias",
+          "ko": "감사합니다"
+        },
+        {
+          "es": "de nada",
+          "ko": "천만에요"
+        },
+        {
+          "es": "perdón",
+          "ko": "죄송합니다"
+        },
+        {
+          "es": "lo siento",
+          "ko": "미안합니다"
+        },
+        {
+          "es": "bienvenido",
+          "ko": "환영합니다"
+        },
+        {
+          "es": "hasta luego",
+          "ko": "나중에 봐요"
+        },
+        {
+          "es": "hasta mañana",
+          "ko": "내일 봐요"
+        },
+        {
+          "es": "¿cómo estás?",
+          "ko": "어떻게 지내?"
+        },
+        {
+          "es": "bien",
+          "ko": "좋아요"
+        },
+        {
+          "es": "mal",
+          "ko": "나빠요"
+        },
+        {
+          "es": "más o menos",
+          "ko": "그저 그래요"
+        },
+        {
+          "es": "mucho gusto",
+          "ko": "만나서 반갑습니다"
+        },
+        {
+          "es": "igualmente",
+          "ko": "저도요"
+        },
+        {
+          "es": "con permiso",
+          "ko": "실례합니다"
+        },
+        {
+          "es": "disculpe",
+          "ko": "실례지만"
+        },
+        {
+          "es": "salud",
+          "ko": "건강"
+        },
+        {
+          "es": "felicidades",
+          "ko": "축하합니다"
+        },
+        {
+          "es": "buena suerte",
+          "ko": "행운을 빌어요"
+        },
+        {
+          "es": "nos vemos",
+          "ko": "또 만나요"
+        },
+        {
+          "es": "cuídate",
+          "ko": "몸 조심해"
+        },
+        {
+          "es": "buen viaje",
+          "ko": "좋은 여행 되세요"
+        },
+        {
+          "es": "¡claro!",
+          "ko": "물론이죠!"
+        },
+        {
+          "es": "yo",
+          "ko": "나"
+        },
+        {
+          "es": "tú",
+          "ko": "너"
+        },
+        {
+          "es": "él",
+          "ko": "그"
+        },
+        {
+          "es": "ella",
+          "ko": "그녀"
+        },
+        {
+          "es": "nosotros",
+          "ko": "우리"
+        },
+        {
+          "es": "ellos",
+          "ko": "그들"
+        },
+        {
+          "es": "usted",
+          "ko": "당신"
+        },
+        {
+          "es": "ustedes",
+          "ko": "당신들"
+        },
+        {
+          "es": "esto",
+          "ko": "이것"
+        },
+        {
+          "es": "eso",
+          "ko": "그것"
+        },
+        {
+          "es": "aquello",
+          "ko": "저것"
+        },
+        {
+          "es": "aquí",
+          "ko": "여기"
+        },
+        {
+          "es": "ahí",
+          "ko": "거기"
+        },
+        {
+          "es": "allí",
+          "ko": "저기"
+        },
+        {
+          "es": "mi",
+          "ko": "나의"
+        },
+        {
+          "es": "uno",
+          "ko": "일"
+        },
+        {
+          "es": "dos",
+          "ko": "이"
+        },
+        {
+          "es": "tres",
+          "ko": "삼"
+        },
+        {
+          "es": "cuatro",
+          "ko": "사"
+        },
+        {
+          "es": "cinco",
+          "ko": "오"
+        },
+        {
+          "es": "seis",
+          "ko": "육"
+        },
+        {
+          "es": "siete",
+          "ko": "칠"
+        },
+        {
+          "es": "ocho",
+          "ko": "팔"
+        },
+        {
+          "es": "nueve",
+          "ko": "구"
+        },
+        {
+          "es": "diez",
+          "ko": "십"
+        },
+        {
+          "es": "once",
+          "ko": "십일"
+        },
+        {
+          "es": "doce",
+          "ko": "십이"
+        },
+        {
+          "es": "trece",
+          "ko": "십삼"
+        },
+        {
+          "es": "catorce",
+          "ko": "십사"
+        },
+        {
+          "es": "quince",
+          "ko": "십오"
+        },
+        {
+          "es": "dieciséis",
+          "ko": "십육"
+        },
+        {
+          "es": "diecisiete",
+          "ko": "십칠"
+        },
+        {
+          "es": "dieciocho",
+          "ko": "십팔"
+        },
+        {
+          "es": "diecinueve",
+          "ko": "십구"
+        },
+        {
+          "es": "veinte",
+          "ko": "이십"
+        },
+        {
+          "es": "veintiuno",
+          "ko": "이십일"
+        },
+        {
+          "es": "treinta",
+          "ko": "삼십"
+        },
+        {
+          "es": "cuarenta",
+          "ko": "사십"
+        },
+        {
+          "es": "cincuenta",
+          "ko": "오십"
+        },
+        {
+          "es": "sesenta",
+          "ko": "육십"
+        },
+        {
+          "es": "setenta",
+          "ko": "칠십"
+        },
+        {
+          "es": "ochenta",
+          "ko": "팔십"
+        },
+        {
+          "es": "noventa",
+          "ko": "구십"
+        },
+        {
+          "es": "cien",
+          "ko": "백"
+        },
+        {
+          "es": "mil",
+          "ko": "천"
+        },
+        {
+          "es": "primero",
+          "ko": "첫 번째"
+        },
+        {
+          "es": "segundo",
+          "ko": "두 번째"
+        },
+        {
+          "es": "tercero",
+          "ko": "세 번째"
+        },
+        {
+          "es": "cuarto",
+          "ko": "네 번째"
+        },
+        {
+          "es": "quinto",
+          "ko": "다섯 번째"
+        },
+        {
+          "es": "sexto",
+          "ko": "여섯 번째"
+        },
+        {
+          "es": "séptimo",
+          "ko": "일곱 번째"
+        },
+        {
+          "es": "octavo",
+          "ko": "여덟 번째"
+        },
+        {
+          "es": "noveno",
+          "ko": "아홉 번째"
+        },
+        {
+          "es": "décimo",
+          "ko": "열 번째"
+        },
+        {
+          "es": "último",
+          "ko": "마지막"
+        },
+        {
+          "es": "medio",
+          "ko": "반"
+        },
+        {
+          "es": "doble",
+          "ko": "두 배"
+        },
+        {
+          "es": "par",
+          "ko": "짝수"
+        },
+        {
+          "es": "impar",
+          "ko": "홀수"
+        },
+        {
+          "es": "rojo",
+          "ko": "빨간색"
+        },
+        {
+          "es": "azul",
+          "ko": "파란색"
+        },
+        {
+          "es": "verde",
+          "ko": "초록색"
+        },
+        {
+          "es": "amarillo",
+          "ko": "노란색"
+        },
+        {
+          "es": "negro",
+          "ko": "검은색"
+        },
+        {
+          "es": "blanco",
+          "ko": "흰색"
+        },
+        {
+          "es": "gris",
+          "ko": "회색"
+        },
+        {
+          "es": "marrón",
+          "ko": "갈색"
+        },
+        {
+          "es": "naranja",
+          "ko": "주황색"
+        },
+        {
+          "es": "rosa",
+          "ko": "분홍색"
+        }
       ]
     },
     {
       "stage": 12,
+      "category": "에피소드 2 · 세트 1",
+      "type": "learning",
       "words": [
-        { "es": "¿qué?", "ko": "무엇?" },
-        { "es": "¿quién?", "ko": "누구?" },
-        { "es": "¿dónde?", "ko": "어디?" },
-        { "es": "¿cuándo?", "ko": "언제?" },
-        { "es": "¿por qué?", "ko": "왜?" },
-        { "es": "¿cómo?", "ko": "어떻게?" },
-        { "es": "¿cuánto?", "ko": "얼마?" },
-        { "es": "¿cuántos?", "ko": "몇 개?" },
-        { "es": "¿cuál?", "ko": "어느 것?" },
-        { "es": "¿de quién?", "ko": "누구의?" },
-        { "es": "¿adónde?", "ko": "어디로?" },
-        { "es": "¿de dónde?", "ko": "어디에서?" },
-        { "es": "¿para qué?", "ko": "무엇을 위해?" },
-        { "es": "¿verdad?", "ko": "그렇지?" },
-        { "es": "¿cierto?", "ko": "맞지?" }
+        {
+          "es": "morado",
+          "ko": "보라색"
+        },
+        {
+          "es": "celeste",
+          "ko": "하늘색"
+        },
+        {
+          "es": "dorado",
+          "ko": "금색"
+        },
+        {
+          "es": "plateado",
+          "ko": "은색"
+        },
+        {
+          "es": "oscuro",
+          "ko": "어두운"
+        },
+        {
+          "es": "grande",
+          "ko": "큰"
+        },
+        {
+          "es": "pequeño",
+          "ko": "작은"
+        },
+        {
+          "es": "largo",
+          "ko": "긴"
+        },
+        {
+          "es": "corto",
+          "ko": "짧은"
+        },
+        {
+          "es": "alto",
+          "ko": "높은"
+        }
       ]
     },
     {
       "stage": 13,
+      "category": "에피소드 2 · 세트 2",
+      "type": "learning",
       "words": [
-        { "es": "en", "ko": "~에" },
-        { "es": "de", "ko": "~의" },
-        { "es": "a", "ko": "~으로" },
-        { "es": "con", "ko": "~와 함께" },
-        { "es": "sin", "ko": "~없이" },
-        { "es": "para", "ko": "~을 위해" },
-        { "es": "por", "ko": "~때문에" },
-        { "es": "sobre", "ko": "~위에" },
-        { "es": "entre", "ko": "~사이에" },
-        { "es": "hacia", "ko": "~쪽으로" },
-        { "es": "delante de", "ko": "~앞에" },
-        { "es": "detrás de", "ko": "~뒤에" },
-        { "es": "cerca de", "ko": "~근처에" },
-        { "es": "lejos de", "ko": "~에서 멀리" },
-        { "es": "dentro de", "ko": "~안에" }
+        {
+          "es": "bajo",
+          "ko": "낮은"
+        },
+        {
+          "es": "nuevo",
+          "ko": "새로운"
+        },
+        {
+          "es": "viejo",
+          "ko": "오래된"
+        },
+        {
+          "es": "joven",
+          "ko": "젊은"
+        },
+        {
+          "es": "bueno",
+          "ko": "좋은"
+        },
+        {
+          "es": "malo",
+          "ko": "나쁜"
+        },
+        {
+          "es": "bonito",
+          "ko": "예쁜"
+        },
+        {
+          "es": "feo",
+          "ko": "못생긴"
+        },
+        {
+          "es": "fácil",
+          "ko": "쉬운"
+        },
+        {
+          "es": "difícil",
+          "ko": "어려운"
+        }
       ]
     },
     {
       "stage": 14,
+      "category": "에피소드 2 · 세트 3",
+      "type": "learning",
       "words": [
-        { "es": "y", "ko": "그리고" },
-        { "es": "o", "ko": "또는" },
-        { "es": "pero", "ko": "하지만" },
-        { "es": "porque", "ko": "왜냐하면" },
-        { "es": "si", "ko": "만약" },
-        { "es": "cuando", "ko": "~할 때" },
-        { "es": "mientras", "ko": "~하는 동안" },
-        { "es": "aunque", "ko": "비록 ~이지만" },
-        { "es": "también", "ko": "또한" },
-        { "es": "tampoco", "ko": "~도 아니다" },
-        { "es": "sin embargo", "ko": "그러나" },
-        { "es": "además", "ko": "게다가" },
-        { "es": "entonces", "ko": "그러면" },
-        { "es": "ni", "ko": "~도 ~도 아닌" },
-        { "es": "pues", "ko": "그러니까" }
+        {
+          "es": "caliente",
+          "ko": "뜨거운"
+        },
+        {
+          "es": "frío",
+          "ko": "차가운"
+        },
+        {
+          "es": "rápido",
+          "ko": "빠른"
+        },
+        {
+          "es": "lento",
+          "ko": "느린"
+        },
+        {
+          "es": "redondo",
+          "ko": "둥근"
+        },
+        {
+          "es": "cuadrado",
+          "ko": "네모난"
+        },
+        {
+          "es": "ancho",
+          "ko": "넓은"
+        },
+        {
+          "es": "estrecho",
+          "ko": "좁은"
+        },
+        {
+          "es": "pesado",
+          "ko": "무거운"
+        },
+        {
+          "es": "ligero",
+          "ko": "가벼운"
+        }
       ]
     },
     {
       "stage": 15,
+      "category": "에피소드 2 · 세트 4",
+      "type": "learning",
       "words": [
-        { "es": "lunes", "ko": "월요일" },
-        { "es": "martes", "ko": "화요일" },
-        { "es": "miércoles", "ko": "수요일" },
-        { "es": "jueves", "ko": "목요일" },
-        { "es": "viernes", "ko": "금요일" },
-        { "es": "sábado", "ko": "토요일" },
-        { "es": "domingo", "ko": "일요일" },
-        { "es": "fin de semana", "ko": "주말" },
-        { "es": "día laborable", "ko": "평일" },
-        { "es": "hoy", "ko": "오늘" },
-        { "es": "mañana", "ko": "내일" },
-        { "es": "ayer", "ko": "어제" },
-        { "es": "anteayer", "ko": "그저께" },
-        { "es": "pasado mañana", "ko": "모레" },
-        { "es": "esta semana", "ko": "이번 주" }
+        {
+          "es": "duro",
+          "ko": "단단한"
+        },
+        {
+          "es": "suave",
+          "ko": "부드러운"
+        },
+        {
+          "es": "lleno",
+          "ko": "가득 찬"
+        },
+        {
+          "es": "vacío",
+          "ko": "빈"
+        },
+        {
+          "es": "limpio",
+          "ko": "깨끗한"
+        },
+        {
+          "es": "ser",
+          "ko": "~이다"
+        },
+        {
+          "es": "estar",
+          "ko": "~에 있다"
+        },
+        {
+          "es": "tener",
+          "ko": "가지다"
+        },
+        {
+          "es": "hacer",
+          "ko": "하다"
+        },
+        {
+          "es": "ir",
+          "ko": "가다"
+        }
       ]
     },
     {
       "stage": 16,
+      "category": "에피소드 2 · 세트 5",
+      "type": "learning",
       "words": [
-        { "es": "enero", "ko": "1월" },
-        { "es": "febrero", "ko": "2월" },
-        { "es": "marzo", "ko": "3월" },
-        { "es": "abril", "ko": "4월" },
-        { "es": "mayo", "ko": "5월" },
-        { "es": "junio", "ko": "6월" },
-        { "es": "julio", "ko": "7월" },
-        { "es": "agosto", "ko": "8월" },
-        { "es": "septiembre", "ko": "9월" },
-        { "es": "octubre", "ko": "10월" },
-        { "es": "noviembre", "ko": "11월" },
-        { "es": "diciembre", "ko": "12월" },
-        { "es": "primavera", "ko": "봄" },
-        { "es": "verano", "ko": "여름" },
-        { "es": "otoño", "ko": "가을" }
+        {
+          "es": "venir",
+          "ko": "오다"
+        },
+        {
+          "es": "querer",
+          "ko": "원하다"
+        },
+        {
+          "es": "poder",
+          "ko": "할 수 있다"
+        },
+        {
+          "es": "saber",
+          "ko": "알다"
+        },
+        {
+          "es": "hablar",
+          "ko": "말하다"
+        },
+        {
+          "es": "comer",
+          "ko": "먹다"
+        },
+        {
+          "es": "beber",
+          "ko": "마시다"
+        },
+        {
+          "es": "dormir",
+          "ko": "자다"
+        },
+        {
+          "es": "ver",
+          "ko": "보다"
+        },
+        {
+          "es": "dar",
+          "ko": "주다"
+        }
       ]
     },
     {
       "stage": 17,
+      "category": "에피소드 2 · 세트 6",
+      "type": "learning",
       "words": [
-        { "es": "padre", "ko": "아버지" },
-        { "es": "madre", "ko": "어머니" },
-        { "es": "hijo", "ko": "아들" },
-        { "es": "hija", "ko": "딸" },
-        { "es": "hermano", "ko": "형제" },
-        { "es": "hermana", "ko": "자매" },
-        { "es": "abuelo", "ko": "할아버지" },
-        { "es": "abuela", "ko": "할머니" },
-        { "es": "tío", "ko": "삼촌" },
-        { "es": "tía", "ko": "이모" },
-        { "es": "primo", "ko": "사촌" },
-        { "es": "esposo", "ko": "남편" },
-        { "es": "esposa", "ko": "아내" },
-        { "es": "familia", "ko": "가족" },
-        { "es": "bebé", "ko": "아기" }
+        {
+          "es": "poner",
+          "ko": "놓다"
+        },
+        {
+          "es": "decir",
+          "ko": "말하다"
+        },
+        {
+          "es": "salir",
+          "ko": "나가다"
+        },
+        {
+          "es": "llevar",
+          "ko": "가져가다"
+        },
+        {
+          "es": "llamar",
+          "ko": "부르다"
+        },
+        {
+          "es": "pasar",
+          "ko": "지나가다"
+        },
+        {
+          "es": "seguir",
+          "ko": "따르다"
+        },
+        {
+          "es": "creer",
+          "ko": "믿다"
+        },
+        {
+          "es": "encontrar",
+          "ko": "찾다"
+        },
+        {
+          "es": "pensar",
+          "ko": "생각하다"
+        }
       ]
     },
     {
       "stage": 18,
+      "category": "에피소드 2 · 세트 7",
+      "type": "learning",
       "words": [
-        { "es": "cabeza", "ko": "머리" },
-        { "es": "ojo", "ko": "눈" },
-        { "es": "nariz", "ko": "코" },
-        { "es": "boca", "ko": "입" },
-        { "es": "oreja", "ko": "귀" },
-        { "es": "mano", "ko": "손" },
-        { "es": "pie", "ko": "발" },
-        { "es": "brazo", "ko": "팔" },
-        { "es": "pierna", "ko": "다리" },
-        { "es": "dedo", "ko": "손가락" },
-        { "es": "corazón", "ko": "심장" },
-        { "es": "estómago", "ko": "위" },
-        { "es": "espalda", "ko": "등" },
-        { "es": "cuello", "ko": "목" },
-        { "es": "diente", "ko": "이빨" }
+        {
+          "es": "sentir",
+          "ko": "느끼다"
+        },
+        {
+          "es": "vivir",
+          "ko": "살다"
+        },
+        {
+          "es": "morir",
+          "ko": "죽다"
+        },
+        {
+          "es": "nacer",
+          "ko": "태어나다"
+        },
+        {
+          "es": "trabajar",
+          "ko": "일하다"
+        },
+        {
+          "es": "¿qué?",
+          "ko": "무엇?"
+        },
+        {
+          "es": "¿quién?",
+          "ko": "누구?"
+        },
+        {
+          "es": "¿dónde?",
+          "ko": "어디?"
+        },
+        {
+          "es": "¿cuándo?",
+          "ko": "언제?"
+        },
+        {
+          "es": "¿por qué?",
+          "ko": "왜?"
+        }
       ]
     },
     {
       "stage": 19,
+      "category": "에피소드 2 · 세트 8",
+      "type": "learning",
       "words": [
-        { "es": "¿qué hora es?", "ko": "몇 시예요?" },
-        { "es": "no entiendo", "ko": "이해 못 해요" },
-        { "es": "no sé", "ko": "몰라요" },
-        { "es": "tengo hambre", "ko": "배고파요" },
-        { "es": "tengo sed", "ko": "목말라요" },
-        { "es": "estoy cansado", "ko": "피곤해요" },
-        { "es": "tengo sueño", "ko": "졸려요" },
-        { "es": "¡ayuda!", "ko": "도와주세요!" },
-        { "es": "me llamo", "ko": "제 이름은" },
-        { "es": "¿cuánto cuesta?", "ko": "얼마예요?" },
-        { "es": "está bien", "ko": "괜찮아요" },
-        { "es": "no importa", "ko": "상관없어요" },
-        { "es": "un momento", "ko": "잠깐만요" },
-        { "es": "¡vamos!", "ko": "가자!" },
-        { "es": "otra vez", "ko": "다시 한번" }
+        {
+          "es": "¿cómo?",
+          "ko": "어떻게?"
+        },
+        {
+          "es": "¿cuánto?",
+          "ko": "얼마?"
+        },
+        {
+          "es": "¿cuántos?",
+          "ko": "몇 개?"
+        },
+        {
+          "es": "¿cuál?",
+          "ko": "어느 것?"
+        },
+        {
+          "es": "¿de quién?",
+          "ko": "누구의?"
+        },
+        {
+          "es": "¿adónde?",
+          "ko": "어디로?"
+        },
+        {
+          "es": "¿de dónde?",
+          "ko": "어디에서?"
+        },
+        {
+          "es": "¿para qué?",
+          "ko": "무엇을 위해?"
+        },
+        {
+          "es": "¿verdad?",
+          "ko": "그렇지?"
+        },
+        {
+          "es": "¿cierto?",
+          "ko": "맞지?"
+        }
       ]
     },
     {
       "stage": 20,
+      "category": "에피소드 2 · 세트 9",
+      "type": "learning",
       "words": [
-        { "es": "me gusta", "ko": "좋아해요" },
-        { "es": "no me gusta", "ko": "싫어해요" },
-        { "es": "creo que sí", "ko": "그런 것 같아요" },
-        { "es": "creo que no", "ko": "아닌 것 같아요" },
-        { "es": "¡qué bonito!", "ko": "정말 예쁘다!" },
-        { "es": "¡qué rico!", "ko": "정말 맛있다!" },
-        { "es": "con mucho gusto", "ko": "기꺼이요" },
-        { "es": "¡buen provecho!", "ko": "맛있게 드세요!" },
-        { "es": "¿me puede ayudar?", "ko": "도와줄 수 있나요?" },
-        { "es": "¿dónde está el baño?", "ko": "화장실이 어디예요?" },
-        { "es": "mucho", "ko": "많이" },
-        { "es": "poco", "ko": "조금" },
-        { "es": "todo", "ko": "전부" },
-        { "es": "nada", "ko": "아무것도" },
-        { "es": "siempre", "ko": "항상" }
+        {
+          "es": "en",
+          "ko": "~에"
+        },
+        {
+          "es": "de",
+          "ko": "~의"
+        },
+        {
+          "es": "a",
+          "ko": "~으로"
+        },
+        {
+          "es": "con",
+          "ko": "~와 함께"
+        },
+        {
+          "es": "sin",
+          "ko": "~없이"
+        },
+        {
+          "es": "para",
+          "ko": "~을 위해"
+        },
+        {
+          "es": "por",
+          "ko": "~때문에"
+        },
+        {
+          "es": "sobre",
+          "ko": "~위에"
+        },
+        {
+          "es": "entre",
+          "ko": "~사이에"
+        },
+        {
+          "es": "hacia",
+          "ko": "~쪽으로"
+        }
+      ]
+    },
+    {
+      "stage": 21,
+      "category": "에피소드 2 · 세트 10",
+      "type": "learning",
+      "words": [
+        {
+          "es": "delante de",
+          "ko": "~앞에"
+        },
+        {
+          "es": "detrás de",
+          "ko": "~뒤에"
+        },
+        {
+          "es": "cerca de",
+          "ko": "~근처에"
+        },
+        {
+          "es": "lejos de",
+          "ko": "~에서 멀리"
+        },
+        {
+          "es": "dentro de",
+          "ko": "~안에"
+        },
+        {
+          "es": "y",
+          "ko": "그리고"
+        },
+        {
+          "es": "o",
+          "ko": "또는"
+        },
+        {
+          "es": "pero",
+          "ko": "하지만"
+        },
+        {
+          "es": "porque",
+          "ko": "왜냐하면"
+        },
+        {
+          "es": "si",
+          "ko": "만약"
+        }
+      ]
+    },
+    {
+      "stage": 22,
+      "category": "에피소드 2 보스 · 누적 복습",
+      "type": "boss",
+      "words": [
+        {
+          "es": "morado",
+          "ko": "보라색"
+        },
+        {
+          "es": "celeste",
+          "ko": "하늘색"
+        },
+        {
+          "es": "dorado",
+          "ko": "금색"
+        },
+        {
+          "es": "plateado",
+          "ko": "은색"
+        },
+        {
+          "es": "oscuro",
+          "ko": "어두운"
+        },
+        {
+          "es": "grande",
+          "ko": "큰"
+        },
+        {
+          "es": "pequeño",
+          "ko": "작은"
+        },
+        {
+          "es": "largo",
+          "ko": "긴"
+        },
+        {
+          "es": "corto",
+          "ko": "짧은"
+        },
+        {
+          "es": "alto",
+          "ko": "높은"
+        },
+        {
+          "es": "bajo",
+          "ko": "낮은"
+        },
+        {
+          "es": "nuevo",
+          "ko": "새로운"
+        },
+        {
+          "es": "viejo",
+          "ko": "오래된"
+        },
+        {
+          "es": "joven",
+          "ko": "젊은"
+        },
+        {
+          "es": "bueno",
+          "ko": "좋은"
+        },
+        {
+          "es": "malo",
+          "ko": "나쁜"
+        },
+        {
+          "es": "bonito",
+          "ko": "예쁜"
+        },
+        {
+          "es": "feo",
+          "ko": "못생긴"
+        },
+        {
+          "es": "fácil",
+          "ko": "쉬운"
+        },
+        {
+          "es": "difícil",
+          "ko": "어려운"
+        },
+        {
+          "es": "caliente",
+          "ko": "뜨거운"
+        },
+        {
+          "es": "frío",
+          "ko": "차가운"
+        },
+        {
+          "es": "rápido",
+          "ko": "빠른"
+        },
+        {
+          "es": "lento",
+          "ko": "느린"
+        },
+        {
+          "es": "redondo",
+          "ko": "둥근"
+        },
+        {
+          "es": "cuadrado",
+          "ko": "네모난"
+        },
+        {
+          "es": "ancho",
+          "ko": "넓은"
+        },
+        {
+          "es": "estrecho",
+          "ko": "좁은"
+        },
+        {
+          "es": "pesado",
+          "ko": "무거운"
+        },
+        {
+          "es": "ligero",
+          "ko": "가벼운"
+        },
+        {
+          "es": "duro",
+          "ko": "단단한"
+        },
+        {
+          "es": "suave",
+          "ko": "부드러운"
+        },
+        {
+          "es": "lleno",
+          "ko": "가득 찬"
+        },
+        {
+          "es": "vacío",
+          "ko": "빈"
+        },
+        {
+          "es": "limpio",
+          "ko": "깨끗한"
+        },
+        {
+          "es": "ser",
+          "ko": "~이다"
+        },
+        {
+          "es": "estar",
+          "ko": "~에 있다"
+        },
+        {
+          "es": "tener",
+          "ko": "가지다"
+        },
+        {
+          "es": "hacer",
+          "ko": "하다"
+        },
+        {
+          "es": "ir",
+          "ko": "가다"
+        },
+        {
+          "es": "venir",
+          "ko": "오다"
+        },
+        {
+          "es": "querer",
+          "ko": "원하다"
+        },
+        {
+          "es": "poder",
+          "ko": "할 수 있다"
+        },
+        {
+          "es": "saber",
+          "ko": "알다"
+        },
+        {
+          "es": "hablar",
+          "ko": "말하다"
+        },
+        {
+          "es": "comer",
+          "ko": "먹다"
+        },
+        {
+          "es": "beber",
+          "ko": "마시다"
+        },
+        {
+          "es": "dormir",
+          "ko": "자다"
+        },
+        {
+          "es": "ver",
+          "ko": "보다"
+        },
+        {
+          "es": "dar",
+          "ko": "주다"
+        },
+        {
+          "es": "poner",
+          "ko": "놓다"
+        },
+        {
+          "es": "decir",
+          "ko": "말하다"
+        },
+        {
+          "es": "salir",
+          "ko": "나가다"
+        },
+        {
+          "es": "llevar",
+          "ko": "가져가다"
+        },
+        {
+          "es": "llamar",
+          "ko": "부르다"
+        },
+        {
+          "es": "pasar",
+          "ko": "지나가다"
+        },
+        {
+          "es": "seguir",
+          "ko": "따르다"
+        },
+        {
+          "es": "creer",
+          "ko": "믿다"
+        },
+        {
+          "es": "encontrar",
+          "ko": "찾다"
+        },
+        {
+          "es": "pensar",
+          "ko": "생각하다"
+        },
+        {
+          "es": "sentir",
+          "ko": "느끼다"
+        },
+        {
+          "es": "vivir",
+          "ko": "살다"
+        },
+        {
+          "es": "morir",
+          "ko": "죽다"
+        },
+        {
+          "es": "nacer",
+          "ko": "태어나다"
+        },
+        {
+          "es": "trabajar",
+          "ko": "일하다"
+        },
+        {
+          "es": "¿qué?",
+          "ko": "무엇?"
+        },
+        {
+          "es": "¿quién?",
+          "ko": "누구?"
+        },
+        {
+          "es": "¿dónde?",
+          "ko": "어디?"
+        },
+        {
+          "es": "¿cuándo?",
+          "ko": "언제?"
+        },
+        {
+          "es": "¿por qué?",
+          "ko": "왜?"
+        },
+        {
+          "es": "¿cómo?",
+          "ko": "어떻게?"
+        },
+        {
+          "es": "¿cuánto?",
+          "ko": "얼마?"
+        },
+        {
+          "es": "¿cuántos?",
+          "ko": "몇 개?"
+        },
+        {
+          "es": "¿cuál?",
+          "ko": "어느 것?"
+        },
+        {
+          "es": "¿de quién?",
+          "ko": "누구의?"
+        },
+        {
+          "es": "¿adónde?",
+          "ko": "어디로?"
+        },
+        {
+          "es": "¿de dónde?",
+          "ko": "어디에서?"
+        },
+        {
+          "es": "¿para qué?",
+          "ko": "무엇을 위해?"
+        },
+        {
+          "es": "¿verdad?",
+          "ko": "그렇지?"
+        },
+        {
+          "es": "¿cierto?",
+          "ko": "맞지?"
+        },
+        {
+          "es": "en",
+          "ko": "~에"
+        },
+        {
+          "es": "de",
+          "ko": "~의"
+        },
+        {
+          "es": "a",
+          "ko": "~으로"
+        },
+        {
+          "es": "con",
+          "ko": "~와 함께"
+        },
+        {
+          "es": "sin",
+          "ko": "~없이"
+        },
+        {
+          "es": "para",
+          "ko": "~을 위해"
+        },
+        {
+          "es": "por",
+          "ko": "~때문에"
+        },
+        {
+          "es": "sobre",
+          "ko": "~위에"
+        },
+        {
+          "es": "entre",
+          "ko": "~사이에"
+        },
+        {
+          "es": "hacia",
+          "ko": "~쪽으로"
+        },
+        {
+          "es": "delante de",
+          "ko": "~앞에"
+        },
+        {
+          "es": "detrás de",
+          "ko": "~뒤에"
+        },
+        {
+          "es": "cerca de",
+          "ko": "~근처에"
+        },
+        {
+          "es": "lejos de",
+          "ko": "~에서 멀리"
+        },
+        {
+          "es": "dentro de",
+          "ko": "~안에"
+        },
+        {
+          "es": "y",
+          "ko": "그리고"
+        },
+        {
+          "es": "o",
+          "ko": "또는"
+        },
+        {
+          "es": "pero",
+          "ko": "하지만"
+        },
+        {
+          "es": "porque",
+          "ko": "왜냐하면"
+        },
+        {
+          "es": "si",
+          "ko": "만약"
+        }
+      ]
+    },
+    {
+      "stage": 23,
+      "category": "에피소드 3 · 세트 1",
+      "type": "learning",
+      "words": [
+        {
+          "es": "cuando",
+          "ko": "~할 때"
+        },
+        {
+          "es": "mientras",
+          "ko": "~하는 동안"
+        },
+        {
+          "es": "aunque",
+          "ko": "비록 ~이지만"
+        },
+        {
+          "es": "también",
+          "ko": "또한"
+        },
+        {
+          "es": "tampoco",
+          "ko": "~도 아니다"
+        },
+        {
+          "es": "sin embargo",
+          "ko": "그러나"
+        },
+        {
+          "es": "además",
+          "ko": "게다가"
+        },
+        {
+          "es": "entonces",
+          "ko": "그러면"
+        },
+        {
+          "es": "ni",
+          "ko": "~도 ~도 아닌"
+        },
+        {
+          "es": "pues",
+          "ko": "그러니까"
+        }
+      ]
+    },
+    {
+      "stage": 24,
+      "category": "에피소드 3 · 세트 2",
+      "type": "learning",
+      "words": [
+        {
+          "es": "lunes",
+          "ko": "월요일"
+        },
+        {
+          "es": "martes",
+          "ko": "화요일"
+        },
+        {
+          "es": "miércoles",
+          "ko": "수요일"
+        },
+        {
+          "es": "jueves",
+          "ko": "목요일"
+        },
+        {
+          "es": "viernes",
+          "ko": "금요일"
+        },
+        {
+          "es": "sábado",
+          "ko": "토요일"
+        },
+        {
+          "es": "domingo",
+          "ko": "일요일"
+        },
+        {
+          "es": "fin de semana",
+          "ko": "주말"
+        },
+        {
+          "es": "día laborable",
+          "ko": "평일"
+        },
+        {
+          "es": "hoy",
+          "ko": "오늘"
+        }
+      ]
+    },
+    {
+      "stage": 25,
+      "category": "에피소드 3 · 세트 3",
+      "type": "learning",
+      "words": [
+        {
+          "es": "mañana",
+          "ko": "내일"
+        },
+        {
+          "es": "ayer",
+          "ko": "어제"
+        },
+        {
+          "es": "anteayer",
+          "ko": "그저께"
+        },
+        {
+          "es": "pasado mañana",
+          "ko": "모레"
+        },
+        {
+          "es": "esta semana",
+          "ko": "이번 주"
+        },
+        {
+          "es": "enero",
+          "ko": "1월"
+        },
+        {
+          "es": "febrero",
+          "ko": "2월"
+        },
+        {
+          "es": "marzo",
+          "ko": "3월"
+        },
+        {
+          "es": "abril",
+          "ko": "4월"
+        },
+        {
+          "es": "mayo",
+          "ko": "5월"
+        }
+      ]
+    },
+    {
+      "stage": 26,
+      "category": "에피소드 3 · 세트 4",
+      "type": "learning",
+      "words": [
+        {
+          "es": "junio",
+          "ko": "6월"
+        },
+        {
+          "es": "julio",
+          "ko": "7월"
+        },
+        {
+          "es": "agosto",
+          "ko": "8월"
+        },
+        {
+          "es": "septiembre",
+          "ko": "9월"
+        },
+        {
+          "es": "octubre",
+          "ko": "10월"
+        },
+        {
+          "es": "noviembre",
+          "ko": "11월"
+        },
+        {
+          "es": "diciembre",
+          "ko": "12월"
+        },
+        {
+          "es": "primavera",
+          "ko": "봄"
+        },
+        {
+          "es": "verano",
+          "ko": "여름"
+        },
+        {
+          "es": "otoño",
+          "ko": "가을"
+        }
+      ]
+    },
+    {
+      "stage": 27,
+      "category": "에피소드 3 · 세트 5",
+      "type": "learning",
+      "words": [
+        {
+          "es": "padre",
+          "ko": "아버지"
+        },
+        {
+          "es": "madre",
+          "ko": "어머니"
+        },
+        {
+          "es": "hijo",
+          "ko": "아들"
+        },
+        {
+          "es": "hija",
+          "ko": "딸"
+        },
+        {
+          "es": "hermano",
+          "ko": "형제"
+        },
+        {
+          "es": "hermana",
+          "ko": "자매"
+        },
+        {
+          "es": "abuelo",
+          "ko": "할아버지"
+        },
+        {
+          "es": "abuela",
+          "ko": "할머니"
+        },
+        {
+          "es": "tío",
+          "ko": "삼촌"
+        },
+        {
+          "es": "tía",
+          "ko": "이모"
+        }
+      ]
+    },
+    {
+      "stage": 28,
+      "category": "에피소드 3 · 세트 6",
+      "type": "learning",
+      "words": [
+        {
+          "es": "primo",
+          "ko": "사촌"
+        },
+        {
+          "es": "esposo",
+          "ko": "남편"
+        },
+        {
+          "es": "esposa",
+          "ko": "아내"
+        },
+        {
+          "es": "familia",
+          "ko": "가족"
+        },
+        {
+          "es": "bebé",
+          "ko": "아기"
+        },
+        {
+          "es": "cabeza",
+          "ko": "머리"
+        },
+        {
+          "es": "ojo",
+          "ko": "눈"
+        },
+        {
+          "es": "nariz",
+          "ko": "코"
+        },
+        {
+          "es": "boca",
+          "ko": "입"
+        },
+        {
+          "es": "oreja",
+          "ko": "귀"
+        }
+      ]
+    },
+    {
+      "stage": 29,
+      "category": "에피소드 3 · 세트 7",
+      "type": "learning",
+      "words": [
+        {
+          "es": "mano",
+          "ko": "손"
+        },
+        {
+          "es": "pie",
+          "ko": "발"
+        },
+        {
+          "es": "brazo",
+          "ko": "팔"
+        },
+        {
+          "es": "pierna",
+          "ko": "다리"
+        },
+        {
+          "es": "dedo",
+          "ko": "손가락"
+        },
+        {
+          "es": "corazón",
+          "ko": "심장"
+        },
+        {
+          "es": "estómago",
+          "ko": "위"
+        },
+        {
+          "es": "espalda",
+          "ko": "등"
+        },
+        {
+          "es": "cuello",
+          "ko": "목"
+        },
+        {
+          "es": "diente",
+          "ko": "이빨"
+        }
+      ]
+    },
+    {
+      "stage": 30,
+      "category": "에피소드 3 · 세트 8",
+      "type": "learning",
+      "words": [
+        {
+          "es": "¿qué hora es?",
+          "ko": "몇 시예요?"
+        },
+        {
+          "es": "no entiendo",
+          "ko": "이해 못 해요"
+        },
+        {
+          "es": "no sé",
+          "ko": "몰라요"
+        },
+        {
+          "es": "tengo hambre",
+          "ko": "배고파요"
+        },
+        {
+          "es": "tengo sed",
+          "ko": "목말라요"
+        },
+        {
+          "es": "estoy cansado",
+          "ko": "피곤해요"
+        },
+        {
+          "es": "tengo sueño",
+          "ko": "졸려요"
+        },
+        {
+          "es": "¡ayuda!",
+          "ko": "도와주세요!"
+        },
+        {
+          "es": "me llamo",
+          "ko": "제 이름은"
+        },
+        {
+          "es": "¿cuánto cuesta?",
+          "ko": "얼마예요?"
+        }
+      ]
+    },
+    {
+      "stage": 31,
+      "category": "에피소드 3 · 세트 9",
+      "type": "learning",
+      "words": [
+        {
+          "es": "está bien",
+          "ko": "괜찮아요"
+        },
+        {
+          "es": "no importa",
+          "ko": "상관없어요"
+        },
+        {
+          "es": "un momento",
+          "ko": "잠깐만요"
+        },
+        {
+          "es": "¡vamos!",
+          "ko": "가자!"
+        },
+        {
+          "es": "otra vez",
+          "ko": "다시 한번"
+        },
+        {
+          "es": "me gusta",
+          "ko": "좋아해요"
+        },
+        {
+          "es": "no me gusta",
+          "ko": "싫어해요"
+        },
+        {
+          "es": "creo que sí",
+          "ko": "그런 것 같아요"
+        },
+        {
+          "es": "creo que no",
+          "ko": "아닌 것 같아요"
+        },
+        {
+          "es": "¡qué bonito!",
+          "ko": "정말 예쁘다!"
+        }
+      ]
+    },
+    {
+      "stage": 32,
+      "category": "에피소드 3 · 세트 10",
+      "type": "learning",
+      "words": [
+        {
+          "es": "¡qué rico!",
+          "ko": "정말 맛있다!"
+        },
+        {
+          "es": "con mucho gusto",
+          "ko": "기꺼이요"
+        },
+        {
+          "es": "¡buen provecho!",
+          "ko": "맛있게 드세요!"
+        },
+        {
+          "es": "¿me puede ayudar?",
+          "ko": "도와줄 수 있나요?"
+        },
+        {
+          "es": "¿dónde está el baño?",
+          "ko": "화장실이 어디예요?"
+        },
+        {
+          "es": "mucho",
+          "ko": "많이"
+        },
+        {
+          "es": "poco",
+          "ko": "조금"
+        },
+        {
+          "es": "todo",
+          "ko": "전부"
+        },
+        {
+          "es": "nada",
+          "ko": "아무것도"
+        },
+        {
+          "es": "siempre",
+          "ko": "항상"
+        }
+      ]
+    },
+    {
+      "stage": 33,
+      "category": "에피소드 3 보스 · 누적 복습",
+      "type": "boss",
+      "words": [
+        {
+          "es": "cuando",
+          "ko": "~할 때"
+        },
+        {
+          "es": "mientras",
+          "ko": "~하는 동안"
+        },
+        {
+          "es": "aunque",
+          "ko": "비록 ~이지만"
+        },
+        {
+          "es": "también",
+          "ko": "또한"
+        },
+        {
+          "es": "tampoco",
+          "ko": "~도 아니다"
+        },
+        {
+          "es": "sin embargo",
+          "ko": "그러나"
+        },
+        {
+          "es": "además",
+          "ko": "게다가"
+        },
+        {
+          "es": "entonces",
+          "ko": "그러면"
+        },
+        {
+          "es": "ni",
+          "ko": "~도 ~도 아닌"
+        },
+        {
+          "es": "pues",
+          "ko": "그러니까"
+        },
+        {
+          "es": "lunes",
+          "ko": "월요일"
+        },
+        {
+          "es": "martes",
+          "ko": "화요일"
+        },
+        {
+          "es": "miércoles",
+          "ko": "수요일"
+        },
+        {
+          "es": "jueves",
+          "ko": "목요일"
+        },
+        {
+          "es": "viernes",
+          "ko": "금요일"
+        },
+        {
+          "es": "sábado",
+          "ko": "토요일"
+        },
+        {
+          "es": "domingo",
+          "ko": "일요일"
+        },
+        {
+          "es": "fin de semana",
+          "ko": "주말"
+        },
+        {
+          "es": "día laborable",
+          "ko": "평일"
+        },
+        {
+          "es": "hoy",
+          "ko": "오늘"
+        },
+        {
+          "es": "mañana",
+          "ko": "내일"
+        },
+        {
+          "es": "ayer",
+          "ko": "어제"
+        },
+        {
+          "es": "anteayer",
+          "ko": "그저께"
+        },
+        {
+          "es": "pasado mañana",
+          "ko": "모레"
+        },
+        {
+          "es": "esta semana",
+          "ko": "이번 주"
+        },
+        {
+          "es": "enero",
+          "ko": "1월"
+        },
+        {
+          "es": "febrero",
+          "ko": "2월"
+        },
+        {
+          "es": "marzo",
+          "ko": "3월"
+        },
+        {
+          "es": "abril",
+          "ko": "4월"
+        },
+        {
+          "es": "mayo",
+          "ko": "5월"
+        },
+        {
+          "es": "junio",
+          "ko": "6월"
+        },
+        {
+          "es": "julio",
+          "ko": "7월"
+        },
+        {
+          "es": "agosto",
+          "ko": "8월"
+        },
+        {
+          "es": "septiembre",
+          "ko": "9월"
+        },
+        {
+          "es": "octubre",
+          "ko": "10월"
+        },
+        {
+          "es": "noviembre",
+          "ko": "11월"
+        },
+        {
+          "es": "diciembre",
+          "ko": "12월"
+        },
+        {
+          "es": "primavera",
+          "ko": "봄"
+        },
+        {
+          "es": "verano",
+          "ko": "여름"
+        },
+        {
+          "es": "otoño",
+          "ko": "가을"
+        },
+        {
+          "es": "padre",
+          "ko": "아버지"
+        },
+        {
+          "es": "madre",
+          "ko": "어머니"
+        },
+        {
+          "es": "hijo",
+          "ko": "아들"
+        },
+        {
+          "es": "hija",
+          "ko": "딸"
+        },
+        {
+          "es": "hermano",
+          "ko": "형제"
+        },
+        {
+          "es": "hermana",
+          "ko": "자매"
+        },
+        {
+          "es": "abuelo",
+          "ko": "할아버지"
+        },
+        {
+          "es": "abuela",
+          "ko": "할머니"
+        },
+        {
+          "es": "tío",
+          "ko": "삼촌"
+        },
+        {
+          "es": "tía",
+          "ko": "이모"
+        },
+        {
+          "es": "primo",
+          "ko": "사촌"
+        },
+        {
+          "es": "esposo",
+          "ko": "남편"
+        },
+        {
+          "es": "esposa",
+          "ko": "아내"
+        },
+        {
+          "es": "familia",
+          "ko": "가족"
+        },
+        {
+          "es": "bebé",
+          "ko": "아기"
+        },
+        {
+          "es": "cabeza",
+          "ko": "머리"
+        },
+        {
+          "es": "ojo",
+          "ko": "눈"
+        },
+        {
+          "es": "nariz",
+          "ko": "코"
+        },
+        {
+          "es": "boca",
+          "ko": "입"
+        },
+        {
+          "es": "oreja",
+          "ko": "귀"
+        },
+        {
+          "es": "mano",
+          "ko": "손"
+        },
+        {
+          "es": "pie",
+          "ko": "발"
+        },
+        {
+          "es": "brazo",
+          "ko": "팔"
+        },
+        {
+          "es": "pierna",
+          "ko": "다리"
+        },
+        {
+          "es": "dedo",
+          "ko": "손가락"
+        },
+        {
+          "es": "corazón",
+          "ko": "심장"
+        },
+        {
+          "es": "estómago",
+          "ko": "위"
+        },
+        {
+          "es": "espalda",
+          "ko": "등"
+        },
+        {
+          "es": "cuello",
+          "ko": "목"
+        },
+        {
+          "es": "diente",
+          "ko": "이빨"
+        },
+        {
+          "es": "¿qué hora es?",
+          "ko": "몇 시예요?"
+        },
+        {
+          "es": "no entiendo",
+          "ko": "이해 못 해요"
+        },
+        {
+          "es": "no sé",
+          "ko": "몰라요"
+        },
+        {
+          "es": "tengo hambre",
+          "ko": "배고파요"
+        },
+        {
+          "es": "tengo sed",
+          "ko": "목말라요"
+        },
+        {
+          "es": "estoy cansado",
+          "ko": "피곤해요"
+        },
+        {
+          "es": "tengo sueño",
+          "ko": "졸려요"
+        },
+        {
+          "es": "¡ayuda!",
+          "ko": "도와주세요!"
+        },
+        {
+          "es": "me llamo",
+          "ko": "제 이름은"
+        },
+        {
+          "es": "¿cuánto cuesta?",
+          "ko": "얼마예요?"
+        },
+        {
+          "es": "está bien",
+          "ko": "괜찮아요"
+        },
+        {
+          "es": "no importa",
+          "ko": "상관없어요"
+        },
+        {
+          "es": "un momento",
+          "ko": "잠깐만요"
+        },
+        {
+          "es": "¡vamos!",
+          "ko": "가자!"
+        },
+        {
+          "es": "otra vez",
+          "ko": "다시 한번"
+        },
+        {
+          "es": "me gusta",
+          "ko": "좋아해요"
+        },
+        {
+          "es": "no me gusta",
+          "ko": "싫어해요"
+        },
+        {
+          "es": "creo que sí",
+          "ko": "그런 것 같아요"
+        },
+        {
+          "es": "creo que no",
+          "ko": "아닌 것 같아요"
+        },
+        {
+          "es": "¡qué bonito!",
+          "ko": "정말 예쁘다!"
+        },
+        {
+          "es": "¡qué rico!",
+          "ko": "정말 맛있다!"
+        },
+        {
+          "es": "con mucho gusto",
+          "ko": "기꺼이요"
+        },
+        {
+          "es": "¡buen provecho!",
+          "ko": "맛있게 드세요!"
+        },
+        {
+          "es": "¿me puede ayudar?",
+          "ko": "도와줄 수 있나요?"
+        },
+        {
+          "es": "¿dónde está el baño?",
+          "ko": "화장실이 어디예요?"
+        },
+        {
+          "es": "mucho",
+          "ko": "많이"
+        },
+        {
+          "es": "poco",
+          "ko": "조금"
+        },
+        {
+          "es": "todo",
+          "ko": "전부"
+        },
+        {
+          "es": "nada",
+          "ko": "아무것도"
+        },
+        {
+          "es": "siempre",
+          "ko": "항상"
+        }
       ]
     }
-  ]
+  ],
+  "episodeStructure": {
+    "episodes": 3,
+    "learningStagesPerEpisode": 10,
+    "bossStageInterval": 11,
+    "newWordsPerLearningStage": 10,
+    "newWordsPerEpisode": 100
+  }
 }

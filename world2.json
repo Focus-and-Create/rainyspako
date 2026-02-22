@@ -5,403 +5,2641 @@
   "stages": [
     {
       "stage": 1,
+      "category": "에피소드 1 · 세트 1",
+      "type": "learning",
       "words": [
-        { "es": "casa", "ko": "집" },
-        { "es": "hogar", "ko": "가정" },
-        { "es": "puerta", "ko": "문" },
-        { "es": "ventana", "ko": "창문" },
-        { "es": "techo", "ko": "지붕" },
-        { "es": "pared", "ko": "벽" },
-        { "es": "suelo", "ko": "바닥" },
-        { "es": "escalera", "ko": "계단" },
-        { "es": "jardín", "ko": "정원" },
-        { "es": "garaje", "ko": "차고" },
-        { "es": "balcón", "ko": "발코니" },
-        { "es": "terraza", "ko": "테라스" },
-        { "es": "cerca", "ko": "울타리" },
-        { "es": "buzón", "ko": "우편함" },
-        { "es": "timbre", "ko": "초인종" }
+        {
+          "es": "casa",
+          "ko": "집"
+        },
+        {
+          "es": "hogar",
+          "ko": "가정"
+        },
+        {
+          "es": "puerta",
+          "ko": "문"
+        },
+        {
+          "es": "ventana",
+          "ko": "창문"
+        },
+        {
+          "es": "techo",
+          "ko": "지붕"
+        },
+        {
+          "es": "pared",
+          "ko": "벽"
+        },
+        {
+          "es": "suelo",
+          "ko": "바닥"
+        },
+        {
+          "es": "escalera",
+          "ko": "계단"
+        },
+        {
+          "es": "jardín",
+          "ko": "정원"
+        },
+        {
+          "es": "garaje",
+          "ko": "차고"
+        }
       ]
     },
     {
       "stage": 2,
+      "category": "에피소드 1 · 세트 2",
+      "type": "learning",
       "words": [
-        { "es": "cocina", "ko": "부엌" },
-        { "es": "dormitorio", "ko": "침실" },
-        { "es": "baño", "ko": "화장실" },
-        { "es": "sala", "ko": "거실" },
-        { "es": "comedor", "ko": "식당" },
-        { "es": "pasillo", "ko": "복도" },
-        { "es": "sótano", "ko": "지하실" },
-        { "es": "ático", "ko": "다락방" },
-        { "es": "estudio", "ko": "서재" },
-        { "es": "lavadero", "ko": "세탁실" },
-        { "es": "despensa", "ko": "식료품 저장실" },
-        { "es": "entrada", "ko": "현관" },
-        { "es": "habitación", "ko": "방" },
-        { "es": "closet", "ko": "옷장" },
-        { "es": "patio", "ko": "마당" }
+        {
+          "es": "balcón",
+          "ko": "발코니"
+        },
+        {
+          "es": "terraza",
+          "ko": "테라스"
+        },
+        {
+          "es": "cerca",
+          "ko": "울타리"
+        },
+        {
+          "es": "buzón",
+          "ko": "우편함"
+        },
+        {
+          "es": "timbre",
+          "ko": "초인종"
+        },
+        {
+          "es": "cocina",
+          "ko": "부엌"
+        },
+        {
+          "es": "dormitorio",
+          "ko": "침실"
+        },
+        {
+          "es": "baño",
+          "ko": "화장실"
+        },
+        {
+          "es": "sala",
+          "ko": "거실"
+        },
+        {
+          "es": "comedor",
+          "ko": "식당"
+        }
       ]
     },
     {
       "stage": 3,
+      "category": "에피소드 1 · 세트 3",
+      "type": "learning",
       "words": [
-        { "es": "mesa", "ko": "탁자" },
-        { "es": "silla", "ko": "의자" },
-        { "es": "sofá", "ko": "소파" },
-        { "es": "cama", "ko": "침대" },
-        { "es": "estante", "ko": "선반" },
-        { "es": "escritorio", "ko": "책상" },
-        { "es": "armario", "ko": "장롱" },
-        { "es": "cajón", "ko": "서랍" },
-        { "es": "espejo", "ko": "거울" },
-        { "es": "alfombra", "ko": "카펫" },
-        { "es": "cortina", "ko": "커튼" },
-        { "es": "lámpara", "ko": "램프" },
-        { "es": "almohada", "ko": "베개" },
-        { "es": "manta", "ko": "담요" },
-        { "es": "colchón", "ko": "매트리스" }
+        {
+          "es": "pasillo",
+          "ko": "복도"
+        },
+        {
+          "es": "sótano",
+          "ko": "지하실"
+        },
+        {
+          "es": "ático",
+          "ko": "다락방"
+        },
+        {
+          "es": "estudio",
+          "ko": "서재"
+        },
+        {
+          "es": "lavadero",
+          "ko": "세탁실"
+        },
+        {
+          "es": "despensa",
+          "ko": "식료품 저장실"
+        },
+        {
+          "es": "entrada",
+          "ko": "현관"
+        },
+        {
+          "es": "habitación",
+          "ko": "방"
+        },
+        {
+          "es": "closet",
+          "ko": "옷장"
+        },
+        {
+          "es": "patio",
+          "ko": "마당"
+        }
       ]
     },
     {
       "stage": 4,
+      "category": "에피소드 1 · 세트 4",
+      "type": "learning",
       "words": [
-        { "es": "sartén", "ko": "프라이팬" },
-        { "es": "olla", "ko": "냄비" },
-        { "es": "cuchillo", "ko": "칼" },
-        { "es": "tenedor", "ko": "포크" },
-        { "es": "cuchara", "ko": "숟가락" },
-        { "es": "plato", "ko": "접시" },
-        { "es": "taza", "ko": "컵" },
-        { "es": "vaso", "ko": "유리잔" },
-        { "es": "nevera", "ko": "냉장고" },
-        { "es": "horno", "ko": "오븐" },
-        { "es": "microondas", "ko": "전자레인지" },
-        { "es": "cafetera", "ko": "커피포트" },
-        { "es": "tabla de cortar", "ko": "도마" },
-        { "es": "delantal", "ko": "앞치마" },
-        { "es": "servilleta", "ko": "냅킨" }
+        {
+          "es": "mesa",
+          "ko": "탁자"
+        },
+        {
+          "es": "silla",
+          "ko": "의자"
+        },
+        {
+          "es": "sofá",
+          "ko": "소파"
+        },
+        {
+          "es": "cama",
+          "ko": "침대"
+        },
+        {
+          "es": "estante",
+          "ko": "선반"
+        },
+        {
+          "es": "escritorio",
+          "ko": "책상"
+        },
+        {
+          "es": "armario",
+          "ko": "장롱"
+        },
+        {
+          "es": "cajón",
+          "ko": "서랍"
+        },
+        {
+          "es": "espejo",
+          "ko": "거울"
+        },
+        {
+          "es": "alfombra",
+          "ko": "카펫"
+        }
       ]
     },
     {
       "stage": 5,
+      "category": "에피소드 1 · 세트 5",
+      "type": "learning",
       "words": [
-        { "es": "jabón", "ko": "비누" },
-        { "es": "toalla", "ko": "수건" },
-        { "es": "champú", "ko": "샴푸" },
-        { "es": "cepillo de dientes", "ko": "칫솔" },
-        { "es": "pasta de dientes", "ko": "치약" },
-        { "es": "ducha", "ko": "샤워기" },
-        { "es": "bañera", "ko": "욕조" },
-        { "es": "peine", "ko": "빗" },
-        { "es": "secador", "ko": "드라이기" },
-        { "es": "afeitadora", "ko": "면도기" },
-        { "es": "desodorante", "ko": "데오도란트" },
-        { "es": "crema", "ko": "크림" },
-        { "es": "perfume", "ko": "향수" },
-        { "es": "papel higiénico", "ko": "화장지" },
-        { "es": "inodoro", "ko": "변기" }
+        {
+          "es": "cortina",
+          "ko": "커튼"
+        },
+        {
+          "es": "lámpara",
+          "ko": "램프"
+        },
+        {
+          "es": "almohada",
+          "ko": "베개"
+        },
+        {
+          "es": "manta",
+          "ko": "담요"
+        },
+        {
+          "es": "colchón",
+          "ko": "매트리스"
+        },
+        {
+          "es": "sartén",
+          "ko": "프라이팬"
+        },
+        {
+          "es": "olla",
+          "ko": "냄비"
+        },
+        {
+          "es": "cuchillo",
+          "ko": "칼"
+        },
+        {
+          "es": "tenedor",
+          "ko": "포크"
+        },
+        {
+          "es": "cuchara",
+          "ko": "숟가락"
+        }
       ]
     },
     {
       "stage": 6,
+      "category": "에피소드 1 · 세트 6",
+      "type": "learning",
       "words": [
-        { "es": "camisa", "ko": "셔츠" },
-        { "es": "camiseta", "ko": "티셔츠" },
-        { "es": "pantalón", "ko": "바지" },
-        { "es": "falda", "ko": "치마" },
-        { "es": "vestido", "ko": "원피스" },
-        { "es": "chaqueta", "ko": "재킷" },
-        { "es": "abrigo", "ko": "코트" },
-        { "es": "suéter", "ko": "스웨터" },
-        { "es": "sudadera", "ko": "후드티" },
-        { "es": "traje", "ko": "정장" },
-        { "es": "corbata", "ko": "넥타이" },
-        { "es": "blusa", "ko": "블라우스" },
-        { "es": "pantalón corto", "ko": "반바지" },
-        { "es": "vaqueros", "ko": "청바지" },
-        { "es": "ropa interior", "ko": "속옷" }
+        {
+          "es": "plato",
+          "ko": "접시"
+        },
+        {
+          "es": "taza",
+          "ko": "컵"
+        },
+        {
+          "es": "vaso",
+          "ko": "유리잔"
+        },
+        {
+          "es": "nevera",
+          "ko": "냉장고"
+        },
+        {
+          "es": "horno",
+          "ko": "오븐"
+        },
+        {
+          "es": "microondas",
+          "ko": "전자레인지"
+        },
+        {
+          "es": "cafetera",
+          "ko": "커피포트"
+        },
+        {
+          "es": "tabla de cortar",
+          "ko": "도마"
+        },
+        {
+          "es": "delantal",
+          "ko": "앞치마"
+        },
+        {
+          "es": "servilleta",
+          "ko": "냅킨"
+        }
       ]
     },
     {
       "stage": 7,
+      "category": "에피소드 1 · 세트 7",
+      "type": "learning",
       "words": [
-        { "es": "zapatos", "ko": "구두" },
-        { "es": "zapatillas", "ko": "운동화" },
-        { "es": "botas", "ko": "부츠" },
-        { "es": "sandalias", "ko": "샌들" },
-        { "es": "calcetines", "ko": "양말" },
-        { "es": "sombrero", "ko": "모자" },
-        { "es": "gorra", "ko": "캡모자" },
-        { "es": "bufanda", "ko": "목도리" },
-        { "es": "guantes", "ko": "장갑" },
-        { "es": "cinturón", "ko": "벨트" },
-        { "es": "bolso", "ko": "가방" },
-        { "es": "cartera", "ko": "지갑" },
-        { "es": "gafas de sol", "ko": "선글라스" },
-        { "es": "reloj", "ko": "시계" },
-        { "es": "anillo", "ko": "반지" }
+        {
+          "es": "jabón",
+          "ko": "비누"
+        },
+        {
+          "es": "toalla",
+          "ko": "수건"
+        },
+        {
+          "es": "champú",
+          "ko": "샴푸"
+        },
+        {
+          "es": "cepillo de dientes",
+          "ko": "칫솔"
+        },
+        {
+          "es": "pasta de dientes",
+          "ko": "치약"
+        },
+        {
+          "es": "ducha",
+          "ko": "샤워기"
+        },
+        {
+          "es": "bañera",
+          "ko": "욕조"
+        },
+        {
+          "es": "peine",
+          "ko": "빗"
+        },
+        {
+          "es": "secador",
+          "ko": "드라이기"
+        },
+        {
+          "es": "afeitadora",
+          "ko": "면도기"
+        }
       ]
     },
     {
       "stage": 8,
+      "category": "에피소드 1 · 세트 8",
+      "type": "learning",
       "words": [
-        { "es": "tienda", "ko": "가게" },
-        { "es": "supermercado", "ko": "슈퍼마켓" },
-        { "es": "mercado", "ko": "시장" },
-        { "es": "centro comercial", "ko": "쇼핑몰" },
-        { "es": "comprar", "ko": "사다" },
-        { "es": "vender", "ko": "팔다" },
-        { "es": "precio", "ko": "가격" },
-        { "es": "barato", "ko": "싼" },
-        { "es": "caro", "ko": "비싼" },
-        { "es": "descuento", "ko": "할인" },
-        { "es": "oferta", "ko": "특가" },
-        { "es": "recibo", "ko": "영수증" },
-        { "es": "bolsa", "ko": "봉투" },
-        { "es": "cliente", "ko": "고객" },
-        { "es": "vendedor", "ko": "판매원" }
+        {
+          "es": "desodorante",
+          "ko": "데오도란트"
+        },
+        {
+          "es": "crema",
+          "ko": "크림"
+        },
+        {
+          "es": "perfume",
+          "ko": "향수"
+        },
+        {
+          "es": "papel higiénico",
+          "ko": "화장지"
+        },
+        {
+          "es": "inodoro",
+          "ko": "변기"
+        },
+        {
+          "es": "camisa",
+          "ko": "셔츠"
+        },
+        {
+          "es": "camiseta",
+          "ko": "티셔츠"
+        },
+        {
+          "es": "pantalón",
+          "ko": "바지"
+        },
+        {
+          "es": "falda",
+          "ko": "치마"
+        },
+        {
+          "es": "vestido",
+          "ko": "원피스"
+        }
       ]
     },
     {
       "stage": 9,
+      "category": "에피소드 1 · 세트 9",
+      "type": "learning",
       "words": [
-        { "es": "dinero", "ko": "돈" },
-        { "es": "moneda", "ko": "동전" },
-        { "es": "billete", "ko": "지폐" },
-        { "es": "tarjeta de crédito", "ko": "신용카드" },
-        { "es": "cuenta", "ko": "계좌" },
-        { "es": "banco", "ko": "은행" },
-        { "es": "cajero automático", "ko": "현금인출기" },
-        { "es": "pagar", "ko": "지불하다" },
-        { "es": "ahorrar", "ko": "저축하다" },
-        { "es": "gastar", "ko": "쓰다" },
-        { "es": "cambio", "ko": "거스름돈" },
-        { "es": "deuda", "ko": "빚" },
-        { "es": "factura", "ko": "청구서" },
-        { "es": "efectivo", "ko": "현금" },
-        { "es": "préstamo", "ko": "대출" }
+        {
+          "es": "chaqueta",
+          "ko": "재킷"
+        },
+        {
+          "es": "abrigo",
+          "ko": "코트"
+        },
+        {
+          "es": "suéter",
+          "ko": "스웨터"
+        },
+        {
+          "es": "sudadera",
+          "ko": "후드티"
+        },
+        {
+          "es": "traje",
+          "ko": "정장"
+        },
+        {
+          "es": "corbata",
+          "ko": "넥타이"
+        },
+        {
+          "es": "blusa",
+          "ko": "블라우스"
+        },
+        {
+          "es": "pantalón corto",
+          "ko": "반바지"
+        },
+        {
+          "es": "vaqueros",
+          "ko": "청바지"
+        },
+        {
+          "es": "ropa interior",
+          "ko": "속옷"
+        }
       ]
     },
     {
       "stage": 10,
+      "category": "에피소드 1 · 세트 10",
+      "type": "learning",
       "words": [
-        { "es": "despertar", "ko": "일어나다" },
-        { "es": "levantarse", "ko": "기상하다" },
-        { "es": "ducharse", "ko": "샤워하다" },
-        { "es": "vestirse", "ko": "옷을 입다" },
-        { "es": "desayunar", "ko": "아침을 먹다" },
-        { "es": "cepillarse los dientes", "ko": "이를 닦다" },
-        { "es": "peinarse", "ko": "머리를 빗다" },
-        { "es": "maquillarse", "ko": "화장하다" },
-        { "es": "salir de casa", "ko": "외출하다" },
-        { "es": "ir al trabajo", "ko": "출근하다" },
-        { "es": "tomar el autobús", "ko": "버스를 타다" },
-        { "es": "preparar", "ko": "준비하다" },
-        { "es": "alarma", "ko": "알람" },
-        { "es": "amanecer", "ko": "새벽" },
-        { "es": "mañana", "ko": "아침" }
+        {
+          "es": "zapatos",
+          "ko": "구두"
+        },
+        {
+          "es": "zapatillas",
+          "ko": "운동화"
+        },
+        {
+          "es": "botas",
+          "ko": "부츠"
+        },
+        {
+          "es": "sandalias",
+          "ko": "샌들"
+        },
+        {
+          "es": "calcetines",
+          "ko": "양말"
+        },
+        {
+          "es": "sombrero",
+          "ko": "모자"
+        },
+        {
+          "es": "gorra",
+          "ko": "캡모자"
+        },
+        {
+          "es": "bufanda",
+          "ko": "목도리"
+        },
+        {
+          "es": "guantes",
+          "ko": "장갑"
+        },
+        {
+          "es": "cinturón",
+          "ko": "벨트"
+        }
       ]
     },
     {
       "stage": 11,
+      "category": "에피소드 1 보스 · 누적 복습",
+      "type": "boss",
       "words": [
-        { "es": "cenar", "ko": "저녁을 먹다" },
-        { "es": "descansar", "ko": "쉬다" },
-        { "es": "acostarse", "ko": "눕다" },
-        { "es": "dormir", "ko": "자다" },
-        { "es": "soñar", "ko": "꿈꾸다" },
-        { "es": "apagar la luz", "ko": "불을 끄다" },
-        { "es": "cerrar la puerta", "ko": "문을 잠그다" },
-        { "es": "ponerse el pijama", "ko": "잠옷을 입다" },
-        { "es": "lavarse la cara", "ko": "세수하다" },
-        { "es": "ver la televisión", "ko": "텔레비전을 보다" },
-        { "es": "leer un libro", "ko": "책을 읽다" },
-        { "es": "relajarse", "ko": "긴장을 풀다" },
-        { "es": "noche", "ko": "밤" },
-        { "es": "sueño", "ko": "잠" },
-        { "es": "cansado", "ko": "피곤한" }
+        {
+          "es": "casa",
+          "ko": "집"
+        },
+        {
+          "es": "hogar",
+          "ko": "가정"
+        },
+        {
+          "es": "puerta",
+          "ko": "문"
+        },
+        {
+          "es": "ventana",
+          "ko": "창문"
+        },
+        {
+          "es": "techo",
+          "ko": "지붕"
+        },
+        {
+          "es": "pared",
+          "ko": "벽"
+        },
+        {
+          "es": "suelo",
+          "ko": "바닥"
+        },
+        {
+          "es": "escalera",
+          "ko": "계단"
+        },
+        {
+          "es": "jardín",
+          "ko": "정원"
+        },
+        {
+          "es": "garaje",
+          "ko": "차고"
+        },
+        {
+          "es": "balcón",
+          "ko": "발코니"
+        },
+        {
+          "es": "terraza",
+          "ko": "테라스"
+        },
+        {
+          "es": "cerca",
+          "ko": "울타리"
+        },
+        {
+          "es": "buzón",
+          "ko": "우편함"
+        },
+        {
+          "es": "timbre",
+          "ko": "초인종"
+        },
+        {
+          "es": "cocina",
+          "ko": "부엌"
+        },
+        {
+          "es": "dormitorio",
+          "ko": "침실"
+        },
+        {
+          "es": "baño",
+          "ko": "화장실"
+        },
+        {
+          "es": "sala",
+          "ko": "거실"
+        },
+        {
+          "es": "comedor",
+          "ko": "식당"
+        },
+        {
+          "es": "pasillo",
+          "ko": "복도"
+        },
+        {
+          "es": "sótano",
+          "ko": "지하실"
+        },
+        {
+          "es": "ático",
+          "ko": "다락방"
+        },
+        {
+          "es": "estudio",
+          "ko": "서재"
+        },
+        {
+          "es": "lavadero",
+          "ko": "세탁실"
+        },
+        {
+          "es": "despensa",
+          "ko": "식료품 저장실"
+        },
+        {
+          "es": "entrada",
+          "ko": "현관"
+        },
+        {
+          "es": "habitación",
+          "ko": "방"
+        },
+        {
+          "es": "closet",
+          "ko": "옷장"
+        },
+        {
+          "es": "patio",
+          "ko": "마당"
+        },
+        {
+          "es": "mesa",
+          "ko": "탁자"
+        },
+        {
+          "es": "silla",
+          "ko": "의자"
+        },
+        {
+          "es": "sofá",
+          "ko": "소파"
+        },
+        {
+          "es": "cama",
+          "ko": "침대"
+        },
+        {
+          "es": "estante",
+          "ko": "선반"
+        },
+        {
+          "es": "escritorio",
+          "ko": "책상"
+        },
+        {
+          "es": "armario",
+          "ko": "장롱"
+        },
+        {
+          "es": "cajón",
+          "ko": "서랍"
+        },
+        {
+          "es": "espejo",
+          "ko": "거울"
+        },
+        {
+          "es": "alfombra",
+          "ko": "카펫"
+        },
+        {
+          "es": "cortina",
+          "ko": "커튼"
+        },
+        {
+          "es": "lámpara",
+          "ko": "램프"
+        },
+        {
+          "es": "almohada",
+          "ko": "베개"
+        },
+        {
+          "es": "manta",
+          "ko": "담요"
+        },
+        {
+          "es": "colchón",
+          "ko": "매트리스"
+        },
+        {
+          "es": "sartén",
+          "ko": "프라이팬"
+        },
+        {
+          "es": "olla",
+          "ko": "냄비"
+        },
+        {
+          "es": "cuchillo",
+          "ko": "칼"
+        },
+        {
+          "es": "tenedor",
+          "ko": "포크"
+        },
+        {
+          "es": "cuchara",
+          "ko": "숟가락"
+        },
+        {
+          "es": "plato",
+          "ko": "접시"
+        },
+        {
+          "es": "taza",
+          "ko": "컵"
+        },
+        {
+          "es": "vaso",
+          "ko": "유리잔"
+        },
+        {
+          "es": "nevera",
+          "ko": "냉장고"
+        },
+        {
+          "es": "horno",
+          "ko": "오븐"
+        },
+        {
+          "es": "microondas",
+          "ko": "전자레인지"
+        },
+        {
+          "es": "cafetera",
+          "ko": "커피포트"
+        },
+        {
+          "es": "tabla de cortar",
+          "ko": "도마"
+        },
+        {
+          "es": "delantal",
+          "ko": "앞치마"
+        },
+        {
+          "es": "servilleta",
+          "ko": "냅킨"
+        },
+        {
+          "es": "jabón",
+          "ko": "비누"
+        },
+        {
+          "es": "toalla",
+          "ko": "수건"
+        },
+        {
+          "es": "champú",
+          "ko": "샴푸"
+        },
+        {
+          "es": "cepillo de dientes",
+          "ko": "칫솔"
+        },
+        {
+          "es": "pasta de dientes",
+          "ko": "치약"
+        },
+        {
+          "es": "ducha",
+          "ko": "샤워기"
+        },
+        {
+          "es": "bañera",
+          "ko": "욕조"
+        },
+        {
+          "es": "peine",
+          "ko": "빗"
+        },
+        {
+          "es": "secador",
+          "ko": "드라이기"
+        },
+        {
+          "es": "afeitadora",
+          "ko": "면도기"
+        },
+        {
+          "es": "desodorante",
+          "ko": "데오도란트"
+        },
+        {
+          "es": "crema",
+          "ko": "크림"
+        },
+        {
+          "es": "perfume",
+          "ko": "향수"
+        },
+        {
+          "es": "papel higiénico",
+          "ko": "화장지"
+        },
+        {
+          "es": "inodoro",
+          "ko": "변기"
+        },
+        {
+          "es": "camisa",
+          "ko": "셔츠"
+        },
+        {
+          "es": "camiseta",
+          "ko": "티셔츠"
+        },
+        {
+          "es": "pantalón",
+          "ko": "바지"
+        },
+        {
+          "es": "falda",
+          "ko": "치마"
+        },
+        {
+          "es": "vestido",
+          "ko": "원피스"
+        },
+        {
+          "es": "chaqueta",
+          "ko": "재킷"
+        },
+        {
+          "es": "abrigo",
+          "ko": "코트"
+        },
+        {
+          "es": "suéter",
+          "ko": "스웨터"
+        },
+        {
+          "es": "sudadera",
+          "ko": "후드티"
+        },
+        {
+          "es": "traje",
+          "ko": "정장"
+        },
+        {
+          "es": "corbata",
+          "ko": "넥타이"
+        },
+        {
+          "es": "blusa",
+          "ko": "블라우스"
+        },
+        {
+          "es": "pantalón corto",
+          "ko": "반바지"
+        },
+        {
+          "es": "vaqueros",
+          "ko": "청바지"
+        },
+        {
+          "es": "ropa interior",
+          "ko": "속옷"
+        },
+        {
+          "es": "zapatos",
+          "ko": "구두"
+        },
+        {
+          "es": "zapatillas",
+          "ko": "운동화"
+        },
+        {
+          "es": "botas",
+          "ko": "부츠"
+        },
+        {
+          "es": "sandalias",
+          "ko": "샌들"
+        },
+        {
+          "es": "calcetines",
+          "ko": "양말"
+        },
+        {
+          "es": "sombrero",
+          "ko": "모자"
+        },
+        {
+          "es": "gorra",
+          "ko": "캡모자"
+        },
+        {
+          "es": "bufanda",
+          "ko": "목도리"
+        },
+        {
+          "es": "guantes",
+          "ko": "장갑"
+        },
+        {
+          "es": "cinturón",
+          "ko": "벨트"
+        }
       ]
     },
     {
       "stage": 12,
+      "category": "에피소드 2 · 세트 1",
+      "type": "learning",
       "words": [
-        { "es": "limpiar", "ko": "청소하다" },
-        { "es": "barrer", "ko": "쓸다" },
-        { "es": "fregar", "ko": "닦다" },
-        { "es": "lavar la ropa", "ko": "빨래하다" },
-        { "es": "planchar", "ko": "다림질하다" },
-        { "es": "cocinar", "ko": "요리하다" },
-        { "es": "lavar los platos", "ko": "설거지하다" },
-        { "es": "sacar la basura", "ko": "쓰레기를 버리다" },
-        { "es": "ordenar", "ko": "정리하다" },
-        { "es": "aspiradora", "ko": "청소기" },
-        { "es": "escoba", "ko": "빗자루" },
-        { "es": "trapo", "ko": "걸레" },
-        { "es": "detergente", "ko": "세제" },
-        { "es": "basura", "ko": "쓰레기" },
-        { "es": "tender la ropa", "ko": "빨래를 널다" }
+        {
+          "es": "bolso",
+          "ko": "가방"
+        },
+        {
+          "es": "cartera",
+          "ko": "지갑"
+        },
+        {
+          "es": "gafas de sol",
+          "ko": "선글라스"
+        },
+        {
+          "es": "reloj",
+          "ko": "시계"
+        },
+        {
+          "es": "anillo",
+          "ko": "반지"
+        },
+        {
+          "es": "tienda",
+          "ko": "가게"
+        },
+        {
+          "es": "supermercado",
+          "ko": "슈퍼마켓"
+        },
+        {
+          "es": "mercado",
+          "ko": "시장"
+        },
+        {
+          "es": "centro comercial",
+          "ko": "쇼핑몰"
+        },
+        {
+          "es": "comprar",
+          "ko": "사다"
+        }
       ]
     },
     {
       "stage": 13,
+      "category": "에피소드 2 · 세트 2",
+      "type": "learning",
       "words": [
-        { "es": "televisor", "ko": "텔레비전" },
-        { "es": "computadora", "ko": "컴퓨터" },
-        { "es": "teléfono", "ko": "전화기" },
-        { "es": "lavadora", "ko": "세탁기" },
-        { "es": "secadora de ropa", "ko": "건조기" },
-        { "es": "aire acondicionado", "ko": "에어컨" },
-        { "es": "calefacción", "ko": "난방" },
-        { "es": "ventilador", "ko": "선풍기" },
-        { "es": "licuadora", "ko": "믹서기" },
-        { "es": "tostadora", "ko": "토스터" },
-        { "es": "lavavajillas", "ko": "식기세척기" },
-        { "es": "enchufe", "ko": "콘센트" },
-        { "es": "interruptor", "ko": "스위치" },
-        { "es": "batería", "ko": "배터리" },
-        { "es": "cable", "ko": "케이블" }
+        {
+          "es": "vender",
+          "ko": "팔다"
+        },
+        {
+          "es": "precio",
+          "ko": "가격"
+        },
+        {
+          "es": "barato",
+          "ko": "싼"
+        },
+        {
+          "es": "caro",
+          "ko": "비싼"
+        },
+        {
+          "es": "descuento",
+          "ko": "할인"
+        },
+        {
+          "es": "oferta",
+          "ko": "특가"
+        },
+        {
+          "es": "recibo",
+          "ko": "영수증"
+        },
+        {
+          "es": "bolsa",
+          "ko": "봉투"
+        },
+        {
+          "es": "cliente",
+          "ko": "고객"
+        },
+        {
+          "es": "vendedor",
+          "ko": "판매원"
+        }
       ]
     },
     {
       "stage": 14,
+      "category": "에피소드 2 · 세트 3",
+      "type": "learning",
       "words": [
-        { "es": "martillo", "ko": "망치" },
-        { "es": "destornillador", "ko": "드라이버" },
-        { "es": "tornillo", "ko": "나사" },
-        { "es": "clavo", "ko": "못" },
-        { "es": "pintura", "ko": "페인트" },
-        { "es": "brocha", "ko": "붓" },
-        { "es": "cinta adhesiva", "ko": "테이프" },
-        { "es": "pegamento", "ko": "접착제" },
-        { "es": "llave inglesa", "ko": "렌치" },
-        { "es": "sierra", "ko": "톱" },
-        { "es": "taladro", "ko": "드릴" },
-        { "es": "reparar", "ko": "수리하다" },
-        { "es": "arreglar", "ko": "고치다" },
-        { "es": "construir", "ko": "짓다" },
-        { "es": "medir", "ko": "측정하다" }
+        {
+          "es": "dinero",
+          "ko": "돈"
+        },
+        {
+          "es": "moneda",
+          "ko": "동전"
+        },
+        {
+          "es": "billete",
+          "ko": "지폐"
+        },
+        {
+          "es": "tarjeta de crédito",
+          "ko": "신용카드"
+        },
+        {
+          "es": "cuenta",
+          "ko": "계좌"
+        },
+        {
+          "es": "banco",
+          "ko": "은행"
+        },
+        {
+          "es": "cajero automático",
+          "ko": "현금인출기"
+        },
+        {
+          "es": "pagar",
+          "ko": "지불하다"
+        },
+        {
+          "es": "ahorrar",
+          "ko": "저축하다"
+        },
+        {
+          "es": "gastar",
+          "ko": "쓰다"
+        }
       ]
     },
     {
       "stage": 15,
+      "category": "에피소드 2 · 세트 4",
+      "type": "learning",
       "words": [
-        { "es": "bolígrafo", "ko": "볼펜" },
-        { "es": "lápiz", "ko": "연필" },
-        { "es": "cuaderno", "ko": "공책" },
-        { "es": "tijeras", "ko": "가위" },
-        { "es": "goma de borrar", "ko": "지우개" },
-        { "es": "regla", "ko": "자" },
-        { "es": "grapadora", "ko": "스테이플러" },
-        { "es": "sobre", "ko": "봉투" },
-        { "es": "papel", "ko": "종이" },
-        { "es": "carpeta", "ko": "폴더" },
-        { "es": "mochila", "ko": "배낭" },
-        { "es": "paraguas", "ko": "우산" },
-        { "es": "llave", "ko": "열쇠" },
-        { "es": "gafas", "ko": "안경" },
-        { "es": "pañuelo", "ko": "손수건" }
+        {
+          "es": "cambio",
+          "ko": "거스름돈"
+        },
+        {
+          "es": "deuda",
+          "ko": "빚"
+        },
+        {
+          "es": "factura",
+          "ko": "청구서"
+        },
+        {
+          "es": "efectivo",
+          "ko": "현금"
+        },
+        {
+          "es": "préstamo",
+          "ko": "대출"
+        },
+        {
+          "es": "despertar",
+          "ko": "일어나다"
+        },
+        {
+          "es": "levantarse",
+          "ko": "기상하다"
+        },
+        {
+          "es": "ducharse",
+          "ko": "샤워하다"
+        },
+        {
+          "es": "vestirse",
+          "ko": "옷을 입다"
+        },
+        {
+          "es": "desayunar",
+          "ko": "아침을 먹다"
+        }
       ]
     },
     {
       "stage": 16,
+      "category": "에피소드 2 · 세트 5",
+      "type": "learning",
       "words": [
-        { "es": "sol", "ko": "태양" },
-        { "es": "lluvia", "ko": "비" },
-        { "es": "nieve", "ko": "눈" },
-        { "es": "viento", "ko": "바람" },
-        { "es": "nube", "ko": "구름" },
-        { "es": "tormenta", "ko": "폭풍" },
-        { "es": "trueno", "ko": "천둥" },
-        { "es": "relámpago", "ko": "번개" },
-        { "es": "niebla", "ko": "안개" },
-        { "es": "calor", "ko": "더위" },
-        { "es": "frío", "ko": "추위" },
-        { "es": "temperatura", "ko": "온도" },
-        { "es": "húmedo", "ko": "습한" },
-        { "es": "seco", "ko": "건조한" },
-        { "es": "pronóstico", "ko": "일기예보" }
+        {
+          "es": "cepillarse los dientes",
+          "ko": "이를 닦다"
+        },
+        {
+          "es": "peinarse",
+          "ko": "머리를 빗다"
+        },
+        {
+          "es": "maquillarse",
+          "ko": "화장하다"
+        },
+        {
+          "es": "salir de casa",
+          "ko": "외출하다"
+        },
+        {
+          "es": "ir al trabajo",
+          "ko": "출근하다"
+        },
+        {
+          "es": "tomar el autobús",
+          "ko": "버스를 타다"
+        },
+        {
+          "es": "preparar",
+          "ko": "준비하다"
+        },
+        {
+          "es": "alarma",
+          "ko": "알람"
+        },
+        {
+          "es": "amanecer",
+          "ko": "새벽"
+        },
+        {
+          "es": "mañana",
+          "ko": "아침"
+        }
       ]
     },
     {
       "stage": 17,
+      "category": "에피소드 2 · 세트 6",
+      "type": "learning",
       "words": [
-        { "es": "llamada", "ko": "전화 통화" },
-        { "es": "mensaje", "ko": "메시지" },
-        { "es": "celular", "ko": "휴대폰" },
-        { "es": "número", "ko": "번호" },
-        { "es": "contestar", "ko": "응답하다" },
-        { "es": "colgar", "ko": "전화를 끊다" },
-        { "es": "marcar", "ko": "전화를 걸다" },
-        { "es": "correo electrónico", "ko": "이메일" },
-        { "es": "internet", "ko": "인터넷" },
-        { "es": "contraseña", "ko": "비밀번호" },
-        { "es": "aplicación", "ko": "앱" },
-        { "es": "pantalla", "ko": "화면" },
-        { "es": "cargador", "ko": "충전기" },
-        { "es": "señal", "ko": "신호" },
-        { "es": "wifi", "ko": "와이파이" }
+        {
+          "es": "cenar",
+          "ko": "저녁을 먹다"
+        },
+        {
+          "es": "descansar",
+          "ko": "쉬다"
+        },
+        {
+          "es": "acostarse",
+          "ko": "눕다"
+        },
+        {
+          "es": "dormir",
+          "ko": "자다"
+        },
+        {
+          "es": "soñar",
+          "ko": "꿈꾸다"
+        },
+        {
+          "es": "apagar la luz",
+          "ko": "불을 끄다"
+        },
+        {
+          "es": "cerrar la puerta",
+          "ko": "문을 잠그다"
+        },
+        {
+          "es": "ponerse el pijama",
+          "ko": "잠옷을 입다"
+        },
+        {
+          "es": "lavarse la cara",
+          "ko": "세수하다"
+        },
+        {
+          "es": "ver la televisión",
+          "ko": "텔레비전을 보다"
+        }
       ]
     },
     {
       "stage": 18,
+      "category": "에피소드 2 · 세트 7",
+      "type": "learning",
       "words": [
-        { "es": "carta", "ko": "편지" },
-        { "es": "paquete", "ko": "소포" },
-        { "es": "sello", "ko": "우표" },
-        { "es": "correo", "ko": "우편" },
-        { "es": "cartero", "ko": "우체부" },
-        { "es": "oficina de correos", "ko": "우체국" },
-        { "es": "dirección", "ko": "주소" },
-        { "es": "remitente", "ko": "발신인" },
-        { "es": "destinatario", "ko": "수신인" },
-        { "es": "enviar", "ko": "보내다" },
-        { "es": "recibir", "ko": "받다" },
-        { "es": "entrega", "ko": "배달" },
-        { "es": "repartidor", "ko": "배달원" },
-        { "es": "código postal", "ko": "우편번호" },
-        { "es": "firmar", "ko": "서명하다" }
+        {
+          "es": "leer un libro",
+          "ko": "책을 읽다"
+        },
+        {
+          "es": "relajarse",
+          "ko": "긴장을 풀다"
+        },
+        {
+          "es": "noche",
+          "ko": "밤"
+        },
+        {
+          "es": "sueño",
+          "ko": "잠"
+        },
+        {
+          "es": "cansado",
+          "ko": "피곤한"
+        },
+        {
+          "es": "limpiar",
+          "ko": "청소하다"
+        },
+        {
+          "es": "barrer",
+          "ko": "쓸다"
+        },
+        {
+          "es": "fregar",
+          "ko": "닦다"
+        },
+        {
+          "es": "lavar la ropa",
+          "ko": "빨래하다"
+        },
+        {
+          "es": "planchar",
+          "ko": "다림질하다"
+        }
       ]
     },
     {
       "stage": 19,
+      "category": "에피소드 2 · 세트 8",
+      "type": "learning",
       "words": [
-        { "es": "vecino", "ko": "이웃" },
-        { "es": "barrio", "ko": "동네" },
-        { "es": "calle", "ko": "거리" },
-        { "es": "acera", "ko": "인도" },
-        { "es": "parque", "ko": "공원" },
-        { "es": "plaza", "ko": "광장" },
-        { "es": "farmacia", "ko": "약국" },
-        { "es": "panadería", "ko": "빵집" },
-        { "es": "peluquería", "ko": "미용실" },
-        { "es": "lavandería", "ko": "세탁소" },
-        { "es": "biblioteca", "ko": "도서관" },
-        { "es": "iglesia", "ko": "교회" },
-        { "es": "ayuntamiento", "ko": "시청" },
-        { "es": "gasolinera", "ko": "주유소" },
-        { "es": "estacionamiento", "ko": "주차장" }
+        {
+          "es": "cocinar",
+          "ko": "요리하다"
+        },
+        {
+          "es": "lavar los platos",
+          "ko": "설거지하다"
+        },
+        {
+          "es": "sacar la basura",
+          "ko": "쓰레기를 버리다"
+        },
+        {
+          "es": "ordenar",
+          "ko": "정리하다"
+        },
+        {
+          "es": "aspiradora",
+          "ko": "청소기"
+        },
+        {
+          "es": "escoba",
+          "ko": "빗자루"
+        },
+        {
+          "es": "trapo",
+          "ko": "걸레"
+        },
+        {
+          "es": "detergente",
+          "ko": "세제"
+        },
+        {
+          "es": "basura",
+          "ko": "쓰레기"
+        },
+        {
+          "es": "tender la ropa",
+          "ko": "빨래를 널다"
+        }
       ]
     },
     {
       "stage": 20,
+      "category": "에피소드 2 · 세트 9",
+      "type": "learning",
       "words": [
-        { "es": "emergencia", "ko": "비상" },
-        { "es": "incendio", "ko": "화재" },
-        { "es": "bombero", "ko": "소방관" },
-        { "es": "policía", "ko": "경찰" },
-        { "es": "ambulancia", "ko": "구급차" },
-        { "es": "hospital", "ko": "병원" },
-        { "es": "primeros auxilios", "ko": "응급처치" },
-        { "es": "extintor", "ko": "소화기" },
-        { "es": "alarma de incendio", "ko": "화재경보기" },
-        { "es": "salida de emergencia", "ko": "비상구" },
-        { "es": "peligro", "ko": "위험" },
-        { "es": "seguro", "ko": "안전한" },
-        { "es": "accidente", "ko": "사고" },
-        { "es": "robo", "ko": "도둑질" },
-        { "es": "rescate", "ko": "구조" }
+        {
+          "es": "televisor",
+          "ko": "텔레비전"
+        },
+        {
+          "es": "computadora",
+          "ko": "컴퓨터"
+        },
+        {
+          "es": "teléfono",
+          "ko": "전화기"
+        },
+        {
+          "es": "lavadora",
+          "ko": "세탁기"
+        },
+        {
+          "es": "secadora de ropa",
+          "ko": "건조기"
+        },
+        {
+          "es": "aire acondicionado",
+          "ko": "에어컨"
+        },
+        {
+          "es": "calefacción",
+          "ko": "난방"
+        },
+        {
+          "es": "ventilador",
+          "ko": "선풍기"
+        },
+        {
+          "es": "licuadora",
+          "ko": "믹서기"
+        },
+        {
+          "es": "tostadora",
+          "ko": "토스터"
+        }
+      ]
+    },
+    {
+      "stage": 21,
+      "category": "에피소드 2 · 세트 10",
+      "type": "learning",
+      "words": [
+        {
+          "es": "lavavajillas",
+          "ko": "식기세척기"
+        },
+        {
+          "es": "enchufe",
+          "ko": "콘센트"
+        },
+        {
+          "es": "interruptor",
+          "ko": "스위치"
+        },
+        {
+          "es": "batería",
+          "ko": "배터리"
+        },
+        {
+          "es": "cable",
+          "ko": "케이블"
+        },
+        {
+          "es": "martillo",
+          "ko": "망치"
+        },
+        {
+          "es": "destornillador",
+          "ko": "드라이버"
+        },
+        {
+          "es": "tornillo",
+          "ko": "나사"
+        },
+        {
+          "es": "clavo",
+          "ko": "못"
+        },
+        {
+          "es": "pintura",
+          "ko": "페인트"
+        }
+      ]
+    },
+    {
+      "stage": 22,
+      "category": "에피소드 2 보스 · 누적 복습",
+      "type": "boss",
+      "words": [
+        {
+          "es": "bolso",
+          "ko": "가방"
+        },
+        {
+          "es": "cartera",
+          "ko": "지갑"
+        },
+        {
+          "es": "gafas de sol",
+          "ko": "선글라스"
+        },
+        {
+          "es": "reloj",
+          "ko": "시계"
+        },
+        {
+          "es": "anillo",
+          "ko": "반지"
+        },
+        {
+          "es": "tienda",
+          "ko": "가게"
+        },
+        {
+          "es": "supermercado",
+          "ko": "슈퍼마켓"
+        },
+        {
+          "es": "mercado",
+          "ko": "시장"
+        },
+        {
+          "es": "centro comercial",
+          "ko": "쇼핑몰"
+        },
+        {
+          "es": "comprar",
+          "ko": "사다"
+        },
+        {
+          "es": "vender",
+          "ko": "팔다"
+        },
+        {
+          "es": "precio",
+          "ko": "가격"
+        },
+        {
+          "es": "barato",
+          "ko": "싼"
+        },
+        {
+          "es": "caro",
+          "ko": "비싼"
+        },
+        {
+          "es": "descuento",
+          "ko": "할인"
+        },
+        {
+          "es": "oferta",
+          "ko": "특가"
+        },
+        {
+          "es": "recibo",
+          "ko": "영수증"
+        },
+        {
+          "es": "bolsa",
+          "ko": "봉투"
+        },
+        {
+          "es": "cliente",
+          "ko": "고객"
+        },
+        {
+          "es": "vendedor",
+          "ko": "판매원"
+        },
+        {
+          "es": "dinero",
+          "ko": "돈"
+        },
+        {
+          "es": "moneda",
+          "ko": "동전"
+        },
+        {
+          "es": "billete",
+          "ko": "지폐"
+        },
+        {
+          "es": "tarjeta de crédito",
+          "ko": "신용카드"
+        },
+        {
+          "es": "cuenta",
+          "ko": "계좌"
+        },
+        {
+          "es": "banco",
+          "ko": "은행"
+        },
+        {
+          "es": "cajero automático",
+          "ko": "현금인출기"
+        },
+        {
+          "es": "pagar",
+          "ko": "지불하다"
+        },
+        {
+          "es": "ahorrar",
+          "ko": "저축하다"
+        },
+        {
+          "es": "gastar",
+          "ko": "쓰다"
+        },
+        {
+          "es": "cambio",
+          "ko": "거스름돈"
+        },
+        {
+          "es": "deuda",
+          "ko": "빚"
+        },
+        {
+          "es": "factura",
+          "ko": "청구서"
+        },
+        {
+          "es": "efectivo",
+          "ko": "현금"
+        },
+        {
+          "es": "préstamo",
+          "ko": "대출"
+        },
+        {
+          "es": "despertar",
+          "ko": "일어나다"
+        },
+        {
+          "es": "levantarse",
+          "ko": "기상하다"
+        },
+        {
+          "es": "ducharse",
+          "ko": "샤워하다"
+        },
+        {
+          "es": "vestirse",
+          "ko": "옷을 입다"
+        },
+        {
+          "es": "desayunar",
+          "ko": "아침을 먹다"
+        },
+        {
+          "es": "cepillarse los dientes",
+          "ko": "이를 닦다"
+        },
+        {
+          "es": "peinarse",
+          "ko": "머리를 빗다"
+        },
+        {
+          "es": "maquillarse",
+          "ko": "화장하다"
+        },
+        {
+          "es": "salir de casa",
+          "ko": "외출하다"
+        },
+        {
+          "es": "ir al trabajo",
+          "ko": "출근하다"
+        },
+        {
+          "es": "tomar el autobús",
+          "ko": "버스를 타다"
+        },
+        {
+          "es": "preparar",
+          "ko": "준비하다"
+        },
+        {
+          "es": "alarma",
+          "ko": "알람"
+        },
+        {
+          "es": "amanecer",
+          "ko": "새벽"
+        },
+        {
+          "es": "mañana",
+          "ko": "아침"
+        },
+        {
+          "es": "cenar",
+          "ko": "저녁을 먹다"
+        },
+        {
+          "es": "descansar",
+          "ko": "쉬다"
+        },
+        {
+          "es": "acostarse",
+          "ko": "눕다"
+        },
+        {
+          "es": "dormir",
+          "ko": "자다"
+        },
+        {
+          "es": "soñar",
+          "ko": "꿈꾸다"
+        },
+        {
+          "es": "apagar la luz",
+          "ko": "불을 끄다"
+        },
+        {
+          "es": "cerrar la puerta",
+          "ko": "문을 잠그다"
+        },
+        {
+          "es": "ponerse el pijama",
+          "ko": "잠옷을 입다"
+        },
+        {
+          "es": "lavarse la cara",
+          "ko": "세수하다"
+        },
+        {
+          "es": "ver la televisión",
+          "ko": "텔레비전을 보다"
+        },
+        {
+          "es": "leer un libro",
+          "ko": "책을 읽다"
+        },
+        {
+          "es": "relajarse",
+          "ko": "긴장을 풀다"
+        },
+        {
+          "es": "noche",
+          "ko": "밤"
+        },
+        {
+          "es": "sueño",
+          "ko": "잠"
+        },
+        {
+          "es": "cansado",
+          "ko": "피곤한"
+        },
+        {
+          "es": "limpiar",
+          "ko": "청소하다"
+        },
+        {
+          "es": "barrer",
+          "ko": "쓸다"
+        },
+        {
+          "es": "fregar",
+          "ko": "닦다"
+        },
+        {
+          "es": "lavar la ropa",
+          "ko": "빨래하다"
+        },
+        {
+          "es": "planchar",
+          "ko": "다림질하다"
+        },
+        {
+          "es": "cocinar",
+          "ko": "요리하다"
+        },
+        {
+          "es": "lavar los platos",
+          "ko": "설거지하다"
+        },
+        {
+          "es": "sacar la basura",
+          "ko": "쓰레기를 버리다"
+        },
+        {
+          "es": "ordenar",
+          "ko": "정리하다"
+        },
+        {
+          "es": "aspiradora",
+          "ko": "청소기"
+        },
+        {
+          "es": "escoba",
+          "ko": "빗자루"
+        },
+        {
+          "es": "trapo",
+          "ko": "걸레"
+        },
+        {
+          "es": "detergente",
+          "ko": "세제"
+        },
+        {
+          "es": "basura",
+          "ko": "쓰레기"
+        },
+        {
+          "es": "tender la ropa",
+          "ko": "빨래를 널다"
+        },
+        {
+          "es": "televisor",
+          "ko": "텔레비전"
+        },
+        {
+          "es": "computadora",
+          "ko": "컴퓨터"
+        },
+        {
+          "es": "teléfono",
+          "ko": "전화기"
+        },
+        {
+          "es": "lavadora",
+          "ko": "세탁기"
+        },
+        {
+          "es": "secadora de ropa",
+          "ko": "건조기"
+        },
+        {
+          "es": "aire acondicionado",
+          "ko": "에어컨"
+        },
+        {
+          "es": "calefacción",
+          "ko": "난방"
+        },
+        {
+          "es": "ventilador",
+          "ko": "선풍기"
+        },
+        {
+          "es": "licuadora",
+          "ko": "믹서기"
+        },
+        {
+          "es": "tostadora",
+          "ko": "토스터"
+        },
+        {
+          "es": "lavavajillas",
+          "ko": "식기세척기"
+        },
+        {
+          "es": "enchufe",
+          "ko": "콘센트"
+        },
+        {
+          "es": "interruptor",
+          "ko": "스위치"
+        },
+        {
+          "es": "batería",
+          "ko": "배터리"
+        },
+        {
+          "es": "cable",
+          "ko": "케이블"
+        },
+        {
+          "es": "martillo",
+          "ko": "망치"
+        },
+        {
+          "es": "destornillador",
+          "ko": "드라이버"
+        },
+        {
+          "es": "tornillo",
+          "ko": "나사"
+        },
+        {
+          "es": "clavo",
+          "ko": "못"
+        },
+        {
+          "es": "pintura",
+          "ko": "페인트"
+        }
+      ]
+    },
+    {
+      "stage": 23,
+      "category": "에피소드 3 · 세트 1",
+      "type": "learning",
+      "words": [
+        {
+          "es": "brocha",
+          "ko": "붓"
+        },
+        {
+          "es": "cinta adhesiva",
+          "ko": "테이프"
+        },
+        {
+          "es": "pegamento",
+          "ko": "접착제"
+        },
+        {
+          "es": "llave inglesa",
+          "ko": "렌치"
+        },
+        {
+          "es": "sierra",
+          "ko": "톱"
+        },
+        {
+          "es": "taladro",
+          "ko": "드릴"
+        },
+        {
+          "es": "reparar",
+          "ko": "수리하다"
+        },
+        {
+          "es": "arreglar",
+          "ko": "고치다"
+        },
+        {
+          "es": "construir",
+          "ko": "짓다"
+        },
+        {
+          "es": "medir",
+          "ko": "측정하다"
+        }
+      ]
+    },
+    {
+      "stage": 24,
+      "category": "에피소드 3 · 세트 2",
+      "type": "learning",
+      "words": [
+        {
+          "es": "bolígrafo",
+          "ko": "볼펜"
+        },
+        {
+          "es": "lápiz",
+          "ko": "연필"
+        },
+        {
+          "es": "cuaderno",
+          "ko": "공책"
+        },
+        {
+          "es": "tijeras",
+          "ko": "가위"
+        },
+        {
+          "es": "goma de borrar",
+          "ko": "지우개"
+        },
+        {
+          "es": "regla",
+          "ko": "자"
+        },
+        {
+          "es": "grapadora",
+          "ko": "스테이플러"
+        },
+        {
+          "es": "sobre",
+          "ko": "봉투"
+        },
+        {
+          "es": "papel",
+          "ko": "종이"
+        },
+        {
+          "es": "carpeta",
+          "ko": "폴더"
+        }
+      ]
+    },
+    {
+      "stage": 25,
+      "category": "에피소드 3 · 세트 3",
+      "type": "learning",
+      "words": [
+        {
+          "es": "mochila",
+          "ko": "배낭"
+        },
+        {
+          "es": "paraguas",
+          "ko": "우산"
+        },
+        {
+          "es": "llave",
+          "ko": "열쇠"
+        },
+        {
+          "es": "gafas",
+          "ko": "안경"
+        },
+        {
+          "es": "pañuelo",
+          "ko": "손수건"
+        },
+        {
+          "es": "sol",
+          "ko": "태양"
+        },
+        {
+          "es": "lluvia",
+          "ko": "비"
+        },
+        {
+          "es": "nieve",
+          "ko": "눈"
+        },
+        {
+          "es": "viento",
+          "ko": "바람"
+        },
+        {
+          "es": "nube",
+          "ko": "구름"
+        }
+      ]
+    },
+    {
+      "stage": 26,
+      "category": "에피소드 3 · 세트 4",
+      "type": "learning",
+      "words": [
+        {
+          "es": "tormenta",
+          "ko": "폭풍"
+        },
+        {
+          "es": "trueno",
+          "ko": "천둥"
+        },
+        {
+          "es": "relámpago",
+          "ko": "번개"
+        },
+        {
+          "es": "niebla",
+          "ko": "안개"
+        },
+        {
+          "es": "calor",
+          "ko": "더위"
+        },
+        {
+          "es": "frío",
+          "ko": "추위"
+        },
+        {
+          "es": "temperatura",
+          "ko": "온도"
+        },
+        {
+          "es": "húmedo",
+          "ko": "습한"
+        },
+        {
+          "es": "seco",
+          "ko": "건조한"
+        },
+        {
+          "es": "pronóstico",
+          "ko": "일기예보"
+        }
+      ]
+    },
+    {
+      "stage": 27,
+      "category": "에피소드 3 · 세트 5",
+      "type": "learning",
+      "words": [
+        {
+          "es": "llamada",
+          "ko": "전화 통화"
+        },
+        {
+          "es": "mensaje",
+          "ko": "메시지"
+        },
+        {
+          "es": "celular",
+          "ko": "휴대폰"
+        },
+        {
+          "es": "número",
+          "ko": "번호"
+        },
+        {
+          "es": "contestar",
+          "ko": "응답하다"
+        },
+        {
+          "es": "colgar",
+          "ko": "전화를 끊다"
+        },
+        {
+          "es": "marcar",
+          "ko": "전화를 걸다"
+        },
+        {
+          "es": "correo electrónico",
+          "ko": "이메일"
+        },
+        {
+          "es": "internet",
+          "ko": "인터넷"
+        },
+        {
+          "es": "contraseña",
+          "ko": "비밀번호"
+        }
+      ]
+    },
+    {
+      "stage": 28,
+      "category": "에피소드 3 · 세트 6",
+      "type": "learning",
+      "words": [
+        {
+          "es": "aplicación",
+          "ko": "앱"
+        },
+        {
+          "es": "pantalla",
+          "ko": "화면"
+        },
+        {
+          "es": "cargador",
+          "ko": "충전기"
+        },
+        {
+          "es": "señal",
+          "ko": "신호"
+        },
+        {
+          "es": "wifi",
+          "ko": "와이파이"
+        },
+        {
+          "es": "carta",
+          "ko": "편지"
+        },
+        {
+          "es": "paquete",
+          "ko": "소포"
+        },
+        {
+          "es": "sello",
+          "ko": "우표"
+        },
+        {
+          "es": "correo",
+          "ko": "우편"
+        },
+        {
+          "es": "cartero",
+          "ko": "우체부"
+        }
+      ]
+    },
+    {
+      "stage": 29,
+      "category": "에피소드 3 · 세트 7",
+      "type": "learning",
+      "words": [
+        {
+          "es": "oficina de correos",
+          "ko": "우체국"
+        },
+        {
+          "es": "dirección",
+          "ko": "주소"
+        },
+        {
+          "es": "remitente",
+          "ko": "발신인"
+        },
+        {
+          "es": "destinatario",
+          "ko": "수신인"
+        },
+        {
+          "es": "enviar",
+          "ko": "보내다"
+        },
+        {
+          "es": "recibir",
+          "ko": "받다"
+        },
+        {
+          "es": "entrega",
+          "ko": "배달"
+        },
+        {
+          "es": "repartidor",
+          "ko": "배달원"
+        },
+        {
+          "es": "código postal",
+          "ko": "우편번호"
+        },
+        {
+          "es": "firmar",
+          "ko": "서명하다"
+        }
+      ]
+    },
+    {
+      "stage": 30,
+      "category": "에피소드 3 · 세트 8",
+      "type": "learning",
+      "words": [
+        {
+          "es": "vecino",
+          "ko": "이웃"
+        },
+        {
+          "es": "barrio",
+          "ko": "동네"
+        },
+        {
+          "es": "calle",
+          "ko": "거리"
+        },
+        {
+          "es": "acera",
+          "ko": "인도"
+        },
+        {
+          "es": "parque",
+          "ko": "공원"
+        },
+        {
+          "es": "plaza",
+          "ko": "광장"
+        },
+        {
+          "es": "farmacia",
+          "ko": "약국"
+        },
+        {
+          "es": "panadería",
+          "ko": "빵집"
+        },
+        {
+          "es": "peluquería",
+          "ko": "미용실"
+        },
+        {
+          "es": "lavandería",
+          "ko": "세탁소"
+        }
+      ]
+    },
+    {
+      "stage": 31,
+      "category": "에피소드 3 · 세트 9",
+      "type": "learning",
+      "words": [
+        {
+          "es": "biblioteca",
+          "ko": "도서관"
+        },
+        {
+          "es": "iglesia",
+          "ko": "교회"
+        },
+        {
+          "es": "ayuntamiento",
+          "ko": "시청"
+        },
+        {
+          "es": "gasolinera",
+          "ko": "주유소"
+        },
+        {
+          "es": "estacionamiento",
+          "ko": "주차장"
+        },
+        {
+          "es": "emergencia",
+          "ko": "비상"
+        },
+        {
+          "es": "incendio",
+          "ko": "화재"
+        },
+        {
+          "es": "bombero",
+          "ko": "소방관"
+        },
+        {
+          "es": "policía",
+          "ko": "경찰"
+        },
+        {
+          "es": "ambulancia",
+          "ko": "구급차"
+        }
+      ]
+    },
+    {
+      "stage": 32,
+      "category": "에피소드 3 · 세트 10",
+      "type": "learning",
+      "words": [
+        {
+          "es": "hospital",
+          "ko": "병원"
+        },
+        {
+          "es": "primeros auxilios",
+          "ko": "응급처치"
+        },
+        {
+          "es": "extintor",
+          "ko": "소화기"
+        },
+        {
+          "es": "alarma de incendio",
+          "ko": "화재경보기"
+        },
+        {
+          "es": "salida de emergencia",
+          "ko": "비상구"
+        },
+        {
+          "es": "peligro",
+          "ko": "위험"
+        },
+        {
+          "es": "seguro",
+          "ko": "안전한"
+        },
+        {
+          "es": "accidente",
+          "ko": "사고"
+        },
+        {
+          "es": "robo",
+          "ko": "도둑질"
+        },
+        {
+          "es": "rescate",
+          "ko": "구조"
+        }
+      ]
+    },
+    {
+      "stage": 33,
+      "category": "에피소드 3 보스 · 누적 복습",
+      "type": "boss",
+      "words": [
+        {
+          "es": "brocha",
+          "ko": "붓"
+        },
+        {
+          "es": "cinta adhesiva",
+          "ko": "테이프"
+        },
+        {
+          "es": "pegamento",
+          "ko": "접착제"
+        },
+        {
+          "es": "llave inglesa",
+          "ko": "렌치"
+        },
+        {
+          "es": "sierra",
+          "ko": "톱"
+        },
+        {
+          "es": "taladro",
+          "ko": "드릴"
+        },
+        {
+          "es": "reparar",
+          "ko": "수리하다"
+        },
+        {
+          "es": "arreglar",
+          "ko": "고치다"
+        },
+        {
+          "es": "construir",
+          "ko": "짓다"
+        },
+        {
+          "es": "medir",
+          "ko": "측정하다"
+        },
+        {
+          "es": "bolígrafo",
+          "ko": "볼펜"
+        },
+        {
+          "es": "lápiz",
+          "ko": "연필"
+        },
+        {
+          "es": "cuaderno",
+          "ko": "공책"
+        },
+        {
+          "es": "tijeras",
+          "ko": "가위"
+        },
+        {
+          "es": "goma de borrar",
+          "ko": "지우개"
+        },
+        {
+          "es": "regla",
+          "ko": "자"
+        },
+        {
+          "es": "grapadora",
+          "ko": "스테이플러"
+        },
+        {
+          "es": "sobre",
+          "ko": "봉투"
+        },
+        {
+          "es": "papel",
+          "ko": "종이"
+        },
+        {
+          "es": "carpeta",
+          "ko": "폴더"
+        },
+        {
+          "es": "mochila",
+          "ko": "배낭"
+        },
+        {
+          "es": "paraguas",
+          "ko": "우산"
+        },
+        {
+          "es": "llave",
+          "ko": "열쇠"
+        },
+        {
+          "es": "gafas",
+          "ko": "안경"
+        },
+        {
+          "es": "pañuelo",
+          "ko": "손수건"
+        },
+        {
+          "es": "sol",
+          "ko": "태양"
+        },
+        {
+          "es": "lluvia",
+          "ko": "비"
+        },
+        {
+          "es": "nieve",
+          "ko": "눈"
+        },
+        {
+          "es": "viento",
+          "ko": "바람"
+        },
+        {
+          "es": "nube",
+          "ko": "구름"
+        },
+        {
+          "es": "tormenta",
+          "ko": "폭풍"
+        },
+        {
+          "es": "trueno",
+          "ko": "천둥"
+        },
+        {
+          "es": "relámpago",
+          "ko": "번개"
+        },
+        {
+          "es": "niebla",
+          "ko": "안개"
+        },
+        {
+          "es": "calor",
+          "ko": "더위"
+        },
+        {
+          "es": "frío",
+          "ko": "추위"
+        },
+        {
+          "es": "temperatura",
+          "ko": "온도"
+        },
+        {
+          "es": "húmedo",
+          "ko": "습한"
+        },
+        {
+          "es": "seco",
+          "ko": "건조한"
+        },
+        {
+          "es": "pronóstico",
+          "ko": "일기예보"
+        },
+        {
+          "es": "llamada",
+          "ko": "전화 통화"
+        },
+        {
+          "es": "mensaje",
+          "ko": "메시지"
+        },
+        {
+          "es": "celular",
+          "ko": "휴대폰"
+        },
+        {
+          "es": "número",
+          "ko": "번호"
+        },
+        {
+          "es": "contestar",
+          "ko": "응답하다"
+        },
+        {
+          "es": "colgar",
+          "ko": "전화를 끊다"
+        },
+        {
+          "es": "marcar",
+          "ko": "전화를 걸다"
+        },
+        {
+          "es": "correo electrónico",
+          "ko": "이메일"
+        },
+        {
+          "es": "internet",
+          "ko": "인터넷"
+        },
+        {
+          "es": "contraseña",
+          "ko": "비밀번호"
+        },
+        {
+          "es": "aplicación",
+          "ko": "앱"
+        },
+        {
+          "es": "pantalla",
+          "ko": "화면"
+        },
+        {
+          "es": "cargador",
+          "ko": "충전기"
+        },
+        {
+          "es": "señal",
+          "ko": "신호"
+        },
+        {
+          "es": "wifi",
+          "ko": "와이파이"
+        },
+        {
+          "es": "carta",
+          "ko": "편지"
+        },
+        {
+          "es": "paquete",
+          "ko": "소포"
+        },
+        {
+          "es": "sello",
+          "ko": "우표"
+        },
+        {
+          "es": "correo",
+          "ko": "우편"
+        },
+        {
+          "es": "cartero",
+          "ko": "우체부"
+        },
+        {
+          "es": "oficina de correos",
+          "ko": "우체국"
+        },
+        {
+          "es": "dirección",
+          "ko": "주소"
+        },
+        {
+          "es": "remitente",
+          "ko": "발신인"
+        },
+        {
+          "es": "destinatario",
+          "ko": "수신인"
+        },
+        {
+          "es": "enviar",
+          "ko": "보내다"
+        },
+        {
+          "es": "recibir",
+          "ko": "받다"
+        },
+        {
+          "es": "entrega",
+          "ko": "배달"
+        },
+        {
+          "es": "repartidor",
+          "ko": "배달원"
+        },
+        {
+          "es": "código postal",
+          "ko": "우편번호"
+        },
+        {
+          "es": "firmar",
+          "ko": "서명하다"
+        },
+        {
+          "es": "vecino",
+          "ko": "이웃"
+        },
+        {
+          "es": "barrio",
+          "ko": "동네"
+        },
+        {
+          "es": "calle",
+          "ko": "거리"
+        },
+        {
+          "es": "acera",
+          "ko": "인도"
+        },
+        {
+          "es": "parque",
+          "ko": "공원"
+        },
+        {
+          "es": "plaza",
+          "ko": "광장"
+        },
+        {
+          "es": "farmacia",
+          "ko": "약국"
+        },
+        {
+          "es": "panadería",
+          "ko": "빵집"
+        },
+        {
+          "es": "peluquería",
+          "ko": "미용실"
+        },
+        {
+          "es": "lavandería",
+          "ko": "세탁소"
+        },
+        {
+          "es": "biblioteca",
+          "ko": "도서관"
+        },
+        {
+          "es": "iglesia",
+          "ko": "교회"
+        },
+        {
+          "es": "ayuntamiento",
+          "ko": "시청"
+        },
+        {
+          "es": "gasolinera",
+          "ko": "주유소"
+        },
+        {
+          "es": "estacionamiento",
+          "ko": "주차장"
+        },
+        {
+          "es": "emergencia",
+          "ko": "비상"
+        },
+        {
+          "es": "incendio",
+          "ko": "화재"
+        },
+        {
+          "es": "bombero",
+          "ko": "소방관"
+        },
+        {
+          "es": "policía",
+          "ko": "경찰"
+        },
+        {
+          "es": "ambulancia",
+          "ko": "구급차"
+        },
+        {
+          "es": "hospital",
+          "ko": "병원"
+        },
+        {
+          "es": "primeros auxilios",
+          "ko": "응급처치"
+        },
+        {
+          "es": "extintor",
+          "ko": "소화기"
+        },
+        {
+          "es": "alarma de incendio",
+          "ko": "화재경보기"
+        },
+        {
+          "es": "salida de emergencia",
+          "ko": "비상구"
+        },
+        {
+          "es": "peligro",
+          "ko": "위험"
+        },
+        {
+          "es": "seguro",
+          "ko": "안전한"
+        },
+        {
+          "es": "accidente",
+          "ko": "사고"
+        },
+        {
+          "es": "robo",
+          "ko": "도둑질"
+        },
+        {
+          "es": "rescate",
+          "ko": "구조"
+        }
       ]
     }
-  ]
+  ],
+  "episodeStructure": {
+    "episodes": 3,
+    "learningStagesPerEpisode": 10,
+    "bossStageInterval": 11,
+    "newWordsPerLearningStage": 10,
+    "newWordsPerEpisode": 100
+  }
 }
