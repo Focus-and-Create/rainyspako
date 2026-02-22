@@ -103,17 +103,19 @@ const Game = {
         // 캔버스 및 컨텍스트 저장
         this.canvas = canvas;
         this.ctx = canvas.getContext('2d');
-        
-        // 캔버스 크기 설정
-        this.canvas.width = CONFIG.CANVAS.WIDTH;
-        this.canvas.height = CONFIG.CANVAS.HEIGHT;
-        
+
+        // HiDPI 캔버스 설정 (Retina 디스플레이 지원)
+        const dpr = window.devicePixelRatio || 1;
+        this.canvas.width = CONFIG.CANVAS.WIDTH * dpr;
+        this.canvas.height = CONFIG.CANVAS.HEIGHT * dpr;
+        this.ctx.scale(dpr, dpr);
+
         // 폰트 설정
         this.ctx.font = `${CONFIG.RENDER.WORD_FONT_SIZE}px ${CONFIG.RENDER.FONT_FAMILY}`;
         this.ctx.textAlign = 'center';
         this.ctx.textBaseline = 'middle';
-        
-        console.log('Game: 초기화 완료');
+
+        console.log('Game: 초기화 완료 (DPR:', dpr + ')');
     },
 
     // =========================================

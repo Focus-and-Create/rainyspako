@@ -53,18 +53,20 @@ const StageMap = {
         // 캔버스 및 컨텍스트 저장
         this.canvas = canvas;
         this.ctx = canvas.getContext('2d');
-        
-        // 캔버스 크기 설정
-        this.canvas.width = CONFIG.CANVAS.WIDTH;
-        this.canvas.height = CONFIG.CANVAS.HEIGHT;
-        
+
+        // HiDPI 캔버스 설정 (Retina 디스플레이 지원)
+        const dpr = window.devicePixelRatio || 1;
+        this.canvas.width = CONFIG.CANVAS.WIDTH * dpr;
+        this.canvas.height = CONFIG.CANVAS.HEIGHT * dpr;
+        this.ctx.scale(dpr, dpr);
+
         // 이벤트 리스너 등록
         this.setupEventListeners();
-        
+
         // 노드 위치 계산
         this.calculateNodePositions();
-        
-        console.log('StageMap: 초기화 완료');
+
+        console.log('StageMap: 초기화 완료 (DPR:', dpr + ')');
     },
     
     /**
@@ -107,70 +109,53 @@ const StageMap = {
     // 노드 위치 계산
     // =========================================
     
+    /** @type {number} 한 행당 노드 수 */
+    COLS: 5,
+
     /**
-     * 스테이지 노드 위치 계산
+     * 스테이지 노드 위치 계산 (뱀 형태 - 한 화면에 모두 표시)
      */
     calculateNodePositions: function() {
         this.nodePositions = [];
-        
-        // 현재 월드 설정 가져오기
+
         const world = getWorldConfig(this.currentWorldId);
         if (!world) return;
-        
-        // 맵 설정
-        const startY = 100;                           // 시작 Y 위치
-        const spacing = CONFIG.MAP.NODE_SPACING_Y;    // 노드 간 Y 간격
-        const centerX = CONFIG.CANVAS.WIDTH / 2;      // 중앙 X
-        const waveAmplitude = 80;                     // 좌우 흔들림 폭
-        
-        // 각 스테이지의 노드 위치 계산
-        for (let i = 1; i <= world.stages; i++) {
-            // 지그재그 패턴으로 X 좌표 계산
-            const waveOffset = Math.sin((i - 1) * 0.5) * waveAmplitude;
-            
-            const node = {
+
+        const totalStages = world.stages;
+        const cols = this.COLS;
+        const rows = Math.ceil(totalStages / cols);
+
+        const W = CONFIG.CANVAS.WIDTH;
+        const H = CONFIG.CANVAS.HEIGHT;
+        const padX = 95;
+        const topY = 90;
+        const botY = H - 65;
+
+        const colSpacing = (W - padX * 2) / (cols - 1);
+        const rowSpacing = rows > 1 ? (botY - topY) / (rows - 1) : 0;
+
+        for (let i = 0; i < totalStages; i++) {
+            const row = Math.floor(i / cols);
+            const col = i % cols;
+            const isReversed = row % 2 !== 0;
+            const actualCol = isReversed ? (cols - 1 - col) : col;
+
+            // 미세한 파도 오프셋 (구불구불한 느낌)
+            const t = cols > 1 ? actualCol / (cols - 1) : 0.5;
+            const rowWave = Math.sin(t * Math.PI) * 6 * (isReversed ? -1 : 1);
+
+            this.nodePositions.push({
                 worldId: this.currentWorldId,
-                stageNum: i,
-                x: centerX + waveOffset,
-                y: startY + (i - 1) * spacing,
+                stageNum: i + 1,
+                x: padX + actualCol * colSpacing,
+                y: topY + row * rowSpacing + rowWave,
                 radius: CONFIG.MAP.NODE_RADIUS
-            };
-            
-            this.nodePositions.push(node);
+            });
         }
-        
-        // 최대 스크롤 값 계산
-        const totalHeight = startY + world.stages * spacing;
-        this.maxScrollY = Math.max(0, totalHeight - CONFIG.CANVAS.HEIGHT + 100);
-        
-        // 스크롤을 현재 진행 위치로 이동
-        this.scrollToCurrentProgress();
-    },
-    
-    /**
-     * 현재 진행 위치로 스크롤
-     */
-    scrollToCurrentProgress: function() {
-        // 현재 진행 상황 가져오기
-        const progress = Storage.getCurrentProgress();
-        
-        // 현재 월드가 맞으면 해당 스테이지로 스크롤
-        if (progress.worldId === this.currentWorldId) {
-            const targetNode = this.nodePositions.find(
-                n => n.stageNum === progress.stageNum
-            );
-            
-            if (targetNode) {
-                // 노드가 화면 중앙에 오도록 스크롤
-                this.scrollY = Math.max(
-                    0,
-                    Math.min(
-                        targetNode.y - CONFIG.CANVAS.HEIGHT / 2,
-                        this.maxScrollY
-                    )
-                );
-            }
-        }
+
+        // 한 화면에 모두 표시 - 스크롤 불필요
+        this.maxScrollY = 0;
+        this.scrollY = 0;
     },
 
     // =========================================
@@ -178,64 +163,71 @@ const StageMap = {
     // =========================================
     
     /**
+     * CSS 좌표를 논리 좌표로 변환
+     */
+    _toLogical: function(e) {
+        const rect = this.canvas.getBoundingClientRect();
+        const scaleX = CONFIG.CANVAS.WIDTH / rect.width;
+        const scaleY = CONFIG.CANVAS.HEIGHT / rect.height;
+        return {
+            x: (e.clientX - rect.left) * scaleX,
+            y: (e.clientY - rect.top) * scaleY
+        };
+    },
+
+    /**
      * 클릭 이벤트 처리
      * @param {MouseEvent} e - 마우스 이벤트
      */
     handleClick: function(e) {
-        // 캔버스 내 좌표 계산
-        const rect = this.canvas.getBoundingClientRect();
-        const x = e.clientX - rect.left;
-        const y = e.clientY - rect.top + this.scrollY;
-        
-        // 월드 전환 화살표 체크 (넓은 클릭 영역)
-        if (y < 80) {
-            // 이전 월드 화살표
-            if (x < 80 && this.currentWorldId > 1) {
+        const { x, y } = this._toLogical(e);
+
+        // 월드 전환 화살표 체크 (헤더 영역, 고정)
+        if (y < 65) {
+            if (x < 65 && this.currentWorldId > 1) {
                 this.prevWorld();
                 return;
             }
-            // 다음 월드 화살표
-            if (x > CONFIG.CANVAS.WIDTH - 80 && this.currentWorldId < CONFIG.WORLDS.length) {
+            if (x > CONFIG.CANVAS.WIDTH - 65 && this.currentWorldId < CONFIG.WORLDS.length) {
                 this.nextWorld();
                 return;
             }
         }
-        
-        // 클릭된 노드 찾기
+
+        // 스크롤 적용된 좌표로 노드 찾기
+        const sy = y + this.scrollY;
+
         const clickedNode = this.nodePositions.find(node => {
             const dx = x - node.x;
-            const dy = y - node.y;
-            const distance = Math.sqrt(dx * dx + dy * dy);
-            return distance <= node.radius + 15; // 넉넉한 클릭 영역
+            const dy = sy - node.y;
+            return Math.sqrt(dx * dx + dy * dy) <= node.radius + 15;
         });
-        
+
         if (clickedNode) {
             this.handleNodeClick(clickedNode);
         }
     },
-    
+
     /**
      * 마우스 이동 처리 (커서 변경)
      * @param {MouseEvent} e - 마우스 이벤트
      */
     handleMouseMove: function(e) {
-        const rect = this.canvas.getBoundingClientRect();
-        const x = e.clientX - rect.left;
-        const y = e.clientY - rect.top + this.scrollY;
-
+        const { x, y } = this._toLogical(e);
         let isOverClickable = false;
 
         // 월드 전환 화살표 체크
-        if (y - this.scrollY < 60) {
-            if (x < 70 && this.currentWorldId > 1) isOverClickable = true;
-            if (x > CONFIG.CANVAS.WIDTH - 70 && this.currentWorldId < CONFIG.WORLDS.length) isOverClickable = true;
+        if (y < 65) {
+            if (x < 65 && this.currentWorldId > 1) isOverClickable = true;
+            if (x > CONFIG.CANVAS.WIDTH - 65 && this.currentWorldId < CONFIG.WORLDS.length) isOverClickable = true;
         }
 
         // 노드 호버 체크
         if (!isOverClickable) {
+            const sy = y + this.scrollY;
             const hovered = this.nodePositions.find(node => {
                 const dx = x - node.x;
-                const dy = y - node.y;
+                const dy = sy - node.y;
                 return Math.sqrt(dx * dx + dy * dy) <= node.radius + 15;
             });
             if (hovered && Storage.isStageUnlocked(hovered.worldId, hovered.stageNum)) {
@@ -351,14 +343,10 @@ const StageMap = {
         // 배경 그라데이션
         const bgGrad = ctx.createLinearGradient(0, 0, 0, H);
         bgGrad.addColorStop(0, '#080b1a');
-        bgGrad.addColorStop(0.5, '#0f172a');
+        bgGrad.addColorStop(0.4, '#0f172a');
         bgGrad.addColorStop(1, '#111827');
         ctx.fillStyle = bgGrad;
         ctx.fillRect(0, 0, W, H);
-
-        // 스크롤 변환 적용
-        ctx.save();
-        ctx.translate(0, -this.scrollY);
 
         // 경로 그리기
         this.renderPaths();
@@ -366,77 +354,60 @@ const StageMap = {
         // 노드 그리기
         this.renderNodes();
 
-        // 변환 복원
-        ctx.restore();
-
-        // 상하 페이드 (위쪽)
-        const topFade = ctx.createLinearGradient(0, 0, 0, 80);
-        topFade.addColorStop(0, '#080b1a');
-        topFade.addColorStop(1, 'rgba(8, 11, 26, 0)');
-        ctx.fillStyle = topFade;
-        ctx.fillRect(0, 0, W, 80);
-
-        // 상하 페이드 (아래쪽)
-        const botFade = ctx.createLinearGradient(0, H - 40, 0, H);
-        botFade.addColorStop(0, 'rgba(8, 11, 26, 0)');
-        botFade.addColorStop(1, '#080b1a');
-        ctx.fillStyle = botFade;
-        ctx.fillRect(0, H - 40, W, 40);
+        // 헤더 배경 (노드 위에 오버레이)
+        const headerFade = ctx.createLinearGradient(0, 0, 0, 70);
+        headerFade.addColorStop(0, 'rgba(8, 11, 26, 0.95)');
+        headerFade.addColorStop(1, 'rgba(8, 11, 26, 0)');
+        ctx.fillStyle = headerFade;
+        ctx.fillRect(0, 0, W, 70);
 
         // 월드 헤더 (고정 위치)
         this.renderWorldHeader(world);
     },
     
     /**
-     * 경로 렌더링
+     * 경로 렌더링 (뱀 레이아웃)
      */
     renderPaths: function() {
         const ctx = this.ctx;
-
-        // 노드가 2개 미만이면 경로 없음
         if (this.nodePositions.length < 2) return;
 
-        // 배경 경로 (어둡게)
-        ctx.strokeStyle = 'rgba(255, 255, 255, 0.04)';
-        ctx.lineWidth = CONFIG.MAP.PATH_WIDTH + 6;
+        // 배경 경로 (글로우)
+        ctx.save();
+        ctx.strokeStyle = 'rgba(255, 255, 255, 0.03)';
+        ctx.lineWidth = 10;
         ctx.lineCap = 'round';
         ctx.lineJoin = 'round';
-        this._drawPathCurve(ctx);
+        this._drawSnakePath(ctx);
         ctx.stroke();
+        ctx.restore();
 
         // 메인 경로
-        ctx.strokeStyle = 'rgba(255, 255, 255, 0.08)';
-        ctx.lineWidth = CONFIG.MAP.PATH_WIDTH;
+        ctx.save();
+        ctx.strokeStyle = 'rgba(255, 255, 255, 0.07)';
+        ctx.lineWidth = 3;
         ctx.lineCap = 'round';
         ctx.lineJoin = 'round';
-        this._drawPathCurve(ctx);
+        this._drawSnakePath(ctx);
         ctx.stroke();
+        ctx.restore();
 
-        // 클리어된 구간은 accent 색상으로 오버레이
+        // 클리어된 구간 오버레이
         const world = getWorldConfig(this.currentWorldId);
         if (world) {
             let lastClearedIdx = -1;
             for (let i = 0; i < this.nodePositions.length; i++) {
                 const stageId = getStageId(this.nodePositions[i].worldId, this.nodePositions[i].stageNum);
                 const result = Storage.getStageResult(stageId);
-                if (result && result.stars > 0) {
-                    lastClearedIdx = i;
-                }
+                if (result && result.stars > 0) lastClearedIdx = i;
             }
             if (lastClearedIdx >= 0) {
                 ctx.save();
-                ctx.strokeStyle = world.color + '40'; // 25% opacity
-                ctx.lineWidth = CONFIG.MAP.PATH_WIDTH;
+                ctx.strokeStyle = world.color + '40';
+                ctx.lineWidth = 3;
                 ctx.lineCap = 'round';
-                // 클리어된 구간만 그리기
-                ctx.beginPath();
-                ctx.moveTo(this.nodePositions[0].x, this.nodePositions[0].y);
-                for (let i = 1; i <= lastClearedIdx; i++) {
-                    const prev = this.nodePositions[i - 1];
-                    const curr = this.nodePositions[i];
-                    const midY = (prev.y + curr.y) / 2;
-                    ctx.bezierCurveTo(prev.x, midY, curr.x, midY, curr.x, curr.y);
-                }
+                ctx.lineJoin = 'round';
+                this._drawSnakePath(ctx, lastClearedIdx);
                 ctx.stroke();
                 ctx.restore();
             }
@@ -444,16 +415,32 @@ const StageMap = {
     },
 
     /**
-     * 경로 곡선 헬퍼
+     * 뱀 형태 경로 그리기 헬퍼
+     * @param {CanvasRenderingContext2D} ctx
+     * @param {number} [endIdx] - 여기까지만 그림 (미지정 시 전체)
      */
-    _drawPathCurve: function(ctx) {
+    _drawSnakePath: function(ctx, endIdx) {
+        const cols = this.COLS;
+        const last = endIdx !== undefined ? endIdx : this.nodePositions.length - 1;
+
         ctx.beginPath();
         ctx.moveTo(this.nodePositions[0].x, this.nodePositions[0].y);
-        for (let i = 1; i < this.nodePositions.length; i++) {
+
+        for (let i = 1; i <= last; i++) {
             const prev = this.nodePositions[i - 1];
             const curr = this.nodePositions[i];
-            const midY = (prev.y + curr.y) / 2;
-            ctx.bezierCurveTo(prev.x, midY, curr.x, midY, curr.x, curr.y);
+            const isRowTransition = Math.floor((i - 1) / cols) !== Math.floor(i / cols);
+
+            if (isRowTransition) {
+                // 행 사이 U턴: 부드러운 S커브
+                const midY = (prev.y + curr.y) / 2;
+                ctx.bezierCurveTo(prev.x, midY, curr.x, midY, curr.x, curr.y);
+            } else {
+                // 같은 행: 살짝 아치형 커브
+                const midX = (prev.x + curr.x) / 2;
+                const curveAmt = -6;
+                ctx.quadraticCurveTo(midX, (prev.y + curr.y) / 2 + curveAmt, curr.x, curr.y);
+            }
         }
     },
     
@@ -543,7 +530,7 @@ const StageMap = {
             ctx.stroke();
 
             // 스테이지 번호 텍스트
-            ctx.font = `bold 15px ${CONFIG.RENDER.FONT_FAMILY}`;
+            ctx.font = `bold 13px ${CONFIG.RENDER.FONT_FAMILY}`;
             ctx.fillStyle = textColor;
             ctx.textAlign = 'center';
             ctx.textBaseline = 'middle';
@@ -551,29 +538,29 @@ const StageMap = {
 
             // 별점 표시 (클리어한 경우)
             if (result && result.stars > 0) {
-                this.renderStars(node.x, node.y + node.radius + 14, result.stars);
+                this.renderStars(node.x, node.y + node.radius + 11, result.stars);
             }
 
             // 잠금 아이콘 (잠긴 경우)
             if (!isUnlocked) {
-                this.renderLockIcon(node.x, node.y - node.radius - 10);
+                this.renderLockIcon(node.x, node.y - node.radius - 8);
             }
 
             // 복습 스테이지 표시
             if (isReview && isUnlocked) {
-                this.renderReviewBadge(node.x + node.radius, node.y - node.radius);
+                this.renderReviewBadge(node.x + node.radius - 2, node.y - node.radius + 2);
             }
 
-            // 카테고리 라벨
+            // 카테고리 라벨 (컴팩트)
             {
                 const labelY = result && result.stars > 0
-                    ? node.y + node.radius + 28
-                    : node.y + node.radius + 18;
+                    ? node.y + node.radius + 22
+                    : node.y + node.radius + 14;
                 const categoryLabel = isReview
-                    ? '복습 스테이지'
+                    ? '복습'
                     : WordManager.getStageCategory(node.worldId, node.stageNum);
 
-                ctx.font = `11px ${CONFIG.RENDER.FONT_FAMILY}`;
+                ctx.font = `10px ${CONFIG.RENDER.FONT_FAMILY}`;
                 ctx.fillStyle = isReview ? '#fca5a5' : (isUnlocked ? '#64748b' : '#334155');
                 ctx.textAlign = 'center';
                 ctx.fillText(categoryLabel, node.x, labelY);
@@ -601,8 +588,8 @@ const StageMap = {
      */
     renderStars: function(x, y, stars) {
         const ctx = this.ctx;
-        const size = 5;
-        const gap = 13;
+        const size = 4;
+        const gap = 11;
         const startX = x - gap;
 
         for (let i = 0; i < 3; i++) {
@@ -689,8 +676,8 @@ const StageMap = {
 
         // R 배지
         ctx.beginPath();
-        ctx.arc(x, y, 10, 0, Math.PI * 2);
-        const badgeGrad = ctx.createLinearGradient(x, y - 10, x, y + 10);
+        ctx.arc(x, y, 8, 0, Math.PI * 2);
+        const badgeGrad = ctx.createLinearGradient(x, y - 8, x, y + 8);
         badgeGrad.addColorStop(0, '#ef4444');
         badgeGrad.addColorStop(1, '#dc2626');
         ctx.fillStyle = badgeGrad;
@@ -699,7 +686,7 @@ const StageMap = {
         ctx.lineWidth = 1;
         ctx.stroke();
 
-        ctx.font = `bold 11px ${CONFIG.RENDER.FONT_FAMILY}`;
+        ctx.font = `bold 9px ${CONFIG.RENDER.FONT_FAMILY}`;
         ctx.fillStyle = '#ffffff';
         ctx.textAlign = 'center';
         ctx.textBaseline = 'middle';
