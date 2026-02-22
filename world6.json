@@ -5,403 +5,2641 @@
   "stages": [
     {
       "stage": 1,
+      "category": "에피소드 1 · 세트 1",
+      "type": "learning",
       "words": [
-        { "es": "comida", "ko": "음식" },
-        { "es": "desayuno", "ko": "아침 식사" },
-        { "es": "almuerzo", "ko": "점심 식사" },
-        { "es": "cena", "ko": "저녁 식사" },
-        { "es": "merienda", "ko": "간식" },
-        { "es": "hambre", "ko": "배고픔" },
-        { "es": "sed", "ko": "갈증" },
-        { "es": "apetito", "ko": "식욕" },
-        { "es": "plato", "ko": "접시" },
-        { "es": "porción", "ko": "1인분" },
-        { "es": "receta", "ko": "레시피" },
-        { "es": "ingrediente", "ko": "재료" },
-        { "es": "menú", "ko": "메뉴" },
-        { "es": "dieta", "ko": "식단" },
-        { "es": "nutrición", "ko": "영양" }
+        {
+          "es": "comida",
+          "ko": "음식"
+        },
+        {
+          "es": "desayuno",
+          "ko": "아침 식사"
+        },
+        {
+          "es": "almuerzo",
+          "ko": "점심 식사"
+        },
+        {
+          "es": "cena",
+          "ko": "저녁 식사"
+        },
+        {
+          "es": "merienda",
+          "ko": "간식"
+        },
+        {
+          "es": "hambre",
+          "ko": "배고픔"
+        },
+        {
+          "es": "sed",
+          "ko": "갈증"
+        },
+        {
+          "es": "apetito",
+          "ko": "식욕"
+        },
+        {
+          "es": "plato",
+          "ko": "접시"
+        },
+        {
+          "es": "porción",
+          "ko": "1인분"
+        }
       ]
     },
     {
       "stage": 2,
+      "category": "에피소드 1 · 세트 2",
+      "type": "learning",
       "words": [
-        { "es": "carne", "ko": "고기" },
-        { "es": "pollo", "ko": "닭고기" },
-        { "es": "cerdo", "ko": "돼지고기" },
-        { "es": "res", "ko": "소고기" },
-        { "es": "cordero", "ko": "양고기" },
-        { "es": "pavo", "ko": "칠면조 고기" },
-        { "es": "jamón", "ko": "햄" },
-        { "es": "tocino", "ko": "베이컨" },
-        { "es": "salchicha", "ko": "소시지" },
-        { "es": "bistec", "ko": "스테이크" },
-        { "es": "chuleta", "ko": "갈비" },
-        { "es": "costilla", "ko": "등갈비" },
-        { "es": "pechuga", "ko": "가슴살" },
-        { "es": "carne molida", "ko": "다진 고기" },
-        { "es": "filete", "ko": "필레" }
+        {
+          "es": "receta",
+          "ko": "레시피"
+        },
+        {
+          "es": "ingrediente",
+          "ko": "재료"
+        },
+        {
+          "es": "menú",
+          "ko": "메뉴"
+        },
+        {
+          "es": "dieta",
+          "ko": "식단"
+        },
+        {
+          "es": "nutrición",
+          "ko": "영양"
+        },
+        {
+          "es": "carne",
+          "ko": "고기"
+        },
+        {
+          "es": "pollo",
+          "ko": "닭고기"
+        },
+        {
+          "es": "cerdo",
+          "ko": "돼지고기"
+        },
+        {
+          "es": "res",
+          "ko": "소고기"
+        },
+        {
+          "es": "cordero",
+          "ko": "양고기"
+        }
       ]
     },
     {
       "stage": 3,
+      "category": "에피소드 1 · 세트 3",
+      "type": "learning",
       "words": [
-        { "es": "pescado", "ko": "생선" },
-        { "es": "marisco", "ko": "해산물" },
-        { "es": "camarón", "ko": "새우" },
-        { "es": "atún", "ko": "참치" },
-        { "es": "salmón", "ko": "연어" },
-        { "es": "pulpo", "ko": "문어" },
-        { "es": "calamar", "ko": "오징어" },
-        { "es": "langosta", "ko": "랍스터" },
-        { "es": "cangrejo", "ko": "게" },
-        { "es": "almeja", "ko": "조개" },
-        { "es": "mejillón", "ko": "홍합" },
-        { "es": "ostra", "ko": "굴" },
-        { "es": "sardina", "ko": "정어리" },
-        { "es": "bacalao", "ko": "대구" },
-        { "es": "anchoa", "ko": "멸치" }
+        {
+          "es": "pavo",
+          "ko": "칠면조 고기"
+        },
+        {
+          "es": "jamón",
+          "ko": "햄"
+        },
+        {
+          "es": "tocino",
+          "ko": "베이컨"
+        },
+        {
+          "es": "salchicha",
+          "ko": "소시지"
+        },
+        {
+          "es": "bistec",
+          "ko": "스테이크"
+        },
+        {
+          "es": "chuleta",
+          "ko": "갈비"
+        },
+        {
+          "es": "costilla",
+          "ko": "등갈비"
+        },
+        {
+          "es": "pechuga",
+          "ko": "가슴살"
+        },
+        {
+          "es": "carne molida",
+          "ko": "다진 고기"
+        },
+        {
+          "es": "filete",
+          "ko": "필레"
+        }
       ]
     },
     {
       "stage": 4,
+      "category": "에피소드 1 · 세트 4",
+      "type": "learning",
       "words": [
-        { "es": "leche", "ko": "우유" },
-        { "es": "queso", "ko": "치즈" },
-        { "es": "yogur", "ko": "요거트" },
-        { "es": "mantequilla", "ko": "버터" },
-        { "es": "crema", "ko": "크림" },
-        { "es": "huevo", "ko": "달걀" },
-        { "es": "yema", "ko": "노른자" },
-        { "es": "clara", "ko": "흰자" },
-        { "es": "nata", "ko": "생크림" },
-        { "es": "helado", "ko": "아이스크림" },
-        { "es": "batido", "ko": "밀크셰이크" },
-        { "es": "requesón", "ko": "리코타 치즈" },
-        { "es": "suero", "ko": "유청" },
-        { "es": "cuajada", "ko": "커드" },
-        { "es": "lácteo", "ko": "유제품" }
+        {
+          "es": "pescado",
+          "ko": "생선"
+        },
+        {
+          "es": "marisco",
+          "ko": "해산물"
+        },
+        {
+          "es": "camarón",
+          "ko": "새우"
+        },
+        {
+          "es": "atún",
+          "ko": "참치"
+        },
+        {
+          "es": "salmón",
+          "ko": "연어"
+        },
+        {
+          "es": "pulpo",
+          "ko": "문어"
+        },
+        {
+          "es": "calamar",
+          "ko": "오징어"
+        },
+        {
+          "es": "langosta",
+          "ko": "랍스터"
+        },
+        {
+          "es": "cangrejo",
+          "ko": "게"
+        },
+        {
+          "es": "almeja",
+          "ko": "조개"
+        }
       ]
     },
     {
       "stage": 5,
+      "category": "에피소드 1 · 세트 5",
+      "type": "learning",
       "words": [
-        { "es": "pan", "ko": "빵" },
-        { "es": "arroz", "ko": "쌀" },
-        { "es": "trigo", "ko": "밀" },
-        { "es": "harina", "ko": "밀가루" },
-        { "es": "maíz", "ko": "옥수수" },
-        { "es": "avena", "ko": "귀리" },
-        { "es": "cereal", "ko": "시리얼" },
-        { "es": "pasta", "ko": "파스타" },
-        { "es": "fideos", "ko": "국수" },
-        { "es": "galleta", "ko": "과자" },
-        { "es": "tostada", "ko": "토스트" },
-        { "es": "masa", "ko": "반죽" },
-        { "es": "centeno", "ko": "호밀" },
-        { "es": "cebada", "ko": "보리" },
-        { "es": "tortilla de maíz", "ko": "옥수수 토르티야" }
+        {
+          "es": "mejillón",
+          "ko": "홍합"
+        },
+        {
+          "es": "ostra",
+          "ko": "굴"
+        },
+        {
+          "es": "sardina",
+          "ko": "정어리"
+        },
+        {
+          "es": "bacalao",
+          "ko": "대구"
+        },
+        {
+          "es": "anchoa",
+          "ko": "멸치"
+        },
+        {
+          "es": "leche",
+          "ko": "우유"
+        },
+        {
+          "es": "queso",
+          "ko": "치즈"
+        },
+        {
+          "es": "yogur",
+          "ko": "요거트"
+        },
+        {
+          "es": "mantequilla",
+          "ko": "버터"
+        },
+        {
+          "es": "crema",
+          "ko": "크림"
+        }
       ]
     },
     {
       "stage": 6,
+      "category": "에피소드 1 · 세트 6",
+      "type": "learning",
       "words": [
-        { "es": "fruta", "ko": "과일" },
-        { "es": "manzana", "ko": "사과" },
-        { "es": "plátano", "ko": "바나나" },
-        { "es": "naranja", "ko": "오렌지" },
-        { "es": "uva", "ko": "포도" },
-        { "es": "fresa", "ko": "딸기" },
-        { "es": "limón", "ko": "레몬" },
-        { "es": "sandía", "ko": "수박" },
-        { "es": "melón", "ko": "멜론" },
-        { "es": "piña", "ko": "파인애플" },
-        { "es": "durazno", "ko": "복숭아" },
-        { "es": "pera", "ko": "배" },
-        { "es": "cereza", "ko": "체리" },
-        { "es": "mango", "ko": "망고" },
-        { "es": "kiwi", "ko": "키위" }
+        {
+          "es": "huevo",
+          "ko": "달걀"
+        },
+        {
+          "es": "yema",
+          "ko": "노른자"
+        },
+        {
+          "es": "clara",
+          "ko": "흰자"
+        },
+        {
+          "es": "nata",
+          "ko": "생크림"
+        },
+        {
+          "es": "helado",
+          "ko": "아이스크림"
+        },
+        {
+          "es": "batido",
+          "ko": "밀크셰이크"
+        },
+        {
+          "es": "requesón",
+          "ko": "리코타 치즈"
+        },
+        {
+          "es": "suero",
+          "ko": "유청"
+        },
+        {
+          "es": "cuajada",
+          "ko": "커드"
+        },
+        {
+          "es": "lácteo",
+          "ko": "유제품"
+        }
       ]
     },
     {
       "stage": 7,
+      "category": "에피소드 1 · 세트 7",
+      "type": "learning",
       "words": [
-        { "es": "coco", "ko": "코코넛" },
-        { "es": "papaya", "ko": "파파야" },
-        { "es": "granada", "ko": "석류" },
-        { "es": "higo", "ko": "무화과" },
-        { "es": "ciruela", "ko": "자두" },
-        { "es": "frambuesa", "ko": "라즈베리" },
-        { "es": "arándano", "ko": "블루베리" },
-        { "es": "mora", "ko": "블랙베리" },
-        { "es": "mandarina", "ko": "귤" },
-        { "es": "almendra", "ko": "아몬드" },
-        { "es": "nuez", "ko": "호두" },
-        { "es": "cacahuete", "ko": "땅콩" },
-        { "es": "avellana", "ko": "헤이즐넛" },
-        { "es": "castaña", "ko": "밤" },
-        { "es": "pistacho", "ko": "피스타치오" }
+        {
+          "es": "pan",
+          "ko": "빵"
+        },
+        {
+          "es": "arroz",
+          "ko": "쌀"
+        },
+        {
+          "es": "trigo",
+          "ko": "밀"
+        },
+        {
+          "es": "harina",
+          "ko": "밀가루"
+        },
+        {
+          "es": "maíz",
+          "ko": "옥수수"
+        },
+        {
+          "es": "avena",
+          "ko": "귀리"
+        },
+        {
+          "es": "cereal",
+          "ko": "시리얼"
+        },
+        {
+          "es": "pasta",
+          "ko": "파스타"
+        },
+        {
+          "es": "fideos",
+          "ko": "국수"
+        },
+        {
+          "es": "galleta",
+          "ko": "과자"
+        }
       ]
     },
     {
       "stage": 8,
+      "category": "에피소드 1 · 세트 8",
+      "type": "learning",
       "words": [
-        { "es": "verdura", "ko": "채소" },
-        { "es": "tomate", "ko": "토마토" },
-        { "es": "cebolla", "ko": "양파" },
-        { "es": "ajo", "ko": "마늘" },
-        { "es": "zanahoria", "ko": "당근" },
-        { "es": "papa", "ko": "감자" },
-        { "es": "lechuga", "ko": "상추" },
-        { "es": "pepino", "ko": "오이" },
-        { "es": "pimiento", "ko": "피망" },
-        { "es": "espinaca", "ko": "시금치" },
-        { "es": "brócoli", "ko": "브로콜리" },
-        { "es": "champiñón", "ko": "버섯" },
-        { "es": "calabaza", "ko": "호박" },
-        { "es": "berenjena", "ko": "가지" },
-        { "es": "apio", "ko": "셀러리" }
+        {
+          "es": "tostada",
+          "ko": "토스트"
+        },
+        {
+          "es": "masa",
+          "ko": "반죽"
+        },
+        {
+          "es": "centeno",
+          "ko": "호밀"
+        },
+        {
+          "es": "cebada",
+          "ko": "보리"
+        },
+        {
+          "es": "tortilla de maíz",
+          "ko": "옥수수 토르티야"
+        },
+        {
+          "es": "fruta",
+          "ko": "과일"
+        },
+        {
+          "es": "manzana",
+          "ko": "사과"
+        },
+        {
+          "es": "plátano",
+          "ko": "바나나"
+        },
+        {
+          "es": "naranja",
+          "ko": "오렌지"
+        },
+        {
+          "es": "uva",
+          "ko": "포도"
+        }
       ]
     },
     {
       "stage": 9,
+      "category": "에피소드 1 · 세트 9",
+      "type": "learning",
       "words": [
-        { "es": "col", "ko": "양배추" },
-        { "es": "coliflor", "ko": "콜리플라워" },
-        { "es": "alcachofa", "ko": "아티초크" },
-        { "es": "espárrago", "ko": "아스파라거스" },
-        { "es": "rábano", "ko": "무" },
-        { "es": "remolacha", "ko": "비트" },
-        { "es": "guisante", "ko": "완두콩" },
-        { "es": "judía verde", "ko": "껍질콩" },
-        { "es": "lenteja", "ko": "렌틸콩" },
-        { "es": "garbanzo", "ko": "병아리콩" },
-        { "es": "frijol", "ko": "강낭콩" },
-        { "es": "soja", "ko": "콩" },
-        { "es": "batata", "ko": "고구마" },
-        { "es": "aguacate", "ko": "아보카도" },
-        { "es": "perejil", "ko": "파슬리" }
+        {
+          "es": "fresa",
+          "ko": "딸기"
+        },
+        {
+          "es": "limón",
+          "ko": "레몬"
+        },
+        {
+          "es": "sandía",
+          "ko": "수박"
+        },
+        {
+          "es": "melón",
+          "ko": "멜론"
+        },
+        {
+          "es": "piña",
+          "ko": "파인애플"
+        },
+        {
+          "es": "durazno",
+          "ko": "복숭아"
+        },
+        {
+          "es": "pera",
+          "ko": "배"
+        },
+        {
+          "es": "cereza",
+          "ko": "체리"
+        },
+        {
+          "es": "mango",
+          "ko": "망고"
+        },
+        {
+          "es": "kiwi",
+          "ko": "키위"
+        }
       ]
     },
     {
       "stage": 10,
+      "category": "에피소드 1 · 세트 10",
+      "type": "learning",
       "words": [
-        { "es": "sal", "ko": "소금" },
-        { "es": "pimienta", "ko": "후추" },
-        { "es": "azúcar", "ko": "설탕" },
-        { "es": "aceite", "ko": "기름" },
-        { "es": "vinagre", "ko": "식초" },
-        { "es": "salsa", "ko": "소스" },
-        { "es": "mostaza", "ko": "겨자" },
-        { "es": "canela", "ko": "계피" },
-        { "es": "comino", "ko": "커민" },
-        { "es": "orégano", "ko": "오레가노" },
-        { "es": "albahaca", "ko": "바질" },
-        { "es": "romero", "ko": "로즈마리" },
-        { "es": "tomillo", "ko": "타임" },
-        { "es": "jengibre", "ko": "생강" },
-        { "es": "cilantro", "ko": "고수" }
+        {
+          "es": "coco",
+          "ko": "코코넛"
+        },
+        {
+          "es": "papaya",
+          "ko": "파파야"
+        },
+        {
+          "es": "granada",
+          "ko": "석류"
+        },
+        {
+          "es": "higo",
+          "ko": "무화과"
+        },
+        {
+          "es": "ciruela",
+          "ko": "자두"
+        },
+        {
+          "es": "frambuesa",
+          "ko": "라즈베리"
+        },
+        {
+          "es": "arándano",
+          "ko": "블루베리"
+        },
+        {
+          "es": "mora",
+          "ko": "블랙베리"
+        },
+        {
+          "es": "mandarina",
+          "ko": "귤"
+        },
+        {
+          "es": "almendra",
+          "ko": "아몬드"
+        }
       ]
     },
     {
       "stage": 11,
+      "category": "에피소드 1 보스 · 누적 복습",
+      "type": "boss",
       "words": [
-        { "es": "agua", "ko": "물" },
-        { "es": "café", "ko": "커피" },
-        { "es": "té", "ko": "차" },
-        { "es": "jugo", "ko": "주스" },
-        { "es": "refresco", "ko": "탄산음료" },
-        { "es": "limonada", "ko": "레모네이드" },
-        { "es": "leche de almendra", "ko": "아몬드 우유" },
-        { "es": "chocolate caliente", "ko": "핫초코" },
-        { "es": "bebida", "ko": "음료" },
-        { "es": "hielo", "ko": "얼음" },
-        { "es": "pajita", "ko": "빨대" },
-        { "es": "infusión", "ko": "허브차" },
-        { "es": "smoothie", "ko": "스무디" },
-        { "es": "agua con gas", "ko": "탄산수" },
-        { "es": "descafeinado", "ko": "디카페인" }
+        {
+          "es": "comida",
+          "ko": "음식"
+        },
+        {
+          "es": "desayuno",
+          "ko": "아침 식사"
+        },
+        {
+          "es": "almuerzo",
+          "ko": "점심 식사"
+        },
+        {
+          "es": "cena",
+          "ko": "저녁 식사"
+        },
+        {
+          "es": "merienda",
+          "ko": "간식"
+        },
+        {
+          "es": "hambre",
+          "ko": "배고픔"
+        },
+        {
+          "es": "sed",
+          "ko": "갈증"
+        },
+        {
+          "es": "apetito",
+          "ko": "식욕"
+        },
+        {
+          "es": "plato",
+          "ko": "접시"
+        },
+        {
+          "es": "porción",
+          "ko": "1인분"
+        },
+        {
+          "es": "receta",
+          "ko": "레시피"
+        },
+        {
+          "es": "ingrediente",
+          "ko": "재료"
+        },
+        {
+          "es": "menú",
+          "ko": "메뉴"
+        },
+        {
+          "es": "dieta",
+          "ko": "식단"
+        },
+        {
+          "es": "nutrición",
+          "ko": "영양"
+        },
+        {
+          "es": "carne",
+          "ko": "고기"
+        },
+        {
+          "es": "pollo",
+          "ko": "닭고기"
+        },
+        {
+          "es": "cerdo",
+          "ko": "돼지고기"
+        },
+        {
+          "es": "res",
+          "ko": "소고기"
+        },
+        {
+          "es": "cordero",
+          "ko": "양고기"
+        },
+        {
+          "es": "pavo",
+          "ko": "칠면조 고기"
+        },
+        {
+          "es": "jamón",
+          "ko": "햄"
+        },
+        {
+          "es": "tocino",
+          "ko": "베이컨"
+        },
+        {
+          "es": "salchicha",
+          "ko": "소시지"
+        },
+        {
+          "es": "bistec",
+          "ko": "스테이크"
+        },
+        {
+          "es": "chuleta",
+          "ko": "갈비"
+        },
+        {
+          "es": "costilla",
+          "ko": "등갈비"
+        },
+        {
+          "es": "pechuga",
+          "ko": "가슴살"
+        },
+        {
+          "es": "carne molida",
+          "ko": "다진 고기"
+        },
+        {
+          "es": "filete",
+          "ko": "필레"
+        },
+        {
+          "es": "pescado",
+          "ko": "생선"
+        },
+        {
+          "es": "marisco",
+          "ko": "해산물"
+        },
+        {
+          "es": "camarón",
+          "ko": "새우"
+        },
+        {
+          "es": "atún",
+          "ko": "참치"
+        },
+        {
+          "es": "salmón",
+          "ko": "연어"
+        },
+        {
+          "es": "pulpo",
+          "ko": "문어"
+        },
+        {
+          "es": "calamar",
+          "ko": "오징어"
+        },
+        {
+          "es": "langosta",
+          "ko": "랍스터"
+        },
+        {
+          "es": "cangrejo",
+          "ko": "게"
+        },
+        {
+          "es": "almeja",
+          "ko": "조개"
+        },
+        {
+          "es": "mejillón",
+          "ko": "홍합"
+        },
+        {
+          "es": "ostra",
+          "ko": "굴"
+        },
+        {
+          "es": "sardina",
+          "ko": "정어리"
+        },
+        {
+          "es": "bacalao",
+          "ko": "대구"
+        },
+        {
+          "es": "anchoa",
+          "ko": "멸치"
+        },
+        {
+          "es": "leche",
+          "ko": "우유"
+        },
+        {
+          "es": "queso",
+          "ko": "치즈"
+        },
+        {
+          "es": "yogur",
+          "ko": "요거트"
+        },
+        {
+          "es": "mantequilla",
+          "ko": "버터"
+        },
+        {
+          "es": "crema",
+          "ko": "크림"
+        },
+        {
+          "es": "huevo",
+          "ko": "달걀"
+        },
+        {
+          "es": "yema",
+          "ko": "노른자"
+        },
+        {
+          "es": "clara",
+          "ko": "흰자"
+        },
+        {
+          "es": "nata",
+          "ko": "생크림"
+        },
+        {
+          "es": "helado",
+          "ko": "아이스크림"
+        },
+        {
+          "es": "batido",
+          "ko": "밀크셰이크"
+        },
+        {
+          "es": "requesón",
+          "ko": "리코타 치즈"
+        },
+        {
+          "es": "suero",
+          "ko": "유청"
+        },
+        {
+          "es": "cuajada",
+          "ko": "커드"
+        },
+        {
+          "es": "lácteo",
+          "ko": "유제품"
+        },
+        {
+          "es": "pan",
+          "ko": "빵"
+        },
+        {
+          "es": "arroz",
+          "ko": "쌀"
+        },
+        {
+          "es": "trigo",
+          "ko": "밀"
+        },
+        {
+          "es": "harina",
+          "ko": "밀가루"
+        },
+        {
+          "es": "maíz",
+          "ko": "옥수수"
+        },
+        {
+          "es": "avena",
+          "ko": "귀리"
+        },
+        {
+          "es": "cereal",
+          "ko": "시리얼"
+        },
+        {
+          "es": "pasta",
+          "ko": "파스타"
+        },
+        {
+          "es": "fideos",
+          "ko": "국수"
+        },
+        {
+          "es": "galleta",
+          "ko": "과자"
+        },
+        {
+          "es": "tostada",
+          "ko": "토스트"
+        },
+        {
+          "es": "masa",
+          "ko": "반죽"
+        },
+        {
+          "es": "centeno",
+          "ko": "호밀"
+        },
+        {
+          "es": "cebada",
+          "ko": "보리"
+        },
+        {
+          "es": "tortilla de maíz",
+          "ko": "옥수수 토르티야"
+        },
+        {
+          "es": "fruta",
+          "ko": "과일"
+        },
+        {
+          "es": "manzana",
+          "ko": "사과"
+        },
+        {
+          "es": "plátano",
+          "ko": "바나나"
+        },
+        {
+          "es": "naranja",
+          "ko": "오렌지"
+        },
+        {
+          "es": "uva",
+          "ko": "포도"
+        },
+        {
+          "es": "fresa",
+          "ko": "딸기"
+        },
+        {
+          "es": "limón",
+          "ko": "레몬"
+        },
+        {
+          "es": "sandía",
+          "ko": "수박"
+        },
+        {
+          "es": "melón",
+          "ko": "멜론"
+        },
+        {
+          "es": "piña",
+          "ko": "파인애플"
+        },
+        {
+          "es": "durazno",
+          "ko": "복숭아"
+        },
+        {
+          "es": "pera",
+          "ko": "배"
+        },
+        {
+          "es": "cereza",
+          "ko": "체리"
+        },
+        {
+          "es": "mango",
+          "ko": "망고"
+        },
+        {
+          "es": "kiwi",
+          "ko": "키위"
+        },
+        {
+          "es": "coco",
+          "ko": "코코넛"
+        },
+        {
+          "es": "papaya",
+          "ko": "파파야"
+        },
+        {
+          "es": "granada",
+          "ko": "석류"
+        },
+        {
+          "es": "higo",
+          "ko": "무화과"
+        },
+        {
+          "es": "ciruela",
+          "ko": "자두"
+        },
+        {
+          "es": "frambuesa",
+          "ko": "라즈베리"
+        },
+        {
+          "es": "arándano",
+          "ko": "블루베리"
+        },
+        {
+          "es": "mora",
+          "ko": "블랙베리"
+        },
+        {
+          "es": "mandarina",
+          "ko": "귤"
+        },
+        {
+          "es": "almendra",
+          "ko": "아몬드"
+        }
       ]
     },
     {
       "stage": 12,
+      "category": "에피소드 2 · 세트 1",
+      "type": "learning",
       "words": [
-        { "es": "vino", "ko": "와인" },
-        { "es": "cerveza", "ko": "맥주" },
-        { "es": "cóctel", "ko": "칵테일" },
-        { "es": "licor", "ko": "리큐르" },
-        { "es": "ron", "ko": "럼" },
-        { "es": "whisky", "ko": "위스키" },
-        { "es": "vodka", "ko": "보드카" },
-        { "es": "tequila", "ko": "데킬라" },
-        { "es": "champán", "ko": "샴페인" },
-        { "es": "copa", "ko": "와인잔" },
-        { "es": "brindis", "ko": "건배" },
-        { "es": "borracho", "ko": "취한" },
-        { "es": "resaca", "ko": "숙취" },
-        { "es": "taberna", "ko": "선술집" },
-        { "es": "barman", "ko": "바텐더" }
+        {
+          "es": "nuez",
+          "ko": "호두"
+        },
+        {
+          "es": "cacahuete",
+          "ko": "땅콩"
+        },
+        {
+          "es": "avellana",
+          "ko": "헤이즐넛"
+        },
+        {
+          "es": "castaña",
+          "ko": "밤"
+        },
+        {
+          "es": "pistacho",
+          "ko": "피스타치오"
+        },
+        {
+          "es": "verdura",
+          "ko": "채소"
+        },
+        {
+          "es": "tomate",
+          "ko": "토마토"
+        },
+        {
+          "es": "cebolla",
+          "ko": "양파"
+        },
+        {
+          "es": "ajo",
+          "ko": "마늘"
+        },
+        {
+          "es": "zanahoria",
+          "ko": "당근"
+        }
       ]
     },
     {
       "stage": 13,
+      "category": "에피소드 2 · 세트 2",
+      "type": "learning",
       "words": [
-        { "es": "hervir", "ko": "끓이다" },
-        { "es": "freír", "ko": "튀기다" },
-        { "es": "asar", "ko": "굽다" },
-        { "es": "hornear", "ko": "오븐에 굽다" },
-        { "es": "cocinar", "ko": "요리하다" },
-        { "es": "cortar", "ko": "자르다" },
-        { "es": "pelar", "ko": "껍질을 벗기다" },
-        { "es": "mezclar", "ko": "섞다" },
-        { "es": "batir", "ko": "휘젓다" },
-        { "es": "saltear", "ko": "볶다" },
-        { "es": "guisar", "ko": "조리다" },
-        { "es": "marinar", "ko": "재우다" },
-        { "es": "rallar", "ko": "갈다" },
-        { "es": "cocción al vapor", "ko": "찌기" },
-        { "es": "ahumar", "ko": "훈제하다" }
+        {
+          "es": "papa",
+          "ko": "감자"
+        },
+        {
+          "es": "lechuga",
+          "ko": "상추"
+        },
+        {
+          "es": "pepino",
+          "ko": "오이"
+        },
+        {
+          "es": "pimiento",
+          "ko": "피망"
+        },
+        {
+          "es": "espinaca",
+          "ko": "시금치"
+        },
+        {
+          "es": "brócoli",
+          "ko": "브로콜리"
+        },
+        {
+          "es": "champiñón",
+          "ko": "버섯"
+        },
+        {
+          "es": "calabaza",
+          "ko": "호박"
+        },
+        {
+          "es": "berenjena",
+          "ko": "가지"
+        },
+        {
+          "es": "apio",
+          "ko": "셀러리"
+        }
       ]
     },
     {
       "stage": 14,
+      "category": "에피소드 2 · 세트 3",
+      "type": "learning",
       "words": [
-        { "es": "sartén", "ko": "프라이팬" },
-        { "es": "olla", "ko": "냄비" },
-        { "es": "cuchillo", "ko": "칼" },
-        { "es": "tabla de cortar", "ko": "도마" },
-        { "es": "cucharón", "ko": "국자" },
-        { "es": "espátula", "ko": "뒤집개" },
-        { "es": "horno", "ko": "오븐" },
-        { "es": "microondas", "ko": "전자레인지" },
-        { "es": "licuadora", "ko": "믹서기" },
-        { "es": "colador", "ko": "체" },
-        { "es": "tazón", "ko": "그릇" },
-        { "es": "molde", "ko": "틀" },
-        { "es": "delantal", "ko": "앞치마" },
-        { "es": "nevera", "ko": "냉장고" },
-        { "es": "estufa", "ko": "가스레인지" }
+        {
+          "es": "col",
+          "ko": "양배추"
+        },
+        {
+          "es": "coliflor",
+          "ko": "콜리플라워"
+        },
+        {
+          "es": "alcachofa",
+          "ko": "아티초크"
+        },
+        {
+          "es": "espárrago",
+          "ko": "아스파라거스"
+        },
+        {
+          "es": "rábano",
+          "ko": "무"
+        },
+        {
+          "es": "remolacha",
+          "ko": "비트"
+        },
+        {
+          "es": "guisante",
+          "ko": "완두콩"
+        },
+        {
+          "es": "judía verde",
+          "ko": "껍질콩"
+        },
+        {
+          "es": "lenteja",
+          "ko": "렌틸콩"
+        },
+        {
+          "es": "garbanzo",
+          "ko": "병아리콩"
+        }
       ]
     },
     {
       "stage": 15,
+      "category": "에피소드 2 · 세트 4",
+      "type": "learning",
       "words": [
-        { "es": "reserva", "ko": "예약" },
-        { "es": "pedir", "ko": "주문하다" },
-        { "es": "cuenta", "ko": "계산서" },
-        { "es": "propina", "ko": "팁" },
-        { "es": "carta", "ko": "메뉴판" },
-        { "es": "camarero", "ko": "웨이터" },
-        { "es": "entrada", "ko": "전채 요리" },
-        { "es": "plato principal", "ko": "메인 요리" },
-        { "es": "postre", "ko": "디저트" },
-        { "es": "especial del día", "ko": "오늘의 특선" },
-        { "es": "para llevar", "ko": "포장" },
-        { "es": "recomendación", "ko": "추천" },
-        { "es": "alergia alimentaria", "ko": "식품 알레르기" },
-        { "es": "vegetariano", "ko": "채식주의자" },
-        { "es": "sin gluten", "ko": "글루텐 프리" }
+        {
+          "es": "frijol",
+          "ko": "강낭콩"
+        },
+        {
+          "es": "soja",
+          "ko": "콩"
+        },
+        {
+          "es": "batata",
+          "ko": "고구마"
+        },
+        {
+          "es": "aguacate",
+          "ko": "아보카도"
+        },
+        {
+          "es": "perejil",
+          "ko": "파슬리"
+        },
+        {
+          "es": "sal",
+          "ko": "소금"
+        },
+        {
+          "es": "pimienta",
+          "ko": "후추"
+        },
+        {
+          "es": "azúcar",
+          "ko": "설탕"
+        },
+        {
+          "es": "aceite",
+          "ko": "기름"
+        },
+        {
+          "es": "vinagre",
+          "ko": "식초"
+        }
       ]
     },
     {
       "stage": 16,
+      "category": "에피소드 2 · 세트 5",
+      "type": "learning",
       "words": [
-        { "es": "tenedor", "ko": "포크" },
-        { "es": "cuchara", "ko": "숟가락" },
-        { "es": "servilleta", "ko": "냅킨" },
-        { "es": "vaso", "ko": "컵" },
-        { "es": "mantel", "ko": "식탁보" },
-        { "es": "mesa", "ko": "식탁" },
-        { "es": "silla", "ko": "의자" },
-        { "es": "terraza", "ko": "테라스" },
-        { "es": "barra", "ko": "바 카운터" },
-        { "es": "chef", "ko": "셰프" },
-        { "es": "buffet", "ko": "뷔페" },
-        { "es": "comedor", "ko": "식당" },
-        { "es": "palillos", "ko": "젓가락" },
-        { "es": "bandeja", "ko": "쟁반" },
-        { "es": "jarra", "ko": "물병" }
+        {
+          "es": "salsa",
+          "ko": "소스"
+        },
+        {
+          "es": "mostaza",
+          "ko": "겨자"
+        },
+        {
+          "es": "canela",
+          "ko": "계피"
+        },
+        {
+          "es": "comino",
+          "ko": "커민"
+        },
+        {
+          "es": "orégano",
+          "ko": "오레가노"
+        },
+        {
+          "es": "albahaca",
+          "ko": "바질"
+        },
+        {
+          "es": "romero",
+          "ko": "로즈마리"
+        },
+        {
+          "es": "tomillo",
+          "ko": "타임"
+        },
+        {
+          "es": "jengibre",
+          "ko": "생강"
+        },
+        {
+          "es": "cilantro",
+          "ko": "고수"
+        }
       ]
     },
     {
       "stage": 17,
+      "category": "에피소드 2 · 세트 6",
+      "type": "learning",
       "words": [
-        { "es": "dulce", "ko": "달콤한" },
-        { "es": "salado", "ko": "짠" },
-        { "es": "amargo", "ko": "쓴" },
-        { "es": "ácido", "ko": "신" },
-        { "es": "picante", "ko": "매운" },
-        { "es": "crujiente", "ko": "바삭한" },
-        { "es": "blando", "ko": "부드러운" },
-        { "es": "jugoso", "ko": "즙이 많은" },
-        { "es": "sabroso", "ko": "맛있는" },
-        { "es": "insípido", "ko": "싱거운" },
-        { "es": "fresco", "ko": "신선한" },
-        { "es": "maduro", "ko": "익은" },
-        { "es": "crudo", "ko": "날것의" },
-        { "es": "grasoso", "ko": "기름진" },
-        { "es": "aromático", "ko": "향긋한" }
+        {
+          "es": "agua",
+          "ko": "물"
+        },
+        {
+          "es": "café",
+          "ko": "커피"
+        },
+        {
+          "es": "té",
+          "ko": "차"
+        },
+        {
+          "es": "jugo",
+          "ko": "주스"
+        },
+        {
+          "es": "refresco",
+          "ko": "탄산음료"
+        },
+        {
+          "es": "limonada",
+          "ko": "레모네이드"
+        },
+        {
+          "es": "leche de almendra",
+          "ko": "아몬드 우유"
+        },
+        {
+          "es": "chocolate caliente",
+          "ko": "핫초코"
+        },
+        {
+          "es": "bebida",
+          "ko": "음료"
+        },
+        {
+          "es": "hielo",
+          "ko": "얼음"
+        }
       ]
     },
     {
       "stage": 18,
+      "category": "에피소드 2 · 세트 7",
+      "type": "learning",
       "words": [
-        { "es": "pastel", "ko": "케이크" },
-        { "es": "chocolate", "ko": "초콜릿" },
-        { "es": "caramelo", "ko": "캐러멜" },
-        { "es": "flan", "ko": "플란" },
-        { "es": "mermelada", "ko": "잼" },
-        { "es": "miel", "ko": "꿀" },
-        { "es": "tarta", "ko": "타르트" },
-        { "es": "bombón", "ko": "봉봉" },
-        { "es": "churro", "ko": "츄러스" },
-        { "es": "donut", "ko": "도넛" },
-        { "es": "gelatina", "ko": "젤리" },
-        { "es": "mazapán", "ko": "마지팬" },
-        { "es": "natilla", "ko": "커스터드" },
-        { "es": "polvorón", "ko": "폴보론" },
-        { "es": "turrón", "ko": "투론" }
+        {
+          "es": "pajita",
+          "ko": "빨대"
+        },
+        {
+          "es": "infusión",
+          "ko": "허브차"
+        },
+        {
+          "es": "smoothie",
+          "ko": "스무디"
+        },
+        {
+          "es": "agua con gas",
+          "ko": "탄산수"
+        },
+        {
+          "es": "descafeinado",
+          "ko": "디카페인"
+        },
+        {
+          "es": "vino",
+          "ko": "와인"
+        },
+        {
+          "es": "cerveza",
+          "ko": "맥주"
+        },
+        {
+          "es": "cóctel",
+          "ko": "칵테일"
+        },
+        {
+          "es": "licor",
+          "ko": "리큐르"
+        },
+        {
+          "es": "ron",
+          "ko": "럼"
+        }
       ]
     },
     {
       "stage": 19,
+      "category": "에피소드 2 · 세트 8",
+      "type": "learning",
       "words": [
-        { "es": "paella", "ko": "빠에야" },
-        { "es": "taco", "ko": "타코" },
-        { "es": "empanada", "ko": "엠파나다" },
-        { "es": "gazpacho", "ko": "가스파초" },
-        { "es": "ceviche", "ko": "세비체" },
-        { "es": "burrito", "ko": "부리토" },
-        { "es": "guacamole", "ko": "과카몰리" },
-        { "es": "tortilla española", "ko": "스페인식 오믈렛" },
-        { "es": "tamales", "ko": "타말레스" },
-        { "es": "chorizo", "ko": "초리소" },
-        { "es": "nachos", "ko": "나초" },
-        { "es": "quesadilla", "ko": "케사디야" },
-        { "es": "sangría", "ko": "상그리아" },
-        { "es": "tapas", "ko": "타파스" },
-        { "es": "enchilada", "ko": "엔칠라다" }
+        {
+          "es": "whisky",
+          "ko": "위스키"
+        },
+        {
+          "es": "vodka",
+          "ko": "보드카"
+        },
+        {
+          "es": "tequila",
+          "ko": "데킬라"
+        },
+        {
+          "es": "champán",
+          "ko": "샴페인"
+        },
+        {
+          "es": "copa",
+          "ko": "와인잔"
+        },
+        {
+          "es": "brindis",
+          "ko": "건배"
+        },
+        {
+          "es": "borracho",
+          "ko": "취한"
+        },
+        {
+          "es": "resaca",
+          "ko": "숙취"
+        },
+        {
+          "es": "taberna",
+          "ko": "선술집"
+        },
+        {
+          "es": "barman",
+          "ko": "바텐더"
+        }
       ]
     },
     {
       "stage": 20,
+      "category": "에피소드 2 · 세트 9",
+      "type": "learning",
       "words": [
-        { "es": "comer", "ko": "먹다" },
-        { "es": "beber", "ko": "마시다" },
-        { "es": "probar", "ko": "맛보다" },
-        { "es": "masticar", "ko": "씹다" },
-        { "es": "tragar", "ko": "삼키다" },
-        { "es": "servir", "ko": "차려 내다" },
-        { "es": "preparar", "ko": "준비하다" },
-        { "es": "sazonar", "ko": "간을 하다" },
-        { "es": "picar", "ko": "다지다" },
-        { "es": "calentar", "ko": "데우다" },
-        { "es": "enfriar", "ko": "식히다" },
-        { "es": "derretir", "ko": "녹이다" },
-        { "es": "congelar", "ko": "얼리다" },
-        { "es": "buen provecho", "ko": "맛있게 드세요" },
-        { "es": "tener hambre", "ko": "배가 고프다" }
+        {
+          "es": "hervir",
+          "ko": "끓이다"
+        },
+        {
+          "es": "freír",
+          "ko": "튀기다"
+        },
+        {
+          "es": "asar",
+          "ko": "굽다"
+        },
+        {
+          "es": "hornear",
+          "ko": "오븐에 굽다"
+        },
+        {
+          "es": "cocinar",
+          "ko": "요리하다"
+        },
+        {
+          "es": "cortar",
+          "ko": "자르다"
+        },
+        {
+          "es": "pelar",
+          "ko": "껍질을 벗기다"
+        },
+        {
+          "es": "mezclar",
+          "ko": "섞다"
+        },
+        {
+          "es": "batir",
+          "ko": "휘젓다"
+        },
+        {
+          "es": "saltear",
+          "ko": "볶다"
+        }
+      ]
+    },
+    {
+      "stage": 21,
+      "category": "에피소드 2 · 세트 10",
+      "type": "learning",
+      "words": [
+        {
+          "es": "guisar",
+          "ko": "조리다"
+        },
+        {
+          "es": "marinar",
+          "ko": "재우다"
+        },
+        {
+          "es": "rallar",
+          "ko": "갈다"
+        },
+        {
+          "es": "cocción al vapor",
+          "ko": "찌기"
+        },
+        {
+          "es": "ahumar",
+          "ko": "훈제하다"
+        },
+        {
+          "es": "sartén",
+          "ko": "프라이팬"
+        },
+        {
+          "es": "olla",
+          "ko": "냄비"
+        },
+        {
+          "es": "cuchillo",
+          "ko": "칼"
+        },
+        {
+          "es": "tabla de cortar",
+          "ko": "도마"
+        },
+        {
+          "es": "cucharón",
+          "ko": "국자"
+        }
+      ]
+    },
+    {
+      "stage": 22,
+      "category": "에피소드 2 보스 · 누적 복습",
+      "type": "boss",
+      "words": [
+        {
+          "es": "nuez",
+          "ko": "호두"
+        },
+        {
+          "es": "cacahuete",
+          "ko": "땅콩"
+        },
+        {
+          "es": "avellana",
+          "ko": "헤이즐넛"
+        },
+        {
+          "es": "castaña",
+          "ko": "밤"
+        },
+        {
+          "es": "pistacho",
+          "ko": "피스타치오"
+        },
+        {
+          "es": "verdura",
+          "ko": "채소"
+        },
+        {
+          "es": "tomate",
+          "ko": "토마토"
+        },
+        {
+          "es": "cebolla",
+          "ko": "양파"
+        },
+        {
+          "es": "ajo",
+          "ko": "마늘"
+        },
+        {
+          "es": "zanahoria",
+          "ko": "당근"
+        },
+        {
+          "es": "papa",
+          "ko": "감자"
+        },
+        {
+          "es": "lechuga",
+          "ko": "상추"
+        },
+        {
+          "es": "pepino",
+          "ko": "오이"
+        },
+        {
+          "es": "pimiento",
+          "ko": "피망"
+        },
+        {
+          "es": "espinaca",
+          "ko": "시금치"
+        },
+        {
+          "es": "brócoli",
+          "ko": "브로콜리"
+        },
+        {
+          "es": "champiñón",
+          "ko": "버섯"
+        },
+        {
+          "es": "calabaza",
+          "ko": "호박"
+        },
+        {
+          "es": "berenjena",
+          "ko": "가지"
+        },
+        {
+          "es": "apio",
+          "ko": "셀러리"
+        },
+        {
+          "es": "col",
+          "ko": "양배추"
+        },
+        {
+          "es": "coliflor",
+          "ko": "콜리플라워"
+        },
+        {
+          "es": "alcachofa",
+          "ko": "아티초크"
+        },
+        {
+          "es": "espárrago",
+          "ko": "아스파라거스"
+        },
+        {
+          "es": "rábano",
+          "ko": "무"
+        },
+        {
+          "es": "remolacha",
+          "ko": "비트"
+        },
+        {
+          "es": "guisante",
+          "ko": "완두콩"
+        },
+        {
+          "es": "judía verde",
+          "ko": "껍질콩"
+        },
+        {
+          "es": "lenteja",
+          "ko": "렌틸콩"
+        },
+        {
+          "es": "garbanzo",
+          "ko": "병아리콩"
+        },
+        {
+          "es": "frijol",
+          "ko": "강낭콩"
+        },
+        {
+          "es": "soja",
+          "ko": "콩"
+        },
+        {
+          "es": "batata",
+          "ko": "고구마"
+        },
+        {
+          "es": "aguacate",
+          "ko": "아보카도"
+        },
+        {
+          "es": "perejil",
+          "ko": "파슬리"
+        },
+        {
+          "es": "sal",
+          "ko": "소금"
+        },
+        {
+          "es": "pimienta",
+          "ko": "후추"
+        },
+        {
+          "es": "azúcar",
+          "ko": "설탕"
+        },
+        {
+          "es": "aceite",
+          "ko": "기름"
+        },
+        {
+          "es": "vinagre",
+          "ko": "식초"
+        },
+        {
+          "es": "salsa",
+          "ko": "소스"
+        },
+        {
+          "es": "mostaza",
+          "ko": "겨자"
+        },
+        {
+          "es": "canela",
+          "ko": "계피"
+        },
+        {
+          "es": "comino",
+          "ko": "커민"
+        },
+        {
+          "es": "orégano",
+          "ko": "오레가노"
+        },
+        {
+          "es": "albahaca",
+          "ko": "바질"
+        },
+        {
+          "es": "romero",
+          "ko": "로즈마리"
+        },
+        {
+          "es": "tomillo",
+          "ko": "타임"
+        },
+        {
+          "es": "jengibre",
+          "ko": "생강"
+        },
+        {
+          "es": "cilantro",
+          "ko": "고수"
+        },
+        {
+          "es": "agua",
+          "ko": "물"
+        },
+        {
+          "es": "café",
+          "ko": "커피"
+        },
+        {
+          "es": "té",
+          "ko": "차"
+        },
+        {
+          "es": "jugo",
+          "ko": "주스"
+        },
+        {
+          "es": "refresco",
+          "ko": "탄산음료"
+        },
+        {
+          "es": "limonada",
+          "ko": "레모네이드"
+        },
+        {
+          "es": "leche de almendra",
+          "ko": "아몬드 우유"
+        },
+        {
+          "es": "chocolate caliente",
+          "ko": "핫초코"
+        },
+        {
+          "es": "bebida",
+          "ko": "음료"
+        },
+        {
+          "es": "hielo",
+          "ko": "얼음"
+        },
+        {
+          "es": "pajita",
+          "ko": "빨대"
+        },
+        {
+          "es": "infusión",
+          "ko": "허브차"
+        },
+        {
+          "es": "smoothie",
+          "ko": "스무디"
+        },
+        {
+          "es": "agua con gas",
+          "ko": "탄산수"
+        },
+        {
+          "es": "descafeinado",
+          "ko": "디카페인"
+        },
+        {
+          "es": "vino",
+          "ko": "와인"
+        },
+        {
+          "es": "cerveza",
+          "ko": "맥주"
+        },
+        {
+          "es": "cóctel",
+          "ko": "칵테일"
+        },
+        {
+          "es": "licor",
+          "ko": "리큐르"
+        },
+        {
+          "es": "ron",
+          "ko": "럼"
+        },
+        {
+          "es": "whisky",
+          "ko": "위스키"
+        },
+        {
+          "es": "vodka",
+          "ko": "보드카"
+        },
+        {
+          "es": "tequila",
+          "ko": "데킬라"
+        },
+        {
+          "es": "champán",
+          "ko": "샴페인"
+        },
+        {
+          "es": "copa",
+          "ko": "와인잔"
+        },
+        {
+          "es": "brindis",
+          "ko": "건배"
+        },
+        {
+          "es": "borracho",
+          "ko": "취한"
+        },
+        {
+          "es": "resaca",
+          "ko": "숙취"
+        },
+        {
+          "es": "taberna",
+          "ko": "선술집"
+        },
+        {
+          "es": "barman",
+          "ko": "바텐더"
+        },
+        {
+          "es": "hervir",
+          "ko": "끓이다"
+        },
+        {
+          "es": "freír",
+          "ko": "튀기다"
+        },
+        {
+          "es": "asar",
+          "ko": "굽다"
+        },
+        {
+          "es": "hornear",
+          "ko": "오븐에 굽다"
+        },
+        {
+          "es": "cocinar",
+          "ko": "요리하다"
+        },
+        {
+          "es": "cortar",
+          "ko": "자르다"
+        },
+        {
+          "es": "pelar",
+          "ko": "껍질을 벗기다"
+        },
+        {
+          "es": "mezclar",
+          "ko": "섞다"
+        },
+        {
+          "es": "batir",
+          "ko": "휘젓다"
+        },
+        {
+          "es": "saltear",
+          "ko": "볶다"
+        },
+        {
+          "es": "guisar",
+          "ko": "조리다"
+        },
+        {
+          "es": "marinar",
+          "ko": "재우다"
+        },
+        {
+          "es": "rallar",
+          "ko": "갈다"
+        },
+        {
+          "es": "cocción al vapor",
+          "ko": "찌기"
+        },
+        {
+          "es": "ahumar",
+          "ko": "훈제하다"
+        },
+        {
+          "es": "sartén",
+          "ko": "프라이팬"
+        },
+        {
+          "es": "olla",
+          "ko": "냄비"
+        },
+        {
+          "es": "cuchillo",
+          "ko": "칼"
+        },
+        {
+          "es": "tabla de cortar",
+          "ko": "도마"
+        },
+        {
+          "es": "cucharón",
+          "ko": "국자"
+        }
+      ]
+    },
+    {
+      "stage": 23,
+      "category": "에피소드 3 · 세트 1",
+      "type": "learning",
+      "words": [
+        {
+          "es": "espátula",
+          "ko": "뒤집개"
+        },
+        {
+          "es": "horno",
+          "ko": "오븐"
+        },
+        {
+          "es": "microondas",
+          "ko": "전자레인지"
+        },
+        {
+          "es": "licuadora",
+          "ko": "믹서기"
+        },
+        {
+          "es": "colador",
+          "ko": "체"
+        },
+        {
+          "es": "tazón",
+          "ko": "그릇"
+        },
+        {
+          "es": "molde",
+          "ko": "틀"
+        },
+        {
+          "es": "delantal",
+          "ko": "앞치마"
+        },
+        {
+          "es": "nevera",
+          "ko": "냉장고"
+        },
+        {
+          "es": "estufa",
+          "ko": "가스레인지"
+        }
+      ]
+    },
+    {
+      "stage": 24,
+      "category": "에피소드 3 · 세트 2",
+      "type": "learning",
+      "words": [
+        {
+          "es": "reserva",
+          "ko": "예약"
+        },
+        {
+          "es": "pedir",
+          "ko": "주문하다"
+        },
+        {
+          "es": "cuenta",
+          "ko": "계산서"
+        },
+        {
+          "es": "propina",
+          "ko": "팁"
+        },
+        {
+          "es": "carta",
+          "ko": "메뉴판"
+        },
+        {
+          "es": "camarero",
+          "ko": "웨이터"
+        },
+        {
+          "es": "entrada",
+          "ko": "전채 요리"
+        },
+        {
+          "es": "plato principal",
+          "ko": "메인 요리"
+        },
+        {
+          "es": "postre",
+          "ko": "디저트"
+        },
+        {
+          "es": "especial del día",
+          "ko": "오늘의 특선"
+        }
+      ]
+    },
+    {
+      "stage": 25,
+      "category": "에피소드 3 · 세트 3",
+      "type": "learning",
+      "words": [
+        {
+          "es": "para llevar",
+          "ko": "포장"
+        },
+        {
+          "es": "recomendación",
+          "ko": "추천"
+        },
+        {
+          "es": "alergia alimentaria",
+          "ko": "식품 알레르기"
+        },
+        {
+          "es": "vegetariano",
+          "ko": "채식주의자"
+        },
+        {
+          "es": "sin gluten",
+          "ko": "글루텐 프리"
+        },
+        {
+          "es": "tenedor",
+          "ko": "포크"
+        },
+        {
+          "es": "cuchara",
+          "ko": "숟가락"
+        },
+        {
+          "es": "servilleta",
+          "ko": "냅킨"
+        },
+        {
+          "es": "vaso",
+          "ko": "컵"
+        },
+        {
+          "es": "mantel",
+          "ko": "식탁보"
+        }
+      ]
+    },
+    {
+      "stage": 26,
+      "category": "에피소드 3 · 세트 4",
+      "type": "learning",
+      "words": [
+        {
+          "es": "mesa",
+          "ko": "식탁"
+        },
+        {
+          "es": "silla",
+          "ko": "의자"
+        },
+        {
+          "es": "terraza",
+          "ko": "테라스"
+        },
+        {
+          "es": "barra",
+          "ko": "바 카운터"
+        },
+        {
+          "es": "chef",
+          "ko": "셰프"
+        },
+        {
+          "es": "buffet",
+          "ko": "뷔페"
+        },
+        {
+          "es": "comedor",
+          "ko": "식당"
+        },
+        {
+          "es": "palillos",
+          "ko": "젓가락"
+        },
+        {
+          "es": "bandeja",
+          "ko": "쟁반"
+        },
+        {
+          "es": "jarra",
+          "ko": "물병"
+        }
+      ]
+    },
+    {
+      "stage": 27,
+      "category": "에피소드 3 · 세트 5",
+      "type": "learning",
+      "words": [
+        {
+          "es": "dulce",
+          "ko": "달콤한"
+        },
+        {
+          "es": "salado",
+          "ko": "짠"
+        },
+        {
+          "es": "amargo",
+          "ko": "쓴"
+        },
+        {
+          "es": "ácido",
+          "ko": "신"
+        },
+        {
+          "es": "picante",
+          "ko": "매운"
+        },
+        {
+          "es": "crujiente",
+          "ko": "바삭한"
+        },
+        {
+          "es": "blando",
+          "ko": "부드러운"
+        },
+        {
+          "es": "jugoso",
+          "ko": "즙이 많은"
+        },
+        {
+          "es": "sabroso",
+          "ko": "맛있는"
+        },
+        {
+          "es": "insípido",
+          "ko": "싱거운"
+        }
+      ]
+    },
+    {
+      "stage": 28,
+      "category": "에피소드 3 · 세트 6",
+      "type": "learning",
+      "words": [
+        {
+          "es": "fresco",
+          "ko": "신선한"
+        },
+        {
+          "es": "maduro",
+          "ko": "익은"
+        },
+        {
+          "es": "crudo",
+          "ko": "날것의"
+        },
+        {
+          "es": "grasoso",
+          "ko": "기름진"
+        },
+        {
+          "es": "aromático",
+          "ko": "향긋한"
+        },
+        {
+          "es": "pastel",
+          "ko": "케이크"
+        },
+        {
+          "es": "chocolate",
+          "ko": "초콜릿"
+        },
+        {
+          "es": "caramelo",
+          "ko": "캐러멜"
+        },
+        {
+          "es": "flan",
+          "ko": "플란"
+        },
+        {
+          "es": "mermelada",
+          "ko": "잼"
+        }
+      ]
+    },
+    {
+      "stage": 29,
+      "category": "에피소드 3 · 세트 7",
+      "type": "learning",
+      "words": [
+        {
+          "es": "miel",
+          "ko": "꿀"
+        },
+        {
+          "es": "tarta",
+          "ko": "타르트"
+        },
+        {
+          "es": "bombón",
+          "ko": "봉봉"
+        },
+        {
+          "es": "churro",
+          "ko": "츄러스"
+        },
+        {
+          "es": "donut",
+          "ko": "도넛"
+        },
+        {
+          "es": "gelatina",
+          "ko": "젤리"
+        },
+        {
+          "es": "mazapán",
+          "ko": "마지팬"
+        },
+        {
+          "es": "natilla",
+          "ko": "커스터드"
+        },
+        {
+          "es": "polvorón",
+          "ko": "폴보론"
+        },
+        {
+          "es": "turrón",
+          "ko": "투론"
+        }
+      ]
+    },
+    {
+      "stage": 30,
+      "category": "에피소드 3 · 세트 8",
+      "type": "learning",
+      "words": [
+        {
+          "es": "paella",
+          "ko": "빠에야"
+        },
+        {
+          "es": "taco",
+          "ko": "타코"
+        },
+        {
+          "es": "empanada",
+          "ko": "엠파나다"
+        },
+        {
+          "es": "gazpacho",
+          "ko": "가스파초"
+        },
+        {
+          "es": "ceviche",
+          "ko": "세비체"
+        },
+        {
+          "es": "burrito",
+          "ko": "부리토"
+        },
+        {
+          "es": "guacamole",
+          "ko": "과카몰리"
+        },
+        {
+          "es": "tortilla española",
+          "ko": "스페인식 오믈렛"
+        },
+        {
+          "es": "tamales",
+          "ko": "타말레스"
+        },
+        {
+          "es": "chorizo",
+          "ko": "초리소"
+        }
+      ]
+    },
+    {
+      "stage": 31,
+      "category": "에피소드 3 · 세트 9",
+      "type": "learning",
+      "words": [
+        {
+          "es": "nachos",
+          "ko": "나초"
+        },
+        {
+          "es": "quesadilla",
+          "ko": "케사디야"
+        },
+        {
+          "es": "sangría",
+          "ko": "상그리아"
+        },
+        {
+          "es": "tapas",
+          "ko": "타파스"
+        },
+        {
+          "es": "enchilada",
+          "ko": "엔칠라다"
+        },
+        {
+          "es": "comer",
+          "ko": "먹다"
+        },
+        {
+          "es": "beber",
+          "ko": "마시다"
+        },
+        {
+          "es": "probar",
+          "ko": "맛보다"
+        },
+        {
+          "es": "masticar",
+          "ko": "씹다"
+        },
+        {
+          "es": "tragar",
+          "ko": "삼키다"
+        }
+      ]
+    },
+    {
+      "stage": 32,
+      "category": "에피소드 3 · 세트 10",
+      "type": "learning",
+      "words": [
+        {
+          "es": "servir",
+          "ko": "차려 내다"
+        },
+        {
+          "es": "preparar",
+          "ko": "준비하다"
+        },
+        {
+          "es": "sazonar",
+          "ko": "간을 하다"
+        },
+        {
+          "es": "picar",
+          "ko": "다지다"
+        },
+        {
+          "es": "calentar",
+          "ko": "데우다"
+        },
+        {
+          "es": "enfriar",
+          "ko": "식히다"
+        },
+        {
+          "es": "derretir",
+          "ko": "녹이다"
+        },
+        {
+          "es": "congelar",
+          "ko": "얼리다"
+        },
+        {
+          "es": "buen provecho",
+          "ko": "맛있게 드세요"
+        },
+        {
+          "es": "tener hambre",
+          "ko": "배가 고프다"
+        }
+      ]
+    },
+    {
+      "stage": 33,
+      "category": "에피소드 3 보스 · 누적 복습",
+      "type": "boss",
+      "words": [
+        {
+          "es": "espátula",
+          "ko": "뒤집개"
+        },
+        {
+          "es": "horno",
+          "ko": "오븐"
+        },
+        {
+          "es": "microondas",
+          "ko": "전자레인지"
+        },
+        {
+          "es": "licuadora",
+          "ko": "믹서기"
+        },
+        {
+          "es": "colador",
+          "ko": "체"
+        },
+        {
+          "es": "tazón",
+          "ko": "그릇"
+        },
+        {
+          "es": "molde",
+          "ko": "틀"
+        },
+        {
+          "es": "delantal",
+          "ko": "앞치마"
+        },
+        {
+          "es": "nevera",
+          "ko": "냉장고"
+        },
+        {
+          "es": "estufa",
+          "ko": "가스레인지"
+        },
+        {
+          "es": "reserva",
+          "ko": "예약"
+        },
+        {
+          "es": "pedir",
+          "ko": "주문하다"
+        },
+        {
+          "es": "cuenta",
+          "ko": "계산서"
+        },
+        {
+          "es": "propina",
+          "ko": "팁"
+        },
+        {
+          "es": "carta",
+          "ko": "메뉴판"
+        },
+        {
+          "es": "camarero",
+          "ko": "웨이터"
+        },
+        {
+          "es": "entrada",
+          "ko": "전채 요리"
+        },
+        {
+          "es": "plato principal",
+          "ko": "메인 요리"
+        },
+        {
+          "es": "postre",
+          "ko": "디저트"
+        },
+        {
+          "es": "especial del día",
+          "ko": "오늘의 특선"
+        },
+        {
+          "es": "para llevar",
+          "ko": "포장"
+        },
+        {
+          "es": "recomendación",
+          "ko": "추천"
+        },
+        {
+          "es": "alergia alimentaria",
+          "ko": "식품 알레르기"
+        },
+        {
+          "es": "vegetariano",
+          "ko": "채식주의자"
+        },
+        {
+          "es": "sin gluten",
+          "ko": "글루텐 프리"
+        },
+        {
+          "es": "tenedor",
+          "ko": "포크"
+        },
+        {
+          "es": "cuchara",
+          "ko": "숟가락"
+        },
+        {
+          "es": "servilleta",
+          "ko": "냅킨"
+        },
+        {
+          "es": "vaso",
+          "ko": "컵"
+        },
+        {
+          "es": "mantel",
+          "ko": "식탁보"
+        },
+        {
+          "es": "mesa",
+          "ko": "식탁"
+        },
+        {
+          "es": "silla",
+          "ko": "의자"
+        },
+        {
+          "es": "terraza",
+          "ko": "테라스"
+        },
+        {
+          "es": "barra",
+          "ko": "바 카운터"
+        },
+        {
+          "es": "chef",
+          "ko": "셰프"
+        },
+        {
+          "es": "buffet",
+          "ko": "뷔페"
+        },
+        {
+          "es": "comedor",
+          "ko": "식당"
+        },
+        {
+          "es": "palillos",
+          "ko": "젓가락"
+        },
+        {
+          "es": "bandeja",
+          "ko": "쟁반"
+        },
+        {
+          "es": "jarra",
+          "ko": "물병"
+        },
+        {
+          "es": "dulce",
+          "ko": "달콤한"
+        },
+        {
+          "es": "salado",
+          "ko": "짠"
+        },
+        {
+          "es": "amargo",
+          "ko": "쓴"
+        },
+        {
+          "es": "ácido",
+          "ko": "신"
+        },
+        {
+          "es": "picante",
+          "ko": "매운"
+        },
+        {
+          "es": "crujiente",
+          "ko": "바삭한"
+        },
+        {
+          "es": "blando",
+          "ko": "부드러운"
+        },
+        {
+          "es": "jugoso",
+          "ko": "즙이 많은"
+        },
+        {
+          "es": "sabroso",
+          "ko": "맛있는"
+        },
+        {
+          "es": "insípido",
+          "ko": "싱거운"
+        },
+        {
+          "es": "fresco",
+          "ko": "신선한"
+        },
+        {
+          "es": "maduro",
+          "ko": "익은"
+        },
+        {
+          "es": "crudo",
+          "ko": "날것의"
+        },
+        {
+          "es": "grasoso",
+          "ko": "기름진"
+        },
+        {
+          "es": "aromático",
+          "ko": "향긋한"
+        },
+        {
+          "es": "pastel",
+          "ko": "케이크"
+        },
+        {
+          "es": "chocolate",
+          "ko": "초콜릿"
+        },
+        {
+          "es": "caramelo",
+          "ko": "캐러멜"
+        },
+        {
+          "es": "flan",
+          "ko": "플란"
+        },
+        {
+          "es": "mermelada",
+          "ko": "잼"
+        },
+        {
+          "es": "miel",
+          "ko": "꿀"
+        },
+        {
+          "es": "tarta",
+          "ko": "타르트"
+        },
+        {
+          "es": "bombón",
+          "ko": "봉봉"
+        },
+        {
+          "es": "churro",
+          "ko": "츄러스"
+        },
+        {
+          "es": "donut",
+          "ko": "도넛"
+        },
+        {
+          "es": "gelatina",
+          "ko": "젤리"
+        },
+        {
+          "es": "mazapán",
+          "ko": "마지팬"
+        },
+        {
+          "es": "natilla",
+          "ko": "커스터드"
+        },
+        {
+          "es": "polvorón",
+          "ko": "폴보론"
+        },
+        {
+          "es": "turrón",
+          "ko": "투론"
+        },
+        {
+          "es": "paella",
+          "ko": "빠에야"
+        },
+        {
+          "es": "taco",
+          "ko": "타코"
+        },
+        {
+          "es": "empanada",
+          "ko": "엠파나다"
+        },
+        {
+          "es": "gazpacho",
+          "ko": "가스파초"
+        },
+        {
+          "es": "ceviche",
+          "ko": "세비체"
+        },
+        {
+          "es": "burrito",
+          "ko": "부리토"
+        },
+        {
+          "es": "guacamole",
+          "ko": "과카몰리"
+        },
+        {
+          "es": "tortilla española",
+          "ko": "스페인식 오믈렛"
+        },
+        {
+          "es": "tamales",
+          "ko": "타말레스"
+        },
+        {
+          "es": "chorizo",
+          "ko": "초리소"
+        },
+        {
+          "es": "nachos",
+          "ko": "나초"
+        },
+        {
+          "es": "quesadilla",
+          "ko": "케사디야"
+        },
+        {
+          "es": "sangría",
+          "ko": "상그리아"
+        },
+        {
+          "es": "tapas",
+          "ko": "타파스"
+        },
+        {
+          "es": "enchilada",
+          "ko": "엔칠라다"
+        },
+        {
+          "es": "comer",
+          "ko": "먹다"
+        },
+        {
+          "es": "beber",
+          "ko": "마시다"
+        },
+        {
+          "es": "probar",
+          "ko": "맛보다"
+        },
+        {
+          "es": "masticar",
+          "ko": "씹다"
+        },
+        {
+          "es": "tragar",
+          "ko": "삼키다"
+        },
+        {
+          "es": "servir",
+          "ko": "차려 내다"
+        },
+        {
+          "es": "preparar",
+          "ko": "준비하다"
+        },
+        {
+          "es": "sazonar",
+          "ko": "간을 하다"
+        },
+        {
+          "es": "picar",
+          "ko": "다지다"
+        },
+        {
+          "es": "calentar",
+          "ko": "데우다"
+        },
+        {
+          "es": "enfriar",
+          "ko": "식히다"
+        },
+        {
+          "es": "derretir",
+          "ko": "녹이다"
+        },
+        {
+          "es": "congelar",
+          "ko": "얼리다"
+        },
+        {
+          "es": "buen provecho",
+          "ko": "맛있게 드세요"
+        },
+        {
+          "es": "tener hambre",
+          "ko": "배가 고프다"
+        }
       ]
     }
-  ]
+  ],
+  "episodeStructure": {
+    "episodes": 3,
+    "learningStagesPerEpisode": 10,
+    "bossStageInterval": 11,
+    "newWordsPerLearningStage": 10,
+    "newWordsPerEpisode": 100
+  }
 }

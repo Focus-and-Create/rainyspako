@@ -35,13 +35,16 @@
             <h1 class="app-title">Spanish Rain</h1>
             <div class="header-buttons">
                 <button id="stats-btn" class="icon-btn" aria-label="통계">
-                    <span>Stats</span>
+                    <span>Stats Dashboard</span>
                 </button>
             </div>
         </div>
         
-        <div class="canvas-container">
-            <canvas id="map-canvas"></canvas>
+        <div class="map-playfield">
+            <div class="canvas-container map-canvas-container">
+                <canvas id="map-canvas"></canvas>
+            </div>
+            <div class="board-center-character">🧙</div>
         </div>
     </div>
 
@@ -172,51 +175,65 @@
     <!-- ========================================= -->
     <div id="stats-modal" class="modal hidden">
         <div class="modal-backdrop"></div>
-        <div class="modal-content stats-modal-content">
-            <button id="close-stats-btn" class="modal-close" aria-label="닫기">X</button>
-
-            <h3 class="modal-title">Stats</h3>
-
-            <div class="stats-grid">
-                <div class="stats-item">
-                    <span class="stats-item-value" id="stats-total-games">0</span>
-                    <span class="stats-item-label">Games Played</span>
-                </div>
-                <div class="stats-item">
-                    <span class="stats-item-value" id="stats-total-score">0</span>
-                    <span class="stats-item-label">Total Score</span>
-                </div>
-                <div class="stats-item">
-                    <span class="stats-item-value" id="stats-total-correct">0</span>
-                    <span class="stats-item-label">Correct</span>
-                </div>
-                <div class="stats-item">
-                    <span class="stats-item-value" id="stats-total-wrong">0</span>
-                    <span class="stats-item-label">Wrong</span>
-                </div>
-                <div class="stats-item">
-                    <span class="stats-item-value" id="stats-accuracy">0%</span>
-                    <span class="stats-item-label">Accuracy</span>
-                </div>
-                <div class="stats-item">
-                    <span class="stats-item-value" id="stats-streak">0</span>
-                    <span class="stats-item-label">Day Streak</span>
-                </div>
-            </div>
-
-            <div class="stats-progress-section">
-                <h4 class="stats-section-title">Progress</h4>
-                <div id="stats-progress-bar-container" class="stats-progress-bar-container">
-                    <div class="stats-progress-label">
-                        <span id="stats-cleared-count">0</span> / <span id="stats-total-stages">0</span> stages
-                    </div>
-                    <div class="stats-progress-track">
-                        <div id="stats-progress-fill" class="stats-progress-fill"></div>
+        <div class="modal-content stats-dashboard">
+            <header class="stats-header">
+                <div class="stats-brand">
+                    <div class="stats-brand-icon">☔</div>
+                    <div>
+                        <h3 class="modal-title">Spanish Rain</h3>
+                        <p class="stats-kicker">Performance Hub</p>
                     </div>
                 </div>
-            </div>
+                <div class="stats-header-actions">
+                    <button id="stats-share-btn" class="stats-icon-btn" aria-label="공유">↗</button>
+                    <button id="close-stats-btn" class="stats-icon-btn" aria-label="닫기">✕</button>
+                </div>
+            </header>
 
-            <button id="stats-close-action" class="btn btn-secondary" style="width:100%">Close</button>
+            <section class="stats-hero">
+                <div>
+                    <p class="stats-hero-title">Your Progress</p>
+                    <p class="stats-hero-subtitle">Great job today, keep the streak alive!</p>
+                </div>
+                <button id="stats-resume-btn" class="btn btn-primary">Resume Game</button>
+            </section>
+
+            <section class="stats-grid dashboard-grid">
+                <article class="stats-item"><span class="stats-item-label">Games Played</span><span class="stats-item-value" id="stats-total-games">0</span></article>
+                <article class="stats-item"><span class="stats-item-label">Total Score</span><span class="stats-item-value" id="stats-total-score">0</span></article>
+                <article class="stats-item"><span class="stats-item-label">Accuracy</span><span class="stats-item-value" id="stats-accuracy">0%</span></article>
+                <article class="stats-item"><span class="stats-item-label">Ratio (C/W)</span><span class="stats-item-value" id="stats-ratio">0:0</span></article>
+                <article class="stats-item stats-item-accent"><span class="stats-item-label">Day Streak</span><span class="stats-item-value" id="stats-streak">0</span></article>
+            </section>
+
+            <section class="stats-progress-section dashboard-progress">
+                <div class="stats-progress-head">
+                    <h4 class="stats-section-title">Stage Progress</h4>
+                    <div class="stats-progress-chip"><span id="stats-cleared-count">0</span> / <span id="stats-total-stages">0</span> stages</div>
+                </div>
+                <div class="stats-progress-track">
+                    <div id="stats-progress-fill" class="stats-progress-fill"></div>
+                </div>
+                <div class="stats-progress-label"><span>The Journey Begins</span><span>Fluent Speaker</span></div>
+            </section>
+
+            <section class="stats-footer-grid">
+                <div>
+                    <h4 class="stats-section-title">Recent Activity</h4>
+                    <div id="stats-week-bars" class="stats-week-bars">
+                        <div class="bar"></div><div class="bar"></div><div class="bar"></div><div class="bar"></div><div class="bar"></div><div class="bar"></div><div class="bar"></div>
+                    </div>
+                    <div class="stats-week-labels"><span>MON</span><span>TUE</span><span>WED</span><span>THU</span><span>FRI</span><span>SAT</span><span>SUN</span></div>
+                </div>
+                <div>
+                    <h4 class="stats-section-title">Language Mastery</h4>
+                    <div class="stats-mini-grid">
+                        <div class="stats-mini-card"><span>Correct</span><strong id="stats-total-correct">0</strong></div>
+                        <div class="stats-mini-card"><span>Wrong</span><strong id="stats-total-wrong">0</strong></div>
+                    </div>
+                    <button id="stats-close-action" class="btn btn-secondary" style="width:100%; margin-top:10px;">Close</button>
+                </div>
+            </section>
         </div>
     </div>
 
