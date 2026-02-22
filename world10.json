@@ -5,403 +5,2641 @@
   "stages": [
     {
       "stage": 1,
+      "category": "에피소드 1 · 세트 1",
+      "type": "learning",
       "words": [
-        { "es": "ciencia", "ko": "과학" },
-        { "es": "científico", "ko": "과학자" },
-        { "es": "investigación", "ko": "연구" },
-        { "es": "experimento", "ko": "실험" },
-        { "es": "teoría", "ko": "이론" },
-        { "es": "dato", "ko": "데이터" },
-        { "es": "resultado", "ko": "결과" },
-        { "es": "prueba", "ko": "증거" },
-        { "es": "laboratorio", "ko": "실험실" },
-        { "es": "microscopio", "ko": "현미경" },
-        { "es": "telescopio", "ko": "망원경" },
-        { "es": "fórmula", "ko": "공식" },
-        { "es": "análisis", "ko": "분석" },
-        { "es": "método", "ko": "방법" },
-        { "es": "descubrimiento", "ko": "발견" }
+        {
+          "es": "ciencia",
+          "ko": "과학"
+        },
+        {
+          "es": "científico",
+          "ko": "과학자"
+        },
+        {
+          "es": "investigación",
+          "ko": "연구"
+        },
+        {
+          "es": "experimento",
+          "ko": "실험"
+        },
+        {
+          "es": "teoría",
+          "ko": "이론"
+        },
+        {
+          "es": "dato",
+          "ko": "데이터"
+        },
+        {
+          "es": "resultado",
+          "ko": "결과"
+        },
+        {
+          "es": "prueba",
+          "ko": "증거"
+        },
+        {
+          "es": "laboratorio",
+          "ko": "실험실"
+        },
+        {
+          "es": "microscopio",
+          "ko": "현미경"
+        }
       ]
     },
     {
       "stage": 2,
+      "category": "에피소드 1 · 세트 2",
+      "type": "learning",
       "words": [
-        { "es": "matemáticas", "ko": "수학" },
-        { "es": "número", "ko": "숫자" },
-        { "es": "ecuación", "ko": "방정식" },
-        { "es": "suma", "ko": "덧셈" },
-        { "es": "resta", "ko": "뺄셈" },
-        { "es": "multiplicación", "ko": "곱셈" },
-        { "es": "división", "ko": "나눗셈" },
-        { "es": "fracción", "ko": "분수" },
-        { "es": "porcentaje", "ko": "백분율" },
-        { "es": "geometría", "ko": "기하학" },
-        { "es": "álgebra", "ko": "대수학" },
-        { "es": "estadística", "ko": "통계" },
-        { "es": "gráfico", "ko": "그래프" },
-        { "es": "cálculo", "ko": "계산" },
-        { "es": "promedio", "ko": "평균" }
+        {
+          "es": "telescopio",
+          "ko": "망원경"
+        },
+        {
+          "es": "fórmula",
+          "ko": "공식"
+        },
+        {
+          "es": "análisis",
+          "ko": "분석"
+        },
+        {
+          "es": "método",
+          "ko": "방법"
+        },
+        {
+          "es": "descubrimiento",
+          "ko": "발견"
+        },
+        {
+          "es": "matemáticas",
+          "ko": "수학"
+        },
+        {
+          "es": "número",
+          "ko": "숫자"
+        },
+        {
+          "es": "ecuación",
+          "ko": "방정식"
+        },
+        {
+          "es": "suma",
+          "ko": "덧셈"
+        },
+        {
+          "es": "resta",
+          "ko": "뺄셈"
+        }
       ]
     },
     {
       "stage": 3,
+      "category": "에피소드 1 · 세트 3",
+      "type": "learning",
       "words": [
-        { "es": "física", "ko": "물리학" },
-        { "es": "fuerza", "ko": "힘" },
-        { "es": "gravedad", "ko": "중력" },
-        { "es": "velocidad", "ko": "속도" },
-        { "es": "energía", "ko": "에너지" },
-        { "es": "masa", "ko": "질량" },
-        { "es": "peso", "ko": "무게" },
-        { "es": "presión", "ko": "압력" },
-        { "es": "temperatura", "ko": "온도" },
-        { "es": "onda", "ko": "파동" },
-        { "es": "luz", "ko": "빛" },
-        { "es": "sonido", "ko": "소리" },
-        { "es": "magnetismo", "ko": "자기" },
-        { "es": "fricción", "ko": "마찰" },
-        { "es": "movimiento", "ko": "운동" }
+        {
+          "es": "multiplicación",
+          "ko": "곱셈"
+        },
+        {
+          "es": "división",
+          "ko": "나눗셈"
+        },
+        {
+          "es": "fracción",
+          "ko": "분수"
+        },
+        {
+          "es": "porcentaje",
+          "ko": "백분율"
+        },
+        {
+          "es": "geometría",
+          "ko": "기하학"
+        },
+        {
+          "es": "álgebra",
+          "ko": "대수학"
+        },
+        {
+          "es": "estadística",
+          "ko": "통계"
+        },
+        {
+          "es": "gráfico",
+          "ko": "그래프"
+        },
+        {
+          "es": "cálculo",
+          "ko": "계산"
+        },
+        {
+          "es": "promedio",
+          "ko": "평균"
+        }
       ]
     },
     {
       "stage": 4,
+      "category": "에피소드 1 · 세트 4",
+      "type": "learning",
       "words": [
-        { "es": "química", "ko": "화학" },
-        { "es": "átomo", "ko": "원자" },
-        { "es": "molécula", "ko": "분자" },
-        { "es": "elemento", "ko": "원소" },
-        { "es": "compuesto", "ko": "화합물" },
-        { "es": "reacción", "ko": "반응" },
-        { "es": "ácido", "ko": "산" },
-        { "es": "base", "ko": "염기" },
-        { "es": "oxígeno", "ko": "산소" },
-        { "es": "hidrógeno", "ko": "수소" },
-        { "es": "carbono", "ko": "탄소" },
-        { "es": "solución", "ko": "용액" },
-        { "es": "gas", "ko": "기체" },
-        { "es": "líquido", "ko": "액체" },
-        { "es": "sólido", "ko": "고체" }
+        {
+          "es": "física",
+          "ko": "물리학"
+        },
+        {
+          "es": "fuerza",
+          "ko": "힘"
+        },
+        {
+          "es": "gravedad",
+          "ko": "중력"
+        },
+        {
+          "es": "velocidad",
+          "ko": "속도"
+        },
+        {
+          "es": "energía",
+          "ko": "에너지"
+        },
+        {
+          "es": "masa",
+          "ko": "질량"
+        },
+        {
+          "es": "peso",
+          "ko": "무게"
+        },
+        {
+          "es": "presión",
+          "ko": "압력"
+        },
+        {
+          "es": "temperatura",
+          "ko": "온도"
+        },
+        {
+          "es": "onda",
+          "ko": "파동"
+        }
       ]
     },
     {
       "stage": 5,
+      "category": "에피소드 1 · 세트 5",
+      "type": "learning",
       "words": [
-        { "es": "biología", "ko": "생물학" },
-        { "es": "célula", "ko": "세포" },
-        { "es": "gen", "ko": "유전자" },
-        { "es": "ADN", "ko": "DNA" },
-        { "es": "evolución", "ko": "진화" },
-        { "es": "especie", "ko": "종" },
-        { "es": "organismo", "ko": "유기체" },
-        { "es": "bacteria", "ko": "세균" },
-        { "es": "virus", "ko": "바이러스" },
-        { "es": "fotosíntesis", "ko": "광합성" },
-        { "es": "ecosistema", "ko": "생태계" },
-        { "es": "proteína", "ko": "단백질" },
-        { "es": "nutriente", "ko": "영양소" },
-        { "es": "reproducción", "ko": "생식" },
-        { "es": "herencia", "ko": "유전" }
+        {
+          "es": "luz",
+          "ko": "빛"
+        },
+        {
+          "es": "sonido",
+          "ko": "소리"
+        },
+        {
+          "es": "magnetismo",
+          "ko": "자기"
+        },
+        {
+          "es": "fricción",
+          "ko": "마찰"
+        },
+        {
+          "es": "movimiento",
+          "ko": "운동"
+        },
+        {
+          "es": "química",
+          "ko": "화학"
+        },
+        {
+          "es": "átomo",
+          "ko": "원자"
+        },
+        {
+          "es": "molécula",
+          "ko": "분자"
+        },
+        {
+          "es": "elemento",
+          "ko": "원소"
+        },
+        {
+          "es": "compuesto",
+          "ko": "화합물"
+        }
       ]
     },
     {
       "stage": 6,
+      "category": "에피소드 1 · 세트 6",
+      "type": "learning",
       "words": [
-        { "es": "cuerpo", "ko": "몸" },
-        { "es": "cerebro", "ko": "뇌" },
-        { "es": "corazón", "ko": "심장" },
-        { "es": "pulmón", "ko": "폐" },
-        { "es": "hueso", "ko": "뼈" },
-        { "es": "músculo", "ko": "근육" },
-        { "es": "nervio", "ko": "신경" },
-        { "es": "sangre", "ko": "혈액" },
-        { "es": "órgano", "ko": "장기" },
-        { "es": "tejido", "ko": "조직" },
-        { "es": "esqueleto", "ko": "골격" },
-        { "es": "digestión", "ko": "소화" },
-        { "es": "respiración", "ko": "호흡" },
-        { "es": "circulación", "ko": "순환" },
-        { "es": "sentido", "ko": "감각" }
+        {
+          "es": "reacción",
+          "ko": "반응"
+        },
+        {
+          "es": "ácido",
+          "ko": "산"
+        },
+        {
+          "es": "base",
+          "ko": "염기"
+        },
+        {
+          "es": "oxígeno",
+          "ko": "산소"
+        },
+        {
+          "es": "hidrógeno",
+          "ko": "수소"
+        },
+        {
+          "es": "carbono",
+          "ko": "탄소"
+        },
+        {
+          "es": "solución",
+          "ko": "용액"
+        },
+        {
+          "es": "gas",
+          "ko": "기체"
+        },
+        {
+          "es": "líquido",
+          "ko": "액체"
+        },
+        {
+          "es": "sólido",
+          "ko": "고체"
+        }
       ]
     },
     {
       "stage": 7,
+      "category": "에피소드 1 · 세트 7",
+      "type": "learning",
       "words": [
-        { "es": "medicina", "ko": "의학" },
-        { "es": "salud", "ko": "건강" },
-        { "es": "enfermedad", "ko": "질병" },
-        { "es": "vacuna", "ko": "백신" },
-        { "es": "tratamiento", "ko": "치료" },
-        { "es": "diagnóstico", "ko": "진단" },
-        { "es": "síntoma", "ko": "증상" },
-        { "es": "cirugía", "ko": "수술" },
-        { "es": "medicamento", "ko": "약물" },
-        { "es": "antibiótico", "ko": "항생제" },
-        { "es": "infección", "ko": "감염" },
-        { "es": "alergia", "ko": "알레르기" },
-        { "es": "receta", "ko": "처방전" },
-        { "es": "hospital", "ko": "병원" },
-        { "es": "paciente", "ko": "환자" }
+        {
+          "es": "biología",
+          "ko": "생물학"
+        },
+        {
+          "es": "célula",
+          "ko": "세포"
+        },
+        {
+          "es": "gen",
+          "ko": "유전자"
+        },
+        {
+          "es": "ADN",
+          "ko": "DNA"
+        },
+        {
+          "es": "evolución",
+          "ko": "진화"
+        },
+        {
+          "es": "especie",
+          "ko": "종"
+        },
+        {
+          "es": "organismo",
+          "ko": "유기체"
+        },
+        {
+          "es": "bacteria",
+          "ko": "세균"
+        },
+        {
+          "es": "virus",
+          "ko": "바이러스"
+        },
+        {
+          "es": "fotosíntesis",
+          "ko": "광합성"
+        }
       ]
     },
     {
       "stage": 8,
+      "category": "에피소드 1 · 세트 8",
+      "type": "learning",
       "words": [
-        { "es": "tecnología", "ko": "기술" },
-        { "es": "máquina", "ko": "기계" },
-        { "es": "herramienta", "ko": "도구" },
-        { "es": "dispositivo", "ko": "장치" },
-        { "es": "sistema", "ko": "시스템" },
-        { "es": "automático", "ko": "자동" },
-        { "es": "digital", "ko": "디지털" },
-        { "es": "electrónico", "ko": "전자" },
-        { "es": "sensor", "ko": "센서" },
-        { "es": "cable", "ko": "케이블" },
-        { "es": "batería", "ko": "배터리" },
-        { "es": "pantalla", "ko": "화면" },
-        { "es": "señal", "ko": "신호" },
-        { "es": "conexión", "ko": "연결" },
-        { "es": "innovación", "ko": "혁신" }
+        {
+          "es": "ecosistema",
+          "ko": "생태계"
+        },
+        {
+          "es": "proteína",
+          "ko": "단백질"
+        },
+        {
+          "es": "nutriente",
+          "ko": "영양소"
+        },
+        {
+          "es": "reproducción",
+          "ko": "생식"
+        },
+        {
+          "es": "herencia",
+          "ko": "유전"
+        },
+        {
+          "es": "cuerpo",
+          "ko": "몸"
+        },
+        {
+          "es": "cerebro",
+          "ko": "뇌"
+        },
+        {
+          "es": "corazón",
+          "ko": "심장"
+        },
+        {
+          "es": "pulmón",
+          "ko": "폐"
+        },
+        {
+          "es": "hueso",
+          "ko": "뼈"
+        }
       ]
     },
     {
       "stage": 9,
+      "category": "에피소드 1 · 세트 9",
+      "type": "learning",
       "words": [
-        { "es": "computadora", "ko": "컴퓨터" },
-        { "es": "teclado", "ko": "키보드" },
-        { "es": "ratón", "ko": "마우스" },
-        { "es": "monitor", "ko": "모니터" },
-        { "es": "disco duro", "ko": "하드디스크" },
-        { "es": "memoria", "ko": "메모리" },
-        { "es": "procesador", "ko": "프로세서" },
-        { "es": "impresora", "ko": "프린터" },
-        { "es": "servidor", "ko": "서버" },
-        { "es": "portátil", "ko": "노트북" },
-        { "es": "chip", "ko": "칩" },
-        { "es": "tarjeta gráfica", "ko": "그래픽카드" },
-        { "es": "puerto", "ko": "포트" },
-        { "es": "altavoz", "ko": "스피커" },
-        { "es": "cámara web", "ko": "웹캠" }
+        {
+          "es": "músculo",
+          "ko": "근육"
+        },
+        {
+          "es": "nervio",
+          "ko": "신경"
+        },
+        {
+          "es": "sangre",
+          "ko": "혈액"
+        },
+        {
+          "es": "órgano",
+          "ko": "장기"
+        },
+        {
+          "es": "tejido",
+          "ko": "조직"
+        },
+        {
+          "es": "esqueleto",
+          "ko": "골격"
+        },
+        {
+          "es": "digestión",
+          "ko": "소화"
+        },
+        {
+          "es": "respiración",
+          "ko": "호흡"
+        },
+        {
+          "es": "circulación",
+          "ko": "순환"
+        },
+        {
+          "es": "sentido",
+          "ko": "감각"
+        }
       ]
     },
     {
       "stage": 10,
+      "category": "에피소드 1 · 세트 10",
+      "type": "learning",
       "words": [
-        { "es": "software", "ko": "소프트웨어" },
-        { "es": "internet", "ko": "인터넷" },
-        { "es": "programa", "ko": "프로그램" },
-        { "es": "archivo", "ko": "파일" },
-        { "es": "página web", "ko": "웹페이지" },
-        { "es": "navegador", "ko": "브라우저" },
-        { "es": "contraseña", "ko": "비밀번호" },
-        { "es": "descargar", "ko": "다운로드" },
-        { "es": "red", "ko": "네트워크" },
-        { "es": "correo electrónico", "ko": "이메일" },
-        { "es": "base de datos", "ko": "데이터베이스" },
-        { "es": "nube", "ko": "클라우드" },
-        { "es": "código", "ko": "코드" },
-        { "es": "algoritmo", "ko": "알고리즘" },
-        { "es": "actualización", "ko": "업데이트" }
+        {
+          "es": "medicina",
+          "ko": "의학"
+        },
+        {
+          "es": "salud",
+          "ko": "건강"
+        },
+        {
+          "es": "enfermedad",
+          "ko": "질병"
+        },
+        {
+          "es": "vacuna",
+          "ko": "백신"
+        },
+        {
+          "es": "tratamiento",
+          "ko": "치료"
+        },
+        {
+          "es": "diagnóstico",
+          "ko": "진단"
+        },
+        {
+          "es": "síntoma",
+          "ko": "증상"
+        },
+        {
+          "es": "cirugía",
+          "ko": "수술"
+        },
+        {
+          "es": "medicamento",
+          "ko": "약물"
+        },
+        {
+          "es": "antibiótico",
+          "ko": "항생제"
+        }
       ]
     },
     {
       "stage": 11,
+      "category": "에피소드 1 보스 · 누적 복습",
+      "type": "boss",
       "words": [
-        { "es": "teléfono inteligente", "ko": "스마트폰" },
-        { "es": "aplicación", "ko": "앱" },
-        { "es": "mensaje", "ko": "메시지" },
-        { "es": "notificación", "ko": "알림" },
-        { "es": "selfie", "ko": "셀카" },
-        { "es": "videollamada", "ko": "영상통화" },
-        { "es": "wifi", "ko": "와이파이" },
-        { "es": "bluetooth", "ko": "블루투스" },
-        { "es": "captura de pantalla", "ko": "스크린샷" },
-        { "es": "almacenamiento", "ko": "저장공간" },
-        { "es": "cargador", "ko": "충전기" },
-        { "es": "funda", "ko": "케이스" },
-        { "es": "red social", "ko": "소셜미디어" },
-        { "es": "emoji", "ko": "이모티콘" },
-        { "es": "cuenta", "ko": "계정" }
+        {
+          "es": "ciencia",
+          "ko": "과학"
+        },
+        {
+          "es": "científico",
+          "ko": "과학자"
+        },
+        {
+          "es": "investigación",
+          "ko": "연구"
+        },
+        {
+          "es": "experimento",
+          "ko": "실험"
+        },
+        {
+          "es": "teoría",
+          "ko": "이론"
+        },
+        {
+          "es": "dato",
+          "ko": "데이터"
+        },
+        {
+          "es": "resultado",
+          "ko": "결과"
+        },
+        {
+          "es": "prueba",
+          "ko": "증거"
+        },
+        {
+          "es": "laboratorio",
+          "ko": "실험실"
+        },
+        {
+          "es": "microscopio",
+          "ko": "현미경"
+        },
+        {
+          "es": "telescopio",
+          "ko": "망원경"
+        },
+        {
+          "es": "fórmula",
+          "ko": "공식"
+        },
+        {
+          "es": "análisis",
+          "ko": "분석"
+        },
+        {
+          "es": "método",
+          "ko": "방법"
+        },
+        {
+          "es": "descubrimiento",
+          "ko": "발견"
+        },
+        {
+          "es": "matemáticas",
+          "ko": "수학"
+        },
+        {
+          "es": "número",
+          "ko": "숫자"
+        },
+        {
+          "es": "ecuación",
+          "ko": "방정식"
+        },
+        {
+          "es": "suma",
+          "ko": "덧셈"
+        },
+        {
+          "es": "resta",
+          "ko": "뺄셈"
+        },
+        {
+          "es": "multiplicación",
+          "ko": "곱셈"
+        },
+        {
+          "es": "división",
+          "ko": "나눗셈"
+        },
+        {
+          "es": "fracción",
+          "ko": "분수"
+        },
+        {
+          "es": "porcentaje",
+          "ko": "백분율"
+        },
+        {
+          "es": "geometría",
+          "ko": "기하학"
+        },
+        {
+          "es": "álgebra",
+          "ko": "대수학"
+        },
+        {
+          "es": "estadística",
+          "ko": "통계"
+        },
+        {
+          "es": "gráfico",
+          "ko": "그래프"
+        },
+        {
+          "es": "cálculo",
+          "ko": "계산"
+        },
+        {
+          "es": "promedio",
+          "ko": "평균"
+        },
+        {
+          "es": "física",
+          "ko": "물리학"
+        },
+        {
+          "es": "fuerza",
+          "ko": "힘"
+        },
+        {
+          "es": "gravedad",
+          "ko": "중력"
+        },
+        {
+          "es": "velocidad",
+          "ko": "속도"
+        },
+        {
+          "es": "energía",
+          "ko": "에너지"
+        },
+        {
+          "es": "masa",
+          "ko": "질량"
+        },
+        {
+          "es": "peso",
+          "ko": "무게"
+        },
+        {
+          "es": "presión",
+          "ko": "압력"
+        },
+        {
+          "es": "temperatura",
+          "ko": "온도"
+        },
+        {
+          "es": "onda",
+          "ko": "파동"
+        },
+        {
+          "es": "luz",
+          "ko": "빛"
+        },
+        {
+          "es": "sonido",
+          "ko": "소리"
+        },
+        {
+          "es": "magnetismo",
+          "ko": "자기"
+        },
+        {
+          "es": "fricción",
+          "ko": "마찰"
+        },
+        {
+          "es": "movimiento",
+          "ko": "운동"
+        },
+        {
+          "es": "química",
+          "ko": "화학"
+        },
+        {
+          "es": "átomo",
+          "ko": "원자"
+        },
+        {
+          "es": "molécula",
+          "ko": "분자"
+        },
+        {
+          "es": "elemento",
+          "ko": "원소"
+        },
+        {
+          "es": "compuesto",
+          "ko": "화합물"
+        },
+        {
+          "es": "reacción",
+          "ko": "반응"
+        },
+        {
+          "es": "ácido",
+          "ko": "산"
+        },
+        {
+          "es": "base",
+          "ko": "염기"
+        },
+        {
+          "es": "oxígeno",
+          "ko": "산소"
+        },
+        {
+          "es": "hidrógeno",
+          "ko": "수소"
+        },
+        {
+          "es": "carbono",
+          "ko": "탄소"
+        },
+        {
+          "es": "solución",
+          "ko": "용액"
+        },
+        {
+          "es": "gas",
+          "ko": "기체"
+        },
+        {
+          "es": "líquido",
+          "ko": "액체"
+        },
+        {
+          "es": "sólido",
+          "ko": "고체"
+        },
+        {
+          "es": "biología",
+          "ko": "생물학"
+        },
+        {
+          "es": "célula",
+          "ko": "세포"
+        },
+        {
+          "es": "gen",
+          "ko": "유전자"
+        },
+        {
+          "es": "ADN",
+          "ko": "DNA"
+        },
+        {
+          "es": "evolución",
+          "ko": "진화"
+        },
+        {
+          "es": "especie",
+          "ko": "종"
+        },
+        {
+          "es": "organismo",
+          "ko": "유기체"
+        },
+        {
+          "es": "bacteria",
+          "ko": "세균"
+        },
+        {
+          "es": "virus",
+          "ko": "바이러스"
+        },
+        {
+          "es": "fotosíntesis",
+          "ko": "광합성"
+        },
+        {
+          "es": "ecosistema",
+          "ko": "생태계"
+        },
+        {
+          "es": "proteína",
+          "ko": "단백질"
+        },
+        {
+          "es": "nutriente",
+          "ko": "영양소"
+        },
+        {
+          "es": "reproducción",
+          "ko": "생식"
+        },
+        {
+          "es": "herencia",
+          "ko": "유전"
+        },
+        {
+          "es": "cuerpo",
+          "ko": "몸"
+        },
+        {
+          "es": "cerebro",
+          "ko": "뇌"
+        },
+        {
+          "es": "corazón",
+          "ko": "심장"
+        },
+        {
+          "es": "pulmón",
+          "ko": "폐"
+        },
+        {
+          "es": "hueso",
+          "ko": "뼈"
+        },
+        {
+          "es": "músculo",
+          "ko": "근육"
+        },
+        {
+          "es": "nervio",
+          "ko": "신경"
+        },
+        {
+          "es": "sangre",
+          "ko": "혈액"
+        },
+        {
+          "es": "órgano",
+          "ko": "장기"
+        },
+        {
+          "es": "tejido",
+          "ko": "조직"
+        },
+        {
+          "es": "esqueleto",
+          "ko": "골격"
+        },
+        {
+          "es": "digestión",
+          "ko": "소화"
+        },
+        {
+          "es": "respiración",
+          "ko": "호흡"
+        },
+        {
+          "es": "circulación",
+          "ko": "순환"
+        },
+        {
+          "es": "sentido",
+          "ko": "감각"
+        },
+        {
+          "es": "medicina",
+          "ko": "의학"
+        },
+        {
+          "es": "salud",
+          "ko": "건강"
+        },
+        {
+          "es": "enfermedad",
+          "ko": "질병"
+        },
+        {
+          "es": "vacuna",
+          "ko": "백신"
+        },
+        {
+          "es": "tratamiento",
+          "ko": "치료"
+        },
+        {
+          "es": "diagnóstico",
+          "ko": "진단"
+        },
+        {
+          "es": "síntoma",
+          "ko": "증상"
+        },
+        {
+          "es": "cirugía",
+          "ko": "수술"
+        },
+        {
+          "es": "medicamento",
+          "ko": "약물"
+        },
+        {
+          "es": "antibiótico",
+          "ko": "항생제"
+        }
       ]
     },
     {
       "stage": 12,
+      "category": "에피소드 2 · 세트 1",
+      "type": "learning",
       "words": [
-        { "es": "electricidad", "ko": "전기" },
-        { "es": "voltaje", "ko": "전압" },
-        { "es": "corriente", "ko": "전류" },
-        { "es": "circuito", "ko": "회로" },
-        { "es": "energía solar", "ko": "태양에너지" },
-        { "es": "energía eólica", "ko": "풍력에너지" },
-        { "es": "nuclear", "ko": "원자력" },
-        { "es": "combustible", "ko": "연료" },
-        { "es": "generador", "ko": "발전기" },
-        { "es": "turbina", "ko": "터빈" },
-        { "es": "potencia", "ko": "전력" },
-        { "es": "enchufe", "ko": "콘센트" },
-        { "es": "bombilla", "ko": "전구" },
-        { "es": "interruptor", "ko": "스위치" },
-        { "es": "renovable", "ko": "재생가능한" }
+        {
+          "es": "infección",
+          "ko": "감염"
+        },
+        {
+          "es": "alergia",
+          "ko": "알레르기"
+        },
+        {
+          "es": "receta",
+          "ko": "처방전"
+        },
+        {
+          "es": "hospital",
+          "ko": "병원"
+        },
+        {
+          "es": "paciente",
+          "ko": "환자"
+        },
+        {
+          "es": "tecnología",
+          "ko": "기술"
+        },
+        {
+          "es": "máquina",
+          "ko": "기계"
+        },
+        {
+          "es": "herramienta",
+          "ko": "도구"
+        },
+        {
+          "es": "dispositivo",
+          "ko": "장치"
+        },
+        {
+          "es": "sistema",
+          "ko": "시스템"
+        }
       ]
     },
     {
       "stage": 13,
+      "category": "에피소드 2 · 세트 2",
+      "type": "learning",
       "words": [
-        { "es": "ingeniería", "ko": "공학" },
-        { "es": "ingeniero", "ko": "엔지니어" },
-        { "es": "diseño", "ko": "설계" },
-        { "es": "construcción", "ko": "건설" },
-        { "es": "estructura", "ko": "구조" },
-        { "es": "puente", "ko": "다리" },
-        { "es": "robot", "ko": "로봇" },
-        { "es": "prototipo", "ko": "시제품" },
-        { "es": "plano", "ko": "도면" },
-        { "es": "mecanismo", "ko": "메커니즘" },
-        { "es": "tornillo", "ko": "나사" },
-        { "es": "engranaje", "ko": "톱니바퀴" },
-        { "es": "tubería", "ko": "배관" },
-        { "es": "soldadura", "ko": "용접" },
-        { "es": "automatización", "ko": "자동화" }
+        {
+          "es": "automático",
+          "ko": "자동"
+        },
+        {
+          "es": "digital",
+          "ko": "디지털"
+        },
+        {
+          "es": "electrónico",
+          "ko": "전자"
+        },
+        {
+          "es": "sensor",
+          "ko": "센서"
+        },
+        {
+          "es": "cable",
+          "ko": "케이블"
+        },
+        {
+          "es": "batería",
+          "ko": "배터리"
+        },
+        {
+          "es": "pantalla",
+          "ko": "화면"
+        },
+        {
+          "es": "señal",
+          "ko": "신호"
+        },
+        {
+          "es": "conexión",
+          "ko": "연결"
+        },
+        {
+          "es": "innovación",
+          "ko": "혁신"
+        }
       ]
     },
     {
       "stage": 14,
+      "category": "에피소드 2 · 세트 3",
+      "type": "learning",
       "words": [
-        { "es": "espacio", "ko": "우주" },
-        { "es": "satélite", "ko": "위성" },
-        { "es": "cohete", "ko": "로켓" },
-        { "es": "estación espacial", "ko": "우주정거장" },
-        { "es": "astronauta", "ko": "우주비행사" },
-        { "es": "órbita", "ko": "궤도" },
-        { "es": "nave espacial", "ko": "우주선" },
-        { "es": "lanzamiento", "ko": "발사" },
-        { "es": "sonda", "ko": "탐사선" },
-        { "es": "galaxia", "ko": "은하" },
-        { "es": "planeta", "ko": "행성" },
-        { "es": "estrella", "ko": "별" },
-        { "es": "agujero negro", "ko": "블랙홀" },
-        { "es": "gravedad cero", "ko": "무중력" },
-        { "es": "exploración", "ko": "탐사" }
+        {
+          "es": "computadora",
+          "ko": "컴퓨터"
+        },
+        {
+          "es": "teclado",
+          "ko": "키보드"
+        },
+        {
+          "es": "ratón",
+          "ko": "마우스"
+        },
+        {
+          "es": "monitor",
+          "ko": "모니터"
+        },
+        {
+          "es": "disco duro",
+          "ko": "하드디스크"
+        },
+        {
+          "es": "memoria",
+          "ko": "메모리"
+        },
+        {
+          "es": "procesador",
+          "ko": "프로세서"
+        },
+        {
+          "es": "impresora",
+          "ko": "프린터"
+        },
+        {
+          "es": "servidor",
+          "ko": "서버"
+        },
+        {
+          "es": "portátil",
+          "ko": "노트북"
+        }
       ]
     },
     {
       "stage": 15,
+      "category": "에피소드 2 · 세트 4",
+      "type": "learning",
       "words": [
-        { "es": "inteligencia artificial", "ko": "인공지능" },
-        { "es": "aprendizaje automático", "ko": "머신러닝" },
-        { "es": "red neuronal", "ko": "신경망" },
-        { "es": "reconocimiento", "ko": "인식" },
-        { "es": "asistente virtual", "ko": "가상비서" },
-        { "es": "chatbot", "ko": "챗봇" },
-        { "es": "automatizado", "ko": "자동화된" },
-        { "es": "predicción", "ko": "예측" },
-        { "es": "clasificación", "ko": "분류" },
-        { "es": "modelo", "ko": "모델" },
-        { "es": "entrenamiento", "ko": "훈련" },
-        { "es": "voz artificial", "ko": "인공음성" },
-        { "es": "conducción autónoma", "ko": "자율주행" },
-        { "es": "procesamiento", "ko": "처리" },
-        { "es": "aprendizaje profundo", "ko": "딥러닝" }
+        {
+          "es": "chip",
+          "ko": "칩"
+        },
+        {
+          "es": "tarjeta gráfica",
+          "ko": "그래픽카드"
+        },
+        {
+          "es": "puerto",
+          "ko": "포트"
+        },
+        {
+          "es": "altavoz",
+          "ko": "스피커"
+        },
+        {
+          "es": "cámara web",
+          "ko": "웹캠"
+        },
+        {
+          "es": "software",
+          "ko": "소프트웨어"
+        },
+        {
+          "es": "internet",
+          "ko": "인터넷"
+        },
+        {
+          "es": "programa",
+          "ko": "프로그램"
+        },
+        {
+          "es": "archivo",
+          "ko": "파일"
+        },
+        {
+          "es": "página web",
+          "ko": "웹페이지"
+        }
       ]
     },
     {
       "stage": 16,
+      "category": "에피소드 2 · 세트 5",
+      "type": "learning",
       "words": [
-        { "es": "medio ambiente", "ko": "환경" },
-        { "es": "sostenibilidad", "ko": "지속가능성" },
-        { "es": "contaminación", "ko": "오염" },
-        { "es": "reciclaje", "ko": "재활용" },
-        { "es": "cambio climático", "ko": "기후변화" },
-        { "es": "emisión", "ko": "배출" },
-        { "es": "huella de carbono", "ko": "탄소발자국" },
-        { "es": "biodiversidad", "ko": "생물다양성" },
-        { "es": "deforestación", "ko": "산림파괴" },
-        { "es": "capa de ozono", "ko": "오존층" },
-        { "es": "efecto invernadero", "ko": "온실효과" },
-        { "es": "residuo", "ko": "폐기물" },
-        { "es": "conservación", "ko": "보존" },
-        { "es": "ecológico", "ko": "친환경적인" },
-        { "es": "recurso natural", "ko": "천연자원" }
+        {
+          "es": "navegador",
+          "ko": "브라우저"
+        },
+        {
+          "es": "contraseña",
+          "ko": "비밀번호"
+        },
+        {
+          "es": "descargar",
+          "ko": "다운로드"
+        },
+        {
+          "es": "red",
+          "ko": "네트워크"
+        },
+        {
+          "es": "correo electrónico",
+          "ko": "이메일"
+        },
+        {
+          "es": "base de datos",
+          "ko": "데이터베이스"
+        },
+        {
+          "es": "nube",
+          "ko": "클라우드"
+        },
+        {
+          "es": "código",
+          "ko": "코드"
+        },
+        {
+          "es": "algoritmo",
+          "ko": "알고리즘"
+        },
+        {
+          "es": "actualización",
+          "ko": "업데이트"
+        }
       ]
     },
     {
       "stage": 17,
+      "category": "에피소드 2 · 세트 6",
+      "type": "learning",
       "words": [
-        { "es": "material", "ko": "재료" },
-        { "es": "metal", "ko": "금속" },
-        { "es": "plástico", "ko": "플라스틱" },
-        { "es": "acero", "ko": "강철" },
-        { "es": "aluminio", "ko": "알루미늄" },
-        { "es": "cerámica", "ko": "세라믹" },
-        { "es": "fibra", "ko": "섬유" },
-        { "es": "fabricación", "ko": "제조" },
-        { "es": "fábrica", "ko": "공장" },
-        { "es": "producción", "ko": "생산" },
-        { "es": "ensamblaje", "ko": "조립" },
-        { "es": "calidad", "ko": "품질" },
-        { "es": "molde", "ko": "금형" },
-        { "es": "materia prima", "ko": "원자재" },
-        { "es": "nanotecnología", "ko": "나노기술" }
+        {
+          "es": "teléfono inteligente",
+          "ko": "스마트폰"
+        },
+        {
+          "es": "aplicación",
+          "ko": "앱"
+        },
+        {
+          "es": "mensaje",
+          "ko": "메시지"
+        },
+        {
+          "es": "notificación",
+          "ko": "알림"
+        },
+        {
+          "es": "selfie",
+          "ko": "셀카"
+        },
+        {
+          "es": "videollamada",
+          "ko": "영상통화"
+        },
+        {
+          "es": "wifi",
+          "ko": "와이파이"
+        },
+        {
+          "es": "bluetooth",
+          "ko": "블루투스"
+        },
+        {
+          "es": "captura de pantalla",
+          "ko": "스크린샷"
+        },
+        {
+          "es": "almacenamiento",
+          "ko": "저장공간"
+        }
       ]
     },
     {
       "stage": 18,
+      "category": "에피소드 2 · 세트 7",
+      "type": "learning",
       "words": [
-        { "es": "hipótesis", "ko": "가설" },
-        { "es": "observación", "ko": "관찰" },
-        { "es": "variable", "ko": "변수" },
-        { "es": "conclusión", "ko": "결론" },
-        { "es": "muestra", "ko": "표본" },
-        { "es": "medición", "ko": "측정" },
-        { "es": "control", "ko": "대조군" },
-        { "es": "publicación", "ko": "논문" },
-        { "es": "revisión", "ko": "검토" },
-        { "es": "evidencia", "ko": "증거자료" },
-        { "es": "precisión", "ko": "정밀도" },
-        { "es": "error", "ko": "오차" },
-        { "es": "reproducibilidad", "ko": "재현성" },
-        { "es": "verificación", "ko": "검증" },
-        { "es": "simulación", "ko": "시뮬레이션" }
+        {
+          "es": "cargador",
+          "ko": "충전기"
+        },
+        {
+          "es": "funda",
+          "ko": "케이스"
+        },
+        {
+          "es": "red social",
+          "ko": "소셜미디어"
+        },
+        {
+          "es": "emoji",
+          "ko": "이모티콘"
+        },
+        {
+          "es": "cuenta",
+          "ko": "계정"
+        },
+        {
+          "es": "electricidad",
+          "ko": "전기"
+        },
+        {
+          "es": "voltaje",
+          "ko": "전압"
+        },
+        {
+          "es": "corriente",
+          "ko": "전류"
+        },
+        {
+          "es": "circuito",
+          "ko": "회로"
+        },
+        {
+          "es": "energía solar",
+          "ko": "태양에너지"
+        }
       ]
     },
     {
       "stage": 19,
+      "category": "에피소드 2 · 세트 8",
+      "type": "learning",
       "words": [
-        { "es": "invención", "ko": "발명" },
-        { "es": "inventor", "ko": "발명가" },
-        { "es": "patente", "ko": "특허" },
-        { "es": "bombilla eléctrica", "ko": "전등" },
-        { "es": "motor", "ko": "엔진" },
-        { "es": "imprenta", "ko": "인쇄기" },
-        { "es": "teléfono", "ko": "전화기" },
-        { "es": "avión", "ko": "비행기" },
-        { "es": "brújula", "ko": "나침반" },
-        { "es": "penicilina", "ko": "페니실린" },
-        { "es": "rueda", "ko": "바퀴" },
-        { "es": "pólvora", "ko": "화약" },
-        { "es": "semiconductor", "ko": "반도체" },
-        { "es": "láser", "ko": "레이저" },
-        { "es": "radar", "ko": "레이더" }
+        {
+          "es": "energía eólica",
+          "ko": "풍력에너지"
+        },
+        {
+          "es": "nuclear",
+          "ko": "원자력"
+        },
+        {
+          "es": "combustible",
+          "ko": "연료"
+        },
+        {
+          "es": "generador",
+          "ko": "발전기"
+        },
+        {
+          "es": "turbina",
+          "ko": "터빈"
+        },
+        {
+          "es": "potencia",
+          "ko": "전력"
+        },
+        {
+          "es": "enchufe",
+          "ko": "콘센트"
+        },
+        {
+          "es": "bombilla",
+          "ko": "전구"
+        },
+        {
+          "es": "interruptor",
+          "ko": "스위치"
+        },
+        {
+          "es": "renovable",
+          "ko": "재생가능한"
+        }
       ]
     },
     {
       "stage": 20,
+      "category": "에피소드 2 · 세트 9",
+      "type": "learning",
       "words": [
-        { "es": "investigar", "ko": "연구하다" },
-        { "es": "experimentar", "ko": "실험하다" },
-        { "es": "medir", "ko": "측정하다" },
-        { "es": "observar", "ko": "관찰하다" },
-        { "es": "calcular", "ko": "계산하다" },
-        { "es": "comprobar", "ko": "확인하다" },
-        { "es": "analizar", "ko": "분석하다" },
-        { "es": "desarrollar", "ko": "개발하다" },
-        { "es": "programar", "ko": "프로그래밍하다" },
-        { "es": "inventar", "ko": "발명하다" },
-        { "es": "resolver", "ko": "해결하다" },
-        { "es": "demostrar", "ko": "증명하다" },
-        { "es": "clasificar", "ko": "분류하다" },
-        { "es": "transformar", "ko": "변환하다" },
-        { "es": "conectar", "ko": "연결하다" }
+        {
+          "es": "ingeniería",
+          "ko": "공학"
+        },
+        {
+          "es": "ingeniero",
+          "ko": "엔지니어"
+        },
+        {
+          "es": "diseño",
+          "ko": "설계"
+        },
+        {
+          "es": "construcción",
+          "ko": "건설"
+        },
+        {
+          "es": "estructura",
+          "ko": "구조"
+        },
+        {
+          "es": "puente",
+          "ko": "다리"
+        },
+        {
+          "es": "robot",
+          "ko": "로봇"
+        },
+        {
+          "es": "prototipo",
+          "ko": "시제품"
+        },
+        {
+          "es": "plano",
+          "ko": "도면"
+        },
+        {
+          "es": "mecanismo",
+          "ko": "메커니즘"
+        }
+      ]
+    },
+    {
+      "stage": 21,
+      "category": "에피소드 2 · 세트 10",
+      "type": "learning",
+      "words": [
+        {
+          "es": "tornillo",
+          "ko": "나사"
+        },
+        {
+          "es": "engranaje",
+          "ko": "톱니바퀴"
+        },
+        {
+          "es": "tubería",
+          "ko": "배관"
+        },
+        {
+          "es": "soldadura",
+          "ko": "용접"
+        },
+        {
+          "es": "automatización",
+          "ko": "자동화"
+        },
+        {
+          "es": "espacio",
+          "ko": "우주"
+        },
+        {
+          "es": "satélite",
+          "ko": "위성"
+        },
+        {
+          "es": "cohete",
+          "ko": "로켓"
+        },
+        {
+          "es": "estación espacial",
+          "ko": "우주정거장"
+        },
+        {
+          "es": "astronauta",
+          "ko": "우주비행사"
+        }
+      ]
+    },
+    {
+      "stage": 22,
+      "category": "에피소드 2 보스 · 누적 복습",
+      "type": "boss",
+      "words": [
+        {
+          "es": "infección",
+          "ko": "감염"
+        },
+        {
+          "es": "alergia",
+          "ko": "알레르기"
+        },
+        {
+          "es": "receta",
+          "ko": "처방전"
+        },
+        {
+          "es": "hospital",
+          "ko": "병원"
+        },
+        {
+          "es": "paciente",
+          "ko": "환자"
+        },
+        {
+          "es": "tecnología",
+          "ko": "기술"
+        },
+        {
+          "es": "máquina",
+          "ko": "기계"
+        },
+        {
+          "es": "herramienta",
+          "ko": "도구"
+        },
+        {
+          "es": "dispositivo",
+          "ko": "장치"
+        },
+        {
+          "es": "sistema",
+          "ko": "시스템"
+        },
+        {
+          "es": "automático",
+          "ko": "자동"
+        },
+        {
+          "es": "digital",
+          "ko": "디지털"
+        },
+        {
+          "es": "electrónico",
+          "ko": "전자"
+        },
+        {
+          "es": "sensor",
+          "ko": "센서"
+        },
+        {
+          "es": "cable",
+          "ko": "케이블"
+        },
+        {
+          "es": "batería",
+          "ko": "배터리"
+        },
+        {
+          "es": "pantalla",
+          "ko": "화면"
+        },
+        {
+          "es": "señal",
+          "ko": "신호"
+        },
+        {
+          "es": "conexión",
+          "ko": "연결"
+        },
+        {
+          "es": "innovación",
+          "ko": "혁신"
+        },
+        {
+          "es": "computadora",
+          "ko": "컴퓨터"
+        },
+        {
+          "es": "teclado",
+          "ko": "키보드"
+        },
+        {
+          "es": "ratón",
+          "ko": "마우스"
+        },
+        {
+          "es": "monitor",
+          "ko": "모니터"
+        },
+        {
+          "es": "disco duro",
+          "ko": "하드디스크"
+        },
+        {
+          "es": "memoria",
+          "ko": "메모리"
+        },
+        {
+          "es": "procesador",
+          "ko": "프로세서"
+        },
+        {
+          "es": "impresora",
+          "ko": "프린터"
+        },
+        {
+          "es": "servidor",
+          "ko": "서버"
+        },
+        {
+          "es": "portátil",
+          "ko": "노트북"
+        },
+        {
+          "es": "chip",
+          "ko": "칩"
+        },
+        {
+          "es": "tarjeta gráfica",
+          "ko": "그래픽카드"
+        },
+        {
+          "es": "puerto",
+          "ko": "포트"
+        },
+        {
+          "es": "altavoz",
+          "ko": "스피커"
+        },
+        {
+          "es": "cámara web",
+          "ko": "웹캠"
+        },
+        {
+          "es": "software",
+          "ko": "소프트웨어"
+        },
+        {
+          "es": "internet",
+          "ko": "인터넷"
+        },
+        {
+          "es": "programa",
+          "ko": "프로그램"
+        },
+        {
+          "es": "archivo",
+          "ko": "파일"
+        },
+        {
+          "es": "página web",
+          "ko": "웹페이지"
+        },
+        {
+          "es": "navegador",
+          "ko": "브라우저"
+        },
+        {
+          "es": "contraseña",
+          "ko": "비밀번호"
+        },
+        {
+          "es": "descargar",
+          "ko": "다운로드"
+        },
+        {
+          "es": "red",
+          "ko": "네트워크"
+        },
+        {
+          "es": "correo electrónico",
+          "ko": "이메일"
+        },
+        {
+          "es": "base de datos",
+          "ko": "데이터베이스"
+        },
+        {
+          "es": "nube",
+          "ko": "클라우드"
+        },
+        {
+          "es": "código",
+          "ko": "코드"
+        },
+        {
+          "es": "algoritmo",
+          "ko": "알고리즘"
+        },
+        {
+          "es": "actualización",
+          "ko": "업데이트"
+        },
+        {
+          "es": "teléfono inteligente",
+          "ko": "스마트폰"
+        },
+        {
+          "es": "aplicación",
+          "ko": "앱"
+        },
+        {
+          "es": "mensaje",
+          "ko": "메시지"
+        },
+        {
+          "es": "notificación",
+          "ko": "알림"
+        },
+        {
+          "es": "selfie",
+          "ko": "셀카"
+        },
+        {
+          "es": "videollamada",
+          "ko": "영상통화"
+        },
+        {
+          "es": "wifi",
+          "ko": "와이파이"
+        },
+        {
+          "es": "bluetooth",
+          "ko": "블루투스"
+        },
+        {
+          "es": "captura de pantalla",
+          "ko": "스크린샷"
+        },
+        {
+          "es": "almacenamiento",
+          "ko": "저장공간"
+        },
+        {
+          "es": "cargador",
+          "ko": "충전기"
+        },
+        {
+          "es": "funda",
+          "ko": "케이스"
+        },
+        {
+          "es": "red social",
+          "ko": "소셜미디어"
+        },
+        {
+          "es": "emoji",
+          "ko": "이모티콘"
+        },
+        {
+          "es": "cuenta",
+          "ko": "계정"
+        },
+        {
+          "es": "electricidad",
+          "ko": "전기"
+        },
+        {
+          "es": "voltaje",
+          "ko": "전압"
+        },
+        {
+          "es": "corriente",
+          "ko": "전류"
+        },
+        {
+          "es": "circuito",
+          "ko": "회로"
+        },
+        {
+          "es": "energía solar",
+          "ko": "태양에너지"
+        },
+        {
+          "es": "energía eólica",
+          "ko": "풍력에너지"
+        },
+        {
+          "es": "nuclear",
+          "ko": "원자력"
+        },
+        {
+          "es": "combustible",
+          "ko": "연료"
+        },
+        {
+          "es": "generador",
+          "ko": "발전기"
+        },
+        {
+          "es": "turbina",
+          "ko": "터빈"
+        },
+        {
+          "es": "potencia",
+          "ko": "전력"
+        },
+        {
+          "es": "enchufe",
+          "ko": "콘센트"
+        },
+        {
+          "es": "bombilla",
+          "ko": "전구"
+        },
+        {
+          "es": "interruptor",
+          "ko": "스위치"
+        },
+        {
+          "es": "renovable",
+          "ko": "재생가능한"
+        },
+        {
+          "es": "ingeniería",
+          "ko": "공학"
+        },
+        {
+          "es": "ingeniero",
+          "ko": "엔지니어"
+        },
+        {
+          "es": "diseño",
+          "ko": "설계"
+        },
+        {
+          "es": "construcción",
+          "ko": "건설"
+        },
+        {
+          "es": "estructura",
+          "ko": "구조"
+        },
+        {
+          "es": "puente",
+          "ko": "다리"
+        },
+        {
+          "es": "robot",
+          "ko": "로봇"
+        },
+        {
+          "es": "prototipo",
+          "ko": "시제품"
+        },
+        {
+          "es": "plano",
+          "ko": "도면"
+        },
+        {
+          "es": "mecanismo",
+          "ko": "메커니즘"
+        },
+        {
+          "es": "tornillo",
+          "ko": "나사"
+        },
+        {
+          "es": "engranaje",
+          "ko": "톱니바퀴"
+        },
+        {
+          "es": "tubería",
+          "ko": "배관"
+        },
+        {
+          "es": "soldadura",
+          "ko": "용접"
+        },
+        {
+          "es": "automatización",
+          "ko": "자동화"
+        },
+        {
+          "es": "espacio",
+          "ko": "우주"
+        },
+        {
+          "es": "satélite",
+          "ko": "위성"
+        },
+        {
+          "es": "cohete",
+          "ko": "로켓"
+        },
+        {
+          "es": "estación espacial",
+          "ko": "우주정거장"
+        },
+        {
+          "es": "astronauta",
+          "ko": "우주비행사"
+        }
+      ]
+    },
+    {
+      "stage": 23,
+      "category": "에피소드 3 · 세트 1",
+      "type": "learning",
+      "words": [
+        {
+          "es": "órbita",
+          "ko": "궤도"
+        },
+        {
+          "es": "nave espacial",
+          "ko": "우주선"
+        },
+        {
+          "es": "lanzamiento",
+          "ko": "발사"
+        },
+        {
+          "es": "sonda",
+          "ko": "탐사선"
+        },
+        {
+          "es": "galaxia",
+          "ko": "은하"
+        },
+        {
+          "es": "planeta",
+          "ko": "행성"
+        },
+        {
+          "es": "estrella",
+          "ko": "별"
+        },
+        {
+          "es": "agujero negro",
+          "ko": "블랙홀"
+        },
+        {
+          "es": "gravedad cero",
+          "ko": "무중력"
+        },
+        {
+          "es": "exploración",
+          "ko": "탐사"
+        }
+      ]
+    },
+    {
+      "stage": 24,
+      "category": "에피소드 3 · 세트 2",
+      "type": "learning",
+      "words": [
+        {
+          "es": "inteligencia artificial",
+          "ko": "인공지능"
+        },
+        {
+          "es": "aprendizaje automático",
+          "ko": "머신러닝"
+        },
+        {
+          "es": "red neuronal",
+          "ko": "신경망"
+        },
+        {
+          "es": "reconocimiento",
+          "ko": "인식"
+        },
+        {
+          "es": "asistente virtual",
+          "ko": "가상비서"
+        },
+        {
+          "es": "chatbot",
+          "ko": "챗봇"
+        },
+        {
+          "es": "automatizado",
+          "ko": "자동화된"
+        },
+        {
+          "es": "predicción",
+          "ko": "예측"
+        },
+        {
+          "es": "clasificación",
+          "ko": "분류"
+        },
+        {
+          "es": "modelo",
+          "ko": "모델"
+        }
+      ]
+    },
+    {
+      "stage": 25,
+      "category": "에피소드 3 · 세트 3",
+      "type": "learning",
+      "words": [
+        {
+          "es": "entrenamiento",
+          "ko": "훈련"
+        },
+        {
+          "es": "voz artificial",
+          "ko": "인공음성"
+        },
+        {
+          "es": "conducción autónoma",
+          "ko": "자율주행"
+        },
+        {
+          "es": "procesamiento",
+          "ko": "처리"
+        },
+        {
+          "es": "aprendizaje profundo",
+          "ko": "딥러닝"
+        },
+        {
+          "es": "medio ambiente",
+          "ko": "환경"
+        },
+        {
+          "es": "sostenibilidad",
+          "ko": "지속가능성"
+        },
+        {
+          "es": "contaminación",
+          "ko": "오염"
+        },
+        {
+          "es": "reciclaje",
+          "ko": "재활용"
+        },
+        {
+          "es": "cambio climático",
+          "ko": "기후변화"
+        }
+      ]
+    },
+    {
+      "stage": 26,
+      "category": "에피소드 3 · 세트 4",
+      "type": "learning",
+      "words": [
+        {
+          "es": "emisión",
+          "ko": "배출"
+        },
+        {
+          "es": "huella de carbono",
+          "ko": "탄소발자국"
+        },
+        {
+          "es": "biodiversidad",
+          "ko": "생물다양성"
+        },
+        {
+          "es": "deforestación",
+          "ko": "산림파괴"
+        },
+        {
+          "es": "capa de ozono",
+          "ko": "오존층"
+        },
+        {
+          "es": "efecto invernadero",
+          "ko": "온실효과"
+        },
+        {
+          "es": "residuo",
+          "ko": "폐기물"
+        },
+        {
+          "es": "conservación",
+          "ko": "보존"
+        },
+        {
+          "es": "ecológico",
+          "ko": "친환경적인"
+        },
+        {
+          "es": "recurso natural",
+          "ko": "천연자원"
+        }
+      ]
+    },
+    {
+      "stage": 27,
+      "category": "에피소드 3 · 세트 5",
+      "type": "learning",
+      "words": [
+        {
+          "es": "material",
+          "ko": "재료"
+        },
+        {
+          "es": "metal",
+          "ko": "금속"
+        },
+        {
+          "es": "plástico",
+          "ko": "플라스틱"
+        },
+        {
+          "es": "acero",
+          "ko": "강철"
+        },
+        {
+          "es": "aluminio",
+          "ko": "알루미늄"
+        },
+        {
+          "es": "cerámica",
+          "ko": "세라믹"
+        },
+        {
+          "es": "fibra",
+          "ko": "섬유"
+        },
+        {
+          "es": "fabricación",
+          "ko": "제조"
+        },
+        {
+          "es": "fábrica",
+          "ko": "공장"
+        },
+        {
+          "es": "producción",
+          "ko": "생산"
+        }
+      ]
+    },
+    {
+      "stage": 28,
+      "category": "에피소드 3 · 세트 6",
+      "type": "learning",
+      "words": [
+        {
+          "es": "ensamblaje",
+          "ko": "조립"
+        },
+        {
+          "es": "calidad",
+          "ko": "품질"
+        },
+        {
+          "es": "molde",
+          "ko": "금형"
+        },
+        {
+          "es": "materia prima",
+          "ko": "원자재"
+        },
+        {
+          "es": "nanotecnología",
+          "ko": "나노기술"
+        },
+        {
+          "es": "hipótesis",
+          "ko": "가설"
+        },
+        {
+          "es": "observación",
+          "ko": "관찰"
+        },
+        {
+          "es": "variable",
+          "ko": "변수"
+        },
+        {
+          "es": "conclusión",
+          "ko": "결론"
+        },
+        {
+          "es": "muestra",
+          "ko": "표본"
+        }
+      ]
+    },
+    {
+      "stage": 29,
+      "category": "에피소드 3 · 세트 7",
+      "type": "learning",
+      "words": [
+        {
+          "es": "medición",
+          "ko": "측정"
+        },
+        {
+          "es": "control",
+          "ko": "대조군"
+        },
+        {
+          "es": "publicación",
+          "ko": "논문"
+        },
+        {
+          "es": "revisión",
+          "ko": "검토"
+        },
+        {
+          "es": "evidencia",
+          "ko": "증거자료"
+        },
+        {
+          "es": "precisión",
+          "ko": "정밀도"
+        },
+        {
+          "es": "error",
+          "ko": "오차"
+        },
+        {
+          "es": "reproducibilidad",
+          "ko": "재현성"
+        },
+        {
+          "es": "verificación",
+          "ko": "검증"
+        },
+        {
+          "es": "simulación",
+          "ko": "시뮬레이션"
+        }
+      ]
+    },
+    {
+      "stage": 30,
+      "category": "에피소드 3 · 세트 8",
+      "type": "learning",
+      "words": [
+        {
+          "es": "invención",
+          "ko": "발명"
+        },
+        {
+          "es": "inventor",
+          "ko": "발명가"
+        },
+        {
+          "es": "patente",
+          "ko": "특허"
+        },
+        {
+          "es": "bombilla eléctrica",
+          "ko": "전등"
+        },
+        {
+          "es": "motor",
+          "ko": "엔진"
+        },
+        {
+          "es": "imprenta",
+          "ko": "인쇄기"
+        },
+        {
+          "es": "teléfono",
+          "ko": "전화기"
+        },
+        {
+          "es": "avión",
+          "ko": "비행기"
+        },
+        {
+          "es": "brújula",
+          "ko": "나침반"
+        },
+        {
+          "es": "penicilina",
+          "ko": "페니실린"
+        }
+      ]
+    },
+    {
+      "stage": 31,
+      "category": "에피소드 3 · 세트 9",
+      "type": "learning",
+      "words": [
+        {
+          "es": "rueda",
+          "ko": "바퀴"
+        },
+        {
+          "es": "pólvora",
+          "ko": "화약"
+        },
+        {
+          "es": "semiconductor",
+          "ko": "반도체"
+        },
+        {
+          "es": "láser",
+          "ko": "레이저"
+        },
+        {
+          "es": "radar",
+          "ko": "레이더"
+        },
+        {
+          "es": "investigar",
+          "ko": "연구하다"
+        },
+        {
+          "es": "experimentar",
+          "ko": "실험하다"
+        },
+        {
+          "es": "medir",
+          "ko": "측정하다"
+        },
+        {
+          "es": "observar",
+          "ko": "관찰하다"
+        },
+        {
+          "es": "calcular",
+          "ko": "계산하다"
+        }
+      ]
+    },
+    {
+      "stage": 32,
+      "category": "에피소드 3 · 세트 10",
+      "type": "learning",
+      "words": [
+        {
+          "es": "comprobar",
+          "ko": "확인하다"
+        },
+        {
+          "es": "analizar",
+          "ko": "분석하다"
+        },
+        {
+          "es": "desarrollar",
+          "ko": "개발하다"
+        },
+        {
+          "es": "programar",
+          "ko": "프로그래밍하다"
+        },
+        {
+          "es": "inventar",
+          "ko": "발명하다"
+        },
+        {
+          "es": "resolver",
+          "ko": "해결하다"
+        },
+        {
+          "es": "demostrar",
+          "ko": "증명하다"
+        },
+        {
+          "es": "clasificar",
+          "ko": "분류하다"
+        },
+        {
+          "es": "transformar",
+          "ko": "변환하다"
+        },
+        {
+          "es": "conectar",
+          "ko": "연결하다"
+        }
+      ]
+    },
+    {
+      "stage": 33,
+      "category": "에피소드 3 보스 · 누적 복습",
+      "type": "boss",
+      "words": [
+        {
+          "es": "órbita",
+          "ko": "궤도"
+        },
+        {
+          "es": "nave espacial",
+          "ko": "우주선"
+        },
+        {
+          "es": "lanzamiento",
+          "ko": "발사"
+        },
+        {
+          "es": "sonda",
+          "ko": "탐사선"
+        },
+        {
+          "es": "galaxia",
+          "ko": "은하"
+        },
+        {
+          "es": "planeta",
+          "ko": "행성"
+        },
+        {
+          "es": "estrella",
+          "ko": "별"
+        },
+        {
+          "es": "agujero negro",
+          "ko": "블랙홀"
+        },
+        {
+          "es": "gravedad cero",
+          "ko": "무중력"
+        },
+        {
+          "es": "exploración",
+          "ko": "탐사"
+        },
+        {
+          "es": "inteligencia artificial",
+          "ko": "인공지능"
+        },
+        {
+          "es": "aprendizaje automático",
+          "ko": "머신러닝"
+        },
+        {
+          "es": "red neuronal",
+          "ko": "신경망"
+        },
+        {
+          "es": "reconocimiento",
+          "ko": "인식"
+        },
+        {
+          "es": "asistente virtual",
+          "ko": "가상비서"
+        },
+        {
+          "es": "chatbot",
+          "ko": "챗봇"
+        },
+        {
+          "es": "automatizado",
+          "ko": "자동화된"
+        },
+        {
+          "es": "predicción",
+          "ko": "예측"
+        },
+        {
+          "es": "clasificación",
+          "ko": "분류"
+        },
+        {
+          "es": "modelo",
+          "ko": "모델"
+        },
+        {
+          "es": "entrenamiento",
+          "ko": "훈련"
+        },
+        {
+          "es": "voz artificial",
+          "ko": "인공음성"
+        },
+        {
+          "es": "conducción autónoma",
+          "ko": "자율주행"
+        },
+        {
+          "es": "procesamiento",
+          "ko": "처리"
+        },
+        {
+          "es": "aprendizaje profundo",
+          "ko": "딥러닝"
+        },
+        {
+          "es": "medio ambiente",
+          "ko": "환경"
+        },
+        {
+          "es": "sostenibilidad",
+          "ko": "지속가능성"
+        },
+        {
+          "es": "contaminación",
+          "ko": "오염"
+        },
+        {
+          "es": "reciclaje",
+          "ko": "재활용"
+        },
+        {
+          "es": "cambio climático",
+          "ko": "기후변화"
+        },
+        {
+          "es": "emisión",
+          "ko": "배출"
+        },
+        {
+          "es": "huella de carbono",
+          "ko": "탄소발자국"
+        },
+        {
+          "es": "biodiversidad",
+          "ko": "생물다양성"
+        },
+        {
+          "es": "deforestación",
+          "ko": "산림파괴"
+        },
+        {
+          "es": "capa de ozono",
+          "ko": "오존층"
+        },
+        {
+          "es": "efecto invernadero",
+          "ko": "온실효과"
+        },
+        {
+          "es": "residuo",
+          "ko": "폐기물"
+        },
+        {
+          "es": "conservación",
+          "ko": "보존"
+        },
+        {
+          "es": "ecológico",
+          "ko": "친환경적인"
+        },
+        {
+          "es": "recurso natural",
+          "ko": "천연자원"
+        },
+        {
+          "es": "material",
+          "ko": "재료"
+        },
+        {
+          "es": "metal",
+          "ko": "금속"
+        },
+        {
+          "es": "plástico",
+          "ko": "플라스틱"
+        },
+        {
+          "es": "acero",
+          "ko": "강철"
+        },
+        {
+          "es": "aluminio",
+          "ko": "알루미늄"
+        },
+        {
+          "es": "cerámica",
+          "ko": "세라믹"
+        },
+        {
+          "es": "fibra",
+          "ko": "섬유"
+        },
+        {
+          "es": "fabricación",
+          "ko": "제조"
+        },
+        {
+          "es": "fábrica",
+          "ko": "공장"
+        },
+        {
+          "es": "producción",
+          "ko": "생산"
+        },
+        {
+          "es": "ensamblaje",
+          "ko": "조립"
+        },
+        {
+          "es": "calidad",
+          "ko": "품질"
+        },
+        {
+          "es": "molde",
+          "ko": "금형"
+        },
+        {
+          "es": "materia prima",
+          "ko": "원자재"
+        },
+        {
+          "es": "nanotecnología",
+          "ko": "나노기술"
+        },
+        {
+          "es": "hipótesis",
+          "ko": "가설"
+        },
+        {
+          "es": "observación",
+          "ko": "관찰"
+        },
+        {
+          "es": "variable",
+          "ko": "변수"
+        },
+        {
+          "es": "conclusión",
+          "ko": "결론"
+        },
+        {
+          "es": "muestra",
+          "ko": "표본"
+        },
+        {
+          "es": "medición",
+          "ko": "측정"
+        },
+        {
+          "es": "control",
+          "ko": "대조군"
+        },
+        {
+          "es": "publicación",
+          "ko": "논문"
+        },
+        {
+          "es": "revisión",
+          "ko": "검토"
+        },
+        {
+          "es": "evidencia",
+          "ko": "증거자료"
+        },
+        {
+          "es": "precisión",
+          "ko": "정밀도"
+        },
+        {
+          "es": "error",
+          "ko": "오차"
+        },
+        {
+          "es": "reproducibilidad",
+          "ko": "재현성"
+        },
+        {
+          "es": "verificación",
+          "ko": "검증"
+        },
+        {
+          "es": "simulación",
+          "ko": "시뮬레이션"
+        },
+        {
+          "es": "invención",
+          "ko": "발명"
+        },
+        {
+          "es": "inventor",
+          "ko": "발명가"
+        },
+        {
+          "es": "patente",
+          "ko": "특허"
+        },
+        {
+          "es": "bombilla eléctrica",
+          "ko": "전등"
+        },
+        {
+          "es": "motor",
+          "ko": "엔진"
+        },
+        {
+          "es": "imprenta",
+          "ko": "인쇄기"
+        },
+        {
+          "es": "teléfono",
+          "ko": "전화기"
+        },
+        {
+          "es": "avión",
+          "ko": "비행기"
+        },
+        {
+          "es": "brújula",
+          "ko": "나침반"
+        },
+        {
+          "es": "penicilina",
+          "ko": "페니실린"
+        },
+        {
+          "es": "rueda",
+          "ko": "바퀴"
+        },
+        {
+          "es": "pólvora",
+          "ko": "화약"
+        },
+        {
+          "es": "semiconductor",
+          "ko": "반도체"
+        },
+        {
+          "es": "láser",
+          "ko": "레이저"
+        },
+        {
+          "es": "radar",
+          "ko": "레이더"
+        },
+        {
+          "es": "investigar",
+          "ko": "연구하다"
+        },
+        {
+          "es": "experimentar",
+          "ko": "실험하다"
+        },
+        {
+          "es": "medir",
+          "ko": "측정하다"
+        },
+        {
+          "es": "observar",
+          "ko": "관찰하다"
+        },
+        {
+          "es": "calcular",
+          "ko": "계산하다"
+        },
+        {
+          "es": "comprobar",
+          "ko": "확인하다"
+        },
+        {
+          "es": "analizar",
+          "ko": "분석하다"
+        },
+        {
+          "es": "desarrollar",
+          "ko": "개발하다"
+        },
+        {
+          "es": "programar",
+          "ko": "프로그래밍하다"
+        },
+        {
+          "es": "inventar",
+          "ko": "발명하다"
+        },
+        {
+          "es": "resolver",
+          "ko": "해결하다"
+        },
+        {
+          "es": "demostrar",
+          "ko": "증명하다"
+        },
+        {
+          "es": "clasificar",
+          "ko": "분류하다"
+        },
+        {
+          "es": "transformar",
+          "ko": "변환하다"
+        },
+        {
+          "es": "conectar",
+          "ko": "연결하다"
+        }
       ]
     }
-  ]
+  ],
+  "episodeStructure": {
+    "episodes": 3,
+    "learningStagesPerEpisode": 10,
+    "bossStageInterval": 11,
+    "newWordsPerLearningStage": 10,
+    "newWordsPerEpisode": 100
+  }
 }

@@ -19,24 +19,24 @@ const CONFIG = {
     // 월드 설정
     // =========================================
     WORLDS: [
-        { id: 1,  name: 'Fundamentos',   nameKo: '기초',     stages: 20, baseSpeed: 0.3,  speedIncrement: 0.015, color: '#4a9c6d' },
-        { id: 2,  name: 'Vida Cotidiana', nameKo: '일상생활', stages: 20, baseSpeed: 0.35, speedIncrement: 0.018, color: '#c9a227' },
-        { id: 3,  name: 'Personas',       nameKo: '사람',     stages: 20, baseSpeed: 0.4,  speedIncrement: 0.02,  color: '#a23b72' },
-        { id: 4,  name: 'Naturaleza',     nameKo: '자연',     stages: 20, baseSpeed: 0.45, speedIncrement: 0.02,  color: '#2e86ab' },
-        { id: 5,  name: 'Ciudad',         nameKo: '도시',     stages: 20, baseSpeed: 0.5,  speedIncrement: 0.022, color: '#e07a5f' },
-        { id: 6,  name: 'Comida',         nameKo: '음식',     stages: 20, baseSpeed: 0.55, speedIncrement: 0.022, color: '#81b29a' },
-        { id: 7,  name: 'Trabajo',        nameKo: '직업',     stages: 20, baseSpeed: 0.6,  speedIncrement: 0.025, color: '#f2cc8f' },
-        { id: 8,  name: 'Ocio',           nameKo: '여가',     stages: 20, baseSpeed: 0.65, speedIncrement: 0.025, color: '#6d6875' },
-        { id: 9,  name: 'Sociedad',       nameKo: '사회',     stages: 20, baseSpeed: 0.7,  speedIncrement: 0.028, color: '#e63946' },
-        { id: 10, name: 'Ciencia',        nameKo: '과학',     stages: 20, baseSpeed: 0.75, speedIncrement: 0.03,  color: '#457b9d' }
+        { id: 1,  name: 'Supervivencia',  nameKo: '생존·기초기능어', stages: 33, baseSpeed: 0.3,  speedIncrement: 0.015, color: '#4a9c6d' },
+        { id: 2,  name: 'Personas',       nameKo: '사람·가족',      stages: 33, baseSpeed: 0.35, speedIncrement: 0.018, color: '#c9a227' },
+        { id: 3,  name: 'Casa y Lugar',   nameKo: '집·위치',        stages: 33, baseSpeed: 0.4,  speedIncrement: 0.02,  color: '#a23b72' },
+        { id: 4,  name: 'Comida y Compra',nameKo: '음식·쇼핑',      stages: 33, baseSpeed: 0.45, speedIncrement: 0.02,  color: '#2e86ab' },
+        { id: 5,  name: 'Escuela y Trabajo', nameKo: '학교·일상동사', stages: 33, baseSpeed: 0.5,  speedIncrement: 0.022, color: '#e07a5f' },
+        { id: 6,  name: 'Ciudad y Tránsito', nameKo: '도시·교통',     stages: 33, baseSpeed: 0.55, speedIncrement: 0.022, color: '#81b29a' },
+        { id: 7,  name: 'Viaje y Problemas', nameKo: '여행·문제해결',  stages: 33, baseSpeed: 0.6,  speedIncrement: 0.025, color: '#f2cc8f' },
+        { id: 8,  name: 'Salud',          nameKo: '건강·병원',       stages: 33, baseSpeed: 0.65, speedIncrement: 0.025, color: '#6d6875' },
+        { id: 9,  name: 'Opinión y Emoción', nameKo: '취미·감정·의견', stages: 33, baseSpeed: 0.7,  speedIncrement: 0.028, color: '#e63946' },
+        { id: 10, name: 'Sociedad y Naturaleza', nameKo: '사회·자연·추상', stages: 33, baseSpeed: 0.75, speedIncrement: 0.03,  color: '#457b9d' }
     ],
 
     // =========================================
     // 스테이지 설정
     // =========================================
     STAGE: {
-        WORDS_PER_STAGE: 15,           // 스테이지당 학습 단어 수
-        WORDS_TO_CLEAR: 20,            // 클리어에 필요한 정답 수 (같은 단어 반복 포함)
+        WORDS_PER_STAGE: 10,           // 스테이지당 신규 표제어 수
+        WORDS_TO_CLEAR: 18,            // 클리어에 필요한 정답 수 (복습 포함)
         MAX_ACTIVE_WORDS: 3,           // 동시에 화면에 표시되는 최대 단어 수
         SPAWN_INTERVAL_MS: 2000,       // 새 단어 생성 간격 (밀리초)
         MIN_SPAWN_INTERVAL_MS: 800     // 최소 생성 간격 (속도 증가 시)
@@ -69,8 +69,8 @@ const CONFIG = {
     // =========================================
     REVIEW: {
         WRONG_WORD_FREQUENCY_BOOST: 2, // 틀린 단어 출현 빈도 배율
-        REVIEW_STAGE_INTERVAL: 5,      // N 스테이지마다 복습 스테이지
-        MIN_WRONG_FOR_REVIEW: 3        // 복습 스테이지 생성 최소 틀린 단어 수
+        REVIEW_STAGE_INTERVAL: 11,     // 에피소드 보스 스테이지 간격 (10+1)
+        MIN_WRONG_FOR_REVIEW: 5        // 오답 기반 복습 단어 최소 기준
     },
 
     // =========================================
