@@ -237,8 +237,45 @@ const WordManager = {
      * @returns {boolean} 복습 스테이지 여부
      */
     isReviewStage: function(worldId, stageNum) {
-        // N 스테이지마다 복습 스테이지 (5, 10, 15, 20)
+        // 보스 스테이지는 별도로 처리
+        if (this.isBossStage(worldId, stageNum)) {
+            return false;
+        }
+
+        // 일반 스테이지에서는 오답 기반 복습이 섞여서 등장
+        return false;
+    },
+
+    /**
+     * 보스 스테이지 여부 확인
+     * @param {number} worldId - 월드 ID
+     * @param {number} stageNum - 스테이지 번호
+     * @returns {boolean}
+     */
+    isBossStage: function(worldId, stageNum) {
+        const stageData = this.getStageData(worldId, stageNum);
+        if (stageData?.type === 'boss') {
+            return true;
+        }
+
         return stageNum % CONFIG.REVIEW.REVIEW_STAGE_INTERVAL === 0;
+    },
+
+    /**
+     * 보스 스테이지용 누적 단어 풀 생성
+     * @param {number} worldId - 월드 ID
+     * @param {number} stageNum - 스테이지 번호
+     * @returns {Array<{es: string, ko: string, isReview: boolean}>}
+     */
+    createBossPool: function(worldId, stageNum) {
+        const stageData = this.getStageData(worldId, stageNum);
+        const bossWords = stageData?.words || [];
+
+        return bossWords.map((word) => ({
+            es: word.es,
+            ko: word.ko,
+            isReview: true
+        }));
     },
     
     /**

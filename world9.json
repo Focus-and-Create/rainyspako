@@ -5,403 +5,2641 @@
   "stages": [
     {
       "stage": 1,
+      "category": "에피소드 1 · 세트 1",
+      "type": "learning",
       "words": [
-        { "es": "sociedad", "ko": "사회" },
-        { "es": "ciudadano", "ko": "시민" },
-        { "es": "comunidad", "ko": "공동체" },
-        { "es": "población", "ko": "인구" },
-        { "es": "pueblo", "ko": "국민" },
-        { "es": "clase social", "ko": "사회 계층" },
-        { "es": "igualdad", "ko": "평등" },
-        { "es": "diversidad", "ko": "다양성" },
-        { "es": "convivencia", "ko": "공존" },
-        { "es": "costumbre", "ko": "관습" },
-        { "es": "tradición", "ko": "전통" },
-        { "es": "norma", "ko": "규범" },
-        { "es": "valor", "ko": "가치" },
-        { "es": "identidad", "ko": "정체성" },
-        { "es": "generación", "ko": "세대" }
+        {
+          "es": "sociedad",
+          "ko": "사회"
+        },
+        {
+          "es": "ciudadano",
+          "ko": "시민"
+        },
+        {
+          "es": "comunidad",
+          "ko": "공동체"
+        },
+        {
+          "es": "población",
+          "ko": "인구"
+        },
+        {
+          "es": "pueblo",
+          "ko": "국민"
+        },
+        {
+          "es": "clase social",
+          "ko": "사회 계층"
+        },
+        {
+          "es": "igualdad",
+          "ko": "평등"
+        },
+        {
+          "es": "diversidad",
+          "ko": "다양성"
+        },
+        {
+          "es": "convivencia",
+          "ko": "공존"
+        },
+        {
+          "es": "costumbre",
+          "ko": "관습"
+        }
       ]
     },
     {
       "stage": 2,
+      "category": "에피소드 1 · 세트 2",
+      "type": "learning",
       "words": [
-        { "es": "gobierno", "ko": "정부" },
-        { "es": "estado", "ko": "국가" },
-        { "es": "presidente", "ko": "대통령" },
-        { "es": "ministro", "ko": "장관" },
-        { "es": "parlamento", "ko": "의회" },
-        { "es": "constitución", "ko": "헌법" },
-        { "es": "monarquía", "ko": "군주제" },
-        { "es": "república", "ko": "공화국" },
-        { "es": "funcionario", "ko": "공무원" },
-        { "es": "presupuesto", "ko": "예산" },
-        { "es": "decreto", "ko": "법령" },
-        { "es": "poder", "ko": "권력" },
-        { "es": "autoridad", "ko": "권위" },
-        { "es": "soberanía", "ko": "주권" },
-        { "es": "administración", "ko": "행정" }
+        {
+          "es": "tradición",
+          "ko": "전통"
+        },
+        {
+          "es": "norma",
+          "ko": "규범"
+        },
+        {
+          "es": "valor",
+          "ko": "가치"
+        },
+        {
+          "es": "identidad",
+          "ko": "정체성"
+        },
+        {
+          "es": "generación",
+          "ko": "세대"
+        },
+        {
+          "es": "gobierno",
+          "ko": "정부"
+        },
+        {
+          "es": "estado",
+          "ko": "국가"
+        },
+        {
+          "es": "presidente",
+          "ko": "대통령"
+        },
+        {
+          "es": "ministro",
+          "ko": "장관"
+        },
+        {
+          "es": "parlamento",
+          "ko": "의회"
+        }
       ]
     },
     {
       "stage": 3,
+      "category": "에피소드 1 · 세트 3",
+      "type": "learning",
       "words": [
-        { "es": "política", "ko": "정치" },
-        { "es": "partido", "ko": "정당" },
-        { "es": "ideología", "ko": "이념" },
-        { "es": "izquierda", "ko": "좌파" },
-        { "es": "derecha", "ko": "우파" },
-        { "es": "conservador", "ko": "보수적인" },
-        { "es": "liberal", "ko": "진보적인" },
-        { "es": "oposición", "ko": "야당" },
-        { "es": "coalición", "ko": "연합" },
-        { "es": "debate", "ko": "토론" },
-        { "es": "discurso", "ko": "연설" },
-        { "es": "propaganda", "ko": "선전" },
-        { "es": "corrupción", "ko": "부패" },
-        { "es": "escándalo", "ko": "스캔들" },
-        { "es": "reforma", "ko": "개혁" }
+        {
+          "es": "constitución",
+          "ko": "헌법"
+        },
+        {
+          "es": "monarquía",
+          "ko": "군주제"
+        },
+        {
+          "es": "república",
+          "ko": "공화국"
+        },
+        {
+          "es": "funcionario",
+          "ko": "공무원"
+        },
+        {
+          "es": "presupuesto",
+          "ko": "예산"
+        },
+        {
+          "es": "decreto",
+          "ko": "법령"
+        },
+        {
+          "es": "poder",
+          "ko": "권력"
+        },
+        {
+          "es": "autoridad",
+          "ko": "권위"
+        },
+        {
+          "es": "soberanía",
+          "ko": "주권"
+        },
+        {
+          "es": "administración",
+          "ko": "행정"
+        }
       ]
     },
     {
       "stage": 4,
+      "category": "에피소드 1 · 세트 4",
+      "type": "learning",
       "words": [
-        { "es": "elección", "ko": "선거" },
-        { "es": "democracia", "ko": "민주주의" },
-        { "es": "voto", "ko": "투표" },
-        { "es": "candidato", "ko": "후보자" },
-        { "es": "campaña", "ko": "선거운동" },
-        { "es": "urna", "ko": "투표함" },
-        { "es": "escaño", "ko": "의석" },
-        { "es": "mayoría", "ko": "과반수" },
-        { "es": "minoría", "ko": "소수" },
-        { "es": "referéndum", "ko": "국민투표" },
-        { "es": "sufragio", "ko": "참정권" },
-        { "es": "encuesta", "ko": "여론조사" },
-        { "es": "censo", "ko": "인구조사" },
-        { "es": "mandato", "ko": "임기" },
-        { "es": "dictadura", "ko": "독재" }
+        {
+          "es": "política",
+          "ko": "정치"
+        },
+        {
+          "es": "partido",
+          "ko": "정당"
+        },
+        {
+          "es": "ideología",
+          "ko": "이념"
+        },
+        {
+          "es": "izquierda",
+          "ko": "좌파"
+        },
+        {
+          "es": "derecha",
+          "ko": "우파"
+        },
+        {
+          "es": "conservador",
+          "ko": "보수적인"
+        },
+        {
+          "es": "liberal",
+          "ko": "진보적인"
+        },
+        {
+          "es": "oposición",
+          "ko": "야당"
+        },
+        {
+          "es": "coalición",
+          "ko": "연합"
+        },
+        {
+          "es": "debate",
+          "ko": "토론"
+        }
       ]
     },
     {
       "stage": 5,
+      "category": "에피소드 1 · 세트 5",
+      "type": "learning",
       "words": [
-        { "es": "ley", "ko": "법" },
-        { "es": "justicia", "ko": "정의" },
-        { "es": "juez", "ko": "판사" },
-        { "es": "abogado", "ko": "변호사" },
-        { "es": "tribunal", "ko": "법원" },
-        { "es": "juicio", "ko": "재판" },
-        { "es": "sentencia", "ko": "판결" },
-        { "es": "inocente", "ko": "무죄의" },
-        { "es": "culpable", "ko": "유죄의" },
-        { "es": "testigo", "ko": "증인" },
-        { "es": "prueba", "ko": "증거" },
-        { "es": "demanda", "ko": "소송" },
-        { "es": "fiscal", "ko": "검사" },
-        { "es": "jurado", "ko": "배심원" },
-        { "es": "apelación", "ko": "항소" }
+        {
+          "es": "discurso",
+          "ko": "연설"
+        },
+        {
+          "es": "propaganda",
+          "ko": "선전"
+        },
+        {
+          "es": "corrupción",
+          "ko": "부패"
+        },
+        {
+          "es": "escándalo",
+          "ko": "스캔들"
+        },
+        {
+          "es": "reforma",
+          "ko": "개혁"
+        },
+        {
+          "es": "elección",
+          "ko": "선거"
+        },
+        {
+          "es": "democracia",
+          "ko": "민주주의"
+        },
+        {
+          "es": "voto",
+          "ko": "투표"
+        },
+        {
+          "es": "candidato",
+          "ko": "후보자"
+        },
+        {
+          "es": "campaña",
+          "ko": "선거운동"
+        }
       ]
     },
     {
       "stage": 6,
+      "category": "에피소드 1 · 세트 6",
+      "type": "learning",
       "words": [
-        { "es": "crimen", "ko": "범죄" },
-        { "es": "policía", "ko": "경찰" },
-        { "es": "delito", "ko": "범행" },
-        { "es": "ladrón", "ko": "도둑" },
-        { "es": "robo", "ko": "강도" },
-        { "es": "asesinato", "ko": "살인" },
-        { "es": "víctima", "ko": "피해자" },
-        { "es": "sospechoso", "ko": "용의자" },
-        { "es": "cárcel", "ko": "감옥" },
-        { "es": "condena", "ko": "형벌" },
-        { "es": "multa", "ko": "벌금" },
-        { "es": "detective", "ko": "형사" },
-        { "es": "investigación", "ko": "수사" },
-        { "es": "secuestro", "ko": "납치" },
-        { "es": "fraude", "ko": "사기" }
+        {
+          "es": "urna",
+          "ko": "투표함"
+        },
+        {
+          "es": "escaño",
+          "ko": "의석"
+        },
+        {
+          "es": "mayoría",
+          "ko": "과반수"
+        },
+        {
+          "es": "minoría",
+          "ko": "소수"
+        },
+        {
+          "es": "referéndum",
+          "ko": "국민투표"
+        },
+        {
+          "es": "sufragio",
+          "ko": "참정권"
+        },
+        {
+          "es": "encuesta",
+          "ko": "여론조사"
+        },
+        {
+          "es": "censo",
+          "ko": "인구조사"
+        },
+        {
+          "es": "mandato",
+          "ko": "임기"
+        },
+        {
+          "es": "dictadura",
+          "ko": "독재"
+        }
       ]
     },
     {
       "stage": 7,
+      "category": "에피소드 1 · 세트 7",
+      "type": "learning",
       "words": [
-        { "es": "derecho", "ko": "권리" },
-        { "es": "libertad", "ko": "자유" },
-        { "es": "derechos humanos", "ko": "인권" },
-        { "es": "dignidad", "ko": "존엄" },
-        { "es": "discriminación", "ko": "차별" },
-        { "es": "racismo", "ko": "인종차별" },
-        { "es": "feminismo", "ko": "페미니즘" },
-        { "es": "protesta", "ko": "시위" },
-        { "es": "manifestación", "ko": "집회" },
-        { "es": "censura", "ko": "검열" },
-        { "es": "asilo", "ko": "망명" },
-        { "es": "privacidad", "ko": "사생활" },
-        { "es": "tolerancia", "ko": "관용" },
-        { "es": "opresión", "ko": "억압" },
-        { "es": "esclavitud", "ko": "노예제" }
+        {
+          "es": "ley",
+          "ko": "법"
+        },
+        {
+          "es": "justicia",
+          "ko": "정의"
+        },
+        {
+          "es": "juez",
+          "ko": "판사"
+        },
+        {
+          "es": "abogado",
+          "ko": "변호사"
+        },
+        {
+          "es": "tribunal",
+          "ko": "법원"
+        },
+        {
+          "es": "juicio",
+          "ko": "재판"
+        },
+        {
+          "es": "sentencia",
+          "ko": "판결"
+        },
+        {
+          "es": "inocente",
+          "ko": "무죄의"
+        },
+        {
+          "es": "culpable",
+          "ko": "유죄의"
+        },
+        {
+          "es": "testigo",
+          "ko": "증인"
+        }
       ]
     },
     {
       "stage": 8,
+      "category": "에피소드 1 · 세트 8",
+      "type": "learning",
       "words": [
-        { "es": "economía", "ko": "경제" },
-        { "es": "mercado", "ko": "시장" },
-        { "es": "dinero", "ko": "돈" },
-        { "es": "banco", "ko": "은행" },
-        { "es": "impuesto", "ko": "세금" },
-        { "es": "salario", "ko": "급여" },
-        { "es": "empleo", "ko": "고용" },
-        { "es": "desempleo", "ko": "실업" },
-        { "es": "inflación", "ko": "인플레이션" },
-        { "es": "deuda", "ko": "빚" },
-        { "es": "inversión", "ko": "투자" },
-        { "es": "PIB", "ko": "국내총생산" },
-        { "es": "crisis", "ko": "위기" },
-        { "es": "pobreza", "ko": "빈곤" },
-        { "es": "riqueza", "ko": "부" }
+        {
+          "es": "prueba",
+          "ko": "증거"
+        },
+        {
+          "es": "demanda",
+          "ko": "소송"
+        },
+        {
+          "es": "fiscal",
+          "ko": "검사"
+        },
+        {
+          "es": "jurado",
+          "ko": "배심원"
+        },
+        {
+          "es": "apelación",
+          "ko": "항소"
+        },
+        {
+          "es": "crimen",
+          "ko": "범죄"
+        },
+        {
+          "es": "policía",
+          "ko": "경찰"
+        },
+        {
+          "es": "delito",
+          "ko": "범행"
+        },
+        {
+          "es": "ladrón",
+          "ko": "도둑"
+        },
+        {
+          "es": "robo",
+          "ko": "강도"
+        }
       ]
     },
     {
       "stage": 9,
+      "category": "에피소드 1 · 세트 9",
+      "type": "learning",
       "words": [
-        { "es": "comercio", "ko": "상업" },
-        { "es": "importación", "ko": "수입" },
-        { "es": "exportación", "ko": "수출" },
-        { "es": "arancel", "ko": "관세" },
-        { "es": "tratado", "ko": "조약" },
-        { "es": "empresa", "ko": "기업" },
-        { "es": "industria", "ko": "산업" },
-        { "es": "producción", "ko": "생산" },
-        { "es": "consumo", "ko": "소비" },
-        { "es": "competencia", "ko": "경쟁" },
-        { "es": "monopolio", "ko": "독점" },
-        { "es": "globalización", "ko": "세계화" },
-        { "es": "desarrollo", "ko": "발전" },
-        { "es": "recurso", "ko": "자원" },
-        { "es": "propiedad", "ko": "재산" }
+        {
+          "es": "asesinato",
+          "ko": "살인"
+        },
+        {
+          "es": "víctima",
+          "ko": "피해자"
+        },
+        {
+          "es": "sospechoso",
+          "ko": "용의자"
+        },
+        {
+          "es": "cárcel",
+          "ko": "감옥"
+        },
+        {
+          "es": "condena",
+          "ko": "형벌"
+        },
+        {
+          "es": "multa",
+          "ko": "벌금"
+        },
+        {
+          "es": "detective",
+          "ko": "형사"
+        },
+        {
+          "es": "investigación",
+          "ko": "수사"
+        },
+        {
+          "es": "secuestro",
+          "ko": "납치"
+        },
+        {
+          "es": "fraude",
+          "ko": "사기"
+        }
       ]
     },
     {
       "stage": 10,
+      "category": "에피소드 1 · 세트 10",
+      "type": "learning",
       "words": [
-        { "es": "medio de comunicación", "ko": "매체" },
-        { "es": "prensa", "ko": "언론" },
-        { "es": "periodista", "ko": "기자" },
-        { "es": "noticia", "ko": "뉴스" },
-        { "es": "periódico", "ko": "신문" },
-        { "es": "revista", "ko": "잡지" },
-        { "es": "entrevista", "ko": "인터뷰" },
-        { "es": "titular", "ko": "헤드라인" },
-        { "es": "artículo", "ko": "기사" },
-        { "es": "editorial", "ko": "사설" },
-        { "es": "opinión", "ko": "의견" },
-        { "es": "emisora", "ko": "방송국" },
-        { "es": "reportaje", "ko": "르포" },
-        { "es": "red social", "ko": "소셜 미디어" },
-        { "es": "publicidad", "ko": "광고" }
+        {
+          "es": "derecho",
+          "ko": "권리"
+        },
+        {
+          "es": "libertad",
+          "ko": "자유"
+        },
+        {
+          "es": "derechos humanos",
+          "ko": "인권"
+        },
+        {
+          "es": "dignidad",
+          "ko": "존엄"
+        },
+        {
+          "es": "discriminación",
+          "ko": "차별"
+        },
+        {
+          "es": "racismo",
+          "ko": "인종차별"
+        },
+        {
+          "es": "feminismo",
+          "ko": "페미니즘"
+        },
+        {
+          "es": "protesta",
+          "ko": "시위"
+        },
+        {
+          "es": "manifestación",
+          "ko": "집회"
+        },
+        {
+          "es": "censura",
+          "ko": "검열"
+        }
       ]
     },
     {
       "stage": 11,
+      "category": "에피소드 1 보스 · 누적 복습",
+      "type": "boss",
       "words": [
-        { "es": "religión", "ko": "종교" },
-        { "es": "fe", "ko": "믿음" },
-        { "es": "Dios", "ko": "신" },
-        { "es": "iglesia", "ko": "교회" },
-        { "es": "templo", "ko": "사원" },
-        { "es": "oración", "ko": "기도" },
-        { "es": "alma", "ko": "영혼" },
-        { "es": "pecado", "ko": "죄" },
-        { "es": "sacerdote", "ko": "성직자" },
-        { "es": "budismo", "ko": "불교" },
-        { "es": "cristianismo", "ko": "기독교" },
-        { "es": "islam", "ko": "이슬람" },
-        { "es": "ateo", "ko": "무신론자" },
-        { "es": "milagro", "ko": "기적" },
-        { "es": "sagrado", "ko": "신성한" }
+        {
+          "es": "sociedad",
+          "ko": "사회"
+        },
+        {
+          "es": "ciudadano",
+          "ko": "시민"
+        },
+        {
+          "es": "comunidad",
+          "ko": "공동체"
+        },
+        {
+          "es": "población",
+          "ko": "인구"
+        },
+        {
+          "es": "pueblo",
+          "ko": "국민"
+        },
+        {
+          "es": "clase social",
+          "ko": "사회 계층"
+        },
+        {
+          "es": "igualdad",
+          "ko": "평등"
+        },
+        {
+          "es": "diversidad",
+          "ko": "다양성"
+        },
+        {
+          "es": "convivencia",
+          "ko": "공존"
+        },
+        {
+          "es": "costumbre",
+          "ko": "관습"
+        },
+        {
+          "es": "tradición",
+          "ko": "전통"
+        },
+        {
+          "es": "norma",
+          "ko": "규범"
+        },
+        {
+          "es": "valor",
+          "ko": "가치"
+        },
+        {
+          "es": "identidad",
+          "ko": "정체성"
+        },
+        {
+          "es": "generación",
+          "ko": "세대"
+        },
+        {
+          "es": "gobierno",
+          "ko": "정부"
+        },
+        {
+          "es": "estado",
+          "ko": "국가"
+        },
+        {
+          "es": "presidente",
+          "ko": "대통령"
+        },
+        {
+          "es": "ministro",
+          "ko": "장관"
+        },
+        {
+          "es": "parlamento",
+          "ko": "의회"
+        },
+        {
+          "es": "constitución",
+          "ko": "헌법"
+        },
+        {
+          "es": "monarquía",
+          "ko": "군주제"
+        },
+        {
+          "es": "república",
+          "ko": "공화국"
+        },
+        {
+          "es": "funcionario",
+          "ko": "공무원"
+        },
+        {
+          "es": "presupuesto",
+          "ko": "예산"
+        },
+        {
+          "es": "decreto",
+          "ko": "법령"
+        },
+        {
+          "es": "poder",
+          "ko": "권력"
+        },
+        {
+          "es": "autoridad",
+          "ko": "권위"
+        },
+        {
+          "es": "soberanía",
+          "ko": "주권"
+        },
+        {
+          "es": "administración",
+          "ko": "행정"
+        },
+        {
+          "es": "política",
+          "ko": "정치"
+        },
+        {
+          "es": "partido",
+          "ko": "정당"
+        },
+        {
+          "es": "ideología",
+          "ko": "이념"
+        },
+        {
+          "es": "izquierda",
+          "ko": "좌파"
+        },
+        {
+          "es": "derecha",
+          "ko": "우파"
+        },
+        {
+          "es": "conservador",
+          "ko": "보수적인"
+        },
+        {
+          "es": "liberal",
+          "ko": "진보적인"
+        },
+        {
+          "es": "oposición",
+          "ko": "야당"
+        },
+        {
+          "es": "coalición",
+          "ko": "연합"
+        },
+        {
+          "es": "debate",
+          "ko": "토론"
+        },
+        {
+          "es": "discurso",
+          "ko": "연설"
+        },
+        {
+          "es": "propaganda",
+          "ko": "선전"
+        },
+        {
+          "es": "corrupción",
+          "ko": "부패"
+        },
+        {
+          "es": "escándalo",
+          "ko": "스캔들"
+        },
+        {
+          "es": "reforma",
+          "ko": "개혁"
+        },
+        {
+          "es": "elección",
+          "ko": "선거"
+        },
+        {
+          "es": "democracia",
+          "ko": "민주주의"
+        },
+        {
+          "es": "voto",
+          "ko": "투표"
+        },
+        {
+          "es": "candidato",
+          "ko": "후보자"
+        },
+        {
+          "es": "campaña",
+          "ko": "선거운동"
+        },
+        {
+          "es": "urna",
+          "ko": "투표함"
+        },
+        {
+          "es": "escaño",
+          "ko": "의석"
+        },
+        {
+          "es": "mayoría",
+          "ko": "과반수"
+        },
+        {
+          "es": "minoría",
+          "ko": "소수"
+        },
+        {
+          "es": "referéndum",
+          "ko": "국민투표"
+        },
+        {
+          "es": "sufragio",
+          "ko": "참정권"
+        },
+        {
+          "es": "encuesta",
+          "ko": "여론조사"
+        },
+        {
+          "es": "censo",
+          "ko": "인구조사"
+        },
+        {
+          "es": "mandato",
+          "ko": "임기"
+        },
+        {
+          "es": "dictadura",
+          "ko": "독재"
+        },
+        {
+          "es": "ley",
+          "ko": "법"
+        },
+        {
+          "es": "justicia",
+          "ko": "정의"
+        },
+        {
+          "es": "juez",
+          "ko": "판사"
+        },
+        {
+          "es": "abogado",
+          "ko": "변호사"
+        },
+        {
+          "es": "tribunal",
+          "ko": "법원"
+        },
+        {
+          "es": "juicio",
+          "ko": "재판"
+        },
+        {
+          "es": "sentencia",
+          "ko": "판결"
+        },
+        {
+          "es": "inocente",
+          "ko": "무죄의"
+        },
+        {
+          "es": "culpable",
+          "ko": "유죄의"
+        },
+        {
+          "es": "testigo",
+          "ko": "증인"
+        },
+        {
+          "es": "prueba",
+          "ko": "증거"
+        },
+        {
+          "es": "demanda",
+          "ko": "소송"
+        },
+        {
+          "es": "fiscal",
+          "ko": "검사"
+        },
+        {
+          "es": "jurado",
+          "ko": "배심원"
+        },
+        {
+          "es": "apelación",
+          "ko": "항소"
+        },
+        {
+          "es": "crimen",
+          "ko": "범죄"
+        },
+        {
+          "es": "policía",
+          "ko": "경찰"
+        },
+        {
+          "es": "delito",
+          "ko": "범행"
+        },
+        {
+          "es": "ladrón",
+          "ko": "도둑"
+        },
+        {
+          "es": "robo",
+          "ko": "강도"
+        },
+        {
+          "es": "asesinato",
+          "ko": "살인"
+        },
+        {
+          "es": "víctima",
+          "ko": "피해자"
+        },
+        {
+          "es": "sospechoso",
+          "ko": "용의자"
+        },
+        {
+          "es": "cárcel",
+          "ko": "감옥"
+        },
+        {
+          "es": "condena",
+          "ko": "형벌"
+        },
+        {
+          "es": "multa",
+          "ko": "벌금"
+        },
+        {
+          "es": "detective",
+          "ko": "형사"
+        },
+        {
+          "es": "investigación",
+          "ko": "수사"
+        },
+        {
+          "es": "secuestro",
+          "ko": "납치"
+        },
+        {
+          "es": "fraude",
+          "ko": "사기"
+        },
+        {
+          "es": "derecho",
+          "ko": "권리"
+        },
+        {
+          "es": "libertad",
+          "ko": "자유"
+        },
+        {
+          "es": "derechos humanos",
+          "ko": "인권"
+        },
+        {
+          "es": "dignidad",
+          "ko": "존엄"
+        },
+        {
+          "es": "discriminación",
+          "ko": "차별"
+        },
+        {
+          "es": "racismo",
+          "ko": "인종차별"
+        },
+        {
+          "es": "feminismo",
+          "ko": "페미니즘"
+        },
+        {
+          "es": "protesta",
+          "ko": "시위"
+        },
+        {
+          "es": "manifestación",
+          "ko": "집회"
+        },
+        {
+          "es": "censura",
+          "ko": "검열"
+        }
       ]
     },
     {
       "stage": 12,
+      "category": "에피소드 2 · 세트 1",
+      "type": "learning",
       "words": [
-        { "es": "historia", "ko": "역사" },
-        { "es": "civilización", "ko": "문명" },
-        { "es": "imperio", "ko": "제국" },
-        { "es": "revolución", "ko": "혁명" },
-        { "es": "colonia", "ko": "식민지" },
-        { "es": "independencia", "ko": "독립" },
-        { "es": "antiguo", "ko": "고대의" },
-        { "es": "medieval", "ko": "중세의" },
-        { "es": "moderno", "ko": "현대의" },
-        { "es": "dinastía", "ko": "왕조" },
-        { "es": "monumento", "ko": "기념비" },
-        { "es": "patrimonio", "ko": "유산" },
-        { "es": "arqueología", "ko": "고고학" },
-        { "es": "época", "ko": "시대" },
-        { "es": "conquista", "ko": "정복" }
+        {
+          "es": "asilo",
+          "ko": "망명"
+        },
+        {
+          "es": "privacidad",
+          "ko": "사생활"
+        },
+        {
+          "es": "tolerancia",
+          "ko": "관용"
+        },
+        {
+          "es": "opresión",
+          "ko": "억압"
+        },
+        {
+          "es": "esclavitud",
+          "ko": "노예제"
+        },
+        {
+          "es": "economía",
+          "ko": "경제"
+        },
+        {
+          "es": "mercado",
+          "ko": "시장"
+        },
+        {
+          "es": "dinero",
+          "ko": "돈"
+        },
+        {
+          "es": "banco",
+          "ko": "은행"
+        },
+        {
+          "es": "impuesto",
+          "ko": "세금"
+        }
       ]
     },
     {
       "stage": 13,
+      "category": "에피소드 2 · 세트 2",
+      "type": "learning",
       "words": [
-        { "es": "guerra", "ko": "전쟁" },
-        { "es": "paz", "ko": "평화" },
-        { "es": "ejército", "ko": "군대" },
-        { "es": "soldado", "ko": "군인" },
-        { "es": "arma", "ko": "무기" },
-        { "es": "batalla", "ko": "전투" },
-        { "es": "victoria", "ko": "승리" },
-        { "es": "derrota", "ko": "패배" },
-        { "es": "aliado", "ko": "동맹국" },
-        { "es": "enemigo", "ko": "적" },
-        { "es": "conflicto", "ko": "분쟁" },
-        { "es": "tregua", "ko": "휴전" },
-        { "es": "refugiado", "ko": "난민" },
-        { "es": "terrorismo", "ko": "테러" },
-        { "es": "negociación", "ko": "협상" }
+        {
+          "es": "salario",
+          "ko": "급여"
+        },
+        {
+          "es": "empleo",
+          "ko": "고용"
+        },
+        {
+          "es": "desempleo",
+          "ko": "실업"
+        },
+        {
+          "es": "inflación",
+          "ko": "인플레이션"
+        },
+        {
+          "es": "deuda",
+          "ko": "빚"
+        },
+        {
+          "es": "inversión",
+          "ko": "투자"
+        },
+        {
+          "es": "PIB",
+          "ko": "국내총생산"
+        },
+        {
+          "es": "crisis",
+          "ko": "위기"
+        },
+        {
+          "es": "pobreza",
+          "ko": "빈곤"
+        },
+        {
+          "es": "riqueza",
+          "ko": "부"
+        }
       ]
     },
     {
       "stage": 14,
+      "category": "에피소드 2 · 세트 3",
+      "type": "learning",
       "words": [
-        { "es": "problema social", "ko": "사회 문제" },
-        { "es": "desigualdad", "ko": "불평등" },
-        { "es": "violencia", "ko": "폭력" },
-        { "es": "droga", "ko": "마약" },
-        { "es": "adicción", "ko": "중독" },
-        { "es": "delincuencia", "ko": "범죄율" },
-        { "es": "indigencia", "ko": "노숙" },
-        { "es": "contaminación", "ko": "오염" },
-        { "es": "hambruna", "ko": "기근" },
-        { "es": "analfabetismo", "ko": "문맹" },
-        { "es": "corrupción política", "ko": "정치 부패" },
-        { "es": "sobrepoblación", "ko": "인구 과잉" },
-        { "es": "explotación", "ko": "착취" },
-        { "es": "prejuicio", "ko": "편견" },
-        { "es": "brecha", "ko": "격차" }
+        {
+          "es": "comercio",
+          "ko": "상업"
+        },
+        {
+          "es": "importación",
+          "ko": "수입"
+        },
+        {
+          "es": "exportación",
+          "ko": "수출"
+        },
+        {
+          "es": "arancel",
+          "ko": "관세"
+        },
+        {
+          "es": "tratado",
+          "ko": "조약"
+        },
+        {
+          "es": "empresa",
+          "ko": "기업"
+        },
+        {
+          "es": "industria",
+          "ko": "산업"
+        },
+        {
+          "es": "producción",
+          "ko": "생산"
+        },
+        {
+          "es": "consumo",
+          "ko": "소비"
+        },
+        {
+          "es": "competencia",
+          "ko": "경쟁"
+        }
       ]
     },
     {
       "stage": 15,
+      "category": "에피소드 2 · 세트 4",
+      "type": "learning",
       "words": [
-        { "es": "inmigración", "ko": "이민" },
-        { "es": "emigración", "ko": "이주" },
-        { "es": "cultura", "ko": "문화" },
-        { "es": "frontera", "ko": "국경" },
-        { "es": "pasaporte", "ko": "여권" },
-        { "es": "visa", "ko": "비자" },
-        { "es": "nacionalidad", "ko": "국적" },
-        { "es": "extranjero", "ko": "외국인" },
-        { "es": "integración", "ko": "통합" },
-        { "es": "multiculturalismo", "ko": "다문화주의" },
-        { "es": "idioma", "ko": "언어" },
-        { "es": "etnia", "ko": "민족" },
-        { "es": "diáspora", "ko": "디아스포라" },
-        { "es": "acogida", "ko": "수용" },
-        { "es": "ciudadanía", "ko": "시민권" }
+        {
+          "es": "monopolio",
+          "ko": "독점"
+        },
+        {
+          "es": "globalización",
+          "ko": "세계화"
+        },
+        {
+          "es": "desarrollo",
+          "ko": "발전"
+        },
+        {
+          "es": "recurso",
+          "ko": "자원"
+        },
+        {
+          "es": "propiedad",
+          "ko": "재산"
+        },
+        {
+          "es": "medio de comunicación",
+          "ko": "매체"
+        },
+        {
+          "es": "prensa",
+          "ko": "언론"
+        },
+        {
+          "es": "periodista",
+          "ko": "기자"
+        },
+        {
+          "es": "noticia",
+          "ko": "뉴스"
+        },
+        {
+          "es": "periódico",
+          "ko": "신문"
+        }
       ]
     },
     {
       "stage": 16,
+      "category": "에피소드 2 · 세트 5",
+      "type": "learning",
       "words": [
-        { "es": "educación", "ko": "교육" },
-        { "es": "escuela", "ko": "학교" },
-        { "es": "universidad", "ko": "대학교" },
-        { "es": "maestro", "ko": "교사" },
-        { "es": "alumno", "ko": "학생" },
-        { "es": "beca", "ko": "장학금" },
-        { "es": "matrícula", "ko": "등록금" },
-        { "es": "plan de estudios", "ko": "교육과정" },
-        { "es": "título", "ko": "학위" },
-        { "es": "examen", "ko": "시험" },
-        { "es": "alfabetización", "ko": "문해력" },
-        { "es": "investigación académica", "ko": "학술 연구" },
-        { "es": "graduación", "ko": "졸업" },
-        { "es": "formación", "ko": "훈련" },
-        { "es": "enseñanza", "ko": "가르침" }
+        {
+          "es": "revista",
+          "ko": "잡지"
+        },
+        {
+          "es": "entrevista",
+          "ko": "인터뷰"
+        },
+        {
+          "es": "titular",
+          "ko": "헤드라인"
+        },
+        {
+          "es": "artículo",
+          "ko": "기사"
+        },
+        {
+          "es": "editorial",
+          "ko": "사설"
+        },
+        {
+          "es": "opinión",
+          "ko": "의견"
+        },
+        {
+          "es": "emisora",
+          "ko": "방송국"
+        },
+        {
+          "es": "reportaje",
+          "ko": "르포"
+        },
+        {
+          "es": "red social",
+          "ko": "소셜 미디어"
+        },
+        {
+          "es": "publicidad",
+          "ko": "광고"
+        }
       ]
     },
     {
       "stage": 17,
+      "category": "에피소드 2 · 세트 6",
+      "type": "learning",
       "words": [
-        { "es": "salud", "ko": "건강" },
-        { "es": "hospital", "ko": "병원" },
-        { "es": "médico", "ko": "의사" },
-        { "es": "paciente", "ko": "환자" },
-        { "es": "seguro médico", "ko": "의료보험" },
-        { "es": "vacuna", "ko": "백신" },
-        { "es": "epidemia", "ko": "전염병" },
-        { "es": "tratamiento", "ko": "치료" },
-        { "es": "prevención", "ko": "예방" },
-        { "es": "sanidad", "ko": "의료" },
-        { "es": "farmacia", "ko": "약국" },
-        { "es": "enfermedad", "ko": "질병" },
-        { "es": "diagnóstico", "ko": "진단" },
-        { "es": "cirugía", "ko": "수술" },
-        { "es": "bienestar", "ko": "복지" }
+        {
+          "es": "religión",
+          "ko": "종교"
+        },
+        {
+          "es": "fe",
+          "ko": "믿음"
+        },
+        {
+          "es": "Dios",
+          "ko": "신"
+        },
+        {
+          "es": "iglesia",
+          "ko": "교회"
+        },
+        {
+          "es": "templo",
+          "ko": "사원"
+        },
+        {
+          "es": "oración",
+          "ko": "기도"
+        },
+        {
+          "es": "alma",
+          "ko": "영혼"
+        },
+        {
+          "es": "pecado",
+          "ko": "죄"
+        },
+        {
+          "es": "sacerdote",
+          "ko": "성직자"
+        },
+        {
+          "es": "budismo",
+          "ko": "불교"
+        }
       ]
     },
     {
       "stage": 18,
+      "category": "에피소드 2 · 세트 7",
+      "type": "learning",
       "words": [
-        { "es": "relaciones internacionales", "ko": "국제 관계" },
-        { "es": "diplomacia", "ko": "외교" },
-        { "es": "embajada", "ko": "대사관" },
-        { "es": "embajador", "ko": "대사" },
-        { "es": "organización internacional", "ko": "국제기구" },
-        { "es": "cumbre", "ko": "정상회담" },
-        { "es": "sanción", "ko": "제재" },
-        { "es": "alianza", "ko": "동맹" },
-        { "es": "cooperación", "ko": "협력" },
-        { "es": "ayuda humanitaria", "ko": "인도적 지원" },
-        { "es": "superpotencia", "ko": "강대국" },
-        { "es": "soberanía nacional", "ko": "국가 주권" },
-        { "es": "acuerdo", "ko": "협정" },
-        { "es": "intervención", "ko": "개입" },
-        { "es": "neutralidad", "ko": "중립" }
+        {
+          "es": "cristianismo",
+          "ko": "기독교"
+        },
+        {
+          "es": "islam",
+          "ko": "이슬람"
+        },
+        {
+          "es": "ateo",
+          "ko": "무신론자"
+        },
+        {
+          "es": "milagro",
+          "ko": "기적"
+        },
+        {
+          "es": "sagrado",
+          "ko": "신성한"
+        },
+        {
+          "es": "historia",
+          "ko": "역사"
+        },
+        {
+          "es": "civilización",
+          "ko": "문명"
+        },
+        {
+          "es": "imperio",
+          "ko": "제국"
+        },
+        {
+          "es": "revolución",
+          "ko": "혁명"
+        },
+        {
+          "es": "colonia",
+          "ko": "식민지"
+        }
       ]
     },
     {
       "stage": 19,
+      "category": "에피소드 2 · 세트 8",
+      "type": "learning",
       "words": [
-        { "es": "movimiento social", "ko": "사회 운동" },
-        { "es": "activismo", "ko": "활동주의" },
-        { "es": "voluntariado", "ko": "자원봉사" },
-        { "es": "ONG", "ko": "비정부기구" },
-        { "es": "sindicato", "ko": "노동조합" },
-        { "es": "huelga", "ko": "파업" },
-        { "es": "petición", "ko": "청원" },
-        { "es": "boicot", "ko": "불매운동" },
-        { "es": "desobediencia civil", "ko": "시민 불복종" },
-        { "es": "ecologismo", "ko": "환경주의" },
-        { "es": "pacifismo", "ko": "평화주의" },
-        { "es": "solidaridad", "ko": "연대" },
-        { "es": "liderazgo", "ko": "리더십" },
-        { "es": "conciencia social", "ko": "사회 의식" },
-        { "es": "cambio social", "ko": "사회 변화" }
+        {
+          "es": "independencia",
+          "ko": "독립"
+        },
+        {
+          "es": "antiguo",
+          "ko": "고대의"
+        },
+        {
+          "es": "medieval",
+          "ko": "중세의"
+        },
+        {
+          "es": "moderno",
+          "ko": "현대의"
+        },
+        {
+          "es": "dinastía",
+          "ko": "왕조"
+        },
+        {
+          "es": "monumento",
+          "ko": "기념비"
+        },
+        {
+          "es": "patrimonio",
+          "ko": "유산"
+        },
+        {
+          "es": "arqueología",
+          "ko": "고고학"
+        },
+        {
+          "es": "época",
+          "ko": "시대"
+        },
+        {
+          "es": "conquista",
+          "ko": "정복"
+        }
       ]
     },
     {
       "stage": 20,
+      "category": "에피소드 2 · 세트 9",
+      "type": "learning",
       "words": [
-        { "es": "gobernar", "ko": "통치하다" },
-        { "es": "votar", "ko": "투표하다" },
-        { "es": "protestar", "ko": "시위하다" },
-        { "es": "legislar", "ko": "입법하다" },
-        { "es": "juzgar", "ko": "판결하다" },
-        { "es": "prohibir", "ko": "금지하다" },
-        { "es": "defender", "ko": "방어하다" },
-        { "es": "negociar", "ko": "협상하다" },
-        { "es": "reclamar", "ko": "요구하다" },
-        { "es": "denunciar", "ko": "고발하다" },
-        { "es": "elegir", "ko": "선출하다" },
-        { "es": "abolir", "ko": "폐지하다" },
-        { "es": "regular", "ko": "규제하다" },
-        { "es": "participar", "ko": "참여하다" },
-        { "es": "contribuir", "ko": "기여하다" }
+        {
+          "es": "guerra",
+          "ko": "전쟁"
+        },
+        {
+          "es": "paz",
+          "ko": "평화"
+        },
+        {
+          "es": "ejército",
+          "ko": "군대"
+        },
+        {
+          "es": "soldado",
+          "ko": "군인"
+        },
+        {
+          "es": "arma",
+          "ko": "무기"
+        },
+        {
+          "es": "batalla",
+          "ko": "전투"
+        },
+        {
+          "es": "victoria",
+          "ko": "승리"
+        },
+        {
+          "es": "derrota",
+          "ko": "패배"
+        },
+        {
+          "es": "aliado",
+          "ko": "동맹국"
+        },
+        {
+          "es": "enemigo",
+          "ko": "적"
+        }
+      ]
+    },
+    {
+      "stage": 21,
+      "category": "에피소드 2 · 세트 10",
+      "type": "learning",
+      "words": [
+        {
+          "es": "conflicto",
+          "ko": "분쟁"
+        },
+        {
+          "es": "tregua",
+          "ko": "휴전"
+        },
+        {
+          "es": "refugiado",
+          "ko": "난민"
+        },
+        {
+          "es": "terrorismo",
+          "ko": "테러"
+        },
+        {
+          "es": "negociación",
+          "ko": "협상"
+        },
+        {
+          "es": "problema social",
+          "ko": "사회 문제"
+        },
+        {
+          "es": "desigualdad",
+          "ko": "불평등"
+        },
+        {
+          "es": "violencia",
+          "ko": "폭력"
+        },
+        {
+          "es": "droga",
+          "ko": "마약"
+        },
+        {
+          "es": "adicción",
+          "ko": "중독"
+        }
+      ]
+    },
+    {
+      "stage": 22,
+      "category": "에피소드 2 보스 · 누적 복습",
+      "type": "boss",
+      "words": [
+        {
+          "es": "asilo",
+          "ko": "망명"
+        },
+        {
+          "es": "privacidad",
+          "ko": "사생활"
+        },
+        {
+          "es": "tolerancia",
+          "ko": "관용"
+        },
+        {
+          "es": "opresión",
+          "ko": "억압"
+        },
+        {
+          "es": "esclavitud",
+          "ko": "노예제"
+        },
+        {
+          "es": "economía",
+          "ko": "경제"
+        },
+        {
+          "es": "mercado",
+          "ko": "시장"
+        },
+        {
+          "es": "dinero",
+          "ko": "돈"
+        },
+        {
+          "es": "banco",
+          "ko": "은행"
+        },
+        {
+          "es": "impuesto",
+          "ko": "세금"
+        },
+        {
+          "es": "salario",
+          "ko": "급여"
+        },
+        {
+          "es": "empleo",
+          "ko": "고용"
+        },
+        {
+          "es": "desempleo",
+          "ko": "실업"
+        },
+        {
+          "es": "inflación",
+          "ko": "인플레이션"
+        },
+        {
+          "es": "deuda",
+          "ko": "빚"
+        },
+        {
+          "es": "inversión",
+          "ko": "투자"
+        },
+        {
+          "es": "PIB",
+          "ko": "국내총생산"
+        },
+        {
+          "es": "crisis",
+          "ko": "위기"
+        },
+        {
+          "es": "pobreza",
+          "ko": "빈곤"
+        },
+        {
+          "es": "riqueza",
+          "ko": "부"
+        },
+        {
+          "es": "comercio",
+          "ko": "상업"
+        },
+        {
+          "es": "importación",
+          "ko": "수입"
+        },
+        {
+          "es": "exportación",
+          "ko": "수출"
+        },
+        {
+          "es": "arancel",
+          "ko": "관세"
+        },
+        {
+          "es": "tratado",
+          "ko": "조약"
+        },
+        {
+          "es": "empresa",
+          "ko": "기업"
+        },
+        {
+          "es": "industria",
+          "ko": "산업"
+        },
+        {
+          "es": "producción",
+          "ko": "생산"
+        },
+        {
+          "es": "consumo",
+          "ko": "소비"
+        },
+        {
+          "es": "competencia",
+          "ko": "경쟁"
+        },
+        {
+          "es": "monopolio",
+          "ko": "독점"
+        },
+        {
+          "es": "globalización",
+          "ko": "세계화"
+        },
+        {
+          "es": "desarrollo",
+          "ko": "발전"
+        },
+        {
+          "es": "recurso",
+          "ko": "자원"
+        },
+        {
+          "es": "propiedad",
+          "ko": "재산"
+        },
+        {
+          "es": "medio de comunicación",
+          "ko": "매체"
+        },
+        {
+          "es": "prensa",
+          "ko": "언론"
+        },
+        {
+          "es": "periodista",
+          "ko": "기자"
+        },
+        {
+          "es": "noticia",
+          "ko": "뉴스"
+        },
+        {
+          "es": "periódico",
+          "ko": "신문"
+        },
+        {
+          "es": "revista",
+          "ko": "잡지"
+        },
+        {
+          "es": "entrevista",
+          "ko": "인터뷰"
+        },
+        {
+          "es": "titular",
+          "ko": "헤드라인"
+        },
+        {
+          "es": "artículo",
+          "ko": "기사"
+        },
+        {
+          "es": "editorial",
+          "ko": "사설"
+        },
+        {
+          "es": "opinión",
+          "ko": "의견"
+        },
+        {
+          "es": "emisora",
+          "ko": "방송국"
+        },
+        {
+          "es": "reportaje",
+          "ko": "르포"
+        },
+        {
+          "es": "red social",
+          "ko": "소셜 미디어"
+        },
+        {
+          "es": "publicidad",
+          "ko": "광고"
+        },
+        {
+          "es": "religión",
+          "ko": "종교"
+        },
+        {
+          "es": "fe",
+          "ko": "믿음"
+        },
+        {
+          "es": "Dios",
+          "ko": "신"
+        },
+        {
+          "es": "iglesia",
+          "ko": "교회"
+        },
+        {
+          "es": "templo",
+          "ko": "사원"
+        },
+        {
+          "es": "oración",
+          "ko": "기도"
+        },
+        {
+          "es": "alma",
+          "ko": "영혼"
+        },
+        {
+          "es": "pecado",
+          "ko": "죄"
+        },
+        {
+          "es": "sacerdote",
+          "ko": "성직자"
+        },
+        {
+          "es": "budismo",
+          "ko": "불교"
+        },
+        {
+          "es": "cristianismo",
+          "ko": "기독교"
+        },
+        {
+          "es": "islam",
+          "ko": "이슬람"
+        },
+        {
+          "es": "ateo",
+          "ko": "무신론자"
+        },
+        {
+          "es": "milagro",
+          "ko": "기적"
+        },
+        {
+          "es": "sagrado",
+          "ko": "신성한"
+        },
+        {
+          "es": "historia",
+          "ko": "역사"
+        },
+        {
+          "es": "civilización",
+          "ko": "문명"
+        },
+        {
+          "es": "imperio",
+          "ko": "제국"
+        },
+        {
+          "es": "revolución",
+          "ko": "혁명"
+        },
+        {
+          "es": "colonia",
+          "ko": "식민지"
+        },
+        {
+          "es": "independencia",
+          "ko": "독립"
+        },
+        {
+          "es": "antiguo",
+          "ko": "고대의"
+        },
+        {
+          "es": "medieval",
+          "ko": "중세의"
+        },
+        {
+          "es": "moderno",
+          "ko": "현대의"
+        },
+        {
+          "es": "dinastía",
+          "ko": "왕조"
+        },
+        {
+          "es": "monumento",
+          "ko": "기념비"
+        },
+        {
+          "es": "patrimonio",
+          "ko": "유산"
+        },
+        {
+          "es": "arqueología",
+          "ko": "고고학"
+        },
+        {
+          "es": "época",
+          "ko": "시대"
+        },
+        {
+          "es": "conquista",
+          "ko": "정복"
+        },
+        {
+          "es": "guerra",
+          "ko": "전쟁"
+        },
+        {
+          "es": "paz",
+          "ko": "평화"
+        },
+        {
+          "es": "ejército",
+          "ko": "군대"
+        },
+        {
+          "es": "soldado",
+          "ko": "군인"
+        },
+        {
+          "es": "arma",
+          "ko": "무기"
+        },
+        {
+          "es": "batalla",
+          "ko": "전투"
+        },
+        {
+          "es": "victoria",
+          "ko": "승리"
+        },
+        {
+          "es": "derrota",
+          "ko": "패배"
+        },
+        {
+          "es": "aliado",
+          "ko": "동맹국"
+        },
+        {
+          "es": "enemigo",
+          "ko": "적"
+        },
+        {
+          "es": "conflicto",
+          "ko": "분쟁"
+        },
+        {
+          "es": "tregua",
+          "ko": "휴전"
+        },
+        {
+          "es": "refugiado",
+          "ko": "난민"
+        },
+        {
+          "es": "terrorismo",
+          "ko": "테러"
+        },
+        {
+          "es": "negociación",
+          "ko": "협상"
+        },
+        {
+          "es": "problema social",
+          "ko": "사회 문제"
+        },
+        {
+          "es": "desigualdad",
+          "ko": "불평등"
+        },
+        {
+          "es": "violencia",
+          "ko": "폭력"
+        },
+        {
+          "es": "droga",
+          "ko": "마약"
+        },
+        {
+          "es": "adicción",
+          "ko": "중독"
+        }
+      ]
+    },
+    {
+      "stage": 23,
+      "category": "에피소드 3 · 세트 1",
+      "type": "learning",
+      "words": [
+        {
+          "es": "delincuencia",
+          "ko": "범죄율"
+        },
+        {
+          "es": "indigencia",
+          "ko": "노숙"
+        },
+        {
+          "es": "contaminación",
+          "ko": "오염"
+        },
+        {
+          "es": "hambruna",
+          "ko": "기근"
+        },
+        {
+          "es": "analfabetismo",
+          "ko": "문맹"
+        },
+        {
+          "es": "corrupción política",
+          "ko": "정치 부패"
+        },
+        {
+          "es": "sobrepoblación",
+          "ko": "인구 과잉"
+        },
+        {
+          "es": "explotación",
+          "ko": "착취"
+        },
+        {
+          "es": "prejuicio",
+          "ko": "편견"
+        },
+        {
+          "es": "brecha",
+          "ko": "격차"
+        }
+      ]
+    },
+    {
+      "stage": 24,
+      "category": "에피소드 3 · 세트 2",
+      "type": "learning",
+      "words": [
+        {
+          "es": "inmigración",
+          "ko": "이민"
+        },
+        {
+          "es": "emigración",
+          "ko": "이주"
+        },
+        {
+          "es": "cultura",
+          "ko": "문화"
+        },
+        {
+          "es": "frontera",
+          "ko": "국경"
+        },
+        {
+          "es": "pasaporte",
+          "ko": "여권"
+        },
+        {
+          "es": "visa",
+          "ko": "비자"
+        },
+        {
+          "es": "nacionalidad",
+          "ko": "국적"
+        },
+        {
+          "es": "extranjero",
+          "ko": "외국인"
+        },
+        {
+          "es": "integración",
+          "ko": "통합"
+        },
+        {
+          "es": "multiculturalismo",
+          "ko": "다문화주의"
+        }
+      ]
+    },
+    {
+      "stage": 25,
+      "category": "에피소드 3 · 세트 3",
+      "type": "learning",
+      "words": [
+        {
+          "es": "idioma",
+          "ko": "언어"
+        },
+        {
+          "es": "etnia",
+          "ko": "민족"
+        },
+        {
+          "es": "diáspora",
+          "ko": "디아스포라"
+        },
+        {
+          "es": "acogida",
+          "ko": "수용"
+        },
+        {
+          "es": "ciudadanía",
+          "ko": "시민권"
+        },
+        {
+          "es": "educación",
+          "ko": "교육"
+        },
+        {
+          "es": "escuela",
+          "ko": "학교"
+        },
+        {
+          "es": "universidad",
+          "ko": "대학교"
+        },
+        {
+          "es": "maestro",
+          "ko": "교사"
+        },
+        {
+          "es": "alumno",
+          "ko": "학생"
+        }
+      ]
+    },
+    {
+      "stage": 26,
+      "category": "에피소드 3 · 세트 4",
+      "type": "learning",
+      "words": [
+        {
+          "es": "beca",
+          "ko": "장학금"
+        },
+        {
+          "es": "matrícula",
+          "ko": "등록금"
+        },
+        {
+          "es": "plan de estudios",
+          "ko": "교육과정"
+        },
+        {
+          "es": "título",
+          "ko": "학위"
+        },
+        {
+          "es": "examen",
+          "ko": "시험"
+        },
+        {
+          "es": "alfabetización",
+          "ko": "문해력"
+        },
+        {
+          "es": "investigación académica",
+          "ko": "학술 연구"
+        },
+        {
+          "es": "graduación",
+          "ko": "졸업"
+        },
+        {
+          "es": "formación",
+          "ko": "훈련"
+        },
+        {
+          "es": "enseñanza",
+          "ko": "가르침"
+        }
+      ]
+    },
+    {
+      "stage": 27,
+      "category": "에피소드 3 · 세트 5",
+      "type": "learning",
+      "words": [
+        {
+          "es": "salud",
+          "ko": "건강"
+        },
+        {
+          "es": "hospital",
+          "ko": "병원"
+        },
+        {
+          "es": "médico",
+          "ko": "의사"
+        },
+        {
+          "es": "paciente",
+          "ko": "환자"
+        },
+        {
+          "es": "seguro médico",
+          "ko": "의료보험"
+        },
+        {
+          "es": "vacuna",
+          "ko": "백신"
+        },
+        {
+          "es": "epidemia",
+          "ko": "전염병"
+        },
+        {
+          "es": "tratamiento",
+          "ko": "치료"
+        },
+        {
+          "es": "prevención",
+          "ko": "예방"
+        },
+        {
+          "es": "sanidad",
+          "ko": "의료"
+        }
+      ]
+    },
+    {
+      "stage": 28,
+      "category": "에피소드 3 · 세트 6",
+      "type": "learning",
+      "words": [
+        {
+          "es": "farmacia",
+          "ko": "약국"
+        },
+        {
+          "es": "enfermedad",
+          "ko": "질병"
+        },
+        {
+          "es": "diagnóstico",
+          "ko": "진단"
+        },
+        {
+          "es": "cirugía",
+          "ko": "수술"
+        },
+        {
+          "es": "bienestar",
+          "ko": "복지"
+        },
+        {
+          "es": "relaciones internacionales",
+          "ko": "국제 관계"
+        },
+        {
+          "es": "diplomacia",
+          "ko": "외교"
+        },
+        {
+          "es": "embajada",
+          "ko": "대사관"
+        },
+        {
+          "es": "embajador",
+          "ko": "대사"
+        },
+        {
+          "es": "organización internacional",
+          "ko": "국제기구"
+        }
+      ]
+    },
+    {
+      "stage": 29,
+      "category": "에피소드 3 · 세트 7",
+      "type": "learning",
+      "words": [
+        {
+          "es": "cumbre",
+          "ko": "정상회담"
+        },
+        {
+          "es": "sanción",
+          "ko": "제재"
+        },
+        {
+          "es": "alianza",
+          "ko": "동맹"
+        },
+        {
+          "es": "cooperación",
+          "ko": "협력"
+        },
+        {
+          "es": "ayuda humanitaria",
+          "ko": "인도적 지원"
+        },
+        {
+          "es": "superpotencia",
+          "ko": "강대국"
+        },
+        {
+          "es": "soberanía nacional",
+          "ko": "국가 주권"
+        },
+        {
+          "es": "acuerdo",
+          "ko": "협정"
+        },
+        {
+          "es": "intervención",
+          "ko": "개입"
+        },
+        {
+          "es": "neutralidad",
+          "ko": "중립"
+        }
+      ]
+    },
+    {
+      "stage": 30,
+      "category": "에피소드 3 · 세트 8",
+      "type": "learning",
+      "words": [
+        {
+          "es": "movimiento social",
+          "ko": "사회 운동"
+        },
+        {
+          "es": "activismo",
+          "ko": "활동주의"
+        },
+        {
+          "es": "voluntariado",
+          "ko": "자원봉사"
+        },
+        {
+          "es": "ONG",
+          "ko": "비정부기구"
+        },
+        {
+          "es": "sindicato",
+          "ko": "노동조합"
+        },
+        {
+          "es": "huelga",
+          "ko": "파업"
+        },
+        {
+          "es": "petición",
+          "ko": "청원"
+        },
+        {
+          "es": "boicot",
+          "ko": "불매운동"
+        },
+        {
+          "es": "desobediencia civil",
+          "ko": "시민 불복종"
+        },
+        {
+          "es": "ecologismo",
+          "ko": "환경주의"
+        }
+      ]
+    },
+    {
+      "stage": 31,
+      "category": "에피소드 3 · 세트 9",
+      "type": "learning",
+      "words": [
+        {
+          "es": "pacifismo",
+          "ko": "평화주의"
+        },
+        {
+          "es": "solidaridad",
+          "ko": "연대"
+        },
+        {
+          "es": "liderazgo",
+          "ko": "리더십"
+        },
+        {
+          "es": "conciencia social",
+          "ko": "사회 의식"
+        },
+        {
+          "es": "cambio social",
+          "ko": "사회 변화"
+        },
+        {
+          "es": "gobernar",
+          "ko": "통치하다"
+        },
+        {
+          "es": "votar",
+          "ko": "투표하다"
+        },
+        {
+          "es": "protestar",
+          "ko": "시위하다"
+        },
+        {
+          "es": "legislar",
+          "ko": "입법하다"
+        },
+        {
+          "es": "juzgar",
+          "ko": "판결하다"
+        }
+      ]
+    },
+    {
+      "stage": 32,
+      "category": "에피소드 3 · 세트 10",
+      "type": "learning",
+      "words": [
+        {
+          "es": "prohibir",
+          "ko": "금지하다"
+        },
+        {
+          "es": "defender",
+          "ko": "방어하다"
+        },
+        {
+          "es": "negociar",
+          "ko": "협상하다"
+        },
+        {
+          "es": "reclamar",
+          "ko": "요구하다"
+        },
+        {
+          "es": "denunciar",
+          "ko": "고발하다"
+        },
+        {
+          "es": "elegir",
+          "ko": "선출하다"
+        },
+        {
+          "es": "abolir",
+          "ko": "폐지하다"
+        },
+        {
+          "es": "regular",
+          "ko": "규제하다"
+        },
+        {
+          "es": "participar",
+          "ko": "참여하다"
+        },
+        {
+          "es": "contribuir",
+          "ko": "기여하다"
+        }
+      ]
+    },
+    {
+      "stage": 33,
+      "category": "에피소드 3 보스 · 누적 복습",
+      "type": "boss",
+      "words": [
+        {
+          "es": "delincuencia",
+          "ko": "범죄율"
+        },
+        {
+          "es": "indigencia",
+          "ko": "노숙"
+        },
+        {
+          "es": "contaminación",
+          "ko": "오염"
+        },
+        {
+          "es": "hambruna",
+          "ko": "기근"
+        },
+        {
+          "es": "analfabetismo",
+          "ko": "문맹"
+        },
+        {
+          "es": "corrupción política",
+          "ko": "정치 부패"
+        },
+        {
+          "es": "sobrepoblación",
+          "ko": "인구 과잉"
+        },
+        {
+          "es": "explotación",
+          "ko": "착취"
+        },
+        {
+          "es": "prejuicio",
+          "ko": "편견"
+        },
+        {
+          "es": "brecha",
+          "ko": "격차"
+        },
+        {
+          "es": "inmigración",
+          "ko": "이민"
+        },
+        {
+          "es": "emigración",
+          "ko": "이주"
+        },
+        {
+          "es": "cultura",
+          "ko": "문화"
+        },
+        {
+          "es": "frontera",
+          "ko": "국경"
+        },
+        {
+          "es": "pasaporte",
+          "ko": "여권"
+        },
+        {
+          "es": "visa",
+          "ko": "비자"
+        },
+        {
+          "es": "nacionalidad",
+          "ko": "국적"
+        },
+        {
+          "es": "extranjero",
+          "ko": "외국인"
+        },
+        {
+          "es": "integración",
+          "ko": "통합"
+        },
+        {
+          "es": "multiculturalismo",
+          "ko": "다문화주의"
+        },
+        {
+          "es": "idioma",
+          "ko": "언어"
+        },
+        {
+          "es": "etnia",
+          "ko": "민족"
+        },
+        {
+          "es": "diáspora",
+          "ko": "디아스포라"
+        },
+        {
+          "es": "acogida",
+          "ko": "수용"
+        },
+        {
+          "es": "ciudadanía",
+          "ko": "시민권"
+        },
+        {
+          "es": "educación",
+          "ko": "교육"
+        },
+        {
+          "es": "escuela",
+          "ko": "학교"
+        },
+        {
+          "es": "universidad",
+          "ko": "대학교"
+        },
+        {
+          "es": "maestro",
+          "ko": "교사"
+        },
+        {
+          "es": "alumno",
+          "ko": "학생"
+        },
+        {
+          "es": "beca",
+          "ko": "장학금"
+        },
+        {
+          "es": "matrícula",
+          "ko": "등록금"
+        },
+        {
+          "es": "plan de estudios",
+          "ko": "교육과정"
+        },
+        {
+          "es": "título",
+          "ko": "학위"
+        },
+        {
+          "es": "examen",
+          "ko": "시험"
+        },
+        {
+          "es": "alfabetización",
+          "ko": "문해력"
+        },
+        {
+          "es": "investigación académica",
+          "ko": "학술 연구"
+        },
+        {
+          "es": "graduación",
+          "ko": "졸업"
+        },
+        {
+          "es": "formación",
+          "ko": "훈련"
+        },
+        {
+          "es": "enseñanza",
+          "ko": "가르침"
+        },
+        {
+          "es": "salud",
+          "ko": "건강"
+        },
+        {
+          "es": "hospital",
+          "ko": "병원"
+        },
+        {
+          "es": "médico",
+          "ko": "의사"
+        },
+        {
+          "es": "paciente",
+          "ko": "환자"
+        },
+        {
+          "es": "seguro médico",
+          "ko": "의료보험"
+        },
+        {
+          "es": "vacuna",
+          "ko": "백신"
+        },
+        {
+          "es": "epidemia",
+          "ko": "전염병"
+        },
+        {
+          "es": "tratamiento",
+          "ko": "치료"
+        },
+        {
+          "es": "prevención",
+          "ko": "예방"
+        },
+        {
+          "es": "sanidad",
+          "ko": "의료"
+        },
+        {
+          "es": "farmacia",
+          "ko": "약국"
+        },
+        {
+          "es": "enfermedad",
+          "ko": "질병"
+        },
+        {
+          "es": "diagnóstico",
+          "ko": "진단"
+        },
+        {
+          "es": "cirugía",
+          "ko": "수술"
+        },
+        {
+          "es": "bienestar",
+          "ko": "복지"
+        },
+        {
+          "es": "relaciones internacionales",
+          "ko": "국제 관계"
+        },
+        {
+          "es": "diplomacia",
+          "ko": "외교"
+        },
+        {
+          "es": "embajada",
+          "ko": "대사관"
+        },
+        {
+          "es": "embajador",
+          "ko": "대사"
+        },
+        {
+          "es": "organización internacional",
+          "ko": "국제기구"
+        },
+        {
+          "es": "cumbre",
+          "ko": "정상회담"
+        },
+        {
+          "es": "sanción",
+          "ko": "제재"
+        },
+        {
+          "es": "alianza",
+          "ko": "동맹"
+        },
+        {
+          "es": "cooperación",
+          "ko": "협력"
+        },
+        {
+          "es": "ayuda humanitaria",
+          "ko": "인도적 지원"
+        },
+        {
+          "es": "superpotencia",
+          "ko": "강대국"
+        },
+        {
+          "es": "soberanía nacional",
+          "ko": "국가 주권"
+        },
+        {
+          "es": "acuerdo",
+          "ko": "협정"
+        },
+        {
+          "es": "intervención",
+          "ko": "개입"
+        },
+        {
+          "es": "neutralidad",
+          "ko": "중립"
+        },
+        {
+          "es": "movimiento social",
+          "ko": "사회 운동"
+        },
+        {
+          "es": "activismo",
+          "ko": "활동주의"
+        },
+        {
+          "es": "voluntariado",
+          "ko": "자원봉사"
+        },
+        {
+          "es": "ONG",
+          "ko": "비정부기구"
+        },
+        {
+          "es": "sindicato",
+          "ko": "노동조합"
+        },
+        {
+          "es": "huelga",
+          "ko": "파업"
+        },
+        {
+          "es": "petición",
+          "ko": "청원"
+        },
+        {
+          "es": "boicot",
+          "ko": "불매운동"
+        },
+        {
+          "es": "desobediencia civil",
+          "ko": "시민 불복종"
+        },
+        {
+          "es": "ecologismo",
+          "ko": "환경주의"
+        },
+        {
+          "es": "pacifismo",
+          "ko": "평화주의"
+        },
+        {
+          "es": "solidaridad",
+          "ko": "연대"
+        },
+        {
+          "es": "liderazgo",
+          "ko": "리더십"
+        },
+        {
+          "es": "conciencia social",
+          "ko": "사회 의식"
+        },
+        {
+          "es": "cambio social",
+          "ko": "사회 변화"
+        },
+        {
+          "es": "gobernar",
+          "ko": "통치하다"
+        },
+        {
+          "es": "votar",
+          "ko": "투표하다"
+        },
+        {
+          "es": "protestar",
+          "ko": "시위하다"
+        },
+        {
+          "es": "legislar",
+          "ko": "입법하다"
+        },
+        {
+          "es": "juzgar",
+          "ko": "판결하다"
+        },
+        {
+          "es": "prohibir",
+          "ko": "금지하다"
+        },
+        {
+          "es": "defender",
+          "ko": "방어하다"
+        },
+        {
+          "es": "negociar",
+          "ko": "협상하다"
+        },
+        {
+          "es": "reclamar",
+          "ko": "요구하다"
+        },
+        {
+          "es": "denunciar",
+          "ko": "고발하다"
+        },
+        {
+          "es": "elegir",
+          "ko": "선출하다"
+        },
+        {
+          "es": "abolir",
+          "ko": "폐지하다"
+        },
+        {
+          "es": "regular",
+          "ko": "규제하다"
+        },
+        {
+          "es": "participar",
+          "ko": "참여하다"
+        },
+        {
+          "es": "contribuir",
+          "ko": "기여하다"
+        }
       ]
     }
-  ]
+  ],
+  "episodeStructure": {
+    "episodes": 3,
+    "learningStagesPerEpisode": 10,
+    "bossStageInterval": 11,
+    "newWordsPerLearningStage": 10,
+    "newWordsPerEpisode": 100
+  }
 }

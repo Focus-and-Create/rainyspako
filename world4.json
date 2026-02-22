@@ -5,403 +5,2641 @@
   "stages": [
     {
       "stage": 1,
+      "category": "에피소드 1 · 세트 1",
+      "type": "learning",
       "words": [
-        { "es": "naturaleza", "ko": "자연" },
-        { "es": "tierra", "ko": "땅" },
-        { "es": "cielo", "ko": "하늘" },
-        { "es": "sol", "ko": "태양" },
-        { "es": "luna", "ko": "달" },
-        { "es": "estrella", "ko": "별" },
-        { "es": "agua", "ko": "물" },
-        { "es": "fuego", "ko": "불" },
-        { "es": "aire", "ko": "공기" },
-        { "es": "piedra", "ko": "돌" },
-        { "es": "arena", "ko": "모래" },
-        { "es": "luz", "ko": "빛" },
-        { "es": "sombra", "ko": "그림자" },
-        { "es": "horizonte", "ko": "지평선" },
-        { "es": "paisaje", "ko": "풍경" }
+        {
+          "es": "naturaleza",
+          "ko": "자연"
+        },
+        {
+          "es": "tierra",
+          "ko": "땅"
+        },
+        {
+          "es": "cielo",
+          "ko": "하늘"
+        },
+        {
+          "es": "sol",
+          "ko": "태양"
+        },
+        {
+          "es": "luna",
+          "ko": "달"
+        },
+        {
+          "es": "estrella",
+          "ko": "별"
+        },
+        {
+          "es": "agua",
+          "ko": "물"
+        },
+        {
+          "es": "fuego",
+          "ko": "불"
+        },
+        {
+          "es": "aire",
+          "ko": "공기"
+        },
+        {
+          "es": "piedra",
+          "ko": "돌"
+        }
       ]
     },
     {
       "stage": 2,
+      "category": "에피소드 1 · 세트 2",
+      "type": "learning",
       "words": [
-        { "es": "montaña", "ko": "산" },
-        { "es": "valle", "ko": "계곡" },
-        { "es": "colina", "ko": "언덕" },
-        { "es": "llanura", "ko": "평야" },
-        { "es": "desierto", "ko": "사막" },
-        { "es": "isla", "ko": "섬" },
-        { "es": "volcán", "ko": "화산" },
-        { "es": "cueva", "ko": "동굴" },
-        { "es": "acantilado", "ko": "절벽" },
-        { "es": "meseta", "ko": "고원" },
-        { "es": "península", "ko": "반도" },
-        { "es": "continente", "ko": "대륙" },
-        { "es": "costa", "ko": "해안" },
-        { "es": "cañón", "ko": "협곡" },
-        { "es": "pradera", "ko": "초원" }
+        {
+          "es": "arena",
+          "ko": "모래"
+        },
+        {
+          "es": "luz",
+          "ko": "빛"
+        },
+        {
+          "es": "sombra",
+          "ko": "그림자"
+        },
+        {
+          "es": "horizonte",
+          "ko": "지평선"
+        },
+        {
+          "es": "paisaje",
+          "ko": "풍경"
+        },
+        {
+          "es": "montaña",
+          "ko": "산"
+        },
+        {
+          "es": "valle",
+          "ko": "계곡"
+        },
+        {
+          "es": "colina",
+          "ko": "언덕"
+        },
+        {
+          "es": "llanura",
+          "ko": "평야"
+        },
+        {
+          "es": "desierto",
+          "ko": "사막"
+        }
       ]
     },
     {
       "stage": 3,
+      "category": "에피소드 1 · 세트 3",
+      "type": "learning",
       "words": [
-        { "es": "río", "ko": "강" },
-        { "es": "mar", "ko": "바다" },
-        { "es": "lago", "ko": "호수" },
-        { "es": "océano", "ko": "대양" },
-        { "es": "cascada", "ko": "폭포" },
-        { "es": "arroyo", "ko": "시내" },
-        { "es": "pantano", "ko": "늪" },
-        { "es": "glaciar", "ko": "빙하" },
-        { "es": "manantial", "ko": "샘" },
-        { "es": "ola", "ko": "파도" },
-        { "es": "corriente", "ko": "해류" },
-        { "es": "estanque", "ko": "연못" },
-        { "es": "bahía", "ko": "만" },
-        { "es": "marea", "ko": "조수" },
-        { "es": "orilla", "ko": "강가" }
+        {
+          "es": "isla",
+          "ko": "섬"
+        },
+        {
+          "es": "volcán",
+          "ko": "화산"
+        },
+        {
+          "es": "cueva",
+          "ko": "동굴"
+        },
+        {
+          "es": "acantilado",
+          "ko": "절벽"
+        },
+        {
+          "es": "meseta",
+          "ko": "고원"
+        },
+        {
+          "es": "península",
+          "ko": "반도"
+        },
+        {
+          "es": "continente",
+          "ko": "대륙"
+        },
+        {
+          "es": "costa",
+          "ko": "해안"
+        },
+        {
+          "es": "cañón",
+          "ko": "협곡"
+        },
+        {
+          "es": "pradera",
+          "ko": "초원"
+        }
       ]
     },
     {
       "stage": 4,
+      "category": "에피소드 1 · 세트 4",
+      "type": "learning",
       "words": [
-        { "es": "lluvia", "ko": "비" },
-        { "es": "nieve", "ko": "눈" },
-        { "es": "viento", "ko": "바람" },
-        { "es": "nube", "ko": "구름" },
-        { "es": "tormenta", "ko": "폭풍" },
-        { "es": "niebla", "ko": "안개" },
-        { "es": "helada", "ko": "서리" },
-        { "es": "granizo", "ko": "우박" },
-        { "es": "trueno", "ko": "천둥" },
-        { "es": "relámpago", "ko": "번개" },
-        { "es": "brisa", "ko": "산들바람" },
-        { "es": "humedad", "ko": "습도" },
-        { "es": "sequía", "ko": "가뭄" },
-        { "es": "rocío", "ko": "이슬" },
-        { "es": "escarcha", "ko": "성에" }
+        {
+          "es": "río",
+          "ko": "강"
+        },
+        {
+          "es": "mar",
+          "ko": "바다"
+        },
+        {
+          "es": "lago",
+          "ko": "호수"
+        },
+        {
+          "es": "océano",
+          "ko": "대양"
+        },
+        {
+          "es": "cascada",
+          "ko": "폭포"
+        },
+        {
+          "es": "arroyo",
+          "ko": "시내"
+        },
+        {
+          "es": "pantano",
+          "ko": "늪"
+        },
+        {
+          "es": "glaciar",
+          "ko": "빙하"
+        },
+        {
+          "es": "manantial",
+          "ko": "샘"
+        },
+        {
+          "es": "ola",
+          "ko": "파도"
+        }
       ]
     },
     {
       "stage": 5,
+      "category": "에피소드 1 · 세트 5",
+      "type": "learning",
       "words": [
-        { "es": "arcoíris", "ko": "무지개" },
-        { "es": "tornado", "ko": "토네이도" },
-        { "es": "huracán", "ko": "허리케인" },
-        { "es": "tifón", "ko": "태풍" },
-        { "es": "rayo", "ko": "벼락" },
-        { "es": "nevada", "ko": "폭설" },
-        { "es": "ventisca", "ko": "눈보라" },
-        { "es": "aguacero", "ko": "소나기" },
-        { "es": "neblina", "ko": "옅은 안개" },
-        { "es": "ráfaga", "ko": "돌풍" },
-        { "es": "monzón", "ko": "몬순" },
-        { "es": "aurora", "ko": "오로라" },
-        { "es": "ciclón", "ko": "사이클론" },
-        { "es": "temperatura", "ko": "온도" },
-        { "es": "pronóstico", "ko": "일기예보" }
+        {
+          "es": "corriente",
+          "ko": "해류"
+        },
+        {
+          "es": "estanque",
+          "ko": "연못"
+        },
+        {
+          "es": "bahía",
+          "ko": "만"
+        },
+        {
+          "es": "marea",
+          "ko": "조수"
+        },
+        {
+          "es": "orilla",
+          "ko": "강가"
+        },
+        {
+          "es": "lluvia",
+          "ko": "비"
+        },
+        {
+          "es": "nieve",
+          "ko": "눈"
+        },
+        {
+          "es": "viento",
+          "ko": "바람"
+        },
+        {
+          "es": "nube",
+          "ko": "구름"
+        },
+        {
+          "es": "tormenta",
+          "ko": "폭풍"
+        }
       ]
     },
     {
       "stage": 6,
+      "category": "에피소드 1 · 세트 6",
+      "type": "learning",
       "words": [
-        { "es": "primavera", "ko": "봄" },
-        { "es": "verano", "ko": "여름" },
-        { "es": "otoño", "ko": "가을" },
-        { "es": "invierno", "ko": "겨울" },
-        { "es": "clima", "ko": "기후" },
-        { "es": "calor", "ko": "더위" },
-        { "es": "frío", "ko": "추위" },
-        { "es": "templado", "ko": "온화한" },
-        { "es": "tropical", "ko": "열대의" },
-        { "es": "polar", "ko": "극지의" },
-        { "es": "estación", "ko": "계절" },
-        { "es": "amanecer", "ko": "새벽" },
-        { "es": "atardecer", "ko": "해질녘" },
-        { "es": "mediodía", "ko": "정오" },
-        { "es": "medianoche", "ko": "자정" }
+        {
+          "es": "niebla",
+          "ko": "안개"
+        },
+        {
+          "es": "helada",
+          "ko": "서리"
+        },
+        {
+          "es": "granizo",
+          "ko": "우박"
+        },
+        {
+          "es": "trueno",
+          "ko": "천둥"
+        },
+        {
+          "es": "relámpago",
+          "ko": "번개"
+        },
+        {
+          "es": "brisa",
+          "ko": "산들바람"
+        },
+        {
+          "es": "humedad",
+          "ko": "습도"
+        },
+        {
+          "es": "sequía",
+          "ko": "가뭄"
+        },
+        {
+          "es": "rocío",
+          "ko": "이슬"
+        },
+        {
+          "es": "escarcha",
+          "ko": "성에"
+        }
       ]
     },
     {
       "stage": 7,
+      "category": "에피소드 1 · 세트 7",
+      "type": "learning",
       "words": [
-        { "es": "perro", "ko": "개" },
-        { "es": "gato", "ko": "고양이" },
-        { "es": "caballo", "ko": "말" },
-        { "es": "vaca", "ko": "소" },
-        { "es": "cerdo", "ko": "돼지" },
-        { "es": "oveja", "ko": "양" },
-        { "es": "gallina", "ko": "닭" },
-        { "es": "conejo", "ko": "토끼" },
-        { "es": "pato", "ko": "오리" },
-        { "es": "cabra", "ko": "염소" },
-        { "es": "burro", "ko": "당나귀" },
-        { "es": "toro", "ko": "황소" },
-        { "es": "pavo", "ko": "칠면조" },
-        { "es": "paloma", "ko": "비둘기" },
-        { "es": "hámster", "ko": "햄스터" }
+        {
+          "es": "arcoíris",
+          "ko": "무지개"
+        },
+        {
+          "es": "tornado",
+          "ko": "토네이도"
+        },
+        {
+          "es": "huracán",
+          "ko": "허리케인"
+        },
+        {
+          "es": "tifón",
+          "ko": "태풍"
+        },
+        {
+          "es": "rayo",
+          "ko": "벼락"
+        },
+        {
+          "es": "nevada",
+          "ko": "폭설"
+        },
+        {
+          "es": "ventisca",
+          "ko": "눈보라"
+        },
+        {
+          "es": "aguacero",
+          "ko": "소나기"
+        },
+        {
+          "es": "neblina",
+          "ko": "옅은 안개"
+        },
+        {
+          "es": "ráfaga",
+          "ko": "돌풍"
+        }
       ]
     },
     {
       "stage": 8,
+      "category": "에피소드 1 · 세트 8",
+      "type": "learning",
       "words": [
-        { "es": "león", "ko": "사자" },
-        { "es": "tigre", "ko": "호랑이" },
-        { "es": "oso", "ko": "곰" },
-        { "es": "lobo", "ko": "늑대" },
-        { "es": "zorro", "ko": "여우" },
-        { "es": "elefante", "ko": "코끼리" },
-        { "es": "jirafa", "ko": "기린" },
-        { "es": "mono", "ko": "원숭이" },
-        { "es": "ciervo", "ko": "사슴" },
-        { "es": "leopardo", "ko": "표범" },
-        { "es": "rinoceronte", "ko": "코뿔소" },
-        { "es": "hipopótamo", "ko": "하마" },
-        { "es": "cebra", "ko": "얼룩말" },
-        { "es": "ardilla", "ko": "다람쥐" },
-        { "es": "murciélago", "ko": "박쥐" }
+        {
+          "es": "monzón",
+          "ko": "몬순"
+        },
+        {
+          "es": "aurora",
+          "ko": "오로라"
+        },
+        {
+          "es": "ciclón",
+          "ko": "사이클론"
+        },
+        {
+          "es": "temperatura",
+          "ko": "온도"
+        },
+        {
+          "es": "pronóstico",
+          "ko": "일기예보"
+        },
+        {
+          "es": "primavera",
+          "ko": "봄"
+        },
+        {
+          "es": "verano",
+          "ko": "여름"
+        },
+        {
+          "es": "otoño",
+          "ko": "가을"
+        },
+        {
+          "es": "invierno",
+          "ko": "겨울"
+        },
+        {
+          "es": "clima",
+          "ko": "기후"
+        }
       ]
     },
     {
       "stage": 9,
+      "category": "에피소드 1 · 세트 9",
+      "type": "learning",
       "words": [
-        { "es": "águila", "ko": "독수리" },
-        { "es": "búho", "ko": "올빼미" },
-        { "es": "mariposa", "ko": "나비" },
-        { "es": "abeja", "ko": "벌" },
-        { "es": "hormiga", "ko": "개미" },
-        { "es": "mosquito", "ko": "모기" },
-        { "es": "araña", "ko": "거미" },
-        { "es": "libélula", "ko": "잠자리" },
-        { "es": "cigarra", "ko": "매미" },
-        { "es": "escarabajo", "ko": "딱정벌레" },
-        { "es": "gorrión", "ko": "참새" },
-        { "es": "cuervo", "ko": "까마귀" },
-        { "es": "golondrina", "ko": "제비" },
-        { "es": "loro", "ko": "앵무새" },
-        { "es": "grillo", "ko": "귀뚜라미" }
+        {
+          "es": "calor",
+          "ko": "더위"
+        },
+        {
+          "es": "frío",
+          "ko": "추위"
+        },
+        {
+          "es": "templado",
+          "ko": "온화한"
+        },
+        {
+          "es": "tropical",
+          "ko": "열대의"
+        },
+        {
+          "es": "polar",
+          "ko": "극지의"
+        },
+        {
+          "es": "estación",
+          "ko": "계절"
+        },
+        {
+          "es": "amanecer",
+          "ko": "새벽"
+        },
+        {
+          "es": "atardecer",
+          "ko": "해질녘"
+        },
+        {
+          "es": "mediodía",
+          "ko": "정오"
+        },
+        {
+          "es": "medianoche",
+          "ko": "자정"
+        }
       ]
     },
     {
       "stage": 10,
+      "category": "에피소드 1 · 세트 10",
+      "type": "learning",
       "words": [
-        { "es": "pez", "ko": "물고기" },
-        { "es": "ballena", "ko": "고래" },
-        { "es": "delfín", "ko": "돌고래" },
-        { "es": "tiburón", "ko": "상어" },
-        { "es": "pulpo", "ko": "문어" },
-        { "es": "cangrejo", "ko": "게" },
-        { "es": "tortuga marina", "ko": "바다거북" },
-        { "es": "medusa", "ko": "해파리" },
-        { "es": "estrella de mar", "ko": "불가사리" },
-        { "es": "camarón", "ko": "새우" },
-        { "es": "calamar", "ko": "오징어" },
-        { "es": "foca", "ko": "물개" },
-        { "es": "coral", "ko": "산호" },
-        { "es": "almeja", "ko": "조개" },
-        { "es": "salmón", "ko": "연어" }
+        {
+          "es": "perro",
+          "ko": "개"
+        },
+        {
+          "es": "gato",
+          "ko": "고양이"
+        },
+        {
+          "es": "caballo",
+          "ko": "말"
+        },
+        {
+          "es": "vaca",
+          "ko": "소"
+        },
+        {
+          "es": "cerdo",
+          "ko": "돼지"
+        },
+        {
+          "es": "oveja",
+          "ko": "양"
+        },
+        {
+          "es": "gallina",
+          "ko": "닭"
+        },
+        {
+          "es": "conejo",
+          "ko": "토끼"
+        },
+        {
+          "es": "pato",
+          "ko": "오리"
+        },
+        {
+          "es": "cabra",
+          "ko": "염소"
+        }
       ]
     },
     {
       "stage": 11,
+      "category": "에피소드 1 보스 · 누적 복습",
+      "type": "boss",
       "words": [
-        { "es": "árbol", "ko": "나무" },
-        { "es": "bosque", "ko": "숲" },
-        { "es": "selva", "ko": "정글" },
-        { "es": "roble", "ko": "참나무" },
-        { "es": "pino", "ko": "소나무" },
-        { "es": "bambú", "ko": "대나무" },
-        { "es": "sauce", "ko": "버드나무" },
-        { "es": "rama", "ko": "나뭇가지" },
-        { "es": "raíz", "ko": "뿌리" },
-        { "es": "tronco", "ko": "줄기" },
-        { "es": "hoja", "ko": "잎" },
-        { "es": "corteza", "ko": "나무껍질" },
-        { "es": "leña", "ko": "장작" },
-        { "es": "arbusto", "ko": "관목" },
-        { "es": "cedro", "ko": "삼나무" }
+        {
+          "es": "naturaleza",
+          "ko": "자연"
+        },
+        {
+          "es": "tierra",
+          "ko": "땅"
+        },
+        {
+          "es": "cielo",
+          "ko": "하늘"
+        },
+        {
+          "es": "sol",
+          "ko": "태양"
+        },
+        {
+          "es": "luna",
+          "ko": "달"
+        },
+        {
+          "es": "estrella",
+          "ko": "별"
+        },
+        {
+          "es": "agua",
+          "ko": "물"
+        },
+        {
+          "es": "fuego",
+          "ko": "불"
+        },
+        {
+          "es": "aire",
+          "ko": "공기"
+        },
+        {
+          "es": "piedra",
+          "ko": "돌"
+        },
+        {
+          "es": "arena",
+          "ko": "모래"
+        },
+        {
+          "es": "luz",
+          "ko": "빛"
+        },
+        {
+          "es": "sombra",
+          "ko": "그림자"
+        },
+        {
+          "es": "horizonte",
+          "ko": "지평선"
+        },
+        {
+          "es": "paisaje",
+          "ko": "풍경"
+        },
+        {
+          "es": "montaña",
+          "ko": "산"
+        },
+        {
+          "es": "valle",
+          "ko": "계곡"
+        },
+        {
+          "es": "colina",
+          "ko": "언덕"
+        },
+        {
+          "es": "llanura",
+          "ko": "평야"
+        },
+        {
+          "es": "desierto",
+          "ko": "사막"
+        },
+        {
+          "es": "isla",
+          "ko": "섬"
+        },
+        {
+          "es": "volcán",
+          "ko": "화산"
+        },
+        {
+          "es": "cueva",
+          "ko": "동굴"
+        },
+        {
+          "es": "acantilado",
+          "ko": "절벽"
+        },
+        {
+          "es": "meseta",
+          "ko": "고원"
+        },
+        {
+          "es": "península",
+          "ko": "반도"
+        },
+        {
+          "es": "continente",
+          "ko": "대륙"
+        },
+        {
+          "es": "costa",
+          "ko": "해안"
+        },
+        {
+          "es": "cañón",
+          "ko": "협곡"
+        },
+        {
+          "es": "pradera",
+          "ko": "초원"
+        },
+        {
+          "es": "río",
+          "ko": "강"
+        },
+        {
+          "es": "mar",
+          "ko": "바다"
+        },
+        {
+          "es": "lago",
+          "ko": "호수"
+        },
+        {
+          "es": "océano",
+          "ko": "대양"
+        },
+        {
+          "es": "cascada",
+          "ko": "폭포"
+        },
+        {
+          "es": "arroyo",
+          "ko": "시내"
+        },
+        {
+          "es": "pantano",
+          "ko": "늪"
+        },
+        {
+          "es": "glaciar",
+          "ko": "빙하"
+        },
+        {
+          "es": "manantial",
+          "ko": "샘"
+        },
+        {
+          "es": "ola",
+          "ko": "파도"
+        },
+        {
+          "es": "corriente",
+          "ko": "해류"
+        },
+        {
+          "es": "estanque",
+          "ko": "연못"
+        },
+        {
+          "es": "bahía",
+          "ko": "만"
+        },
+        {
+          "es": "marea",
+          "ko": "조수"
+        },
+        {
+          "es": "orilla",
+          "ko": "강가"
+        },
+        {
+          "es": "lluvia",
+          "ko": "비"
+        },
+        {
+          "es": "nieve",
+          "ko": "눈"
+        },
+        {
+          "es": "viento",
+          "ko": "바람"
+        },
+        {
+          "es": "nube",
+          "ko": "구름"
+        },
+        {
+          "es": "tormenta",
+          "ko": "폭풍"
+        },
+        {
+          "es": "niebla",
+          "ko": "안개"
+        },
+        {
+          "es": "helada",
+          "ko": "서리"
+        },
+        {
+          "es": "granizo",
+          "ko": "우박"
+        },
+        {
+          "es": "trueno",
+          "ko": "천둥"
+        },
+        {
+          "es": "relámpago",
+          "ko": "번개"
+        },
+        {
+          "es": "brisa",
+          "ko": "산들바람"
+        },
+        {
+          "es": "humedad",
+          "ko": "습도"
+        },
+        {
+          "es": "sequía",
+          "ko": "가뭄"
+        },
+        {
+          "es": "rocío",
+          "ko": "이슬"
+        },
+        {
+          "es": "escarcha",
+          "ko": "성에"
+        },
+        {
+          "es": "arcoíris",
+          "ko": "무지개"
+        },
+        {
+          "es": "tornado",
+          "ko": "토네이도"
+        },
+        {
+          "es": "huracán",
+          "ko": "허리케인"
+        },
+        {
+          "es": "tifón",
+          "ko": "태풍"
+        },
+        {
+          "es": "rayo",
+          "ko": "벼락"
+        },
+        {
+          "es": "nevada",
+          "ko": "폭설"
+        },
+        {
+          "es": "ventisca",
+          "ko": "눈보라"
+        },
+        {
+          "es": "aguacero",
+          "ko": "소나기"
+        },
+        {
+          "es": "neblina",
+          "ko": "옅은 안개"
+        },
+        {
+          "es": "ráfaga",
+          "ko": "돌풍"
+        },
+        {
+          "es": "monzón",
+          "ko": "몬순"
+        },
+        {
+          "es": "aurora",
+          "ko": "오로라"
+        },
+        {
+          "es": "ciclón",
+          "ko": "사이클론"
+        },
+        {
+          "es": "temperatura",
+          "ko": "온도"
+        },
+        {
+          "es": "pronóstico",
+          "ko": "일기예보"
+        },
+        {
+          "es": "primavera",
+          "ko": "봄"
+        },
+        {
+          "es": "verano",
+          "ko": "여름"
+        },
+        {
+          "es": "otoño",
+          "ko": "가을"
+        },
+        {
+          "es": "invierno",
+          "ko": "겨울"
+        },
+        {
+          "es": "clima",
+          "ko": "기후"
+        },
+        {
+          "es": "calor",
+          "ko": "더위"
+        },
+        {
+          "es": "frío",
+          "ko": "추위"
+        },
+        {
+          "es": "templado",
+          "ko": "온화한"
+        },
+        {
+          "es": "tropical",
+          "ko": "열대의"
+        },
+        {
+          "es": "polar",
+          "ko": "극지의"
+        },
+        {
+          "es": "estación",
+          "ko": "계절"
+        },
+        {
+          "es": "amanecer",
+          "ko": "새벽"
+        },
+        {
+          "es": "atardecer",
+          "ko": "해질녘"
+        },
+        {
+          "es": "mediodía",
+          "ko": "정오"
+        },
+        {
+          "es": "medianoche",
+          "ko": "자정"
+        },
+        {
+          "es": "perro",
+          "ko": "개"
+        },
+        {
+          "es": "gato",
+          "ko": "고양이"
+        },
+        {
+          "es": "caballo",
+          "ko": "말"
+        },
+        {
+          "es": "vaca",
+          "ko": "소"
+        },
+        {
+          "es": "cerdo",
+          "ko": "돼지"
+        },
+        {
+          "es": "oveja",
+          "ko": "양"
+        },
+        {
+          "es": "gallina",
+          "ko": "닭"
+        },
+        {
+          "es": "conejo",
+          "ko": "토끼"
+        },
+        {
+          "es": "pato",
+          "ko": "오리"
+        },
+        {
+          "es": "cabra",
+          "ko": "염소"
+        }
       ]
     },
     {
       "stage": 12,
+      "category": "에피소드 2 · 세트 1",
+      "type": "learning",
       "words": [
-        { "es": "flor", "ko": "꽃" },
-        { "es": "rosa", "ko": "장미" },
-        { "es": "girasol", "ko": "해바라기" },
-        { "es": "tulipán", "ko": "튤립" },
-        { "es": "hierba", "ko": "풀" },
-        { "es": "césped", "ko": "잔디" },
-        { "es": "semilla", "ko": "씨앗" },
-        { "es": "pétalo", "ko": "꽃잎" },
-        { "es": "polen", "ko": "꽃가루" },
-        { "es": "cactus", "ko": "선인장" },
-        { "es": "musgo", "ko": "이끼" },
-        { "es": "helecho", "ko": "고사리" },
-        { "es": "orquídea", "ko": "난초" },
-        { "es": "loto", "ko": "연꽃" },
-        { "es": "jazmín", "ko": "자스민" }
+        {
+          "es": "burro",
+          "ko": "당나귀"
+        },
+        {
+          "es": "toro",
+          "ko": "황소"
+        },
+        {
+          "es": "pavo",
+          "ko": "칠면조"
+        },
+        {
+          "es": "paloma",
+          "ko": "비둘기"
+        },
+        {
+          "es": "hámster",
+          "ko": "햄스터"
+        },
+        {
+          "es": "león",
+          "ko": "사자"
+        },
+        {
+          "es": "tigre",
+          "ko": "호랑이"
+        },
+        {
+          "es": "oso",
+          "ko": "곰"
+        },
+        {
+          "es": "lobo",
+          "ko": "늑대"
+        },
+        {
+          "es": "zorro",
+          "ko": "여우"
+        }
       ]
     },
     {
       "stage": 13,
+      "category": "에피소드 2 · 세트 2",
+      "type": "learning",
       "words": [
-        { "es": "manzana", "ko": "사과" },
-        { "es": "naranja", "ko": "오렌지" },
-        { "es": "plátano", "ko": "바나나" },
-        { "es": "uva", "ko": "포도" },
-        { "es": "fresa", "ko": "딸기" },
-        { "es": "sandía", "ko": "수박" },
-        { "es": "melocotón", "ko": "복숭아" },
-        { "es": "cereza", "ko": "체리" },
-        { "es": "limón", "ko": "레몬" },
-        { "es": "pera", "ko": "배" },
-        { "es": "mango", "ko": "망고" },
-        { "es": "piña", "ko": "파인애플" },
-        { "es": "kiwi", "ko": "키위" },
-        { "es": "ciruela", "ko": "자두" },
-        { "es": "coco", "ko": "코코넛" }
+        {
+          "es": "elefante",
+          "ko": "코끼리"
+        },
+        {
+          "es": "jirafa",
+          "ko": "기린"
+        },
+        {
+          "es": "mono",
+          "ko": "원숭이"
+        },
+        {
+          "es": "ciervo",
+          "ko": "사슴"
+        },
+        {
+          "es": "leopardo",
+          "ko": "표범"
+        },
+        {
+          "es": "rinoceronte",
+          "ko": "코뿔소"
+        },
+        {
+          "es": "hipopótamo",
+          "ko": "하마"
+        },
+        {
+          "es": "cebra",
+          "ko": "얼룩말"
+        },
+        {
+          "es": "ardilla",
+          "ko": "다람쥐"
+        },
+        {
+          "es": "murciélago",
+          "ko": "박쥐"
+        }
       ]
     },
     {
       "stage": 14,
+      "category": "에피소드 2 · 세트 3",
+      "type": "learning",
       "words": [
-        { "es": "tomate", "ko": "토마토" },
-        { "es": "zanahoria", "ko": "당근" },
-        { "es": "cebolla", "ko": "양파" },
-        { "es": "patata", "ko": "감자" },
-        { "es": "ajo", "ko": "마늘" },
-        { "es": "lechuga", "ko": "상추" },
-        { "es": "pepino", "ko": "오이" },
-        { "es": "pimiento", "ko": "고추" },
-        { "es": "espinaca", "ko": "시금치" },
-        { "es": "maíz", "ko": "옥수수" },
-        { "es": "calabaza", "ko": "호박" },
-        { "es": "berenjena", "ko": "가지" },
-        { "es": "brócoli", "ko": "브로콜리" },
-        { "es": "champiñón", "ko": "버섯" },
-        { "es": "rábano", "ko": "무" }
+        {
+          "es": "águila",
+          "ko": "독수리"
+        },
+        {
+          "es": "búho",
+          "ko": "올빼미"
+        },
+        {
+          "es": "mariposa",
+          "ko": "나비"
+        },
+        {
+          "es": "abeja",
+          "ko": "벌"
+        },
+        {
+          "es": "hormiga",
+          "ko": "개미"
+        },
+        {
+          "es": "mosquito",
+          "ko": "모기"
+        },
+        {
+          "es": "araña",
+          "ko": "거미"
+        },
+        {
+          "es": "libélula",
+          "ko": "잠자리"
+        },
+        {
+          "es": "cigarra",
+          "ko": "매미"
+        },
+        {
+          "es": "escarabajo",
+          "ko": "딱정벌레"
+        }
       ]
     },
     {
       "stage": 15,
+      "category": "에피소드 2 · 세트 4",
+      "type": "learning",
       "words": [
-        { "es": "oro", "ko": "금" },
-        { "es": "plata", "ko": "은" },
-        { "es": "hierro", "ko": "철" },
-        { "es": "cobre", "ko": "구리" },
-        { "es": "diamante", "ko": "다이아몬드" },
-        { "es": "cristal", "ko": "수정" },
-        { "es": "mármol", "ko": "대리석" },
-        { "es": "carbón", "ko": "석탄" },
-        { "es": "petróleo", "ko": "석유" },
-        { "es": "suelo", "ko": "토양" },
-        { "es": "arcilla", "ko": "점토" },
-        { "es": "roca", "ko": "바위" },
-        { "es": "mineral", "ko": "광물" },
-        { "es": "gema", "ko": "보석" },
-        { "es": "fósil", "ko": "화석" }
+        {
+          "es": "gorrión",
+          "ko": "참새"
+        },
+        {
+          "es": "cuervo",
+          "ko": "까마귀"
+        },
+        {
+          "es": "golondrina",
+          "ko": "제비"
+        },
+        {
+          "es": "loro",
+          "ko": "앵무새"
+        },
+        {
+          "es": "grillo",
+          "ko": "귀뚜라미"
+        },
+        {
+          "es": "pez",
+          "ko": "물고기"
+        },
+        {
+          "es": "ballena",
+          "ko": "고래"
+        },
+        {
+          "es": "delfín",
+          "ko": "돌고래"
+        },
+        {
+          "es": "tiburón",
+          "ko": "상어"
+        },
+        {
+          "es": "pulpo",
+          "ko": "문어"
+        }
       ]
     },
     {
       "stage": 16,
+      "category": "에피소드 2 · 세트 5",
+      "type": "learning",
       "words": [
-        { "es": "universo", "ko": "우주" },
-        { "es": "planeta", "ko": "행성" },
-        { "es": "galaxia", "ko": "은하" },
-        { "es": "cometa", "ko": "혜성" },
-        { "es": "asteroide", "ko": "소행성" },
-        { "es": "satélite", "ko": "위성" },
-        { "es": "constelación", "ko": "별자리" },
-        { "es": "eclipse", "ko": "일식" },
-        { "es": "órbita", "ko": "궤도" },
-        { "es": "gravedad", "ko": "중력" },
-        { "es": "cohete", "ko": "로켓" },
-        { "es": "meteorito", "ko": "운석" },
-        { "es": "nebulosa", "ko": "성운" },
-        { "es": "agujero negro", "ko": "블랙홀" },
-        { "es": "Vía Láctea", "ko": "은하수" }
+        {
+          "es": "cangrejo",
+          "ko": "게"
+        },
+        {
+          "es": "tortuga marina",
+          "ko": "바다거북"
+        },
+        {
+          "es": "medusa",
+          "ko": "해파리"
+        },
+        {
+          "es": "estrella de mar",
+          "ko": "불가사리"
+        },
+        {
+          "es": "camarón",
+          "ko": "새우"
+        },
+        {
+          "es": "calamar",
+          "ko": "오징어"
+        },
+        {
+          "es": "foca",
+          "ko": "물개"
+        },
+        {
+          "es": "coral",
+          "ko": "산호"
+        },
+        {
+          "es": "almeja",
+          "ko": "조개"
+        },
+        {
+          "es": "salmón",
+          "ko": "연어"
+        }
       ]
     },
     {
       "stage": 17,
+      "category": "에피소드 2 · 세트 6",
+      "type": "learning",
       "words": [
-        { "es": "medio ambiente", "ko": "환경" },
-        { "es": "ecosistema", "ko": "생태계" },
-        { "es": "contaminación", "ko": "오염" },
-        { "es": "reciclaje", "ko": "재활용" },
-        { "es": "deforestación", "ko": "삼림 벌채" },
-        { "es": "biodiversidad", "ko": "생물 다양성" },
-        { "es": "especie", "ko": "종" },
-        { "es": "extinción", "ko": "멸종" },
-        { "es": "hábitat", "ko": "서식지" },
-        { "es": "energía solar", "ko": "태양 에너지" },
-        { "es": "calentamiento global", "ko": "지구 온난화" },
-        { "es": "capa de ozono", "ko": "오존층" },
-        { "es": "residuo", "ko": "폐기물" },
-        { "es": "sostenible", "ko": "지속 가능한" },
-        { "es": "conservación", "ko": "보존" }
+        {
+          "es": "árbol",
+          "ko": "나무"
+        },
+        {
+          "es": "bosque",
+          "ko": "숲"
+        },
+        {
+          "es": "selva",
+          "ko": "정글"
+        },
+        {
+          "es": "roble",
+          "ko": "참나무"
+        },
+        {
+          "es": "pino",
+          "ko": "소나무"
+        },
+        {
+          "es": "bambú",
+          "ko": "대나무"
+        },
+        {
+          "es": "sauce",
+          "ko": "버드나무"
+        },
+        {
+          "es": "rama",
+          "ko": "나뭇가지"
+        },
+        {
+          "es": "raíz",
+          "ko": "뿌리"
+        },
+        {
+          "es": "tronco",
+          "ko": "줄기"
+        }
       ]
     },
     {
       "stage": 18,
+      "category": "에피소드 2 · 세트 7",
+      "type": "learning",
       "words": [
-        { "es": "terremoto", "ko": "지진" },
-        { "es": "tsunami", "ko": "쓰나미" },
-        { "es": "inundación", "ko": "홍수" },
-        { "es": "erupción", "ko": "분화" },
-        { "es": "avalancha", "ko": "눈사태" },
-        { "es": "incendio forestal", "ko": "산불" },
-        { "es": "deslizamiento", "ko": "산사태" },
-        { "es": "sequía extrema", "ko": "극심한 가뭄" },
-        { "es": "maremoto", "ko": "해일" },
-        { "es": "onda expansiva", "ko": "충격파" },
-        { "es": "réplica", "ko": "여진" },
-        { "es": "epicentro", "ko": "진앙" },
-        { "es": "magnitud", "ko": "규모" },
-        { "es": "evacuación", "ko": "대피" },
-        { "es": "alerta", "ko": "경보" }
+        {
+          "es": "hoja",
+          "ko": "잎"
+        },
+        {
+          "es": "corteza",
+          "ko": "나무껍질"
+        },
+        {
+          "es": "leña",
+          "ko": "장작"
+        },
+        {
+          "es": "arbusto",
+          "ko": "관목"
+        },
+        {
+          "es": "cedro",
+          "ko": "삼나무"
+        },
+        {
+          "es": "flor",
+          "ko": "꽃"
+        },
+        {
+          "es": "rosa",
+          "ko": "장미"
+        },
+        {
+          "es": "girasol",
+          "ko": "해바라기"
+        },
+        {
+          "es": "tulipán",
+          "ko": "튤립"
+        },
+        {
+          "es": "hierba",
+          "ko": "풀"
+        }
       ]
     },
     {
       "stage": 19,
+      "category": "에피소드 2 · 세트 8",
+      "type": "learning",
       "words": [
-        { "es": "granja", "ko": "농장" },
-        { "es": "cosecha", "ko": "수확" },
-        { "es": "trigo", "ko": "밀" },
-        { "es": "arroz", "ko": "쌀" },
-        { "es": "campo", "ko": "밭" },
-        { "es": "riego", "ko": "관개" },
-        { "es": "fertilizante", "ko": "비료" },
-        { "es": "arado", "ko": "쟁기" },
-        { "es": "ganado", "ko": "가축" },
-        { "es": "invernadero", "ko": "온실" },
-        { "es": "huerto", "ko": "과수원" },
-        { "es": "pastoreo", "ko": "목축" },
-        { "es": "siembra", "ko": "파종" },
-        { "es": "abono", "ko": "거름" },
-        { "es": "agricultor", "ko": "농부" }
+        {
+          "es": "césped",
+          "ko": "잔디"
+        },
+        {
+          "es": "semilla",
+          "ko": "씨앗"
+        },
+        {
+          "es": "pétalo",
+          "ko": "꽃잎"
+        },
+        {
+          "es": "polen",
+          "ko": "꽃가루"
+        },
+        {
+          "es": "cactus",
+          "ko": "선인장"
+        },
+        {
+          "es": "musgo",
+          "ko": "이끼"
+        },
+        {
+          "es": "helecho",
+          "ko": "고사리"
+        },
+        {
+          "es": "orquídea",
+          "ko": "난초"
+        },
+        {
+          "es": "loto",
+          "ko": "연꽃"
+        },
+        {
+          "es": "jazmín",
+          "ko": "자스민"
+        }
       ]
     },
     {
       "stage": 20,
+      "category": "에피소드 2 · 세트 9",
+      "type": "learning",
       "words": [
-        { "es": "florecer", "ko": "피다" },
-        { "es": "crecer", "ko": "자라다" },
-        { "es": "llover", "ko": "비가 오다" },
-        { "es": "nevar", "ko": "눈이 오다" },
-        { "es": "soplar", "ko": "불다" },
-        { "es": "brillar", "ko": "빛나다" },
-        { "es": "nadar", "ko": "수영하다" },
-        { "es": "volar", "ko": "날다" },
-        { "es": "plantar", "ko": "심다" },
-        { "es": "cosechar", "ko": "수확하다" },
-        { "es": "regar", "ko": "물을 주다" },
-        { "es": "derretir", "ko": "녹다" },
-        { "es": "congelar", "ko": "얼다" },
-        { "es": "brotar", "ko": "싹트다" },
-        { "es": "migrar", "ko": "이동하다" }
+        {
+          "es": "manzana",
+          "ko": "사과"
+        },
+        {
+          "es": "naranja",
+          "ko": "오렌지"
+        },
+        {
+          "es": "plátano",
+          "ko": "바나나"
+        },
+        {
+          "es": "uva",
+          "ko": "포도"
+        },
+        {
+          "es": "fresa",
+          "ko": "딸기"
+        },
+        {
+          "es": "sandía",
+          "ko": "수박"
+        },
+        {
+          "es": "melocotón",
+          "ko": "복숭아"
+        },
+        {
+          "es": "cereza",
+          "ko": "체리"
+        },
+        {
+          "es": "limón",
+          "ko": "레몬"
+        },
+        {
+          "es": "pera",
+          "ko": "배"
+        }
+      ]
+    },
+    {
+      "stage": 21,
+      "category": "에피소드 2 · 세트 10",
+      "type": "learning",
+      "words": [
+        {
+          "es": "mango",
+          "ko": "망고"
+        },
+        {
+          "es": "piña",
+          "ko": "파인애플"
+        },
+        {
+          "es": "kiwi",
+          "ko": "키위"
+        },
+        {
+          "es": "ciruela",
+          "ko": "자두"
+        },
+        {
+          "es": "coco",
+          "ko": "코코넛"
+        },
+        {
+          "es": "tomate",
+          "ko": "토마토"
+        },
+        {
+          "es": "zanahoria",
+          "ko": "당근"
+        },
+        {
+          "es": "cebolla",
+          "ko": "양파"
+        },
+        {
+          "es": "patata",
+          "ko": "감자"
+        },
+        {
+          "es": "ajo",
+          "ko": "마늘"
+        }
+      ]
+    },
+    {
+      "stage": 22,
+      "category": "에피소드 2 보스 · 누적 복습",
+      "type": "boss",
+      "words": [
+        {
+          "es": "burro",
+          "ko": "당나귀"
+        },
+        {
+          "es": "toro",
+          "ko": "황소"
+        },
+        {
+          "es": "pavo",
+          "ko": "칠면조"
+        },
+        {
+          "es": "paloma",
+          "ko": "비둘기"
+        },
+        {
+          "es": "hámster",
+          "ko": "햄스터"
+        },
+        {
+          "es": "león",
+          "ko": "사자"
+        },
+        {
+          "es": "tigre",
+          "ko": "호랑이"
+        },
+        {
+          "es": "oso",
+          "ko": "곰"
+        },
+        {
+          "es": "lobo",
+          "ko": "늑대"
+        },
+        {
+          "es": "zorro",
+          "ko": "여우"
+        },
+        {
+          "es": "elefante",
+          "ko": "코끼리"
+        },
+        {
+          "es": "jirafa",
+          "ko": "기린"
+        },
+        {
+          "es": "mono",
+          "ko": "원숭이"
+        },
+        {
+          "es": "ciervo",
+          "ko": "사슴"
+        },
+        {
+          "es": "leopardo",
+          "ko": "표범"
+        },
+        {
+          "es": "rinoceronte",
+          "ko": "코뿔소"
+        },
+        {
+          "es": "hipopótamo",
+          "ko": "하마"
+        },
+        {
+          "es": "cebra",
+          "ko": "얼룩말"
+        },
+        {
+          "es": "ardilla",
+          "ko": "다람쥐"
+        },
+        {
+          "es": "murciélago",
+          "ko": "박쥐"
+        },
+        {
+          "es": "águila",
+          "ko": "독수리"
+        },
+        {
+          "es": "búho",
+          "ko": "올빼미"
+        },
+        {
+          "es": "mariposa",
+          "ko": "나비"
+        },
+        {
+          "es": "abeja",
+          "ko": "벌"
+        },
+        {
+          "es": "hormiga",
+          "ko": "개미"
+        },
+        {
+          "es": "mosquito",
+          "ko": "모기"
+        },
+        {
+          "es": "araña",
+          "ko": "거미"
+        },
+        {
+          "es": "libélula",
+          "ko": "잠자리"
+        },
+        {
+          "es": "cigarra",
+          "ko": "매미"
+        },
+        {
+          "es": "escarabajo",
+          "ko": "딱정벌레"
+        },
+        {
+          "es": "gorrión",
+          "ko": "참새"
+        },
+        {
+          "es": "cuervo",
+          "ko": "까마귀"
+        },
+        {
+          "es": "golondrina",
+          "ko": "제비"
+        },
+        {
+          "es": "loro",
+          "ko": "앵무새"
+        },
+        {
+          "es": "grillo",
+          "ko": "귀뚜라미"
+        },
+        {
+          "es": "pez",
+          "ko": "물고기"
+        },
+        {
+          "es": "ballena",
+          "ko": "고래"
+        },
+        {
+          "es": "delfín",
+          "ko": "돌고래"
+        },
+        {
+          "es": "tiburón",
+          "ko": "상어"
+        },
+        {
+          "es": "pulpo",
+          "ko": "문어"
+        },
+        {
+          "es": "cangrejo",
+          "ko": "게"
+        },
+        {
+          "es": "tortuga marina",
+          "ko": "바다거북"
+        },
+        {
+          "es": "medusa",
+          "ko": "해파리"
+        },
+        {
+          "es": "estrella de mar",
+          "ko": "불가사리"
+        },
+        {
+          "es": "camarón",
+          "ko": "새우"
+        },
+        {
+          "es": "calamar",
+          "ko": "오징어"
+        },
+        {
+          "es": "foca",
+          "ko": "물개"
+        },
+        {
+          "es": "coral",
+          "ko": "산호"
+        },
+        {
+          "es": "almeja",
+          "ko": "조개"
+        },
+        {
+          "es": "salmón",
+          "ko": "연어"
+        },
+        {
+          "es": "árbol",
+          "ko": "나무"
+        },
+        {
+          "es": "bosque",
+          "ko": "숲"
+        },
+        {
+          "es": "selva",
+          "ko": "정글"
+        },
+        {
+          "es": "roble",
+          "ko": "참나무"
+        },
+        {
+          "es": "pino",
+          "ko": "소나무"
+        },
+        {
+          "es": "bambú",
+          "ko": "대나무"
+        },
+        {
+          "es": "sauce",
+          "ko": "버드나무"
+        },
+        {
+          "es": "rama",
+          "ko": "나뭇가지"
+        },
+        {
+          "es": "raíz",
+          "ko": "뿌리"
+        },
+        {
+          "es": "tronco",
+          "ko": "줄기"
+        },
+        {
+          "es": "hoja",
+          "ko": "잎"
+        },
+        {
+          "es": "corteza",
+          "ko": "나무껍질"
+        },
+        {
+          "es": "leña",
+          "ko": "장작"
+        },
+        {
+          "es": "arbusto",
+          "ko": "관목"
+        },
+        {
+          "es": "cedro",
+          "ko": "삼나무"
+        },
+        {
+          "es": "flor",
+          "ko": "꽃"
+        },
+        {
+          "es": "rosa",
+          "ko": "장미"
+        },
+        {
+          "es": "girasol",
+          "ko": "해바라기"
+        },
+        {
+          "es": "tulipán",
+          "ko": "튤립"
+        },
+        {
+          "es": "hierba",
+          "ko": "풀"
+        },
+        {
+          "es": "césped",
+          "ko": "잔디"
+        },
+        {
+          "es": "semilla",
+          "ko": "씨앗"
+        },
+        {
+          "es": "pétalo",
+          "ko": "꽃잎"
+        },
+        {
+          "es": "polen",
+          "ko": "꽃가루"
+        },
+        {
+          "es": "cactus",
+          "ko": "선인장"
+        },
+        {
+          "es": "musgo",
+          "ko": "이끼"
+        },
+        {
+          "es": "helecho",
+          "ko": "고사리"
+        },
+        {
+          "es": "orquídea",
+          "ko": "난초"
+        },
+        {
+          "es": "loto",
+          "ko": "연꽃"
+        },
+        {
+          "es": "jazmín",
+          "ko": "자스민"
+        },
+        {
+          "es": "manzana",
+          "ko": "사과"
+        },
+        {
+          "es": "naranja",
+          "ko": "오렌지"
+        },
+        {
+          "es": "plátano",
+          "ko": "바나나"
+        },
+        {
+          "es": "uva",
+          "ko": "포도"
+        },
+        {
+          "es": "fresa",
+          "ko": "딸기"
+        },
+        {
+          "es": "sandía",
+          "ko": "수박"
+        },
+        {
+          "es": "melocotón",
+          "ko": "복숭아"
+        },
+        {
+          "es": "cereza",
+          "ko": "체리"
+        },
+        {
+          "es": "limón",
+          "ko": "레몬"
+        },
+        {
+          "es": "pera",
+          "ko": "배"
+        },
+        {
+          "es": "mango",
+          "ko": "망고"
+        },
+        {
+          "es": "piña",
+          "ko": "파인애플"
+        },
+        {
+          "es": "kiwi",
+          "ko": "키위"
+        },
+        {
+          "es": "ciruela",
+          "ko": "자두"
+        },
+        {
+          "es": "coco",
+          "ko": "코코넛"
+        },
+        {
+          "es": "tomate",
+          "ko": "토마토"
+        },
+        {
+          "es": "zanahoria",
+          "ko": "당근"
+        },
+        {
+          "es": "cebolla",
+          "ko": "양파"
+        },
+        {
+          "es": "patata",
+          "ko": "감자"
+        },
+        {
+          "es": "ajo",
+          "ko": "마늘"
+        }
+      ]
+    },
+    {
+      "stage": 23,
+      "category": "에피소드 3 · 세트 1",
+      "type": "learning",
+      "words": [
+        {
+          "es": "lechuga",
+          "ko": "상추"
+        },
+        {
+          "es": "pepino",
+          "ko": "오이"
+        },
+        {
+          "es": "pimiento",
+          "ko": "고추"
+        },
+        {
+          "es": "espinaca",
+          "ko": "시금치"
+        },
+        {
+          "es": "maíz",
+          "ko": "옥수수"
+        },
+        {
+          "es": "calabaza",
+          "ko": "호박"
+        },
+        {
+          "es": "berenjena",
+          "ko": "가지"
+        },
+        {
+          "es": "brócoli",
+          "ko": "브로콜리"
+        },
+        {
+          "es": "champiñón",
+          "ko": "버섯"
+        },
+        {
+          "es": "rábano",
+          "ko": "무"
+        }
+      ]
+    },
+    {
+      "stage": 24,
+      "category": "에피소드 3 · 세트 2",
+      "type": "learning",
+      "words": [
+        {
+          "es": "oro",
+          "ko": "금"
+        },
+        {
+          "es": "plata",
+          "ko": "은"
+        },
+        {
+          "es": "hierro",
+          "ko": "철"
+        },
+        {
+          "es": "cobre",
+          "ko": "구리"
+        },
+        {
+          "es": "diamante",
+          "ko": "다이아몬드"
+        },
+        {
+          "es": "cristal",
+          "ko": "수정"
+        },
+        {
+          "es": "mármol",
+          "ko": "대리석"
+        },
+        {
+          "es": "carbón",
+          "ko": "석탄"
+        },
+        {
+          "es": "petróleo",
+          "ko": "석유"
+        },
+        {
+          "es": "suelo",
+          "ko": "토양"
+        }
+      ]
+    },
+    {
+      "stage": 25,
+      "category": "에피소드 3 · 세트 3",
+      "type": "learning",
+      "words": [
+        {
+          "es": "arcilla",
+          "ko": "점토"
+        },
+        {
+          "es": "roca",
+          "ko": "바위"
+        },
+        {
+          "es": "mineral",
+          "ko": "광물"
+        },
+        {
+          "es": "gema",
+          "ko": "보석"
+        },
+        {
+          "es": "fósil",
+          "ko": "화석"
+        },
+        {
+          "es": "universo",
+          "ko": "우주"
+        },
+        {
+          "es": "planeta",
+          "ko": "행성"
+        },
+        {
+          "es": "galaxia",
+          "ko": "은하"
+        },
+        {
+          "es": "cometa",
+          "ko": "혜성"
+        },
+        {
+          "es": "asteroide",
+          "ko": "소행성"
+        }
+      ]
+    },
+    {
+      "stage": 26,
+      "category": "에피소드 3 · 세트 4",
+      "type": "learning",
+      "words": [
+        {
+          "es": "satélite",
+          "ko": "위성"
+        },
+        {
+          "es": "constelación",
+          "ko": "별자리"
+        },
+        {
+          "es": "eclipse",
+          "ko": "일식"
+        },
+        {
+          "es": "órbita",
+          "ko": "궤도"
+        },
+        {
+          "es": "gravedad",
+          "ko": "중력"
+        },
+        {
+          "es": "cohete",
+          "ko": "로켓"
+        },
+        {
+          "es": "meteorito",
+          "ko": "운석"
+        },
+        {
+          "es": "nebulosa",
+          "ko": "성운"
+        },
+        {
+          "es": "agujero negro",
+          "ko": "블랙홀"
+        },
+        {
+          "es": "Vía Láctea",
+          "ko": "은하수"
+        }
+      ]
+    },
+    {
+      "stage": 27,
+      "category": "에피소드 3 · 세트 5",
+      "type": "learning",
+      "words": [
+        {
+          "es": "medio ambiente",
+          "ko": "환경"
+        },
+        {
+          "es": "ecosistema",
+          "ko": "생태계"
+        },
+        {
+          "es": "contaminación",
+          "ko": "오염"
+        },
+        {
+          "es": "reciclaje",
+          "ko": "재활용"
+        },
+        {
+          "es": "deforestación",
+          "ko": "삼림 벌채"
+        },
+        {
+          "es": "biodiversidad",
+          "ko": "생물 다양성"
+        },
+        {
+          "es": "especie",
+          "ko": "종"
+        },
+        {
+          "es": "extinción",
+          "ko": "멸종"
+        },
+        {
+          "es": "hábitat",
+          "ko": "서식지"
+        },
+        {
+          "es": "energía solar",
+          "ko": "태양 에너지"
+        }
+      ]
+    },
+    {
+      "stage": 28,
+      "category": "에피소드 3 · 세트 6",
+      "type": "learning",
+      "words": [
+        {
+          "es": "calentamiento global",
+          "ko": "지구 온난화"
+        },
+        {
+          "es": "capa de ozono",
+          "ko": "오존층"
+        },
+        {
+          "es": "residuo",
+          "ko": "폐기물"
+        },
+        {
+          "es": "sostenible",
+          "ko": "지속 가능한"
+        },
+        {
+          "es": "conservación",
+          "ko": "보존"
+        },
+        {
+          "es": "terremoto",
+          "ko": "지진"
+        },
+        {
+          "es": "tsunami",
+          "ko": "쓰나미"
+        },
+        {
+          "es": "inundación",
+          "ko": "홍수"
+        },
+        {
+          "es": "erupción",
+          "ko": "분화"
+        },
+        {
+          "es": "avalancha",
+          "ko": "눈사태"
+        }
+      ]
+    },
+    {
+      "stage": 29,
+      "category": "에피소드 3 · 세트 7",
+      "type": "learning",
+      "words": [
+        {
+          "es": "incendio forestal",
+          "ko": "산불"
+        },
+        {
+          "es": "deslizamiento",
+          "ko": "산사태"
+        },
+        {
+          "es": "sequía extrema",
+          "ko": "극심한 가뭄"
+        },
+        {
+          "es": "maremoto",
+          "ko": "해일"
+        },
+        {
+          "es": "onda expansiva",
+          "ko": "충격파"
+        },
+        {
+          "es": "réplica",
+          "ko": "여진"
+        },
+        {
+          "es": "epicentro",
+          "ko": "진앙"
+        },
+        {
+          "es": "magnitud",
+          "ko": "규모"
+        },
+        {
+          "es": "evacuación",
+          "ko": "대피"
+        },
+        {
+          "es": "alerta",
+          "ko": "경보"
+        }
+      ]
+    },
+    {
+      "stage": 30,
+      "category": "에피소드 3 · 세트 8",
+      "type": "learning",
+      "words": [
+        {
+          "es": "granja",
+          "ko": "농장"
+        },
+        {
+          "es": "cosecha",
+          "ko": "수확"
+        },
+        {
+          "es": "trigo",
+          "ko": "밀"
+        },
+        {
+          "es": "arroz",
+          "ko": "쌀"
+        },
+        {
+          "es": "campo",
+          "ko": "밭"
+        },
+        {
+          "es": "riego",
+          "ko": "관개"
+        },
+        {
+          "es": "fertilizante",
+          "ko": "비료"
+        },
+        {
+          "es": "arado",
+          "ko": "쟁기"
+        },
+        {
+          "es": "ganado",
+          "ko": "가축"
+        },
+        {
+          "es": "invernadero",
+          "ko": "온실"
+        }
+      ]
+    },
+    {
+      "stage": 31,
+      "category": "에피소드 3 · 세트 9",
+      "type": "learning",
+      "words": [
+        {
+          "es": "huerto",
+          "ko": "과수원"
+        },
+        {
+          "es": "pastoreo",
+          "ko": "목축"
+        },
+        {
+          "es": "siembra",
+          "ko": "파종"
+        },
+        {
+          "es": "abono",
+          "ko": "거름"
+        },
+        {
+          "es": "agricultor",
+          "ko": "농부"
+        },
+        {
+          "es": "florecer",
+          "ko": "피다"
+        },
+        {
+          "es": "crecer",
+          "ko": "자라다"
+        },
+        {
+          "es": "llover",
+          "ko": "비가 오다"
+        },
+        {
+          "es": "nevar",
+          "ko": "눈이 오다"
+        },
+        {
+          "es": "soplar",
+          "ko": "불다"
+        }
+      ]
+    },
+    {
+      "stage": 32,
+      "category": "에피소드 3 · 세트 10",
+      "type": "learning",
+      "words": [
+        {
+          "es": "brillar",
+          "ko": "빛나다"
+        },
+        {
+          "es": "nadar",
+          "ko": "수영하다"
+        },
+        {
+          "es": "volar",
+          "ko": "날다"
+        },
+        {
+          "es": "plantar",
+          "ko": "심다"
+        },
+        {
+          "es": "cosechar",
+          "ko": "수확하다"
+        },
+        {
+          "es": "regar",
+          "ko": "물을 주다"
+        },
+        {
+          "es": "derretir",
+          "ko": "녹다"
+        },
+        {
+          "es": "congelar",
+          "ko": "얼다"
+        },
+        {
+          "es": "brotar",
+          "ko": "싹트다"
+        },
+        {
+          "es": "migrar",
+          "ko": "이동하다"
+        }
+      ]
+    },
+    {
+      "stage": 33,
+      "category": "에피소드 3 보스 · 누적 복습",
+      "type": "boss",
+      "words": [
+        {
+          "es": "lechuga",
+          "ko": "상추"
+        },
+        {
+          "es": "pepino",
+          "ko": "오이"
+        },
+        {
+          "es": "pimiento",
+          "ko": "고추"
+        },
+        {
+          "es": "espinaca",
+          "ko": "시금치"
+        },
+        {
+          "es": "maíz",
+          "ko": "옥수수"
+        },
+        {
+          "es": "calabaza",
+          "ko": "호박"
+        },
+        {
+          "es": "berenjena",
+          "ko": "가지"
+        },
+        {
+          "es": "brócoli",
+          "ko": "브로콜리"
+        },
+        {
+          "es": "champiñón",
+          "ko": "버섯"
+        },
+        {
+          "es": "rábano",
+          "ko": "무"
+        },
+        {
+          "es": "oro",
+          "ko": "금"
+        },
+        {
+          "es": "plata",
+          "ko": "은"
+        },
+        {
+          "es": "hierro",
+          "ko": "철"
+        },
+        {
+          "es": "cobre",
+          "ko": "구리"
+        },
+        {
+          "es": "diamante",
+          "ko": "다이아몬드"
+        },
+        {
+          "es": "cristal",
+          "ko": "수정"
+        },
+        {
+          "es": "mármol",
+          "ko": "대리석"
+        },
+        {
+          "es": "carbón",
+          "ko": "석탄"
+        },
+        {
+          "es": "petróleo",
+          "ko": "석유"
+        },
+        {
+          "es": "suelo",
+          "ko": "토양"
+        },
+        {
+          "es": "arcilla",
+          "ko": "점토"
+        },
+        {
+          "es": "roca",
+          "ko": "바위"
+        },
+        {
+          "es": "mineral",
+          "ko": "광물"
+        },
+        {
+          "es": "gema",
+          "ko": "보석"
+        },
+        {
+          "es": "fósil",
+          "ko": "화석"
+        },
+        {
+          "es": "universo",
+          "ko": "우주"
+        },
+        {
+          "es": "planeta",
+          "ko": "행성"
+        },
+        {
+          "es": "galaxia",
+          "ko": "은하"
+        },
+        {
+          "es": "cometa",
+          "ko": "혜성"
+        },
+        {
+          "es": "asteroide",
+          "ko": "소행성"
+        },
+        {
+          "es": "satélite",
+          "ko": "위성"
+        },
+        {
+          "es": "constelación",
+          "ko": "별자리"
+        },
+        {
+          "es": "eclipse",
+          "ko": "일식"
+        },
+        {
+          "es": "órbita",
+          "ko": "궤도"
+        },
+        {
+          "es": "gravedad",
+          "ko": "중력"
+        },
+        {
+          "es": "cohete",
+          "ko": "로켓"
+        },
+        {
+          "es": "meteorito",
+          "ko": "운석"
+        },
+        {
+          "es": "nebulosa",
+          "ko": "성운"
+        },
+        {
+          "es": "agujero negro",
+          "ko": "블랙홀"
+        },
+        {
+          "es": "Vía Láctea",
+          "ko": "은하수"
+        },
+        {
+          "es": "medio ambiente",
+          "ko": "환경"
+        },
+        {
+          "es": "ecosistema",
+          "ko": "생태계"
+        },
+        {
+          "es": "contaminación",
+          "ko": "오염"
+        },
+        {
+          "es": "reciclaje",
+          "ko": "재활용"
+        },
+        {
+          "es": "deforestación",
+          "ko": "삼림 벌채"
+        },
+        {
+          "es": "biodiversidad",
+          "ko": "생물 다양성"
+        },
+        {
+          "es": "especie",
+          "ko": "종"
+        },
+        {
+          "es": "extinción",
+          "ko": "멸종"
+        },
+        {
+          "es": "hábitat",
+          "ko": "서식지"
+        },
+        {
+          "es": "energía solar",
+          "ko": "태양 에너지"
+        },
+        {
+          "es": "calentamiento global",
+          "ko": "지구 온난화"
+        },
+        {
+          "es": "capa de ozono",
+          "ko": "오존층"
+        },
+        {
+          "es": "residuo",
+          "ko": "폐기물"
+        },
+        {
+          "es": "sostenible",
+          "ko": "지속 가능한"
+        },
+        {
+          "es": "conservación",
+          "ko": "보존"
+        },
+        {
+          "es": "terremoto",
+          "ko": "지진"
+        },
+        {
+          "es": "tsunami",
+          "ko": "쓰나미"
+        },
+        {
+          "es": "inundación",
+          "ko": "홍수"
+        },
+        {
+          "es": "erupción",
+          "ko": "분화"
+        },
+        {
+          "es": "avalancha",
+          "ko": "눈사태"
+        },
+        {
+          "es": "incendio forestal",
+          "ko": "산불"
+        },
+        {
+          "es": "deslizamiento",
+          "ko": "산사태"
+        },
+        {
+          "es": "sequía extrema",
+          "ko": "극심한 가뭄"
+        },
+        {
+          "es": "maremoto",
+          "ko": "해일"
+        },
+        {
+          "es": "onda expansiva",
+          "ko": "충격파"
+        },
+        {
+          "es": "réplica",
+          "ko": "여진"
+        },
+        {
+          "es": "epicentro",
+          "ko": "진앙"
+        },
+        {
+          "es": "magnitud",
+          "ko": "규모"
+        },
+        {
+          "es": "evacuación",
+          "ko": "대피"
+        },
+        {
+          "es": "alerta",
+          "ko": "경보"
+        },
+        {
+          "es": "granja",
+          "ko": "농장"
+        },
+        {
+          "es": "cosecha",
+          "ko": "수확"
+        },
+        {
+          "es": "trigo",
+          "ko": "밀"
+        },
+        {
+          "es": "arroz",
+          "ko": "쌀"
+        },
+        {
+          "es": "campo",
+          "ko": "밭"
+        },
+        {
+          "es": "riego",
+          "ko": "관개"
+        },
+        {
+          "es": "fertilizante",
+          "ko": "비료"
+        },
+        {
+          "es": "arado",
+          "ko": "쟁기"
+        },
+        {
+          "es": "ganado",
+          "ko": "가축"
+        },
+        {
+          "es": "invernadero",
+          "ko": "온실"
+        },
+        {
+          "es": "huerto",
+          "ko": "과수원"
+        },
+        {
+          "es": "pastoreo",
+          "ko": "목축"
+        },
+        {
+          "es": "siembra",
+          "ko": "파종"
+        },
+        {
+          "es": "abono",
+          "ko": "거름"
+        },
+        {
+          "es": "agricultor",
+          "ko": "농부"
+        },
+        {
+          "es": "florecer",
+          "ko": "피다"
+        },
+        {
+          "es": "crecer",
+          "ko": "자라다"
+        },
+        {
+          "es": "llover",
+          "ko": "비가 오다"
+        },
+        {
+          "es": "nevar",
+          "ko": "눈이 오다"
+        },
+        {
+          "es": "soplar",
+          "ko": "불다"
+        },
+        {
+          "es": "brillar",
+          "ko": "빛나다"
+        },
+        {
+          "es": "nadar",
+          "ko": "수영하다"
+        },
+        {
+          "es": "volar",
+          "ko": "날다"
+        },
+        {
+          "es": "plantar",
+          "ko": "심다"
+        },
+        {
+          "es": "cosechar",
+          "ko": "수확하다"
+        },
+        {
+          "es": "regar",
+          "ko": "물을 주다"
+        },
+        {
+          "es": "derretir",
+          "ko": "녹다"
+        },
+        {
+          "es": "congelar",
+          "ko": "얼다"
+        },
+        {
+          "es": "brotar",
+          "ko": "싹트다"
+        },
+        {
+          "es": "migrar",
+          "ko": "이동하다"
+        }
       ]
     }
-  ]
+  ],
+  "episodeStructure": {
+    "episodes": 3,
+    "learningStagesPerEpisode": 10,
+    "bossStageInterval": 11,
+    "newWordsPerLearningStage": 10,
+    "newWordsPerEpisode": 100
+  }
 }

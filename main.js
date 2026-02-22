@@ -310,9 +310,13 @@ const App = {
         const world = getWorldConfig(worldId);
         if (this.elements.modalTitle) {
             const category = WordManager.getStageCategory(worldId, stageNum);
-            this.elements.modalTitle.textContent = WordManager.isReviewStage(worldId, stageNum)
-                ? `Stage ${worldId}-${stageNum} · Review`
-                : `Stage ${worldId}-${stageNum} · ${category}`;
+            if (WordManager.isBossStage(worldId, stageNum)) {
+                this.elements.modalTitle.textContent = `Stage ${worldId}-${stageNum} · BOSS · ${category}`;
+            } else if (WordManager.isReviewStage(worldId, stageNum)) {
+                this.elements.modalTitle.textContent = `Stage ${worldId}-${stageNum} · Review`;
+            } else {
+                this.elements.modalTitle.textContent = `Stage ${worldId}-${stageNum} · ${category}`;
+            }
         }
         
         // 복습 스테이지 표시
