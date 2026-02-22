@@ -344,28 +344,47 @@ const StageMap = {
      */
     render: function() {
         const ctx = this.ctx;
+        const W = CONFIG.CANVAS.WIDTH;
+        const H = CONFIG.CANVAS.HEIGHT;
         const world = getWorldConfig(this.currentWorldId);
-        
-        // 배경 클리어
-        ctx.fillStyle = '#0d0d1a';
-        ctx.fillRect(0, 0, CONFIG.CANVAS.WIDTH, CONFIG.CANVAS.HEIGHT);
-        
+
+        // 배경 그라데이션
+        const bgGrad = ctx.createLinearGradient(0, 0, 0, H);
+        bgGrad.addColorStop(0, '#080b1a');
+        bgGrad.addColorStop(0.5, '#0f172a');
+        bgGrad.addColorStop(1, '#111827');
+        ctx.fillStyle = bgGrad;
+        ctx.fillRect(0, 0, W, H);
+
         // 스크롤 변환 적용
         ctx.save();
         ctx.translate(0, -this.scrollY);
-        
+
         // 경로 그리기
         this.renderPaths();
-        
+
         // 노드 그리기
         this.renderNodes();
-        
+
         // 변환 복원
         ctx.restore();
-        
+
+        // 상하 페이드 (위쪽)
+        const topFade = ctx.createLinearGradient(0, 0, 0, 80);
+        topFade.addColorStop(0, '#080b1a');
+        topFade.addColorStop(1, 'rgba(8, 11, 26, 0)');
+        ctx.fillStyle = topFade;
+        ctx.fillRect(0, 0, W, 80);
+
+        // 상하 페이드 (아래쪽)
+        const botFade = ctx.createLinearGradient(0, H - 40, 0, H);
+        botFade.addColorStop(0, 'rgba(8, 11, 26, 0)');
+        botFade.addColorStop(1, '#080b1a');
+        ctx.fillStyle = botFade;
+        ctx.fillRect(0, H - 40, W, 40);
+
         // 월드 헤더 (고정 위치)
         this.renderWorldHeader(world);
-        
     },
     
     /**
@@ -373,34 +392,69 @@ const StageMap = {
      */
     renderPaths: function() {
         const ctx = this.ctx;
-        
+
         // 노드가 2개 미만이면 경로 없음
         if (this.nodePositions.length < 2) return;
-        
-        ctx.strokeStyle = CONFIG.MAP.PATH_COLOR;
+
+        // 배경 경로 (어둡게)
+        ctx.strokeStyle = 'rgba(255, 255, 255, 0.04)';
+        ctx.lineWidth = CONFIG.MAP.PATH_WIDTH + 6;
+        ctx.lineCap = 'round';
+        ctx.lineJoin = 'round';
+        this._drawPathCurve(ctx);
+        ctx.stroke();
+
+        // 메인 경로
+        ctx.strokeStyle = 'rgba(255, 255, 255, 0.08)';
         ctx.lineWidth = CONFIG.MAP.PATH_WIDTH;
         ctx.lineCap = 'round';
         ctx.lineJoin = 'round';
-        
-        // 경로 그리기 (베지어 곡선)
+        this._drawPathCurve(ctx);
+        ctx.stroke();
+
+        // 클리어된 구간은 accent 색상으로 오버레이
+        const world = getWorldConfig(this.currentWorldId);
+        if (world) {
+            let lastClearedIdx = -1;
+            for (let i = 0; i < this.nodePositions.length; i++) {
+                const stageId = getStageId(this.nodePositions[i].worldId, this.nodePositions[i].stageNum);
+                const result = Storage.getStageResult(stageId);
+                if (result && result.stars > 0) {
+                    lastClearedIdx = i;
+                }
+            }
+            if (lastClearedIdx >= 0) {
+                ctx.save();
+                ctx.strokeStyle = world.color + '40'; // 25% opacity
+                ctx.lineWidth = CONFIG.MAP.PATH_WIDTH;
+                ctx.lineCap = 'round';
+                // 클리어된 구간만 그리기
+                ctx.beginPath();
+                ctx.moveTo(this.nodePositions[0].x, this.nodePositions[0].y);
+                for (let i = 1; i <= lastClearedIdx; i++) {
+                    const prev = this.nodePositions[i - 1];
+                    const curr = this.nodePositions[i];
+                    const midY = (prev.y + curr.y) / 2;
+                    ctx.bezierCurveTo(prev.x, midY, curr.x, midY, curr.x, curr.y);
+                }
+                ctx.stroke();
+                ctx.restore();
+            }
+        }
+    },
+
+    /**
+     * 경로 곡선 헬퍼
+     */
+    _drawPathCurve: function(ctx) {
         ctx.beginPath();
         ctx.moveTo(this.nodePositions[0].x, this.nodePositions[0].y);
-        
         for (let i = 1; i < this.nodePositions.length; i++) {
             const prev = this.nodePositions[i - 1];
             const curr = this.nodePositions[i];
-            
-            // 제어점 계산 (부드러운 곡선을 위해)
             const midY = (prev.y + curr.y) / 2;
-            
-            ctx.bezierCurveTo(
-                prev.x, midY,
-                curr.x, midY,
-                curr.x, curr.y
-            );
+            ctx.bezierCurveTo(prev.x, midY, curr.x, midY, curr.x, curr.y);
         }
-        
-        ctx.stroke();
     },
     
     /**
@@ -409,77 +463,104 @@ const StageMap = {
     renderNodes: function() {
         const ctx = this.ctx;
         const world = getWorldConfig(this.currentWorldId);
-        
+
         this.nodePositions.forEach(node => {
-            // 잠금 상태 확인
             const isUnlocked = Storage.isStageUnlocked(node.worldId, node.stageNum);
-            
-            // 클리어 정보 가져오기
             const stageId = getStageId(node.worldId, node.stageNum);
             const result = Storage.getStageResult(stageId);
             const isReview = WordManager.isReviewStage(node.worldId, node.stageNum);
-            
-            // 현재 진행 위치인지 확인
             const progress = Storage.getCurrentProgress();
-            const isCurrent = progress.worldId === node.worldId && 
+            const isCurrent = progress.worldId === node.worldId &&
                              progress.stageNum === node.stageNum;
-            
+
             // 노드 색상 결정
-            let nodeColor;
+            let nodeColor, borderColor, textColor;
             if (!isUnlocked) {
-                nodeColor = CONFIG.MAP.LOCKED_COLOR;
+                nodeColor = '#1e293b';
+                borderColor = '#334155';
+                textColor = '#475569';
             } else if (isCurrent) {
-                nodeColor = CONFIG.MAP.CURRENT_COLOR;
-            } else if (result) {
+                nodeColor = '#fbbf24';
+                borderColor = '#fde68a';
+                textColor = '#1e1b0e';
+            } else if (result && result.stars > 0) {
                 nodeColor = world.color;
+                borderColor = world.color + 'cc';
+                textColor = '#ffffff';
             } else {
-                nodeColor = CONFIG.MAP.UNLOCKED_COLOR;
+                nodeColor = '#334155';
+                borderColor = '#94a3b8';
+                textColor = '#f1f5f9';
             }
-            
-            // 노드 원 그리기
+
+            // 현재 위치 글로우
+            if (isCurrent) {
+                ctx.save();
+                ctx.beginPath();
+                ctx.arc(node.x, node.y, node.radius + 10, 0, Math.PI * 2);
+                const glow = ctx.createRadialGradient(node.x, node.y, node.radius, node.x, node.y, node.radius + 12);
+                glow.addColorStop(0, 'rgba(251, 191, 36, 0.25)');
+                glow.addColorStop(1, 'rgba(251, 191, 36, 0)');
+                ctx.fillStyle = glow;
+                ctx.fill();
+                ctx.restore();
+            }
+
+            // 클리어된 노드 글로우
+            if (result && result.stars > 0 && !isCurrent) {
+                ctx.save();
+                ctx.beginPath();
+                ctx.arc(node.x, node.y, node.radius + 6, 0, Math.PI * 2);
+                const glow = ctx.createRadialGradient(node.x, node.y, node.radius - 2, node.x, node.y, node.radius + 6);
+                glow.addColorStop(0, world.color + '20');
+                glow.addColorStop(1, world.color + '00');
+                ctx.fillStyle = glow;
+                ctx.fill();
+                ctx.restore();
+            }
+
+            // 노드 원 (그라데이션)
             ctx.beginPath();
             ctx.arc(node.x, node.y, node.radius, 0, Math.PI * 2);
-            ctx.fillStyle = nodeColor;
-            ctx.fill();
-            
-            // 테두리 (복습 스테이지는 빨간 테두리)
-            if (isReview && isUnlocked) {
-                ctx.strokeStyle = '#ff6b6b';
-                ctx.lineWidth = 3;
+            if (isUnlocked) {
+                const nodeGrad = ctx.createLinearGradient(node.x, node.y - node.radius, node.x, node.y + node.radius);
+                nodeGrad.addColorStop(0, nodeColor);
+                nodeGrad.addColorStop(1, this._darkenColor(nodeColor, 0.2));
+                ctx.fillStyle = nodeGrad;
             } else {
-                ctx.strokeStyle = isUnlocked ? '#ffffff' : '#333333';
+                ctx.fillStyle = nodeColor;
+            }
+            ctx.fill();
+
+            // 테두리
+            if (isReview && isUnlocked) {
+                ctx.strokeStyle = '#ef4444';
+                ctx.lineWidth = 2.5;
+            } else {
+                ctx.strokeStyle = borderColor;
                 ctx.lineWidth = 2;
             }
             ctx.stroke();
-            
-            // 현재 위치 강조 (펄스 효과)
-            if (isCurrent) {
-                ctx.beginPath();
-                ctx.arc(node.x, node.y, node.radius + 5, 0, Math.PI * 2);
-                ctx.strokeStyle = 'rgba(255, 215, 0, 0.5)';
-                ctx.lineWidth = 3;
-                ctx.stroke();
-            }
-            
+
             // 스테이지 번호 텍스트
-            ctx.font = 'bold 16px sans-serif';
-            ctx.fillStyle = isUnlocked ? '#000000' : '#666666';
+            ctx.font = `bold 15px ${CONFIG.RENDER.FONT_FAMILY}`;
+            ctx.fillStyle = textColor;
             ctx.textAlign = 'center';
             ctx.textBaseline = 'middle';
             ctx.fillText(node.stageNum.toString(), node.x, node.y);
-            
+
             // 별점 표시 (클리어한 경우)
             if (result && result.stars > 0) {
-                this.renderStars(node.x, node.y + node.radius + 15, result.stars);
+                this.renderStars(node.x, node.y + node.radius + 14, result.stars);
             }
-            
+
             // 잠금 아이콘 (잠긴 경우)
             if (!isUnlocked) {
                 this.renderLockIcon(node.x, node.y - node.radius - 10);
             }
-            
+
             // 복습 스테이지 표시
-            if (WordManager.isReviewStage(node.worldId, node.stageNum) && isUnlocked) {
+            if (isReview && isUnlocked) {
                 this.renderReviewBadge(node.x + node.radius, node.y - node.radius);
             }
 
@@ -492,36 +573,78 @@ const StageMap = {
                     ? '복습 스테이지'
                     : WordManager.getStageCategory(node.worldId, node.stageNum);
 
-                ctx.font = '11px sans-serif';
-                ctx.fillStyle = isReview ? '#ff6b6b' : (isUnlocked ? '#888888' : '#555555');
+                ctx.font = `11px ${CONFIG.RENDER.FONT_FAMILY}`;
+                ctx.fillStyle = isReview ? '#fca5a5' : (isUnlocked ? '#64748b' : '#334155');
                 ctx.textAlign = 'center';
                 ctx.fillText(categoryLabel, node.x, labelY);
             }
         });
     },
+
+    /**
+     * 색상 어둡게 만들기 헬퍼
+     */
+    _darkenColor: function(hex, amount) {
+        hex = hex.replace('#', '');
+        if (hex.length === 3) hex = hex[0]+hex[0]+hex[1]+hex[1]+hex[2]+hex[2];
+        const r = Math.max(0, parseInt(hex.substr(0, 2), 16) * (1 - amount));
+        const g = Math.max(0, parseInt(hex.substr(2, 2), 16) * (1 - amount));
+        const b = Math.max(0, parseInt(hex.substr(4, 2), 16) * (1 - amount));
+        return `rgb(${Math.round(r)}, ${Math.round(g)}, ${Math.round(b)})`;
+    },
     
     /**
-     * 별점 렌더링
+     * 별점 렌더링 (실제 별 모양)
      * @param {number} x - 중심 X 좌표
      * @param {number} y - Y 좌표
      * @param {number} stars - 별 개수 (1-3)
      */
     renderStars: function(x, y, stars) {
         const ctx = this.ctx;
-        const starSize = 8;
-        const gap = 12;
+        const size = 5;
+        const gap = 13;
         const startX = x - gap;
-        
+
         for (let i = 0; i < 3; i++) {
             const starX = startX + i * gap;
             const isFilled = i < stars;
-            
-            // 별 그리기 (간단한 원으로 대체)
-            ctx.beginPath();
-            ctx.arc(starX, y, starSize / 2, 0, Math.PI * 2);
-            ctx.fillStyle = isFilled ? '#ffd700' : '#333333';
-            ctx.fill();
+
+            this._drawStar(ctx, starX, y, size, 5);
+
+            if (isFilled) {
+                ctx.fillStyle = '#fbbf24';
+                ctx.fill();
+                // 글로우
+                ctx.shadowColor = 'rgba(251, 191, 36, 0.6)';
+                ctx.shadowBlur = 4;
+                ctx.fill();
+                ctx.shadowColor = 'transparent';
+                ctx.shadowBlur = 0;
+            } else {
+                ctx.fillStyle = '#1e293b';
+                ctx.fill();
+                ctx.strokeStyle = '#334155';
+                ctx.lineWidth = 1;
+                ctx.stroke();
+            }
         }
+    },
+
+    /**
+     * 별 모양 경로 헬퍼
+     */
+    _drawStar: function(ctx, cx, cy, radius, points) {
+        const inner = radius * 0.45;
+        ctx.beginPath();
+        for (let i = 0; i < points * 2; i++) {
+            const r = i % 2 === 0 ? radius : inner;
+            const angle = (Math.PI / points) * i - Math.PI / 2;
+            const x = cx + Math.cos(angle) * r;
+            const y = cy + Math.sin(angle) * r;
+            if (i === 0) ctx.moveTo(x, y);
+            else ctx.lineTo(x, y);
+        }
+        ctx.closePath();
     },
     
     /**
@@ -531,15 +654,28 @@ const StageMap = {
      */
     renderLockIcon: function(x, y) {
         const ctx = this.ctx;
-        
-        // 간단한 자물쇠 모양
-        ctx.fillStyle = '#666666';
-        ctx.fillRect(x - 5, y - 3, 10, 8);
-        
+        const bodyW = 10, bodyH = 7, bodyR = 2;
+        const bx = x - bodyW / 2, by = y - 2;
+
+        // 자물쇠 몸통 (둥근 사각형)
         ctx.beginPath();
-        ctx.arc(x, y - 5, 5, Math.PI, 0);
-        ctx.strokeStyle = '#666666';
+        ctx.moveTo(bx + bodyR, by);
+        ctx.lineTo(bx + bodyW - bodyR, by);
+        ctx.arcTo(bx + bodyW, by, bx + bodyW, by + bodyR, bodyR);
+        ctx.arcTo(bx + bodyW, by + bodyH, bx + bodyW - bodyR, by + bodyH, bodyR);
+        ctx.lineTo(bx + bodyR, by + bodyH);
+        ctx.arcTo(bx, by + bodyH, bx, by + bodyR, bodyR);
+        ctx.arcTo(bx, by, bx + bodyR, by, bodyR);
+        ctx.closePath();
+        ctx.fillStyle = '#475569';
+        ctx.fill();
+
+        // 자물쇠 고리
+        ctx.beginPath();
+        ctx.arc(x, y - 3, 4.5, Math.PI, 0);
+        ctx.strokeStyle = '#475569';
         ctx.lineWidth = 2;
+        ctx.lineCap = 'round';
         ctx.stroke();
     },
     
@@ -551,16 +687,19 @@ const StageMap = {
     renderReviewBadge: function(x, y) {
         const ctx = this.ctx;
 
-        // R 배지 (더 크게)
+        // R 배지
         ctx.beginPath();
-        ctx.arc(x, y, 11, 0, Math.PI * 2);
-        ctx.fillStyle = '#ff6b6b';
+        ctx.arc(x, y, 10, 0, Math.PI * 2);
+        const badgeGrad = ctx.createLinearGradient(x, y - 10, x, y + 10);
+        badgeGrad.addColorStop(0, '#ef4444');
+        badgeGrad.addColorStop(1, '#dc2626');
+        ctx.fillStyle = badgeGrad;
         ctx.fill();
-        ctx.strokeStyle = '#ffffff';
-        ctx.lineWidth = 1.5;
+        ctx.strokeStyle = 'rgba(255, 255, 255, 0.3)';
+        ctx.lineWidth = 1;
         ctx.stroke();
 
-        ctx.font = 'bold 12px sans-serif';
+        ctx.font = `bold 11px ${CONFIG.RENDER.FONT_FAMILY}`;
         ctx.fillStyle = '#ffffff';
         ctx.textAlign = 'center';
         ctx.textBaseline = 'middle';
@@ -573,51 +712,62 @@ const StageMap = {
      */
     renderWorldHeader: function(world) {
         const ctx = this.ctx;
-        
-        // 헤더 배경
-        const gradient = ctx.createLinearGradient(0, 0, 0, 60);
-        gradient.addColorStop(0, 'rgba(13, 13, 26, 1)');
-        gradient.addColorStop(1, 'rgba(13, 13, 26, 0)');
-        ctx.fillStyle = gradient;
-        ctx.fillRect(0, 0, CONFIG.CANVAS.WIDTH, 60);
-        
+        const W = CONFIG.CANVAS.WIDTH;
+
         // 월드 이름
-        ctx.font = 'bold 24px sans-serif';
+        ctx.font = `bold 22px ${CONFIG.RENDER.FONT_FAMILY}`;
         ctx.fillStyle = world.color;
         ctx.textAlign = 'center';
         ctx.textBaseline = 'middle';
-        ctx.fillText(`World ${world.id}: ${world.name}`, CONFIG.CANVAS.WIDTH / 2, 30);
-        
+        ctx.fillText(`World ${world.id}: ${world.name}`, W / 2, 28);
+
         // 한국어 부제
-        ctx.font = '14px sans-serif';
-        ctx.fillStyle = '#888888';
-        ctx.fillText(world.nameKo, CONFIG.CANVAS.WIDTH / 2, 50);
-        
-        // 이전/다음 월드 화살표 (큰 버튼)
+        ctx.font = `13px ${CONFIG.RENDER.FONT_FAMILY}`;
+        ctx.fillStyle = '#64748b';
+        ctx.fillText(world.nameKo, W / 2, 48);
+
+        // 이전/다음 월드 화살표
+        const arrowY = 32;
+
         if (this.currentWorldId > 1) {
             // 배경 원
             ctx.beginPath();
-            ctx.arc(35, 30, 22, 0, Math.PI * 2);
-            ctx.fillStyle = 'rgba(255, 255, 255, 0.1)';
+            ctx.arc(35, arrowY, 20, 0, Math.PI * 2);
+            ctx.fillStyle = 'rgba(255, 255, 255, 0.06)';
             ctx.fill();
-            ctx.font = 'bold 28px sans-serif';
-            ctx.fillStyle = '#ffffff';
-            ctx.textAlign = 'center';
-            ctx.textBaseline = 'middle';
-            ctx.fillText('<', 35, 30);
+            ctx.strokeStyle = 'rgba(255, 255, 255, 0.1)';
+            ctx.lineWidth = 1;
+            ctx.stroke();
+            // 화살표
+            ctx.beginPath();
+            ctx.moveTo(40, arrowY - 7);
+            ctx.lineTo(30, arrowY);
+            ctx.lineTo(40, arrowY + 7);
+            ctx.strokeStyle = '#94a3b8';
+            ctx.lineWidth = 2;
+            ctx.lineCap = 'round';
+            ctx.lineJoin = 'round';
+            ctx.stroke();
         }
 
         if (this.currentWorldId < CONFIG.WORLDS.length) {
-            // 배경 원
             ctx.beginPath();
-            ctx.arc(CONFIG.CANVAS.WIDTH - 35, 30, 22, 0, Math.PI * 2);
-            ctx.fillStyle = 'rgba(255, 255, 255, 0.1)';
+            ctx.arc(W - 35, arrowY, 20, 0, Math.PI * 2);
+            ctx.fillStyle = 'rgba(255, 255, 255, 0.06)';
             ctx.fill();
-            ctx.font = 'bold 28px sans-serif';
-            ctx.fillStyle = '#ffffff';
-            ctx.textAlign = 'center';
-            ctx.textBaseline = 'middle';
-            ctx.fillText('>', CONFIG.CANVAS.WIDTH - 35, 30);
+            ctx.strokeStyle = 'rgba(255, 255, 255, 0.1)';
+            ctx.lineWidth = 1;
+            ctx.stroke();
+            // 화살표
+            ctx.beginPath();
+            ctx.moveTo(W - 40, arrowY - 7);
+            ctx.lineTo(W - 30, arrowY);
+            ctx.lineTo(W - 40, arrowY + 7);
+            ctx.strokeStyle = '#94a3b8';
+            ctx.lineWidth = 2;
+            ctx.lineCap = 'round';
+            ctx.lineJoin = 'round';
+            ctx.stroke();
         }
     },
 };
