@@ -1,62 +1,35 @@
 /**
  * stage-map.js
  * 보드게임 스타일 스테이지 맵 UI
- * 각 칸이 스테이지인 보드게임 형태 렌더링
+ * 외곽선을 따라 타일이 배치되고, 가운데에 월드 주제가 표시됨
  */
 
 const StageMap = {
-    // =========================================
-    // 캔버스 및 컨텍스트
-    // =========================================
-
     /** @type {HTMLCanvasElement} */
     canvas: null,
-
     /** @type {CanvasRenderingContext2D} */
     ctx: null,
 
-    // =========================================
-    // 상태
-    // =========================================
-
-    /** @type {number} 현재 표시 중인 월드 ID */
     currentWorldId: 1,
-
-    /** @type {number} 스크롤 오프셋 (Y) */
     scrollY: 0,
-
-    /** @type {number} 최대 스크롤 값 */
     maxScrollY: 0,
-
-    /** @type {Array<Object>} 계산된 타일 위치들 */
     tilePositions: [],
-
-    /** @type {number} 현재 호버 중인 타일 인덱스 (-1이면 없음) */
     hoveredTileIdx: -1,
 
-    // =========================================
-    // 콜백
-    // =========================================
+    /** @type {{startX:number, startY:number, boardW:number, boardH:number, innerX:number, innerY:number, innerW:number, innerH:number}|null} */
+    boardInfo: null,
 
-    /** @type {Function|null} 스테이지 선택 콜백 */
     onStageSelect: null,
-
-    /** @type {Function|null} 월드 변경 콜백 */
     onWorldChange: null,
 
     // =========================================
     // 초기화
     // =========================================
 
-    /**
-     * 맵 초기화
-     * @param {HTMLCanvasElement} canvas - 맵 캔버스 요소
-     */
     init: function(canvas) {
         this.canvas = canvas;
         this.ctx = canvas.getContext('2d');
 
-        // HiDPI 캔버스 설정
         const dpr = window.devicePixelRatio || 1;
         this.canvas.width = CONFIG.CANVAS.WIDTH * dpr;
         this.canvas.height = CONFIG.CANVAS.HEIGHT * dpr;
@@ -65,49 +38,82 @@ const StageMap = {
         this.setupEventListeners();
         this.calculateTilePositions();
 
-        console.log('StageMap: 보드게임 맵 초기화 완료 (DPR:', dpr + ')');
+        console.log('StageMap: 보드게임 맵 초기화 완료');
     },
 
-    /**
-     * 이벤트 리스너 설정
-     */
     setupEventListeners: function() {
-        this.canvas.addEventListener('click', (e) => {
-            this.handleClick(e);
-        });
-
-        this.canvas.addEventListener('mousemove', (e) => {
-            this.handleMouseMove(e);
-        });
-
+        this.canvas.addEventListener('click', (e) => this.handleClick(e));
+        this.canvas.addEventListener('mousemove', (e) => this.handleMouseMove(e));
         this.canvas.addEventListener('wheel', (e) => {
             e.preventDefault();
             this.handleScroll(e.deltaY);
         });
 
-        // 터치 스크롤 (모바일)
         let touchStartY = 0;
-
         this.canvas.addEventListener('touchstart', (e) => {
             touchStartY = e.touches[0].clientY;
         });
-
         this.canvas.addEventListener('touchmove', (e) => {
             e.preventDefault();
             const touchY = e.touches[0].clientY;
-            const deltaY = touchStartY - touchY;
-            this.handleScroll(deltaY);
+            this.handleScroll(touchStartY - touchY);
             touchStartY = touchY;
         });
     },
 
     // =========================================
-    // 타일 위치 계산
+    // 타일 위치 계산 (외곽 경로 레이아웃)
     // =========================================
 
     /**
-     * 보드게임 타일 위치 계산 (뱀 형태 보드게임 레이아웃)
+     * 보드게임 외곽 경로를 생성한다.
+     * 시계방향: 하단(좌→우) → 우측(하→상) → 상단(우→좌) → 좌측(상→하)
+     * 외곽이 부족하면 안쪽으로 한 바퀴 더 돈다.
      */
+    _generateBoardPath: function(cols, rows, totalNeeded) {
+        const path = [];
+
+        // --- 외곽 한 바퀴 ---
+        // 하단: 좌→우
+        for (let c = 0; c < cols; c++) {
+            path.push({ col: c, row: rows - 1 });
+        }
+        // 우측: 하→상 (하단 우측 모서리 제외)
+        for (let r = rows - 2; r >= 0; r--) {
+            path.push({ col: cols - 1, row: r });
+        }
+        // 상단: 우→좌 (상단 우측 모서리 제외)
+        for (let c = cols - 2; c >= 0; c--) {
+            path.push({ col: c, row: 0 });
+        }
+        // 좌측: 상→하 (양 모서리 제외)
+        for (let r = 1; r < rows - 1; r++) {
+            path.push({ col: 0, row: r });
+        }
+
+        // --- 외곽으로 부족하면 안쪽 한 바퀴 ---
+        if (path.length < totalNeeded && cols > 2 && rows > 2) {
+            // 안쪽 하단: 좌→우
+            for (let c = 1; c < cols - 1 && path.length < totalNeeded; c++) {
+                path.push({ col: c, row: rows - 2 });
+            }
+            // 안쪽 우측: 하→상
+            for (let r = rows - 3; r >= 1 && path.length < totalNeeded; r--) {
+                path.push({ col: cols - 2, row: r });
+            }
+            // 안쪽 상단: 우→좌
+            for (let c = cols - 3; c >= 1 && path.length < totalNeeded; c--) {
+                path.push({ col: c, row: 1 });
+            }
+            // 안쪽 좌측: 상→하
+            for (let r = 2; r < rows - 2 && path.length < totalNeeded; r++) {
+                path.push({ col: 1, row: r });
+            }
+        }
+
+        return path;
+    },
+
     calculateTilePositions: function() {
         this.tilePositions = [];
 
@@ -115,39 +121,50 @@ const StageMap = {
         if (!world) return;
 
         const totalStages = world.stages;
-        const cols = CONFIG.MAP.COLS;
         const tileSize = CONFIG.MAP.TILE_SIZE;
         const gap = CONFIG.MAP.TILE_GAP;
+        const step = tileSize + gap;
+        const cols = CONFIG.MAP.BOARD_COLS;
+        const rows = CONFIG.MAP.BOARD_ROWS;
         const topY = CONFIG.MAP.TOP_Y;
 
-        const totalBoardWidth = cols * tileSize + (cols - 1) * gap;
-        const startX = (CONFIG.CANVAS.WIDTH - totalBoardWidth) / 2;
+        const boardW = cols * step - gap;
+        const boardH = rows * step - gap;
+        const startX = (CONFIG.CANVAS.WIDTH - boardW) / 2;
+        const startY = topY;
 
-        for (let i = 0; i < totalStages; i++) {
-            const row = Math.floor(i / cols);
-            const col = i % cols;
-            const isReversed = row % 2 !== 0;
-            const actualCol = isReversed ? (cols - 1 - col) : col;
+        // 외곽 경로 생성
+        const path = this._generateBoardPath(cols, rows, totalStages);
 
-            const x = startX + actualCol * (tileSize + gap);
-            const y = topY + row * (tileSize + gap);
-
-            // 타일 색상 할당 (순환 팔레트)
-            const colorIdx = i % CONFIG.MAP.TILE_COLORS.length;
-
+        // 타일 배치
+        for (let i = 0; i < Math.min(totalStages, path.length); i++) {
+            const pos = path[i];
             this.tilePositions.push({
                 worldId: this.currentWorldId,
                 stageNum: i + 1,
-                x: x,
-                y: y,
+                x: startX + pos.col * step,
+                y: startY + pos.row * step,
                 width: tileSize,
                 height: tileSize,
-                colorIdx: colorIdx
+                colorIdx: i % CONFIG.MAP.TILE_COLORS.length
             });
         }
 
-        const rows = Math.ceil(totalStages / cols);
-        const contentHeight = topY + rows * (tileSize + gap) + 60;
+        // 보드 정보 (중앙 영역 렌더링용)
+        this.boardInfo = {
+            startX: startX,
+            startY: startY,
+            boardW: boardW,
+            boardH: boardH,
+            // 외곽 안쪽 영역
+            innerX: startX + step,
+            innerY: startY + step,
+            innerW: (cols - 2) * step - gap,
+            innerH: (rows - 2) * step - gap
+        };
+
+        // 스크롤
+        const contentHeight = startY + boardH + 40;
         this.maxScrollY = Math.max(0, contentHeight - CONFIG.CANVAS.HEIGHT);
         this.scrollY = Math.min(this.scrollY, this.maxScrollY);
     },
@@ -156,59 +173,35 @@ const StageMap = {
     // 이벤트 처리
     // =========================================
 
-    /**
-     * CSS 좌표를 논리 좌표로 변환
-     */
     _toLogical: function(e) {
         const rect = this.canvas.getBoundingClientRect();
-        const scaleX = CONFIG.CANVAS.WIDTH / rect.width;
-        const scaleY = CONFIG.CANVAS.HEIGHT / rect.height;
         return {
-            x: (e.clientX - rect.left) * scaleX,
-            y: (e.clientY - rect.top) * scaleY
+            x: (e.clientX - rect.left) * (CONFIG.CANVAS.WIDTH / rect.width),
+            y: (e.clientY - rect.top) * (CONFIG.CANVAS.HEIGHT / rect.height)
         };
     },
 
-    /**
-     * 클릭 이벤트 처리
-     */
     handleClick: function(e) {
         const { x, y } = this._toLogical(e);
 
-        // 월드 전환 화살표 체크 (헤더 영역, 고정)
+        // 월드 전환 화살표
         if (y < 70) {
-            if (x < 65 && this.currentWorldId > 1) {
-                this.prevWorld();
-                return;
-            }
-            if (x > CONFIG.CANVAS.WIDTH - 65 && this.currentWorldId < CONFIG.WORLDS.length) {
-                this.nextWorld();
-                return;
-            }
+            if (x < 65 && this.currentWorldId > 1) { this.prevWorld(); return; }
+            if (x > CONFIG.CANVAS.WIDTH - 65 && this.currentWorldId < CONFIG.WORLDS.length) { this.nextWorld(); return; }
         }
 
-        // 스크롤 적용된 좌표 (Y만 스크롤 적용)
         const sy = y + this.scrollY;
-
-        const clicked = this.tilePositions.find(tile => {
-            return x >= tile.x && x <= tile.x + tile.width &&
-                   sy >= tile.y && sy <= tile.y + tile.height;
-        });
-
-        if (clicked) {
-            this.handleTileClick(clicked);
-        }
+        const clicked = this.tilePositions.find(t =>
+            x >= t.x && x <= t.x + t.width && sy >= t.y && sy <= t.y + t.height
+        );
+        if (clicked) this.handleTileClick(clicked);
     },
 
-    /**
-     * 마우스 이동 처리
-     */
     handleMouseMove: function(e) {
         const { x, y } = this._toLogical(e);
         let isOverClickable = false;
         let newHoveredIdx = -1;
 
-        // 월드 전환 화살표 체크
         if (y < 70) {
             if (x < 65 && this.currentWorldId > 1) isOverClickable = true;
             if (x > CONFIG.CANVAS.WIDTH - 65 && this.currentWorldId < CONFIG.WORLDS.length) isOverClickable = true;
@@ -216,10 +209,9 @@ const StageMap = {
 
         if (!isOverClickable) {
             const sy = y + this.scrollY;
-            this.tilePositions.forEach((tile, idx) => {
-                if (x >= tile.x && x <= tile.x + tile.width &&
-                    sy >= tile.y && sy <= tile.y + tile.height) {
-                    if (Storage.isStageUnlocked(tile.worldId, tile.stageNum)) {
+            this.tilePositions.forEach((t, idx) => {
+                if (x >= t.x && x <= t.x + t.width && sy >= t.y && sy <= t.y + t.height) {
+                    if (Storage.isStageUnlocked(t.worldId, t.stageNum)) {
                         isOverClickable = true;
                         newHoveredIdx = idx;
                     }
@@ -231,32 +223,17 @@ const StageMap = {
             this.hoveredTileIdx = newHoveredIdx;
             this.render();
         }
-
         this.canvas.style.cursor = isOverClickable ? 'pointer' : 'default';
     },
 
-    /**
-     * 타일 클릭 처리
-     */
     handleTileClick: function(tile) {
-        const isUnlocked = Storage.isStageUnlocked(tile.worldId, tile.stageNum);
-
-        if (isUnlocked) {
-            console.log(`StageMap: 스테이지 ${tile.worldId}-${tile.stageNum} 선택`);
-            if (this.onStageSelect) {
-                this.onStageSelect(tile.worldId, tile.stageNum);
-            }
-        } else {
-            console.log(`StageMap: 스테이지 ${tile.worldId}-${tile.stageNum} 잠김`);
+        if (Storage.isStageUnlocked(tile.worldId, tile.stageNum)) {
+            if (this.onStageSelect) this.onStageSelect(tile.worldId, tile.stageNum);
         }
     },
 
-    /**
-     * 스크롤 처리
-     */
     handleScroll: function(deltaY) {
-        this.scrollY += deltaY * 0.5;
-        this.scrollY = Math.max(0, Math.min(this.scrollY, this.maxScrollY));
+        this.scrollY = Math.max(0, Math.min(this.scrollY + deltaY * 0.5, this.maxScrollY));
         this.render();
     },
 
@@ -265,95 +242,63 @@ const StageMap = {
     // =========================================
 
     setWorld: function(worldId) {
-        const world = getWorldConfig(worldId);
-        if (!world) return;
-
+        if (!getWorldConfig(worldId)) return;
         this.currentWorldId = worldId;
         this.scrollY = 0;
         this.hoveredTileIdx = -1;
         this.calculateTilePositions();
         this.render();
-
-        if (this.onWorldChange) {
-            this.onWorldChange(worldId);
-        }
+        if (this.onWorldChange) this.onWorldChange(worldId);
     },
-
-    nextWorld: function() {
-        if (this.currentWorldId < CONFIG.WORLDS.length) {
-            this.setWorld(this.currentWorldId + 1);
-        }
-    },
-
-    prevWorld: function() {
-        if (this.currentWorldId > 1) {
-            this.setWorld(this.currentWorldId - 1);
-        }
-    },
+    nextWorld: function() { if (this.currentWorldId < CONFIG.WORLDS.length) this.setWorld(this.currentWorldId + 1); },
+    prevWorld: function() { if (this.currentWorldId > 1) this.setWorld(this.currentWorldId - 1); },
 
     // =========================================
     // 렌더링
     // =========================================
 
-    /**
-     * 맵 렌더링
-     */
     render: function() {
-        const ctx = this.ctx;
-        const W = CONFIG.CANVAS.WIDTH;
-        const H = CONFIG.CANVAS.HEIGHT;
         const world = getWorldConfig(this.currentWorldId);
 
-        // 배경
         this.renderBackground(world);
-
-        // 보드게임 경로 (타일 연결선)
         this.renderBoardPaths();
-
-        // 보드게임 타일들
         this.renderTiles();
-
-        // 헤더 오버레이
+        this.renderBoardCenter(world);
         this.renderHeaderOverlay();
-
-        // 월드 헤더 (고정)
         this.renderWorldHeader(world);
     },
 
-    /**
-     * 배경 렌더링
-     */
     renderBackground: function(world) {
         const ctx = this.ctx;
         const W = CONFIG.CANVAS.WIDTH;
         const H = CONFIG.CANVAS.HEIGHT;
 
-        // 보드게임 배경 (따뜻한 어두운 톤)
-        const bgGrad = ctx.createLinearGradient(0, 0, 0, H);
-        bgGrad.addColorStop(0, '#151932');
-        bgGrad.addColorStop(0.5, '#1a1f3a');
-        bgGrad.addColorStop(1, '#12162e');
-        ctx.fillStyle = bgGrad;
+        // 배경
+        const bg = ctx.createLinearGradient(0, 0, 0, H);
+        bg.addColorStop(0, '#151932');
+        bg.addColorStop(0.5, '#1a1f3a');
+        bg.addColorStop(1, '#12162e');
+        ctx.fillStyle = bg;
         ctx.fillRect(0, 0, W, H);
 
-        // 보드 느낌의 격자 무늬 배경 (체스판 느낌)
+        // 미세 격자
         ctx.save();
-        ctx.globalAlpha = 0.03;
-        const gridSize = 40;
-        for (let gx = 0; gx < W; gx += gridSize) {
-            for (let gy = 0; gy < H; gy += gridSize) {
-                if ((Math.floor(gx / gridSize) + Math.floor(gy / gridSize)) % 2 === 0) {
-                    ctx.fillStyle = '#ffffff';
-                    ctx.fillRect(gx, gy, gridSize, gridSize);
+        ctx.globalAlpha = 0.025;
+        ctx.fillStyle = '#ffffff';
+        const gs = 40;
+        for (let gx = 0; gx < W; gx += gs) {
+            for (let gy = 0; gy < H; gy += gs) {
+                if ((Math.floor(gx / gs) + Math.floor(gy / gs)) % 2 === 0) {
+                    ctx.fillRect(gx, gy, gs, gs);
                 }
             }
         }
         ctx.restore();
 
-        // 분위기 컬러 오브
+        // 분위기 오브
         ctx.save();
-        const orb = ctx.createRadialGradient(W * 0.5, H * 0.3, 30, W * 0.5, H * 0.3, 300);
-        orb.addColorStop(0, world.color + '20');
+        const orb = ctx.createRadialGradient(W * 0.5, H * 0.5, 30, W * 0.5, H * 0.5, 350);
+        orb.addColorStop(0, world.color + '18');
         orb.addColorStop(1, world.color + '00');
         ctx.fillStyle = orb;
         ctx.fillRect(0, 0, W, H);
@@ -361,7 +306,110 @@ const StageMap = {
     },
 
     /**
-     * 보드게임 경로 렌더링 (타일 사이를 잇는 점선/실선)
+     * 보드 가운데 영역 (월드 주제 표시)
+     */
+    renderBoardCenter: function(world) {
+        const ctx = this.ctx;
+        const bi = this.boardInfo;
+        if (!bi) return;
+
+        const cx = bi.innerX + bi.innerW / 2;
+        const cy = bi.innerY + bi.innerH / 2 - this.scrollY;
+
+        // 가운데 배경 (살짝 밝은 톤)
+        ctx.save();
+        this._roundRect(ctx, bi.innerX, bi.innerY - this.scrollY, bi.innerW, bi.innerH, 14);
+        const centerBg = ctx.createRadialGradient(cx, cy, 20, cx, cy, bi.innerW * 0.6);
+        centerBg.addColorStop(0, 'rgba(255, 255, 255, 0.06)');
+        centerBg.addColorStop(1, 'rgba(255, 255, 255, 0.01)');
+        ctx.fillStyle = centerBg;
+        ctx.fill();
+
+        // 점선 테두리
+        ctx.setLineDash([6, 4]);
+        ctx.strokeStyle = 'rgba(255, 255, 255, 0.08)';
+        ctx.lineWidth = 1.5;
+        ctx.stroke();
+        ctx.setLineDash([]);
+        ctx.restore();
+
+        // 월드 아이콘 (컬러 원)
+        ctx.save();
+        ctx.beginPath();
+        ctx.arc(cx, cy - 50, 28, 0, Math.PI * 2);
+        const iconGrad = ctx.createLinearGradient(cx, cy - 78, cx, cy - 22);
+        iconGrad.addColorStop(0, this._lightenColor(world.color, 0.2));
+        iconGrad.addColorStop(1, world.color);
+        ctx.fillStyle = iconGrad;
+        ctx.shadowColor = this._hexToRgba(world.color, 0.4);
+        ctx.shadowBlur = 16;
+        ctx.fill();
+        ctx.shadowColor = 'transparent';
+        ctx.shadowBlur = 0;
+
+        // 월드 번호
+        ctx.font = `bold 22px ${CONFIG.RENDER.FONT_FAMILY}`;
+        ctx.fillStyle = '#ffffff';
+        ctx.textAlign = 'center';
+        ctx.textBaseline = 'middle';
+        ctx.fillText(world.id.toString(), cx, cy - 50);
+        ctx.restore();
+
+        // 월드 이름
+        ctx.font = `bold 24px ${CONFIG.RENDER.FONT_FAMILY}`;
+        ctx.fillStyle = '#e2e8f0';
+        ctx.textAlign = 'center';
+        ctx.textBaseline = 'middle';
+        ctx.fillText(world.name, cx, cy - 5);
+
+        // 한국어 부제
+        ctx.font = `14px ${CONFIG.RENDER.FONT_FAMILY}`;
+        ctx.fillStyle = '#94a3b8';
+        ctx.fillText(world.nameKo, cx, cy + 22);
+
+        // 진행률
+        const totalStages = world.stages;
+        let clearedCount = 0;
+        for (let s = 1; s <= totalStages; s++) {
+            const result = Storage.getStageResult(getStageId(world.id, s));
+            if (result && result.stars > 0) clearedCount++;
+        }
+
+        // 진행률 바
+        const barW = 140;
+        const barH = 8;
+        const barX = cx - barW / 2;
+        const barY = cy + 50;
+
+        // 배경
+        this._roundRect(ctx, barX, barY, barW, barH, 4);
+        ctx.fillStyle = 'rgba(255, 255, 255, 0.08)';
+        ctx.fill();
+
+        // 채움
+        if (clearedCount > 0) {
+            const fillW = (clearedCount / totalStages) * barW;
+            this._roundRect(ctx, barX, barY, Math.max(fillW, barH), barH, 4);
+            const barGrad = ctx.createLinearGradient(barX, barY, barX + fillW, barY);
+            barGrad.addColorStop(0, world.color);
+            barGrad.addColorStop(1, this._lightenColor(world.color, 0.3));
+            ctx.fillStyle = barGrad;
+            ctx.fill();
+        }
+
+        // 진행률 텍스트
+        ctx.font = `bold 12px ${CONFIG.RENDER.FONT_FAMILY}`;
+        ctx.fillStyle = '#64748b';
+        ctx.textAlign = 'center';
+        ctx.fillText(`${clearedCount} / ${totalStages}`, cx, barY + barH + 16);
+
+        // 주사위 아이콘 (장식)
+        this._renderDice(ctx, cx - 80, cy + 45);
+        this._renderDice(ctx, cx + 68, cy + 45);
+    },
+
+    /**
+     * 경로 연결선 렌더링
      */
     renderBoardPaths: function() {
         const ctx = this.ctx;
@@ -374,45 +422,41 @@ const StageMap = {
             const prev = this.tilePositions[i - 1];
             const curr = this.tilePositions[i];
 
-            const prevCX = prev.x + tileSize / 2;
-            const prevCY = prev.y + tileSize / 2 - this.scrollY;
-            const currCX = curr.x + tileSize / 2;
-            const currCY = curr.y + tileSize / 2 - this.scrollY;
+            const px = prev.x + tileSize / 2;
+            const py = prev.y + tileSize / 2 - this.scrollY;
+            const cx2 = curr.x + tileSize / 2;
+            const cy2 = curr.y + tileSize / 2 - this.scrollY;
 
-            // 화면 밖이면 스킵
-            if (prevCY < -50 && currCY < -50) continue;
-            if (prevCY > CONFIG.CANVAS.HEIGHT + 50 && currCY > CONFIG.CANVAS.HEIGHT + 50) continue;
+            if (py < -50 && cy2 < -50) continue;
+            if (py > CONFIG.CANVAS.HEIGHT + 50 && cy2 > CONFIG.CANVAS.HEIGHT + 50) continue;
 
-            // 클리어 여부 체크
-            const prevStageId = getStageId(prev.worldId, prev.stageNum);
-            const prevResult = Storage.getStageResult(prevStageId);
+            const prevResult = Storage.getStageResult(getStageId(prev.worldId, prev.stageNum));
             const isCleared = prevResult && prevResult.stars > 0;
 
             ctx.save();
             ctx.beginPath();
-            ctx.moveTo(prevCX, prevCY);
+            ctx.moveTo(px, py);
 
-            // 같은 행이면 직선, 다른 행이면 곡선
-            const cols = CONFIG.MAP.COLS;
-            const prevRow = Math.floor((i - 1) / cols);
-            const currRow = Math.floor(i / cols);
-
-            if (prevRow !== currRow) {
-                // 행 전환: U턴 커브
-                const midY = (prevCY + currCY) / 2;
-                ctx.bezierCurveTo(prevCX, midY, currCX, midY, currCX, currCY);
+            // 직선이 아닌 경우 (대각선 이동) 곡선으로
+            const dx = Math.abs(cx2 - px);
+            const dy = Math.abs(cy2 - py);
+            if (dx > 10 && dy > 10) {
+                // 모서리 전환: L자 커브
+                const midX = (px + cx2) / 2;
+                const midY = (py + cy2) / 2;
+                ctx.quadraticCurveTo(px, cy2, cx2, cy2);
             } else {
-                ctx.lineTo(currCX, currCY);
+                ctx.lineTo(cx2, cy2);
             }
 
             if (isCleared) {
-                ctx.strokeStyle = world.color + '80';
-                ctx.lineWidth = 4;
+                ctx.strokeStyle = world.color + '60';
+                ctx.lineWidth = 3;
                 ctx.setLineDash([]);
             } else {
-                ctx.strokeStyle = 'rgba(255, 255, 255, 0.12)';
-                ctx.lineWidth = 3;
-                ctx.setLineDash([8, 6]);
+                ctx.strokeStyle = 'rgba(255, 255, 255, 0.1)';
+                ctx.lineWidth = 2;
+                ctx.setLineDash([6, 4]);
             }
             ctx.lineCap = 'round';
             ctx.stroke();
@@ -422,7 +466,7 @@ const StageMap = {
     },
 
     /**
-     * 보드게임 타일 렌더링
+     * 타일 렌더링
      */
     renderTiles: function() {
         const ctx = this.ctx;
@@ -431,94 +475,68 @@ const StageMap = {
         const radius = CONFIG.MAP.TILE_RADIUS;
 
         this.tilePositions.forEach((tile, idx) => {
-            const drawX = tile.x;
             const drawY = tile.y - this.scrollY;
-
-            // 화면 밖이면 스킵
             if (drawY < -tileSize - 10 || drawY > CONFIG.CANVAS.HEIGHT + 10) return;
 
             const isUnlocked = Storage.isStageUnlocked(tile.worldId, tile.stageNum);
             const stageId = getStageId(tile.worldId, tile.stageNum);
             const result = Storage.getStageResult(stageId);
-            const isReview = WordManager.isReviewStage(tile.worldId, tile.stageNum);
             const isBoss = WordManager.isBossStage(tile.worldId, tile.stageNum);
             const progress = Storage.getCurrentProgress();
-            const isCurrent = progress.worldId === tile.worldId &&
-                             progress.stageNum === tile.stageNum;
+            const isCurrent = progress.worldId === tile.worldId && progress.stageNum === tile.stageNum;
             const isHovered = idx === this.hoveredTileIdx;
             const isCleared = result && result.stars > 0;
+            const isLast = tile.stageNum === world.stages;
 
-            // 타일 색상 결정
-            let tileColor, borderColor, textColor, shadowColor;
-
+            // 색상
+            let tileColor, borderColor, textColor;
             if (!isUnlocked) {
                 tileColor = CONFIG.MAP.LOCKED_COLOR;
                 borderColor = CONFIG.MAP.LOCKED_BORDER;
                 textColor = '#666b80';
-                shadowColor = 'rgba(0,0,0,0.3)';
             } else if (isCurrent) {
                 tileColor = CONFIG.MAP.TILE_COLORS[tile.colorIdx];
                 borderColor = '#FFD700';
                 textColor = '#1a1a2e';
-                shadowColor = 'rgba(255, 215, 0, 0.5)';
-            } else if (isCleared) {
-                tileColor = CONFIG.MAP.TILE_COLORS[tile.colorIdx];
-                borderColor = this._darkenColor(CONFIG.MAP.TILE_COLORS[tile.colorIdx], 0.15);
-                textColor = '#1a1a2e';
-                shadowColor = this._hexToRgba(CONFIG.MAP.TILE_COLORS[tile.colorIdx], 0.3);
             } else {
                 tileColor = CONFIG.MAP.TILE_COLORS[tile.colorIdx];
-                borderColor = this._darkenColor(CONFIG.MAP.TILE_COLORS[tile.colorIdx], 0.2);
+                borderColor = this._darkenColor(tileColor, 0.2);
                 textColor = '#1a1a2e';
-                shadowColor = this._hexToRgba(CONFIG.MAP.TILE_COLORS[tile.colorIdx], 0.2);
             }
 
             ctx.save();
 
-            // 현재 위치 글로우 효과
-            if (isCurrent) {
-                ctx.shadowColor = 'rgba(255, 215, 0, 0.6)';
-                ctx.shadowBlur = 20;
-                ctx.shadowOffsetX = 0;
-                ctx.shadowOffsetY = 0;
-            }
-
-            // 호버 시 약간 확대 효과 (translate로 시뮬레이션)
-            let offsetX = 0, offsetY = 0, scale = 1;
+            // 호버 확대
+            let ox = 0, oy = 0, sc = 1;
             if (isHovered && isUnlocked) {
-                scale = 1.05;
-                offsetX = -(tileSize * 0.05) / 2;
-                offsetY = -(tileSize * 0.05) / 2;
+                sc = 1.08;
+                ox = -(tileSize * 0.08) / 2;
+                oy = -(tileSize * 0.08) / 2;
             }
+            const tx = tile.x + ox;
+            const ty = drawY + oy;
+            const tw = tileSize * sc;
+            const th = tileSize * sc;
 
-            const tx = drawX + offsetX;
-            const ty = drawY + offsetY;
-            const tw = tileSize * scale;
-            const th = tileSize * scale;
-
-            // 타일 그림자
+            // 그림자
             if (isUnlocked) {
-                ctx.shadowColor = shadowColor;
-                ctx.shadowBlur = isCurrent ? 20 : 8;
-                ctx.shadowOffsetY = 3;
+                ctx.shadowColor = isCurrent ? 'rgba(255,215,0,0.5)' : 'rgba(0,0,0,0.3)';
+                ctx.shadowBlur = isCurrent ? 18 : 6;
+                ctx.shadowOffsetY = 2;
             }
 
-            // 타일 본체 (둥근 사각형)
+            // 타일 본체
             this._roundRect(ctx, tx, ty, tw, th, radius);
-
             if (isUnlocked) {
-                // 그라데이션으로 입체감
-                const tileGrad = ctx.createLinearGradient(tx, ty, tx, ty + th);
-                tileGrad.addColorStop(0, this._lightenColor(tileColor, 0.15));
-                tileGrad.addColorStop(0.5, tileColor);
-                tileGrad.addColorStop(1, this._darkenColor(tileColor, 0.15));
-                ctx.fillStyle = tileGrad;
+                const g = ctx.createLinearGradient(tx, ty, tx, ty + th);
+                g.addColorStop(0, this._lightenColor(tileColor, 0.18));
+                g.addColorStop(0.5, tileColor);
+                g.addColorStop(1, this._darkenColor(tileColor, 0.12));
+                ctx.fillStyle = g;
             } else {
                 ctx.fillStyle = tileColor;
             }
             ctx.fill();
-
-            // 그림자 리셋
             ctx.shadowColor = 'transparent';
             ctx.shadowBlur = 0;
             ctx.shadowOffsetY = 0;
@@ -526,140 +544,113 @@ const StageMap = {
             // 테두리
             this._roundRect(ctx, tx, ty, tw, th, radius);
             ctx.strokeStyle = borderColor;
-            ctx.lineWidth = isCurrent ? 3 : 2;
+            ctx.lineWidth = isCurrent ? 3 : 1.5;
             ctx.stroke();
 
-            // 타일 상단 하이라이트 (빛 반사 효과)
+            // 하이라이트 (빛 반사)
             if (isUnlocked) {
                 ctx.save();
-                ctx.beginPath();
-                this._roundRect(ctx, tx + 3, ty + 3, tw - 6, th * 0.35, radius - 2);
+                this._roundRect(ctx, tx + 2, ty + 2, tw - 4, th * 0.35, radius - 1);
                 ctx.clip();
-                const highlight = ctx.createLinearGradient(tx, ty, tx, ty + th * 0.4);
-                highlight.addColorStop(0, 'rgba(255, 255, 255, 0.35)');
-                highlight.addColorStop(1, 'rgba(255, 255, 255, 0)');
-                ctx.fillStyle = highlight;
+                const hl = ctx.createLinearGradient(tx, ty, tx, ty + th * 0.4);
+                hl.addColorStop(0, 'rgba(255,255,255,0.35)');
+                hl.addColorStop(1, 'rgba(255,255,255,0)');
+                ctx.fillStyle = hl;
                 ctx.fillRect(tx, ty, tw, th * 0.4);
                 ctx.restore();
             }
 
-            // START 배지 (1번 스테이지)
+            // START / GOAL 배지
             if (tile.stageNum === 1) {
-                this._renderStartBadge(ctx, tx + tw / 2, ty - 8);
+                this._renderBadgeLabel(ctx, tx + tw / 2, ty - 8, 'START', '#10b981', '#059669');
+            }
+            if (isLast) {
+                this._renderBadgeLabel(ctx, tx + tw / 2, ty - 8, 'GOAL', '#f59e0b', '#d97706');
             }
 
-            // 스테이지 번호
+            // 현재 위치 화살표
+            if (isCurrent && tile.stageNum !== 1 && !isLast) {
+                this._renderCurrentArrow(ctx, tx + tw / 2, ty - 10);
+            }
+
+            // 내용물: 번호 / 잠금 / 카테고리
             if (isUnlocked) {
-                ctx.font = `bold ${Math.round(18 * scale)}px ${CONFIG.RENDER.FONT_FAMILY}`;
-                ctx.fillStyle = textColor;
-                ctx.textAlign = 'center';
-                ctx.textBaseline = 'middle';
+                // 카테고리 (주제)
+                const category = isBoss ? 'BOSS' : WordManager.getStageCategory(tile.worldId, tile.stageNum);
+                const shortCat = category.length > 5 ? category.substring(0, 5) + '..' : category;
 
                 if (isBoss) {
-                    // 보스 스테이지: 크라운 아이콘 + 번호
-                    this._renderCrown(ctx, tx + tw / 2, ty + th * 0.28, 10 * scale, textColor);
-                    ctx.font = `bold ${Math.round(14 * scale)}px ${CONFIG.RENDER.FONT_FAMILY}`;
+                    this._renderCrown(ctx, tx + tw / 2, ty + th * 0.22, 8 * sc);
+                    ctx.font = `bold ${Math.round(11 * sc)}px ${CONFIG.RENDER.FONT_FAMILY}`;
                     ctx.fillStyle = textColor;
                     ctx.textAlign = 'center';
                     ctx.textBaseline = 'middle';
-                    ctx.fillText(tile.stageNum.toString(), tx + tw / 2, ty + th * 0.63);
+                    ctx.fillText(tile.stageNum.toString(), tx + tw / 2, ty + th * 0.48);
                 } else {
-                    ctx.fillText(tile.stageNum.toString(), tx + tw / 2, ty + th * 0.42);
+                    // 스테이지 번호
+                    ctx.font = `bold ${Math.round(15 * sc)}px ${CONFIG.RENDER.FONT_FAMILY}`;
+                    ctx.fillStyle = textColor;
+                    ctx.textAlign = 'center';
+                    ctx.textBaseline = 'middle';
+                    ctx.fillText(tile.stageNum.toString(), tx + tw / 2, ty + th * 0.32);
+
+                    // 주제 텍스트 (타일 안에 작게)
+                    ctx.font = `${Math.round(8 * sc)}px ${CONFIG.RENDER.FONT_FAMILY}`;
+                    ctx.fillStyle = this._darkenColor(tileColor, 0.45);
+                    ctx.fillText(shortCat, tx + tw / 2, ty + th * 0.55);
+                }
+
+                // 별점 (클리어)
+                if (isCleared) {
+                    this._renderTileStars(ctx, tx + tw / 2, ty + th - 10 * sc, result.stars, sc);
                 }
             } else {
-                // 잠금 아이콘 (캔버스 드로잉)
-                this._renderLockIcon(ctx, tx + tw / 2, ty + th * 0.45, 10 * scale);
-            }
-
-            // 별점 (클리어한 경우)
-            if (isCleared) {
-                this._renderTileStars(ctx, tx + tw / 2, ty + th - 14 * scale, result.stars, scale);
-            }
-
-            // 카테고리 라벨 (타일 아래)
-            if (isUnlocked && !isCleared) {
-                const category = isBoss
-                    ? 'BOSS'
-                    : WordManager.getStageCategory(tile.worldId, tile.stageNum);
-                const shortCategory = category.length > 6 ? category.substring(0, 6) + '..' : category;
-                ctx.font = `9px ${CONFIG.RENDER.FONT_FAMILY}`;
-                ctx.fillStyle = isBoss ? '#fbbf24' : '#8892b0';
-                ctx.textAlign = 'center';
-                ctx.fillText(shortCategory, tx + tw / 2, ty + th + 12);
-            }
-
-            // 복습 배지
-            if (isReview && isUnlocked) {
-                this._renderBadge(ctx, tx + tw - 6, ty + 6, 'R', '#ef4444', '#dc2626');
+                // 잠금 아이콘
+                this._renderLockIcon(ctx, tx + tw / 2, ty + th * 0.42, 9 * sc);
             }
 
             // 보스 배지
             if (isBoss && isUnlocked) {
-                this._renderBadge(ctx, tx + 6, ty + 6, 'B', '#fbbf24', '#f59e0b');
-            }
-
-            // 현재 위치 화살표 인디케이터
-            if (isCurrent) {
-                this._renderCurrentArrow(ctx, tx + tw / 2, ty - 16);
+                this._renderSmallBadge(ctx, tx + 5, ty + 5, 'B', '#fbbf24', '#f59e0b');
             }
 
             ctx.restore();
         });
     },
 
-    /**
-     * 헤더 오버레이 (노드 위에 그라데이션)
-     */
     renderHeaderOverlay: function() {
         const ctx = this.ctx;
         const W = CONFIG.CANVAS.WIDTH;
-
-        const headerFade = ctx.createLinearGradient(0, 0, 0, 80);
-        headerFade.addColorStop(0, 'rgba(21, 25, 50, 0.98)');
-        headerFade.addColorStop(0.7, 'rgba(21, 25, 50, 0.85)');
-        headerFade.addColorStop(1, 'rgba(21, 25, 50, 0)');
-        ctx.fillStyle = headerFade;
-        ctx.fillRect(0, 0, W, 80);
+        const h = ctx.createLinearGradient(0, 0, 0, 75);
+        h.addColorStop(0, 'rgba(21,25,50,0.98)');
+        h.addColorStop(0.7, 'rgba(21,25,50,0.8)');
+        h.addColorStop(1, 'rgba(21,25,50,0)');
+        ctx.fillStyle = h;
+        ctx.fillRect(0, 0, W, 75);
     },
 
-    /**
-     * 월드 헤더 렌더링
-     */
     renderWorldHeader: function(world) {
         const ctx = this.ctx;
         const W = CONFIG.CANVAS.WIDTH;
 
-        // 보드게임 제목 스타일
-        ctx.font = `bold 20px ${CONFIG.RENDER.FONT_FAMILY}`;
+        ctx.font = `bold 18px ${CONFIG.RENDER.FONT_FAMILY}`;
         ctx.fillStyle = world.color;
         ctx.textAlign = 'center';
         ctx.textBaseline = 'middle';
-        ctx.fillText(`World ${world.id}: ${world.name}`, W / 2, 26);
+        ctx.fillText(`World ${world.id}`, W / 2, 24);
 
-        // 한국어 부제
-        ctx.font = `12px ${CONFIG.RENDER.FONT_FAMILY}`;
+        ctx.font = `11px ${CONFIG.RENDER.FONT_FAMILY}`;
         ctx.fillStyle = '#64748b';
-        ctx.fillText(world.nameKo, W / 2, 45);
+        ctx.fillText(world.nameKo, W / 2, 42);
 
-        // 이전/다음 월드 화살표
-        const arrowY = 30;
-
-        if (this.currentWorldId > 1) {
-            this._renderArrowButton(ctx, 35, arrowY, 'left');
-        }
-
-        if (this.currentWorldId < CONFIG.WORLDS.length) {
-            this._renderArrowButton(ctx, W - 35, arrowY, 'right');
-        }
+        if (this.currentWorldId > 1) this._renderArrowBtn(ctx, 35, 28, 'left');
+        if (this.currentWorldId < CONFIG.WORLDS.length) this._renderArrowBtn(ctx, W - 35, 28, 'right');
     },
 
     // =========================================
     // 렌더링 헬퍼
     // =========================================
 
-    /**
-     * 둥근 사각형 경로
-     */
     _roundRect: function(ctx, x, y, w, h, r) {
         ctx.beginPath();
         ctx.moveTo(x + r, y);
@@ -674,99 +665,83 @@ const StageMap = {
         ctx.closePath();
     },
 
-    /**
-     * START 배지 렌더링
-     */
-    _renderStartBadge: function(ctx, x, y) {
+    _renderBadgeLabel: function(ctx, x, y, text, c1, c2) {
         ctx.save();
-        ctx.font = `bold 10px ${CONFIG.RENDER.FONT_FAMILY}`;
-        const text = 'START';
-        const tw = ctx.measureText(text).width + 14;
-        const th = 18;
-
-        // 배지 배경
-        this._roundRect(ctx, x - tw / 2, y - th / 2, tw, th, 9);
-        const grad = ctx.createLinearGradient(x - tw / 2, y - th / 2, x + tw / 2, y + th / 2);
-        grad.addColorStop(0, '#10b981');
-        grad.addColorStop(1, '#059669');
-        ctx.fillStyle = grad;
+        ctx.font = `bold 9px ${CONFIG.RENDER.FONT_FAMILY}`;
+        const tw = ctx.measureText(text).width + 12;
+        const th = 16;
+        this._roundRect(ctx, x - tw / 2, y - th / 2, tw, th, 8);
+        const g = ctx.createLinearGradient(x - tw / 2, y, x + tw / 2, y);
+        g.addColorStop(0, c1);
+        g.addColorStop(1, c2);
+        ctx.fillStyle = g;
         ctx.fill();
         ctx.strokeStyle = 'rgba(255,255,255,0.3)';
         ctx.lineWidth = 1;
         ctx.stroke();
-
-        // 텍스트
-        ctx.fillStyle = '#ffffff';
+        ctx.fillStyle = '#fff';
         ctx.textAlign = 'center';
         ctx.textBaseline = 'middle';
         ctx.fillText(text, x, y);
         ctx.restore();
     },
 
-    /**
-     * 타일 내 별점 렌더링
-     */
-    _renderTileStars: function(ctx, x, y, stars, scale) {
-        const starSize = 5 * scale;
-        const gap = starSize * 2 + 3;
-        const startX = x - gap;
+    _renderCurrentArrow: function(ctx, x, y) {
+        ctx.save();
+        ctx.beginPath();
+        ctx.moveTo(x - 6, y - 5);
+        ctx.lineTo(x + 6, y - 5);
+        ctx.lineTo(x, y + 3);
+        ctx.closePath();
+        ctx.fillStyle = '#FFD700';
+        ctx.shadowColor = 'rgba(255,215,0,0.6)';
+        ctx.shadowBlur = 6;
+        ctx.fill();
+        ctx.shadowColor = 'transparent';
+        ctx.shadowBlur = 0;
+        ctx.restore();
+    },
 
+    _renderTileStars: function(ctx, x, y, stars, sc) {
+        const sz = 4 * sc;
+        const gap = sz * 2 + 2;
+        const sx = x - gap;
         for (let i = 0; i < 3; i++) {
-            const sx = startX + i * gap;
-            const isFilled = i < stars;
-
-            this._drawStar(ctx, sx, y, starSize, 5);
-
-            if (isFilled) {
+            this._drawStar(ctx, sx + i * gap, y, sz, 5);
+            if (i < stars) {
                 ctx.fillStyle = '#FFD700';
                 ctx.fill();
-                ctx.shadowColor = 'rgba(255, 215, 0, 0.6)';
-                ctx.shadowBlur = 4;
-                ctx.fill();
-                ctx.shadowColor = 'transparent';
-                ctx.shadowBlur = 0;
             } else {
-                ctx.fillStyle = 'rgba(0, 0, 0, 0.2)';
+                ctx.fillStyle = 'rgba(0,0,0,0.2)';
                 ctx.fill();
-                ctx.strokeStyle = 'rgba(0, 0, 0, 0.15)';
-                ctx.lineWidth = 0.5;
-                ctx.stroke();
             }
         }
     },
 
-    /**
-     * 별 모양 경로 헬퍼
-     */
-    _drawStar: function(ctx, cx, cy, radius, points) {
-        const inner = radius * 0.45;
+    _drawStar: function(ctx, cx, cy, r, pts) {
+        const inner = r * 0.45;
         ctx.beginPath();
-        for (let i = 0; i < points * 2; i++) {
-            const r = i % 2 === 0 ? radius : inner;
-            const angle = (Math.PI / points) * i - Math.PI / 2;
-            const x = cx + Math.cos(angle) * r;
-            const y = cy + Math.sin(angle) * r;
-            if (i === 0) ctx.moveTo(x, y);
-            else ctx.lineTo(x, y);
+        for (let i = 0; i < pts * 2; i++) {
+            const rad = i % 2 === 0 ? r : inner;
+            const angle = (Math.PI / pts) * i - Math.PI / 2;
+            const x = cx + Math.cos(angle) * rad;
+            const y = cy + Math.sin(angle) * rad;
+            if (i === 0) ctx.moveTo(x, y); else ctx.lineTo(x, y);
         }
         ctx.closePath();
     },
 
-    /**
-     * 크라운 아이콘 렌더링
-     */
-    _renderCrown: function(ctx, x, y, size, color) {
+    _renderCrown: function(ctx, x, y, sz) {
         ctx.save();
+        const w = sz * 1.6, h = sz;
         ctx.beginPath();
-        const w = size * 1.6;
-        const h = size;
-        ctx.moveTo(x - w/2, y + h/2);
-        ctx.lineTo(x - w/2, y - h/4);
-        ctx.lineTo(x - w/4, y + h/8);
-        ctx.lineTo(x, y - h/2);
-        ctx.lineTo(x + w/4, y + h/8);
-        ctx.lineTo(x + w/2, y - h/4);
-        ctx.lineTo(x + w/2, y + h/2);
+        ctx.moveTo(x - w / 2, y + h / 2);
+        ctx.lineTo(x - w / 2, y - h / 4);
+        ctx.lineTo(x - w / 4, y + h / 8);
+        ctx.lineTo(x, y - h / 2);
+        ctx.lineTo(x + w / 4, y + h / 8);
+        ctx.lineTo(x + w / 2, y - h / 4);
+        ctx.lineTo(x + w / 2, y + h / 2);
         ctx.closePath();
         ctx.fillStyle = '#fbbf24';
         ctx.fill();
@@ -776,99 +751,59 @@ const StageMap = {
         ctx.restore();
     },
 
-    /**
-     * 잠금 아이콘 렌더링
-     */
-    _renderLockIcon: function(ctx, x, y, size) {
+    _renderLockIcon: function(ctx, x, y, sz) {
         ctx.save();
-        const bodyW = size * 1.2;
-        const bodyH = size * 0.9;
-        const bx = x - bodyW / 2;
-        const by = y;
-
-        // 자물쇠 몸통
-        this._roundRect(ctx, bx, by, bodyW, bodyH, 2);
+        const bw = sz * 1.1, bh = sz * 0.8;
+        this._roundRect(ctx, x - bw / 2, y, bw, bh, 2);
         ctx.fillStyle = '#555b75';
         ctx.fill();
-
-        // 자물쇠 고리
         ctx.beginPath();
-        ctx.arc(x, by, size * 0.45, Math.PI, 0);
+        ctx.arc(x, y, sz * 0.4, Math.PI, 0);
         ctx.strokeStyle = '#555b75';
-        ctx.lineWidth = size * 0.2;
+        ctx.lineWidth = sz * 0.2;
         ctx.lineCap = 'round';
         ctx.stroke();
         ctx.restore();
     },
 
-    /**
-     * 배지 렌더링 (R/B 등)
-     */
-    _renderBadge: function(ctx, x, y, letter, color1, color2) {
+    _renderSmallBadge: function(ctx, x, y, letter, c1, c2) {
         ctx.save();
         ctx.beginPath();
-        ctx.arc(x, y, 9, 0, Math.PI * 2);
-        const grad = ctx.createLinearGradient(x, y - 9, x, y + 9);
-        grad.addColorStop(0, color1);
-        grad.addColorStop(1, color2);
-        ctx.fillStyle = grad;
+        ctx.arc(x, y, 8, 0, Math.PI * 2);
+        const g = ctx.createLinearGradient(x, y - 8, x, y + 8);
+        g.addColorStop(0, c1);
+        g.addColorStop(1, c2);
+        ctx.fillStyle = g;
         ctx.fill();
         ctx.strokeStyle = 'rgba(255,255,255,0.4)';
         ctx.lineWidth = 1;
         ctx.stroke();
-
-        ctx.font = `bold 9px ${CONFIG.RENDER.FONT_FAMILY}`;
-        ctx.fillStyle = '#ffffff';
+        ctx.font = `bold 8px ${CONFIG.RENDER.FONT_FAMILY}`;
+        ctx.fillStyle = '#fff';
         ctx.textAlign = 'center';
         ctx.textBaseline = 'middle';
         ctx.fillText(letter, x, y);
         ctx.restore();
     },
 
-    /**
-     * 현재 위치 화살표
-     */
-    _renderCurrentArrow: function(ctx, x, y) {
+    _renderArrowBtn: function(ctx, x, y, dir) {
         ctx.save();
-        // 아래쪽 화살표 (삼각형)
         ctx.beginPath();
-        ctx.moveTo(x - 8, y - 6);
-        ctx.lineTo(x + 8, y - 6);
-        ctx.lineTo(x, y + 4);
-        ctx.closePath();
-        ctx.fillStyle = '#FFD700';
-        ctx.shadowColor = 'rgba(255, 215, 0, 0.7)';
-        ctx.shadowBlur = 8;
+        ctx.arc(x, y, 16, 0, Math.PI * 2);
+        ctx.fillStyle = 'rgba(255,255,255,0.08)';
         ctx.fill();
-        ctx.shadowColor = 'transparent';
-        ctx.shadowBlur = 0;
-        ctx.restore();
-    },
-
-    /**
-     * 화살표 버튼 렌더링
-     */
-    _renderArrowButton: function(ctx, x, y, direction) {
-        ctx.save();
-        // 배경 원
-        ctx.beginPath();
-        ctx.arc(x, y, 18, 0, Math.PI * 2);
-        ctx.fillStyle = 'rgba(255, 255, 255, 0.08)';
-        ctx.fill();
-        ctx.strokeStyle = 'rgba(255, 255, 255, 0.15)';
+        ctx.strokeStyle = 'rgba(255,255,255,0.15)';
         ctx.lineWidth = 1;
         ctx.stroke();
-
-        // 화살표
         ctx.beginPath();
-        if (direction === 'left') {
-            ctx.moveTo(x + 5, y - 6);
-            ctx.lineTo(x - 5, y);
-            ctx.lineTo(x + 5, y + 6);
+        if (dir === 'left') {
+            ctx.moveTo(x + 4, y - 5);
+            ctx.lineTo(x - 4, y);
+            ctx.lineTo(x + 4, y + 5);
         } else {
-            ctx.moveTo(x - 5, y - 6);
-            ctx.lineTo(x + 5, y);
-            ctx.lineTo(x - 5, y + 6);
+            ctx.moveTo(x - 4, y - 5);
+            ctx.lineTo(x + 4, y);
+            ctx.lineTo(x - 4, y + 5);
         }
         ctx.strokeStyle = '#94a3b8';
         ctx.lineWidth = 2;
@@ -879,38 +814,58 @@ const StageMap = {
     },
 
     /**
-     * 색상 밝게 만들기
+     * 주사위 아이콘 (장식용)
      */
-    _lightenColor: function(hex, amount) {
-        hex = hex.replace('#', '');
-        if (hex.length === 3) hex = hex[0]+hex[0]+hex[1]+hex[1]+hex[2]+hex[2];
-        const r = Math.min(255, parseInt(hex.substr(0, 2), 16) + (255 - parseInt(hex.substr(0, 2), 16)) * amount);
-        const g = Math.min(255, parseInt(hex.substr(2, 2), 16) + (255 - parseInt(hex.substr(2, 2), 16)) * amount);
-        const b = Math.min(255, parseInt(hex.substr(4, 2), 16) + (255 - parseInt(hex.substr(4, 2), 16)) * amount);
-        return `rgb(${Math.round(r)}, ${Math.round(g)}, ${Math.round(b)})`;
+    _renderDice: function(ctx, x, y) {
+        ctx.save();
+        const s = 18;
+        this._roundRect(ctx, x - s / 2, y - s / 2, s, s, 3);
+        ctx.fillStyle = 'rgba(255,255,255,0.06)';
+        ctx.fill();
+        ctx.strokeStyle = 'rgba(255,255,255,0.1)';
+        ctx.lineWidth = 1;
+        ctx.stroke();
+
+        // 주사위 점
+        ctx.fillStyle = 'rgba(255,255,255,0.2)';
+        const dots = [
+            [x - 3, y - 3], [x + 3, y - 3],
+            [x, y],
+            [x - 3, y + 3], [x + 3, y + 3]
+        ];
+        dots.forEach(([dx, dy]) => {
+            ctx.beginPath();
+            ctx.arc(dx, dy, 1.5, 0, Math.PI * 2);
+            ctx.fill();
+        });
+        ctx.restore();
     },
 
-    /**
-     * 색상 어둡게 만들기
-     */
-    _darkenColor: function(hex, amount) {
+    // =========================================
+    // 색상 유틸리티
+    // =========================================
+
+    _lightenColor: function(hex, amt) {
         hex = hex.replace('#', '');
-        if (hex.length === 3) hex = hex[0]+hex[0]+hex[1]+hex[1]+hex[2]+hex[2];
-        const r = Math.max(0, parseInt(hex.substr(0, 2), 16) * (1 - amount));
-        const g = Math.max(0, parseInt(hex.substr(2, 2), 16) * (1 - amount));
-        const b = Math.max(0, parseInt(hex.substr(4, 2), 16) * (1 - amount));
-        return `rgb(${Math.round(r)}, ${Math.round(g)}, ${Math.round(b)})`;
+        if (hex.length === 3) hex = hex[0] + hex[0] + hex[1] + hex[1] + hex[2] + hex[2];
+        const r = Math.min(255, parseInt(hex.substr(0, 2), 16) + (255 - parseInt(hex.substr(0, 2), 16)) * amt);
+        const g = Math.min(255, parseInt(hex.substr(2, 2), 16) + (255 - parseInt(hex.substr(2, 2), 16)) * amt);
+        const b = Math.min(255, parseInt(hex.substr(4, 2), 16) + (255 - parseInt(hex.substr(4, 2), 16)) * amt);
+        return `rgb(${Math.round(r)},${Math.round(g)},${Math.round(b)})`;
     },
 
-    /**
-     * HEX 색상을 RGBA로 변환
-     */
-    _hexToRgba: function(hex, alpha) {
+    _darkenColor: function(hex, amt) {
         hex = hex.replace('#', '');
-        if (hex.length === 3) hex = hex[0]+hex[0]+hex[1]+hex[1]+hex[2]+hex[2];
-        const r = parseInt(hex.substr(0, 2), 16);
-        const g = parseInt(hex.substr(2, 2), 16);
-        const b = parseInt(hex.substr(4, 2), 16);
-        return `rgba(${r}, ${g}, ${b}, ${alpha})`;
+        if (hex.length === 3) hex = hex[0] + hex[0] + hex[1] + hex[1] + hex[2] + hex[2];
+        const r = Math.max(0, parseInt(hex.substr(0, 2), 16) * (1 - amt));
+        const g = Math.max(0, parseInt(hex.substr(2, 2), 16) * (1 - amt));
+        const b = Math.max(0, parseInt(hex.substr(4, 2), 16) * (1 - amt));
+        return `rgb(${Math.round(r)},${Math.round(g)},${Math.round(b)})`;
+    },
+
+    _hexToRgba: function(hex, a) {
+        hex = hex.replace('#', '');
+        if (hex.length === 3) hex = hex[0] + hex[0] + hex[1] + hex[1] + hex[2] + hex[2];
+        return `rgba(${parseInt(hex.substr(0, 2), 16)},${parseInt(hex.substr(2, 2), 16)},${parseInt(hex.substr(4, 2), 16)},${a})`;
     }
 };
