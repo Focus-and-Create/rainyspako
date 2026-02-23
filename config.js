@@ -86,17 +86,27 @@ const CONFIG = {
     },
 
     // =========================================
-    // 스테이지 맵 설정
+    // 스테이지 맵 설정 (보드게임 스타일)
     // =========================================
     MAP: {
-        NODE_RADIUS: 22,               // 스테이지 노드 반지름
-        NODE_SPACING_X: 80,            // 노드 간 X 간격
-        NODE_SPACING_Y: 100,           // 노드 간 Y 간격
-        PATH_COLOR: 'rgba(255, 255, 255, 0.08)', // 경로 선 색상
-        PATH_WIDTH: 3,                 // 경로 선 두께
-        LOCKED_COLOR: '#1e293b',       // 잠긴 스테이지 색상
-        UNLOCKED_COLOR: '#334155',     // 잠금해제 스테이지 색상
-        CURRENT_COLOR: '#fbbf24'       // 현재 스테이지 강조 색상
+        TILE_SIZE: 64,                 // 보드게임 타일 크기 (px)
+        TILE_GAP: 6,                   // 타일 간 간격
+        TILE_RADIUS: 12,              // 타일 둥근 모서리
+        COLS: 5,                       // 한 행당 타일 수
+        PAD_X: 60,                     // 좌우 여백
+        TOP_Y: 100,                    // 상단 여백 (헤더 아래)
+        // 보드게임 타일 컬러 팔레트 (밝고 다채로운 파스텔톤)
+        TILE_COLORS: [
+            '#FF6B8A', '#FFB347', '#87CEEB', '#98FB98',
+            '#DDA0DD', '#F0E68C', '#FF7F7F', '#7EC8E3',
+            '#FFDAB9', '#B5EAD7', '#C7CEEA', '#FFD1DC'
+        ],
+        LOCKED_COLOR: '#3a3f55',       // 잠긴 타일 색상
+        LOCKED_BORDER: '#555b75',      // 잠긴 타일 테두리
+        CURRENT_GLOW: '#FFD700',       // 현재 스테이지 글로우
+        PATH_COLOR: 'rgba(255, 255, 255, 0.15)', // 경로 선 색상
+        PATH_WIDTH: 4,                 // 경로 선 두께
+        BG_BOARD_COLOR: '#1a1f36'      // 보드 배경색
     },
 
     // =========================================
