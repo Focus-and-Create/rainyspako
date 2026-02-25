@@ -440,14 +440,18 @@ const Game = {
     updateMatchedState: function() {
         // 모드에 따라 비교 대상 결정
         const isEsToKo = this.state.mode === 'es-to-ko';
-        
+
+        // 정규화된 입력 (구두점·공백 제거)
+        const normInput = this.normalizeForMatch(this.currentInput);
+
         // 각 단어의 매칭 상태 업데이트
         this.activeWords.forEach(word => {
             // 비교할 정답
             const answer = isEsToKo ? word.korean : word.spanish;
-            
+            const normAnswer = this.normalizeForMatch(answer);
+
             // 현재 입력이 정답의 시작 부분과 일치하는지 확인
-            if (answer.startsWith(this.currentInput)) {
+            if (normInput.length > 0 && normAnswer.startsWith(normInput)) {
                 word.matched = this.currentInput;
             } else {
                 word.matched = '';
@@ -470,7 +474,7 @@ const Game = {
         // 정답인 단어 찾기
         const matchIndex = this.activeWords.findIndex(word => {
             const answer = isEsToKo ? word.korean : word.spanish;
-            return answer === this.currentInput;
+            return this.answersMatch(answer, this.currentInput);
         });
         
         if (matchIndex >= 0) {
@@ -491,9 +495,84 @@ const Game = {
     },
 
     // =========================================
+    // 답안 정규화 유틸리티
+    // =========================================
+
+    /**
+     * 스페인어 숫자 단어 ↔ 아라비아 숫자 매핑
+     */
+    SPANISH_NUMBERS: {
+        'cero': '0',
+        'uno': '1', 'una': '1',
+        'dos': '2', 'tres': '3', 'cuatro': '4', 'cinco': '5',
+        'seis': '6', 'siete': '7', 'ocho': '8', 'nueve': '9',
+        'diez': '10', 'once': '11', 'doce': '12', 'trece': '13',
+        'catorce': '14', 'quince': '15',
+        'dieciséis': '16', 'dieciseis': '16',
+        'diecisiete': '17', 'dieciocho': '18', 'diecinueve': '19',
+        'veinte': '20',
+        'veintiuno': '21', 'veintiún': '21', 'veintiun': '21',
+        'veintidós': '22', 'veintidos': '22',
+        'veintitrés': '23', 'veintitres': '23',
+        'veinticuatro': '24', 'veinticinco': '25',
+        'veintiséis': '26', 'veintiseis': '26',
+        'veintisiete': '27', 'veintiocho': '28', 'veintinueve': '29',
+        'treinta': '30', 'cuarenta': '40', 'cincuenta': '50',
+        'sesenta': '60', 'setenta': '70', 'ochenta': '80', 'noventa': '90',
+        'cien': '100', 'ciento': '100',
+        'doscientos': '200', 'doscientas': '200',
+        'trescientos': '300', 'trescientas': '300',
+        'cuatrocientos': '400', 'cuatrocientas': '400',
+        'quinientos': '500', 'quinientas': '500',
+        'seiscientos': '600', 'seiscientas': '600',
+        'setecientos': '700', 'setecientas': '700',
+        'ochocientos': '800', 'ochocientas': '800',
+        'novecientos': '900', 'novecientas': '900',
+        'mil': '1000'
+    },
+
+    /**
+     * 답안 정규화 (구두점 제거, 공백 정리, 소문자 변환)
+     * @param {string} text
+     * @returns {string}
+     */
+    normalizeForMatch: function(text) {
+        return text
+            .replace(/[¡¿!?.,;:'"]/g, '')  // 구두점 제거
+            .replace(/\s+/g, ' ')            // 여러 공백 → 단일 공백
+            .trim()
+            .toLowerCase();
+    },
+
+    /**
+     * 두 답안이 동일한지 비교 (정규화 + 숫자 변환 적용)
+     * @param {string} answer - 정답
+     * @param {string} input - 사용자 입력
+     * @returns {boolean}
+     */
+    answersMatch: function(answer, input) {
+        const normAnswer = this.normalizeForMatch(answer);
+        const normInput = this.normalizeForMatch(input);
+
+        // 정규화 후 일치
+        if (normAnswer === normInput) return true;
+
+        // 스페인어 숫자 단어 → 아라비아 숫자 비교
+        // 예: answer="dieciocho", input="18"
+        const answerAsDigit = this.SPANISH_NUMBERS[normAnswer];
+        if (answerAsDigit !== undefined && answerAsDigit === normInput) return true;
+
+        // 반대 방향: answer="18", input="dieciocho"
+        const inputAsDigit = this.SPANISH_NUMBERS[normInput];
+        if (inputAsDigit !== undefined && inputAsDigit === normAnswer) return true;
+
+        return false;
+    },
+
+    // =========================================
     // 정답/오답 처리
     // =========================================
-    
+
     /**
      * 정답 처리
      * @param {Object} word - 정답인 단어 오브젝트
