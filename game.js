@@ -729,16 +729,16 @@ const Game = {
         const W = CONFIG.CANVAS.WIDTH;
         const H = CONFIG.CANVAS.HEIGHT;
 
-        // 배경 그라데이션
+        // 배경 그라데이션 (밝고 발랄한 파스텔)
         const bgGrad = ctx.createLinearGradient(0, 0, 0, H);
-        bgGrad.addColorStop(0, '#0f172a');
-        bgGrad.addColorStop(0.5, '#111827');
-        bgGrad.addColorStop(1, '#1e293b');
+        bgGrad.addColorStop(0, '#fff9e7');
+        bgGrad.addColorStop(0.45, '#fff0f8');
+        bgGrad.addColorStop(1, '#eef4ff');
         ctx.fillStyle = bgGrad;
         ctx.fillRect(0, 0, W, H);
 
         // 미세한 격자 패턴 (깊이감)
-        ctx.strokeStyle = 'rgba(255, 255, 255, 0.015)';
+        ctx.strokeStyle = 'rgba(160, 100, 200, 0.04)';
         ctx.lineWidth = 1;
         for (let x = 0; x < W; x += 80) {
             ctx.beginPath();
@@ -750,13 +750,13 @@ const Game = {
         // 데스라인 표시 (그라데이션 경고 영역)
         const deathY = CONFIG.CANVAS.DEATH_LINE_Y;
         const dangerGrad = ctx.createLinearGradient(0, deathY - 40, 0, deathY);
-        dangerGrad.addColorStop(0, 'rgba(239, 68, 68, 0)');
-        dangerGrad.addColorStop(1, 'rgba(239, 68, 68, 0.06)');
+        dangerGrad.addColorStop(0, 'rgba(244, 67, 54, 0)');
+        dangerGrad.addColorStop(1, 'rgba(244, 67, 54, 0.09)');
         ctx.fillStyle = dangerGrad;
         ctx.fillRect(0, deathY - 40, W, 40);
 
         // 데스라인
-        ctx.strokeStyle = 'rgba(239, 68, 68, 0.25)';
+        ctx.strokeStyle = 'rgba(244, 67, 54, 0.3)';
         ctx.lineWidth = 1;
         ctx.setLineDash([8, 6]);
         ctx.beginPath();
@@ -798,20 +798,20 @@ const Game = {
             const capsuleY = word.y - capsuleH / 2;
             const capsuleR = capsuleH / 2;
 
-            // 캡슐 배경색 결정
+            // 캡슐 배경색 결정 (밝은 테마)
             let bgColor, borderColor, textColor;
             if (word.isReview) {
-                bgColor = 'rgba(251, 191, 36, 0.15)';
-                borderColor = 'rgba(251, 191, 36, 0.5)';
-                textColor = '#fbbf24';
+                bgColor = 'rgba(255, 193, 7, 0.18)';
+                borderColor = 'rgba(255, 152, 0, 0.65)';
+                textColor = '#e65100';
             } else if (word.matched.length > 0) {
-                bgColor = 'rgba(16, 185, 129, 0.15)';
-                borderColor = 'rgba(16, 185, 129, 0.6)';
-                textColor = '#34d399';
+                bgColor = 'rgba(0, 184, 148, 0.15)';
+                borderColor = 'rgba(0, 184, 148, 0.7)';
+                textColor = '#00695c';
             } else {
-                bgColor = 'rgba(255, 255, 255, 0.06)';
-                borderColor = 'rgba(255, 255, 255, 0.12)';
-                textColor = '#f1f5f9';
+                bgColor = 'rgba(255, 255, 255, 0.82)';
+                borderColor = 'rgba(160, 100, 200, 0.38)';
+                textColor = '#1a1040';
             }
 
             // 캡슐 그리기 (둥근 사각형)
@@ -863,16 +863,16 @@ const Game = {
         ctx.arcTo(inputX, inputY - inputHeight / 2, inputX + radius, inputY - inputHeight / 2, radius);
         ctx.closePath();
 
-        ctx.fillStyle = 'rgba(15, 23, 42, 0.7)';
+        ctx.fillStyle = 'rgba(255, 255, 255, 0.88)';
         ctx.fill();
 
         // 테두리 (입력이 있으면 accent 색상)
         if (this.currentInput) {
-            ctx.strokeStyle = 'rgba(16, 185, 129, 0.5)';
-            ctx.lineWidth = 1.5;
+            ctx.strokeStyle = 'rgba(233, 30, 140, 0.55)';
+            ctx.lineWidth = 2;
         } else {
-            ctx.strokeStyle = 'rgba(255, 255, 255, 0.15)';
-            ctx.lineWidth = 1;
+            ctx.strokeStyle = 'rgba(160, 100, 200, 0.28)';
+            ctx.lineWidth = 1.5;
         }
         ctx.stroke();
 
@@ -882,11 +882,11 @@ const Game = {
 
         if (this.currentInput) {
             ctx.font = `bold ${CONFIG.RENDER.INPUT_FONT_SIZE}px ${CONFIG.RENDER.FONT_FAMILY}`;
-            ctx.fillStyle = '#f1f5f9';
+            ctx.fillStyle = '#1a1040';
             ctx.fillText(this.currentInput, W / 2, inputY);
         } else {
             ctx.font = `${CONFIG.RENDER.INPUT_FONT_SIZE - 4}px ${CONFIG.RENDER.FONT_FAMILY}`;
-            ctx.fillStyle = 'rgba(148, 163, 184, 0.5)';
+            ctx.fillStyle = 'rgba(155, 138, 176, 0.7)';
             const placeholder = this.state.mode === 'es-to-ko'
                 ? '한국어로 입력하세요'
                 : 'Escribe en español';

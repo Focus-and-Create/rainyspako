@@ -11,7 +11,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&display=swap" rel="stylesheet">
     
     <!-- 스타일시트 -->
-    <link rel="stylesheet" href="style.css?v=6">
+    <link rel="stylesheet" href="style.css?v=7">
 </head>
 <body>
     <!-- ========================================= -->
@@ -91,11 +91,27 @@
             </div>
         </div>
         
+        <!-- 특수문자 입력 바 -->
+        <div class="special-chars-bar" id="special-chars-bar">
+            <span class="special-chars-label">Esp:</span>
+            <button class="special-char-btn" data-char="á" title="á (Ctrl+A)">á</button>
+            <button class="special-char-btn" data-char="é" title="é (Ctrl+E)">é</button>
+            <button class="special-char-btn" data-char="í" title="í (Ctrl+I)">í</button>
+            <button class="special-char-btn" data-char="ó" title="ó (Ctrl+O)">ó</button>
+            <button class="special-char-btn" data-char="ú" title="ú (Ctrl+U)">ú</button>
+            <button class="special-char-btn" data-char="ü" title="ü">ü</button>
+            <button class="special-char-btn" data-char="ñ" title="ñ (Ctrl+N)">ñ</button>
+            <button class="special-char-btn" data-char="Ñ" title="Ñ (Ctrl+Shift+N)">Ñ</button>
+            <button class="special-char-btn" data-char="¡" title="¡">¡</button>
+            <button class="special-char-btn" data-char="¿" title="¿">¿</button>
+            <span class="special-chars-shortcut">Ctrl+N = ñ</span>
+        </div>
+
         <!-- 입력 필드 (모바일용) -->
         <div class="input-container">
-            <input 
-                type="text" 
-                id="input-field" 
+            <input
+                type="text"
+                id="input-field"
                 class="game-input"
                 placeholder="정답을 입력하세요"
                 autocomplete="off"
@@ -237,11 +253,11 @@
     <!-- ========================================= -->
     <!-- 스크립트 로드 (순서 중요) -->
     <!-- ========================================= -->
-    <script src="config.js?v=6"></script>
-    <script src="storage.js?v=6"></script>
-    <script src="word-manager.js?v=6"></script>
-    <script src="game.js?v=6"></script>
-    <script src="stage-map.js?v=6"></script>
-    <script src="main.js?v=6"></script>
+    <script src="config.js?v=7"></script>
+    <script src="storage.js?v=7"></script>
+    <script src="word-manager.js?v=7"></script>
+    <script src="game.js?v=7"></script>
+    <script src="stage-map.js?v=7"></script>
+    <script src="main.js?v=7"></script>
 </body>
 </html>

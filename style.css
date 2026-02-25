@@ -8,34 +8,34 @@
 /* CSS 변수 */
 /* ========================================= */
 :root {
-    /* 메인 컬러 - 깊은 우주/밤하늘 테마 */
-    --color-bg-dark: #080b1a;
-    --color-bg-medium: #111827;
-    --color-bg-light: #1e293b;
-    --color-bg-elevated: #253349;
+    /* 메인 컬러 - 밝고 발랄한 파스텔 테마 */
+    --color-bg-dark: #e8f4fd;
+    --color-bg-medium: #f5f0ff;
+    --color-bg-light: #fff0f7;
+    --color-bg-elevated: #ffffff;
 
-    /* 텍스트 */
-    --color-text-primary: #f1f5f9;
-    --color-text-secondary: #94a3b8;
-    --color-text-muted: #475569;
+    /* 텍스트 (밝은 배경에 어두운 글씨) */
+    --color-text-primary: #1a1040;
+    --color-text-secondary: #4a3870;
+    --color-text-muted: #9b8ab0;
 
-    /* 포인트 컬러 (에메랄드 그린) */
-    --color-accent: #10b981;
-    --color-accent-light: #34d399;
-    --color-accent-dark: #059669;
-    --color-accent-glow: rgba(16, 185, 129, 0.3);
+    /* 포인트 컬러 (코랄 핑크 - 활기찬) */
+    --color-accent: #e91e8c;
+    --color-accent-light: #ff5cb8;
+    --color-accent-dark: #c2006e;
+    --color-accent-glow: rgba(233, 30, 140, 0.25);
 
     /* 상태 컬러 */
-    --color-success: #22c55e;
-    --color-warning: #fbbf24;
-    --color-danger: #ef4444;
-    --color-info: #3b82f6;
+    --color-success: #00b894;
+    --color-warning: #ff9800;
+    --color-danger: #f44336;
+    --color-info: #2196f3;
 
     /* 그라데이션 */
-    --gradient-accent: linear-gradient(135deg, #10b981, #06b6d4);
-    --gradient-gold: linear-gradient(135deg, #fbbf24, #f59e0b);
-    --gradient-danger: linear-gradient(135deg, #ef4444, #f97316);
-    --gradient-bg: linear-gradient(180deg, #080b1a 0%, #0f172a 50%, #111827 100%);
+    --gradient-accent: linear-gradient(135deg, #e91e8c, #ff5722);
+    --gradient-gold: linear-gradient(135deg, #ffc107, #ff9800);
+    --gradient-danger: linear-gradient(135deg, #f44336, #ff5722);
+    --gradient-bg: linear-gradient(135deg, #fff9c4 0%, #fce4ec 35%, #e3f2fd 70%, #e8f5e9 100%);
 
     /* 폰트 */
     --font-family: 'Noto Sans KR', -apple-system, BlinkMacSystemFont, sans-serif;
@@ -49,13 +49,13 @@
     --spacing-2xl: 48px;
 
     /* 반응형 캔버스 크기 */
-    --canvas-width: min(800px, 100vw);
-    --canvas-height: min(600px, 80vh);
+    --canvas-width: min(1000px, 100vw);
+    --canvas-height: min(700px, 85vh);
 
     /* 그림자 */
-    --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.3);
-    --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.4);
-    --shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.5);
+    --shadow-sm: 0 1px 2px rgba(100, 60, 140, 0.15);
+    --shadow-md: 0 4px 12px rgba(100, 60, 140, 0.18);
+    --shadow-lg: 0 8px 24px rgba(100, 60, 140, 0.22);
     --shadow-glow: 0 0 20px var(--color-accent-glow);
 
     /* 라운딩 */
@@ -87,6 +87,7 @@ body {
 body {
     font-family: var(--font-family);
     background: var(--gradient-bg);
+    background-attachment: fixed;
     color: var(--color-text-primary);
     line-height: 1.5;
     -webkit-font-smoothing: antialiased;
@@ -163,8 +164,8 @@ body::-webkit-scrollbar,
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
-    filter: blur(20px);
-    opacity: 0.5;
+    filter: blur(18px);
+    opacity: 0.4;
     z-index: -1;
 }
 
@@ -217,13 +218,13 @@ body::-webkit-scrollbar,
     width: 100%;
     height: 100%;
     background-image:
-        linear-gradient(180deg, transparent 90%, rgba(16, 185, 129, 0.03) 100%),
+        linear-gradient(180deg, transparent 90%, rgba(233, 30, 140, 0.04) 100%),
         repeating-linear-gradient(
             90deg,
             transparent,
             transparent 98px,
-            rgba(16, 185, 129, 0.02) 98px,
-            rgba(16, 185, 129, 0.02) 100px
+            rgba(233, 30, 140, 0.025) 98px,
+            rgba(233, 30, 140, 0.025) 100px
         );
     pointer-events: none;
     animation: rain-fall 0.8s linear infinite;
@@ -313,16 +314,17 @@ a {
     width: 180px;
     min-width: 140px;
     flex-shrink: 0;
-    background: linear-gradient(180deg, rgba(17, 24, 39, 0.95), rgba(30, 41, 59, 0.9));
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.9), rgba(240, 230, 255, 0.85));
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
-    border: 1px solid rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(180, 140, 220, 0.25);
     border-radius: var(--radius-md);
     padding: var(--spacing-sm);
     display: flex;
     flex-direction: column;
     overflow-y: auto;
     margin: var(--spacing-xs);
+    box-shadow: var(--shadow-sm);
 }
 
 .word-panel-title {
@@ -353,7 +355,7 @@ a {
 }
 
 .word-pair:hover {
-    background-color: rgba(255, 255, 255, 0.05);
+    background-color: rgba(233, 30, 140, 0.07);
 }
 
 .word-es {
@@ -386,10 +388,11 @@ a {
     justify-content: space-between;
     align-items: center;
     padding: var(--spacing-sm) var(--spacing-lg);
-    background: linear-gradient(180deg, rgba(17, 24, 39, 0.98), rgba(17, 24, 39, 0.85));
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.92), rgba(255, 240, 250, 0.85));
     backdrop-filter: blur(8px);
     -webkit-backdrop-filter: blur(8px);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    border-bottom: 1px solid rgba(233, 30, 140, 0.12);
+    box-shadow: 0 2px 8px rgba(100, 60, 140, 0.1);
 }
 
 .game-stat {
@@ -474,10 +477,11 @@ a {
     width: 100%;
     max-width: var(--canvas-width);
     padding: var(--spacing-md) var(--spacing-lg);
-    background: linear-gradient(0deg, rgba(17, 24, 39, 0.98), rgba(17, 24, 39, 0.85));
+    background: linear-gradient(0deg, rgba(255, 255, 255, 0.92), rgba(255, 240, 250, 0.85));
     backdrop-filter: blur(8px);
     -webkit-backdrop-filter: blur(8px);
-    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    border-top: 1px solid rgba(233, 30, 140, 0.12);
+    box-shadow: 0 -2px 8px rgba(100, 60, 140, 0.08);
 }
 
 .game-input {
@@ -486,24 +490,86 @@ a {
     font-size: 18px;
     font-family: var(--font-family);
     color: var(--color-text-primary);
-    background-color: var(--color-bg-light);
-    border: 2px solid rgba(255, 255, 255, 0.08);
+    background-color: #ffffff;
+    border: 2px solid rgba(180, 140, 220, 0.3);
     border-radius: var(--radius-lg);
     outline: none;
     text-align: center;
     transition: all 0.25s ease;
     letter-spacing: 0.5px;
+    box-shadow: var(--shadow-sm);
 }
 
 .game-input:focus {
     border-color: var(--color-accent);
-    box-shadow: 0 0 0 3px var(--color-accent-glow), var(--shadow-md);
-    background-color: var(--color-bg-elevated);
+    box-shadow: 0 0 0 3px var(--color-accent-glow), var(--shadow-sm);
+    background-color: #ffffff;
 }
 
 .game-input::placeholder {
     color: var(--color-text-muted);
     font-size: 15px;
+}
+
+/* ========================================= */
+/* 특수문자 입력 바 */
+/* ========================================= */
+.special-chars-bar {
+    width: 100%;
+    max-width: var(--canvas-width);
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-xs);
+    padding: 6px var(--spacing-lg) 4px;
+    background: linear-gradient(0deg, rgba(255, 240, 250, 0.9), rgba(255, 248, 255, 0.85));
+    border-top: 1px solid rgba(233, 30, 140, 0.1);
+    flex-wrap: nowrap;
+    overflow-x: auto;
+}
+
+.special-chars-label {
+    font-size: 10px;
+    font-weight: 700;
+    color: var(--color-text-muted);
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+    white-space: nowrap;
+    flex-shrink: 0;
+}
+
+.special-char-btn {
+    padding: 4px 10px;
+    font-size: 15px;
+    font-family: var(--font-family);
+    font-weight: 700;
+    color: var(--color-accent-dark);
+    background: rgba(255, 255, 255, 0.9);
+    border: 1.5px solid rgba(233, 30, 140, 0.3);
+    border-radius: var(--radius-sm);
+    cursor: pointer;
+    transition: all 0.15s ease;
+    flex-shrink: 0;
+    line-height: 1.4;
+}
+
+.special-char-btn:hover {
+    background: var(--color-accent);
+    color: #ffffff;
+    border-color: var(--color-accent);
+    transform: translateY(-1px);
+    box-shadow: 0 3px 8px rgba(233, 30, 140, 0.3);
+}
+
+.special-char-btn:active {
+    transform: translateY(0);
+}
+
+.special-chars-shortcut {
+    font-size: 9px;
+    color: var(--color-text-muted);
+    margin-left: auto;
+    white-space: nowrap;
+    flex-shrink: 0;
 }
 
 /* ========================================= */
@@ -591,11 +657,12 @@ a {
     gap: var(--spacing-sm);
     min-width: 110px;
     padding: var(--spacing-md) var(--spacing-lg);
-    background: rgba(30, 41, 59, 0.6);
-    border: 1px solid rgba(255, 255, 255, 0.05);
+    background: rgba(255, 255, 255, 0.75);
+    border: 1px solid rgba(180, 140, 220, 0.25);
     border-radius: var(--radius-lg);
     backdrop-filter: blur(8px);
     -webkit-backdrop-filter: blur(8px);
+    box-shadow: var(--shadow-sm);
 }
 
 .result-stat-label {
@@ -657,14 +724,14 @@ a {
 }
 
 .btn-secondary {
-    background-color: var(--color-bg-light);
+    background-color: #f5f0ff;
     color: var(--color-text-primary);
-    border: 1px solid rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(180, 140, 220, 0.3);
 }
 
 .btn-secondary:hover {
-    background-color: var(--color-bg-elevated);
-    border-color: rgba(255, 255, 255, 0.15);
+    background-color: #ede5ff;
+    border-color: rgba(233, 30, 140, 0.3);
 }
 
 .btn-large {
@@ -684,8 +751,8 @@ a {
     font-size: 13px;
     font-weight: 700;
     color: var(--color-text-secondary);
-    background-color: rgba(30, 41, 59, 0.6);
-    border: 1px solid rgba(255, 255, 255, 0.08);
+    background-color: rgba(255, 255, 255, 0.75);
+    border: 1px solid rgba(180, 140, 220, 0.3);
     border-radius: var(--radius-md);
     cursor: pointer;
     transition: all 0.2s ease;
@@ -694,9 +761,9 @@ a {
 }
 
 .icon-btn:hover {
-    background-color: var(--color-bg-elevated);
-    color: var(--color-text-primary);
-    border-color: rgba(255, 255, 255, 0.15);
+    background-color: #ffffff;
+    color: var(--color-accent);
+    border-color: var(--color-accent);
 }
 
 /* ========================================= */
@@ -736,17 +803,17 @@ a {
     width: 90%;
     max-width: 400px;
     padding: var(--spacing-xl) var(--spacing-xl) var(--spacing-lg);
-    background: linear-gradient(180deg, rgba(17, 24, 39, 0.98), rgba(30, 41, 59, 0.95));
+    background: linear-gradient(180deg, #ffffff, #fdf4ff);
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
-    border: 1px solid rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(233, 30, 140, 0.15);
     border-radius: var(--radius-xl);
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: var(--spacing-lg);
     z-index: 101;
-    box-shadow: var(--shadow-lg), 0 0 60px rgba(0, 0, 0, 0.4);
+    box-shadow: var(--shadow-lg), 0 0 40px rgba(233, 30, 140, 0.1);
     animation: modal-slide-up 0.3s ease-out;
 }
 
@@ -772,7 +839,7 @@ a {
     justify-content: center;
     font-size: 16px;
     color: var(--color-text-muted);
-    background: rgba(255, 255, 255, 0.05);
+    background: rgba(180, 140, 220, 0.1);
     border: none;
     border-radius: var(--radius-sm);
     cursor: pointer;
@@ -780,8 +847,8 @@ a {
 }
 
 .modal-close:hover {
-    color: var(--color-text-primary);
-    background: rgba(255, 255, 255, 0.1);
+    color: var(--color-accent);
+    background: rgba(233, 30, 140, 0.1);
 }
 
 .modal-title {
@@ -829,15 +896,15 @@ a {
     font-size: 15px;
     font-family: var(--font-family);
     color: var(--color-text-primary);
-    background-color: var(--color-bg-light);
-    border: 2px solid rgba(255, 255, 255, 0.08);
+    background-color: #ffffff;
+    border: 2px solid rgba(180, 140, 220, 0.3);
     border-radius: var(--radius-md);
     outline: none;
     cursor: pointer;
     transition: all 0.2s ease;
     -webkit-appearance: none;
     appearance: none;
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' fill='%2394a3b8' viewBox='0 0 16 16'%3E%3Cpath d='M8 11L3 6h10z'/%3E%3C/svg%3E");
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' fill='%23e91e8c' viewBox='0 0 16 16'%3E%3Cpath d='M8 11L3 6h10z'/%3E%3C/svg%3E");
     background-repeat: no-repeat;
     background-position: right 12px center;
     padding-right: 36px;
@@ -849,7 +916,7 @@ a {
 }
 
 .mode-select option {
-    background-color: var(--color-bg-medium);
+    background-color: #ffffff;
     color: var(--color-text-primary);
 }
 

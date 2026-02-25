@@ -169,13 +169,47 @@ const App = {
             this.elements.inputField.addEventListener('input', (e) => {
                 Game.setInput(e.target.value);
             });
-            
-            // 엔터 키 처리
+
+            // 엔터 키 및 특수문자 단축키 처리
             this.elements.inputField.addEventListener('keydown', (e) => {
                 if (e.key === 'Enter') {
                     e.preventDefault();
                     Game.checkAnswer();
                     this.elements.inputField.value = '';
+                    return;
+                }
+
+                // 특수문자 단축키 (스페인어 특수기호)
+                if (e.ctrlKey) {
+                    const specialCharMap = {
+                        'n': e.shiftKey ? 'Ñ' : 'ñ',
+                        'a': 'á',
+                        'e': 'é',
+                        'i': 'í',
+                        'o': 'ó',
+                        'u': e.shiftKey ? 'ü' : 'ú',
+                    };
+                    const lowerKey = e.key.toLowerCase();
+                    if (specialCharMap[lowerKey]) {
+                        e.preventDefault();
+                        this.insertSpecialChar(specialCharMap[lowerKey]);
+                    }
+                }
+            });
+        }
+
+        // 특수문자 버튼 바 이벤트
+        const specialCharBar = document.getElementById('special-chars-bar');
+        if (specialCharBar) {
+            specialCharBar.addEventListener('click', (e) => {
+                const btn = e.target.closest('.special-char-btn');
+                if (btn) {
+                    const char = btn.dataset.char;
+                    this.insertSpecialChar(char);
+                    // 포커스를 입력 필드로 복원
+                    if (this.elements.inputField) {
+                        this.elements.inputField.focus();
+                    }
                 }
             });
         }
@@ -522,19 +556,42 @@ const App = {
             this.togglePause();
             return;
         }
-        
+
         // 일시정지 중에는 다른 입력 무시
         if (Game.state.isPaused) {
             return;
         }
-        
+
         // 입력 필드가 포커스되어 있으면 직접 처리하지 않음
         if (document.activeElement === this.elements.inputField) {
             return;
         }
-        
+
         // 게임에 키 입력 전달
         Game.handleKeyInput(e.key);
+    },
+
+    /**
+     * 특수문자를 현재 입력 필드에 삽입
+     * @param {string} char - 삽입할 특수문자
+     */
+    insertSpecialChar: function(char) {
+        const field = this.elements.inputField;
+        if (!field) return;
+
+        const start = field.selectionStart;
+        const end = field.selectionEnd;
+        const current = field.value;
+
+        // 커서 위치에 문자 삽입
+        field.value = current.slice(0, start) + char + current.slice(end);
+
+        // 커서를 삽입된 문자 뒤로 이동
+        const newPos = start + char.length;
+        field.setSelectionRange(newPos, newPos);
+
+        // Game 상태 동기화
+        Game.setInput(field.value);
     },
 
     // =========================================
