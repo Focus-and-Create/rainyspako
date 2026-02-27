@@ -273,18 +273,19 @@ const StageMap = {
         const W = CONFIG.CANVAS.WIDTH;
         const H = CONFIG.CANVAS.HEIGHT;
 
-        // 배경
-        const bg = ctx.createLinearGradient(0, 0, 0, H);
-        bg.addColorStop(0, '#151932');
-        bg.addColorStop(0.5, '#1a1f3a');
-        bg.addColorStop(1, '#12162e');
+        // 밝고 발랄한 파스텔 배경 (게임 화면과 동일 톤)
+        const bg = ctx.createLinearGradient(0, 0, W, H);
+        bg.addColorStop(0,    '#fff9c4');
+        bg.addColorStop(0.35, '#fce4ec');
+        bg.addColorStop(0.7,  '#e3f2fd');
+        bg.addColorStop(1,    '#e8f5e9');
         ctx.fillStyle = bg;
         ctx.fillRect(0, 0, W, H);
 
-        // 미세 격자
+        // 미세 격자 (밝은 배경에 어두운 점)
         ctx.save();
-        ctx.globalAlpha = 0.025;
-        ctx.fillStyle = '#ffffff';
+        ctx.globalAlpha = 0.035;
+        ctx.fillStyle = 'rgba(100, 60, 160, 1)';
         const gs = 40;
         for (let gx = 0; gx < W; gx += gs) {
             for (let gy = 0; gy < H; gy += gs) {
@@ -295,10 +296,10 @@ const StageMap = {
         }
         ctx.restore();
 
-        // 분위기 오브
+        // 분위기 오브 (월드 컬러 은은하게)
         ctx.save();
         const orb = ctx.createRadialGradient(W * 0.5, H * 0.5, 30, W * 0.5, H * 0.5, 350);
-        orb.addColorStop(0, world.color + '18');
+        orb.addColorStop(0, world.color + '30');
         orb.addColorStop(1, world.color + '00');
         ctx.fillStyle = orb;
         ctx.fillRect(0, 0, W, H);
@@ -320,14 +321,14 @@ const StageMap = {
         ctx.save();
         this._roundRect(ctx, bi.innerX, bi.innerY - this.scrollY, bi.innerW, bi.innerH, 14);
         const centerBg = ctx.createRadialGradient(cx, cy, 20, cx, cy, bi.innerW * 0.6);
-        centerBg.addColorStop(0, 'rgba(255, 255, 255, 0.06)');
-        centerBg.addColorStop(1, 'rgba(255, 255, 255, 0.01)');
+        centerBg.addColorStop(0, 'rgba(255, 255, 255, 0.65)');
+        centerBg.addColorStop(1, 'rgba(255, 255, 255, 0.2)');
         ctx.fillStyle = centerBg;
         ctx.fill();
 
         // 점선 테두리
         ctx.setLineDash([6, 4]);
-        ctx.strokeStyle = 'rgba(255, 255, 255, 0.08)';
+        ctx.strokeStyle = 'rgba(160, 140, 200, 0.3)';
         ctx.lineWidth = 1.5;
         ctx.stroke();
         ctx.setLineDash([]);
@@ -357,14 +358,14 @@ const StageMap = {
 
         // 월드 이름
         ctx.font = `bold 24px ${CONFIG.RENDER.FONT_FAMILY}`;
-        ctx.fillStyle = '#e2e8f0';
+        ctx.fillStyle = '#1a1040';
         ctx.textAlign = 'center';
         ctx.textBaseline = 'middle';
         ctx.fillText(world.name, cx, cy - 5);
 
         // 한국어 부제
         ctx.font = `14px ${CONFIG.RENDER.FONT_FAMILY}`;
-        ctx.fillStyle = '#94a3b8';
+        ctx.fillStyle = '#4a3870';
         ctx.fillText(world.nameKo, cx, cy + 22);
 
         // 진행률
@@ -383,7 +384,7 @@ const StageMap = {
 
         // 배경
         this._roundRect(ctx, barX, barY, barW, barH, 4);
-        ctx.fillStyle = 'rgba(255, 255, 255, 0.08)';
+        ctx.fillStyle = 'rgba(160, 140, 200, 0.2)';
         ctx.fill();
 
         // 채움
@@ -399,7 +400,7 @@ const StageMap = {
 
         // 진행률 텍스트
         ctx.font = `bold 12px ${CONFIG.RENDER.FONT_FAMILY}`;
-        ctx.fillStyle = '#64748b';
+        ctx.fillStyle = '#9b8ab0';
         ctx.textAlign = 'center';
         ctx.fillText(`${clearedCount} / ${totalStages}`, cx, barY + barH + 16);
 
@@ -454,7 +455,7 @@ const StageMap = {
                 ctx.lineWidth = 3;
                 ctx.setLineDash([]);
             } else {
-                ctx.strokeStyle = 'rgba(255, 255, 255, 0.1)';
+                ctx.strokeStyle = 'rgba(160, 140, 200, 0.3)';
                 ctx.lineWidth = 2;
                 ctx.setLineDash([6, 4]);
             }
@@ -621,10 +622,11 @@ const StageMap = {
     renderHeaderOverlay: function() {
         const ctx = this.ctx;
         const W = CONFIG.CANVAS.WIDTH;
+        // 배경 상단 색상(#fff9c4)에 맞춘 밝은 오버레이
         const h = ctx.createLinearGradient(0, 0, 0, 75);
-        h.addColorStop(0, 'rgba(21,25,50,0.98)');
-        h.addColorStop(0.7, 'rgba(21,25,50,0.8)');
-        h.addColorStop(1, 'rgba(21,25,50,0)');
+        h.addColorStop(0,    'rgba(255, 249, 200, 0.97)');
+        h.addColorStop(0.65, 'rgba(255, 249, 200, 0.75)');
+        h.addColorStop(1,    'rgba(255, 249, 200, 0)');
         ctx.fillStyle = h;
         ctx.fillRect(0, 0, W, 75);
     },
@@ -640,7 +642,7 @@ const StageMap = {
         ctx.fillText(`World ${world.id}`, W / 2, 24);
 
         ctx.font = `11px ${CONFIG.RENDER.FONT_FAMILY}`;
-        ctx.fillStyle = '#64748b';
+        ctx.fillStyle = '#4a3870';
         ctx.fillText(world.nameKo, W / 2, 42);
 
         if (this.currentWorldId > 1) this._renderArrowBtn(ctx, 35, 28, 'left');
@@ -790,9 +792,9 @@ const StageMap = {
         ctx.save();
         ctx.beginPath();
         ctx.arc(x, y, 16, 0, Math.PI * 2);
-        ctx.fillStyle = 'rgba(255,255,255,0.08)';
+        ctx.fillStyle = 'rgba(100, 60, 160, 0.12)';
         ctx.fill();
-        ctx.strokeStyle = 'rgba(255,255,255,0.15)';
+        ctx.strokeStyle = 'rgba(100, 60, 160, 0.25)';
         ctx.lineWidth = 1;
         ctx.stroke();
         ctx.beginPath();
@@ -805,7 +807,7 @@ const StageMap = {
             ctx.lineTo(x + 4, y);
             ctx.lineTo(x - 4, y + 5);
         }
-        ctx.strokeStyle = '#94a3b8';
+        ctx.strokeStyle = '#4a3870';
         ctx.lineWidth = 2;
         ctx.lineCap = 'round';
         ctx.lineJoin = 'round';
@@ -820,14 +822,14 @@ const StageMap = {
         ctx.save();
         const s = 18;
         this._roundRect(ctx, x - s / 2, y - s / 2, s, s, 3);
-        ctx.fillStyle = 'rgba(255,255,255,0.06)';
+        ctx.fillStyle = 'rgba(160, 140, 200, 0.18)';
         ctx.fill();
-        ctx.strokeStyle = 'rgba(255,255,255,0.1)';
+        ctx.strokeStyle = 'rgba(160, 140, 200, 0.3)';
         ctx.lineWidth = 1;
         ctx.stroke();
 
         // 주사위 점
-        ctx.fillStyle = 'rgba(255,255,255,0.2)';
+        ctx.fillStyle = 'rgba(100, 60, 160, 0.35)';
         const dots = [
             [x - 3, y - 3], [x + 3, y - 3],
             [x, y],
