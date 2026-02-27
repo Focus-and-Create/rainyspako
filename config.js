@@ -114,7 +114,8 @@ const CONFIG = {
         PROGRESS: 'spanish_rain_progress',
         WRONG_WORDS: 'spanish_rain_wrong_words',
         STATS: 'spanish_rain_stats',
-        SETTINGS: 'spanish_rain_settings'
+        SETTINGS: 'spanish_rain_settings',
+        PROFILE: 'spanish_rain_profile'
     }
 };
 
