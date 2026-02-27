@@ -11,9 +11,12 @@ const WordManager = {
     
     /** @type {Object<string, Array>} 월드별 로드된 단어 데이터 */
     _wordData: {},
-    
+
     /** @type {boolean} 데이터 로드 완료 여부 */
     _isLoaded: false,
+
+    /** @type {Object<string, string>} es → en 빠른 조회 맵 */
+    _enMap: {},
 
     // =========================================
     // 데이터 로딩
@@ -52,6 +55,18 @@ const WordManager = {
 
             if (loaded === 0) {
                 throw new Error('로드된 월드 데이터 없음');
+            }
+
+            // es→en 빠른 조회 맵 빌드
+            this._enMap = {};
+            for (const worldId in this._wordData) {
+                for (const stage of this._wordData[worldId]) {
+                    for (const word of stage.words) {
+                        if (word.en && !this._enMap[word.es]) {
+                            this._enMap[word.es] = word.en;
+                        }
+                    }
+                }
             }
 
             this._isLoaded = true;
@@ -161,6 +176,7 @@ const WordManager = {
         const pool = stageWords.map(word => ({
             es: word.es,
             ko: word.ko,
+            en: word.en || this._enMap[word.es] || '',
             isReview: false
         }));
 
@@ -182,6 +198,7 @@ const WordManager = {
                     pool.push({
                         es: word.es,
                         ko: word.ko,
+                        en: word.en || this._enMap[word.es] || '',
                         isReview: true
                     });
                 }
@@ -191,12 +208,13 @@ const WordManager = {
         // 다른 스테이지에서 틀린 단어도 섞기 (간격 반복 학습)
         wrongWords.forEach(w => {
             if (!stageWordSet.has(w.es)) {
-                // 틀린 횟수에 비례하여 추가 (최소 1, 최대 3)
                 const count = Math.min(Math.max(1, w.wrongCount), 3);
+                const en = this._enMap[w.es] || '';
                 for (let i = 0; i < count; i++) {
                     pool.push({
                         es: w.es,
                         ko: w.ko,
+                        en: en,
                         isReview: true
                     });
                 }
@@ -274,6 +292,7 @@ const WordManager = {
         return bossWords.map((word) => ({
             es: word.es,
             ko: word.ko,
+            en: word.en || this._enMap[word.es] || '',
             isReview: true
         }));
     },
@@ -299,15 +318,17 @@ const WordManager = {
             // 기본 1회 + 틀린 횟수만큼 추가
             const count = 1 + word.wrongCount;
             
+            const en = this._enMap[word.es] || '';
             for (let i = 0; i < count; i++) {
                 pool.push({
                     es: word.es,
                     ko: word.ko,
+                    en: en,
                     isReview: true
                 });
             }
         });
-        
+
         return pool;
     },
 

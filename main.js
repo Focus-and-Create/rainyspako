@@ -569,9 +569,15 @@ const App = {
         const leftWords = words.slice(0, mid);
         const rightWords = words.slice(mid);
 
-        const buildHTML = (wordArr) => wordArr.map(w =>
-            `<div class="word-pair"><span class="word-es">${w.es}</span><span class="word-arrow">→</span><span class="word-ko">${w.ko}</span></div>`
-        ).join('');
+        const mode = this.currentMode || 'es-to-ko';
+        const buildHTML = (wordArr) => wordArr.map(w => {
+            let left, right;
+            if (mode === 'es-to-ko') { left = w.es; right = w.ko; }
+            else if (mode === 'ko-to-es') { left = w.ko; right = w.es; }
+            else if (mode === 'es-to-en') { left = w.es; right = w.en || ''; }
+            else { left = w.en || ''; right = w.es; } // en-to-es
+            return `<div class="word-pair"><span class="word-es">${left}</span><span class="word-arrow">→</span><span class="word-ko">${right}</span></div>`;
+        }).join('');
 
         leftList.innerHTML = buildHTML(leftWords);
         rightList.innerHTML = buildHTML(rightWords);

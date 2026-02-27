@@ -10,43 +10,53 @@
       "words": [
         {
           "es": "tiempo libre",
-          "ko": "여가 시간"
+          "ko": "여가 시간",
+          "en": "free time"
         },
         {
           "es": "ocio",
-          "ko": "여가"
+          "ko": "여가",
+          "en": "leisure"
         },
         {
           "es": "pasatiempo",
-          "ko": "취미"
+          "ko": "취미",
+          "en": "pastime"
         },
         {
           "es": "diversión",
-          "ko": "재미"
+          "ko": "재미",
+          "en": "fun"
         },
         {
           "es": "entretenimiento",
-          "ko": "오락"
+          "ko": "오락",
+          "en": "entertainment"
         },
         {
           "es": "descanso",
-          "ko": "휴식"
+          "ko": "휴식",
+          "en": "rest"
         },
         {
           "es": "relajación",
-          "ko": "휴양"
+          "ko": "휴양",
+          "en": "relaxation"
         },
         {
           "es": "vacaciones",
-          "ko": "휴가"
+          "ko": "휴가",
+          "en": "vacation"
         },
         {
           "es": "fin de semana",
-          "ko": "주말"
+          "ko": "주말",
+          "en": "weekend"
         },
         {
           "es": "actividad",
-          "ko": "활동"
+          "ko": "활동",
+          "en": "activity"
         }
       ]
     },
@@ -57,43 +67,53 @@
       "words": [
         {
           "es": "afición",
-          "ko": "취미 활동"
+          "ko": "취미 활동",
+          "en": "hobby"
         },
         {
           "es": "recreo",
-          "ko": "레크리에이션"
+          "ko": "레크리에이션",
+          "en": "recess"
         },
         {
           "es": "juego",
-          "ko": "놀이"
+          "ko": "놀이",
+          "en": "game"
         },
         {
           "es": "aventura",
-          "ko": "모험"
+          "ko": "모험",
+          "en": "adventure"
         },
         {
           "es": "experiencia",
-          "ko": "경험"
+          "ko": "경험",
+          "en": "experience"
         },
         {
           "es": "fútbol",
-          "ko": "축구"
+          "ko": "축구",
+          "en": "soccer"
         },
         {
           "es": "baloncesto",
-          "ko": "농구"
+          "ko": "농구",
+          "en": "basketball"
         },
         {
           "es": "béisbol",
-          "ko": "야구"
+          "ko": "야구",
+          "en": "baseball"
         },
         {
           "es": "voleibol",
-          "ko": "배구"
+          "ko": "배구",
+          "en": "volleyball"
         },
         {
           "es": "tenis",
-          "ko": "테니스"
+          "ko": "테니스",
+          "en": "tennis"
         }
       ]
     },
@@ -104,43 +124,53 @@
       "words": [
         {
           "es": "golf",
-          "ko": "골프"
+          "ko": "골프",
+          "en": "golf"
         },
         {
           "es": "rugby",
-          "ko": "럭비"
+          "ko": "럭비",
+          "en": "rugby"
         },
         {
           "es": "bádminton",
-          "ko": "배드민턴"
+          "ko": "배드민턴",
+          "en": "badminton"
         },
         {
           "es": "ping-pong",
-          "ko": "탁구"
+          "ko": "탁구",
+          "en": "ping pong"
         },
         {
           "es": "balonmano",
-          "ko": "핸드볼"
+          "ko": "핸드볼",
+          "en": "handball"
         },
         {
           "es": "polo acuático",
-          "ko": "수구"
+          "ko": "수구",
+          "en": "water polo"
         },
         {
           "es": "pelota",
-          "ko": "공"
+          "ko": "공",
+          "en": "ball"
         },
         {
           "es": "portería",
-          "ko": "골대"
+          "ko": "골대",
+          "en": "goal"
         },
         {
           "es": "cancha",
-          "ko": "경기장"
+          "ko": "경기장",
+          "en": "court"
         },
         {
           "es": "equipo",
-          "ko": "팀"
+          "ko": "팀",
+          "en": "team"
         }
       ]
     },
@@ -151,43 +181,53 @@
       "words": [
         {
           "es": "natación",
-          "ko": "수영"
+          "ko": "수영",
+          "en": "swimming"
         },
         {
           "es": "atletismo",
-          "ko": "육상"
+          "ko": "육상",
+          "en": "athletics"
         },
         {
           "es": "ciclismo",
-          "ko": "사이클"
+          "ko": "사이클",
+          "en": "cycling"
         },
         {
           "es": "boxeo",
-          "ko": "복싱"
+          "ko": "복싱",
+          "en": "boxing"
         },
         {
           "es": "esgrima",
-          "ko": "펜싱"
+          "ko": "펜싱",
+          "en": "fencing"
         },
         {
           "es": "gimnasia",
-          "ko": "체조"
+          "ko": "체조",
+          "en": "gymnastics"
         },
         {
           "es": "patinaje",
-          "ko": "스케이팅"
+          "ko": "스케이팅",
+          "en": "skating"
         },
         {
           "es": "esquí",
-          "ko": "스키"
+          "ko": "스키",
+          "en": "skiing"
         },
         {
           "es": "judo",
-          "ko": "유도"
+          "ko": "유도",
+          "en": "judo"
         },
         {
           "es": "taekwondo",
-          "ko": "태권도"
+          "ko": "태권도",
+          "en": "taekwondo"
         }
       ]
     },
@@ -198,43 +238,53 @@
       "words": [
         {
           "es": "tiro con arco",
-          "ko": "양궁"
+          "ko": "양궁",
+          "en": "archery"
         },
         {
           "es": "halterofilia",
-          "ko": "역도"
+          "ko": "역도",
+          "en": "weightlifting"
         },
         {
           "es": "lucha",
-          "ko": "레슬링"
+          "ko": "레슬링",
+          "en": "wrestling"
         },
         {
           "es": "escalada",
-          "ko": "암벽 등반"
+          "ko": "암벽 등반",
+          "en": "rock climbing"
         },
         {
           "es": "maratón",
-          "ko": "마라톤"
+          "ko": "마라톤",
+          "en": "marathon"
         },
         {
           "es": "ejercicio",
-          "ko": "운동"
+          "ko": "운동",
+          "en": "exercise"
         },
         {
           "es": "gimnasio",
-          "ko": "체육관"
+          "ko": "체육관",
+          "en": "gym"
         },
         {
           "es": "yoga",
-          "ko": "요가"
+          "ko": "요가",
+          "en": "yoga"
         },
         {
           "es": "pilates",
-          "ko": "필라테스"
+          "ko": "필라테스",
+          "en": "pilates"
         },
         {
           "es": "pesas",
-          "ko": "덤벨"
+          "ko": "덤벨",
+          "en": "weights"
         }
       ]
     },
@@ -245,43 +295,53 @@
       "words": [
         {
           "es": "cinta de correr",
-          "ko": "러닝머신"
+          "ko": "러닝머신",
+          "en": "treadmill"
         },
         {
           "es": "abdominales",
-          "ko": "복근 운동"
+          "ko": "복근 운동",
+          "en": "sit-ups"
         },
         {
           "es": "sentadilla",
-          "ko": "스쿼트"
+          "ko": "스쿼트",
+          "en": "squat"
         },
         {
           "es": "flexión",
-          "ko": "팔굽혀펴기"
+          "ko": "팔굽혀펴기",
+          "en": "push-up"
         },
         {
           "es": "estiramiento",
-          "ko": "스트레칭"
+          "ko": "스트레칭",
+          "en": "stretching"
         },
         {
           "es": "entrenador",
-          "ko": "트레이너"
+          "ko": "트레이너",
+          "en": "trainer"
         },
         {
           "es": "resistencia",
-          "ko": "지구력"
+          "ko": "지구력",
+          "en": "endurance"
         },
         {
           "es": "fuerza",
-          "ko": "근력"
+          "ko": "근력",
+          "en": "strength"
         },
         {
           "es": "calentamiento",
-          "ko": "준비 운동"
+          "ko": "준비 운동",
+          "en": "warm-up"
         },
         {
           "es": "sudor",
-          "ko": "땀"
+          "ko": "땀",
+          "en": "sweat"
         }
       ]
     },
@@ -292,43 +352,53 @@
       "words": [
         {
           "es": "guitarra",
-          "ko": "기타"
+          "ko": "기타",
+          "en": "guitar"
         },
         {
           "es": "piano",
-          "ko": "피아노"
+          "ko": "피아노",
+          "en": "piano"
         },
         {
           "es": "violín",
-          "ko": "바이올린"
+          "ko": "바이올린",
+          "en": "violin"
         },
         {
           "es": "batería",
-          "ko": "드럼"
+          "ko": "드럼",
+          "en": "drums"
         },
         {
           "es": "flauta",
-          "ko": "플루트"
+          "ko": "플루트",
+          "en": "flute"
         },
         {
           "es": "trompeta",
-          "ko": "트럼펫"
+          "ko": "트럼펫",
+          "en": "trumpet"
         },
         {
           "es": "saxofón",
-          "ko": "색소폰"
+          "ko": "색소폰",
+          "en": "saxophone"
         },
         {
           "es": "pop",
-          "ko": "팝"
+          "ko": "팝",
+          "en": "pop"
         },
         {
           "es": "rock",
-          "ko": "록"
+          "ko": "록",
+          "en": "rock"
         },
         {
           "es": "jazz",
-          "ko": "재즈"
+          "ko": "재즈",
+          "en": "jazz"
         }
       ]
     },
@@ -339,43 +409,53 @@
       "words": [
         {
           "es": "clásica",
-          "ko": "클래식"
+          "ko": "클래식",
+          "en": "classical"
         },
         {
           "es": "hip hop",
-          "ko": "힙합"
+          "ko": "힙합",
+          "en": "hip hop"
         },
         {
           "es": "electrónica",
-          "ko": "일렉트로닉"
+          "ko": "일렉트로닉",
+          "en": "electronics"
         },
         {
           "es": "reggaetón",
-          "ko": "레게톤"
+          "ko": "레게톤",
+          "en": "reggaeton"
         },
         {
           "es": "melodía",
-          "ko": "멜로디"
+          "ko": "멜로디",
+          "en": "melody"
         },
         {
           "es": "concierto",
-          "ko": "콘서트"
+          "ko": "콘서트",
+          "en": "concert"
         },
         {
           "es": "cantante",
-          "ko": "가수"
+          "ko": "가수",
+          "en": "singer"
         },
         {
           "es": "canción",
-          "ko": "노래"
+          "ko": "노래",
+          "en": "song"
         },
         {
           "es": "letra",
-          "ko": "가사"
+          "ko": "가사",
+          "en": "lyrics"
         },
         {
           "es": "escenario",
-          "ko": "무대"
+          "ko": "무대",
+          "en": "stage"
         }
       ]
     },
@@ -386,43 +466,53 @@
       "words": [
         {
           "es": "micrófono",
-          "ko": "마이크"
+          "ko": "마이크",
+          "en": "microphone"
         },
         {
           "es": "amplificador",
-          "ko": "앰프"
+          "ko": "앰프",
+          "en": "amplifier"
         },
         {
           "es": "coro",
-          "ko": "합창단"
+          "ko": "합창단",
+          "en": "choir"
         },
         {
           "es": "orquesta",
-          "ko": "오케스트라"
+          "ko": "오케스트라",
+          "en": "orchestra"
         },
         {
           "es": "compositor",
-          "ko": "작곡가"
+          "ko": "작곡가",
+          "en": "composer"
         },
         {
           "es": "ritmo",
-          "ko": "리듬"
+          "ko": "리듬",
+          "en": "rhythm"
         },
         {
           "es": "álbum",
-          "ko": "앨범"
+          "ko": "앨범",
+          "en": "album"
         },
         {
           "es": "gira",
-          "ko": "투어"
+          "ko": "투어",
+          "en": "tour"
         },
         {
           "es": "público",
-          "ko": "관객"
+          "ko": "관객",
+          "en": "audience"
         },
         {
           "es": "aplauso",
-          "ko": "박수"
+          "ko": "박수",
+          "en": "applause"
         }
       ]
     },
@@ -433,43 +523,53 @@
       "words": [
         {
           "es": "pintura",
-          "ko": "그림"
+          "ko": "그림",
+          "en": "painting"
         },
         {
           "es": "dibujo",
-          "ko": "소묘"
+          "ko": "소묘",
+          "en": "drawing"
         },
         {
           "es": "escultura",
-          "ko": "조각"
+          "ko": "조각",
+          "en": "sculpture"
         },
         {
           "es": "lienzo",
-          "ko": "캔버스"
+          "ko": "캔버스",
+          "en": "canvas"
         },
         {
           "es": "pincel",
-          "ko": "붓"
+          "ko": "붓",
+          "en": "paintbrush"
         },
         {
           "es": "acuarela",
-          "ko": "수채화"
+          "ko": "수채화",
+          "en": "watercolor"
         },
         {
           "es": "óleo",
-          "ko": "유화"
+          "ko": "유화",
+          "en": "oil painting"
         },
         {
           "es": "museo",
-          "ko": "박물관"
+          "ko": "박물관",
+          "en": "museum"
         },
         {
           "es": "galería",
-          "ko": "갤러리"
+          "ko": "갤러리",
+          "en": "gallery"
         },
         {
           "es": "artista",
-          "ko": "예술가"
+          "ko": "예술가",
+          "en": "artist"
         }
       ]
     },
@@ -480,403 +580,503 @@
       "words": [
         {
           "es": "tiempo libre",
-          "ko": "여가 시간"
+          "ko": "여가 시간",
+          "en": "free time"
         },
         {
           "es": "ocio",
-          "ko": "여가"
+          "ko": "여가",
+          "en": "leisure"
         },
         {
           "es": "pasatiempo",
-          "ko": "취미"
+          "ko": "취미",
+          "en": "pastime"
         },
         {
           "es": "diversión",
-          "ko": "재미"
+          "ko": "재미",
+          "en": "fun"
         },
         {
           "es": "entretenimiento",
-          "ko": "오락"
+          "ko": "오락",
+          "en": "entertainment"
         },
         {
           "es": "descanso",
-          "ko": "휴식"
+          "ko": "휴식",
+          "en": "rest"
         },
         {
           "es": "relajación",
-          "ko": "휴양"
+          "ko": "휴양",
+          "en": "relaxation"
         },
         {
           "es": "vacaciones",
-          "ko": "휴가"
+          "ko": "휴가",
+          "en": "vacation"
         },
         {
           "es": "fin de semana",
-          "ko": "주말"
+          "ko": "주말",
+          "en": "weekend"
         },
         {
           "es": "actividad",
-          "ko": "활동"
+          "ko": "활동",
+          "en": "activity"
         },
         {
           "es": "afición",
-          "ko": "취미 활동"
+          "ko": "취미 활동",
+          "en": "hobby"
         },
         {
           "es": "recreo",
-          "ko": "레크리에이션"
+          "ko": "레크리에이션",
+          "en": "recess"
         },
         {
           "es": "juego",
-          "ko": "놀이"
+          "ko": "놀이",
+          "en": "game"
         },
         {
           "es": "aventura",
-          "ko": "모험"
+          "ko": "모험",
+          "en": "adventure"
         },
         {
           "es": "experiencia",
-          "ko": "경험"
+          "ko": "경험",
+          "en": "experience"
         },
         {
           "es": "fútbol",
-          "ko": "축구"
+          "ko": "축구",
+          "en": "soccer"
         },
         {
           "es": "baloncesto",
-          "ko": "농구"
+          "ko": "농구",
+          "en": "basketball"
         },
         {
           "es": "béisbol",
-          "ko": "야구"
+          "ko": "야구",
+          "en": "baseball"
         },
         {
           "es": "voleibol",
-          "ko": "배구"
+          "ko": "배구",
+          "en": "volleyball"
         },
         {
           "es": "tenis",
-          "ko": "테니스"
+          "ko": "테니스",
+          "en": "tennis"
         },
         {
           "es": "golf",
-          "ko": "골프"
+          "ko": "골프",
+          "en": "golf"
         },
         {
           "es": "rugby",
-          "ko": "럭비"
+          "ko": "럭비",
+          "en": "rugby"
         },
         {
           "es": "bádminton",
-          "ko": "배드민턴"
+          "ko": "배드민턴",
+          "en": "badminton"
         },
         {
           "es": "ping-pong",
-          "ko": "탁구"
+          "ko": "탁구",
+          "en": "ping pong"
         },
         {
           "es": "balonmano",
-          "ko": "핸드볼"
+          "ko": "핸드볼",
+          "en": "handball"
         },
         {
           "es": "polo acuático",
-          "ko": "수구"
+          "ko": "수구",
+          "en": "water polo"
         },
         {
           "es": "pelota",
-          "ko": "공"
+          "ko": "공",
+          "en": "ball"
         },
         {
           "es": "portería",
-          "ko": "골대"
+          "ko": "골대",
+          "en": "goal"
         },
         {
           "es": "cancha",
-          "ko": "경기장"
+          "ko": "경기장",
+          "en": "court"
         },
         {
           "es": "equipo",
-          "ko": "팀"
+          "ko": "팀",
+          "en": "team"
         },
         {
           "es": "natación",
-          "ko": "수영"
+          "ko": "수영",
+          "en": "swimming"
         },
         {
           "es": "atletismo",
-          "ko": "육상"
+          "ko": "육상",
+          "en": "athletics"
         },
         {
           "es": "ciclismo",
-          "ko": "사이클"
+          "ko": "사이클",
+          "en": "cycling"
         },
         {
           "es": "boxeo",
-          "ko": "복싱"
+          "ko": "복싱",
+          "en": "boxing"
         },
         {
           "es": "esgrima",
-          "ko": "펜싱"
+          "ko": "펜싱",
+          "en": "fencing"
         },
         {
           "es": "gimnasia",
-          "ko": "체조"
+          "ko": "체조",
+          "en": "gymnastics"
         },
         {
           "es": "patinaje",
-          "ko": "스케이팅"
+          "ko": "스케이팅",
+          "en": "skating"
         },
         {
           "es": "esquí",
-          "ko": "스키"
+          "ko": "스키",
+          "en": "skiing"
         },
         {
           "es": "judo",
-          "ko": "유도"
+          "ko": "유도",
+          "en": "judo"
         },
         {
           "es": "taekwondo",
-          "ko": "태권도"
+          "ko": "태권도",
+          "en": "taekwondo"
         },
         {
           "es": "tiro con arco",
-          "ko": "양궁"
+          "ko": "양궁",
+          "en": "archery"
         },
         {
           "es": "halterofilia",
-          "ko": "역도"
+          "ko": "역도",
+          "en": "weightlifting"
         },
         {
           "es": "lucha",
-          "ko": "레슬링"
+          "ko": "레슬링",
+          "en": "wrestling"
         },
         {
           "es": "escalada",
-          "ko": "암벽 등반"
+          "ko": "암벽 등반",
+          "en": "rock climbing"
         },
         {
           "es": "maratón",
-          "ko": "마라톤"
+          "ko": "마라톤",
+          "en": "marathon"
         },
         {
           "es": "ejercicio",
-          "ko": "운동"
+          "ko": "운동",
+          "en": "exercise"
         },
         {
           "es": "gimnasio",
-          "ko": "체육관"
+          "ko": "체육관",
+          "en": "gym"
         },
         {
           "es": "yoga",
-          "ko": "요가"
+          "ko": "요가",
+          "en": "yoga"
         },
         {
           "es": "pilates",
-          "ko": "필라테스"
+          "ko": "필라테스",
+          "en": "pilates"
         },
         {
           "es": "pesas",
-          "ko": "덤벨"
+          "ko": "덤벨",
+          "en": "weights"
         },
         {
           "es": "cinta de correr",
-          "ko": "러닝머신"
+          "ko": "러닝머신",
+          "en": "treadmill"
         },
         {
           "es": "abdominales",
-          "ko": "복근 운동"
+          "ko": "복근 운동",
+          "en": "sit-ups"
         },
         {
           "es": "sentadilla",
-          "ko": "스쿼트"
+          "ko": "스쿼트",
+          "en": "squat"
         },
         {
           "es": "flexión",
-          "ko": "팔굽혀펴기"
+          "ko": "팔굽혀펴기",
+          "en": "push-up"
         },
         {
           "es": "estiramiento",
-          "ko": "스트레칭"
+          "ko": "스트레칭",
+          "en": "stretching"
         },
         {
           "es": "entrenador",
-          "ko": "트레이너"
+          "ko": "트레이너",
+          "en": "trainer"
         },
         {
           "es": "resistencia",
-          "ko": "지구력"
+          "ko": "지구력",
+          "en": "endurance"
         },
         {
           "es": "fuerza",
-          "ko": "근력"
+          "ko": "근력",
+          "en": "strength"
         },
         {
           "es": "calentamiento",
-          "ko": "준비 운동"
+          "ko": "준비 운동",
+          "en": "warm-up"
         },
         {
           "es": "sudor",
-          "ko": "땀"
+          "ko": "땀",
+          "en": "sweat"
         },
         {
           "es": "guitarra",
-          "ko": "기타"
+          "ko": "기타",
+          "en": "guitar"
         },
         {
           "es": "piano",
-          "ko": "피아노"
+          "ko": "피아노",
+          "en": "piano"
         },
         {
           "es": "violín",
-          "ko": "바이올린"
+          "ko": "바이올린",
+          "en": "violin"
         },
         {
           "es": "batería",
-          "ko": "드럼"
+          "ko": "드럼",
+          "en": "drums"
         },
         {
           "es": "flauta",
-          "ko": "플루트"
+          "ko": "플루트",
+          "en": "flute"
         },
         {
           "es": "trompeta",
-          "ko": "트럼펫"
+          "ko": "트럼펫",
+          "en": "trumpet"
         },
         {
           "es": "saxofón",
-          "ko": "색소폰"
+          "ko": "색소폰",
+          "en": "saxophone"
         },
         {
           "es": "pop",
-          "ko": "팝"
+          "ko": "팝",
+          "en": "pop"
         },
         {
           "es": "rock",
-          "ko": "록"
+          "ko": "록",
+          "en": "rock"
         },
         {
           "es": "jazz",
-          "ko": "재즈"
+          "ko": "재즈",
+          "en": "jazz"
         },
         {
           "es": "clásica",
-          "ko": "클래식"
+          "ko": "클래식",
+          "en": "classical"
         },
         {
           "es": "hip hop",
-          "ko": "힙합"
+          "ko": "힙합",
+          "en": "hip hop"
         },
         {
           "es": "electrónica",
-          "ko": "일렉트로닉"
+          "ko": "일렉트로닉",
+          "en": "electronics"
         },
         {
           "es": "reggaetón",
-          "ko": "레게톤"
+          "ko": "레게톤",
+          "en": "reggaeton"
         },
         {
           "es": "melodía",
-          "ko": "멜로디"
+          "ko": "멜로디",
+          "en": "melody"
         },
         {
           "es": "concierto",
-          "ko": "콘서트"
+          "ko": "콘서트",
+          "en": "concert"
         },
         {
           "es": "cantante",
-          "ko": "가수"
+          "ko": "가수",
+          "en": "singer"
         },
         {
           "es": "canción",
-          "ko": "노래"
+          "ko": "노래",
+          "en": "song"
         },
         {
           "es": "letra",
-          "ko": "가사"
+          "ko": "가사",
+          "en": "lyrics"
         },
         {
           "es": "escenario",
-          "ko": "무대"
+          "ko": "무대",
+          "en": "stage"
         },
         {
           "es": "micrófono",
-          "ko": "마이크"
+          "ko": "마이크",
+          "en": "microphone"
         },
         {
           "es": "amplificador",
-          "ko": "앰프"
+          "ko": "앰프",
+          "en": "amplifier"
         },
         {
           "es": "coro",
-          "ko": "합창단"
+          "ko": "합창단",
+          "en": "choir"
         },
         {
           "es": "orquesta",
-          "ko": "오케스트라"
+          "ko": "오케스트라",
+          "en": "orchestra"
         },
         {
           "es": "compositor",
-          "ko": "작곡가"
+          "ko": "작곡가",
+          "en": "composer"
         },
         {
           "es": "ritmo",
-          "ko": "리듬"
+          "ko": "리듬",
+          "en": "rhythm"
         },
         {
           "es": "álbum",
-          "ko": "앨범"
+          "ko": "앨범",
+          "en": "album"
         },
         {
           "es": "gira",
-          "ko": "투어"
+          "ko": "투어",
+          "en": "tour"
         },
         {
           "es": "público",
-          "ko": "관객"
+          "ko": "관객",
+          "en": "audience"
         },
         {
           "es": "aplauso",
-          "ko": "박수"
+          "ko": "박수",
+          "en": "applause"
         },
         {
           "es": "pintura",
-          "ko": "그림"
+          "ko": "그림",
+          "en": "painting"
         },
         {
           "es": "dibujo",
-          "ko": "소묘"
+          "ko": "소묘",
+          "en": "drawing"
         },
         {
           "es": "escultura",
-          "ko": "조각"
+          "ko": "조각",
+          "en": "sculpture"
         },
         {
           "es": "lienzo",
-          "ko": "캔버스"
+          "ko": "캔버스",
+          "en": "canvas"
         },
         {
           "es": "pincel",
-          "ko": "붓"
+          "ko": "붓",
+          "en": "paintbrush"
         },
         {
           "es": "acuarela",
-          "ko": "수채화"
+          "ko": "수채화",
+          "en": "watercolor"
         },
         {
           "es": "óleo",
-          "ko": "유화"
+          "ko": "유화",
+          "en": "oil painting"
         },
         {
           "es": "museo",
-          "ko": "박물관"
+          "ko": "박물관",
+          "en": "museum"
         },
         {
           "es": "galería",
-          "ko": "갤러리"
+          "ko": "갤러리",
+          "en": "gallery"
         },
         {
           "es": "artista",
-          "ko": "예술가"
+          "ko": "예술가",
+          "en": "artist"
         }
       ]
     },
@@ -887,43 +1087,53 @@
       "words": [
         {
           "es": "exposición",
-          "ko": "전시회"
+          "ko": "전시회",
+          "en": "exhibition"
         },
         {
           "es": "retrato",
-          "ko": "초상화"
+          "ko": "초상화",
+          "en": "portrait"
         },
         {
           "es": "paisaje",
-          "ko": "풍경화"
+          "ko": "풍경화",
+          "en": "landscape"
         },
         {
           "es": "paleta",
-          "ko": "팔레트"
+          "ko": "팔레트",
+          "en": "palette"
         },
         {
           "es": "obra de arte",
-          "ko": "예술 작품"
+          "ko": "예술 작품",
+          "en": "artwork"
         },
         {
           "es": "película",
-          "ko": "영화"
+          "ko": "영화",
+          "en": "movie"
         },
         {
           "es": "cine",
-          "ko": "영화관"
+          "ko": "영화관",
+          "en": "cinema"
         },
         {
           "es": "director",
-          "ko": "감독"
+          "ko": "감독",
+          "en": "director"
         },
         {
           "es": "actor",
-          "ko": "배우"
+          "ko": "배우",
+          "en": "actor"
         },
         {
           "es": "actriz",
-          "ko": "여배우"
+          "ko": "여배우",
+          "en": "actress"
         }
       ]
     },
@@ -934,43 +1144,53 @@
       "words": [
         {
           "es": "guion",
-          "ko": "각본"
+          "ko": "각본",
+          "en": "script"
         },
         {
           "es": "escena",
-          "ko": "장면"
+          "ko": "장면",
+          "en": "scene"
         },
         {
           "es": "taquilla",
-          "ko": "매표소"
+          "ko": "매표소",
+          "en": "ticket office"
         },
         {
           "es": "palomitas",
-          "ko": "팝콘"
+          "ko": "팝콘",
+          "en": "popcorn"
         },
         {
           "es": "subtítulo",
-          "ko": "자막"
+          "ko": "자막",
+          "en": "subtitle"
         },
         {
           "es": "tráiler",
-          "ko": "예고편"
+          "ko": "예고편",
+          "en": "trailer"
         },
         {
           "es": "estreno",
-          "ko": "개봉"
+          "ko": "개봉",
+          "en": "premiere"
         },
         {
           "es": "comedia",
-          "ko": "코미디"
+          "ko": "코미디",
+          "en": "comedy"
         },
         {
           "es": "terror",
-          "ko": "공포"
+          "ko": "공포",
+          "en": "terror"
         },
         {
           "es": "documental",
-          "ko": "다큐멘터리"
+          "ko": "다큐멘터리",
+          "en": "documentary"
         }
       ]
     },
@@ -981,43 +1201,53 @@
       "words": [
         {
           "es": "televisión",
-          "ko": "텔레비전"
+          "ko": "텔레비전",
+          "en": "television"
         },
         {
           "es": "serie",
-          "ko": "드라마"
+          "ko": "드라마",
+          "en": "TV series"
         },
         {
           "es": "canal",
-          "ko": "채널"
+          "ko": "채널",
+          "en": "channel"
         },
         {
           "es": "programa",
-          "ko": "프로그램"
+          "ko": "프로그램",
+          "en": "program"
         },
         {
           "es": "noticias",
-          "ko": "뉴스"
+          "ko": "뉴스",
+          "en": "news"
         },
         {
           "es": "episodio",
-          "ko": "에피소드"
+          "ko": "에피소드",
+          "en": "episode"
         },
         {
           "es": "temporada",
-          "ko": "시즌"
+          "ko": "시즌",
+          "en": "season"
         },
         {
           "es": "mando a distancia",
-          "ko": "리모컨"
+          "ko": "리모컨",
+          "en": "remote control"
         },
         {
           "es": "pantalla",
-          "ko": "화면"
+          "ko": "화면",
+          "en": "screen"
         },
         {
           "es": "transmisión en vivo",
-          "ko": "실시간 방송"
+          "ko": "실시간 방송",
+          "en": "live broadcast"
         }
       ]
     },
@@ -1028,43 +1258,53 @@
       "words": [
         {
           "es": "suscripción",
-          "ko": "구독"
+          "ko": "구독",
+          "en": "subscription"
         },
         {
           "es": "plataforma",
-          "ko": "플랫폼"
+          "ko": "플랫폼",
+          "en": "platform"
         },
         {
           "es": "contenido",
-          "ko": "콘텐츠"
+          "ko": "콘텐츠",
+          "en": "content"
         },
         {
           "es": "reality show",
-          "ko": "리얼리티 쇼"
+          "ko": "리얼리티 쇼",
+          "en": "reality show"
         },
         {
           "es": "presentador",
-          "ko": "진행자"
+          "ko": "진행자",
+          "en": "presenter"
         },
         {
           "es": "libro",
-          "ko": "책"
+          "ko": "책",
+          "en": "book"
         },
         {
           "es": "novela",
-          "ko": "소설"
+          "ko": "소설",
+          "en": "novel"
         },
         {
           "es": "poesía",
-          "ko": "시"
+          "ko": "시",
+          "en": "poetry"
         },
         {
           "es": "autor",
-          "ko": "작가"
+          "ko": "작가",
+          "en": "author"
         },
         {
           "es": "lector",
-          "ko": "독자"
+          "ko": "독자",
+          "en": "reader"
         }
       ]
     },
@@ -1075,43 +1315,53 @@
       "words": [
         {
           "es": "biblioteca",
-          "ko": "도서관"
+          "ko": "도서관",
+          "en": "library"
         },
         {
           "es": "librería",
-          "ko": "서점"
+          "ko": "서점",
+          "en": "bookstore"
         },
         {
           "es": "página",
-          "ko": "페이지"
+          "ko": "페이지",
+          "en": "page"
         },
         {
           "es": "capítulo",
-          "ko": "챕터"
+          "ko": "챕터",
+          "en": "chapter"
         },
         {
           "es": "portada",
-          "ko": "표지"
+          "ko": "표지",
+          "en": "cover"
         },
         {
           "es": "editorial",
-          "ko": "출판사"
+          "ko": "출판사",
+          "en": "editorial"
         },
         {
           "es": "cuento",
-          "ko": "동화"
+          "ko": "동화",
+          "en": "fairy tale"
         },
         {
           "es": "ensayo",
-          "ko": "에세이"
+          "ko": "에세이",
+          "en": "rehearsal"
         },
         {
           "es": "cómic",
-          "ko": "만화"
+          "ko": "만화",
+          "en": "comic"
         },
         {
           "es": "marcapáginas",
-          "ko": "책갈피"
+          "ko": "책갈피",
+          "en": "bookmark"
         }
       ]
     },
@@ -1122,43 +1372,53 @@
       "words": [
         {
           "es": "fotografía",
-          "ko": "사진"
+          "ko": "사진",
+          "en": "photography"
         },
         {
           "es": "cámara",
-          "ko": "카메라"
+          "ko": "카메라",
+          "en": "camera"
         },
         {
           "es": "objetivo",
-          "ko": "렌즈"
+          "ko": "렌즈",
+          "en": "lens"
         },
         {
           "es": "flash",
-          "ko": "플래시"
+          "ko": "플래시",
+          "en": "flash"
         },
         {
           "es": "enfoque",
-          "ko": "초점"
+          "ko": "초점",
+          "en": "focus"
         },
         {
           "es": "exposición fotográfica",
-          "ko": "노출"
+          "ko": "노출",
+          "en": "photographic exposure"
         },
         {
           "es": "encuadre",
-          "ko": "구도"
+          "ko": "구도",
+          "en": "framing"
         },
         {
           "es": "trípode",
-          "ko": "삼각대"
+          "ko": "삼각대",
+          "en": "tripod"
         },
         {
           "es": "retoque",
-          "ko": "보정"
+          "ko": "보정",
+          "en": "retouch"
         },
         {
           "es": "filtro",
-          "ko": "필터"
+          "ko": "필터",
+          "en": "filter"
         }
       ]
     },
@@ -1169,43 +1429,53 @@
       "words": [
         {
           "es": "resolución",
-          "ko": "해상도"
+          "ko": "해상도",
+          "en": "resolution"
         },
         {
           "es": "disparo",
-          "ko": "촬영"
+          "ko": "촬영",
+          "en": "shot"
         },
         {
           "es": "fotógrafo",
-          "ko": "사진작가"
+          "ko": "사진작가",
+          "en": "photographer"
         },
         {
           "es": "autorretrato",
-          "ko": "셀카"
+          "ko": "셀카",
+          "en": "selfie"
         },
         {
           "es": "álbum de fotos",
-          "ko": "사진첩"
+          "ko": "사진첩",
+          "en": "photo album"
         },
         {
           "es": "videojuego",
-          "ko": "비디오 게임"
+          "ko": "비디오 게임",
+          "en": "video game"
         },
         {
           "es": "ajedrez",
-          "ko": "체스"
+          "ko": "체스",
+          "en": "chess"
         },
         {
           "es": "dado",
-          "ko": "주사위"
+          "ko": "주사위",
+          "en": "die"
         },
         {
           "es": "ficha",
-          "ko": "게임 말"
+          "ko": "게임 말",
+          "en": "game piece"
         },
         {
           "es": "tablero",
-          "ko": "보드판"
+          "ko": "보드판",
+          "en": "board"
         }
       ]
     },
@@ -1216,43 +1486,53 @@
       "words": [
         {
           "es": "baraja",
-          "ko": "카드 한 벌"
+          "ko": "카드 한 벌",
+          "en": "deck of cards"
         },
         {
           "es": "rompecabezas",
-          "ko": "퍼즐"
+          "ko": "퍼즐",
+          "en": "puzzle"
         },
         {
           "es": "jugador",
-          "ko": "플레이어"
+          "ko": "플레이어",
+          "en": "player"
         },
         {
           "es": "turno",
-          "ko": "차례"
+          "ko": "차례",
+          "en": "turn"
         },
         {
           "es": "puntuación",
-          "ko": "점수"
+          "ko": "점수",
+          "en": "score"
         },
         {
           "es": "nivel",
-          "ko": "레벨"
+          "ko": "레벨",
+          "en": "level"
         },
         {
           "es": "partida",
-          "ko": "게임 한 판"
+          "ko": "게임 한 판",
+          "en": "game"
         },
         {
           "es": "regla",
-          "ko": "규칙"
+          "ko": "규칙",
+          "en": "rule"
         },
         {
           "es": "ganador",
-          "ko": "승자"
+          "ko": "승자",
+          "en": "winner"
         },
         {
           "es": "perdedor",
-          "ko": "패자"
+          "ko": "패자",
+          "en": "loser"
         }
       ]
     },
@@ -1263,43 +1543,53 @@
       "words": [
         {
           "es": "senderismo",
-          "ko": "하이킹"
+          "ko": "하이킹",
+          "en": "hiking"
         },
         {
           "es": "bicicleta",
-          "ko": "자전거"
+          "ko": "자전거",
+          "en": "bicycle"
         },
         {
           "es": "picnic",
-          "ko": "소풍"
+          "ko": "소풍",
+          "en": "picnic"
         },
         {
           "es": "parque",
-          "ko": "공원"
+          "ko": "공원",
+          "en": "park"
         },
         {
           "es": "montaña",
-          "ko": "산"
+          "ko": "산",
+          "en": "mountain"
         },
         {
           "es": "bosque",
-          "ko": "숲"
+          "ko": "숲",
+          "en": "forest"
         },
         {
           "es": "lago",
-          "ko": "호수"
+          "ko": "호수",
+          "en": "lake"
         },
         {
           "es": "río",
-          "ko": "강"
+          "ko": "강",
+          "en": "river"
         },
         {
           "es": "pesca",
-          "ko": "낚시"
+          "ko": "낚시",
+          "en": "fishing"
         },
         {
           "es": "cometa",
-          "ko": "연"
+          "ko": "연",
+          "en": "kite"
         }
       ]
     },
@@ -1310,43 +1600,53 @@
       "words": [
         {
           "es": "columpio",
-          "ko": "그네"
+          "ko": "그네",
+          "en": "swing"
         },
         {
           "es": "mochila",
-          "ko": "배낭"
+          "ko": "배낭",
+          "en": "backpack"
         },
         {
           "es": "brújula",
-          "ko": "나침반"
+          "ko": "나침반",
+          "en": "compass"
         },
         {
           "es": "sendero",
-          "ko": "산책로"
+          "ko": "산책로",
+          "en": "trail"
         },
         {
           "es": "mirador",
-          "ko": "전망대"
+          "ko": "전망대",
+          "en": "viewpoint"
         },
         {
           "es": "playa",
-          "ko": "해변"
+          "ko": "해변",
+          "en": "beach"
         },
         {
           "es": "surf",
-          "ko": "서핑"
+          "ko": "서핑",
+          "en": "surfing"
         },
         {
           "es": "buceo",
-          "ko": "다이빙"
+          "ko": "다이빙",
+          "en": "scuba diving"
         },
         {
           "es": "esnórquel",
-          "ko": "스노클링"
+          "ko": "스노클링",
+          "en": "snorkeling"
         },
         {
           "es": "kayak",
-          "ko": "카약"
+          "ko": "카약",
+          "en": "kayak"
         }
       ]
     },
@@ -1357,403 +1657,503 @@
       "words": [
         {
           "es": "exposición",
-          "ko": "전시회"
+          "ko": "전시회",
+          "en": "exhibition"
         },
         {
           "es": "retrato",
-          "ko": "초상화"
+          "ko": "초상화",
+          "en": "portrait"
         },
         {
           "es": "paisaje",
-          "ko": "풍경화"
+          "ko": "풍경화",
+          "en": "landscape"
         },
         {
           "es": "paleta",
-          "ko": "팔레트"
+          "ko": "팔레트",
+          "en": "palette"
         },
         {
           "es": "obra de arte",
-          "ko": "예술 작품"
+          "ko": "예술 작품",
+          "en": "artwork"
         },
         {
           "es": "película",
-          "ko": "영화"
+          "ko": "영화",
+          "en": "movie"
         },
         {
           "es": "cine",
-          "ko": "영화관"
+          "ko": "영화관",
+          "en": "cinema"
         },
         {
           "es": "director",
-          "ko": "감독"
+          "ko": "감독",
+          "en": "director"
         },
         {
           "es": "actor",
-          "ko": "배우"
+          "ko": "배우",
+          "en": "actor"
         },
         {
           "es": "actriz",
-          "ko": "여배우"
+          "ko": "여배우",
+          "en": "actress"
         },
         {
           "es": "guion",
-          "ko": "각본"
+          "ko": "각본",
+          "en": "script"
         },
         {
           "es": "escena",
-          "ko": "장면"
+          "ko": "장면",
+          "en": "scene"
         },
         {
           "es": "taquilla",
-          "ko": "매표소"
+          "ko": "매표소",
+          "en": "ticket office"
         },
         {
           "es": "palomitas",
-          "ko": "팝콘"
+          "ko": "팝콘",
+          "en": "popcorn"
         },
         {
           "es": "subtítulo",
-          "ko": "자막"
+          "ko": "자막",
+          "en": "subtitle"
         },
         {
           "es": "tráiler",
-          "ko": "예고편"
+          "ko": "예고편",
+          "en": "trailer"
         },
         {
           "es": "estreno",
-          "ko": "개봉"
+          "ko": "개봉",
+          "en": "premiere"
         },
         {
           "es": "comedia",
-          "ko": "코미디"
+          "ko": "코미디",
+          "en": "comedy"
         },
         {
           "es": "terror",
-          "ko": "공포"
+          "ko": "공포",
+          "en": "terror"
         },
         {
           "es": "documental",
-          "ko": "다큐멘터리"
+          "ko": "다큐멘터리",
+          "en": "documentary"
         },
         {
           "es": "televisión",
-          "ko": "텔레비전"
+          "ko": "텔레비전",
+          "en": "television"
         },
         {
           "es": "serie",
-          "ko": "드라마"
+          "ko": "드라마",
+          "en": "TV series"
         },
         {
           "es": "canal",
-          "ko": "채널"
+          "ko": "채널",
+          "en": "channel"
         },
         {
           "es": "programa",
-          "ko": "프로그램"
+          "ko": "프로그램",
+          "en": "program"
         },
         {
           "es": "noticias",
-          "ko": "뉴스"
+          "ko": "뉴스",
+          "en": "news"
         },
         {
           "es": "episodio",
-          "ko": "에피소드"
+          "ko": "에피소드",
+          "en": "episode"
         },
         {
           "es": "temporada",
-          "ko": "시즌"
+          "ko": "시즌",
+          "en": "season"
         },
         {
           "es": "mando a distancia",
-          "ko": "리모컨"
+          "ko": "리모컨",
+          "en": "remote control"
         },
         {
           "es": "pantalla",
-          "ko": "화면"
+          "ko": "화면",
+          "en": "screen"
         },
         {
           "es": "transmisión en vivo",
-          "ko": "실시간 방송"
+          "ko": "실시간 방송",
+          "en": "live broadcast"
         },
         {
           "es": "suscripción",
-          "ko": "구독"
+          "ko": "구독",
+          "en": "subscription"
         },
         {
           "es": "plataforma",
-          "ko": "플랫폼"
+          "ko": "플랫폼",
+          "en": "platform"
         },
         {
           "es": "contenido",
-          "ko": "콘텐츠"
+          "ko": "콘텐츠",
+          "en": "content"
         },
         {
           "es": "reality show",
-          "ko": "리얼리티 쇼"
+          "ko": "리얼리티 쇼",
+          "en": "reality show"
         },
         {
           "es": "presentador",
-          "ko": "진행자"
+          "ko": "진행자",
+          "en": "presenter"
         },
         {
           "es": "libro",
-          "ko": "책"
+          "ko": "책",
+          "en": "book"
         },
         {
           "es": "novela",
-          "ko": "소설"
+          "ko": "소설",
+          "en": "novel"
         },
         {
           "es": "poesía",
-          "ko": "시"
+          "ko": "시",
+          "en": "poetry"
         },
         {
           "es": "autor",
-          "ko": "작가"
+          "ko": "작가",
+          "en": "author"
         },
         {
           "es": "lector",
-          "ko": "독자"
+          "ko": "독자",
+          "en": "reader"
         },
         {
           "es": "biblioteca",
-          "ko": "도서관"
+          "ko": "도서관",
+          "en": "library"
         },
         {
           "es": "librería",
-          "ko": "서점"
+          "ko": "서점",
+          "en": "bookstore"
         },
         {
           "es": "página",
-          "ko": "페이지"
+          "ko": "페이지",
+          "en": "page"
         },
         {
           "es": "capítulo",
-          "ko": "챕터"
+          "ko": "챕터",
+          "en": "chapter"
         },
         {
           "es": "portada",
-          "ko": "표지"
+          "ko": "표지",
+          "en": "cover"
         },
         {
           "es": "editorial",
-          "ko": "출판사"
+          "ko": "출판사",
+          "en": "editorial"
         },
         {
           "es": "cuento",
-          "ko": "동화"
+          "ko": "동화",
+          "en": "fairy tale"
         },
         {
           "es": "ensayo",
-          "ko": "에세이"
+          "ko": "에세이",
+          "en": "rehearsal"
         },
         {
           "es": "cómic",
-          "ko": "만화"
+          "ko": "만화",
+          "en": "comic"
         },
         {
           "es": "marcapáginas",
-          "ko": "책갈피"
+          "ko": "책갈피",
+          "en": "bookmark"
         },
         {
           "es": "fotografía",
-          "ko": "사진"
+          "ko": "사진",
+          "en": "photography"
         },
         {
           "es": "cámara",
-          "ko": "카메라"
+          "ko": "카메라",
+          "en": "camera"
         },
         {
           "es": "objetivo",
-          "ko": "렌즈"
+          "ko": "렌즈",
+          "en": "lens"
         },
         {
           "es": "flash",
-          "ko": "플래시"
+          "ko": "플래시",
+          "en": "flash"
         },
         {
           "es": "enfoque",
-          "ko": "초점"
+          "ko": "초점",
+          "en": "focus"
         },
         {
           "es": "exposición fotográfica",
-          "ko": "노출"
+          "ko": "노출",
+          "en": "photographic exposure"
         },
         {
           "es": "encuadre",
-          "ko": "구도"
+          "ko": "구도",
+          "en": "framing"
         },
         {
           "es": "trípode",
-          "ko": "삼각대"
+          "ko": "삼각대",
+          "en": "tripod"
         },
         {
           "es": "retoque",
-          "ko": "보정"
+          "ko": "보정",
+          "en": "retouch"
         },
         {
           "es": "filtro",
-          "ko": "필터"
+          "ko": "필터",
+          "en": "filter"
         },
         {
           "es": "resolución",
-          "ko": "해상도"
+          "ko": "해상도",
+          "en": "resolution"
         },
         {
           "es": "disparo",
-          "ko": "촬영"
+          "ko": "촬영",
+          "en": "shot"
         },
         {
           "es": "fotógrafo",
-          "ko": "사진작가"
+          "ko": "사진작가",
+          "en": "photographer"
         },
         {
           "es": "autorretrato",
-          "ko": "셀카"
+          "ko": "셀카",
+          "en": "selfie"
         },
         {
           "es": "álbum de fotos",
-          "ko": "사진첩"
+          "ko": "사진첩",
+          "en": "photo album"
         },
         {
           "es": "videojuego",
-          "ko": "비디오 게임"
+          "ko": "비디오 게임",
+          "en": "video game"
         },
         {
           "es": "ajedrez",
-          "ko": "체스"
+          "ko": "체스",
+          "en": "chess"
         },
         {
           "es": "dado",
-          "ko": "주사위"
+          "ko": "주사위",
+          "en": "die"
         },
         {
           "es": "ficha",
-          "ko": "게임 말"
+          "ko": "게임 말",
+          "en": "game piece"
         },
         {
           "es": "tablero",
-          "ko": "보드판"
+          "ko": "보드판",
+          "en": "board"
         },
         {
           "es": "baraja",
-          "ko": "카드 한 벌"
+          "ko": "카드 한 벌",
+          "en": "deck of cards"
         },
         {
           "es": "rompecabezas",
-          "ko": "퍼즐"
+          "ko": "퍼즐",
+          "en": "puzzle"
         },
         {
           "es": "jugador",
-          "ko": "플레이어"
+          "ko": "플레이어",
+          "en": "player"
         },
         {
           "es": "turno",
-          "ko": "차례"
+          "ko": "차례",
+          "en": "turn"
         },
         {
           "es": "puntuación",
-          "ko": "점수"
+          "ko": "점수",
+          "en": "score"
         },
         {
           "es": "nivel",
-          "ko": "레벨"
+          "ko": "레벨",
+          "en": "level"
         },
         {
           "es": "partida",
-          "ko": "게임 한 판"
+          "ko": "게임 한 판",
+          "en": "game"
         },
         {
           "es": "regla",
-          "ko": "규칙"
+          "ko": "규칙",
+          "en": "rule"
         },
         {
           "es": "ganador",
-          "ko": "승자"
+          "ko": "승자",
+          "en": "winner"
         },
         {
           "es": "perdedor",
-          "ko": "패자"
+          "ko": "패자",
+          "en": "loser"
         },
         {
           "es": "senderismo",
-          "ko": "하이킹"
+          "ko": "하이킹",
+          "en": "hiking"
         },
         {
           "es": "bicicleta",
-          "ko": "자전거"
+          "ko": "자전거",
+          "en": "bicycle"
         },
         {
           "es": "picnic",
-          "ko": "소풍"
+          "ko": "소풍",
+          "en": "picnic"
         },
         {
           "es": "parque",
-          "ko": "공원"
+          "ko": "공원",
+          "en": "park"
         },
         {
           "es": "montaña",
-          "ko": "산"
+          "ko": "산",
+          "en": "mountain"
         },
         {
           "es": "bosque",
-          "ko": "숲"
+          "ko": "숲",
+          "en": "forest"
         },
         {
           "es": "lago",
-          "ko": "호수"
+          "ko": "호수",
+          "en": "lake"
         },
         {
           "es": "río",
-          "ko": "강"
+          "ko": "강",
+          "en": "river"
         },
         {
           "es": "pesca",
-          "ko": "낚시"
+          "ko": "낚시",
+          "en": "fishing"
         },
         {
           "es": "cometa",
-          "ko": "연"
+          "ko": "연",
+          "en": "kite"
         },
         {
           "es": "columpio",
-          "ko": "그네"
+          "ko": "그네",
+          "en": "swing"
         },
         {
           "es": "mochila",
-          "ko": "배낭"
+          "ko": "배낭",
+          "en": "backpack"
         },
         {
           "es": "brújula",
-          "ko": "나침반"
+          "ko": "나침반",
+          "en": "compass"
         },
         {
           "es": "sendero",
-          "ko": "산책로"
+          "ko": "산책로",
+          "en": "trail"
         },
         {
           "es": "mirador",
-          "ko": "전망대"
+          "ko": "전망대",
+          "en": "viewpoint"
         },
         {
           "es": "playa",
-          "ko": "해변"
+          "ko": "해변",
+          "en": "beach"
         },
         {
           "es": "surf",
-          "ko": "서핑"
+          "ko": "서핑",
+          "en": "surfing"
         },
         {
           "es": "buceo",
-          "ko": "다이빙"
+          "ko": "다이빙",
+          "en": "scuba diving"
         },
         {
           "es": "esnórquel",
-          "ko": "스노클링"
+          "ko": "스노클링",
+          "en": "snorkeling"
         },
         {
           "es": "kayak",
-          "ko": "카약"
+          "ko": "카약",
+          "en": "kayak"
         }
       ]
     },
@@ -1764,43 +2164,53 @@
       "words": [
         {
           "es": "vela",
-          "ko": "요트"
+          "ko": "요트",
+          "en": "sailboat"
         },
         {
           "es": "arena",
-          "ko": "모래"
+          "ko": "모래",
+          "en": "sand"
         },
         {
           "es": "ola",
-          "ko": "파도"
+          "ko": "파도",
+          "en": "wave"
         },
         {
           "es": "protector solar",
-          "ko": "자외선 차단제"
+          "ko": "자외선 차단제",
+          "en": "sunscreen"
         },
         {
           "es": "toalla",
-          "ko": "수건"
+          "ko": "수건",
+          "en": "towel"
         },
         {
           "es": "sombrilla",
-          "ko": "파라솔"
+          "ko": "파라솔",
+          "en": "parasol"
         },
         {
           "es": "traje de baño",
-          "ko": "수영복"
+          "ko": "수영복",
+          "en": "swimsuit"
         },
         {
           "es": "tabla de surf",
-          "ko": "서핑 보드"
+          "ko": "서핑 보드",
+          "en": "surfboard"
         },
         {
           "es": "chaleco salvavidas",
-          "ko": "구명조끼"
+          "ko": "구명조끼",
+          "en": "life jacket"
         },
         {
           "es": "castillo de arena",
-          "ko": "모래성"
+          "ko": "모래성",
+          "en": "sand castle"
         }
       ]
     },
@@ -1811,43 +2221,53 @@
       "words": [
         {
           "es": "campamento",
-          "ko": "캠핑장"
+          "ko": "캠핑장",
+          "en": "campground"
         },
         {
           "es": "tienda de campaña",
-          "ko": "텐트"
+          "ko": "텐트",
+          "en": "tent"
         },
         {
           "es": "saco de dormir",
-          "ko": "침낭"
+          "ko": "침낭",
+          "en": "sleeping bag"
         },
         {
           "es": "fogata",
-          "ko": "모닥불"
+          "ko": "모닥불",
+          "en": "bonfire"
         },
         {
           "es": "linterna",
-          "ko": "손전등"
+          "ko": "손전등",
+          "en": "flashlight"
         },
         {
           "es": "caminata",
-          "ko": "도보 여행"
+          "ko": "도보 여행",
+          "en": "hike"
         },
         {
           "es": "cumbre",
-          "ko": "정상"
+          "ko": "정상",
+          "en": "summit"
         },
         {
           "es": "acantilado",
-          "ko": "절벽"
+          "ko": "절벽",
+          "en": "cliff"
         },
         {
           "es": "cascada",
-          "ko": "폭포"
+          "ko": "폭포",
+          "en": "waterfall"
         },
         {
           "es": "cueva",
-          "ko": "동굴"
+          "ko": "동굴",
+          "en": "cave"
         }
       ]
     },
@@ -1858,43 +2278,53 @@
       "words": [
         {
           "es": "leña",
-          "ko": "장작"
+          "ko": "장작",
+          "en": "firewood"
         },
         {
           "es": "navaja",
-          "ko": "주머니칼"
+          "ko": "주머니칼",
+          "en": "pocket knife"
         },
         {
           "es": "cantimplora",
-          "ko": "물통"
+          "ko": "물통",
+          "en": "canteen"
         },
         {
           "es": "tirolina",
-          "ko": "짚라인"
+          "ko": "짚라인",
+          "en": "zip line"
         },
         {
           "es": "hamaca",
-          "ko": "해먹"
+          "ko": "해먹",
+          "en": "hammock"
         },
         {
           "es": "festival",
-          "ko": "축제"
+          "ko": "축제",
+          "en": "festival"
         },
         {
           "es": "fiesta",
-          "ko": "파티"
+          "ko": "파티",
+          "en": "party"
         },
         {
           "es": "desfile",
-          "ko": "퍼레이드"
+          "ko": "퍼레이드",
+          "en": "parade"
         },
         {
           "es": "carnaval",
-          "ko": "카니발"
+          "ko": "카니발",
+          "en": "carnival"
         },
         {
           "es": "fuegos artificiales",
-          "ko": "불꽃놀이"
+          "ko": "불꽃놀이",
+          "en": "fireworks"
         }
       ]
     },
@@ -1905,43 +2335,53 @@
       "words": [
         {
           "es": "disfraz",
-          "ko": "의상"
+          "ko": "의상",
+          "en": "costume"
         },
         {
           "es": "máscara",
-          "ko": "가면"
+          "ko": "가면",
+          "en": "mask"
         },
         {
           "es": "decoración",
-          "ko": "장식"
+          "ko": "장식",
+          "en": "decoration"
         },
         {
           "es": "globo",
-          "ko": "풍선"
+          "ko": "풍선",
+          "en": "balloon"
         },
         {
           "es": "celebración",
-          "ko": "축하"
+          "ko": "축하",
+          "en": "celebration"
         },
         {
           "es": "invitación",
-          "ko": "초대장"
+          "ko": "초대장",
+          "en": "invitation"
         },
         {
           "es": "banquete",
-          "ko": "연회"
+          "ko": "연회",
+          "en": "banquet"
         },
         {
           "es": "brindis",
-          "ko": "건배"
+          "ko": "건배",
+          "en": "toast"
         },
         {
           "es": "confeti",
-          "ko": "색종이 조각"
+          "ko": "색종이 조각",
+          "en": "confetti"
         },
         {
           "es": "sorpresa",
-          "ko": "깜짝"
+          "ko": "깜짝",
+          "en": "surprise"
         }
       ]
     },
@@ -1952,43 +2392,53 @@
       "words": [
         {
           "es": "danza",
-          "ko": "춤"
+          "ko": "춤",
+          "en": "dance"
         },
         {
           "es": "ballet",
-          "ko": "발레"
+          "ko": "발레",
+          "en": "ballet"
         },
         {
           "es": "teatro",
-          "ko": "연극"
+          "ko": "연극",
+          "en": "theater"
         },
         {
           "es": "obra de teatro",
-          "ko": "희곡"
+          "ko": "희곡",
+          "en": "play"
         },
         {
           "es": "coreografía",
-          "ko": "안무"
+          "ko": "안무",
+          "en": "choreography"
         },
         {
           "es": "bailarín",
-          "ko": "무용가"
+          "ko": "무용가",
+          "en": "dancer"
         },
         {
           "es": "ensayo",
-          "ko": "리허설"
+          "ko": "리허설",
+          "en": "rehearsal"
         },
         {
           "es": "telón",
-          "ko": "막"
+          "ko": "막",
+          "en": "curtain"
         },
         {
           "es": "vestuario",
-          "ko": "무대 의상"
+          "ko": "무대 의상",
+          "en": "wardrobe"
         },
         {
           "es": "maquillaje",
-          "ko": "분장"
+          "ko": "분장",
+          "en": "makeup"
         }
       ]
     },
@@ -1999,43 +2449,53 @@
       "words": [
         {
           "es": "protagonista",
-          "ko": "주인공"
+          "ko": "주인공",
+          "en": "protagonist"
         },
         {
           "es": "acto",
-          "ko": "막(연극)"
+          "ko": "막(연극)",
+          "en": "act"
         },
         {
           "es": "musical",
-          "ko": "뮤지컬"
+          "ko": "뮤지컬",
+          "en": "musical"
         },
         {
           "es": "ópera",
-          "ko": "오페라"
+          "ko": "오페라",
+          "en": "opera"
         },
         {
           "es": "butaca",
-          "ko": "좌석"
+          "ko": "좌석",
+          "en": "seat"
         },
         {
           "es": "colección",
-          "ko": "수집"
+          "ko": "수집",
+          "en": "collection"
         },
         {
           "es": "sello",
-          "ko": "우표"
+          "ko": "우표",
+          "en": "stamp"
         },
         {
           "es": "moneda",
-          "ko": "동전"
+          "ko": "동전",
+          "en": "coin"
         },
         {
           "es": "antigüedad",
-          "ko": "골동품"
+          "ko": "골동품",
+          "en": "antique"
         },
         {
           "es": "manualidad",
-          "ko": "공예품"
+          "ko": "공예품",
+          "en": "craft"
         }
       ]
     },
@@ -2046,43 +2506,53 @@
       "words": [
         {
           "es": "costura",
-          "ko": "바느질"
+          "ko": "바느질",
+          "en": "sewing"
         },
         {
           "es": "tejido",
-          "ko": "뜨개질"
+          "ko": "뜨개질",
+          "en": "knitting"
         },
         {
           "es": "cerámica",
-          "ko": "도자기"
+          "ko": "도자기",
+          "en": "ceramics"
         },
         {
           "es": "origami",
-          "ko": "종이접기"
+          "ko": "종이접기",
+          "en": "origami"
         },
         {
           "es": "bordado",
-          "ko": "자수"
+          "ko": "자수",
+          "en": "embroidery"
         },
         {
           "es": "joyería",
-          "ko": "보석 공예"
+          "ko": "보석 공예",
+          "en": "jewelry"
         },
         {
           "es": "carpintería",
-          "ko": "목공"
+          "ko": "목공",
+          "en": "carpentry"
         },
         {
           "es": "hilo",
-          "ko": "실"
+          "ko": "실",
+          "en": "thread"
         },
         {
           "es": "aguja",
-          "ko": "바늘"
+          "ko": "바늘",
+          "en": "needle"
         },
         {
           "es": "pegamento",
-          "ko": "접착제"
+          "ko": "접착제",
+          "en": "glue"
         }
       ]
     },
@@ -2093,43 +2563,53 @@
       "words": [
         {
           "es": "red social",
-          "ko": "소셜 미디어"
+          "ko": "소셜 미디어",
+          "en": "social media"
         },
         {
           "es": "internet",
-          "ko": "인터넷"
+          "ko": "인터넷",
+          "en": "internet"
         },
         {
           "es": "publicación",
-          "ko": "게시물"
+          "ko": "게시물",
+          "en": "publication"
         },
         {
           "es": "seguidores",
-          "ko": "팔로워"
+          "ko": "팔로워",
+          "en": "followers"
         },
         {
           "es": "me gusta",
-          "ko": "좋아요"
+          "ko": "좋아요",
+          "en": "I like it"
         },
         {
           "es": "comentario",
-          "ko": "댓글"
+          "ko": "댓글",
+          "en": "comment"
         },
         {
           "es": "compartir",
-          "ko": "공유"
+          "ko": "공유",
+          "en": "to share"
         },
         {
           "es": "hashtag",
-          "ko": "해시태그"
+          "ko": "해시태그",
+          "en": "hashtag"
         },
         {
           "es": "perfil",
-          "ko": "프로필"
+          "ko": "프로필",
+          "en": "profile"
         },
         {
           "es": "blog",
-          "ko": "블로그"
+          "ko": "블로그",
+          "en": "blog"
         }
       ]
     },
@@ -2140,43 +2620,53 @@
       "words": [
         {
           "es": "podcast",
-          "ko": "팟캐스트"
+          "ko": "팟캐스트",
+          "en": "podcast"
         },
         {
           "es": "en directo",
-          "ko": "라이브"
+          "ko": "라이브",
+          "en": "live"
         },
         {
           "es": "viral",
-          "ko": "바이럴"
+          "ko": "바이럴",
+          "en": "viral"
         },
         {
           "es": "influencer",
-          "ko": "인플루언서"
+          "ko": "인플루언서",
+          "en": "influencer"
         },
         {
           "es": "descargar",
-          "ko": "다운로드"
+          "ko": "다운로드",
+          "en": "to download"
         },
         {
           "es": "jugar",
-          "ko": "놀다"
+          "ko": "놀다",
+          "en": "to play"
         },
         {
           "es": "cantar",
-          "ko": "노래하다"
+          "ko": "노래하다",
+          "en": "to sing"
         },
         {
           "es": "bailar",
-          "ko": "춤추다"
+          "ko": "춤추다",
+          "en": "to dance"
         },
         {
           "es": "dibujar",
-          "ko": "그리다"
+          "ko": "그리다",
+          "en": "to draw"
         },
         {
           "es": "pintar",
-          "ko": "칠하다"
+          "ko": "칠하다",
+          "en": "to paint"
         }
       ]
     },
@@ -2187,43 +2677,53 @@
       "words": [
         {
           "es": "tocar",
-          "ko": "연주하다"
+          "ko": "연주하다",
+          "en": "to play"
         },
         {
           "es": "nadar",
-          "ko": "수영하다"
+          "ko": "수영하다",
+          "en": "to swim"
         },
         {
           "es": "correr",
-          "ko": "달리다"
+          "ko": "달리다",
+          "en": "to run"
         },
         {
           "es": "saltar",
-          "ko": "뛰다"
+          "ko": "뛰다",
+          "en": "to jump"
         },
         {
           "es": "leer",
-          "ko": "읽다"
+          "ko": "읽다",
+          "en": "to read"
         },
         {
           "es": "escribir",
-          "ko": "쓰다"
+          "ko": "쓰다",
+          "en": "to write"
         },
         {
           "es": "viajar",
-          "ko": "여행하다"
+          "ko": "여행하다",
+          "en": "to travel"
         },
         {
           "es": "fotografiar",
-          "ko": "사진 찍다"
+          "ko": "사진 찍다",
+          "en": "to photograph"
         },
         {
           "es": "acampar",
-          "ko": "캠핑하다"
+          "ko": "캠핑하다",
+          "en": "to camp"
         },
         {
           "es": "disfrutar",
-          "ko": "즐기다"
+          "ko": "즐기다",
+          "en": "to enjoy"
         }
       ]
     },
@@ -2234,403 +2734,503 @@
       "words": [
         {
           "es": "vela",
-          "ko": "요트"
+          "ko": "요트",
+          "en": "sailboat"
         },
         {
           "es": "arena",
-          "ko": "모래"
+          "ko": "모래",
+          "en": "sand"
         },
         {
           "es": "ola",
-          "ko": "파도"
+          "ko": "파도",
+          "en": "wave"
         },
         {
           "es": "protector solar",
-          "ko": "자외선 차단제"
+          "ko": "자외선 차단제",
+          "en": "sunscreen"
         },
         {
           "es": "toalla",
-          "ko": "수건"
+          "ko": "수건",
+          "en": "towel"
         },
         {
           "es": "sombrilla",
-          "ko": "파라솔"
+          "ko": "파라솔",
+          "en": "parasol"
         },
         {
           "es": "traje de baño",
-          "ko": "수영복"
+          "ko": "수영복",
+          "en": "swimsuit"
         },
         {
           "es": "tabla de surf",
-          "ko": "서핑 보드"
+          "ko": "서핑 보드",
+          "en": "surfboard"
         },
         {
           "es": "chaleco salvavidas",
-          "ko": "구명조끼"
+          "ko": "구명조끼",
+          "en": "life jacket"
         },
         {
           "es": "castillo de arena",
-          "ko": "모래성"
+          "ko": "모래성",
+          "en": "sand castle"
         },
         {
           "es": "campamento",
-          "ko": "캠핑장"
+          "ko": "캠핑장",
+          "en": "campground"
         },
         {
           "es": "tienda de campaña",
-          "ko": "텐트"
+          "ko": "텐트",
+          "en": "tent"
         },
         {
           "es": "saco de dormir",
-          "ko": "침낭"
+          "ko": "침낭",
+          "en": "sleeping bag"
         },
         {
           "es": "fogata",
-          "ko": "모닥불"
+          "ko": "모닥불",
+          "en": "bonfire"
         },
         {
           "es": "linterna",
-          "ko": "손전등"
+          "ko": "손전등",
+          "en": "flashlight"
         },
         {
           "es": "caminata",
-          "ko": "도보 여행"
+          "ko": "도보 여행",
+          "en": "hike"
         },
         {
           "es": "cumbre",
-          "ko": "정상"
+          "ko": "정상",
+          "en": "summit"
         },
         {
           "es": "acantilado",
-          "ko": "절벽"
+          "ko": "절벽",
+          "en": "cliff"
         },
         {
           "es": "cascada",
-          "ko": "폭포"
+          "ko": "폭포",
+          "en": "waterfall"
         },
         {
           "es": "cueva",
-          "ko": "동굴"
+          "ko": "동굴",
+          "en": "cave"
         },
         {
           "es": "leña",
-          "ko": "장작"
+          "ko": "장작",
+          "en": "firewood"
         },
         {
           "es": "navaja",
-          "ko": "주머니칼"
+          "ko": "주머니칼",
+          "en": "pocket knife"
         },
         {
           "es": "cantimplora",
-          "ko": "물통"
+          "ko": "물통",
+          "en": "canteen"
         },
         {
           "es": "tirolina",
-          "ko": "짚라인"
+          "ko": "짚라인",
+          "en": "zip line"
         },
         {
           "es": "hamaca",
-          "ko": "해먹"
+          "ko": "해먹",
+          "en": "hammock"
         },
         {
           "es": "festival",
-          "ko": "축제"
+          "ko": "축제",
+          "en": "festival"
         },
         {
           "es": "fiesta",
-          "ko": "파티"
+          "ko": "파티",
+          "en": "party"
         },
         {
           "es": "desfile",
-          "ko": "퍼레이드"
+          "ko": "퍼레이드",
+          "en": "parade"
         },
         {
           "es": "carnaval",
-          "ko": "카니발"
+          "ko": "카니발",
+          "en": "carnival"
         },
         {
           "es": "fuegos artificiales",
-          "ko": "불꽃놀이"
+          "ko": "불꽃놀이",
+          "en": "fireworks"
         },
         {
           "es": "disfraz",
-          "ko": "의상"
+          "ko": "의상",
+          "en": "costume"
         },
         {
           "es": "máscara",
-          "ko": "가면"
+          "ko": "가면",
+          "en": "mask"
         },
         {
           "es": "decoración",
-          "ko": "장식"
+          "ko": "장식",
+          "en": "decoration"
         },
         {
           "es": "globo",
-          "ko": "풍선"
+          "ko": "풍선",
+          "en": "balloon"
         },
         {
           "es": "celebración",
-          "ko": "축하"
+          "ko": "축하",
+          "en": "celebration"
         },
         {
           "es": "invitación",
-          "ko": "초대장"
+          "ko": "초대장",
+          "en": "invitation"
         },
         {
           "es": "banquete",
-          "ko": "연회"
+          "ko": "연회",
+          "en": "banquet"
         },
         {
           "es": "brindis",
-          "ko": "건배"
+          "ko": "건배",
+          "en": "toast"
         },
         {
           "es": "confeti",
-          "ko": "색종이 조각"
+          "ko": "색종이 조각",
+          "en": "confetti"
         },
         {
           "es": "sorpresa",
-          "ko": "깜짝"
+          "ko": "깜짝",
+          "en": "surprise"
         },
         {
           "es": "danza",
-          "ko": "춤"
+          "ko": "춤",
+          "en": "dance"
         },
         {
           "es": "ballet",
-          "ko": "발레"
+          "ko": "발레",
+          "en": "ballet"
         },
         {
           "es": "teatro",
-          "ko": "연극"
+          "ko": "연극",
+          "en": "theater"
         },
         {
           "es": "obra de teatro",
-          "ko": "희곡"
+          "ko": "희곡",
+          "en": "play"
         },
         {
           "es": "coreografía",
-          "ko": "안무"
+          "ko": "안무",
+          "en": "choreography"
         },
         {
           "es": "bailarín",
-          "ko": "무용가"
+          "ko": "무용가",
+          "en": "dancer"
         },
         {
           "es": "ensayo",
-          "ko": "리허설"
+          "ko": "리허설",
+          "en": "rehearsal"
         },
         {
           "es": "telón",
-          "ko": "막"
+          "ko": "막",
+          "en": "curtain"
         },
         {
           "es": "vestuario",
-          "ko": "무대 의상"
+          "ko": "무대 의상",
+          "en": "wardrobe"
         },
         {
           "es": "maquillaje",
-          "ko": "분장"
+          "ko": "분장",
+          "en": "makeup"
         },
         {
           "es": "protagonista",
-          "ko": "주인공"
+          "ko": "주인공",
+          "en": "protagonist"
         },
         {
           "es": "acto",
-          "ko": "막(연극)"
+          "ko": "막(연극)",
+          "en": "act"
         },
         {
           "es": "musical",
-          "ko": "뮤지컬"
+          "ko": "뮤지컬",
+          "en": "musical"
         },
         {
           "es": "ópera",
-          "ko": "오페라"
+          "ko": "오페라",
+          "en": "opera"
         },
         {
           "es": "butaca",
-          "ko": "좌석"
+          "ko": "좌석",
+          "en": "seat"
         },
         {
           "es": "colección",
-          "ko": "수집"
+          "ko": "수집",
+          "en": "collection"
         },
         {
           "es": "sello",
-          "ko": "우표"
+          "ko": "우표",
+          "en": "stamp"
         },
         {
           "es": "moneda",
-          "ko": "동전"
+          "ko": "동전",
+          "en": "coin"
         },
         {
           "es": "antigüedad",
-          "ko": "골동품"
+          "ko": "골동품",
+          "en": "antique"
         },
         {
           "es": "manualidad",
-          "ko": "공예품"
+          "ko": "공예품",
+          "en": "craft"
         },
         {
           "es": "costura",
-          "ko": "바느질"
+          "ko": "바느질",
+          "en": "sewing"
         },
         {
           "es": "tejido",
-          "ko": "뜨개질"
+          "ko": "뜨개질",
+          "en": "knitting"
         },
         {
           "es": "cerámica",
-          "ko": "도자기"
+          "ko": "도자기",
+          "en": "ceramics"
         },
         {
           "es": "origami",
-          "ko": "종이접기"
+          "ko": "종이접기",
+          "en": "origami"
         },
         {
           "es": "bordado",
-          "ko": "자수"
+          "ko": "자수",
+          "en": "embroidery"
         },
         {
           "es": "joyería",
-          "ko": "보석 공예"
+          "ko": "보석 공예",
+          "en": "jewelry"
         },
         {
           "es": "carpintería",
-          "ko": "목공"
+          "ko": "목공",
+          "en": "carpentry"
         },
         {
           "es": "hilo",
-          "ko": "실"
+          "ko": "실",
+          "en": "thread"
         },
         {
           "es": "aguja",
-          "ko": "바늘"
+          "ko": "바늘",
+          "en": "needle"
         },
         {
           "es": "pegamento",
-          "ko": "접착제"
+          "ko": "접착제",
+          "en": "glue"
         },
         {
           "es": "red social",
-          "ko": "소셜 미디어"
+          "ko": "소셜 미디어",
+          "en": "social media"
         },
         {
           "es": "internet",
-          "ko": "인터넷"
+          "ko": "인터넷",
+          "en": "internet"
         },
         {
           "es": "publicación",
-          "ko": "게시물"
+          "ko": "게시물",
+          "en": "publication"
         },
         {
           "es": "seguidores",
-          "ko": "팔로워"
+          "ko": "팔로워",
+          "en": "followers"
         },
         {
           "es": "me gusta",
-          "ko": "좋아요"
+          "ko": "좋아요",
+          "en": "I like it"
         },
         {
           "es": "comentario",
-          "ko": "댓글"
+          "ko": "댓글",
+          "en": "comment"
         },
         {
           "es": "compartir",
-          "ko": "공유"
+          "ko": "공유",
+          "en": "to share"
         },
         {
           "es": "hashtag",
-          "ko": "해시태그"
+          "ko": "해시태그",
+          "en": "hashtag"
         },
         {
           "es": "perfil",
-          "ko": "프로필"
+          "ko": "프로필",
+          "en": "profile"
         },
         {
           "es": "blog",
-          "ko": "블로그"
+          "ko": "블로그",
+          "en": "blog"
         },
         {
           "es": "podcast",
-          "ko": "팟캐스트"
+          "ko": "팟캐스트",
+          "en": "podcast"
         },
         {
           "es": "en directo",
-          "ko": "라이브"
+          "ko": "라이브",
+          "en": "live"
         },
         {
           "es": "viral",
-          "ko": "바이럴"
+          "ko": "바이럴",
+          "en": "viral"
         },
         {
           "es": "influencer",
-          "ko": "인플루언서"
+          "ko": "인플루언서",
+          "en": "influencer"
         },
         {
           "es": "descargar",
-          "ko": "다운로드"
+          "ko": "다운로드",
+          "en": "to download"
         },
         {
           "es": "jugar",
-          "ko": "놀다"
+          "ko": "놀다",
+          "en": "to play"
         },
         {
           "es": "cantar",
-          "ko": "노래하다"
+          "ko": "노래하다",
+          "en": "to sing"
         },
         {
           "es": "bailar",
-          "ko": "춤추다"
+          "ko": "춤추다",
+          "en": "to dance"
         },
         {
           "es": "dibujar",
-          "ko": "그리다"
+          "ko": "그리다",
+          "en": "to draw"
         },
         {
           "es": "pintar",
-          "ko": "칠하다"
+          "ko": "칠하다",
+          "en": "to paint"
         },
         {
           "es": "tocar",
-          "ko": "연주하다"
+          "ko": "연주하다",
+          "en": "to play"
         },
         {
           "es": "nadar",
-          "ko": "수영하다"
+          "ko": "수영하다",
+          "en": "to swim"
         },
         {
           "es": "correr",
-          "ko": "달리다"
+          "ko": "달리다",
+          "en": "to run"
         },
         {
           "es": "saltar",
-          "ko": "뛰다"
+          "ko": "뛰다",
+          "en": "to jump"
         },
         {
           "es": "leer",
-          "ko": "읽다"
+          "ko": "읽다",
+          "en": "to read"
         },
         {
           "es": "escribir",
-          "ko": "쓰다"
+          "ko": "쓰다",
+          "en": "to write"
         },
         {
           "es": "viajar",
-          "ko": "여행하다"
+          "ko": "여행하다",
+          "en": "to travel"
         },
         {
           "es": "fotografiar",
-          "ko": "사진 찍다"
+          "ko": "사진 찍다",
+          "en": "to photograph"
         },
         {
           "es": "acampar",
-          "ko": "캠핑하다"
+          "ko": "캠핑하다",
+          "en": "to camp"
         },
         {
           "es": "disfrutar",
-          "ko": "즐기다"
+          "ko": "즐기다",
+          "en": "to enjoy"
         }
       ]
     }

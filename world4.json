@@ -10,43 +10,53 @@
       "words": [
         {
           "es": "naturaleza",
-          "ko": "자연"
+          "ko": "자연",
+          "en": "nature"
         },
         {
           "es": "tierra",
-          "ko": "땅"
+          "ko": "땅",
+          "en": "land"
         },
         {
           "es": "cielo",
-          "ko": "하늘"
+          "ko": "하늘",
+          "en": "sky"
         },
         {
           "es": "sol",
-          "ko": "태양"
+          "ko": "태양",
+          "en": "sun"
         },
         {
           "es": "luna",
-          "ko": "달"
+          "ko": "달",
+          "en": "moon"
         },
         {
           "es": "estrella",
-          "ko": "별"
+          "ko": "별",
+          "en": "star"
         },
         {
           "es": "agua",
-          "ko": "물"
+          "ko": "물",
+          "en": "water"
         },
         {
           "es": "fuego",
-          "ko": "불"
+          "ko": "불",
+          "en": "fire"
         },
         {
           "es": "aire",
-          "ko": "공기"
+          "ko": "공기",
+          "en": "air"
         },
         {
           "es": "piedra",
-          "ko": "돌"
+          "ko": "돌",
+          "en": "stone"
         }
       ]
     },
@@ -57,43 +67,53 @@
       "words": [
         {
           "es": "arena",
-          "ko": "모래"
+          "ko": "모래",
+          "en": "sand"
         },
         {
           "es": "luz",
-          "ko": "빛"
+          "ko": "빛",
+          "en": "light"
         },
         {
           "es": "sombra",
-          "ko": "그림자"
+          "ko": "그림자",
+          "en": "shadow"
         },
         {
           "es": "horizonte",
-          "ko": "지평선"
+          "ko": "지평선",
+          "en": "horizon"
         },
         {
           "es": "paisaje",
-          "ko": "풍경"
+          "ko": "풍경",
+          "en": "landscape"
         },
         {
           "es": "montaña",
-          "ko": "산"
+          "ko": "산",
+          "en": "mountain"
         },
         {
           "es": "valle",
-          "ko": "계곡"
+          "ko": "계곡",
+          "en": "valley"
         },
         {
           "es": "colina",
-          "ko": "언덕"
+          "ko": "언덕",
+          "en": "hill"
         },
         {
           "es": "llanura",
-          "ko": "평야"
+          "ko": "평야",
+          "en": "plain"
         },
         {
           "es": "desierto",
-          "ko": "사막"
+          "ko": "사막",
+          "en": "desert"
         }
       ]
     },
@@ -104,43 +124,53 @@
       "words": [
         {
           "es": "isla",
-          "ko": "섬"
+          "ko": "섬",
+          "en": "island"
         },
         {
           "es": "volcán",
-          "ko": "화산"
+          "ko": "화산",
+          "en": "volcano"
         },
         {
           "es": "cueva",
-          "ko": "동굴"
+          "ko": "동굴",
+          "en": "cave"
         },
         {
           "es": "acantilado",
-          "ko": "절벽"
+          "ko": "절벽",
+          "en": "cliff"
         },
         {
           "es": "meseta",
-          "ko": "고원"
+          "ko": "고원",
+          "en": "plateau"
         },
         {
           "es": "península",
-          "ko": "반도"
+          "ko": "반도",
+          "en": "peninsula"
         },
         {
           "es": "continente",
-          "ko": "대륙"
+          "ko": "대륙",
+          "en": "continent"
         },
         {
           "es": "costa",
-          "ko": "해안"
+          "ko": "해안",
+          "en": "coast"
         },
         {
           "es": "cañón",
-          "ko": "협곡"
+          "ko": "협곡",
+          "en": "canyon"
         },
         {
           "es": "pradera",
-          "ko": "초원"
+          "ko": "초원",
+          "en": "prairie"
         }
       ]
     },
@@ -151,43 +181,53 @@
       "words": [
         {
           "es": "río",
-          "ko": "강"
+          "ko": "강",
+          "en": "river"
         },
         {
           "es": "mar",
-          "ko": "바다"
+          "ko": "바다",
+          "en": "sea"
         },
         {
           "es": "lago",
-          "ko": "호수"
+          "ko": "호수",
+          "en": "lake"
         },
         {
           "es": "océano",
-          "ko": "대양"
+          "ko": "대양",
+          "en": "ocean"
         },
         {
           "es": "cascada",
-          "ko": "폭포"
+          "ko": "폭포",
+          "en": "waterfall"
         },
         {
           "es": "arroyo",
-          "ko": "시내"
+          "ko": "시내",
+          "en": "stream"
         },
         {
           "es": "pantano",
-          "ko": "늪"
+          "ko": "늪",
+          "en": "swamp"
         },
         {
           "es": "glaciar",
-          "ko": "빙하"
+          "ko": "빙하",
+          "en": "glacier"
         },
         {
           "es": "manantial",
-          "ko": "샘"
+          "ko": "샘",
+          "en": "spring"
         },
         {
           "es": "ola",
-          "ko": "파도"
+          "ko": "파도",
+          "en": "wave"
         }
       ]
     },
@@ -198,43 +238,53 @@
       "words": [
         {
           "es": "corriente",
-          "ko": "해류"
+          "ko": "해류",
+          "en": "current"
         },
         {
           "es": "estanque",
-          "ko": "연못"
+          "ko": "연못",
+          "en": "pond"
         },
         {
           "es": "bahía",
-          "ko": "만"
+          "ko": "만",
+          "en": "bay"
         },
         {
           "es": "marea",
-          "ko": "조수"
+          "ko": "조수",
+          "en": "tide"
         },
         {
           "es": "orilla",
-          "ko": "강가"
+          "ko": "강가",
+          "en": "riverbank"
         },
         {
           "es": "lluvia",
-          "ko": "비"
+          "ko": "비",
+          "en": "rain"
         },
         {
           "es": "nieve",
-          "ko": "눈"
+          "ko": "눈",
+          "en": "snow"
         },
         {
           "es": "viento",
-          "ko": "바람"
+          "ko": "바람",
+          "en": "wind"
         },
         {
           "es": "nube",
-          "ko": "구름"
+          "ko": "구름",
+          "en": "cloud"
         },
         {
           "es": "tormenta",
-          "ko": "폭풍"
+          "ko": "폭풍",
+          "en": "storm"
         }
       ]
     },
@@ -245,43 +295,53 @@
       "words": [
         {
           "es": "niebla",
-          "ko": "안개"
+          "ko": "안개",
+          "en": "fog"
         },
         {
           "es": "helada",
-          "ko": "서리"
+          "ko": "서리",
+          "en": "frost"
         },
         {
           "es": "granizo",
-          "ko": "우박"
+          "ko": "우박",
+          "en": "hail"
         },
         {
           "es": "trueno",
-          "ko": "천둥"
+          "ko": "천둥",
+          "en": "thunder"
         },
         {
           "es": "relámpago",
-          "ko": "번개"
+          "ko": "번개",
+          "en": "lightning"
         },
         {
           "es": "brisa",
-          "ko": "산들바람"
+          "ko": "산들바람",
+          "en": "breeze"
         },
         {
           "es": "humedad",
-          "ko": "습도"
+          "ko": "습도",
+          "en": "humidity"
         },
         {
           "es": "sequía",
-          "ko": "가뭄"
+          "ko": "가뭄",
+          "en": "drought"
         },
         {
           "es": "rocío",
-          "ko": "이슬"
+          "ko": "이슬",
+          "en": "dew"
         },
         {
           "es": "escarcha",
-          "ko": "성에"
+          "ko": "성에",
+          "en": "frost"
         }
       ]
     },
@@ -292,43 +352,53 @@
       "words": [
         {
           "es": "arcoíris",
-          "ko": "무지개"
+          "ko": "무지개",
+          "en": "rainbow"
         },
         {
           "es": "tornado",
-          "ko": "토네이도"
+          "ko": "토네이도",
+          "en": "tornado"
         },
         {
           "es": "huracán",
-          "ko": "허리케인"
+          "ko": "허리케인",
+          "en": "hurricane"
         },
         {
           "es": "tifón",
-          "ko": "태풍"
+          "ko": "태풍",
+          "en": "typhoon"
         },
         {
           "es": "rayo",
-          "ko": "벼락"
+          "ko": "벼락",
+          "en": "lightning"
         },
         {
           "es": "nevada",
-          "ko": "폭설"
+          "ko": "폭설",
+          "en": "snowfall"
         },
         {
           "es": "ventisca",
-          "ko": "눈보라"
+          "ko": "눈보라",
+          "en": "blizzard"
         },
         {
           "es": "aguacero",
-          "ko": "소나기"
+          "ko": "소나기",
+          "en": "downpour"
         },
         {
           "es": "neblina",
-          "ko": "옅은 안개"
+          "ko": "옅은 안개",
+          "en": "mist"
         },
         {
           "es": "ráfaga",
-          "ko": "돌풍"
+          "ko": "돌풍",
+          "en": "gust"
         }
       ]
     },
@@ -339,43 +409,53 @@
       "words": [
         {
           "es": "monzón",
-          "ko": "몬순"
+          "ko": "몬순",
+          "en": "monsoon"
         },
         {
           "es": "aurora",
-          "ko": "오로라"
+          "ko": "오로라",
+          "en": "aurora"
         },
         {
           "es": "ciclón",
-          "ko": "사이클론"
+          "ko": "사이클론",
+          "en": "cyclone"
         },
         {
           "es": "temperatura",
-          "ko": "온도"
+          "ko": "온도",
+          "en": "temperature"
         },
         {
           "es": "pronóstico",
-          "ko": "일기예보"
+          "ko": "일기예보",
+          "en": "forecast"
         },
         {
           "es": "primavera",
-          "ko": "봄"
+          "ko": "봄",
+          "en": "spring"
         },
         {
           "es": "verano",
-          "ko": "여름"
+          "ko": "여름",
+          "en": "summer"
         },
         {
           "es": "otoño",
-          "ko": "가을"
+          "ko": "가을",
+          "en": "autumn"
         },
         {
           "es": "invierno",
-          "ko": "겨울"
+          "ko": "겨울",
+          "en": "winter"
         },
         {
           "es": "clima",
-          "ko": "기후"
+          "ko": "기후",
+          "en": "climate"
         }
       ]
     },
@@ -386,43 +466,53 @@
       "words": [
         {
           "es": "calor",
-          "ko": "더위"
+          "ko": "더위",
+          "en": "heat"
         },
         {
           "es": "frío",
-          "ko": "추위"
+          "ko": "추위",
+          "en": "cold"
         },
         {
           "es": "templado",
-          "ko": "온화한"
+          "ko": "온화한",
+          "en": "mild"
         },
         {
           "es": "tropical",
-          "ko": "열대의"
+          "ko": "열대의",
+          "en": "tropical"
         },
         {
           "es": "polar",
-          "ko": "극지의"
+          "ko": "극지의",
+          "en": "polar"
         },
         {
           "es": "estación",
-          "ko": "계절"
+          "ko": "계절",
+          "en": "station"
         },
         {
           "es": "amanecer",
-          "ko": "새벽"
+          "ko": "새벽",
+          "en": "dawn"
         },
         {
           "es": "atardecer",
-          "ko": "해질녘"
+          "ko": "해질녘",
+          "en": "sunset"
         },
         {
           "es": "mediodía",
-          "ko": "정오"
+          "ko": "정오",
+          "en": "noon"
         },
         {
           "es": "medianoche",
-          "ko": "자정"
+          "ko": "자정",
+          "en": "midnight"
         }
       ]
     },
@@ -433,43 +523,53 @@
       "words": [
         {
           "es": "perro",
-          "ko": "개"
+          "ko": "개",
+          "en": "dog"
         },
         {
           "es": "gato",
-          "ko": "고양이"
+          "ko": "고양이",
+          "en": "cat"
         },
         {
           "es": "caballo",
-          "ko": "말"
+          "ko": "말",
+          "en": "horse"
         },
         {
           "es": "vaca",
-          "ko": "소"
+          "ko": "소",
+          "en": "cow"
         },
         {
           "es": "cerdo",
-          "ko": "돼지"
+          "ko": "돼지",
+          "en": "pork"
         },
         {
           "es": "oveja",
-          "ko": "양"
+          "ko": "양",
+          "en": "sheep"
         },
         {
           "es": "gallina",
-          "ko": "닭"
+          "ko": "닭",
+          "en": "hen"
         },
         {
           "es": "conejo",
-          "ko": "토끼"
+          "ko": "토끼",
+          "en": "rabbit"
         },
         {
           "es": "pato",
-          "ko": "오리"
+          "ko": "오리",
+          "en": "duck"
         },
         {
           "es": "cabra",
-          "ko": "염소"
+          "ko": "염소",
+          "en": "goat"
         }
       ]
     },
@@ -480,403 +580,503 @@
       "words": [
         {
           "es": "naturaleza",
-          "ko": "자연"
+          "ko": "자연",
+          "en": "nature"
         },
         {
           "es": "tierra",
-          "ko": "땅"
+          "ko": "땅",
+          "en": "land"
         },
         {
           "es": "cielo",
-          "ko": "하늘"
+          "ko": "하늘",
+          "en": "sky"
         },
         {
           "es": "sol",
-          "ko": "태양"
+          "ko": "태양",
+          "en": "sun"
         },
         {
           "es": "luna",
-          "ko": "달"
+          "ko": "달",
+          "en": "moon"
         },
         {
           "es": "estrella",
-          "ko": "별"
+          "ko": "별",
+          "en": "star"
         },
         {
           "es": "agua",
-          "ko": "물"
+          "ko": "물",
+          "en": "water"
         },
         {
           "es": "fuego",
-          "ko": "불"
+          "ko": "불",
+          "en": "fire"
         },
         {
           "es": "aire",
-          "ko": "공기"
+          "ko": "공기",
+          "en": "air"
         },
         {
           "es": "piedra",
-          "ko": "돌"
+          "ko": "돌",
+          "en": "stone"
         },
         {
           "es": "arena",
-          "ko": "모래"
+          "ko": "모래",
+          "en": "sand"
         },
         {
           "es": "luz",
-          "ko": "빛"
+          "ko": "빛",
+          "en": "light"
         },
         {
           "es": "sombra",
-          "ko": "그림자"
+          "ko": "그림자",
+          "en": "shadow"
         },
         {
           "es": "horizonte",
-          "ko": "지평선"
+          "ko": "지평선",
+          "en": "horizon"
         },
         {
           "es": "paisaje",
-          "ko": "풍경"
+          "ko": "풍경",
+          "en": "landscape"
         },
         {
           "es": "montaña",
-          "ko": "산"
+          "ko": "산",
+          "en": "mountain"
         },
         {
           "es": "valle",
-          "ko": "계곡"
+          "ko": "계곡",
+          "en": "valley"
         },
         {
           "es": "colina",
-          "ko": "언덕"
+          "ko": "언덕",
+          "en": "hill"
         },
         {
           "es": "llanura",
-          "ko": "평야"
+          "ko": "평야",
+          "en": "plain"
         },
         {
           "es": "desierto",
-          "ko": "사막"
+          "ko": "사막",
+          "en": "desert"
         },
         {
           "es": "isla",
-          "ko": "섬"
+          "ko": "섬",
+          "en": "island"
         },
         {
           "es": "volcán",
-          "ko": "화산"
+          "ko": "화산",
+          "en": "volcano"
         },
         {
           "es": "cueva",
-          "ko": "동굴"
+          "ko": "동굴",
+          "en": "cave"
         },
         {
           "es": "acantilado",
-          "ko": "절벽"
+          "ko": "절벽",
+          "en": "cliff"
         },
         {
           "es": "meseta",
-          "ko": "고원"
+          "ko": "고원",
+          "en": "plateau"
         },
         {
           "es": "península",
-          "ko": "반도"
+          "ko": "반도",
+          "en": "peninsula"
         },
         {
           "es": "continente",
-          "ko": "대륙"
+          "ko": "대륙",
+          "en": "continent"
         },
         {
           "es": "costa",
-          "ko": "해안"
+          "ko": "해안",
+          "en": "coast"
         },
         {
           "es": "cañón",
-          "ko": "협곡"
+          "ko": "협곡",
+          "en": "canyon"
         },
         {
           "es": "pradera",
-          "ko": "초원"
+          "ko": "초원",
+          "en": "prairie"
         },
         {
           "es": "río",
-          "ko": "강"
+          "ko": "강",
+          "en": "river"
         },
         {
           "es": "mar",
-          "ko": "바다"
+          "ko": "바다",
+          "en": "sea"
         },
         {
           "es": "lago",
-          "ko": "호수"
+          "ko": "호수",
+          "en": "lake"
         },
         {
           "es": "océano",
-          "ko": "대양"
+          "ko": "대양",
+          "en": "ocean"
         },
         {
           "es": "cascada",
-          "ko": "폭포"
+          "ko": "폭포",
+          "en": "waterfall"
         },
         {
           "es": "arroyo",
-          "ko": "시내"
+          "ko": "시내",
+          "en": "stream"
         },
         {
           "es": "pantano",
-          "ko": "늪"
+          "ko": "늪",
+          "en": "swamp"
         },
         {
           "es": "glaciar",
-          "ko": "빙하"
+          "ko": "빙하",
+          "en": "glacier"
         },
         {
           "es": "manantial",
-          "ko": "샘"
+          "ko": "샘",
+          "en": "spring"
         },
         {
           "es": "ola",
-          "ko": "파도"
+          "ko": "파도",
+          "en": "wave"
         },
         {
           "es": "corriente",
-          "ko": "해류"
+          "ko": "해류",
+          "en": "current"
         },
         {
           "es": "estanque",
-          "ko": "연못"
+          "ko": "연못",
+          "en": "pond"
         },
         {
           "es": "bahía",
-          "ko": "만"
+          "ko": "만",
+          "en": "bay"
         },
         {
           "es": "marea",
-          "ko": "조수"
+          "ko": "조수",
+          "en": "tide"
         },
         {
           "es": "orilla",
-          "ko": "강가"
+          "ko": "강가",
+          "en": "riverbank"
         },
         {
           "es": "lluvia",
-          "ko": "비"
+          "ko": "비",
+          "en": "rain"
         },
         {
           "es": "nieve",
-          "ko": "눈"
+          "ko": "눈",
+          "en": "snow"
         },
         {
           "es": "viento",
-          "ko": "바람"
+          "ko": "바람",
+          "en": "wind"
         },
         {
           "es": "nube",
-          "ko": "구름"
+          "ko": "구름",
+          "en": "cloud"
         },
         {
           "es": "tormenta",
-          "ko": "폭풍"
+          "ko": "폭풍",
+          "en": "storm"
         },
         {
           "es": "niebla",
-          "ko": "안개"
+          "ko": "안개",
+          "en": "fog"
         },
         {
           "es": "helada",
-          "ko": "서리"
+          "ko": "서리",
+          "en": "frost"
         },
         {
           "es": "granizo",
-          "ko": "우박"
+          "ko": "우박",
+          "en": "hail"
         },
         {
           "es": "trueno",
-          "ko": "천둥"
+          "ko": "천둥",
+          "en": "thunder"
         },
         {
           "es": "relámpago",
-          "ko": "번개"
+          "ko": "번개",
+          "en": "lightning"
         },
         {
           "es": "brisa",
-          "ko": "산들바람"
+          "ko": "산들바람",
+          "en": "breeze"
         },
         {
           "es": "humedad",
-          "ko": "습도"
+          "ko": "습도",
+          "en": "humidity"
         },
         {
           "es": "sequía",
-          "ko": "가뭄"
+          "ko": "가뭄",
+          "en": "drought"
         },
         {
           "es": "rocío",
-          "ko": "이슬"
+          "ko": "이슬",
+          "en": "dew"
         },
         {
           "es": "escarcha",
-          "ko": "성에"
+          "ko": "성에",
+          "en": "frost"
         },
         {
           "es": "arcoíris",
-          "ko": "무지개"
+          "ko": "무지개",
+          "en": "rainbow"
         },
         {
           "es": "tornado",
-          "ko": "토네이도"
+          "ko": "토네이도",
+          "en": "tornado"
         },
         {
           "es": "huracán",
-          "ko": "허리케인"
+          "ko": "허리케인",
+          "en": "hurricane"
         },
         {
           "es": "tifón",
-          "ko": "태풍"
+          "ko": "태풍",
+          "en": "typhoon"
         },
         {
           "es": "rayo",
-          "ko": "벼락"
+          "ko": "벼락",
+          "en": "lightning"
         },
         {
           "es": "nevada",
-          "ko": "폭설"
+          "ko": "폭설",
+          "en": "snowfall"
         },
         {
           "es": "ventisca",
-          "ko": "눈보라"
+          "ko": "눈보라",
+          "en": "blizzard"
         },
         {
           "es": "aguacero",
-          "ko": "소나기"
+          "ko": "소나기",
+          "en": "downpour"
         },
         {
           "es": "neblina",
-          "ko": "옅은 안개"
+          "ko": "옅은 안개",
+          "en": "mist"
         },
         {
           "es": "ráfaga",
-          "ko": "돌풍"
+          "ko": "돌풍",
+          "en": "gust"
         },
         {
           "es": "monzón",
-          "ko": "몬순"
+          "ko": "몬순",
+          "en": "monsoon"
         },
         {
           "es": "aurora",
-          "ko": "오로라"
+          "ko": "오로라",
+          "en": "aurora"
         },
         {
           "es": "ciclón",
-          "ko": "사이클론"
+          "ko": "사이클론",
+          "en": "cyclone"
         },
         {
           "es": "temperatura",
-          "ko": "온도"
+          "ko": "온도",
+          "en": "temperature"
         },
         {
           "es": "pronóstico",
-          "ko": "일기예보"
+          "ko": "일기예보",
+          "en": "forecast"
         },
         {
           "es": "primavera",
-          "ko": "봄"
+          "ko": "봄",
+          "en": "spring"
         },
         {
           "es": "verano",
-          "ko": "여름"
+          "ko": "여름",
+          "en": "summer"
         },
         {
           "es": "otoño",
-          "ko": "가을"
+          "ko": "가을",
+          "en": "autumn"
         },
         {
           "es": "invierno",
-          "ko": "겨울"
+          "ko": "겨울",
+          "en": "winter"
         },
         {
           "es": "clima",
-          "ko": "기후"
+          "ko": "기후",
+          "en": "climate"
         },
         {
           "es": "calor",
-          "ko": "더위"
+          "ko": "더위",
+          "en": "heat"
         },
         {
           "es": "frío",
-          "ko": "추위"
+          "ko": "추위",
+          "en": "cold"
         },
         {
           "es": "templado",
-          "ko": "온화한"
+          "ko": "온화한",
+          "en": "mild"
         },
         {
           "es": "tropical",
-          "ko": "열대의"
+          "ko": "열대의",
+          "en": "tropical"
         },
         {
           "es": "polar",
-          "ko": "극지의"
+          "ko": "극지의",
+          "en": "polar"
         },
         {
           "es": "estación",
-          "ko": "계절"
+          "ko": "계절",
+          "en": "station"
         },
         {
           "es": "amanecer",
-          "ko": "새벽"
+          "ko": "새벽",
+          "en": "dawn"
         },
         {
           "es": "atardecer",
-          "ko": "해질녘"
+          "ko": "해질녘",
+          "en": "sunset"
         },
         {
           "es": "mediodía",
-          "ko": "정오"
+          "ko": "정오",
+          "en": "noon"
         },
         {
           "es": "medianoche",
-          "ko": "자정"
+          "ko": "자정",
+          "en": "midnight"
         },
         {
           "es": "perro",
-          "ko": "개"
+          "ko": "개",
+          "en": "dog"
         },
         {
           "es": "gato",
-          "ko": "고양이"
+          "ko": "고양이",
+          "en": "cat"
         },
         {
           "es": "caballo",
-          "ko": "말"
+          "ko": "말",
+          "en": "horse"
         },
         {
           "es": "vaca",
-          "ko": "소"
+          "ko": "소",
+          "en": "cow"
         },
         {
           "es": "cerdo",
-          "ko": "돼지"
+          "ko": "돼지",
+          "en": "pork"
         },
         {
           "es": "oveja",
-          "ko": "양"
+          "ko": "양",
+          "en": "sheep"
         },
         {
           "es": "gallina",
-          "ko": "닭"
+          "ko": "닭",
+          "en": "hen"
         },
         {
           "es": "conejo",
-          "ko": "토끼"
+          "ko": "토끼",
+          "en": "rabbit"
         },
         {
           "es": "pato",
-          "ko": "오리"
+          "ko": "오리",
+          "en": "duck"
         },
         {
           "es": "cabra",
-          "ko": "염소"
+          "ko": "염소",
+          "en": "goat"
         }
       ]
     },
@@ -887,43 +1087,53 @@
       "words": [
         {
           "es": "burro",
-          "ko": "당나귀"
+          "ko": "당나귀",
+          "en": "donkey"
         },
         {
           "es": "toro",
-          "ko": "황소"
+          "ko": "황소",
+          "en": "bull"
         },
         {
           "es": "pavo",
-          "ko": "칠면조"
+          "ko": "칠면조",
+          "en": "turkey"
         },
         {
           "es": "paloma",
-          "ko": "비둘기"
+          "ko": "비둘기",
+          "en": "pigeon"
         },
         {
           "es": "hámster",
-          "ko": "햄스터"
+          "ko": "햄스터",
+          "en": "hamster"
         },
         {
           "es": "león",
-          "ko": "사자"
+          "ko": "사자",
+          "en": "lion"
         },
         {
           "es": "tigre",
-          "ko": "호랑이"
+          "ko": "호랑이",
+          "en": "tiger"
         },
         {
           "es": "oso",
-          "ko": "곰"
+          "ko": "곰",
+          "en": "bear"
         },
         {
           "es": "lobo",
-          "ko": "늑대"
+          "ko": "늑대",
+          "en": "wolf"
         },
         {
           "es": "zorro",
-          "ko": "여우"
+          "ko": "여우",
+          "en": "fox"
         }
       ]
     },
@@ -934,43 +1144,53 @@
       "words": [
         {
           "es": "elefante",
-          "ko": "코끼리"
+          "ko": "코끼리",
+          "en": "elephant"
         },
         {
           "es": "jirafa",
-          "ko": "기린"
+          "ko": "기린",
+          "en": "giraffe"
         },
         {
           "es": "mono",
-          "ko": "원숭이"
+          "ko": "원숭이",
+          "en": "monkey"
         },
         {
           "es": "ciervo",
-          "ko": "사슴"
+          "ko": "사슴",
+          "en": "deer"
         },
         {
           "es": "leopardo",
-          "ko": "표범"
+          "ko": "표범",
+          "en": "leopard"
         },
         {
           "es": "rinoceronte",
-          "ko": "코뿔소"
+          "ko": "코뿔소",
+          "en": "rhinoceros"
         },
         {
           "es": "hipopótamo",
-          "ko": "하마"
+          "ko": "하마",
+          "en": "hippopotamus"
         },
         {
           "es": "cebra",
-          "ko": "얼룩말"
+          "ko": "얼룩말",
+          "en": "zebra"
         },
         {
           "es": "ardilla",
-          "ko": "다람쥐"
+          "ko": "다람쥐",
+          "en": "squirrel"
         },
         {
           "es": "murciélago",
-          "ko": "박쥐"
+          "ko": "박쥐",
+          "en": "bat"
         }
       ]
     },
@@ -981,43 +1201,53 @@
       "words": [
         {
           "es": "águila",
-          "ko": "독수리"
+          "ko": "독수리",
+          "en": "eagle"
         },
         {
           "es": "búho",
-          "ko": "올빼미"
+          "ko": "올빼미",
+          "en": "owl"
         },
         {
           "es": "mariposa",
-          "ko": "나비"
+          "ko": "나비",
+          "en": "butterfly"
         },
         {
           "es": "abeja",
-          "ko": "벌"
+          "ko": "벌",
+          "en": "bee"
         },
         {
           "es": "hormiga",
-          "ko": "개미"
+          "ko": "개미",
+          "en": "ant"
         },
         {
           "es": "mosquito",
-          "ko": "모기"
+          "ko": "모기",
+          "en": "mosquito"
         },
         {
           "es": "araña",
-          "ko": "거미"
+          "ko": "거미",
+          "en": "spider"
         },
         {
           "es": "libélula",
-          "ko": "잠자리"
+          "ko": "잠자리",
+          "en": "dragonfly"
         },
         {
           "es": "cigarra",
-          "ko": "매미"
+          "ko": "매미",
+          "en": "cicada"
         },
         {
           "es": "escarabajo",
-          "ko": "딱정벌레"
+          "ko": "딱정벌레",
+          "en": "beetle"
         }
       ]
     },
@@ -1028,43 +1258,53 @@
       "words": [
         {
           "es": "gorrión",
-          "ko": "참새"
+          "ko": "참새",
+          "en": "sparrow"
         },
         {
           "es": "cuervo",
-          "ko": "까마귀"
+          "ko": "까마귀",
+          "en": "crow"
         },
         {
           "es": "golondrina",
-          "ko": "제비"
+          "ko": "제비",
+          "en": "swallow"
         },
         {
           "es": "loro",
-          "ko": "앵무새"
+          "ko": "앵무새",
+          "en": "parrot"
         },
         {
           "es": "grillo",
-          "ko": "귀뚜라미"
+          "ko": "귀뚜라미",
+          "en": "cricket"
         },
         {
           "es": "pez",
-          "ko": "물고기"
+          "ko": "물고기",
+          "en": "fish"
         },
         {
           "es": "ballena",
-          "ko": "고래"
+          "ko": "고래",
+          "en": "whale"
         },
         {
           "es": "delfín",
-          "ko": "돌고래"
+          "ko": "돌고래",
+          "en": "dolphin"
         },
         {
           "es": "tiburón",
-          "ko": "상어"
+          "ko": "상어",
+          "en": "shark"
         },
         {
           "es": "pulpo",
-          "ko": "문어"
+          "ko": "문어",
+          "en": "octopus"
         }
       ]
     },
@@ -1075,43 +1315,53 @@
       "words": [
         {
           "es": "cangrejo",
-          "ko": "게"
+          "ko": "게",
+          "en": "crab"
         },
         {
           "es": "tortuga marina",
-          "ko": "바다거북"
+          "ko": "바다거북",
+          "en": "sea turtle"
         },
         {
           "es": "medusa",
-          "ko": "해파리"
+          "ko": "해파리",
+          "en": "jellyfish"
         },
         {
           "es": "estrella de mar",
-          "ko": "불가사리"
+          "ko": "불가사리",
+          "en": "starfish"
         },
         {
           "es": "camarón",
-          "ko": "새우"
+          "ko": "새우",
+          "en": "shrimp"
         },
         {
           "es": "calamar",
-          "ko": "오징어"
+          "ko": "오징어",
+          "en": "squid"
         },
         {
           "es": "foca",
-          "ko": "물개"
+          "ko": "물개",
+          "en": "seal"
         },
         {
           "es": "coral",
-          "ko": "산호"
+          "ko": "산호",
+          "en": "coral"
         },
         {
           "es": "almeja",
-          "ko": "조개"
+          "ko": "조개",
+          "en": "clam"
         },
         {
           "es": "salmón",
-          "ko": "연어"
+          "ko": "연어",
+          "en": "salmon"
         }
       ]
     },
@@ -1122,43 +1372,53 @@
       "words": [
         {
           "es": "árbol",
-          "ko": "나무"
+          "ko": "나무",
+          "en": "tree"
         },
         {
           "es": "bosque",
-          "ko": "숲"
+          "ko": "숲",
+          "en": "forest"
         },
         {
           "es": "selva",
-          "ko": "정글"
+          "ko": "정글",
+          "en": "jungle"
         },
         {
           "es": "roble",
-          "ko": "참나무"
+          "ko": "참나무",
+          "en": "oak"
         },
         {
           "es": "pino",
-          "ko": "소나무"
+          "ko": "소나무",
+          "en": "pine"
         },
         {
           "es": "bambú",
-          "ko": "대나무"
+          "ko": "대나무",
+          "en": "bamboo"
         },
         {
           "es": "sauce",
-          "ko": "버드나무"
+          "ko": "버드나무",
+          "en": "willow"
         },
         {
           "es": "rama",
-          "ko": "나뭇가지"
+          "ko": "나뭇가지",
+          "en": "branch"
         },
         {
           "es": "raíz",
-          "ko": "뿌리"
+          "ko": "뿌리",
+          "en": "root"
         },
         {
           "es": "tronco",
-          "ko": "줄기"
+          "ko": "줄기",
+          "en": "trunk"
         }
       ]
     },
@@ -1169,43 +1429,53 @@
       "words": [
         {
           "es": "hoja",
-          "ko": "잎"
+          "ko": "잎",
+          "en": "leaf"
         },
         {
           "es": "corteza",
-          "ko": "나무껍질"
+          "ko": "나무껍질",
+          "en": "bark"
         },
         {
           "es": "leña",
-          "ko": "장작"
+          "ko": "장작",
+          "en": "firewood"
         },
         {
           "es": "arbusto",
-          "ko": "관목"
+          "ko": "관목",
+          "en": "bush"
         },
         {
           "es": "cedro",
-          "ko": "삼나무"
+          "ko": "삼나무",
+          "en": "cedar"
         },
         {
           "es": "flor",
-          "ko": "꽃"
+          "ko": "꽃",
+          "en": "flower"
         },
         {
           "es": "rosa",
-          "ko": "장미"
+          "ko": "장미",
+          "en": "pink"
         },
         {
           "es": "girasol",
-          "ko": "해바라기"
+          "ko": "해바라기",
+          "en": "sunflower"
         },
         {
           "es": "tulipán",
-          "ko": "튤립"
+          "ko": "튤립",
+          "en": "tulip"
         },
         {
           "es": "hierba",
-          "ko": "풀"
+          "ko": "풀",
+          "en": "grass"
         }
       ]
     },
@@ -1216,43 +1486,53 @@
       "words": [
         {
           "es": "césped",
-          "ko": "잔디"
+          "ko": "잔디",
+          "en": "lawn"
         },
         {
           "es": "semilla",
-          "ko": "씨앗"
+          "ko": "씨앗",
+          "en": "seed"
         },
         {
           "es": "pétalo",
-          "ko": "꽃잎"
+          "ko": "꽃잎",
+          "en": "petal"
         },
         {
           "es": "polen",
-          "ko": "꽃가루"
+          "ko": "꽃가루",
+          "en": "pollen"
         },
         {
           "es": "cactus",
-          "ko": "선인장"
+          "ko": "선인장",
+          "en": "cactus"
         },
         {
           "es": "musgo",
-          "ko": "이끼"
+          "ko": "이끼",
+          "en": "moss"
         },
         {
           "es": "helecho",
-          "ko": "고사리"
+          "ko": "고사리",
+          "en": "fern"
         },
         {
           "es": "orquídea",
-          "ko": "난초"
+          "ko": "난초",
+          "en": "orchid"
         },
         {
           "es": "loto",
-          "ko": "연꽃"
+          "ko": "연꽃",
+          "en": "lotus"
         },
         {
           "es": "jazmín",
-          "ko": "자스민"
+          "ko": "자스민",
+          "en": "jasmine"
         }
       ]
     },
@@ -1263,43 +1543,53 @@
       "words": [
         {
           "es": "manzana",
-          "ko": "사과"
+          "ko": "사과",
+          "en": "apple"
         },
         {
           "es": "naranja",
-          "ko": "오렌지"
+          "ko": "오렌지",
+          "en": "orange"
         },
         {
           "es": "plátano",
-          "ko": "바나나"
+          "ko": "바나나",
+          "en": "banana"
         },
         {
           "es": "uva",
-          "ko": "포도"
+          "ko": "포도",
+          "en": "grape"
         },
         {
           "es": "fresa",
-          "ko": "딸기"
+          "ko": "딸기",
+          "en": "strawberry"
         },
         {
           "es": "sandía",
-          "ko": "수박"
+          "ko": "수박",
+          "en": "watermelon"
         },
         {
           "es": "melocotón",
-          "ko": "복숭아"
+          "ko": "복숭아",
+          "en": "peach"
         },
         {
           "es": "cereza",
-          "ko": "체리"
+          "ko": "체리",
+          "en": "cherry"
         },
         {
           "es": "limón",
-          "ko": "레몬"
+          "ko": "레몬",
+          "en": "lemon"
         },
         {
           "es": "pera",
-          "ko": "배"
+          "ko": "배",
+          "en": "pear"
         }
       ]
     },
@@ -1310,43 +1600,53 @@
       "words": [
         {
           "es": "mango",
-          "ko": "망고"
+          "ko": "망고",
+          "en": "mango"
         },
         {
           "es": "piña",
-          "ko": "파인애플"
+          "ko": "파인애플",
+          "en": "pineapple"
         },
         {
           "es": "kiwi",
-          "ko": "키위"
+          "ko": "키위",
+          "en": "kiwi"
         },
         {
           "es": "ciruela",
-          "ko": "자두"
+          "ko": "자두",
+          "en": "plum"
         },
         {
           "es": "coco",
-          "ko": "코코넛"
+          "ko": "코코넛",
+          "en": "coconut"
         },
         {
           "es": "tomate",
-          "ko": "토마토"
+          "ko": "토마토",
+          "en": "tomato"
         },
         {
           "es": "zanahoria",
-          "ko": "당근"
+          "ko": "당근",
+          "en": "carrot"
         },
         {
           "es": "cebolla",
-          "ko": "양파"
+          "ko": "양파",
+          "en": "onion"
         },
         {
           "es": "patata",
-          "ko": "감자"
+          "ko": "감자",
+          "en": "potato"
         },
         {
           "es": "ajo",
-          "ko": "마늘"
+          "ko": "마늘",
+          "en": "garlic"
         }
       ]
     },
@@ -1357,403 +1657,503 @@
       "words": [
         {
           "es": "burro",
-          "ko": "당나귀"
+          "ko": "당나귀",
+          "en": "donkey"
         },
         {
           "es": "toro",
-          "ko": "황소"
+          "ko": "황소",
+          "en": "bull"
         },
         {
           "es": "pavo",
-          "ko": "칠면조"
+          "ko": "칠면조",
+          "en": "turkey"
         },
         {
           "es": "paloma",
-          "ko": "비둘기"
+          "ko": "비둘기",
+          "en": "pigeon"
         },
         {
           "es": "hámster",
-          "ko": "햄스터"
+          "ko": "햄스터",
+          "en": "hamster"
         },
         {
           "es": "león",
-          "ko": "사자"
+          "ko": "사자",
+          "en": "lion"
         },
         {
           "es": "tigre",
-          "ko": "호랑이"
+          "ko": "호랑이",
+          "en": "tiger"
         },
         {
           "es": "oso",
-          "ko": "곰"
+          "ko": "곰",
+          "en": "bear"
         },
         {
           "es": "lobo",
-          "ko": "늑대"
+          "ko": "늑대",
+          "en": "wolf"
         },
         {
           "es": "zorro",
-          "ko": "여우"
+          "ko": "여우",
+          "en": "fox"
         },
         {
           "es": "elefante",
-          "ko": "코끼리"
+          "ko": "코끼리",
+          "en": "elephant"
         },
         {
           "es": "jirafa",
-          "ko": "기린"
+          "ko": "기린",
+          "en": "giraffe"
         },
         {
           "es": "mono",
-          "ko": "원숭이"
+          "ko": "원숭이",
+          "en": "monkey"
         },
         {
           "es": "ciervo",
-          "ko": "사슴"
+          "ko": "사슴",
+          "en": "deer"
         },
         {
           "es": "leopardo",
-          "ko": "표범"
+          "ko": "표범",
+          "en": "leopard"
         },
         {
           "es": "rinoceronte",
-          "ko": "코뿔소"
+          "ko": "코뿔소",
+          "en": "rhinoceros"
         },
         {
           "es": "hipopótamo",
-          "ko": "하마"
+          "ko": "하마",
+          "en": "hippopotamus"
         },
         {
           "es": "cebra",
-          "ko": "얼룩말"
+          "ko": "얼룩말",
+          "en": "zebra"
         },
         {
           "es": "ardilla",
-          "ko": "다람쥐"
+          "ko": "다람쥐",
+          "en": "squirrel"
         },
         {
           "es": "murciélago",
-          "ko": "박쥐"
+          "ko": "박쥐",
+          "en": "bat"
         },
         {
           "es": "águila",
-          "ko": "독수리"
+          "ko": "독수리",
+          "en": "eagle"
         },
         {
           "es": "búho",
-          "ko": "올빼미"
+          "ko": "올빼미",
+          "en": "owl"
         },
         {
           "es": "mariposa",
-          "ko": "나비"
+          "ko": "나비",
+          "en": "butterfly"
         },
         {
           "es": "abeja",
-          "ko": "벌"
+          "ko": "벌",
+          "en": "bee"
         },
         {
           "es": "hormiga",
-          "ko": "개미"
+          "ko": "개미",
+          "en": "ant"
         },
         {
           "es": "mosquito",
-          "ko": "모기"
+          "ko": "모기",
+          "en": "mosquito"
         },
         {
           "es": "araña",
-          "ko": "거미"
+          "ko": "거미",
+          "en": "spider"
         },
         {
           "es": "libélula",
-          "ko": "잠자리"
+          "ko": "잠자리",
+          "en": "dragonfly"
         },
         {
           "es": "cigarra",
-          "ko": "매미"
+          "ko": "매미",
+          "en": "cicada"
         },
         {
           "es": "escarabajo",
-          "ko": "딱정벌레"
+          "ko": "딱정벌레",
+          "en": "beetle"
         },
         {
           "es": "gorrión",
-          "ko": "참새"
+          "ko": "참새",
+          "en": "sparrow"
         },
         {
           "es": "cuervo",
-          "ko": "까마귀"
+          "ko": "까마귀",
+          "en": "crow"
         },
         {
           "es": "golondrina",
-          "ko": "제비"
+          "ko": "제비",
+          "en": "swallow"
         },
         {
           "es": "loro",
-          "ko": "앵무새"
+          "ko": "앵무새",
+          "en": "parrot"
         },
         {
           "es": "grillo",
-          "ko": "귀뚜라미"
+          "ko": "귀뚜라미",
+          "en": "cricket"
         },
         {
           "es": "pez",
-          "ko": "물고기"
+          "ko": "물고기",
+          "en": "fish"
         },
         {
           "es": "ballena",
-          "ko": "고래"
+          "ko": "고래",
+          "en": "whale"
         },
         {
           "es": "delfín",
-          "ko": "돌고래"
+          "ko": "돌고래",
+          "en": "dolphin"
         },
         {
           "es": "tiburón",
-          "ko": "상어"
+          "ko": "상어",
+          "en": "shark"
         },
         {
           "es": "pulpo",
-          "ko": "문어"
+          "ko": "문어",
+          "en": "octopus"
         },
         {
           "es": "cangrejo",
-          "ko": "게"
+          "ko": "게",
+          "en": "crab"
         },
         {
           "es": "tortuga marina",
-          "ko": "바다거북"
+          "ko": "바다거북",
+          "en": "sea turtle"
         },
         {
           "es": "medusa",
-          "ko": "해파리"
+          "ko": "해파리",
+          "en": "jellyfish"
         },
         {
           "es": "estrella de mar",
-          "ko": "불가사리"
+          "ko": "불가사리",
+          "en": "starfish"
         },
         {
           "es": "camarón",
-          "ko": "새우"
+          "ko": "새우",
+          "en": "shrimp"
         },
         {
           "es": "calamar",
-          "ko": "오징어"
+          "ko": "오징어",
+          "en": "squid"
         },
         {
           "es": "foca",
-          "ko": "물개"
+          "ko": "물개",
+          "en": "seal"
         },
         {
           "es": "coral",
-          "ko": "산호"
+          "ko": "산호",
+          "en": "coral"
         },
         {
           "es": "almeja",
-          "ko": "조개"
+          "ko": "조개",
+          "en": "clam"
         },
         {
           "es": "salmón",
-          "ko": "연어"
+          "ko": "연어",
+          "en": "salmon"
         },
         {
           "es": "árbol",
-          "ko": "나무"
+          "ko": "나무",
+          "en": "tree"
         },
         {
           "es": "bosque",
-          "ko": "숲"
+          "ko": "숲",
+          "en": "forest"
         },
         {
           "es": "selva",
-          "ko": "정글"
+          "ko": "정글",
+          "en": "jungle"
         },
         {
           "es": "roble",
-          "ko": "참나무"
+          "ko": "참나무",
+          "en": "oak"
         },
         {
           "es": "pino",
-          "ko": "소나무"
+          "ko": "소나무",
+          "en": "pine"
         },
         {
           "es": "bambú",
-          "ko": "대나무"
+          "ko": "대나무",
+          "en": "bamboo"
         },
         {
           "es": "sauce",
-          "ko": "버드나무"
+          "ko": "버드나무",
+          "en": "willow"
         },
         {
           "es": "rama",
-          "ko": "나뭇가지"
+          "ko": "나뭇가지",
+          "en": "branch"
         },
         {
           "es": "raíz",
-          "ko": "뿌리"
+          "ko": "뿌리",
+          "en": "root"
         },
         {
           "es": "tronco",
-          "ko": "줄기"
+          "ko": "줄기",
+          "en": "trunk"
         },
         {
           "es": "hoja",
-          "ko": "잎"
+          "ko": "잎",
+          "en": "leaf"
         },
         {
           "es": "corteza",
-          "ko": "나무껍질"
+          "ko": "나무껍질",
+          "en": "bark"
         },
         {
           "es": "leña",
-          "ko": "장작"
+          "ko": "장작",
+          "en": "firewood"
         },
         {
           "es": "arbusto",
-          "ko": "관목"
+          "ko": "관목",
+          "en": "bush"
         },
         {
           "es": "cedro",
-          "ko": "삼나무"
+          "ko": "삼나무",
+          "en": "cedar"
         },
         {
           "es": "flor",
-          "ko": "꽃"
+          "ko": "꽃",
+          "en": "flower"
         },
         {
           "es": "rosa",
-          "ko": "장미"
+          "ko": "장미",
+          "en": "pink"
         },
         {
           "es": "girasol",
-          "ko": "해바라기"
+          "ko": "해바라기",
+          "en": "sunflower"
         },
         {
           "es": "tulipán",
-          "ko": "튤립"
+          "ko": "튤립",
+          "en": "tulip"
         },
         {
           "es": "hierba",
-          "ko": "풀"
+          "ko": "풀",
+          "en": "grass"
         },
         {
           "es": "césped",
-          "ko": "잔디"
+          "ko": "잔디",
+          "en": "lawn"
         },
         {
           "es": "semilla",
-          "ko": "씨앗"
+          "ko": "씨앗",
+          "en": "seed"
         },
         {
           "es": "pétalo",
-          "ko": "꽃잎"
+          "ko": "꽃잎",
+          "en": "petal"
         },
         {
           "es": "polen",
-          "ko": "꽃가루"
+          "ko": "꽃가루",
+          "en": "pollen"
         },
         {
           "es": "cactus",
-          "ko": "선인장"
+          "ko": "선인장",
+          "en": "cactus"
         },
         {
           "es": "musgo",
-          "ko": "이끼"
+          "ko": "이끼",
+          "en": "moss"
         },
         {
           "es": "helecho",
-          "ko": "고사리"
+          "ko": "고사리",
+          "en": "fern"
         },
         {
           "es": "orquídea",
-          "ko": "난초"
+          "ko": "난초",
+          "en": "orchid"
         },
         {
           "es": "loto",
-          "ko": "연꽃"
+          "ko": "연꽃",
+          "en": "lotus"
         },
         {
           "es": "jazmín",
-          "ko": "자스민"
+          "ko": "자스민",
+          "en": "jasmine"
         },
         {
           "es": "manzana",
-          "ko": "사과"
+          "ko": "사과",
+          "en": "apple"
         },
         {
           "es": "naranja",
-          "ko": "오렌지"
+          "ko": "오렌지",
+          "en": "orange"
         },
         {
           "es": "plátano",
-          "ko": "바나나"
+          "ko": "바나나",
+          "en": "banana"
         },
         {
           "es": "uva",
-          "ko": "포도"
+          "ko": "포도",
+          "en": "grape"
         },
         {
           "es": "fresa",
-          "ko": "딸기"
+          "ko": "딸기",
+          "en": "strawberry"
         },
         {
           "es": "sandía",
-          "ko": "수박"
+          "ko": "수박",
+          "en": "watermelon"
         },
         {
           "es": "melocotón",
-          "ko": "복숭아"
+          "ko": "복숭아",
+          "en": "peach"
         },
         {
           "es": "cereza",
-          "ko": "체리"
+          "ko": "체리",
+          "en": "cherry"
         },
         {
           "es": "limón",
-          "ko": "레몬"
+          "ko": "레몬",
+          "en": "lemon"
         },
         {
           "es": "pera",
-          "ko": "배"
+          "ko": "배",
+          "en": "pear"
         },
         {
           "es": "mango",
-          "ko": "망고"
+          "ko": "망고",
+          "en": "mango"
         },
         {
           "es": "piña",
-          "ko": "파인애플"
+          "ko": "파인애플",
+          "en": "pineapple"
         },
         {
           "es": "kiwi",
-          "ko": "키위"
+          "ko": "키위",
+          "en": "kiwi"
         },
         {
           "es": "ciruela",
-          "ko": "자두"
+          "ko": "자두",
+          "en": "plum"
         },
         {
           "es": "coco",
-          "ko": "코코넛"
+          "ko": "코코넛",
+          "en": "coconut"
         },
         {
           "es": "tomate",
-          "ko": "토마토"
+          "ko": "토마토",
+          "en": "tomato"
         },
         {
           "es": "zanahoria",
-          "ko": "당근"
+          "ko": "당근",
+          "en": "carrot"
         },
         {
           "es": "cebolla",
-          "ko": "양파"
+          "ko": "양파",
+          "en": "onion"
         },
         {
           "es": "patata",
-          "ko": "감자"
+          "ko": "감자",
+          "en": "potato"
         },
         {
           "es": "ajo",
-          "ko": "마늘"
+          "ko": "마늘",
+          "en": "garlic"
         }
       ]
     },
@@ -1764,43 +2164,53 @@
       "words": [
         {
           "es": "lechuga",
-          "ko": "상추"
+          "ko": "상추",
+          "en": "lettuce"
         },
         {
           "es": "pepino",
-          "ko": "오이"
+          "ko": "오이",
+          "en": "cucumber"
         },
         {
           "es": "pimiento",
-          "ko": "고추"
+          "ko": "고추",
+          "en": "pepper"
         },
         {
           "es": "espinaca",
-          "ko": "시금치"
+          "ko": "시금치",
+          "en": "spinach"
         },
         {
           "es": "maíz",
-          "ko": "옥수수"
+          "ko": "옥수수",
+          "en": "corn"
         },
         {
           "es": "calabaza",
-          "ko": "호박"
+          "ko": "호박",
+          "en": "pumpkin"
         },
         {
           "es": "berenjena",
-          "ko": "가지"
+          "ko": "가지",
+          "en": "eggplant"
         },
         {
           "es": "brócoli",
-          "ko": "브로콜리"
+          "ko": "브로콜리",
+          "en": "broccoli"
         },
         {
           "es": "champiñón",
-          "ko": "버섯"
+          "ko": "버섯",
+          "en": "mushroom"
         },
         {
           "es": "rábano",
-          "ko": "무"
+          "ko": "무",
+          "en": "radish"
         }
       ]
     },
@@ -1811,43 +2221,53 @@
       "words": [
         {
           "es": "oro",
-          "ko": "금"
+          "ko": "금",
+          "en": "gold"
         },
         {
           "es": "plata",
-          "ko": "은"
+          "ko": "은",
+          "en": "silver"
         },
         {
           "es": "hierro",
-          "ko": "철"
+          "ko": "철",
+          "en": "iron"
         },
         {
           "es": "cobre",
-          "ko": "구리"
+          "ko": "구리",
+          "en": "copper"
         },
         {
           "es": "diamante",
-          "ko": "다이아몬드"
+          "ko": "다이아몬드",
+          "en": "diamond"
         },
         {
           "es": "cristal",
-          "ko": "수정"
+          "ko": "수정",
+          "en": "crystal"
         },
         {
           "es": "mármol",
-          "ko": "대리석"
+          "ko": "대리석",
+          "en": "marble"
         },
         {
           "es": "carbón",
-          "ko": "석탄"
+          "ko": "석탄",
+          "en": "coal"
         },
         {
           "es": "petróleo",
-          "ko": "석유"
+          "ko": "석유",
+          "en": "oil"
         },
         {
           "es": "suelo",
-          "ko": "토양"
+          "ko": "토양",
+          "en": "floor"
         }
       ]
     },
@@ -1858,43 +2278,53 @@
       "words": [
         {
           "es": "arcilla",
-          "ko": "점토"
+          "ko": "점토",
+          "en": "clay"
         },
         {
           "es": "roca",
-          "ko": "바위"
+          "ko": "바위",
+          "en": "rock"
         },
         {
           "es": "mineral",
-          "ko": "광물"
+          "ko": "광물",
+          "en": "mineral"
         },
         {
           "es": "gema",
-          "ko": "보석"
+          "ko": "보석",
+          "en": "gem"
         },
         {
           "es": "fósil",
-          "ko": "화석"
+          "ko": "화석",
+          "en": "fossil"
         },
         {
           "es": "universo",
-          "ko": "우주"
+          "ko": "우주",
+          "en": "universe"
         },
         {
           "es": "planeta",
-          "ko": "행성"
+          "ko": "행성",
+          "en": "planet"
         },
         {
           "es": "galaxia",
-          "ko": "은하"
+          "ko": "은하",
+          "en": "galaxy"
         },
         {
           "es": "cometa",
-          "ko": "혜성"
+          "ko": "혜성",
+          "en": "kite"
         },
         {
           "es": "asteroide",
-          "ko": "소행성"
+          "ko": "소행성",
+          "en": "asteroid"
         }
       ]
     },
@@ -1905,43 +2335,53 @@
       "words": [
         {
           "es": "satélite",
-          "ko": "위성"
+          "ko": "위성",
+          "en": "satellite"
         },
         {
           "es": "constelación",
-          "ko": "별자리"
+          "ko": "별자리",
+          "en": "constellation"
         },
         {
           "es": "eclipse",
-          "ko": "일식"
+          "ko": "일식",
+          "en": "eclipse"
         },
         {
           "es": "órbita",
-          "ko": "궤도"
+          "ko": "궤도",
+          "en": "orbit"
         },
         {
           "es": "gravedad",
-          "ko": "중력"
+          "ko": "중력",
+          "en": "gravity"
         },
         {
           "es": "cohete",
-          "ko": "로켓"
+          "ko": "로켓",
+          "en": "rocket"
         },
         {
           "es": "meteorito",
-          "ko": "운석"
+          "ko": "운석",
+          "en": "meteorite"
         },
         {
           "es": "nebulosa",
-          "ko": "성운"
+          "ko": "성운",
+          "en": "nebula"
         },
         {
           "es": "agujero negro",
-          "ko": "블랙홀"
+          "ko": "블랙홀",
+          "en": "black hole"
         },
         {
           "es": "Vía Láctea",
-          "ko": "은하수"
+          "ko": "은하수",
+          "en": "Milky Way"
         }
       ]
     },
@@ -1952,43 +2392,53 @@
       "words": [
         {
           "es": "medio ambiente",
-          "ko": "환경"
+          "ko": "환경",
+          "en": "environment"
         },
         {
           "es": "ecosistema",
-          "ko": "생태계"
+          "ko": "생태계",
+          "en": "ecosystem"
         },
         {
           "es": "contaminación",
-          "ko": "오염"
+          "ko": "오염",
+          "en": "pollution"
         },
         {
           "es": "reciclaje",
-          "ko": "재활용"
+          "ko": "재활용",
+          "en": "recycling"
         },
         {
           "es": "deforestación",
-          "ko": "삼림 벌채"
+          "ko": "삼림 벌채",
+          "en": "deforestation"
         },
         {
           "es": "biodiversidad",
-          "ko": "생물 다양성"
+          "ko": "생물 다양성",
+          "en": "biodiversity"
         },
         {
           "es": "especie",
-          "ko": "종"
+          "ko": "종",
+          "en": "species"
         },
         {
           "es": "extinción",
-          "ko": "멸종"
+          "ko": "멸종",
+          "en": "extinction"
         },
         {
           "es": "hábitat",
-          "ko": "서식지"
+          "ko": "서식지",
+          "en": "habitat"
         },
         {
           "es": "energía solar",
-          "ko": "태양 에너지"
+          "ko": "태양 에너지",
+          "en": "solar energy"
         }
       ]
     },
@@ -1999,43 +2449,53 @@
       "words": [
         {
           "es": "calentamiento global",
-          "ko": "지구 온난화"
+          "ko": "지구 온난화",
+          "en": "global warming"
         },
         {
           "es": "capa de ozono",
-          "ko": "오존층"
+          "ko": "오존층",
+          "en": "ozone layer"
         },
         {
           "es": "residuo",
-          "ko": "폐기물"
+          "ko": "폐기물",
+          "en": "waste"
         },
         {
           "es": "sostenible",
-          "ko": "지속 가능한"
+          "ko": "지속 가능한",
+          "en": "sustainable"
         },
         {
           "es": "conservación",
-          "ko": "보존"
+          "ko": "보존",
+          "en": "conservation"
         },
         {
           "es": "terremoto",
-          "ko": "지진"
+          "ko": "지진",
+          "en": "earthquake"
         },
         {
           "es": "tsunami",
-          "ko": "쓰나미"
+          "ko": "쓰나미",
+          "en": "tsunami"
         },
         {
           "es": "inundación",
-          "ko": "홍수"
+          "ko": "홍수",
+          "en": "flood"
         },
         {
           "es": "erupción",
-          "ko": "분화"
+          "ko": "분화",
+          "en": "eruption"
         },
         {
           "es": "avalancha",
-          "ko": "눈사태"
+          "ko": "눈사태",
+          "en": "avalanche"
         }
       ]
     },
@@ -2046,43 +2506,53 @@
       "words": [
         {
           "es": "incendio forestal",
-          "ko": "산불"
+          "ko": "산불",
+          "en": "forest fire"
         },
         {
           "es": "deslizamiento",
-          "ko": "산사태"
+          "ko": "산사태",
+          "en": "landslide"
         },
         {
           "es": "sequía extrema",
-          "ko": "극심한 가뭄"
+          "ko": "극심한 가뭄",
+          "en": "extreme drought"
         },
         {
           "es": "maremoto",
-          "ko": "해일"
+          "ko": "해일",
+          "en": "tsunami"
         },
         {
           "es": "onda expansiva",
-          "ko": "충격파"
+          "ko": "충격파",
+          "en": "shockwave"
         },
         {
           "es": "réplica",
-          "ko": "여진"
+          "ko": "여진",
+          "en": "aftershock"
         },
         {
           "es": "epicentro",
-          "ko": "진앙"
+          "ko": "진앙",
+          "en": "epicenter"
         },
         {
           "es": "magnitud",
-          "ko": "규모"
+          "ko": "규모",
+          "en": "magnitude"
         },
         {
           "es": "evacuación",
-          "ko": "대피"
+          "ko": "대피",
+          "en": "evacuation"
         },
         {
           "es": "alerta",
-          "ko": "경보"
+          "ko": "경보",
+          "en": "alert"
         }
       ]
     },
@@ -2093,43 +2563,53 @@
       "words": [
         {
           "es": "granja",
-          "ko": "농장"
+          "ko": "농장",
+          "en": "farm"
         },
         {
           "es": "cosecha",
-          "ko": "수확"
+          "ko": "수확",
+          "en": "harvest"
         },
         {
           "es": "trigo",
-          "ko": "밀"
+          "ko": "밀",
+          "en": "wheat"
         },
         {
           "es": "arroz",
-          "ko": "쌀"
+          "ko": "쌀",
+          "en": "rice"
         },
         {
           "es": "campo",
-          "ko": "밭"
+          "ko": "밭",
+          "en": "field"
         },
         {
           "es": "riego",
-          "ko": "관개"
+          "ko": "관개",
+          "en": "irrigation"
         },
         {
           "es": "fertilizante",
-          "ko": "비료"
+          "ko": "비료",
+          "en": "fertilizer"
         },
         {
           "es": "arado",
-          "ko": "쟁기"
+          "ko": "쟁기",
+          "en": "plow"
         },
         {
           "es": "ganado",
-          "ko": "가축"
+          "ko": "가축",
+          "en": "livestock"
         },
         {
           "es": "invernadero",
-          "ko": "온실"
+          "ko": "온실",
+          "en": "greenhouse"
         }
       ]
     },
@@ -2140,43 +2620,53 @@
       "words": [
         {
           "es": "huerto",
-          "ko": "과수원"
+          "ko": "과수원",
+          "en": "orchard"
         },
         {
           "es": "pastoreo",
-          "ko": "목축"
+          "ko": "목축",
+          "en": "livestock grazing"
         },
         {
           "es": "siembra",
-          "ko": "파종"
+          "ko": "파종",
+          "en": "sowing"
         },
         {
           "es": "abono",
-          "ko": "거름"
+          "ko": "거름",
+          "en": "fertilizer"
         },
         {
           "es": "agricultor",
-          "ko": "농부"
+          "ko": "농부",
+          "en": "farmer"
         },
         {
           "es": "florecer",
-          "ko": "피다"
+          "ko": "피다",
+          "en": "to bloom"
         },
         {
           "es": "crecer",
-          "ko": "자라다"
+          "ko": "자라다",
+          "en": "to grow"
         },
         {
           "es": "llover",
-          "ko": "비가 오다"
+          "ko": "비가 오다",
+          "en": "to rain"
         },
         {
           "es": "nevar",
-          "ko": "눈이 오다"
+          "ko": "눈이 오다",
+          "en": "to snow"
         },
         {
           "es": "soplar",
-          "ko": "불다"
+          "ko": "불다",
+          "en": "to blow"
         }
       ]
     },
@@ -2187,43 +2677,53 @@
       "words": [
         {
           "es": "brillar",
-          "ko": "빛나다"
+          "ko": "빛나다",
+          "en": "to shine"
         },
         {
           "es": "nadar",
-          "ko": "수영하다"
+          "ko": "수영하다",
+          "en": "to swim"
         },
         {
           "es": "volar",
-          "ko": "날다"
+          "ko": "날다",
+          "en": "to fly"
         },
         {
           "es": "plantar",
-          "ko": "심다"
+          "ko": "심다",
+          "en": "to plant"
         },
         {
           "es": "cosechar",
-          "ko": "수확하다"
+          "ko": "수확하다",
+          "en": "to harvest"
         },
         {
           "es": "regar",
-          "ko": "물을 주다"
+          "ko": "물을 주다",
+          "en": "to water"
         },
         {
           "es": "derretir",
-          "ko": "녹다"
+          "ko": "녹다",
+          "en": "to melt"
         },
         {
           "es": "congelar",
-          "ko": "얼다"
+          "ko": "얼다",
+          "en": "to freeze"
         },
         {
           "es": "brotar",
-          "ko": "싹트다"
+          "ko": "싹트다",
+          "en": "to sprout"
         },
         {
           "es": "migrar",
-          "ko": "이동하다"
+          "ko": "이동하다",
+          "en": "to migrate"
         }
       ]
     },
@@ -2234,403 +2734,503 @@
       "words": [
         {
           "es": "lechuga",
-          "ko": "상추"
+          "ko": "상추",
+          "en": "lettuce"
         },
         {
           "es": "pepino",
-          "ko": "오이"
+          "ko": "오이",
+          "en": "cucumber"
         },
         {
           "es": "pimiento",
-          "ko": "고추"
+          "ko": "고추",
+          "en": "pepper"
         },
         {
           "es": "espinaca",
-          "ko": "시금치"
+          "ko": "시금치",
+          "en": "spinach"
         },
         {
           "es": "maíz",
-          "ko": "옥수수"
+          "ko": "옥수수",
+          "en": "corn"
         },
         {
           "es": "calabaza",
-          "ko": "호박"
+          "ko": "호박",
+          "en": "pumpkin"
         },
         {
           "es": "berenjena",
-          "ko": "가지"
+          "ko": "가지",
+          "en": "eggplant"
         },
         {
           "es": "brócoli",
-          "ko": "브로콜리"
+          "ko": "브로콜리",
+          "en": "broccoli"
         },
         {
           "es": "champiñón",
-          "ko": "버섯"
+          "ko": "버섯",
+          "en": "mushroom"
         },
         {
           "es": "rábano",
-          "ko": "무"
+          "ko": "무",
+          "en": "radish"
         },
         {
           "es": "oro",
-          "ko": "금"
+          "ko": "금",
+          "en": "gold"
         },
         {
           "es": "plata",
-          "ko": "은"
+          "ko": "은",
+          "en": "silver"
         },
         {
           "es": "hierro",
-          "ko": "철"
+          "ko": "철",
+          "en": "iron"
         },
         {
           "es": "cobre",
-          "ko": "구리"
+          "ko": "구리",
+          "en": "copper"
         },
         {
           "es": "diamante",
-          "ko": "다이아몬드"
+          "ko": "다이아몬드",
+          "en": "diamond"
         },
         {
           "es": "cristal",
-          "ko": "수정"
+          "ko": "수정",
+          "en": "crystal"
         },
         {
           "es": "mármol",
-          "ko": "대리석"
+          "ko": "대리석",
+          "en": "marble"
         },
         {
           "es": "carbón",
-          "ko": "석탄"
+          "ko": "석탄",
+          "en": "coal"
         },
         {
           "es": "petróleo",
-          "ko": "석유"
+          "ko": "석유",
+          "en": "oil"
         },
         {
           "es": "suelo",
-          "ko": "토양"
+          "ko": "토양",
+          "en": "floor"
         },
         {
           "es": "arcilla",
-          "ko": "점토"
+          "ko": "점토",
+          "en": "clay"
         },
         {
           "es": "roca",
-          "ko": "바위"
+          "ko": "바위",
+          "en": "rock"
         },
         {
           "es": "mineral",
-          "ko": "광물"
+          "ko": "광물",
+          "en": "mineral"
         },
         {
           "es": "gema",
-          "ko": "보석"
+          "ko": "보석",
+          "en": "gem"
         },
         {
           "es": "fósil",
-          "ko": "화석"
+          "ko": "화석",
+          "en": "fossil"
         },
         {
           "es": "universo",
-          "ko": "우주"
+          "ko": "우주",
+          "en": "universe"
         },
         {
           "es": "planeta",
-          "ko": "행성"
+          "ko": "행성",
+          "en": "planet"
         },
         {
           "es": "galaxia",
-          "ko": "은하"
+          "ko": "은하",
+          "en": "galaxy"
         },
         {
           "es": "cometa",
-          "ko": "혜성"
+          "ko": "혜성",
+          "en": "kite"
         },
         {
           "es": "asteroide",
-          "ko": "소행성"
+          "ko": "소행성",
+          "en": "asteroid"
         },
         {
           "es": "satélite",
-          "ko": "위성"
+          "ko": "위성",
+          "en": "satellite"
         },
         {
           "es": "constelación",
-          "ko": "별자리"
+          "ko": "별자리",
+          "en": "constellation"
         },
         {
           "es": "eclipse",
-          "ko": "일식"
+          "ko": "일식",
+          "en": "eclipse"
         },
         {
           "es": "órbita",
-          "ko": "궤도"
+          "ko": "궤도",
+          "en": "orbit"
         },
         {
           "es": "gravedad",
-          "ko": "중력"
+          "ko": "중력",
+          "en": "gravity"
         },
         {
           "es": "cohete",
-          "ko": "로켓"
+          "ko": "로켓",
+          "en": "rocket"
         },
         {
           "es": "meteorito",
-          "ko": "운석"
+          "ko": "운석",
+          "en": "meteorite"
         },
         {
           "es": "nebulosa",
-          "ko": "성운"
+          "ko": "성운",
+          "en": "nebula"
         },
         {
           "es": "agujero negro",
-          "ko": "블랙홀"
+          "ko": "블랙홀",
+          "en": "black hole"
         },
         {
           "es": "Vía Láctea",
-          "ko": "은하수"
+          "ko": "은하수",
+          "en": "Milky Way"
         },
         {
           "es": "medio ambiente",
-          "ko": "환경"
+          "ko": "환경",
+          "en": "environment"
         },
         {
           "es": "ecosistema",
-          "ko": "생태계"
+          "ko": "생태계",
+          "en": "ecosystem"
         },
         {
           "es": "contaminación",
-          "ko": "오염"
+          "ko": "오염",
+          "en": "pollution"
         },
         {
           "es": "reciclaje",
-          "ko": "재활용"
+          "ko": "재활용",
+          "en": "recycling"
         },
         {
           "es": "deforestación",
-          "ko": "삼림 벌채"
+          "ko": "삼림 벌채",
+          "en": "deforestation"
         },
         {
           "es": "biodiversidad",
-          "ko": "생물 다양성"
+          "ko": "생물 다양성",
+          "en": "biodiversity"
         },
         {
           "es": "especie",
-          "ko": "종"
+          "ko": "종",
+          "en": "species"
         },
         {
           "es": "extinción",
-          "ko": "멸종"
+          "ko": "멸종",
+          "en": "extinction"
         },
         {
           "es": "hábitat",
-          "ko": "서식지"
+          "ko": "서식지",
+          "en": "habitat"
         },
         {
           "es": "energía solar",
-          "ko": "태양 에너지"
+          "ko": "태양 에너지",
+          "en": "solar energy"
         },
         {
           "es": "calentamiento global",
-          "ko": "지구 온난화"
+          "ko": "지구 온난화",
+          "en": "global warming"
         },
         {
           "es": "capa de ozono",
-          "ko": "오존층"
+          "ko": "오존층",
+          "en": "ozone layer"
         },
         {
           "es": "residuo",
-          "ko": "폐기물"
+          "ko": "폐기물",
+          "en": "waste"
         },
         {
           "es": "sostenible",
-          "ko": "지속 가능한"
+          "ko": "지속 가능한",
+          "en": "sustainable"
         },
         {
           "es": "conservación",
-          "ko": "보존"
+          "ko": "보존",
+          "en": "conservation"
         },
         {
           "es": "terremoto",
-          "ko": "지진"
+          "ko": "지진",
+          "en": "earthquake"
         },
         {
           "es": "tsunami",
-          "ko": "쓰나미"
+          "ko": "쓰나미",
+          "en": "tsunami"
         },
         {
           "es": "inundación",
-          "ko": "홍수"
+          "ko": "홍수",
+          "en": "flood"
         },
         {
           "es": "erupción",
-          "ko": "분화"
+          "ko": "분화",
+          "en": "eruption"
         },
         {
           "es": "avalancha",
-          "ko": "눈사태"
+          "ko": "눈사태",
+          "en": "avalanche"
         },
         {
           "es": "incendio forestal",
-          "ko": "산불"
+          "ko": "산불",
+          "en": "forest fire"
         },
         {
           "es": "deslizamiento",
-          "ko": "산사태"
+          "ko": "산사태",
+          "en": "landslide"
         },
         {
           "es": "sequía extrema",
-          "ko": "극심한 가뭄"
+          "ko": "극심한 가뭄",
+          "en": "extreme drought"
         },
         {
           "es": "maremoto",
-          "ko": "해일"
+          "ko": "해일",
+          "en": "tsunami"
         },
         {
           "es": "onda expansiva",
-          "ko": "충격파"
+          "ko": "충격파",
+          "en": "shockwave"
         },
         {
           "es": "réplica",
-          "ko": "여진"
+          "ko": "여진",
+          "en": "aftershock"
         },
         {
           "es": "epicentro",
-          "ko": "진앙"
+          "ko": "진앙",
+          "en": "epicenter"
         },
         {
           "es": "magnitud",
-          "ko": "규모"
+          "ko": "규모",
+          "en": "magnitude"
         },
         {
           "es": "evacuación",
-          "ko": "대피"
+          "ko": "대피",
+          "en": "evacuation"
         },
         {
           "es": "alerta",
-          "ko": "경보"
+          "ko": "경보",
+          "en": "alert"
         },
         {
           "es": "granja",
-          "ko": "농장"
+          "ko": "농장",
+          "en": "farm"
         },
         {
           "es": "cosecha",
-          "ko": "수확"
+          "ko": "수확",
+          "en": "harvest"
         },
         {
           "es": "trigo",
-          "ko": "밀"
+          "ko": "밀",
+          "en": "wheat"
         },
         {
           "es": "arroz",
-          "ko": "쌀"
+          "ko": "쌀",
+          "en": "rice"
         },
         {
           "es": "campo",
-          "ko": "밭"
+          "ko": "밭",
+          "en": "field"
         },
         {
           "es": "riego",
-          "ko": "관개"
+          "ko": "관개",
+          "en": "irrigation"
         },
         {
           "es": "fertilizante",
-          "ko": "비료"
+          "ko": "비료",
+          "en": "fertilizer"
         },
         {
           "es": "arado",
-          "ko": "쟁기"
+          "ko": "쟁기",
+          "en": "plow"
         },
         {
           "es": "ganado",
-          "ko": "가축"
+          "ko": "가축",
+          "en": "livestock"
         },
         {
           "es": "invernadero",
-          "ko": "온실"
+          "ko": "온실",
+          "en": "greenhouse"
         },
         {
           "es": "huerto",
-          "ko": "과수원"
+          "ko": "과수원",
+          "en": "orchard"
         },
         {
           "es": "pastoreo",
-          "ko": "목축"
+          "ko": "목축",
+          "en": "livestock grazing"
         },
         {
           "es": "siembra",
-          "ko": "파종"
+          "ko": "파종",
+          "en": "sowing"
         },
         {
           "es": "abono",
-          "ko": "거름"
+          "ko": "거름",
+          "en": "fertilizer"
         },
         {
           "es": "agricultor",
-          "ko": "농부"
+          "ko": "농부",
+          "en": "farmer"
         },
         {
           "es": "florecer",
-          "ko": "피다"
+          "ko": "피다",
+          "en": "to bloom"
         },
         {
           "es": "crecer",
-          "ko": "자라다"
+          "ko": "자라다",
+          "en": "to grow"
         },
         {
           "es": "llover",
-          "ko": "비가 오다"
+          "ko": "비가 오다",
+          "en": "to rain"
         },
         {
           "es": "nevar",
-          "ko": "눈이 오다"
+          "ko": "눈이 오다",
+          "en": "to snow"
         },
         {
           "es": "soplar",
-          "ko": "불다"
+          "ko": "불다",
+          "en": "to blow"
         },
         {
           "es": "brillar",
-          "ko": "빛나다"
+          "ko": "빛나다",
+          "en": "to shine"
         },
         {
           "es": "nadar",
-          "ko": "수영하다"
+          "ko": "수영하다",
+          "en": "to swim"
         },
         {
           "es": "volar",
-          "ko": "날다"
+          "ko": "날다",
+          "en": "to fly"
         },
         {
           "es": "plantar",
-          "ko": "심다"
+          "ko": "심다",
+          "en": "to plant"
         },
         {
           "es": "cosechar",
-          "ko": "수확하다"
+          "ko": "수확하다",
+          "en": "to harvest"
         },
         {
           "es": "regar",
-          "ko": "물을 주다"
+          "ko": "물을 주다",
+          "en": "to water"
         },
         {
           "es": "derretir",
-          "ko": "녹다"
+          "ko": "녹다",
+          "en": "to melt"
         },
         {
           "es": "congelar",
-          "ko": "얼다"
+          "ko": "얼다",
+          "en": "to freeze"
         },
         {
           "es": "brotar",
-          "ko": "싹트다"
+          "ko": "싹트다",
+          "en": "to sprout"
         },
         {
           "es": "migrar",
-          "ko": "이동하다"
+          "ko": "이동하다",
+          "en": "to migrate"
         }
       ]
     }

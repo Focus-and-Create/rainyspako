@@ -10,43 +10,53 @@
       "words": [
         {
           "es": "persona",
-          "ko": "사람"
+          "ko": "사람",
+          "en": "person"
         },
         {
           "es": "hombre",
-          "ko": "남자"
+          "ko": "남자",
+          "en": "man"
         },
         {
           "es": "mujer",
-          "ko": "여자"
+          "ko": "여자",
+          "en": "woman"
         },
         {
           "es": "niño",
-          "ko": "소년"
+          "ko": "소년",
+          "en": "boy"
         },
         {
           "es": "niña",
-          "ko": "소녀"
+          "ko": "소녀",
+          "en": "girl"
         },
         {
           "es": "bebé",
-          "ko": "아기"
+          "ko": "아기",
+          "en": "baby"
         },
         {
           "es": "adulto",
-          "ko": "어른"
+          "ko": "어른",
+          "en": "adult"
         },
         {
           "es": "joven",
-          "ko": "젊은이"
+          "ko": "젊은이",
+          "en": "young"
         },
         {
           "es": "anciano",
-          "ko": "노인"
+          "ko": "노인",
+          "en": "elderly person"
         },
         {
           "es": "nombre",
-          "ko": "이름"
+          "ko": "이름",
+          "en": "name"
         }
       ]
     },
@@ -57,43 +67,53 @@
       "words": [
         {
           "es": "edad",
-          "ko": "나이"
+          "ko": "나이",
+          "en": "age"
         },
         {
           "es": "género",
-          "ko": "성별"
+          "ko": "성별",
+          "en": "gender"
         },
         {
           "es": "identidad",
-          "ko": "정체성"
+          "ko": "정체성",
+          "en": "identity"
         },
         {
           "es": "nacionalidad",
-          "ko": "국적"
+          "ko": "국적",
+          "en": "nationality"
         },
         {
           "es": "ciudadano",
-          "ko": "시민"
+          "ko": "시민",
+          "en": "citizen"
         },
         {
           "es": "cabeza",
-          "ko": "머리"
+          "ko": "머리",
+          "en": "head"
         },
         {
           "es": "cara",
-          "ko": "얼굴"
+          "ko": "얼굴",
+          "en": "face"
         },
         {
           "es": "ojo",
-          "ko": "눈"
+          "ko": "눈",
+          "en": "eye"
         },
         {
           "es": "nariz",
-          "ko": "코"
+          "ko": "코",
+          "en": "nose"
         },
         {
           "es": "boca",
-          "ko": "입"
+          "ko": "입",
+          "en": "mouth"
         }
       ]
     },
@@ -104,43 +124,53 @@
       "words": [
         {
           "es": "oreja",
-          "ko": "귀"
+          "ko": "귀",
+          "en": "ear"
         },
         {
           "es": "diente",
-          "ko": "이"
+          "ko": "이",
+          "en": "tooth"
         },
         {
           "es": "lengua",
-          "ko": "혀"
+          "ko": "혀",
+          "en": "tongue"
         },
         {
           "es": "labio",
-          "ko": "입술"
+          "ko": "입술",
+          "en": "lip"
         },
         {
           "es": "mejilla",
-          "ko": "볼"
+          "ko": "볼",
+          "en": "cheek"
         },
         {
           "es": "frente",
-          "ko": "이마"
+          "ko": "이마",
+          "en": "forehead"
         },
         {
           "es": "barbilla",
-          "ko": "턱"
+          "ko": "턱",
+          "en": "chin"
         },
         {
           "es": "ceja",
-          "ko": "눈썹"
+          "ko": "눈썹",
+          "en": "eyebrow"
         },
         {
           "es": "pestaña",
-          "ko": "속눈썹"
+          "ko": "속눈썹",
+          "en": "eyelash"
         },
         {
           "es": "cabello",
-          "ko": "머리카락"
+          "ko": "머리카락",
+          "en": "hair"
         }
       ]
     },
@@ -151,43 +181,53 @@
       "words": [
         {
           "es": "cuerpo",
-          "ko": "몸"
+          "ko": "몸",
+          "en": "body"
         },
         {
           "es": "brazo",
-          "ko": "팔"
+          "ko": "팔",
+          "en": "arm"
         },
         {
           "es": "pierna",
-          "ko": "다리"
+          "ko": "다리",
+          "en": "leg"
         },
         {
           "es": "mano",
-          "ko": "손"
+          "ko": "손",
+          "en": "hand"
         },
         {
           "es": "pie",
-          "ko": "발"
+          "ko": "발",
+          "en": "foot"
         },
         {
           "es": "dedo",
-          "ko": "손가락"
+          "ko": "손가락",
+          "en": "finger"
         },
         {
           "es": "hombro",
-          "ko": "어깨"
+          "ko": "어깨",
+          "en": "shoulder"
         },
         {
           "es": "espalda",
-          "ko": "등"
+          "ko": "등",
+          "en": "back"
         },
         {
           "es": "pecho",
-          "ko": "가슴"
+          "ko": "가슴",
+          "en": "chest"
         },
         {
           "es": "cuello",
-          "ko": "목"
+          "ko": "목",
+          "en": "neck"
         }
       ]
     },
@@ -198,43 +238,53 @@
       "words": [
         {
           "es": "rodilla",
-          "ko": "무릎"
+          "ko": "무릎",
+          "en": "knee"
         },
         {
           "es": "codo",
-          "ko": "팔꿈치"
+          "ko": "팔꿈치",
+          "en": "elbow"
         },
         {
           "es": "muñeca",
-          "ko": "손목"
+          "ko": "손목",
+          "en": "wrist"
         },
         {
           "es": "tobillo",
-          "ko": "발목"
+          "ko": "발목",
+          "en": "ankle"
         },
         {
           "es": "cadera",
-          "ko": "엉덩이"
+          "ko": "엉덩이",
+          "en": "hip"
         },
         {
           "es": "corazón",
-          "ko": "심장"
+          "ko": "심장",
+          "en": "heart"
         },
         {
           "es": "cerebro",
-          "ko": "뇌"
+          "ko": "뇌",
+          "en": "brain"
         },
         {
           "es": "pulmón",
-          "ko": "폐"
+          "ko": "폐",
+          "en": "lung"
         },
         {
           "es": "estómago",
-          "ko": "위"
+          "ko": "위",
+          "en": "stomach"
         },
         {
           "es": "sangre",
-          "ko": "피"
+          "ko": "피",
+          "en": "blood"
         }
       ]
     },
@@ -245,43 +295,53 @@
       "words": [
         {
           "es": "hueso",
-          "ko": "뼈"
+          "ko": "뼈",
+          "en": "bone"
         },
         {
           "es": "músculo",
-          "ko": "근육"
+          "ko": "근육",
+          "en": "muscle"
         },
         {
           "es": "piel",
-          "ko": "피부"
+          "ko": "피부",
+          "en": "skin"
         },
         {
           "es": "nervio",
-          "ko": "신경"
+          "ko": "신경",
+          "en": "nerve"
         },
         {
           "es": "vista",
-          "ko": "시력"
+          "ko": "시력",
+          "en": "vision"
         },
         {
           "es": "oído",
-          "ko": "청각"
+          "ko": "청각",
+          "en": "hearing"
         },
         {
           "es": "olfato",
-          "ko": "후각"
+          "ko": "후각",
+          "en": "smell"
         },
         {
           "es": "gusto",
-          "ko": "미각"
+          "ko": "미각",
+          "en": "taste"
         },
         {
           "es": "tacto",
-          "ko": "촉각"
+          "ko": "촉각",
+          "en": "touch"
         },
         {
           "es": "hígado",
-          "ko": "간"
+          "ko": "간",
+          "en": "liver"
         }
       ]
     },
@@ -292,43 +352,53 @@
       "words": [
         {
           "es": "alto",
-          "ko": "키가 큰"
+          "ko": "키가 큰",
+          "en": "tall"
         },
         {
           "es": "bajo",
-          "ko": "키가 작은"
+          "ko": "키가 작은",
+          "en": "short"
         },
         {
           "es": "gordo",
-          "ko": "뚱뚱한"
+          "ko": "뚱뚱한",
+          "en": "fat"
         },
         {
           "es": "delgado",
-          "ko": "날씬한"
+          "ko": "날씬한",
+          "en": "slim"
         },
         {
           "es": "guapo",
-          "ko": "잘생긴"
+          "ko": "잘생긴",
+          "en": "handsome"
         },
         {
           "es": "bonita",
-          "ko": "예쁜"
+          "ko": "예쁜",
+          "en": "pretty"
         },
         {
           "es": "feo",
-          "ko": "못생긴"
+          "ko": "못생긴",
+          "en": "ugly"
         },
         {
           "es": "fuerte",
-          "ko": "강한"
+          "ko": "강한",
+          "en": "strong"
         },
         {
           "es": "débil",
-          "ko": "약한"
+          "ko": "약한",
+          "en": "weak"
         },
         {
           "es": "rubio",
-          "ko": "금발의"
+          "ko": "금발의",
+          "en": "blond"
         }
       ]
     },
@@ -339,43 +409,53 @@
       "words": [
         {
           "es": "moreno",
-          "ko": "갈색 머리의"
+          "ko": "갈색 머리의",
+          "en": "dark-haired"
         },
         {
           "es": "calvo",
-          "ko": "대머리의"
+          "ko": "대머리의",
+          "en": "bald"
         },
         {
           "es": "barba",
-          "ko": "수염"
+          "ko": "수염",
+          "en": "beard"
         },
         {
           "es": "arruga",
-          "ko": "주름"
+          "ko": "주름",
+          "en": "wrinkle"
         },
         {
           "es": "cicatriz",
-          "ko": "흉터"
+          "ko": "흉터",
+          "en": "scar"
         },
         {
           "es": "amable",
-          "ko": "친절한"
+          "ko": "친절한",
+          "en": "kind"
         },
         {
           "es": "generoso",
-          "ko": "관대한"
+          "ko": "관대한",
+          "en": "generous"
         },
         {
           "es": "honesto",
-          "ko": "정직한"
+          "ko": "정직한",
+          "en": "honest"
         },
         {
           "es": "valiente",
-          "ko": "용감한"
+          "ko": "용감한",
+          "en": "brave"
         },
         {
           "es": "inteligente",
-          "ko": "똑똑한"
+          "ko": "똑똑한",
+          "en": "intelligent"
         }
       ]
     },
@@ -386,43 +466,53 @@
       "words": [
         {
           "es": "paciente",
-          "ko": "인내심 있는"
+          "ko": "인내심 있는",
+          "en": "patient"
         },
         {
           "es": "responsable",
-          "ko": "책임감 있는"
+          "ko": "책임감 있는",
+          "en": "responsible"
         },
         {
           "es": "simpático",
-          "ko": "상냥한"
+          "ko": "상냥한",
+          "en": "nice"
         },
         {
           "es": "alegre",
-          "ko": "쾌활한"
+          "ko": "쾌활한",
+          "en": "cheerful"
         },
         {
           "es": "sincero",
-          "ko": "진실한"
+          "ko": "진실한",
+          "en": "sincere"
         },
         {
           "es": "humilde",
-          "ko": "겸손한"
+          "ko": "겸손한",
+          "en": "humble"
         },
         {
           "es": "leal",
-          "ko": "충실한"
+          "ko": "충실한",
+          "en": "loyal"
         },
         {
           "es": "optimista",
-          "ko": "낙관적인"
+          "ko": "낙관적인",
+          "en": "optimistic"
         },
         {
           "es": "creativo",
-          "ko": "창의적인"
+          "ko": "창의적인",
+          "en": "creative"
         },
         {
           "es": "trabajador",
-          "ko": "부지런한"
+          "ko": "부지런한",
+          "en": "hardworking"
         }
       ]
     },
@@ -433,43 +523,53 @@
       "words": [
         {
           "es": "egoísta",
-          "ko": "이기적인"
+          "ko": "이기적인",
+          "en": "selfish"
         },
         {
           "es": "mentiroso",
-          "ko": "거짓말쟁이"
+          "ko": "거짓말쟁이",
+          "en": "liar"
         },
         {
           "es": "perezoso",
-          "ko": "게으른"
+          "ko": "게으른",
+          "en": "lazy"
         },
         {
           "es": "cobarde",
-          "ko": "겁쟁이"
+          "ko": "겁쟁이",
+          "en": "coward"
         },
         {
           "es": "terco",
-          "ko": "고집스러운"
+          "ko": "고집스러운",
+          "en": "stubborn"
         },
         {
           "es": "orgulloso",
-          "ko": "거만한"
+          "ko": "거만한",
+          "en": "proud"
         },
         {
           "es": "tacaño",
-          "ko": "인색한"
+          "ko": "인색한",
+          "en": "stingy"
         },
         {
           "es": "cruel",
-          "ko": "잔인한"
+          "ko": "잔인한",
+          "en": "cruel"
         },
         {
           "es": "impaciente",
-          "ko": "성급한"
+          "ko": "성급한",
+          "en": "impatient"
         },
         {
           "es": "celoso",
-          "ko": "질투하는"
+          "ko": "질투하는",
+          "en": "jealous"
         }
       ]
     },
@@ -480,403 +580,503 @@
       "words": [
         {
           "es": "persona",
-          "ko": "사람"
+          "ko": "사람",
+          "en": "person"
         },
         {
           "es": "hombre",
-          "ko": "남자"
+          "ko": "남자",
+          "en": "man"
         },
         {
           "es": "mujer",
-          "ko": "여자"
+          "ko": "여자",
+          "en": "woman"
         },
         {
           "es": "niño",
-          "ko": "소년"
+          "ko": "소년",
+          "en": "boy"
         },
         {
           "es": "niña",
-          "ko": "소녀"
+          "ko": "소녀",
+          "en": "girl"
         },
         {
           "es": "bebé",
-          "ko": "아기"
+          "ko": "아기",
+          "en": "baby"
         },
         {
           "es": "adulto",
-          "ko": "어른"
+          "ko": "어른",
+          "en": "adult"
         },
         {
           "es": "joven",
-          "ko": "젊은이"
+          "ko": "젊은이",
+          "en": "young"
         },
         {
           "es": "anciano",
-          "ko": "노인"
+          "ko": "노인",
+          "en": "elderly person"
         },
         {
           "es": "nombre",
-          "ko": "이름"
+          "ko": "이름",
+          "en": "name"
         },
         {
           "es": "edad",
-          "ko": "나이"
+          "ko": "나이",
+          "en": "age"
         },
         {
           "es": "género",
-          "ko": "성별"
+          "ko": "성별",
+          "en": "gender"
         },
         {
           "es": "identidad",
-          "ko": "정체성"
+          "ko": "정체성",
+          "en": "identity"
         },
         {
           "es": "nacionalidad",
-          "ko": "국적"
+          "ko": "국적",
+          "en": "nationality"
         },
         {
           "es": "ciudadano",
-          "ko": "시민"
+          "ko": "시민",
+          "en": "citizen"
         },
         {
           "es": "cabeza",
-          "ko": "머리"
+          "ko": "머리",
+          "en": "head"
         },
         {
           "es": "cara",
-          "ko": "얼굴"
+          "ko": "얼굴",
+          "en": "face"
         },
         {
           "es": "ojo",
-          "ko": "눈"
+          "ko": "눈",
+          "en": "eye"
         },
         {
           "es": "nariz",
-          "ko": "코"
+          "ko": "코",
+          "en": "nose"
         },
         {
           "es": "boca",
-          "ko": "입"
+          "ko": "입",
+          "en": "mouth"
         },
         {
           "es": "oreja",
-          "ko": "귀"
+          "ko": "귀",
+          "en": "ear"
         },
         {
           "es": "diente",
-          "ko": "이"
+          "ko": "이",
+          "en": "tooth"
         },
         {
           "es": "lengua",
-          "ko": "혀"
+          "ko": "혀",
+          "en": "tongue"
         },
         {
           "es": "labio",
-          "ko": "입술"
+          "ko": "입술",
+          "en": "lip"
         },
         {
           "es": "mejilla",
-          "ko": "볼"
+          "ko": "볼",
+          "en": "cheek"
         },
         {
           "es": "frente",
-          "ko": "이마"
+          "ko": "이마",
+          "en": "forehead"
         },
         {
           "es": "barbilla",
-          "ko": "턱"
+          "ko": "턱",
+          "en": "chin"
         },
         {
           "es": "ceja",
-          "ko": "눈썹"
+          "ko": "눈썹",
+          "en": "eyebrow"
         },
         {
           "es": "pestaña",
-          "ko": "속눈썹"
+          "ko": "속눈썹",
+          "en": "eyelash"
         },
         {
           "es": "cabello",
-          "ko": "머리카락"
+          "ko": "머리카락",
+          "en": "hair"
         },
         {
           "es": "cuerpo",
-          "ko": "몸"
+          "ko": "몸",
+          "en": "body"
         },
         {
           "es": "brazo",
-          "ko": "팔"
+          "ko": "팔",
+          "en": "arm"
         },
         {
           "es": "pierna",
-          "ko": "다리"
+          "ko": "다리",
+          "en": "leg"
         },
         {
           "es": "mano",
-          "ko": "손"
+          "ko": "손",
+          "en": "hand"
         },
         {
           "es": "pie",
-          "ko": "발"
+          "ko": "발",
+          "en": "foot"
         },
         {
           "es": "dedo",
-          "ko": "손가락"
+          "ko": "손가락",
+          "en": "finger"
         },
         {
           "es": "hombro",
-          "ko": "어깨"
+          "ko": "어깨",
+          "en": "shoulder"
         },
         {
           "es": "espalda",
-          "ko": "등"
+          "ko": "등",
+          "en": "back"
         },
         {
           "es": "pecho",
-          "ko": "가슴"
+          "ko": "가슴",
+          "en": "chest"
         },
         {
           "es": "cuello",
-          "ko": "목"
+          "ko": "목",
+          "en": "neck"
         },
         {
           "es": "rodilla",
-          "ko": "무릎"
+          "ko": "무릎",
+          "en": "knee"
         },
         {
           "es": "codo",
-          "ko": "팔꿈치"
+          "ko": "팔꿈치",
+          "en": "elbow"
         },
         {
           "es": "muñeca",
-          "ko": "손목"
+          "ko": "손목",
+          "en": "wrist"
         },
         {
           "es": "tobillo",
-          "ko": "발목"
+          "ko": "발목",
+          "en": "ankle"
         },
         {
           "es": "cadera",
-          "ko": "엉덩이"
+          "ko": "엉덩이",
+          "en": "hip"
         },
         {
           "es": "corazón",
-          "ko": "심장"
+          "ko": "심장",
+          "en": "heart"
         },
         {
           "es": "cerebro",
-          "ko": "뇌"
+          "ko": "뇌",
+          "en": "brain"
         },
         {
           "es": "pulmón",
-          "ko": "폐"
+          "ko": "폐",
+          "en": "lung"
         },
         {
           "es": "estómago",
-          "ko": "위"
+          "ko": "위",
+          "en": "stomach"
         },
         {
           "es": "sangre",
-          "ko": "피"
+          "ko": "피",
+          "en": "blood"
         },
         {
           "es": "hueso",
-          "ko": "뼈"
+          "ko": "뼈",
+          "en": "bone"
         },
         {
           "es": "músculo",
-          "ko": "근육"
+          "ko": "근육",
+          "en": "muscle"
         },
         {
           "es": "piel",
-          "ko": "피부"
+          "ko": "피부",
+          "en": "skin"
         },
         {
           "es": "nervio",
-          "ko": "신경"
+          "ko": "신경",
+          "en": "nerve"
         },
         {
           "es": "vista",
-          "ko": "시력"
+          "ko": "시력",
+          "en": "vision"
         },
         {
           "es": "oído",
-          "ko": "청각"
+          "ko": "청각",
+          "en": "hearing"
         },
         {
           "es": "olfato",
-          "ko": "후각"
+          "ko": "후각",
+          "en": "smell"
         },
         {
           "es": "gusto",
-          "ko": "미각"
+          "ko": "미각",
+          "en": "taste"
         },
         {
           "es": "tacto",
-          "ko": "촉각"
+          "ko": "촉각",
+          "en": "touch"
         },
         {
           "es": "hígado",
-          "ko": "간"
+          "ko": "간",
+          "en": "liver"
         },
         {
           "es": "alto",
-          "ko": "키가 큰"
+          "ko": "키가 큰",
+          "en": "tall"
         },
         {
           "es": "bajo",
-          "ko": "키가 작은"
+          "ko": "키가 작은",
+          "en": "short"
         },
         {
           "es": "gordo",
-          "ko": "뚱뚱한"
+          "ko": "뚱뚱한",
+          "en": "fat"
         },
         {
           "es": "delgado",
-          "ko": "날씬한"
+          "ko": "날씬한",
+          "en": "slim"
         },
         {
           "es": "guapo",
-          "ko": "잘생긴"
+          "ko": "잘생긴",
+          "en": "handsome"
         },
         {
           "es": "bonita",
-          "ko": "예쁜"
+          "ko": "예쁜",
+          "en": "pretty"
         },
         {
           "es": "feo",
-          "ko": "못생긴"
+          "ko": "못생긴",
+          "en": "ugly"
         },
         {
           "es": "fuerte",
-          "ko": "강한"
+          "ko": "강한",
+          "en": "strong"
         },
         {
           "es": "débil",
-          "ko": "약한"
+          "ko": "약한",
+          "en": "weak"
         },
         {
           "es": "rubio",
-          "ko": "금발의"
+          "ko": "금발의",
+          "en": "blond"
         },
         {
           "es": "moreno",
-          "ko": "갈색 머리의"
+          "ko": "갈색 머리의",
+          "en": "dark-haired"
         },
         {
           "es": "calvo",
-          "ko": "대머리의"
+          "ko": "대머리의",
+          "en": "bald"
         },
         {
           "es": "barba",
-          "ko": "수염"
+          "ko": "수염",
+          "en": "beard"
         },
         {
           "es": "arruga",
-          "ko": "주름"
+          "ko": "주름",
+          "en": "wrinkle"
         },
         {
           "es": "cicatriz",
-          "ko": "흉터"
+          "ko": "흉터",
+          "en": "scar"
         },
         {
           "es": "amable",
-          "ko": "친절한"
+          "ko": "친절한",
+          "en": "kind"
         },
         {
           "es": "generoso",
-          "ko": "관대한"
+          "ko": "관대한",
+          "en": "generous"
         },
         {
           "es": "honesto",
-          "ko": "정직한"
+          "ko": "정직한",
+          "en": "honest"
         },
         {
           "es": "valiente",
-          "ko": "용감한"
+          "ko": "용감한",
+          "en": "brave"
         },
         {
           "es": "inteligente",
-          "ko": "똑똑한"
+          "ko": "똑똑한",
+          "en": "intelligent"
         },
         {
           "es": "paciente",
-          "ko": "인내심 있는"
+          "ko": "인내심 있는",
+          "en": "patient"
         },
         {
           "es": "responsable",
-          "ko": "책임감 있는"
+          "ko": "책임감 있는",
+          "en": "responsible"
         },
         {
           "es": "simpático",
-          "ko": "상냥한"
+          "ko": "상냥한",
+          "en": "nice"
         },
         {
           "es": "alegre",
-          "ko": "쾌활한"
+          "ko": "쾌활한",
+          "en": "cheerful"
         },
         {
           "es": "sincero",
-          "ko": "진실한"
+          "ko": "진실한",
+          "en": "sincere"
         },
         {
           "es": "humilde",
-          "ko": "겸손한"
+          "ko": "겸손한",
+          "en": "humble"
         },
         {
           "es": "leal",
-          "ko": "충실한"
+          "ko": "충실한",
+          "en": "loyal"
         },
         {
           "es": "optimista",
-          "ko": "낙관적인"
+          "ko": "낙관적인",
+          "en": "optimistic"
         },
         {
           "es": "creativo",
-          "ko": "창의적인"
+          "ko": "창의적인",
+          "en": "creative"
         },
         {
           "es": "trabajador",
-          "ko": "부지런한"
+          "ko": "부지런한",
+          "en": "hardworking"
         },
         {
           "es": "egoísta",
-          "ko": "이기적인"
+          "ko": "이기적인",
+          "en": "selfish"
         },
         {
           "es": "mentiroso",
-          "ko": "거짓말쟁이"
+          "ko": "거짓말쟁이",
+          "en": "liar"
         },
         {
           "es": "perezoso",
-          "ko": "게으른"
+          "ko": "게으른",
+          "en": "lazy"
         },
         {
           "es": "cobarde",
-          "ko": "겁쟁이"
+          "ko": "겁쟁이",
+          "en": "coward"
         },
         {
           "es": "terco",
-          "ko": "고집스러운"
+          "ko": "고집스러운",
+          "en": "stubborn"
         },
         {
           "es": "orgulloso",
-          "ko": "거만한"
+          "ko": "거만한",
+          "en": "proud"
         },
         {
           "es": "tacaño",
-          "ko": "인색한"
+          "ko": "인색한",
+          "en": "stingy"
         },
         {
           "es": "cruel",
-          "ko": "잔인한"
+          "ko": "잔인한",
+          "en": "cruel"
         },
         {
           "es": "impaciente",
-          "ko": "성급한"
+          "ko": "성급한",
+          "en": "impatient"
         },
         {
           "es": "celoso",
-          "ko": "질투하는"
+          "ko": "질투하는",
+          "en": "jealous"
         }
       ]
     },
@@ -887,43 +1087,53 @@
       "words": [
         {
           "es": "pesimista",
-          "ko": "비관적인"
+          "ko": "비관적인",
+          "en": "pessimistic"
         },
         {
           "es": "tímido",
-          "ko": "소심한"
+          "ko": "소심한",
+          "en": "shy"
         },
         {
           "es": "grosero",
-          "ko": "무례한"
+          "ko": "무례한",
+          "en": "rude"
         },
         {
           "es": "irresponsable",
-          "ko": "무책임한"
+          "ko": "무책임한",
+          "en": "irresponsible"
         },
         {
           "es": "desconfiado",
-          "ko": "의심 많은"
+          "ko": "의심 많은",
+          "en": "suspicious"
         },
         {
           "es": "felicidad",
-          "ko": "행복"
+          "ko": "행복",
+          "en": "happiness"
         },
         {
           "es": "amor",
-          "ko": "사랑"
+          "ko": "사랑",
+          "en": "love"
         },
         {
           "es": "alegría",
-          "ko": "기쁨"
+          "ko": "기쁨",
+          "en": "joy"
         },
         {
           "es": "esperanza",
-          "ko": "희망"
+          "ko": "희망",
+          "en": "hope"
         },
         {
           "es": "orgullo",
-          "ko": "자부심"
+          "ko": "자부심",
+          "en": "pride"
         }
       ]
     },
@@ -934,43 +1144,53 @@
       "words": [
         {
           "es": "gratitud",
-          "ko": "감사"
+          "ko": "감사",
+          "en": "gratitude"
         },
         {
           "es": "emoción",
-          "ko": "감동"
+          "ko": "감동",
+          "en": "emotion"
         },
         {
           "es": "paz",
-          "ko": "평화"
+          "ko": "평화",
+          "en": "peace"
         },
         {
           "es": "confianza",
-          "ko": "신뢰"
+          "ko": "신뢰",
+          "en": "trust"
         },
         {
           "es": "satisfacción",
-          "ko": "만족"
+          "ko": "만족",
+          "en": "satisfaction"
         },
         {
           "es": "ternura",
-          "ko": "다정함"
+          "ko": "다정함",
+          "en": "tenderness"
         },
         {
           "es": "entusiasmo",
-          "ko": "열정"
+          "ko": "열정",
+          "en": "enthusiasm"
         },
         {
           "es": "alivio",
-          "ko": "안도"
+          "ko": "안도",
+          "en": "relief"
         },
         {
           "es": "cariño",
-          "ko": "애정"
+          "ko": "애정",
+          "en": "affection"
         },
         {
           "es": "ilusión",
-          "ko": "설렘"
+          "ko": "설렘",
+          "en": "excitement"
         }
       ]
     },
@@ -981,43 +1201,53 @@
       "words": [
         {
           "es": "tristeza",
-          "ko": "슬픔"
+          "ko": "슬픔",
+          "en": "sadness"
         },
         {
           "es": "miedo",
-          "ko": "두려움"
+          "ko": "두려움",
+          "en": "fear"
         },
         {
           "es": "enojo",
-          "ko": "분노"
+          "ko": "분노",
+          "en": "anger"
         },
         {
           "es": "ansiedad",
-          "ko": "불안"
+          "ko": "불안",
+          "en": "anxiety"
         },
         {
           "es": "vergüenza",
-          "ko": "부끄러움"
+          "ko": "부끄러움",
+          "en": "shame"
         },
         {
           "es": "culpa",
-          "ko": "죄책감"
+          "ko": "죄책감",
+          "en": "guilt"
         },
         {
           "es": "soledad",
-          "ko": "외로움"
+          "ko": "외로움",
+          "en": "loneliness"
         },
         {
           "es": "odio",
-          "ko": "증오"
+          "ko": "증오",
+          "en": "hatred"
         },
         {
           "es": "envidia",
-          "ko": "부러움"
+          "ko": "부러움",
+          "en": "envy"
         },
         {
           "es": "frustración",
-          "ko": "좌절"
+          "ko": "좌절",
+          "en": "frustration"
         }
       ]
     },
@@ -1028,43 +1258,53 @@
       "words": [
         {
           "es": "aburrimiento",
-          "ko": "지루함"
+          "ko": "지루함",
+          "en": "boredom"
         },
         {
           "es": "desesperación",
-          "ko": "절망"
+          "ko": "절망",
+          "en": "despair"
         },
         {
           "es": "nostalgia",
-          "ko": "향수"
+          "ko": "향수",
+          "en": "nostalgia"
         },
         {
           "es": "decepción",
-          "ko": "실망"
+          "ko": "실망",
+          "en": "disappointment"
         },
         {
           "es": "dolor",
-          "ko": "고통"
+          "ko": "고통",
+          "en": "pain"
         },
         {
           "es": "familia",
-          "ko": "가족"
+          "ko": "가족",
+          "en": "family"
         },
         {
           "es": "padre",
-          "ko": "아버지"
+          "ko": "아버지",
+          "en": "father"
         },
         {
           "es": "madre",
-          "ko": "어머니"
+          "ko": "어머니",
+          "en": "mother"
         },
         {
           "es": "hijo",
-          "ko": "아들"
+          "ko": "아들",
+          "en": "son"
         },
         {
           "es": "hija",
-          "ko": "딸"
+          "ko": "딸",
+          "en": "daughter"
         }
       ]
     },
@@ -1075,43 +1315,53 @@
       "words": [
         {
           "es": "hermano",
-          "ko": "형제"
+          "ko": "형제",
+          "en": "brother"
         },
         {
           "es": "hermana",
-          "ko": "자매"
+          "ko": "자매",
+          "en": "sister"
         },
         {
           "es": "abuelo",
-          "ko": "할아버지"
+          "ko": "할아버지",
+          "en": "grandfather"
         },
         {
           "es": "abuela",
-          "ko": "할머니"
+          "ko": "할머니",
+          "en": "grandmother"
         },
         {
           "es": "tío",
-          "ko": "삼촌"
+          "ko": "삼촌",
+          "en": "uncle"
         },
         {
           "es": "tía",
-          "ko": "이모"
+          "ko": "이모",
+          "en": "aunt"
         },
         {
           "es": "primo",
-          "ko": "사촌"
+          "ko": "사촌",
+          "en": "cousin"
         },
         {
           "es": "sobrino",
-          "ko": "조카"
+          "ko": "조카",
+          "en": "nephew"
         },
         {
           "es": "esposo",
-          "ko": "남편"
+          "ko": "남편",
+          "en": "husband"
         },
         {
           "es": "esposa",
-          "ko": "아내"
+          "ko": "아내",
+          "en": "wife"
         }
       ]
     },
@@ -1122,43 +1372,53 @@
       "words": [
         {
           "es": "amigo",
-          "ko": "친구"
+          "ko": "친구",
+          "en": "friend"
         },
         {
           "es": "compañero",
-          "ko": "동료"
+          "ko": "동료",
+          "en": "colleague"
         },
         {
           "es": "vecino",
-          "ko": "이웃"
+          "ko": "이웃",
+          "en": "neighbor"
         },
         {
           "es": "novio",
-          "ko": "남자친구"
+          "ko": "남자친구",
+          "en": "boyfriend"
         },
         {
           "es": "novia",
-          "ko": "여자친구"
+          "ko": "여자친구",
+          "en": "girlfriend"
         },
         {
           "es": "pareja",
-          "ko": "연인"
+          "ko": "연인",
+          "en": "couple"
         },
         {
           "es": "jefe",
-          "ko": "상사"
+          "ko": "상사",
+          "en": "boss"
         },
         {
           "es": "enemigo",
-          "ko": "적"
+          "ko": "적",
+          "en": "enemy"
         },
         {
           "es": "conocido",
-          "ko": "지인"
+          "ko": "지인",
+          "en": "acquaintance"
         },
         {
           "es": "socio",
-          "ko": "동업자"
+          "ko": "동업자",
+          "en": "partner"
         }
       ]
     },
@@ -1169,43 +1429,53 @@
       "words": [
         {
           "es": "equipo",
-          "ko": "팀"
+          "ko": "팀",
+          "en": "team"
         },
         {
           "es": "grupo",
-          "ko": "그룹"
+          "ko": "그룹",
+          "en": "group"
         },
         {
           "es": "comunidad",
-          "ko": "공동체"
+          "ko": "공동체",
+          "en": "community"
         },
         {
           "es": "extraño",
-          "ko": "낯선 사람"
+          "ko": "낯선 사람",
+          "en": "stranger"
         },
         {
           "es": "invitado",
-          "ko": "손님"
+          "ko": "손님",
+          "en": "guest"
         },
         {
           "es": "nacimiento",
-          "ko": "출생"
+          "ko": "출생",
+          "en": "birth"
         },
         {
           "es": "infancia",
-          "ko": "유아기"
+          "ko": "유아기",
+          "en": "childhood"
         },
         {
           "es": "niñez",
-          "ko": "어린 시절"
+          "ko": "어린 시절",
+          "en": "childhood"
         },
         {
           "es": "adolescencia",
-          "ko": "청소년기"
+          "ko": "청소년기",
+          "en": "adolescence"
         },
         {
           "es": "juventud",
-          "ko": "청춘"
+          "ko": "청춘",
+          "en": "youth"
         }
       ]
     },
@@ -1216,43 +1486,53 @@
       "words": [
         {
           "es": "madurez",
-          "ko": "성숙"
+          "ko": "성숙",
+          "en": "maturity"
         },
         {
           "es": "vejez",
-          "ko": "노년"
+          "ko": "노년",
+          "en": "old age"
         },
         {
           "es": "muerte",
-          "ko": "죽음"
+          "ko": "죽음",
+          "en": "death"
         },
         {
           "es": "boda",
-          "ko": "결혼식"
+          "ko": "결혼식",
+          "en": "wedding"
         },
         {
           "es": "embarazo",
-          "ko": "임신"
+          "ko": "임신",
+          "en": "pregnancy"
         },
         {
           "es": "jubilación",
-          "ko": "은퇴"
+          "ko": "은퇴",
+          "en": "retirement"
         },
         {
           "es": "cumpleaños",
-          "ko": "생일"
+          "ko": "생일",
+          "en": "birthday"
         },
         {
           "es": "crecimiento",
-          "ko": "성장"
+          "ko": "성장",
+          "en": "growth"
         },
         {
           "es": "vida",
-          "ko": "삶"
+          "ko": "삶",
+          "en": "life"
         },
         {
           "es": "generación",
-          "ko": "세대"
+          "ko": "세대",
+          "en": "generation"
         }
       ]
     },
@@ -1263,43 +1543,53 @@
       "words": [
         {
           "es": "salud",
-          "ko": "건강"
+          "ko": "건강",
+          "en": "health"
         },
         {
           "es": "ejercicio",
-          "ko": "운동"
+          "ko": "운동",
+          "en": "exercise"
         },
         {
           "es": "dieta",
-          "ko": "식단"
+          "ko": "식단",
+          "en": "diet"
         },
         {
           "es": "descanso",
-          "ko": "휴식"
+          "ko": "휴식",
+          "en": "rest"
         },
         {
           "es": "sueño",
-          "ko": "수면"
+          "ko": "수면",
+          "en": "sleep"
         },
         {
           "es": "peso",
-          "ko": "체중"
+          "ko": "체중",
+          "en": "weight"
         },
         {
           "es": "energía",
-          "ko": "에너지"
+          "ko": "에너지",
+          "en": "energy"
         },
         {
           "es": "higiene",
-          "ko": "위생"
+          "ko": "위생",
+          "en": "hygiene"
         },
         {
           "es": "bienestar",
-          "ko": "웰빙"
+          "ko": "웰빙",
+          "en": "well-being"
         },
         {
           "es": "vitamina",
-          "ko": "비타민"
+          "ko": "비타민",
+          "en": "vitamin"
         }
       ]
     },
@@ -1310,43 +1600,53 @@
       "words": [
         {
           "es": "nutrición",
-          "ko": "영양"
+          "ko": "영양",
+          "en": "nutrition"
         },
         {
           "es": "inmunidad",
-          "ko": "면역"
+          "ko": "면역",
+          "en": "immunity"
         },
         {
           "es": "respiración",
-          "ko": "호흡"
+          "ko": "호흡",
+          "en": "breathing"
         },
         {
           "es": "digestión",
-          "ko": "소화"
+          "ko": "소화",
+          "en": "digestion"
         },
         {
           "es": "postura",
-          "ko": "자세"
+          "ko": "자세",
+          "en": "posture"
         },
         {
           "es": "enfermedad",
-          "ko": "질병"
+          "ko": "질병",
+          "en": "illness"
         },
         {
           "es": "fiebre",
-          "ko": "열"
+          "ko": "열",
+          "en": "fever"
         },
         {
           "es": "tos",
-          "ko": "기침"
+          "ko": "기침",
+          "en": "cough"
         },
         {
           "es": "gripe",
-          "ko": "독감"
+          "ko": "독감",
+          "en": "flu"
         },
         {
           "es": "resfriado",
-          "ko": "감기"
+          "ko": "감기",
+          "en": "cold"
         }
       ]
     },
@@ -1357,403 +1657,503 @@
       "words": [
         {
           "es": "pesimista",
-          "ko": "비관적인"
+          "ko": "비관적인",
+          "en": "pessimistic"
         },
         {
           "es": "tímido",
-          "ko": "소심한"
+          "ko": "소심한",
+          "en": "shy"
         },
         {
           "es": "grosero",
-          "ko": "무례한"
+          "ko": "무례한",
+          "en": "rude"
         },
         {
           "es": "irresponsable",
-          "ko": "무책임한"
+          "ko": "무책임한",
+          "en": "irresponsible"
         },
         {
           "es": "desconfiado",
-          "ko": "의심 많은"
+          "ko": "의심 많은",
+          "en": "suspicious"
         },
         {
           "es": "felicidad",
-          "ko": "행복"
+          "ko": "행복",
+          "en": "happiness"
         },
         {
           "es": "amor",
-          "ko": "사랑"
+          "ko": "사랑",
+          "en": "love"
         },
         {
           "es": "alegría",
-          "ko": "기쁨"
+          "ko": "기쁨",
+          "en": "joy"
         },
         {
           "es": "esperanza",
-          "ko": "희망"
+          "ko": "희망",
+          "en": "hope"
         },
         {
           "es": "orgullo",
-          "ko": "자부심"
+          "ko": "자부심",
+          "en": "pride"
         },
         {
           "es": "gratitud",
-          "ko": "감사"
+          "ko": "감사",
+          "en": "gratitude"
         },
         {
           "es": "emoción",
-          "ko": "감동"
+          "ko": "감동",
+          "en": "emotion"
         },
         {
           "es": "paz",
-          "ko": "평화"
+          "ko": "평화",
+          "en": "peace"
         },
         {
           "es": "confianza",
-          "ko": "신뢰"
+          "ko": "신뢰",
+          "en": "trust"
         },
         {
           "es": "satisfacción",
-          "ko": "만족"
+          "ko": "만족",
+          "en": "satisfaction"
         },
         {
           "es": "ternura",
-          "ko": "다정함"
+          "ko": "다정함",
+          "en": "tenderness"
         },
         {
           "es": "entusiasmo",
-          "ko": "열정"
+          "ko": "열정",
+          "en": "enthusiasm"
         },
         {
           "es": "alivio",
-          "ko": "안도"
+          "ko": "안도",
+          "en": "relief"
         },
         {
           "es": "cariño",
-          "ko": "애정"
+          "ko": "애정",
+          "en": "affection"
         },
         {
           "es": "ilusión",
-          "ko": "설렘"
+          "ko": "설렘",
+          "en": "excitement"
         },
         {
           "es": "tristeza",
-          "ko": "슬픔"
+          "ko": "슬픔",
+          "en": "sadness"
         },
         {
           "es": "miedo",
-          "ko": "두려움"
+          "ko": "두려움",
+          "en": "fear"
         },
         {
           "es": "enojo",
-          "ko": "분노"
+          "ko": "분노",
+          "en": "anger"
         },
         {
           "es": "ansiedad",
-          "ko": "불안"
+          "ko": "불안",
+          "en": "anxiety"
         },
         {
           "es": "vergüenza",
-          "ko": "부끄러움"
+          "ko": "부끄러움",
+          "en": "shame"
         },
         {
           "es": "culpa",
-          "ko": "죄책감"
+          "ko": "죄책감",
+          "en": "guilt"
         },
         {
           "es": "soledad",
-          "ko": "외로움"
+          "ko": "외로움",
+          "en": "loneliness"
         },
         {
           "es": "odio",
-          "ko": "증오"
+          "ko": "증오",
+          "en": "hatred"
         },
         {
           "es": "envidia",
-          "ko": "부러움"
+          "ko": "부러움",
+          "en": "envy"
         },
         {
           "es": "frustración",
-          "ko": "좌절"
+          "ko": "좌절",
+          "en": "frustration"
         },
         {
           "es": "aburrimiento",
-          "ko": "지루함"
+          "ko": "지루함",
+          "en": "boredom"
         },
         {
           "es": "desesperación",
-          "ko": "절망"
+          "ko": "절망",
+          "en": "despair"
         },
         {
           "es": "nostalgia",
-          "ko": "향수"
+          "ko": "향수",
+          "en": "nostalgia"
         },
         {
           "es": "decepción",
-          "ko": "실망"
+          "ko": "실망",
+          "en": "disappointment"
         },
         {
           "es": "dolor",
-          "ko": "고통"
+          "ko": "고통",
+          "en": "pain"
         },
         {
           "es": "familia",
-          "ko": "가족"
+          "ko": "가족",
+          "en": "family"
         },
         {
           "es": "padre",
-          "ko": "아버지"
+          "ko": "아버지",
+          "en": "father"
         },
         {
           "es": "madre",
-          "ko": "어머니"
+          "ko": "어머니",
+          "en": "mother"
         },
         {
           "es": "hijo",
-          "ko": "아들"
+          "ko": "아들",
+          "en": "son"
         },
         {
           "es": "hija",
-          "ko": "딸"
+          "ko": "딸",
+          "en": "daughter"
         },
         {
           "es": "hermano",
-          "ko": "형제"
+          "ko": "형제",
+          "en": "brother"
         },
         {
           "es": "hermana",
-          "ko": "자매"
+          "ko": "자매",
+          "en": "sister"
         },
         {
           "es": "abuelo",
-          "ko": "할아버지"
+          "ko": "할아버지",
+          "en": "grandfather"
         },
         {
           "es": "abuela",
-          "ko": "할머니"
+          "ko": "할머니",
+          "en": "grandmother"
         },
         {
           "es": "tío",
-          "ko": "삼촌"
+          "ko": "삼촌",
+          "en": "uncle"
         },
         {
           "es": "tía",
-          "ko": "이모"
+          "ko": "이모",
+          "en": "aunt"
         },
         {
           "es": "primo",
-          "ko": "사촌"
+          "ko": "사촌",
+          "en": "cousin"
         },
         {
           "es": "sobrino",
-          "ko": "조카"
+          "ko": "조카",
+          "en": "nephew"
         },
         {
           "es": "esposo",
-          "ko": "남편"
+          "ko": "남편",
+          "en": "husband"
         },
         {
           "es": "esposa",
-          "ko": "아내"
+          "ko": "아내",
+          "en": "wife"
         },
         {
           "es": "amigo",
-          "ko": "친구"
+          "ko": "친구",
+          "en": "friend"
         },
         {
           "es": "compañero",
-          "ko": "동료"
+          "ko": "동료",
+          "en": "colleague"
         },
         {
           "es": "vecino",
-          "ko": "이웃"
+          "ko": "이웃",
+          "en": "neighbor"
         },
         {
           "es": "novio",
-          "ko": "남자친구"
+          "ko": "남자친구",
+          "en": "boyfriend"
         },
         {
           "es": "novia",
-          "ko": "여자친구"
+          "ko": "여자친구",
+          "en": "girlfriend"
         },
         {
           "es": "pareja",
-          "ko": "연인"
+          "ko": "연인",
+          "en": "couple"
         },
         {
           "es": "jefe",
-          "ko": "상사"
+          "ko": "상사",
+          "en": "boss"
         },
         {
           "es": "enemigo",
-          "ko": "적"
+          "ko": "적",
+          "en": "enemy"
         },
         {
           "es": "conocido",
-          "ko": "지인"
+          "ko": "지인",
+          "en": "acquaintance"
         },
         {
           "es": "socio",
-          "ko": "동업자"
+          "ko": "동업자",
+          "en": "partner"
         },
         {
           "es": "equipo",
-          "ko": "팀"
+          "ko": "팀",
+          "en": "team"
         },
         {
           "es": "grupo",
-          "ko": "그룹"
+          "ko": "그룹",
+          "en": "group"
         },
         {
           "es": "comunidad",
-          "ko": "공동체"
+          "ko": "공동체",
+          "en": "community"
         },
         {
           "es": "extraño",
-          "ko": "낯선 사람"
+          "ko": "낯선 사람",
+          "en": "stranger"
         },
         {
           "es": "invitado",
-          "ko": "손님"
+          "ko": "손님",
+          "en": "guest"
         },
         {
           "es": "nacimiento",
-          "ko": "출생"
+          "ko": "출생",
+          "en": "birth"
         },
         {
           "es": "infancia",
-          "ko": "유아기"
+          "ko": "유아기",
+          "en": "childhood"
         },
         {
           "es": "niñez",
-          "ko": "어린 시절"
+          "ko": "어린 시절",
+          "en": "childhood"
         },
         {
           "es": "adolescencia",
-          "ko": "청소년기"
+          "ko": "청소년기",
+          "en": "adolescence"
         },
         {
           "es": "juventud",
-          "ko": "청춘"
+          "ko": "청춘",
+          "en": "youth"
         },
         {
           "es": "madurez",
-          "ko": "성숙"
+          "ko": "성숙",
+          "en": "maturity"
         },
         {
           "es": "vejez",
-          "ko": "노년"
+          "ko": "노년",
+          "en": "old age"
         },
         {
           "es": "muerte",
-          "ko": "죽음"
+          "ko": "죽음",
+          "en": "death"
         },
         {
           "es": "boda",
-          "ko": "결혼식"
+          "ko": "결혼식",
+          "en": "wedding"
         },
         {
           "es": "embarazo",
-          "ko": "임신"
+          "ko": "임신",
+          "en": "pregnancy"
         },
         {
           "es": "jubilación",
-          "ko": "은퇴"
+          "ko": "은퇴",
+          "en": "retirement"
         },
         {
           "es": "cumpleaños",
-          "ko": "생일"
+          "ko": "생일",
+          "en": "birthday"
         },
         {
           "es": "crecimiento",
-          "ko": "성장"
+          "ko": "성장",
+          "en": "growth"
         },
         {
           "es": "vida",
-          "ko": "삶"
+          "ko": "삶",
+          "en": "life"
         },
         {
           "es": "generación",
-          "ko": "세대"
+          "ko": "세대",
+          "en": "generation"
         },
         {
           "es": "salud",
-          "ko": "건강"
+          "ko": "건강",
+          "en": "health"
         },
         {
           "es": "ejercicio",
-          "ko": "운동"
+          "ko": "운동",
+          "en": "exercise"
         },
         {
           "es": "dieta",
-          "ko": "식단"
+          "ko": "식단",
+          "en": "diet"
         },
         {
           "es": "descanso",
-          "ko": "휴식"
+          "ko": "휴식",
+          "en": "rest"
         },
         {
           "es": "sueño",
-          "ko": "수면"
+          "ko": "수면",
+          "en": "sleep"
         },
         {
           "es": "peso",
-          "ko": "체중"
+          "ko": "체중",
+          "en": "weight"
         },
         {
           "es": "energía",
-          "ko": "에너지"
+          "ko": "에너지",
+          "en": "energy"
         },
         {
           "es": "higiene",
-          "ko": "위생"
+          "ko": "위생",
+          "en": "hygiene"
         },
         {
           "es": "bienestar",
-          "ko": "웰빙"
+          "ko": "웰빙",
+          "en": "well-being"
         },
         {
           "es": "vitamina",
-          "ko": "비타민"
+          "ko": "비타민",
+          "en": "vitamin"
         },
         {
           "es": "nutrición",
-          "ko": "영양"
+          "ko": "영양",
+          "en": "nutrition"
         },
         {
           "es": "inmunidad",
-          "ko": "면역"
+          "ko": "면역",
+          "en": "immunity"
         },
         {
           "es": "respiración",
-          "ko": "호흡"
+          "ko": "호흡",
+          "en": "breathing"
         },
         {
           "es": "digestión",
-          "ko": "소화"
+          "ko": "소화",
+          "en": "digestion"
         },
         {
           "es": "postura",
-          "ko": "자세"
+          "ko": "자세",
+          "en": "posture"
         },
         {
           "es": "enfermedad",
-          "ko": "질병"
+          "ko": "질병",
+          "en": "illness"
         },
         {
           "es": "fiebre",
-          "ko": "열"
+          "ko": "열",
+          "en": "fever"
         },
         {
           "es": "tos",
-          "ko": "기침"
+          "ko": "기침",
+          "en": "cough"
         },
         {
           "es": "gripe",
-          "ko": "독감"
+          "ko": "독감",
+          "en": "flu"
         },
         {
           "es": "resfriado",
-          "ko": "감기"
+          "ko": "감기",
+          "en": "cold"
         }
       ]
     },
@@ -1764,43 +2164,53 @@
       "words": [
         {
           "es": "herida",
-          "ko": "상처"
+          "ko": "상처",
+          "en": "wound"
         },
         {
           "es": "infección",
-          "ko": "감염"
+          "ko": "감염",
+          "en": "infection"
         },
         {
           "es": "alergia",
-          "ko": "알레르기"
+          "ko": "알레르기",
+          "en": "allergy"
         },
         {
           "es": "mareo",
-          "ko": "어지러움"
+          "ko": "어지러움",
+          "en": "dizziness"
         },
         {
           "es": "náusea",
-          "ko": "메스꺼움"
+          "ko": "메스꺼움",
+          "en": "nausea"
         },
         {
           "es": "fatiga",
-          "ko": "피로"
+          "ko": "피로",
+          "en": "fatigue"
         },
         {
           "es": "fractura",
-          "ko": "골절"
+          "ko": "골절",
+          "en": "fracture"
         },
         {
           "es": "inflamación",
-          "ko": "염증"
+          "ko": "염증",
+          "en": "inflammation"
         },
         {
           "es": "estrés",
-          "ko": "스트레스"
+          "ko": "스트레스",
+          "en": "stress"
         },
         {
           "es": "insomnio",
-          "ko": "불면증"
+          "ko": "불면증",
+          "en": "insomnia"
         }
       ]
     },
@@ -1811,43 +2221,53 @@
       "words": [
         {
           "es": "medicina",
-          "ko": "약"
+          "ko": "약",
+          "en": "medicine"
         },
         {
           "es": "hospital",
-          "ko": "병원"
+          "ko": "병원",
+          "en": "hospital"
         },
         {
           "es": "médico",
-          "ko": "의사"
+          "ko": "의사",
+          "en": "doctor"
         },
         {
           "es": "enfermero",
-          "ko": "간호사"
+          "ko": "간호사",
+          "en": "nurse"
         },
         {
           "es": "cirugía",
-          "ko": "수술"
+          "ko": "수술",
+          "en": "surgery"
         },
         {
           "es": "receta",
-          "ko": "처방전"
+          "ko": "처방전",
+          "en": "recipe"
         },
         {
           "es": "vacuna",
-          "ko": "백신"
+          "ko": "백신",
+          "en": "vaccine"
         },
         {
           "es": "diagnóstico",
-          "ko": "진단"
+          "ko": "진단",
+          "en": "diagnosis"
         },
         {
           "es": "tratamiento",
-          "ko": "치료"
+          "ko": "치료",
+          "en": "treatment"
         },
         {
           "es": "pastilla",
-          "ko": "알약"
+          "ko": "알약",
+          "en": "pill"
         }
       ]
     },
@@ -1858,43 +2278,53 @@
       "words": [
         {
           "es": "inyección",
-          "ko": "주사"
+          "ko": "주사",
+          "en": "injection"
         },
         {
           "es": "ambulancia",
-          "ko": "구급차"
+          "ko": "구급차",
+          "en": "ambulance"
         },
         {
           "es": "farmacia",
-          "ko": "약국"
+          "ko": "약국",
+          "en": "pharmacy"
         },
         {
           "es": "consulta",
-          "ko": "진료"
+          "ko": "진료",
+          "en": "consultation"
         },
         {
           "es": "recuperación",
-          "ko": "회복"
+          "ko": "회복",
+          "en": "recovery"
         },
         {
           "es": "profesor",
-          "ko": "교사"
+          "ko": "교사",
+          "en": "teacher"
         },
         {
           "es": "abogado",
-          "ko": "변호사"
+          "ko": "변호사",
+          "en": "lawyer"
         },
         {
           "es": "ingeniero",
-          "ko": "엔지니어"
+          "ko": "엔지니어",
+          "en": "engineer"
         },
         {
           "es": "policía",
-          "ko": "경찰"
+          "ko": "경찰",
+          "en": "police"
         },
         {
           "es": "bombero",
-          "ko": "소방관"
+          "ko": "소방관",
+          "en": "firefighter"
         }
       ]
     },
@@ -1905,43 +2335,53 @@
       "words": [
         {
           "es": "cocinero",
-          "ko": "요리사"
+          "ko": "요리사",
+          "en": "cook"
         },
         {
           "es": "conductor",
-          "ko": "운전사"
+          "ko": "운전사",
+          "en": "driver"
         },
         {
           "es": "vendedor",
-          "ko": "판매원"
+          "ko": "판매원",
+          "en": "seller"
         },
         {
           "es": "periodista",
-          "ko": "기자"
+          "ko": "기자",
+          "en": "journalist"
         },
         {
           "es": "científico",
-          "ko": "과학자"
+          "ko": "과학자",
+          "en": "scientist"
         },
         {
           "es": "artista",
-          "ko": "예술가"
+          "ko": "예술가",
+          "en": "artist"
         },
         {
           "es": "músico",
-          "ko": "음악가"
+          "ko": "음악가",
+          "en": "musician"
         },
         {
           "es": "escritor",
-          "ko": "작가"
+          "ko": "작가",
+          "en": "writer"
         },
         {
           "es": "arquitecto",
-          "ko": "건축가"
+          "ko": "건축가",
+          "en": "architect"
         },
         {
           "es": "agricultor",
-          "ko": "농부"
+          "ko": "농부",
+          "en": "farmer"
         }
       ]
     },
@@ -1952,43 +2392,53 @@
       "words": [
         {
           "es": "dentista",
-          "ko": "치과의사"
+          "ko": "치과의사",
+          "en": "dentist"
         },
         {
           "es": "piloto",
-          "ko": "조종사"
+          "ko": "조종사",
+          "en": "pilot"
         },
         {
           "es": "soldado",
-          "ko": "군인"
+          "ko": "군인",
+          "en": "soldier"
         },
         {
           "es": "empresario",
-          "ko": "사업가"
+          "ko": "사업가",
+          "en": "businessman"
         },
         {
           "es": "contador",
-          "ko": "회계사"
+          "ko": "회계사",
+          "en": "accountant"
         },
         {
           "es": "fotógrafo",
-          "ko": "사진작가"
+          "ko": "사진작가",
+          "en": "photographer"
         },
         {
           "es": "programador",
-          "ko": "프로그래머"
+          "ko": "프로그래머",
+          "en": "programmer"
         },
         {
           "es": "diseñador",
-          "ko": "디자이너"
+          "ko": "디자이너",
+          "en": "designer"
         },
         {
           "es": "carpintero",
-          "ko": "목수"
+          "ko": "목수",
+          "en": "carpenter"
         },
         {
           "es": "electricista",
-          "ko": "전기기사"
+          "ko": "전기기사",
+          "en": "electrician"
         }
       ]
     },
@@ -1999,43 +2449,53 @@
       "words": [
         {
           "es": "mecánico",
-          "ko": "정비사"
+          "ko": "정비사",
+          "en": "mechanic"
         },
         {
           "es": "cartero",
-          "ko": "우체부"
+          "ko": "우체부",
+          "en": "mailman"
         },
         {
           "es": "peluquero",
-          "ko": "미용사"
+          "ko": "미용사",
+          "en": "hairdresser"
         },
         {
           "es": "veterinario",
-          "ko": "수의사"
+          "ko": "수의사",
+          "en": "vet"
         },
         {
           "es": "traductor",
-          "ko": "번역가"
+          "ko": "번역가",
+          "en": "translator"
         },
         {
           "es": "comportamiento",
-          "ko": "행동"
+          "ko": "행동",
+          "en": "behavior"
         },
         {
           "es": "costumbre",
-          "ko": "습관"
+          "ko": "습관",
+          "en": "custom"
         },
         {
           "es": "actitud",
-          "ko": "태도"
+          "ko": "태도",
+          "en": "attitude"
         },
         {
           "es": "carácter",
-          "ko": "성격"
+          "ko": "성격",
+          "en": "character"
         },
         {
           "es": "voluntad",
-          "ko": "의지"
+          "ko": "의지",
+          "en": "will"
         }
       ]
     },
@@ -2046,43 +2506,53 @@
       "words": [
         {
           "es": "paciencia",
-          "ko": "인내"
+          "ko": "인내",
+          "en": "patience"
         },
         {
           "es": "coraje",
-          "ko": "용기"
+          "ko": "용기",
+          "en": "courage"
         },
         {
           "es": "disciplina",
-          "ko": "규율"
+          "ko": "규율",
+          "en": "discipline"
         },
         {
           "es": "respeto",
-          "ko": "존경"
+          "ko": "존경",
+          "en": "respect"
         },
         {
           "es": "honradez",
-          "ko": "정직"
+          "ko": "정직",
+          "en": "honesty"
         },
         {
           "es": "modestia",
-          "ko": "겸손"
+          "ko": "겸손",
+          "en": "modesty"
         },
         {
           "es": "ambición",
-          "ko": "야망"
+          "ko": "야망",
+          "en": "ambition"
         },
         {
           "es": "perseverancia",
-          "ko": "끈기"
+          "ko": "끈기",
+          "en": "perseverance"
         },
         {
           "es": "prudencia",
-          "ko": "신중함"
+          "ko": "신중함",
+          "en": "prudence"
         },
         {
           "es": "tolerancia",
-          "ko": "관용"
+          "ko": "관용",
+          "en": "tolerance"
         }
       ]
     },
@@ -2093,43 +2563,53 @@
       "words": [
         {
           "es": "hablar",
-          "ko": "말하다"
+          "ko": "말하다",
+          "en": "to speak"
         },
         {
           "es": "escuchar",
-          "ko": "듣다"
+          "ko": "듣다",
+          "en": "to listen"
         },
         {
           "es": "preguntar",
-          "ko": "질문하다"
+          "ko": "질문하다",
+          "en": "to ask"
         },
         {
           "es": "responder",
-          "ko": "대답하다"
+          "ko": "대답하다",
+          "en": "to respond"
         },
         {
           "es": "explicar",
-          "ko": "설명하다"
+          "ko": "설명하다",
+          "en": "to explain"
         },
         {
           "es": "contar",
-          "ko": "이야기하다"
+          "ko": "이야기하다",
+          "en": "to tell"
         },
         {
           "es": "gritar",
-          "ko": "소리치다"
+          "ko": "소리치다",
+          "en": "to shout"
         },
         {
           "es": "susurrar",
-          "ko": "속삭이다"
+          "ko": "속삭이다",
+          "en": "to whisper"
         },
         {
           "es": "discutir",
-          "ko": "토론하다"
+          "ko": "토론하다",
+          "en": "to discuss"
         },
         {
           "es": "opinar",
-          "ko": "의견을 말하다"
+          "ko": "의견을 말하다",
+          "en": "to give an opinion"
         }
       ]
     },
@@ -2140,43 +2620,53 @@
       "words": [
         {
           "es": "mentir",
-          "ko": "거짓말하다"
+          "ko": "거짓말하다",
+          "en": "to lie"
         },
         {
           "es": "confesar",
-          "ko": "고백하다"
+          "ko": "고백하다",
+          "en": "to confess"
         },
         {
           "es": "prometer",
-          "ko": "약속하다"
+          "ko": "약속하다",
+          "en": "to promise"
         },
         {
           "es": "negar",
-          "ko": "부정하다"
+          "ko": "부정하다",
+          "en": "to deny"
         },
         {
           "es": "convencer",
-          "ko": "설득하다"
+          "ko": "설득하다",
+          "en": "to convince"
         },
         {
           "es": "saludar",
-          "ko": "인사하다"
+          "ko": "인사하다",
+          "en": "to greet"
         },
         {
           "es": "despedirse",
-          "ko": "작별하다"
+          "ko": "작별하다",
+          "en": "to say goodbye"
         },
         {
           "es": "presentar",
-          "ko": "소개하다"
+          "ko": "소개하다",
+          "en": "to introduce"
         },
         {
           "es": "agradecer",
-          "ko": "감사하다"
+          "ko": "감사하다",
+          "en": "to thank"
         },
         {
           "es": "disculparse",
-          "ko": "사과하다"
+          "ko": "사과하다",
+          "en": "to apologize"
         }
       ]
     },
@@ -2187,43 +2677,53 @@
       "words": [
         {
           "es": "invitar",
-          "ko": "초대하다"
+          "ko": "초대하다",
+          "en": "to invite"
         },
         {
           "es": "abrazar",
-          "ko": "포옹하다"
+          "ko": "포옹하다",
+          "en": "to hug"
         },
         {
           "es": "felicitar",
-          "ko": "축하하다"
+          "ko": "축하하다",
+          "en": "to congratulate"
         },
         {
           "es": "ayudar",
-          "ko": "돕다"
+          "ko": "돕다",
+          "en": "to help"
         },
         {
           "es": "compartir",
-          "ko": "나누다"
+          "ko": "나누다",
+          "en": "to share"
         },
         {
           "es": "cooperar",
-          "ko": "협력하다"
+          "ko": "협력하다",
+          "en": "to cooperate"
         },
         {
           "es": "respetar",
-          "ko": "존중하다"
+          "ko": "존중하다",
+          "en": "to respect"
         },
         {
           "es": "perdonar",
-          "ko": "용서하다"
+          "ko": "용서하다",
+          "en": "to forgive"
         },
         {
           "es": "confiar",
-          "ko": "신뢰하다"
+          "ko": "신뢰하다",
+          "en": "to trust"
         },
         {
           "es": "acompañar",
-          "ko": "동행하다"
+          "ko": "동행하다",
+          "en": "to accompany"
         }
       ]
     },
@@ -2234,403 +2734,503 @@
       "words": [
         {
           "es": "herida",
-          "ko": "상처"
+          "ko": "상처",
+          "en": "wound"
         },
         {
           "es": "infección",
-          "ko": "감염"
+          "ko": "감염",
+          "en": "infection"
         },
         {
           "es": "alergia",
-          "ko": "알레르기"
+          "ko": "알레르기",
+          "en": "allergy"
         },
         {
           "es": "mareo",
-          "ko": "어지러움"
+          "ko": "어지러움",
+          "en": "dizziness"
         },
         {
           "es": "náusea",
-          "ko": "메스꺼움"
+          "ko": "메스꺼움",
+          "en": "nausea"
         },
         {
           "es": "fatiga",
-          "ko": "피로"
+          "ko": "피로",
+          "en": "fatigue"
         },
         {
           "es": "fractura",
-          "ko": "골절"
+          "ko": "골절",
+          "en": "fracture"
         },
         {
           "es": "inflamación",
-          "ko": "염증"
+          "ko": "염증",
+          "en": "inflammation"
         },
         {
           "es": "estrés",
-          "ko": "스트레스"
+          "ko": "스트레스",
+          "en": "stress"
         },
         {
           "es": "insomnio",
-          "ko": "불면증"
+          "ko": "불면증",
+          "en": "insomnia"
         },
         {
           "es": "medicina",
-          "ko": "약"
+          "ko": "약",
+          "en": "medicine"
         },
         {
           "es": "hospital",
-          "ko": "병원"
+          "ko": "병원",
+          "en": "hospital"
         },
         {
           "es": "médico",
-          "ko": "의사"
+          "ko": "의사",
+          "en": "doctor"
         },
         {
           "es": "enfermero",
-          "ko": "간호사"
+          "ko": "간호사",
+          "en": "nurse"
         },
         {
           "es": "cirugía",
-          "ko": "수술"
+          "ko": "수술",
+          "en": "surgery"
         },
         {
           "es": "receta",
-          "ko": "처방전"
+          "ko": "처방전",
+          "en": "recipe"
         },
         {
           "es": "vacuna",
-          "ko": "백신"
+          "ko": "백신",
+          "en": "vaccine"
         },
         {
           "es": "diagnóstico",
-          "ko": "진단"
+          "ko": "진단",
+          "en": "diagnosis"
         },
         {
           "es": "tratamiento",
-          "ko": "치료"
+          "ko": "치료",
+          "en": "treatment"
         },
         {
           "es": "pastilla",
-          "ko": "알약"
+          "ko": "알약",
+          "en": "pill"
         },
         {
           "es": "inyección",
-          "ko": "주사"
+          "ko": "주사",
+          "en": "injection"
         },
         {
           "es": "ambulancia",
-          "ko": "구급차"
+          "ko": "구급차",
+          "en": "ambulance"
         },
         {
           "es": "farmacia",
-          "ko": "약국"
+          "ko": "약국",
+          "en": "pharmacy"
         },
         {
           "es": "consulta",
-          "ko": "진료"
+          "ko": "진료",
+          "en": "consultation"
         },
         {
           "es": "recuperación",
-          "ko": "회복"
+          "ko": "회복",
+          "en": "recovery"
         },
         {
           "es": "profesor",
-          "ko": "교사"
+          "ko": "교사",
+          "en": "teacher"
         },
         {
           "es": "abogado",
-          "ko": "변호사"
+          "ko": "변호사",
+          "en": "lawyer"
         },
         {
           "es": "ingeniero",
-          "ko": "엔지니어"
+          "ko": "엔지니어",
+          "en": "engineer"
         },
         {
           "es": "policía",
-          "ko": "경찰"
+          "ko": "경찰",
+          "en": "police"
         },
         {
           "es": "bombero",
-          "ko": "소방관"
+          "ko": "소방관",
+          "en": "firefighter"
         },
         {
           "es": "cocinero",
-          "ko": "요리사"
+          "ko": "요리사",
+          "en": "cook"
         },
         {
           "es": "conductor",
-          "ko": "운전사"
+          "ko": "운전사",
+          "en": "driver"
         },
         {
           "es": "vendedor",
-          "ko": "판매원"
+          "ko": "판매원",
+          "en": "seller"
         },
         {
           "es": "periodista",
-          "ko": "기자"
+          "ko": "기자",
+          "en": "journalist"
         },
         {
           "es": "científico",
-          "ko": "과학자"
+          "ko": "과학자",
+          "en": "scientist"
         },
         {
           "es": "artista",
-          "ko": "예술가"
+          "ko": "예술가",
+          "en": "artist"
         },
         {
           "es": "músico",
-          "ko": "음악가"
+          "ko": "음악가",
+          "en": "musician"
         },
         {
           "es": "escritor",
-          "ko": "작가"
+          "ko": "작가",
+          "en": "writer"
         },
         {
           "es": "arquitecto",
-          "ko": "건축가"
+          "ko": "건축가",
+          "en": "architect"
         },
         {
           "es": "agricultor",
-          "ko": "농부"
+          "ko": "농부",
+          "en": "farmer"
         },
         {
           "es": "dentista",
-          "ko": "치과의사"
+          "ko": "치과의사",
+          "en": "dentist"
         },
         {
           "es": "piloto",
-          "ko": "조종사"
+          "ko": "조종사",
+          "en": "pilot"
         },
         {
           "es": "soldado",
-          "ko": "군인"
+          "ko": "군인",
+          "en": "soldier"
         },
         {
           "es": "empresario",
-          "ko": "사업가"
+          "ko": "사업가",
+          "en": "businessman"
         },
         {
           "es": "contador",
-          "ko": "회계사"
+          "ko": "회계사",
+          "en": "accountant"
         },
         {
           "es": "fotógrafo",
-          "ko": "사진작가"
+          "ko": "사진작가",
+          "en": "photographer"
         },
         {
           "es": "programador",
-          "ko": "프로그래머"
+          "ko": "프로그래머",
+          "en": "programmer"
         },
         {
           "es": "diseñador",
-          "ko": "디자이너"
+          "ko": "디자이너",
+          "en": "designer"
         },
         {
           "es": "carpintero",
-          "ko": "목수"
+          "ko": "목수",
+          "en": "carpenter"
         },
         {
           "es": "electricista",
-          "ko": "전기기사"
+          "ko": "전기기사",
+          "en": "electrician"
         },
         {
           "es": "mecánico",
-          "ko": "정비사"
+          "ko": "정비사",
+          "en": "mechanic"
         },
         {
           "es": "cartero",
-          "ko": "우체부"
+          "ko": "우체부",
+          "en": "mailman"
         },
         {
           "es": "peluquero",
-          "ko": "미용사"
+          "ko": "미용사",
+          "en": "hairdresser"
         },
         {
           "es": "veterinario",
-          "ko": "수의사"
+          "ko": "수의사",
+          "en": "vet"
         },
         {
           "es": "traductor",
-          "ko": "번역가"
+          "ko": "번역가",
+          "en": "translator"
         },
         {
           "es": "comportamiento",
-          "ko": "행동"
+          "ko": "행동",
+          "en": "behavior"
         },
         {
           "es": "costumbre",
-          "ko": "습관"
+          "ko": "습관",
+          "en": "custom"
         },
         {
           "es": "actitud",
-          "ko": "태도"
+          "ko": "태도",
+          "en": "attitude"
         },
         {
           "es": "carácter",
-          "ko": "성격"
+          "ko": "성격",
+          "en": "character"
         },
         {
           "es": "voluntad",
-          "ko": "의지"
+          "ko": "의지",
+          "en": "will"
         },
         {
           "es": "paciencia",
-          "ko": "인내"
+          "ko": "인내",
+          "en": "patience"
         },
         {
           "es": "coraje",
-          "ko": "용기"
+          "ko": "용기",
+          "en": "courage"
         },
         {
           "es": "disciplina",
-          "ko": "규율"
+          "ko": "규율",
+          "en": "discipline"
         },
         {
           "es": "respeto",
-          "ko": "존경"
+          "ko": "존경",
+          "en": "respect"
         },
         {
           "es": "honradez",
-          "ko": "정직"
+          "ko": "정직",
+          "en": "honesty"
         },
         {
           "es": "modestia",
-          "ko": "겸손"
+          "ko": "겸손",
+          "en": "modesty"
         },
         {
           "es": "ambición",
-          "ko": "야망"
+          "ko": "야망",
+          "en": "ambition"
         },
         {
           "es": "perseverancia",
-          "ko": "끈기"
+          "ko": "끈기",
+          "en": "perseverance"
         },
         {
           "es": "prudencia",
-          "ko": "신중함"
+          "ko": "신중함",
+          "en": "prudence"
         },
         {
           "es": "tolerancia",
-          "ko": "관용"
+          "ko": "관용",
+          "en": "tolerance"
         },
         {
           "es": "hablar",
-          "ko": "말하다"
+          "ko": "말하다",
+          "en": "to speak"
         },
         {
           "es": "escuchar",
-          "ko": "듣다"
+          "ko": "듣다",
+          "en": "to listen"
         },
         {
           "es": "preguntar",
-          "ko": "질문하다"
+          "ko": "질문하다",
+          "en": "to ask"
         },
         {
           "es": "responder",
-          "ko": "대답하다"
+          "ko": "대답하다",
+          "en": "to respond"
         },
         {
           "es": "explicar",
-          "ko": "설명하다"
+          "ko": "설명하다",
+          "en": "to explain"
         },
         {
           "es": "contar",
-          "ko": "이야기하다"
+          "ko": "이야기하다",
+          "en": "to tell"
         },
         {
           "es": "gritar",
-          "ko": "소리치다"
+          "ko": "소리치다",
+          "en": "to shout"
         },
         {
           "es": "susurrar",
-          "ko": "속삭이다"
+          "ko": "속삭이다",
+          "en": "to whisper"
         },
         {
           "es": "discutir",
-          "ko": "토론하다"
+          "ko": "토론하다",
+          "en": "to discuss"
         },
         {
           "es": "opinar",
-          "ko": "의견을 말하다"
+          "ko": "의견을 말하다",
+          "en": "to give an opinion"
         },
         {
           "es": "mentir",
-          "ko": "거짓말하다"
+          "ko": "거짓말하다",
+          "en": "to lie"
         },
         {
           "es": "confesar",
-          "ko": "고백하다"
+          "ko": "고백하다",
+          "en": "to confess"
         },
         {
           "es": "prometer",
-          "ko": "약속하다"
+          "ko": "약속하다",
+          "en": "to promise"
         },
         {
           "es": "negar",
-          "ko": "부정하다"
+          "ko": "부정하다",
+          "en": "to deny"
         },
         {
           "es": "convencer",
-          "ko": "설득하다"
+          "ko": "설득하다",
+          "en": "to convince"
         },
         {
           "es": "saludar",
-          "ko": "인사하다"
+          "ko": "인사하다",
+          "en": "to greet"
         },
         {
           "es": "despedirse",
-          "ko": "작별하다"
+          "ko": "작별하다",
+          "en": "to say goodbye"
         },
         {
           "es": "presentar",
-          "ko": "소개하다"
+          "ko": "소개하다",
+          "en": "to introduce"
         },
         {
           "es": "agradecer",
-          "ko": "감사하다"
+          "ko": "감사하다",
+          "en": "to thank"
         },
         {
           "es": "disculparse",
-          "ko": "사과하다"
+          "ko": "사과하다",
+          "en": "to apologize"
         },
         {
           "es": "invitar",
-          "ko": "초대하다"
+          "ko": "초대하다",
+          "en": "to invite"
         },
         {
           "es": "abrazar",
-          "ko": "포옹하다"
+          "ko": "포옹하다",
+          "en": "to hug"
         },
         {
           "es": "felicitar",
-          "ko": "축하하다"
+          "ko": "축하하다",
+          "en": "to congratulate"
         },
         {
           "es": "ayudar",
-          "ko": "돕다"
+          "ko": "돕다",
+          "en": "to help"
         },
         {
           "es": "compartir",
-          "ko": "나누다"
+          "ko": "나누다",
+          "en": "to share"
         },
         {
           "es": "cooperar",
-          "ko": "협력하다"
+          "ko": "협력하다",
+          "en": "to cooperate"
         },
         {
           "es": "respetar",
-          "ko": "존중하다"
+          "ko": "존중하다",
+          "en": "to respect"
         },
         {
           "es": "perdonar",
-          "ko": "용서하다"
+          "ko": "용서하다",
+          "en": "to forgive"
         },
         {
           "es": "confiar",
-          "ko": "신뢰하다"
+          "ko": "신뢰하다",
+          "en": "to trust"
         },
         {
           "es": "acompañar",
-          "ko": "동행하다"
+          "ko": "동행하다",
+          "en": "to accompany"
         }
       ]
     }
