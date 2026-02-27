@@ -1179,3 +1179,21 @@ a {
 .login-back-btn {
     font-size: 0.9rem;
 }
+
+/* ========================================= */
+/* 적응형 속도 배지 */
+/* ========================================= */
+.slow-mode-badge {
+    text-align: center;
+    padding: 3px 14px;
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 0.03em;
+    color: #b45309;
+    background: rgba(251, 191, 36, 0.18);
+    border-bottom: 1px solid rgba(251, 191, 36, 0.4);
+}
+
+.slow-mode-badge.hidden {
+    display: none;
+}

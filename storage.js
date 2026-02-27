@@ -100,26 +100,23 @@ const Storage = {
      * @param {string} stageId - "1-5" 형태의 스테이지 ID
      * @param {number} stars - 획득한 별 수 (1-3)
      * @param {number} score - 획득 점수
+     * @param {number} [accuracy] - 정확도 (0-100), 적응형 학습에 사용
      * @returns {boolean} 저장 성공 여부
      */
-    saveStageResult: function(stageId, stars, score) {
-        // 현재 진행 상황 가져오기
+    saveStageResult: function(stageId, stars, score, accuracy) {
         const progress = this._get(CONFIG.STORAGE_KEYS.PROGRESS) || {};
-        
-        // 기존 기록 가져오기
-        const existing = progress[stageId];
-        
-        // 새 기록이 더 좋을 때만 업데이트 (별 우선, 점수 차선)
-        if (!existing || stars > existing.stars || 
-            (stars === existing.stars && score > existing.bestScore)) {
-            progress[stageId] = {
-                stars: stars,
-                bestScore: score,
-                clearedAt: new Date().toISOString()
-            };
-        }
-        
-        // 저장
+        const existing = progress[stageId] || {};
+
+        progress[stageId] = {
+            // 별점·점수는 최고 기록 유지
+            stars: Math.max(stars, existing.stars || 0),
+            bestScore: Math.max(score, existing.bestScore || 0),
+            clearedAt: existing.clearedAt || new Date().toISOString(),
+            // 정확도·플레이횟수는 항상 최신값으로 갱신
+            lastAccuracy: (accuracy !== undefined && accuracy !== null) ? accuracy : (existing.lastAccuracy ?? null),
+            playCount: (existing.playCount || 0) + 1
+        };
+
         return this._set(CONFIG.STORAGE_KEYS.PROGRESS, progress);
     },
     

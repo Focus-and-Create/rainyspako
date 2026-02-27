@@ -130,6 +130,19 @@ const Game = {
      * @param {Array|null} customPool - 커스텀 단어 풀 (복습 모드용)
      */
     startStage: function(worldId, stageNum, mode = 'es-to-ko', customPool = null) {
+        // 적응형 속도 계수: 최근 정확도가 낮으면 느리게 시작
+        let speedModifier = 1.0;
+        if (!customPool) {
+            const prevResult = Storage.getStageResult(getStageId(worldId, stageNum));
+            if (prevResult && prevResult.lastAccuracy !== null && prevResult.lastAccuracy !== undefined) {
+                const acc = prevResult.lastAccuracy;
+                if (acc < 60)      speedModifier = 0.50;
+                else if (acc < 75) speedModifier = 0.65;
+                else if (acc < 85) speedModifier = 0.80;
+                // acc >= 85: 1.0 (정상 속도)
+            }
+        }
+
         // 상태 초기화
         const worldConfig = getWorldConfig(worldId);
         this.state = {
@@ -150,7 +163,8 @@ const Game = {
             startTime: performance.now(),
             elapsedTime: 0,
             lastSpawnTime: 0,
-            currentSpeed: worldConfig ? worldConfig.baseSpeed : 0.4
+            currentSpeed: worldConfig ? worldConfig.baseSpeed : 0.4,
+            speedModifier: speedModifier
         };
 
         // 게임 오브젝트 초기화
@@ -288,12 +302,12 @@ const Game = {
         // 스테이지 진행률 계산 (0~1)
         const progressRatio = this.state.correctCount / this.state.targetWords;
         
-        // 속도 업데이트 (진행에 따라 증가)
+        // 속도 업데이트 (진행에 따라 증가, 적응형 계수 적용)
         this.state.currentSpeed = calculateSpeed(
             this.state.worldId,
             this.state.stageNum,
             progressRatio
-        );
+        ) * (this.state.speedModifier || 1.0);
         
         // 새 단어 생성 체크
         this.trySpawnWord(now);
@@ -725,7 +739,7 @@ const Game = {
         // 결과 저장 (리뷰 모드가 아닐 때만 스테이지 결과 저장)
         if (!this.state.isReviewMode) {
             const stageId = getStageId(this.state.worldId, this.state.stageNum);
-            Storage.saveStageResult(stageId, stars, this.state.score);
+            Storage.saveStageResult(stageId, stars, this.state.score, this.calculateAccuracy());
         }
 
         // 통계 업데이트 (항상)

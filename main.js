@@ -63,7 +63,10 @@ const App = {
         // 로그인 화면
         usernameInput: null,
         loginBtn: null,
-        loginBackBtn: null
+        loginBackBtn: null,
+
+        // 적응형 속도 배지
+        slowModeBadge: null
     },
 
     /** @type {boolean} 로그인 화면이 닉네임 변경 모드인지 여부 */
@@ -172,6 +175,9 @@ const App = {
         this.elements.usernameInput = document.getElementById('username-input');
         this.elements.loginBtn = document.getElementById('login-btn');
         this.elements.loginBackBtn = document.getElementById('login-back-btn');
+
+        // 적응형 속도 배지
+        this.elements.slowModeBadge = document.getElementById('slow-mode-badge');
     },
     
     /**
@@ -750,9 +756,24 @@ const App = {
         }
         
         // 입력 필드 동기화
-        if (this.elements.inputField && 
+        if (this.elements.inputField &&
             document.activeElement !== this.elements.inputField) {
             this.elements.inputField.value = state.currentInput;
+        }
+
+        // 적응형 속도 배지
+        if (this.elements.slowModeBadge) {
+            const mod = state.speedModifier || 1.0;
+            if (mod < 1.0) {
+                let label;
+                if (mod <= 0.5)      label = '🐢 연습 모드 ×0.5 — 천천히 익혀봐요!';
+                else if (mod <= 0.65) label = '🐢 연습 모드 ×0.65 — 조금 더 연습!';
+                else                  label = '🐢 연습 모드 ×0.8 — 거의 다 왔어요!';
+                this.elements.slowModeBadge.textContent = label;
+                this.elements.slowModeBadge.classList.remove('hidden');
+            } else {
+                this.elements.slowModeBadge.classList.add('hidden');
+            }
         }
     },
     

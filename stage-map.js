@@ -505,6 +505,25 @@ const StageMap = {
                 textColor = '#1a1a2e';
             }
 
+            // 적응형: 클리어한 스테이지에 정확도 기반 테두리 색 적용
+            let perfOverlay = null;  // rgba 오버레이 색
+            let perfDot = null;      // 구석 도트 색
+            if (isCleared && result.lastAccuracy !== null && result.lastAccuracy !== undefined && !isCurrent) {
+                const acc = result.lastAccuracy;
+                if (acc < 65) {
+                    borderColor = '#f44336';
+                    perfOverlay = 'rgba(244, 67, 54, 0.18)';
+                    perfDot = '#f44336';
+                } else if (acc < 80) {
+                    borderColor = '#ff9800';
+                    perfOverlay = 'rgba(255, 152, 0, 0.13)';
+                    perfDot = '#ff9800';
+                } else if (acc >= 90) {
+                    borderColor = '#43a047';
+                    perfDot = '#43a047';
+                }
+            }
+
             ctx.save();
 
             // 호버 확대
@@ -541,6 +560,13 @@ const StageMap = {
             ctx.shadowColor = 'transparent';
             ctx.shadowBlur = 0;
             ctx.shadowOffsetY = 0;
+
+            // 정확도 오버레이 (반투명 틴트)
+            if (perfOverlay) {
+                this._roundRect(ctx, tx, ty, tw, th, radius);
+                ctx.fillStyle = perfOverlay;
+                ctx.fill();
+            }
 
             // 테두리
             this._roundRect(ctx, tx, ty, tw, th, radius);
@@ -613,6 +639,14 @@ const StageMap = {
             // 보스 배지
             if (isBoss && isUnlocked) {
                 this._renderSmallBadge(ctx, tx + 5, ty + 5, 'B', '#fbbf24', '#f59e0b');
+            }
+
+            // 정확도 도트 (오른쪽 상단 구석)
+            if (perfDot && !isBoss) {
+                ctx.beginPath();
+                ctx.arc(tx + tw - 6 * sc, ty + 6 * sc, 4 * sc, 0, Math.PI * 2);
+                ctx.fillStyle = perfDot;
+                ctx.fill();
             }
 
             ctx.restore();
