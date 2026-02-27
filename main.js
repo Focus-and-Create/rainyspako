@@ -135,6 +135,7 @@ const App = {
         this.elements.progressBar = document.getElementById('progress-bar');
         this.elements.inputField = document.getElementById('input-field');
         this.elements.pauseBtn = document.getElementById('pause-btn');
+        this.elements.exitGameBtn = document.getElementById('exit-game-btn');
         
         // 결과 화면
         this.elements.resultStars = document.getElementById('result-stars');
@@ -214,6 +215,14 @@ const App = {
             });
         }
         
+        // 게임 종료 (맵으로 돌아가기) 버튼
+        if (this.elements.exitGameBtn) {
+            this.elements.exitGameBtn.addEventListener('click', () => {
+                Game.stop();
+                this.showScreen('map');
+            });
+        }
+
         // 일시정지 버튼
         if (this.elements.pauseBtn) {
             this.elements.pauseBtn.addEventListener('click', () => {

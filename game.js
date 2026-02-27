@@ -545,6 +545,32 @@ const Game = {
     },
 
     /**
+     * 한국어 숫자 단어 ↔ 아라비아 숫자 매핑
+     * (한자어 수사 + 고유어 수사 둘 다 지원)
+     */
+    KOREAN_NUMBERS: {
+        // 한자어 (sino-Korean)
+        '일': '1', '이': '2', '삼': '3', '사': '4', '오': '5',
+        '육': '6', '칠': '7', '팔': '8', '구': '9', '십': '10',
+        '십일': '11', '십이': '12', '십삼': '13', '십사': '14', '십오': '15',
+        '십육': '16', '십칠': '17', '십팔': '18', '십구': '19',
+        '이십': '20', '이십일': '21', '이십이': '22', '이십삼': '23',
+        '이십사': '24', '이십오': '25', '이십육': '26', '이십칠': '27',
+        '이십팔': '28', '이십구': '29',
+        '삼십': '30', '사십': '40', '오십': '50',
+        '육십': '60', '칠십': '70', '팔십': '80', '구십': '90',
+        '백': '100', '이백': '200', '삼백': '300', '사백': '400',
+        '오백': '500', '육백': '600', '칠백': '700', '팔백': '800', '구백': '900',
+        '천': '1000',
+        // 고유어 (native Korean 1~20)
+        '하나': '1', '둘': '2', '셋': '3', '넷': '4', '다섯': '5',
+        '여섯': '6', '일곱': '7', '여덟': '8', '아홉': '9', '열': '10',
+        '열하나': '11', '열둘': '12', '열셋': '13', '열넷': '14', '열다섯': '15',
+        '열여섯': '16', '열일곱': '17', '열여덟': '18', '열아홉': '19',
+        '스물': '20', '스물하나': '21', '스물둘': '22',
+    },
+
+    /**
      * 두 답안이 동일한지 비교 (정규화 + 숫자 변환 적용)
      * @param {string} answer - 정답
      * @param {string} input - 사용자 입력
@@ -557,14 +583,18 @@ const Game = {
         // 정규화 후 일치
         if (normAnswer === normInput) return true;
 
-        // 스페인어 숫자 단어 → 아라비아 숫자 비교
-        // 예: answer="dieciocho", input="18"
-        const answerAsDigit = this.SPANISH_NUMBERS[normAnswer];
-        if (answerAsDigit !== undefined && answerAsDigit === normInput) return true;
+        // 스페인어 숫자 단어 ↔ 아라비아 숫자
+        const answerAsDigitEs = this.SPANISH_NUMBERS[normAnswer];
+        if (answerAsDigitEs !== undefined && answerAsDigitEs === normInput) return true;
+        const inputAsDigitEs = this.SPANISH_NUMBERS[normInput];
+        if (inputAsDigitEs !== undefined && inputAsDigitEs === normAnswer) return true;
 
-        // 반대 방향: answer="18", input="dieciocho"
-        const inputAsDigit = this.SPANISH_NUMBERS[normInput];
-        if (inputAsDigit !== undefined && inputAsDigit === normAnswer) return true;
+        // 한국어 숫자 단어 ↔ 아라비아 숫자
+        // 예: answer="십팔", input="18"  또는  answer="열여덟", input="18"
+        const answerAsDigitKo = this.KOREAN_NUMBERS[normAnswer];
+        if (answerAsDigitKo !== undefined && answerAsDigitKo === normInput) return true;
+        const inputAsDigitKo = this.KOREAN_NUMBERS[normInput];
+        if (inputAsDigitKo !== undefined && inputAsDigitKo === normAnswer) return true;
 
         return false;
     },
