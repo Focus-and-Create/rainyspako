@@ -378,6 +378,26 @@ const Storage = {
     },
 
     // =========================================
+    // 프로필 관리
+    // =========================================
+
+    /**
+     * 프로필 데이터 가져오기
+     * @returns {{username: string}|null}
+     */
+    getProfile: function() {
+        return this._get(CONFIG.STORAGE_KEYS.PROFILE);
+    },
+
+    /**
+     * 프로필 데이터 저장
+     * @param {{username: string}} profile
+     */
+    saveProfile: function(profile) {
+        this._set(CONFIG.STORAGE_KEYS.PROFILE, profile);
+    },
+
+    // =========================================
     // 데이터 초기화
     // =========================================
     
@@ -390,6 +410,7 @@ const Storage = {
         localStorage.removeItem(CONFIG.STORAGE_KEYS.WRONG_WORDS);
         localStorage.removeItem(CONFIG.STORAGE_KEYS.STATS);
         localStorage.removeItem(CONFIG.STORAGE_KEYS.SETTINGS);
+        localStorage.removeItem(CONFIG.STORAGE_KEYS.PROFILE);
         
         // 재초기화
         this.init();

@@ -11,7 +11,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&display=swap" rel="stylesheet">
     
     <!-- 스타일시트 -->
-    <link rel="stylesheet" href="style.css?v=9">
+    <link rel="stylesheet" href="style.css?v=10">
 </head>
 <body>
     <!-- ========================================= -->
@@ -23,6 +23,32 @@
             <p class="loading-text">Loading...</p>
             <div class="loading-bar">
                 <div class="loading-progress"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ========================================= -->
+    <!-- 로그인 / 프로필 화면 -->
+    <!-- ========================================= -->
+    <div id="login-screen" class="screen hidden">
+        <div class="login-content">
+            <div class="login-logo">☔</div>
+            <h1 class="login-title">Spanish Rain</h1>
+            <p class="login-subtitle" id="login-subtitle">스페인어 단어 비를 피해라!</p>
+            <div class="login-form">
+                <label class="login-label" for="username-input">닉네임</label>
+                <input
+                    type="text"
+                    id="username-input"
+                    class="login-input"
+                    placeholder="예: SpanishMaster"
+                    maxlength="20"
+                    autocomplete="off"
+                    autocapitalize="off"
+                    spellcheck="false"
+                >
+                <button id="login-btn" class="btn btn-primary btn-large">시작하기</button>
+                <button id="login-back-btn" class="btn btn-secondary login-back-btn hidden">← 돌아가기</button>
             </div>
         </div>
     </div>
@@ -196,11 +222,12 @@
                 <div class="stats-brand">
                     <div class="stats-brand-icon">☔</div>
                     <div>
-                        <h3 class="modal-title">Spanish Rain</h3>
+                        <h3 class="modal-title" id="stats-username-display">Spanish Rain</h3>
                         <p class="stats-kicker">Performance Hub</p>
                     </div>
                 </div>
                 <div class="stats-header-actions">
+                    <button id="stats-change-name-btn" class="stats-icon-btn" aria-label="닉네임 변경" title="닉네임 변경">✏</button>
                     <button id="stats-share-btn" class="stats-icon-btn" aria-label="공유">↗</button>
                     <button id="close-stats-btn" class="stats-icon-btn" aria-label="닫기">✕</button>
                 </div>
@@ -209,7 +236,7 @@
             <section class="stats-hero">
                 <div>
                     <p class="stats-hero-title">Your Progress</p>
-                    <p class="stats-hero-subtitle">Great job today, keep the streak alive!</p>
+                    <p class="stats-hero-subtitle" id="stats-greeting">Great job today, keep the streak alive!</p>
                 </div>
                 <button id="stats-resume-btn" class="btn btn-primary">Resume Game</button>
             </section>
@@ -256,11 +283,11 @@
     <!-- ========================================= -->
     <!-- 스크립트 로드 (순서 중요) -->
     <!-- ========================================= -->
-    <script src="config.js?v=9"></script>
-    <script src="storage.js?v=9"></script>
-    <script src="word-manager.js?v=9"></script>
-    <script src="game.js?v=9"></script>
-    <script src="stage-map.js?v=9"></script>
-    <script src="main.js?v=9"></script>
+    <script src="config.js?v=10"></script>
+    <script src="storage.js?v=10"></script>
+    <script src="word-manager.js?v=10"></script>
+    <script src="game.js?v=10"></script>
+    <script src="stage-map.js?v=10"></script>
+    <script src="main.js?v=10"></script>
 </body>
 </html>

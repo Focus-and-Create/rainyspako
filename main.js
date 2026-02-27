@@ -28,6 +28,7 @@ const App = {
     elements: {
         // 화면 컨테이너
         loadingScreen: null,
+        loginScreen: null,
         mapScreen: null,
         gameScreen: null,
         resultScreen: null,
@@ -57,8 +58,16 @@ const App = {
         stageModal: null,
         modeSelect: null,
         startBtn: null,
-        closeModalBtn: null
+        closeModalBtn: null,
+
+        // 로그인 화면
+        usernameInput: null,
+        loginBtn: null,
+        loginBackBtn: null
     },
+
+    /** @type {boolean} 로그인 화면이 닉네임 변경 모드인지 여부 */
+    _loginIsEditing: false,
 
     // =========================================
     // 초기화
@@ -108,9 +117,14 @@ const App = {
         Game.onGameOver = (result) => this.showResult(result, false);
         Game.onStateUpdate = (state) => this.updateGameUI(state);
         
-        // 맵 화면으로 전환
-        this.showScreen('map');
-        
+        // 프로필 확인 → 없으면 로그인 화면, 있으면 맵으로
+        const profile = Storage.getProfile();
+        if (!profile || !profile.username) {
+            this.showScreen('login');
+        } else {
+            this.showScreen('map');
+        }
+
         console.log('App: 초기화 완료');
     },
     
@@ -120,6 +134,7 @@ const App = {
     cacheElements: function() {
         // 화면 컨테이너
         this.elements.loadingScreen = document.getElementById('loading-screen');
+        this.elements.loginScreen = document.getElementById('login-screen');
         this.elements.mapScreen = document.getElementById('map-screen');
         this.elements.gameScreen = document.getElementById('game-screen');
         this.elements.resultScreen = document.getElementById('result-screen');
@@ -152,12 +167,41 @@ const App = {
         this.elements.startBtn = document.getElementById('start-btn');
         this.elements.closeModalBtn = document.getElementById('close-modal-btn');
         this.elements.modalTitle = document.getElementById('modal-title');
+
+        // 로그인 화면
+        this.elements.usernameInput = document.getElementById('username-input');
+        this.elements.loginBtn = document.getElementById('login-btn');
+        this.elements.loginBackBtn = document.getElementById('login-back-btn');
     },
     
     /**
      * 이벤트 리스너 바인딩
      */
     bindEvents: function() {
+        // 로그인 버튼
+        if (this.elements.loginBtn) {
+            this.elements.loginBtn.addEventListener('click', () => {
+                this.handleLoginSubmit();
+            });
+        }
+
+        // 로그인 입력 필드 - 엔터로 제출
+        if (this.elements.usernameInput) {
+            this.elements.usernameInput.addEventListener('keydown', (e) => {
+                if (e.key === 'Enter') {
+                    e.preventDefault();
+                    this.handleLoginSubmit();
+                }
+            });
+        }
+
+        // 로그인 화면 돌아가기 버튼
+        if (this.elements.loginBackBtn) {
+            this.elements.loginBackBtn.addEventListener('click', () => {
+                this.showScreen('map');
+            });
+        }
+
         // 키보드 입력 (게임용)
         document.addEventListener('keydown', (e) => {
             if (this.currentScreen === 'game') {
@@ -304,6 +348,14 @@ const App = {
                 await this.shareStatsSummary();
             });
         }
+
+        const statsChangeNameBtn = document.getElementById('stats-change-name-btn');
+        if (statsChangeNameBtn) {
+            statsChangeNameBtn.addEventListener('click', () => {
+                this.hideStatsModal();
+                this.openLoginForEdit();
+            });
+        }
     },
 
     // =========================================
@@ -317,16 +369,30 @@ const App = {
     showScreen: function(screen) {
         // 모든 화면 숨기기
         this.elements.loadingScreen?.classList.add('hidden');
+        this.elements.loginScreen?.classList.add('hidden');
         this.elements.mapScreen?.classList.add('hidden');
         this.elements.gameScreen?.classList.add('hidden');
         this.elements.resultScreen?.classList.add('hidden');
-        
+
         // 해당 화면 표시
         switch (screen) {
             case 'loading':
                 this.elements.loadingScreen?.classList.remove('hidden');
                 break;
-                
+
+            case 'login':
+                this.elements.loginScreen?.classList.remove('hidden');
+                if (!this._loginIsEditing) {
+                    // 기본 상태로 초기화
+                    const subtitle = document.getElementById('login-subtitle');
+                    if (subtitle) subtitle.textContent = '스페인어 단어 비를 피해라!';
+                    const btn = this.elements.loginBtn;
+                    if (btn) btn.textContent = '시작하기';
+                    this.elements.loginBackBtn?.classList.add('hidden');
+                }
+                setTimeout(() => this.elements.usernameInput?.focus(), 80);
+                break;
+
             case 'map':
                 this.elements.mapScreen?.classList.remove('hidden');
                 // 맵 렌더링
@@ -348,6 +414,48 @@ const App = {
         this.currentScreen = screen;
         
         console.log(`App: 화면 전환 -> ${screen}`);
+    },
+
+    // =========================================
+    // 로그인 / 프로필
+    // =========================================
+
+    /**
+     * 로그인 폼 제출 처리
+     */
+    handleLoginSubmit: function() {
+        const input = this.elements.usernameInput;
+        const raw = input ? input.value.trim() : '';
+        const username = raw || 'Player';
+
+        Storage.saveProfile({ username });
+
+        // 돌아가기 버튼 숨기기
+        this.elements.loginBackBtn?.classList.add('hidden');
+        this._loginIsEditing = false;
+
+        this.showScreen('map');
+    },
+
+    /**
+     * 닉네임 변경 모드로 로그인 화면 열기
+     */
+    openLoginForEdit: function() {
+        this._loginIsEditing = true;
+
+        const subtitle = document.getElementById('login-subtitle');
+        const btn = this.elements.loginBtn;
+        const input = this.elements.usernameInput;
+
+        if (subtitle) subtitle.textContent = '닉네임을 변경합니다';
+        if (btn) btn.textContent = '변경하기';
+
+        const profile = Storage.getProfile();
+        if (input) input.value = profile ? (profile.username || '') : '';
+
+        this.elements.loginBackBtn?.classList.remove('hidden');
+
+        this.showScreen('login');
     },
 
     // =========================================
@@ -656,6 +764,14 @@ const App = {
      * 통계 모달 표시
      */
     showStatsModal: function() {
+        // 닉네임 표시
+        const profile = Storage.getProfile();
+        const username = profile ? (profile.username || 'Player') : 'Player';
+        const usernameDisplay = document.getElementById('stats-username-display');
+        if (usernameDisplay) usernameDisplay.textContent = username;
+        const greeting = document.getElementById('stats-greeting');
+        if (greeting) greeting.textContent = `${username}님, 오늘도 화이팅!`;
+
         const stats = Storage.getStats();
 
         const totalGames = stats.totalGames || 0;

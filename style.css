@@ -1099,3 +1099,83 @@ a {
     outline: 2px solid var(--color-accent);
     outline-offset: 2px;
 }
+
+/* ========================================= */
+/* 로그인 / 프로필 화면 */
+/* ========================================= */
+.login-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    gap: 12px;
+    padding: var(--spacing-xl);
+}
+
+.login-logo {
+    font-size: 72px;
+    line-height: 1;
+    filter: drop-shadow(0 4px 14px rgba(233, 30, 140, 0.35));
+    animation: loginBounce 2.4s ease-in-out infinite;
+}
+
+@keyframes loginBounce {
+    0%, 100% { transform: translateY(0) rotate(-5deg); }
+    50% { transform: translateY(-14px) rotate(5deg); }
+}
+
+.login-title {
+    font-size: 2.6rem;
+    font-weight: 700;
+    color: var(--color-text-primary);
+    letter-spacing: -0.02em;
+}
+
+.login-subtitle {
+    font-size: 1rem;
+    color: var(--color-text-secondary);
+    margin-bottom: 8px;
+}
+
+.login-form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    width: 100%;
+    max-width: 320px;
+}
+
+.login-label {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--color-text-secondary);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.login-input {
+    width: 100%;
+    padding: 13px 16px;
+    border: 2px solid rgba(160, 140, 200, 0.35);
+    border-radius: var(--radius-md);
+    background: rgba(255, 255, 255, 0.92);
+    color: var(--color-text-primary);
+    font-size: 1.05rem;
+    font-family: var(--font-family);
+    outline: none;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.login-input:focus {
+    border-color: var(--color-accent);
+    box-shadow: 0 0 0 3px var(--color-accent-glow);
+}
+
+.login-input::placeholder {
+    color: var(--color-text-muted);
+}
+
+.login-back-btn {
+    font-size: 0.9rem;
+}
