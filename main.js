@@ -90,6 +90,7 @@ const App = {
         
         // 스토리지 초기화
         Storage.init();
+        this.applyModeSetting(Storage.getSetting('mode') || 'es-to-ko');
         
         // 단어 데이터 로드
         const loaded = await WordManager.loadAll();
@@ -178,6 +179,7 @@ const App = {
 
         // 적응형 속도 배지
         this.elements.slowModeBadge = document.getElementById('slow-mode-badge');
+        this.elements.statsModeSelect = document.getElementById('stats-mode-select');
     },
     
     /**
@@ -315,7 +317,13 @@ const App = {
         // 모드 선택
         if (this.elements.modeSelect) {
             this.elements.modeSelect.addEventListener('change', (e) => {
-                this.currentMode = e.target.value;
+                this.applyModeSetting(e.target.value);
+            });
+        }
+
+        if (this.elements.statsModeSelect) {
+            this.elements.statsModeSelect.addEventListener('change', (e) => {
+                this.applyModeSetting(e.target.value);
             });
         }
 
@@ -362,6 +370,21 @@ const App = {
                 this.openLoginForEdit();
             });
         }
+    },
+
+    /**
+     * 학습 모드 설정 적용 및 저장
+     * @param {string} mode
+     */
+    applyModeSetting: function(mode) {
+        const allowed = ['es-to-ko', 'ko-to-es', 'es-to-en', 'en-to-es'];
+        const nextMode = allowed.includes(mode) ? mode : 'es-to-ko';
+
+        this.currentMode = nextMode;
+        Storage.setSetting('mode', nextMode);
+
+        if (this.elements.modeSelect) this.elements.modeSelect.value = nextMode;
+        if (this.elements.statsModeSelect) this.elements.statsModeSelect.value = nextMode;
     },
 
     // =========================================
@@ -509,6 +532,11 @@ const App = {
             }
         }
         
+        // 현재 학습 모드 반영
+        if (this.elements.modeSelect) {
+            this.elements.modeSelect.value = this.currentMode;
+        }
+
         // 모달 표시
         this.elements.stageModal?.classList.remove('hidden');
     },
@@ -845,6 +873,10 @@ const App = {
                 bar.style.height = `${wave}%`;
                 bar.style.opacity = i === bars.length - 1 ? '1' : '0.72';
             });
+        }
+
+        if (this.elements.statsModeSelect) {
+            this.elements.statsModeSelect.value = this.currentMode;
         }
 
         // 모달 표시

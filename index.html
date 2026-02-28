@@ -66,7 +66,7 @@
             </div>
         </div>
         
-        <div class="canvas-container">
+        <div class="canvas-container map-canvas-container">
             <canvas id="map-canvas"></canvas>
         </div>
     </div>
@@ -244,6 +244,16 @@
                     <p class="stats-hero-subtitle" id="stats-greeting">Great job today, keep the streak alive!</p>
                 </div>
                 <button id="stats-resume-btn" class="btn btn-primary">Resume Game</button>
+            </section>
+
+            <section class="stats-mode-section">
+                <label for="stats-mode-select" class="mode-label">Study Language Pair</label>
+                <select id="stats-mode-select" class="mode-select">
+                    <option value="es-to-ko">Spanish → Korean</option>
+                    <option value="ko-to-es">Korean → Spanish</option>
+                    <option value="es-to-en">Spanish → English</option>
+                    <option value="en-to-es">English → Spanish</option>
+                </select>
             </section>
 
             <section class="stats-grid dashboard-grid">
