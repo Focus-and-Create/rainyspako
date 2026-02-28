@@ -926,8 +926,10 @@ a {
 .stats-dashboard {
     max-width: 920px;
     width: min(92vw, 920px);
+    max-height: 90vh;
     padding: 0;
-    overflow: hidden;
+    overflow-y: auto;
+    align-items: stretch;
     border: 1px solid rgba(244, 140, 37, 0.2);
     background: linear-gradient(180deg, #fff7ee 0%, #f8fafc 100%);
 }
@@ -938,6 +940,8 @@ a {
     align-items: center;
     padding: 18px 24px;
     border-bottom: 1px solid rgba(148, 163, 184, 0.2);
+    width: 100%;
+    box-sizing: border-box;
 }
 
 .stats-brand { display:flex; align-items:center; gap:12px; }
@@ -946,7 +950,7 @@ a {
 .stats-header-actions { display:flex; gap:8px; }
 .stats-icon-btn { width:34px; height:34px; border:none; border-radius:999px; background:#e2e8f0; color:#475569; cursor:pointer; font-weight:700; }
 
-.stats-hero { display:flex; justify-content:space-between; align-items:flex-end; gap:12px; padding:20px 24px; background:rgba(244,140,37,0.1); }
+.stats-hero { display:flex; justify-content:space-between; align-items:flex-end; gap:12px; padding:20px 24px; background:rgba(244,140,37,0.1); width:100%; box-sizing:border-box; }
 .stats-hero-title { font-size:34px; font-weight:900; color:#0f172a; }
 .stats-hero-subtitle { color:#64748b; }
 
@@ -954,6 +958,8 @@ a {
     grid-template-columns: repeat(5, minmax(0,1fr));
     gap: 10px;
     padding: 18px 24px;
+    width: 100%;
+    box-sizing: border-box;
 }
 
 .stats-item {
@@ -969,14 +975,14 @@ a {
 .stats-item-accent { background:linear-gradient(135deg,#f48c25,#fb923c); }
 .stats-item-accent .stats-item-label, .stats-item-accent .stats-item-value { color:#fff; }
 
-.dashboard-progress { padding: 0 24px 18px; }
+.dashboard-progress { padding: 0 24px 18px; width: 100%; box-sizing: border-box; }
 .stats-progress-head { display:flex; justify-content:space-between; align-items:center; margin-bottom:8px; }
 .stats-progress-chip { background:rgba(244,140,37,0.13); color:#b45309; padding:6px 10px; border-radius:999px; font-size:12px; font-weight:700; }
 .stats-progress-track { height:16px; background:#dbeafe; border-radius:999px; overflow:hidden; }
 .stats-progress-fill { background:linear-gradient(90deg,#f59e0b,#f97316); }
 .stats-progress-label { margin-top:7px; display:flex; justify-content:space-between; font-size:10px; color:#94a3b8; text-transform:uppercase; letter-spacing:.8px; }
 
-.stats-footer-grid { display:grid; grid-template-columns:1fr 1fr; gap:14px; padding: 0 24px 24px; }
+.stats-footer-grid { display:grid; grid-template-columns:1fr 1fr; gap:14px; padding: 0 24px 24px; width:100%; box-sizing:border-box; }
 .stats-week-bars { height:90px; background:#fff; border:1px solid #e2e8f0; border-radius:12px; display:flex; align-items:flex-end; gap:7px; padding:10px; }
 .stats-week-bars .bar { flex:1; border-radius:8px 8px 2px 2px; background:rgba(244,140,37,.25); min-height:16%; }
 .stats-week-labels { margin-top:6px; display:flex; justify-content:space-between; font-size:10px; color:#94a3b8; font-weight:700; }
