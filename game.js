@@ -566,6 +566,23 @@ const Game = {
         'mil': '1000'
     },
 
+
+    /**
+     * 영어 숫자 단어 ↔ 아라비아 숫자 매핑
+     */
+    ENGLISH_NUMBERS: {
+        'zero': '0',
+        'one': '1', 'two': '2', 'three': '3', 'four': '4', 'five': '5',
+        'six': '6', 'seven': '7', 'eight': '8', 'nine': '9',
+        'ten': '10', 'eleven': '11', 'twelve': '12', 'thirteen': '13',
+        'fourteen': '14', 'fifteen': '15', 'sixteen': '16',
+        'seventeen': '17', 'eighteen': '18', 'nineteen': '19',
+        'twenty': '20', 'thirty': '30', 'forty': '40', 'fifty': '50',
+        'sixty': '60', 'seventy': '70', 'eighty': '80', 'ninety': '90',
+        'one hundred': '100', 'a hundred': '100',
+        'one thousand': '1000', 'a thousand': '1000'
+    },
+
     /**
      * 답안 정규화 (구두점 제거, 공백 정리, 소문자 변환)
      * @param {string} text
@@ -630,6 +647,13 @@ const Game = {
         if (answerAsDigitKo !== undefined && answerAsDigitKo === normInput) return true;
         const inputAsDigitKo = this.KOREAN_NUMBERS[normInput];
         if (inputAsDigitKo !== undefined && inputAsDigitKo === normAnswer) return true;
+
+        // 영어 숫자 단어 ↔ 아라비아 숫자
+        // 예: answer="twelve", input="12"
+        const answerAsDigitEn = this.ENGLISH_NUMBERS[normAnswer];
+        if (answerAsDigitEn !== undefined && answerAsDigitEn === normInput) return true;
+        const inputAsDigitEn = this.ENGLISH_NUMBERS[normInput];
+        if (inputAsDigitEn !== undefined && inputAsDigitEn === normAnswer) return true;
 
         return false;
     },
