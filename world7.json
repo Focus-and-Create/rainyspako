@@ -10,43 +10,53 @@
       "words": [
         {
           "es": "trabajo",
-          "ko": "일"
+          "ko": "일",
+          "en": "work"
         },
         {
           "es": "empleo",
-          "ko": "직장"
+          "ko": "직장",
+          "en": "employment"
         },
         {
           "es": "oficina",
-          "ko": "사무실"
+          "ko": "사무실",
+          "en": "office"
         },
         {
           "es": "jefe",
-          "ko": "상사"
+          "ko": "상사",
+          "en": "boss"
         },
         {
           "es": "empleado",
-          "ko": "직원"
+          "ko": "직원",
+          "en": "employee"
         },
         {
           "es": "salario",
-          "ko": "급여"
+          "ko": "급여",
+          "en": "salary"
         },
         {
           "es": "horario",
-          "ko": "근무 시간"
+          "ko": "근무 시간",
+          "en": "schedule"
         },
         {
           "es": "contrato",
-          "ko": "계약"
+          "ko": "계약",
+          "en": "contract"
         },
         {
           "es": "empresa",
-          "ko": "회사"
+          "ko": "회사",
+          "en": "company"
         },
         {
           "es": "compañero",
-          "ko": "동료"
+          "ko": "동료",
+          "en": "colleague"
         }
       ]
     },
@@ -57,43 +67,53 @@
       "words": [
         {
           "es": "tarea",
-          "ko": "업무"
+          "ko": "업무",
+          "en": "task"
         },
         {
           "es": "proyecto",
-          "ko": "프로젝트"
+          "ko": "프로젝트",
+          "en": "project"
         },
         {
           "es": "vacaciones",
-          "ko": "휴가"
+          "ko": "휴가",
+          "en": "vacation"
         },
         {
           "es": "experiencia",
-          "ko": "경험"
+          "ko": "경험",
+          "en": "experience"
         },
         {
           "es": "responsabilidad",
-          "ko": "책임"
+          "ko": "책임",
+          "en": "responsibility"
         },
         {
           "es": "escritorio",
-          "ko": "책상"
+          "ko": "책상",
+          "en": "desk"
         },
         {
           "es": "silla",
-          "ko": "의자"
+          "ko": "의자",
+          "en": "chair"
         },
         {
           "es": "reunión",
-          "ko": "회의"
+          "ko": "회의",
+          "en": "meeting"
         },
         {
           "es": "departamento",
-          "ko": "부서"
+          "ko": "부서",
+          "en": "department"
         },
         {
           "es": "recepción",
-          "ko": "접수처"
+          "ko": "접수처",
+          "en": "reception"
         }
       ]
     },
@@ -104,43 +124,53 @@
       "words": [
         {
           "es": "ascensor",
-          "ko": "엘리베이터"
+          "ko": "엘리베이터",
+          "en": "elevator"
         },
         {
           "es": "pasillo",
-          "ko": "복도"
+          "ko": "복도",
+          "en": "hallway"
         },
         {
           "es": "sala de conferencias",
-          "ko": "회의실"
+          "ko": "회의실",
+          "en": "conference room"
         },
         {
           "es": "almacén",
-          "ko": "창고"
+          "ko": "창고",
+          "en": "warehouse"
         },
         {
           "es": "cafetería",
-          "ko": "구내식당"
+          "ko": "구내식당",
+          "en": "cafeteria"
         },
         {
           "es": "parking",
-          "ko": "주차장"
+          "ko": "주차장",
+          "en": "parking"
         },
         {
           "es": "seguridad",
-          "ko": "보안"
+          "ko": "보안",
+          "en": "security"
         },
         {
           "es": "entrada",
-          "ko": "입구"
+          "ko": "입구",
+          "en": "entrance"
         },
         {
           "es": "salida",
-          "ko": "출구"
+          "ko": "출구",
+          "en": "exit"
         },
         {
           "es": "planta",
-          "ko": "층"
+          "ko": "층",
+          "en": "floor"
         }
       ]
     },
@@ -151,43 +181,53 @@
       "words": [
         {
           "es": "bolígrafo",
-          "ko": "볼펜"
+          "ko": "볼펜",
+          "en": "pen"
         },
         {
           "es": "papel",
-          "ko": "종이"
+          "ko": "종이",
+          "en": "paper"
         },
         {
           "es": "carpeta",
-          "ko": "폴더"
+          "ko": "폴더",
+          "en": "folder"
         },
         {
           "es": "grapadora",
-          "ko": "스테이플러"
+          "ko": "스테이플러",
+          "en": "stapler"
         },
         {
           "es": "tijeras",
-          "ko": "가위"
+          "ko": "가위",
+          "en": "scissors"
         },
         {
           "es": "cinta adhesiva",
-          "ko": "테이프"
+          "ko": "테이프",
+          "en": "tape"
         },
         {
           "es": "sobre",
-          "ko": "봉투"
+          "ko": "봉투",
+          "en": "envelope"
         },
         {
           "es": "sello",
-          "ko": "도장"
+          "ko": "도장",
+          "en": "stamp"
         },
         {
           "es": "calendario",
-          "ko": "달력"
+          "ko": "달력",
+          "en": "calendar"
         },
         {
           "es": "pizarra",
-          "ko": "화이트보드"
+          "ko": "화이트보드",
+          "en": "whiteboard"
         }
       ]
     },
@@ -198,43 +238,53 @@
       "words": [
         {
           "es": "rotulador",
-          "ko": "마커"
+          "ko": "마커",
+          "en": "marker"
         },
         {
           "es": "lápiz",
-          "ko": "연필"
+          "ko": "연필",
+          "en": "pencil"
         },
         {
           "es": "cuaderno",
-          "ko": "공책"
+          "ko": "공책",
+          "en": "notebook"
         },
         {
           "es": "impresora",
-          "ko": "프린터"
+          "ko": "프린터",
+          "en": "printer"
         },
         {
           "es": "fotocopiadora",
-          "ko": "복사기"
+          "ko": "복사기",
+          "en": "copier"
         },
         {
           "es": "computadora",
-          "ko": "컴퓨터"
+          "ko": "컴퓨터",
+          "en": "computer"
         },
         {
           "es": "teclado",
-          "ko": "키보드"
+          "ko": "키보드",
+          "en": "keyboard"
         },
         {
           "es": "ratón",
-          "ko": "마우스"
+          "ko": "마우스",
+          "en": "mouse"
         },
         {
           "es": "pantalla",
-          "ko": "화면"
+          "ko": "화면",
+          "en": "screen"
         },
         {
           "es": "correo electrónico",
-          "ko": "이메일"
+          "ko": "이메일",
+          "en": "email"
         }
       ]
     },
@@ -245,43 +295,53 @@
       "words": [
         {
           "es": "archivo",
-          "ko": "파일"
+          "ko": "파일",
+          "en": "file"
         },
         {
           "es": "contraseña",
-          "ko": "비밀번호"
+          "ko": "비밀번호",
+          "en": "password"
         },
         {
           "es": "internet",
-          "ko": "인터넷"
+          "ko": "인터넷",
+          "en": "internet"
         },
         {
           "es": "software",
-          "ko": "소프트웨어"
+          "ko": "소프트웨어",
+          "en": "software"
         },
         {
           "es": "base de datos",
-          "ko": "데이터베이스"
+          "ko": "데이터베이스",
+          "en": "database"
         },
         {
           "es": "red",
-          "ko": "네트워크"
+          "ko": "네트워크",
+          "en": "network"
         },
         {
           "es": "servidor",
-          "ko": "서버"
+          "ko": "서버",
+          "en": "server"
         },
         {
           "es": "programa",
-          "ko": "프로그램"
+          "ko": "프로그램",
+          "en": "program"
         },
         {
           "es": "sitio web",
-          "ko": "웹사이트"
+          "ko": "웹사이트",
+          "en": "website"
         },
         {
           "es": "aplicación",
-          "ko": "앱"
+          "ko": "앱",
+          "en": "app"
         }
       ]
     },
@@ -292,43 +352,53 @@
       "words": [
         {
           "es": "camarero",
-          "ko": "웨이터"
+          "ko": "웨이터",
+          "en": "waiter"
         },
         {
           "es": "vendedor",
-          "ko": "판매원"
+          "ko": "판매원",
+          "en": "seller"
         },
         {
           "es": "peluquero",
-          "ko": "미용사"
+          "ko": "미용사",
+          "en": "hairdresser"
         },
         {
           "es": "conductor",
-          "ko": "운전사"
+          "ko": "운전사",
+          "en": "driver"
         },
         {
           "es": "policía",
-          "ko": "경찰"
+          "ko": "경찰",
+          "en": "police"
         },
         {
           "es": "bombero",
-          "ko": "소방관"
+          "ko": "소방관",
+          "en": "firefighter"
         },
         {
           "es": "cartero",
-          "ko": "우체부"
+          "ko": "우체부",
+          "en": "mailman"
         },
         {
           "es": "cocinero",
-          "ko": "요리사"
+          "ko": "요리사",
+          "en": "cook"
         },
         {
           "es": "limpiador",
-          "ko": "청소부"
+          "ko": "청소부",
+          "en": "cleaner"
         },
         {
           "es": "guardia",
-          "ko": "경비원"
+          "ko": "경비원",
+          "en": "guard"
         }
       ]
     },
@@ -339,43 +409,53 @@
       "words": [
         {
           "es": "recepcionista",
-          "ko": "접수원"
+          "ko": "접수원",
+          "en": "receptionist"
         },
         {
           "es": "dependiente",
-          "ko": "점원"
+          "ko": "점원",
+          "en": "clerk"
         },
         {
           "es": "taxista",
-          "ko": "택시 기사"
+          "ko": "택시 기사",
+          "en": "taxi driver"
         },
         {
           "es": "piloto",
-          "ko": "조종사"
+          "ko": "조종사",
+          "en": "pilot"
         },
         {
           "es": "guía turístico",
-          "ko": "관광 가이드"
+          "ko": "관광 가이드",
+          "en": "tour guide"
         },
         {
           "es": "ingeniero",
-          "ko": "엔지니어"
+          "ko": "엔지니어",
+          "en": "engineer"
         },
         {
           "es": "programador",
-          "ko": "프로그래머"
+          "ko": "프로그래머",
+          "en": "programmer"
         },
         {
           "es": "técnico",
-          "ko": "기술자"
+          "ko": "기술자",
+          "en": "technician"
         },
         {
           "es": "electricista",
-          "ko": "전기 기사"
+          "ko": "전기 기사",
+          "en": "electrician"
         },
         {
           "es": "mecánico",
-          "ko": "정비사"
+          "ko": "정비사",
+          "en": "mechanic"
         }
       ]
     },
@@ -386,43 +466,53 @@
       "words": [
         {
           "es": "arquitecto",
-          "ko": "건축가"
+          "ko": "건축가",
+          "en": "architect"
         },
         {
           "es": "científico",
-          "ko": "과학자"
+          "ko": "과학자",
+          "en": "scientist"
         },
         {
           "es": "investigador",
-          "ko": "연구원"
+          "ko": "연구원",
+          "en": "researcher"
         },
         {
           "es": "farmacéutico",
-          "ko": "약사"
+          "ko": "약사",
+          "en": "pharmacist"
         },
         {
           "es": "veterinario",
-          "ko": "수의사"
+          "ko": "수의사",
+          "en": "vet"
         },
         {
           "es": "químico",
-          "ko": "화학자"
+          "ko": "화학자",
+          "en": "chemist"
         },
         {
           "es": "biólogo",
-          "ko": "생물학자"
+          "ko": "생물학자",
+          "en": "biologist"
         },
         {
           "es": "matemático",
-          "ko": "수학자"
+          "ko": "수학자",
+          "en": "mathematician"
         },
         {
           "es": "físico",
-          "ko": "물리학자"
+          "ko": "물리학자",
+          "en": "physicist"
         },
         {
           "es": "analista",
-          "ko": "분석가"
+          "ko": "분석가",
+          "en": "analyst"
         }
       ]
     },
@@ -433,43 +523,53 @@
       "words": [
         {
           "es": "artista",
-          "ko": "예술가"
+          "ko": "예술가",
+          "en": "artist"
         },
         {
           "es": "músico",
-          "ko": "음악가"
+          "ko": "음악가",
+          "en": "musician"
         },
         {
           "es": "escritor",
-          "ko": "작가"
+          "ko": "작가",
+          "en": "writer"
         },
         {
           "es": "actor",
-          "ko": "배우"
+          "ko": "배우",
+          "en": "actor"
         },
         {
           "es": "fotógrafo",
-          "ko": "사진작가"
+          "ko": "사진작가",
+          "en": "photographer"
         },
         {
           "es": "diseñador",
-          "ko": "디자이너"
+          "ko": "디자이너",
+          "en": "designer"
         },
         {
           "es": "periodista",
-          "ko": "기자"
+          "ko": "기자",
+          "en": "journalist"
         },
         {
           "es": "director",
-          "ko": "감독"
+          "ko": "감독",
+          "en": "director"
         },
         {
           "es": "pintor",
-          "ko": "화가"
+          "ko": "화가",
+          "en": "painter"
         },
         {
           "es": "escultor",
-          "ko": "조각가"
+          "ko": "조각가",
+          "en": "sculptor"
         }
       ]
     },
@@ -480,403 +580,503 @@
       "words": [
         {
           "es": "trabajo",
-          "ko": "일"
+          "ko": "일",
+          "en": "work"
         },
         {
           "es": "empleo",
-          "ko": "직장"
+          "ko": "직장",
+          "en": "employment"
         },
         {
           "es": "oficina",
-          "ko": "사무실"
+          "ko": "사무실",
+          "en": "office"
         },
         {
           "es": "jefe",
-          "ko": "상사"
+          "ko": "상사",
+          "en": "boss"
         },
         {
           "es": "empleado",
-          "ko": "직원"
+          "ko": "직원",
+          "en": "employee"
         },
         {
           "es": "salario",
-          "ko": "급여"
+          "ko": "급여",
+          "en": "salary"
         },
         {
           "es": "horario",
-          "ko": "근무 시간"
+          "ko": "근무 시간",
+          "en": "schedule"
         },
         {
           "es": "contrato",
-          "ko": "계약"
+          "ko": "계약",
+          "en": "contract"
         },
         {
           "es": "empresa",
-          "ko": "회사"
+          "ko": "회사",
+          "en": "company"
         },
         {
           "es": "compañero",
-          "ko": "동료"
+          "ko": "동료",
+          "en": "colleague"
         },
         {
           "es": "tarea",
-          "ko": "업무"
+          "ko": "업무",
+          "en": "task"
         },
         {
           "es": "proyecto",
-          "ko": "프로젝트"
+          "ko": "프로젝트",
+          "en": "project"
         },
         {
           "es": "vacaciones",
-          "ko": "휴가"
+          "ko": "휴가",
+          "en": "vacation"
         },
         {
           "es": "experiencia",
-          "ko": "경험"
+          "ko": "경험",
+          "en": "experience"
         },
         {
           "es": "responsabilidad",
-          "ko": "책임"
+          "ko": "책임",
+          "en": "responsibility"
         },
         {
           "es": "escritorio",
-          "ko": "책상"
+          "ko": "책상",
+          "en": "desk"
         },
         {
           "es": "silla",
-          "ko": "의자"
+          "ko": "의자",
+          "en": "chair"
         },
         {
           "es": "reunión",
-          "ko": "회의"
+          "ko": "회의",
+          "en": "meeting"
         },
         {
           "es": "departamento",
-          "ko": "부서"
+          "ko": "부서",
+          "en": "department"
         },
         {
           "es": "recepción",
-          "ko": "접수처"
+          "ko": "접수처",
+          "en": "reception"
         },
         {
           "es": "ascensor",
-          "ko": "엘리베이터"
+          "ko": "엘리베이터",
+          "en": "elevator"
         },
         {
           "es": "pasillo",
-          "ko": "복도"
+          "ko": "복도",
+          "en": "hallway"
         },
         {
           "es": "sala de conferencias",
-          "ko": "회의실"
+          "ko": "회의실",
+          "en": "conference room"
         },
         {
           "es": "almacén",
-          "ko": "창고"
+          "ko": "창고",
+          "en": "warehouse"
         },
         {
           "es": "cafetería",
-          "ko": "구내식당"
+          "ko": "구내식당",
+          "en": "cafeteria"
         },
         {
           "es": "parking",
-          "ko": "주차장"
+          "ko": "주차장",
+          "en": "parking"
         },
         {
           "es": "seguridad",
-          "ko": "보안"
+          "ko": "보안",
+          "en": "security"
         },
         {
           "es": "entrada",
-          "ko": "입구"
+          "ko": "입구",
+          "en": "entrance"
         },
         {
           "es": "salida",
-          "ko": "출구"
+          "ko": "출구",
+          "en": "exit"
         },
         {
           "es": "planta",
-          "ko": "층"
+          "ko": "층",
+          "en": "floor"
         },
         {
           "es": "bolígrafo",
-          "ko": "볼펜"
+          "ko": "볼펜",
+          "en": "pen"
         },
         {
           "es": "papel",
-          "ko": "종이"
+          "ko": "종이",
+          "en": "paper"
         },
         {
           "es": "carpeta",
-          "ko": "폴더"
+          "ko": "폴더",
+          "en": "folder"
         },
         {
           "es": "grapadora",
-          "ko": "스테이플러"
+          "ko": "스테이플러",
+          "en": "stapler"
         },
         {
           "es": "tijeras",
-          "ko": "가위"
+          "ko": "가위",
+          "en": "scissors"
         },
         {
           "es": "cinta adhesiva",
-          "ko": "테이프"
+          "ko": "테이프",
+          "en": "tape"
         },
         {
           "es": "sobre",
-          "ko": "봉투"
+          "ko": "봉투",
+          "en": "envelope"
         },
         {
           "es": "sello",
-          "ko": "도장"
+          "ko": "도장",
+          "en": "stamp"
         },
         {
           "es": "calendario",
-          "ko": "달력"
+          "ko": "달력",
+          "en": "calendar"
         },
         {
           "es": "pizarra",
-          "ko": "화이트보드"
+          "ko": "화이트보드",
+          "en": "whiteboard"
         },
         {
           "es": "rotulador",
-          "ko": "마커"
+          "ko": "마커",
+          "en": "marker"
         },
         {
           "es": "lápiz",
-          "ko": "연필"
+          "ko": "연필",
+          "en": "pencil"
         },
         {
           "es": "cuaderno",
-          "ko": "공책"
+          "ko": "공책",
+          "en": "notebook"
         },
         {
           "es": "impresora",
-          "ko": "프린터"
+          "ko": "프린터",
+          "en": "printer"
         },
         {
           "es": "fotocopiadora",
-          "ko": "복사기"
+          "ko": "복사기",
+          "en": "copier"
         },
         {
           "es": "computadora",
-          "ko": "컴퓨터"
+          "ko": "컴퓨터",
+          "en": "computer"
         },
         {
           "es": "teclado",
-          "ko": "키보드"
+          "ko": "키보드",
+          "en": "keyboard"
         },
         {
           "es": "ratón",
-          "ko": "마우스"
+          "ko": "마우스",
+          "en": "mouse"
         },
         {
           "es": "pantalla",
-          "ko": "화면"
+          "ko": "화면",
+          "en": "screen"
         },
         {
           "es": "correo electrónico",
-          "ko": "이메일"
+          "ko": "이메일",
+          "en": "email"
         },
         {
           "es": "archivo",
-          "ko": "파일"
+          "ko": "파일",
+          "en": "file"
         },
         {
           "es": "contraseña",
-          "ko": "비밀번호"
+          "ko": "비밀번호",
+          "en": "password"
         },
         {
           "es": "internet",
-          "ko": "인터넷"
+          "ko": "인터넷",
+          "en": "internet"
         },
         {
           "es": "software",
-          "ko": "소프트웨어"
+          "ko": "소프트웨어",
+          "en": "software"
         },
         {
           "es": "base de datos",
-          "ko": "데이터베이스"
+          "ko": "데이터베이스",
+          "en": "database"
         },
         {
           "es": "red",
-          "ko": "네트워크"
+          "ko": "네트워크",
+          "en": "network"
         },
         {
           "es": "servidor",
-          "ko": "서버"
+          "ko": "서버",
+          "en": "server"
         },
         {
           "es": "programa",
-          "ko": "프로그램"
+          "ko": "프로그램",
+          "en": "program"
         },
         {
           "es": "sitio web",
-          "ko": "웹사이트"
+          "ko": "웹사이트",
+          "en": "website"
         },
         {
           "es": "aplicación",
-          "ko": "앱"
+          "ko": "앱",
+          "en": "app"
         },
         {
           "es": "camarero",
-          "ko": "웨이터"
+          "ko": "웨이터",
+          "en": "waiter"
         },
         {
           "es": "vendedor",
-          "ko": "판매원"
+          "ko": "판매원",
+          "en": "seller"
         },
         {
           "es": "peluquero",
-          "ko": "미용사"
+          "ko": "미용사",
+          "en": "hairdresser"
         },
         {
           "es": "conductor",
-          "ko": "운전사"
+          "ko": "운전사",
+          "en": "driver"
         },
         {
           "es": "policía",
-          "ko": "경찰"
+          "ko": "경찰",
+          "en": "police"
         },
         {
           "es": "bombero",
-          "ko": "소방관"
+          "ko": "소방관",
+          "en": "firefighter"
         },
         {
           "es": "cartero",
-          "ko": "우체부"
+          "ko": "우체부",
+          "en": "mailman"
         },
         {
           "es": "cocinero",
-          "ko": "요리사"
+          "ko": "요리사",
+          "en": "cook"
         },
         {
           "es": "limpiador",
-          "ko": "청소부"
+          "ko": "청소부",
+          "en": "cleaner"
         },
         {
           "es": "guardia",
-          "ko": "경비원"
+          "ko": "경비원",
+          "en": "guard"
         },
         {
           "es": "recepcionista",
-          "ko": "접수원"
+          "ko": "접수원",
+          "en": "receptionist"
         },
         {
           "es": "dependiente",
-          "ko": "점원"
+          "ko": "점원",
+          "en": "clerk"
         },
         {
           "es": "taxista",
-          "ko": "택시 기사"
+          "ko": "택시 기사",
+          "en": "taxi driver"
         },
         {
           "es": "piloto",
-          "ko": "조종사"
+          "ko": "조종사",
+          "en": "pilot"
         },
         {
           "es": "guía turístico",
-          "ko": "관광 가이드"
+          "ko": "관광 가이드",
+          "en": "tour guide"
         },
         {
           "es": "ingeniero",
-          "ko": "엔지니어"
+          "ko": "엔지니어",
+          "en": "engineer"
         },
         {
           "es": "programador",
-          "ko": "프로그래머"
+          "ko": "프로그래머",
+          "en": "programmer"
         },
         {
           "es": "técnico",
-          "ko": "기술자"
+          "ko": "기술자",
+          "en": "technician"
         },
         {
           "es": "electricista",
-          "ko": "전기 기사"
+          "ko": "전기 기사",
+          "en": "electrician"
         },
         {
           "es": "mecánico",
-          "ko": "정비사"
+          "ko": "정비사",
+          "en": "mechanic"
         },
         {
           "es": "arquitecto",
-          "ko": "건축가"
+          "ko": "건축가",
+          "en": "architect"
         },
         {
           "es": "científico",
-          "ko": "과학자"
+          "ko": "과학자",
+          "en": "scientist"
         },
         {
           "es": "investigador",
-          "ko": "연구원"
+          "ko": "연구원",
+          "en": "researcher"
         },
         {
           "es": "farmacéutico",
-          "ko": "약사"
+          "ko": "약사",
+          "en": "pharmacist"
         },
         {
           "es": "veterinario",
-          "ko": "수의사"
+          "ko": "수의사",
+          "en": "vet"
         },
         {
           "es": "químico",
-          "ko": "화학자"
+          "ko": "화학자",
+          "en": "chemist"
         },
         {
           "es": "biólogo",
-          "ko": "생물학자"
+          "ko": "생물학자",
+          "en": "biologist"
         },
         {
           "es": "matemático",
-          "ko": "수학자"
+          "ko": "수학자",
+          "en": "mathematician"
         },
         {
           "es": "físico",
-          "ko": "물리학자"
+          "ko": "물리학자",
+          "en": "physicist"
         },
         {
           "es": "analista",
-          "ko": "분석가"
+          "ko": "분석가",
+          "en": "analyst"
         },
         {
           "es": "artista",
-          "ko": "예술가"
+          "ko": "예술가",
+          "en": "artist"
         },
         {
           "es": "músico",
-          "ko": "음악가"
+          "ko": "음악가",
+          "en": "musician"
         },
         {
           "es": "escritor",
-          "ko": "작가"
+          "ko": "작가",
+          "en": "writer"
         },
         {
           "es": "actor",
-          "ko": "배우"
+          "ko": "배우",
+          "en": "actor"
         },
         {
           "es": "fotógrafo",
-          "ko": "사진작가"
+          "ko": "사진작가",
+          "en": "photographer"
         },
         {
           "es": "diseñador",
-          "ko": "디자이너"
+          "ko": "디자이너",
+          "en": "designer"
         },
         {
           "es": "periodista",
-          "ko": "기자"
+          "ko": "기자",
+          "en": "journalist"
         },
         {
           "es": "director",
-          "ko": "감독"
+          "ko": "감독",
+          "en": "director"
         },
         {
           "es": "pintor",
-          "ko": "화가"
+          "ko": "화가",
+          "en": "painter"
         },
         {
           "es": "escultor",
-          "ko": "조각가"
+          "ko": "조각가",
+          "en": "sculptor"
         }
       ]
     },
@@ -887,43 +1087,53 @@
       "words": [
         {
           "es": "cantante",
-          "ko": "가수"
+          "ko": "가수",
+          "en": "singer"
         },
         {
           "es": "bailarín",
-          "ko": "무용가"
+          "ko": "무용가",
+          "en": "dancer"
         },
         {
           "es": "poeta",
-          "ko": "시인"
+          "ko": "시인",
+          "en": "poet"
         },
         {
           "es": "editor",
-          "ko": "편집자"
+          "ko": "편집자",
+          "en": "editor"
         },
         {
           "es": "traductor",
-          "ko": "번역가"
+          "ko": "번역가",
+          "en": "translator"
         },
         {
           "es": "médico",
-          "ko": "의사"
+          "ko": "의사",
+          "en": "doctor"
         },
         {
           "es": "enfermero",
-          "ko": "간호사"
+          "ko": "간호사",
+          "en": "nurse"
         },
         {
           "es": "dentista",
-          "ko": "치과의사"
+          "ko": "치과의사",
+          "en": "dentist"
         },
         {
           "es": "cirujano",
-          "ko": "외과의사"
+          "ko": "외과의사",
+          "en": "surgeon"
         },
         {
           "es": "psicólogo",
-          "ko": "심리학자"
+          "ko": "심리학자",
+          "en": "psychologist"
         }
       ]
     },
@@ -934,43 +1144,53 @@
       "words": [
         {
           "es": "abogado",
-          "ko": "변호사"
+          "ko": "변호사",
+          "en": "lawyer"
         },
         {
           "es": "juez",
-          "ko": "판사"
+          "ko": "판사",
+          "en": "judge"
         },
         {
           "es": "fiscal",
-          "ko": "검사"
+          "ko": "검사",
+          "en": "prosecutor"
         },
         {
           "es": "terapeuta",
-          "ko": "치료사"
+          "ko": "치료사",
+          "en": "therapist"
         },
         {
           "es": "pediatra",
-          "ko": "소아과의사"
+          "ko": "소아과의사",
+          "en": "pediatrician"
         },
         {
           "es": "oftalmólogo",
-          "ko": "안과의사"
+          "ko": "안과의사",
+          "en": "ophthalmologist"
         },
         {
           "es": "paramédico",
-          "ko": "응급구조사"
+          "ko": "응급구조사",
+          "en": "paramedic"
         },
         {
           "es": "notario",
-          "ko": "공증인"
+          "ko": "공증인",
+          "en": "notary"
         },
         {
           "es": "asesor legal",
-          "ko": "법률 고문"
+          "ko": "법률 고문",
+          "en": "legal advisor"
         },
         {
           "es": "patólogo",
-          "ko": "병리학자"
+          "ko": "병리학자",
+          "en": "pathologist"
         }
       ]
     },
@@ -981,43 +1201,53 @@
       "words": [
         {
           "es": "negocio",
-          "ko": "사업"
+          "ko": "사업",
+          "en": "business"
         },
         {
           "es": "cliente",
-          "ko": "고객"
+          "ko": "고객",
+          "en": "customer"
         },
         {
           "es": "producto",
-          "ko": "제품"
+          "ko": "제품",
+          "en": "product"
         },
         {
           "es": "mercado",
-          "ko": "시장"
+          "ko": "시장",
+          "en": "market"
         },
         {
           "es": "competencia",
-          "ko": "경쟁"
+          "ko": "경쟁",
+          "en": "competition"
         },
         {
           "es": "ganancia",
-          "ko": "이익"
+          "ko": "이익",
+          "en": "profit"
         },
         {
           "es": "pérdida",
-          "ko": "손실"
+          "ko": "손실",
+          "en": "loss"
         },
         {
           "es": "importación",
-          "ko": "수입"
+          "ko": "수입",
+          "en": "import"
         },
         {
           "es": "exportación",
-          "ko": "수출"
+          "ko": "수출",
+          "en": "export"
         },
         {
           "es": "proveedor",
-          "ko": "공급업체"
+          "ko": "공급업체",
+          "en": "supplier"
         }
       ]
     },
@@ -1028,43 +1258,53 @@
       "words": [
         {
           "es": "publicidad",
-          "ko": "광고"
+          "ko": "광고",
+          "en": "advertisement"
         },
         {
           "es": "marca",
-          "ko": "브랜드"
+          "ko": "브랜드",
+          "en": "brand"
         },
         {
           "es": "estrategia",
-          "ko": "전략"
+          "ko": "전략",
+          "en": "strategy"
         },
         {
           "es": "socio",
-          "ko": "파트너"
+          "ko": "파트너",
+          "en": "partner"
         },
         {
           "es": "sucursal",
-          "ko": "지점"
+          "ko": "지점",
+          "en": "branch"
         },
         {
           "es": "banco",
-          "ko": "은행"
+          "ko": "은행",
+          "en": "bank"
         },
         {
           "es": "cuenta",
-          "ko": "계좌"
+          "ko": "계좌",
+          "en": "bill"
         },
         {
           "es": "préstamo",
-          "ko": "대출"
+          "ko": "대출",
+          "en": "loan"
         },
         {
           "es": "interés",
-          "ko": "이자"
+          "ko": "이자",
+          "en": "interest"
         },
         {
           "es": "inversión",
-          "ko": "투자"
+          "ko": "투자",
+          "en": "investment"
         }
       ]
     },
@@ -1075,43 +1315,53 @@
       "words": [
         {
           "es": "ahorro",
-          "ko": "저축"
+          "ko": "저축",
+          "en": "savings"
         },
         {
           "es": "deuda",
-          "ko": "부채"
+          "ko": "부채",
+          "en": "debt"
         },
         {
           "es": "impuesto",
-          "ko": "세금"
+          "ko": "세금",
+          "en": "tax"
         },
         {
           "es": "factura",
-          "ko": "청구서"
+          "ko": "청구서",
+          "en": "invoice"
         },
         {
           "es": "presupuesto",
-          "ko": "예산"
+          "ko": "예산",
+          "en": "budget"
         },
         {
           "es": "tarjeta de crédito",
-          "ko": "신용카드"
+          "ko": "신용카드",
+          "en": "credit card"
         },
         {
           "es": "cajero automático",
-          "ko": "현금인출기"
+          "ko": "현금인출기",
+          "en": "ATM"
         },
         {
           "es": "cheque",
-          "ko": "수표"
+          "ko": "수표",
+          "en": "check"
         },
         {
           "es": "hipoteca",
-          "ko": "담보대출"
+          "ko": "담보대출",
+          "en": "mortgage"
         },
         {
           "es": "acción",
-          "ko": "주식"
+          "ko": "주식",
+          "en": "stock"
         }
       ]
     },
@@ -1122,43 +1372,53 @@
       "words": [
         {
           "es": "presentación",
-          "ko": "발표"
+          "ko": "발표",
+          "en": "presentation"
         },
         {
           "es": "agenda",
-          "ko": "안건"
+          "ko": "안건",
+          "en": "agenda"
         },
         {
           "es": "propuesta",
-          "ko": "제안"
+          "ko": "제안",
+          "en": "proposal"
         },
         {
           "es": "acuerdo",
-          "ko": "합의"
+          "ko": "합의",
+          "en": "agreement"
         },
         {
           "es": "debate",
-          "ko": "토론"
+          "ko": "토론",
+          "en": "debate"
         },
         {
           "es": "opinión",
-          "ko": "의견"
+          "ko": "의견",
+          "en": "opinion"
         },
         {
           "es": "objetivo",
-          "ko": "목표"
+          "ko": "목표",
+          "en": "lens"
         },
         {
           "es": "resultado",
-          "ko": "결과"
+          "ko": "결과",
+          "en": "result"
         },
         {
           "es": "gráfico",
-          "ko": "그래프"
+          "ko": "그래프",
+          "en": "graph"
         },
         {
           "es": "diapositiva",
-          "ko": "슬라이드"
+          "ko": "슬라이드",
+          "en": "slide"
         }
       ]
     },
@@ -1169,43 +1429,53 @@
       "words": [
         {
           "es": "micrófono",
-          "ko": "마이크"
+          "ko": "마이크",
+          "en": "microphone"
         },
         {
           "es": "proyector",
-          "ko": "프로젝터"
+          "ko": "프로젝터",
+          "en": "projector"
         },
         {
           "es": "informe",
-          "ko": "보고서"
+          "ko": "보고서",
+          "en": "report"
         },
         {
           "es": "conclusión",
-          "ko": "결론"
+          "ko": "결론",
+          "en": "conclusion"
         },
         {
           "es": "participante",
-          "ko": "참가자"
+          "ko": "참가자",
+          "en": "participant"
         },
         {
           "es": "currículum",
-          "ko": "이력서"
+          "ko": "이력서",
+          "en": "resume"
         },
         {
           "es": "entrevista",
-          "ko": "면접"
+          "ko": "면접",
+          "en": "interview"
         },
         {
           "es": "candidato",
-          "ko": "지원자"
+          "ko": "지원자",
+          "en": "candidate"
         },
         {
           "es": "solicitud",
-          "ko": "지원서"
+          "ko": "지원서",
+          "en": "application"
         },
         {
           "es": "oferta de empleo",
-          "ko": "채용 공고"
+          "ko": "채용 공고",
+          "en": "job offer"
         }
       ]
     },
@@ -1216,43 +1486,53 @@
       "words": [
         {
           "es": "carrera",
-          "ko": "경력"
+          "ko": "경력",
+          "en": "career"
         },
         {
           "es": "ascenso",
-          "ko": "승진"
+          "ko": "승진",
+          "en": "promotion"
         },
         {
           "es": "despido",
-          "ko": "해고"
+          "ko": "해고",
+          "en": "dismissal"
         },
         {
           "es": "jubilación",
-          "ko": "퇴직"
+          "ko": "퇴직",
+          "en": "retirement"
         },
         {
           "es": "renuncia",
-          "ko": "사직"
+          "ko": "사직",
+          "en": "resignation"
         },
         {
           "es": "habilidad",
-          "ko": "능력"
+          "ko": "능력",
+          "en": "skill"
         },
         {
           "es": "cualificación",
-          "ko": "자격"
+          "ko": "자격",
+          "en": "qualification"
         },
         {
           "es": "referencia",
-          "ko": "추천서"
+          "ko": "추천서",
+          "en": "reference"
         },
         {
           "es": "formación",
-          "ko": "교육 훈련"
+          "ko": "교육 훈련",
+          "en": "training"
         },
         {
           "es": "puesto",
-          "ko": "직위"
+          "ko": "직위",
+          "en": "position"
         }
       ]
     },
@@ -1263,43 +1543,53 @@
       "words": [
         {
           "es": "escuela",
-          "ko": "학교"
+          "ko": "학교",
+          "en": "school"
         },
         {
           "es": "profesor",
-          "ko": "선생님"
+          "ko": "선생님",
+          "en": "teacher"
         },
         {
           "es": "estudiante",
-          "ko": "학생"
+          "ko": "학생",
+          "en": "student"
         },
         {
           "es": "clase",
-          "ko": "수업"
+          "ko": "수업",
+          "en": "class"
         },
         {
           "es": "aula",
-          "ko": "교실"
+          "ko": "교실",
+          "en": "classroom"
         },
         {
           "es": "libro de texto",
-          "ko": "교과서"
+          "ko": "교과서",
+          "en": "textbook"
         },
         {
           "es": "deberes",
-          "ko": "숙제"
+          "ko": "숙제",
+          "en": "homework"
         },
         {
           "es": "uniforme",
-          "ko": "교복"
+          "ko": "교복",
+          "en": "uniform"
         },
         {
           "es": "mochila",
-          "ko": "책가방"
+          "ko": "책가방",
+          "en": "backpack"
         },
         {
           "es": "recreo",
-          "ko": "쉬는 시간"
+          "ko": "쉬는 시간",
+          "en": "recess"
         }
       ]
     },
@@ -1310,43 +1600,53 @@
       "words": [
         {
           "es": "timbre",
-          "ko": "종"
+          "ko": "종",
+          "en": "doorbell"
         },
         {
           "es": "patio",
-          "ko": "운동장"
+          "ko": "운동장",
+          "en": "yard"
         },
         {
           "es": "biblioteca",
-          "ko": "도서관"
+          "ko": "도서관",
+          "en": "library"
         },
         {
           "es": "laboratorio",
-          "ko": "실험실"
+          "ko": "실험실",
+          "en": "laboratory"
         },
         {
           "es": "gimnasio",
-          "ko": "체육관"
+          "ko": "체육관",
+          "en": "gym"
         },
         {
           "es": "matemáticas",
-          "ko": "수학"
+          "ko": "수학",
+          "en": "mathematics"
         },
         {
           "es": "ciencias",
-          "ko": "과학"
+          "ko": "과학",
+          "en": "sciences"
         },
         {
           "es": "historia",
-          "ko": "역사"
+          "ko": "역사",
+          "en": "history"
         },
         {
           "es": "geografía",
-          "ko": "지리"
+          "ko": "지리",
+          "en": "geography"
         },
         {
           "es": "literatura",
-          "ko": "문학"
+          "ko": "문학",
+          "en": "literature"
         }
       ]
     },
@@ -1357,403 +1657,503 @@
       "words": [
         {
           "es": "cantante",
-          "ko": "가수"
+          "ko": "가수",
+          "en": "singer"
         },
         {
           "es": "bailarín",
-          "ko": "무용가"
+          "ko": "무용가",
+          "en": "dancer"
         },
         {
           "es": "poeta",
-          "ko": "시인"
+          "ko": "시인",
+          "en": "poet"
         },
         {
           "es": "editor",
-          "ko": "편집자"
+          "ko": "편집자",
+          "en": "editor"
         },
         {
           "es": "traductor",
-          "ko": "번역가"
+          "ko": "번역가",
+          "en": "translator"
         },
         {
           "es": "médico",
-          "ko": "의사"
+          "ko": "의사",
+          "en": "doctor"
         },
         {
           "es": "enfermero",
-          "ko": "간호사"
+          "ko": "간호사",
+          "en": "nurse"
         },
         {
           "es": "dentista",
-          "ko": "치과의사"
+          "ko": "치과의사",
+          "en": "dentist"
         },
         {
           "es": "cirujano",
-          "ko": "외과의사"
+          "ko": "외과의사",
+          "en": "surgeon"
         },
         {
           "es": "psicólogo",
-          "ko": "심리학자"
+          "ko": "심리학자",
+          "en": "psychologist"
         },
         {
           "es": "abogado",
-          "ko": "변호사"
+          "ko": "변호사",
+          "en": "lawyer"
         },
         {
           "es": "juez",
-          "ko": "판사"
+          "ko": "판사",
+          "en": "judge"
         },
         {
           "es": "fiscal",
-          "ko": "검사"
+          "ko": "검사",
+          "en": "prosecutor"
         },
         {
           "es": "terapeuta",
-          "ko": "치료사"
+          "ko": "치료사",
+          "en": "therapist"
         },
         {
           "es": "pediatra",
-          "ko": "소아과의사"
+          "ko": "소아과의사",
+          "en": "pediatrician"
         },
         {
           "es": "oftalmólogo",
-          "ko": "안과의사"
+          "ko": "안과의사",
+          "en": "ophthalmologist"
         },
         {
           "es": "paramédico",
-          "ko": "응급구조사"
+          "ko": "응급구조사",
+          "en": "paramedic"
         },
         {
           "es": "notario",
-          "ko": "공증인"
+          "ko": "공증인",
+          "en": "notary"
         },
         {
           "es": "asesor legal",
-          "ko": "법률 고문"
+          "ko": "법률 고문",
+          "en": "legal advisor"
         },
         {
           "es": "patólogo",
-          "ko": "병리학자"
+          "ko": "병리학자",
+          "en": "pathologist"
         },
         {
           "es": "negocio",
-          "ko": "사업"
+          "ko": "사업",
+          "en": "business"
         },
         {
           "es": "cliente",
-          "ko": "고객"
+          "ko": "고객",
+          "en": "customer"
         },
         {
           "es": "producto",
-          "ko": "제품"
+          "ko": "제품",
+          "en": "product"
         },
         {
           "es": "mercado",
-          "ko": "시장"
+          "ko": "시장",
+          "en": "market"
         },
         {
           "es": "competencia",
-          "ko": "경쟁"
+          "ko": "경쟁",
+          "en": "competition"
         },
         {
           "es": "ganancia",
-          "ko": "이익"
+          "ko": "이익",
+          "en": "profit"
         },
         {
           "es": "pérdida",
-          "ko": "손실"
+          "ko": "손실",
+          "en": "loss"
         },
         {
           "es": "importación",
-          "ko": "수입"
+          "ko": "수입",
+          "en": "import"
         },
         {
           "es": "exportación",
-          "ko": "수출"
+          "ko": "수출",
+          "en": "export"
         },
         {
           "es": "proveedor",
-          "ko": "공급업체"
+          "ko": "공급업체",
+          "en": "supplier"
         },
         {
           "es": "publicidad",
-          "ko": "광고"
+          "ko": "광고",
+          "en": "advertisement"
         },
         {
           "es": "marca",
-          "ko": "브랜드"
+          "ko": "브랜드",
+          "en": "brand"
         },
         {
           "es": "estrategia",
-          "ko": "전략"
+          "ko": "전략",
+          "en": "strategy"
         },
         {
           "es": "socio",
-          "ko": "파트너"
+          "ko": "파트너",
+          "en": "partner"
         },
         {
           "es": "sucursal",
-          "ko": "지점"
+          "ko": "지점",
+          "en": "branch"
         },
         {
           "es": "banco",
-          "ko": "은행"
+          "ko": "은행",
+          "en": "bank"
         },
         {
           "es": "cuenta",
-          "ko": "계좌"
+          "ko": "계좌",
+          "en": "bill"
         },
         {
           "es": "préstamo",
-          "ko": "대출"
+          "ko": "대출",
+          "en": "loan"
         },
         {
           "es": "interés",
-          "ko": "이자"
+          "ko": "이자",
+          "en": "interest"
         },
         {
           "es": "inversión",
-          "ko": "투자"
+          "ko": "투자",
+          "en": "investment"
         },
         {
           "es": "ahorro",
-          "ko": "저축"
+          "ko": "저축",
+          "en": "savings"
         },
         {
           "es": "deuda",
-          "ko": "부채"
+          "ko": "부채",
+          "en": "debt"
         },
         {
           "es": "impuesto",
-          "ko": "세금"
+          "ko": "세금",
+          "en": "tax"
         },
         {
           "es": "factura",
-          "ko": "청구서"
+          "ko": "청구서",
+          "en": "invoice"
         },
         {
           "es": "presupuesto",
-          "ko": "예산"
+          "ko": "예산",
+          "en": "budget"
         },
         {
           "es": "tarjeta de crédito",
-          "ko": "신용카드"
+          "ko": "신용카드",
+          "en": "credit card"
         },
         {
           "es": "cajero automático",
-          "ko": "현금인출기"
+          "ko": "현금인출기",
+          "en": "ATM"
         },
         {
           "es": "cheque",
-          "ko": "수표"
+          "ko": "수표",
+          "en": "check"
         },
         {
           "es": "hipoteca",
-          "ko": "담보대출"
+          "ko": "담보대출",
+          "en": "mortgage"
         },
         {
           "es": "acción",
-          "ko": "주식"
+          "ko": "주식",
+          "en": "stock"
         },
         {
           "es": "presentación",
-          "ko": "발표"
+          "ko": "발표",
+          "en": "presentation"
         },
         {
           "es": "agenda",
-          "ko": "안건"
+          "ko": "안건",
+          "en": "agenda"
         },
         {
           "es": "propuesta",
-          "ko": "제안"
+          "ko": "제안",
+          "en": "proposal"
         },
         {
           "es": "acuerdo",
-          "ko": "합의"
+          "ko": "합의",
+          "en": "agreement"
         },
         {
           "es": "debate",
-          "ko": "토론"
+          "ko": "토론",
+          "en": "debate"
         },
         {
           "es": "opinión",
-          "ko": "의견"
+          "ko": "의견",
+          "en": "opinion"
         },
         {
           "es": "objetivo",
-          "ko": "목표"
+          "ko": "목표",
+          "en": "lens"
         },
         {
           "es": "resultado",
-          "ko": "결과"
+          "ko": "결과",
+          "en": "result"
         },
         {
           "es": "gráfico",
-          "ko": "그래프"
+          "ko": "그래프",
+          "en": "graph"
         },
         {
           "es": "diapositiva",
-          "ko": "슬라이드"
+          "ko": "슬라이드",
+          "en": "slide"
         },
         {
           "es": "micrófono",
-          "ko": "마이크"
+          "ko": "마이크",
+          "en": "microphone"
         },
         {
           "es": "proyector",
-          "ko": "프로젝터"
+          "ko": "프로젝터",
+          "en": "projector"
         },
         {
           "es": "informe",
-          "ko": "보고서"
+          "ko": "보고서",
+          "en": "report"
         },
         {
           "es": "conclusión",
-          "ko": "결론"
+          "ko": "결론",
+          "en": "conclusion"
         },
         {
           "es": "participante",
-          "ko": "참가자"
+          "ko": "참가자",
+          "en": "participant"
         },
         {
           "es": "currículum",
-          "ko": "이력서"
+          "ko": "이력서",
+          "en": "resume"
         },
         {
           "es": "entrevista",
-          "ko": "면접"
+          "ko": "면접",
+          "en": "interview"
         },
         {
           "es": "candidato",
-          "ko": "지원자"
+          "ko": "지원자",
+          "en": "candidate"
         },
         {
           "es": "solicitud",
-          "ko": "지원서"
+          "ko": "지원서",
+          "en": "application"
         },
         {
           "es": "oferta de empleo",
-          "ko": "채용 공고"
+          "ko": "채용 공고",
+          "en": "job offer"
         },
         {
           "es": "carrera",
-          "ko": "경력"
+          "ko": "경력",
+          "en": "career"
         },
         {
           "es": "ascenso",
-          "ko": "승진"
+          "ko": "승진",
+          "en": "promotion"
         },
         {
           "es": "despido",
-          "ko": "해고"
+          "ko": "해고",
+          "en": "dismissal"
         },
         {
           "es": "jubilación",
-          "ko": "퇴직"
+          "ko": "퇴직",
+          "en": "retirement"
         },
         {
           "es": "renuncia",
-          "ko": "사직"
+          "ko": "사직",
+          "en": "resignation"
         },
         {
           "es": "habilidad",
-          "ko": "능력"
+          "ko": "능력",
+          "en": "skill"
         },
         {
           "es": "cualificación",
-          "ko": "자격"
+          "ko": "자격",
+          "en": "qualification"
         },
         {
           "es": "referencia",
-          "ko": "추천서"
+          "ko": "추천서",
+          "en": "reference"
         },
         {
           "es": "formación",
-          "ko": "교육 훈련"
+          "ko": "교육 훈련",
+          "en": "training"
         },
         {
           "es": "puesto",
-          "ko": "직위"
+          "ko": "직위",
+          "en": "position"
         },
         {
           "es": "escuela",
-          "ko": "학교"
+          "ko": "학교",
+          "en": "school"
         },
         {
           "es": "profesor",
-          "ko": "선생님"
+          "ko": "선생님",
+          "en": "teacher"
         },
         {
           "es": "estudiante",
-          "ko": "학생"
+          "ko": "학생",
+          "en": "student"
         },
         {
           "es": "clase",
-          "ko": "수업"
+          "ko": "수업",
+          "en": "class"
         },
         {
           "es": "aula",
-          "ko": "교실"
+          "ko": "교실",
+          "en": "classroom"
         },
         {
           "es": "libro de texto",
-          "ko": "교과서"
+          "ko": "교과서",
+          "en": "textbook"
         },
         {
           "es": "deberes",
-          "ko": "숙제"
+          "ko": "숙제",
+          "en": "homework"
         },
         {
           "es": "uniforme",
-          "ko": "교복"
+          "ko": "교복",
+          "en": "uniform"
         },
         {
           "es": "mochila",
-          "ko": "책가방"
+          "ko": "책가방",
+          "en": "backpack"
         },
         {
           "es": "recreo",
-          "ko": "쉬는 시간"
+          "ko": "쉬는 시간",
+          "en": "recess"
         },
         {
           "es": "timbre",
-          "ko": "종"
+          "ko": "종",
+          "en": "doorbell"
         },
         {
           "es": "patio",
-          "ko": "운동장"
+          "ko": "운동장",
+          "en": "yard"
         },
         {
           "es": "biblioteca",
-          "ko": "도서관"
+          "ko": "도서관",
+          "en": "library"
         },
         {
           "es": "laboratorio",
-          "ko": "실험실"
+          "ko": "실험실",
+          "en": "laboratory"
         },
         {
           "es": "gimnasio",
-          "ko": "체육관"
+          "ko": "체육관",
+          "en": "gym"
         },
         {
           "es": "matemáticas",
-          "ko": "수학"
+          "ko": "수학",
+          "en": "mathematics"
         },
         {
           "es": "ciencias",
-          "ko": "과학"
+          "ko": "과학",
+          "en": "sciences"
         },
         {
           "es": "historia",
-          "ko": "역사"
+          "ko": "역사",
+          "en": "history"
         },
         {
           "es": "geografía",
-          "ko": "지리"
+          "ko": "지리",
+          "en": "geography"
         },
         {
           "es": "literatura",
-          "ko": "문학"
+          "ko": "문학",
+          "en": "literature"
         }
       ]
     },
@@ -1764,43 +2164,53 @@
       "words": [
         {
           "es": "inglés",
-          "ko": "영어"
+          "ko": "영어",
+          "en": "English"
         },
         {
           "es": "educación física",
-          "ko": "체육"
+          "ko": "체육",
+          "en": "physical education"
         },
         {
           "es": "música",
-          "ko": "음악"
+          "ko": "음악",
+          "en": "music"
         },
         {
           "es": "arte",
-          "ko": "미술"
+          "ko": "미술",
+          "en": "art"
         },
         {
           "es": "biología",
-          "ko": "생물"
+          "ko": "생물",
+          "en": "biology"
         },
         {
           "es": "química",
-          "ko": "화학"
+          "ko": "화학",
+          "en": "chemistry"
         },
         {
           "es": "física",
-          "ko": "물리"
+          "ko": "물리",
+          "en": "physics"
         },
         {
           "es": "informática",
-          "ko": "정보"
+          "ko": "정보",
+          "en": "computer science"
         },
         {
           "es": "filosofía",
-          "ko": "철학"
+          "ko": "철학",
+          "en": "philosophy"
         },
         {
           "es": "economía",
-          "ko": "경제"
+          "ko": "경제",
+          "en": "economy"
         }
       ]
     },
@@ -1811,43 +2221,53 @@
       "words": [
         {
           "es": "universidad",
-          "ko": "대학교"
+          "ko": "대학교",
+          "en": "university"
         },
         {
           "es": "facultad",
-          "ko": "학부"
+          "ko": "학부",
+          "en": "faculty"
         },
         {
           "es": "licenciatura",
-          "ko": "학사"
+          "ko": "학사",
+          "en": "bachelor's degree"
         },
         {
           "es": "maestría",
-          "ko": "석사"
+          "ko": "석사",
+          "en": "master's degree"
         },
         {
           "es": "doctorado",
-          "ko": "박사"
+          "ko": "박사",
+          "en": "PhD"
         },
         {
           "es": "beca",
-          "ko": "장학금"
+          "ko": "장학금",
+          "en": "scholarship"
         },
         {
           "es": "matrícula",
-          "ko": "등록금"
+          "ko": "등록금",
+          "en": "tuition"
         },
         {
           "es": "semestre",
-          "ko": "학기"
+          "ko": "학기",
+          "en": "semester"
         },
         {
           "es": "crédito",
-          "ko": "학점"
+          "ko": "학점",
+          "en": "credit"
         },
         {
           "es": "tesis",
-          "ko": "논문"
+          "ko": "논문",
+          "en": "thesis"
         }
       ]
     },
@@ -1858,43 +2278,53 @@
       "words": [
         {
           "es": "catedrático",
-          "ko": "교수"
+          "ko": "교수",
+          "en": "professor"
         },
         {
           "es": "campus",
-          "ko": "캠퍼스"
+          "ko": "캠퍼스",
+          "en": "campus"
         },
         {
           "es": "graduación",
-          "ko": "졸업"
+          "ko": "졸업",
+          "en": "graduation"
         },
         {
           "es": "conferencia",
-          "ko": "강연"
+          "ko": "강연",
+          "en": "conference"
         },
         {
           "es": "dormitorio",
-          "ko": "기숙사"
+          "ko": "기숙사",
+          "en": "bedroom"
         },
         {
           "es": "examen",
-          "ko": "시험"
+          "ko": "시험",
+          "en": "exam"
         },
         {
           "es": "nota",
-          "ko": "성적"
+          "ko": "성적",
+          "en": "grade"
         },
         {
           "es": "aprobado",
-          "ko": "합격"
+          "ko": "합격",
+          "en": "pass"
         },
         {
           "es": "suspenso",
-          "ko": "불합격"
+          "ko": "불합격",
+          "en": "fail"
         },
         {
           "es": "respuesta",
-          "ko": "답"
+          "ko": "답",
+          "en": "answer"
         }
       ]
     },
@@ -1905,43 +2335,53 @@
       "words": [
         {
           "es": "pregunta",
-          "ko": "질문"
+          "ko": "질문",
+          "en": "question"
         },
         {
           "es": "prueba",
-          "ko": "테스트"
+          "ko": "테스트",
+          "en": "evidence"
         },
         {
           "es": "calificación",
-          "ko": "평가"
+          "ko": "평가",
+          "en": "grade"
         },
         {
           "es": "promedio",
-          "ko": "평균"
+          "ko": "평균",
+          "en": "average"
         },
         {
           "es": "puntuación",
-          "ko": "점수"
+          "ko": "점수",
+          "en": "score"
         },
         {
           "es": "repaso",
-          "ko": "복습"
+          "ko": "복습",
+          "en": "review"
         },
         {
           "es": "error",
-          "ko": "오류"
+          "ko": "오류",
+          "en": "error"
         },
         {
           "es": "corrección",
-          "ko": "수정"
+          "ko": "수정",
+          "en": "correction"
         },
         {
           "es": "plazo",
-          "ko": "기한"
+          "ko": "기한",
+          "en": "deadline"
         },
         {
           "es": "certificado",
-          "ko": "자격증"
+          "ko": "자격증",
+          "en": "certificate"
         }
       ]
     },
@@ -1952,43 +2392,53 @@
       "words": [
         {
           "es": "investigación",
-          "ko": "연구"
+          "ko": "연구",
+          "en": "research"
         },
         {
           "es": "estudio",
-          "ko": "학습"
+          "ko": "학습",
+          "en": "study"
         },
         {
           "es": "datos",
-          "ko": "데이터"
+          "ko": "데이터",
+          "en": "data"
         },
         {
           "es": "método",
-          "ko": "방법"
+          "ko": "방법",
+          "en": "method"
         },
         {
           "es": "teoría",
-          "ko": "이론"
+          "ko": "이론",
+          "en": "theory"
         },
         {
           "es": "hipótesis",
-          "ko": "가설"
+          "ko": "가설",
+          "en": "hypothesis"
         },
         {
           "es": "experimento",
-          "ko": "실험"
+          "ko": "실험",
+          "en": "experiment"
         },
         {
           "es": "análisis",
-          "ko": "분석"
+          "ko": "분석",
+          "en": "analysis"
         },
         {
           "es": "fuente",
-          "ko": "출처"
+          "ko": "출처",
+          "en": "fountain"
         },
         {
           "es": "bibliografía",
-          "ko": "참고문헌"
+          "ko": "참고문헌",
+          "en": "bibliography"
         }
       ]
     },
@@ -1999,43 +2449,53 @@
       "words": [
         {
           "es": "estadística",
-          "ko": "통계"
+          "ko": "통계",
+          "en": "statistics"
         },
         {
           "es": "encuesta",
-          "ko": "설문조사"
+          "ko": "설문조사",
+          "en": "survey"
         },
         {
           "es": "descubrimiento",
-          "ko": "발견"
+          "ko": "발견",
+          "en": "discovery"
         },
         {
           "es": "publicación",
-          "ko": "출판"
+          "ko": "출판",
+          "en": "publication"
         },
         {
           "es": "resumen",
-          "ko": "요약"
+          "ko": "요약",
+          "en": "summary"
         },
         {
           "es": "trabajar",
-          "ko": "일하다"
+          "ko": "일하다",
+          "en": "to work"
         },
         {
           "es": "estudiar",
-          "ko": "공부하다"
+          "ko": "공부하다",
+          "en": "to study"
         },
         {
           "es": "enseñar",
-          "ko": "가르치다"
+          "ko": "가르치다",
+          "en": "to teach"
         },
         {
           "es": "aprender",
-          "ko": "배우다"
+          "ko": "배우다",
+          "en": "to learn"
         },
         {
           "es": "contratar",
-          "ko": "고용하다"
+          "ko": "고용하다",
+          "en": "to hire"
         }
       ]
     },
@@ -2046,43 +2506,53 @@
       "words": [
         {
           "es": "despedir",
-          "ko": "해고하다"
+          "ko": "해고하다",
+          "en": "to fire"
         },
         {
           "es": "renunciar",
-          "ko": "사직하다"
+          "ko": "사직하다",
+          "en": "to resign"
         },
         {
           "es": "producir",
-          "ko": "생산하다"
+          "ko": "생산하다",
+          "en": "to produce"
         },
         {
           "es": "organizar",
-          "ko": "조직하다"
+          "ko": "조직하다",
+          "en": "to organize"
         },
         {
           "es": "dirigir",
-          "ko": "관리하다"
+          "ko": "관리하다",
+          "en": "to manage"
         },
         {
           "es": "colaborar",
-          "ko": "협력하다"
+          "ko": "협력하다",
+          "en": "to collaborate"
         },
         {
           "es": "negociar",
-          "ko": "협상하다"
+          "ko": "협상하다",
+          "en": "to negotiate"
         },
         {
           "es": "capacitar",
-          "ko": "훈련하다"
+          "ko": "훈련하다",
+          "en": "to train"
         },
         {
           "es": "supervisar",
-          "ko": "감독하다"
+          "ko": "감독하다",
+          "en": "to supervise"
         },
         {
           "es": "planificar",
-          "ko": "계획하다"
+          "ko": "계획하다",
+          "en": "to plan"
         }
       ]
     },
@@ -2093,43 +2563,53 @@
       "words": [
         {
           "es": "plazo de entrega",
-          "ko": "납기"
+          "ko": "납기",
+          "en": "delivery deadline"
         },
         {
           "es": "cuota de mercado",
-          "ko": "시장 점유율"
+          "ko": "시장 점유율",
+          "en": "market share"
         },
         {
           "es": "valor añadido",
-          "ko": "부가가치"
+          "ko": "부가가치",
+          "en": "added value"
         },
         {
           "es": "ventaja competitiva",
-          "ko": "경쟁 우위"
+          "ko": "경쟁 우위",
+          "en": "competitive advantage"
         },
         {
           "es": "cadena de suministro",
-          "ko": "공급망"
+          "ko": "공급망",
+          "en": "supply chain"
         },
         {
           "es": "margen de beneficio",
-          "ko": "이윤"
+          "ko": "이윤",
+          "en": "profit margin"
         },
         {
           "es": "plan de negocios",
-          "ko": "사업 계획서"
+          "ko": "사업 계획서",
+          "en": "business plan"
         },
         {
           "es": "recursos humanos",
-          "ko": "인사부"
+          "ko": "인사부",
+          "en": "human resources"
         },
         {
           "es": "servicio al cliente",
-          "ko": "고객 서비스"
+          "ko": "고객 서비스",
+          "en": "customer service"
         },
         {
           "es": "control de calidad",
-          "ko": "품질 관리"
+          "ko": "품질 관리",
+          "en": "quality control"
         }
       ]
     },
@@ -2140,43 +2620,53 @@
       "words": [
         {
           "es": "comercio electrónico",
-          "ko": "전자 상거래"
+          "ko": "전자 상거래",
+          "en": "e-commerce"
         },
         {
           "es": "propiedad intelectual",
-          "ko": "지적 재산권"
+          "ko": "지적 재산권",
+          "en": "intellectual property"
         },
         {
           "es": "desarrollo sostenible",
-          "ko": "지속 가능한 발전"
+          "ko": "지속 가능한 발전",
+          "en": "sustainable development"
         },
         {
           "es": "responsabilidad social",
-          "ko": "사회적 책임"
+          "ko": "사회적 책임",
+          "en": "social responsibility"
         },
         {
           "es": "sede central",
-          "ko": "본사"
+          "ko": "본사",
+          "en": "headquarters"
         },
         {
           "es": "trabajo en equipo",
-          "ko": "팀워크"
+          "ko": "팀워크",
+          "en": "teamwork"
         },
         {
           "es": "liderazgo",
-          "ko": "리더십"
+          "ko": "리더십",
+          "en": "leadership"
         },
         {
           "es": "comunicación",
-          "ko": "소통"
+          "ko": "소통",
+          "en": "communication"
         },
         {
           "es": "puntualidad",
-          "ko": "시간 엄수"
+          "ko": "시간 엄수",
+          "en": "punctuality"
         },
         {
           "es": "productividad",
-          "ko": "생산성"
+          "ko": "생산성",
+          "en": "productivity"
         }
       ]
     },
@@ -2187,43 +2677,53 @@
       "words": [
         {
           "es": "eficiencia",
-          "ko": "효율성"
+          "ko": "효율성",
+          "en": "efficiency"
         },
         {
           "es": "creatividad",
-          "ko": "창의성"
+          "ko": "창의성",
+          "en": "creativity"
         },
         {
           "es": "motivación",
-          "ko": "동기 부여"
+          "ko": "동기 부여",
+          "en": "motivation"
         },
         {
           "es": "estrés laboral",
-          "ko": "업무 스트레스"
+          "ko": "업무 스트레스",
+          "en": "work stress"
         },
         {
           "es": "equilibrio",
-          "ko": "균형"
+          "ko": "균형",
+          "en": "balance"
         },
         {
           "es": "diversidad",
-          "ko": "다양성"
+          "ko": "다양성",
+          "en": "diversity"
         },
         {
           "es": "ética profesional",
-          "ko": "직업 윤리"
+          "ko": "직업 윤리",
+          "en": "professional ethics"
         },
         {
           "es": "ambiente laboral",
-          "ko": "근무 환경"
+          "ko": "근무 환경",
+          "en": "work environment"
         },
         {
           "es": "bienestar",
-          "ko": "복지"
+          "ko": "복지",
+          "en": "well-being"
         },
         {
           "es": "compromiso",
-          "ko": "헌신"
+          "ko": "헌신",
+          "en": "commitment"
         }
       ]
     },
@@ -2234,403 +2734,503 @@
       "words": [
         {
           "es": "inglés",
-          "ko": "영어"
+          "ko": "영어",
+          "en": "English"
         },
         {
           "es": "educación física",
-          "ko": "체육"
+          "ko": "체육",
+          "en": "physical education"
         },
         {
           "es": "música",
-          "ko": "음악"
+          "ko": "음악",
+          "en": "music"
         },
         {
           "es": "arte",
-          "ko": "미술"
+          "ko": "미술",
+          "en": "art"
         },
         {
           "es": "biología",
-          "ko": "생물"
+          "ko": "생물",
+          "en": "biology"
         },
         {
           "es": "química",
-          "ko": "화학"
+          "ko": "화학",
+          "en": "chemistry"
         },
         {
           "es": "física",
-          "ko": "물리"
+          "ko": "물리",
+          "en": "physics"
         },
         {
           "es": "informática",
-          "ko": "정보"
+          "ko": "정보",
+          "en": "computer science"
         },
         {
           "es": "filosofía",
-          "ko": "철학"
+          "ko": "철학",
+          "en": "philosophy"
         },
         {
           "es": "economía",
-          "ko": "경제"
+          "ko": "경제",
+          "en": "economy"
         },
         {
           "es": "universidad",
-          "ko": "대학교"
+          "ko": "대학교",
+          "en": "university"
         },
         {
           "es": "facultad",
-          "ko": "학부"
+          "ko": "학부",
+          "en": "faculty"
         },
         {
           "es": "licenciatura",
-          "ko": "학사"
+          "ko": "학사",
+          "en": "bachelor's degree"
         },
         {
           "es": "maestría",
-          "ko": "석사"
+          "ko": "석사",
+          "en": "master's degree"
         },
         {
           "es": "doctorado",
-          "ko": "박사"
+          "ko": "박사",
+          "en": "PhD"
         },
         {
           "es": "beca",
-          "ko": "장학금"
+          "ko": "장학금",
+          "en": "scholarship"
         },
         {
           "es": "matrícula",
-          "ko": "등록금"
+          "ko": "등록금",
+          "en": "tuition"
         },
         {
           "es": "semestre",
-          "ko": "학기"
+          "ko": "학기",
+          "en": "semester"
         },
         {
           "es": "crédito",
-          "ko": "학점"
+          "ko": "학점",
+          "en": "credit"
         },
         {
           "es": "tesis",
-          "ko": "논문"
+          "ko": "논문",
+          "en": "thesis"
         },
         {
           "es": "catedrático",
-          "ko": "교수"
+          "ko": "교수",
+          "en": "professor"
         },
         {
           "es": "campus",
-          "ko": "캠퍼스"
+          "ko": "캠퍼스",
+          "en": "campus"
         },
         {
           "es": "graduación",
-          "ko": "졸업"
+          "ko": "졸업",
+          "en": "graduation"
         },
         {
           "es": "conferencia",
-          "ko": "강연"
+          "ko": "강연",
+          "en": "conference"
         },
         {
           "es": "dormitorio",
-          "ko": "기숙사"
+          "ko": "기숙사",
+          "en": "bedroom"
         },
         {
           "es": "examen",
-          "ko": "시험"
+          "ko": "시험",
+          "en": "exam"
         },
         {
           "es": "nota",
-          "ko": "성적"
+          "ko": "성적",
+          "en": "grade"
         },
         {
           "es": "aprobado",
-          "ko": "합격"
+          "ko": "합격",
+          "en": "pass"
         },
         {
           "es": "suspenso",
-          "ko": "불합격"
+          "ko": "불합격",
+          "en": "fail"
         },
         {
           "es": "respuesta",
-          "ko": "답"
+          "ko": "답",
+          "en": "answer"
         },
         {
           "es": "pregunta",
-          "ko": "질문"
+          "ko": "질문",
+          "en": "question"
         },
         {
           "es": "prueba",
-          "ko": "테스트"
+          "ko": "테스트",
+          "en": "evidence"
         },
         {
           "es": "calificación",
-          "ko": "평가"
+          "ko": "평가",
+          "en": "grade"
         },
         {
           "es": "promedio",
-          "ko": "평균"
+          "ko": "평균",
+          "en": "average"
         },
         {
           "es": "puntuación",
-          "ko": "점수"
+          "ko": "점수",
+          "en": "score"
         },
         {
           "es": "repaso",
-          "ko": "복습"
+          "ko": "복습",
+          "en": "review"
         },
         {
           "es": "error",
-          "ko": "오류"
+          "ko": "오류",
+          "en": "error"
         },
         {
           "es": "corrección",
-          "ko": "수정"
+          "ko": "수정",
+          "en": "correction"
         },
         {
           "es": "plazo",
-          "ko": "기한"
+          "ko": "기한",
+          "en": "deadline"
         },
         {
           "es": "certificado",
-          "ko": "자격증"
+          "ko": "자격증",
+          "en": "certificate"
         },
         {
           "es": "investigación",
-          "ko": "연구"
+          "ko": "연구",
+          "en": "research"
         },
         {
           "es": "estudio",
-          "ko": "학습"
+          "ko": "학습",
+          "en": "study"
         },
         {
           "es": "datos",
-          "ko": "데이터"
+          "ko": "데이터",
+          "en": "data"
         },
         {
           "es": "método",
-          "ko": "방법"
+          "ko": "방법",
+          "en": "method"
         },
         {
           "es": "teoría",
-          "ko": "이론"
+          "ko": "이론",
+          "en": "theory"
         },
         {
           "es": "hipótesis",
-          "ko": "가설"
+          "ko": "가설",
+          "en": "hypothesis"
         },
         {
           "es": "experimento",
-          "ko": "실험"
+          "ko": "실험",
+          "en": "experiment"
         },
         {
           "es": "análisis",
-          "ko": "분석"
+          "ko": "분석",
+          "en": "analysis"
         },
         {
           "es": "fuente",
-          "ko": "출처"
+          "ko": "출처",
+          "en": "fountain"
         },
         {
           "es": "bibliografía",
-          "ko": "참고문헌"
+          "ko": "참고문헌",
+          "en": "bibliography"
         },
         {
           "es": "estadística",
-          "ko": "통계"
+          "ko": "통계",
+          "en": "statistics"
         },
         {
           "es": "encuesta",
-          "ko": "설문조사"
+          "ko": "설문조사",
+          "en": "survey"
         },
         {
           "es": "descubrimiento",
-          "ko": "발견"
+          "ko": "발견",
+          "en": "discovery"
         },
         {
           "es": "publicación",
-          "ko": "출판"
+          "ko": "출판",
+          "en": "publication"
         },
         {
           "es": "resumen",
-          "ko": "요약"
+          "ko": "요약",
+          "en": "summary"
         },
         {
           "es": "trabajar",
-          "ko": "일하다"
+          "ko": "일하다",
+          "en": "to work"
         },
         {
           "es": "estudiar",
-          "ko": "공부하다"
+          "ko": "공부하다",
+          "en": "to study"
         },
         {
           "es": "enseñar",
-          "ko": "가르치다"
+          "ko": "가르치다",
+          "en": "to teach"
         },
         {
           "es": "aprender",
-          "ko": "배우다"
+          "ko": "배우다",
+          "en": "to learn"
         },
         {
           "es": "contratar",
-          "ko": "고용하다"
+          "ko": "고용하다",
+          "en": "to hire"
         },
         {
           "es": "despedir",
-          "ko": "해고하다"
+          "ko": "해고하다",
+          "en": "to fire"
         },
         {
           "es": "renunciar",
-          "ko": "사직하다"
+          "ko": "사직하다",
+          "en": "to resign"
         },
         {
           "es": "producir",
-          "ko": "생산하다"
+          "ko": "생산하다",
+          "en": "to produce"
         },
         {
           "es": "organizar",
-          "ko": "조직하다"
+          "ko": "조직하다",
+          "en": "to organize"
         },
         {
           "es": "dirigir",
-          "ko": "관리하다"
+          "ko": "관리하다",
+          "en": "to manage"
         },
         {
           "es": "colaborar",
-          "ko": "협력하다"
+          "ko": "협력하다",
+          "en": "to collaborate"
         },
         {
           "es": "negociar",
-          "ko": "협상하다"
+          "ko": "협상하다",
+          "en": "to negotiate"
         },
         {
           "es": "capacitar",
-          "ko": "훈련하다"
+          "ko": "훈련하다",
+          "en": "to train"
         },
         {
           "es": "supervisar",
-          "ko": "감독하다"
+          "ko": "감독하다",
+          "en": "to supervise"
         },
         {
           "es": "planificar",
-          "ko": "계획하다"
+          "ko": "계획하다",
+          "en": "to plan"
         },
         {
           "es": "plazo de entrega",
-          "ko": "납기"
+          "ko": "납기",
+          "en": "delivery deadline"
         },
         {
           "es": "cuota de mercado",
-          "ko": "시장 점유율"
+          "ko": "시장 점유율",
+          "en": "market share"
         },
         {
           "es": "valor añadido",
-          "ko": "부가가치"
+          "ko": "부가가치",
+          "en": "added value"
         },
         {
           "es": "ventaja competitiva",
-          "ko": "경쟁 우위"
+          "ko": "경쟁 우위",
+          "en": "competitive advantage"
         },
         {
           "es": "cadena de suministro",
-          "ko": "공급망"
+          "ko": "공급망",
+          "en": "supply chain"
         },
         {
           "es": "margen de beneficio",
-          "ko": "이윤"
+          "ko": "이윤",
+          "en": "profit margin"
         },
         {
           "es": "plan de negocios",
-          "ko": "사업 계획서"
+          "ko": "사업 계획서",
+          "en": "business plan"
         },
         {
           "es": "recursos humanos",
-          "ko": "인사부"
+          "ko": "인사부",
+          "en": "human resources"
         },
         {
           "es": "servicio al cliente",
-          "ko": "고객 서비스"
+          "ko": "고객 서비스",
+          "en": "customer service"
         },
         {
           "es": "control de calidad",
-          "ko": "품질 관리"
+          "ko": "품질 관리",
+          "en": "quality control"
         },
         {
           "es": "comercio electrónico",
-          "ko": "전자 상거래"
+          "ko": "전자 상거래",
+          "en": "e-commerce"
         },
         {
           "es": "propiedad intelectual",
-          "ko": "지적 재산권"
+          "ko": "지적 재산권",
+          "en": "intellectual property"
         },
         {
           "es": "desarrollo sostenible",
-          "ko": "지속 가능한 발전"
+          "ko": "지속 가능한 발전",
+          "en": "sustainable development"
         },
         {
           "es": "responsabilidad social",
-          "ko": "사회적 책임"
+          "ko": "사회적 책임",
+          "en": "social responsibility"
         },
         {
           "es": "sede central",
-          "ko": "본사"
+          "ko": "본사",
+          "en": "headquarters"
         },
         {
           "es": "trabajo en equipo",
-          "ko": "팀워크"
+          "ko": "팀워크",
+          "en": "teamwork"
         },
         {
           "es": "liderazgo",
-          "ko": "리더십"
+          "ko": "리더십",
+          "en": "leadership"
         },
         {
           "es": "comunicación",
-          "ko": "소통"
+          "ko": "소통",
+          "en": "communication"
         },
         {
           "es": "puntualidad",
-          "ko": "시간 엄수"
+          "ko": "시간 엄수",
+          "en": "punctuality"
         },
         {
           "es": "productividad",
-          "ko": "생산성"
+          "ko": "생산성",
+          "en": "productivity"
         },
         {
           "es": "eficiencia",
-          "ko": "효율성"
+          "ko": "효율성",
+          "en": "efficiency"
         },
         {
           "es": "creatividad",
-          "ko": "창의성"
+          "ko": "창의성",
+          "en": "creativity"
         },
         {
           "es": "motivación",
-          "ko": "동기 부여"
+          "ko": "동기 부여",
+          "en": "motivation"
         },
         {
           "es": "estrés laboral",
-          "ko": "업무 스트레스"
+          "ko": "업무 스트레스",
+          "en": "work stress"
         },
         {
           "es": "equilibrio",
-          "ko": "균형"
+          "ko": "균형",
+          "en": "balance"
         },
         {
           "es": "diversidad",
-          "ko": "다양성"
+          "ko": "다양성",
+          "en": "diversity"
         },
         {
           "es": "ética profesional",
-          "ko": "직업 윤리"
+          "ko": "직업 윤리",
+          "en": "professional ethics"
         },
         {
           "es": "ambiente laboral",
-          "ko": "근무 환경"
+          "ko": "근무 환경",
+          "en": "work environment"
         },
         {
           "es": "bienestar",
-          "ko": "복지"
+          "ko": "복지",
+          "en": "well-being"
         },
         {
           "es": "compromiso",
-          "ko": "헌신"
+          "ko": "헌신",
+          "en": "commitment"
         }
       ]
     }

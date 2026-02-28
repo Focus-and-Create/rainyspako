@@ -10,43 +10,53 @@
       "words": [
         {
           "es": "ciudad",
-          "ko": "도시"
+          "ko": "도시",
+          "en": "city"
         },
         {
           "es": "pueblo",
-          "ko": "마을"
+          "ko": "마을",
+          "en": "people"
         },
         {
           "es": "calle",
-          "ko": "거리"
+          "ko": "거리",
+          "en": "street"
         },
         {
           "es": "plaza",
-          "ko": "광장"
+          "ko": "광장",
+          "en": "square"
         },
         {
           "es": "barrio",
-          "ko": "동네"
+          "ko": "동네",
+          "en": "neighborhood"
         },
         {
           "es": "centro",
-          "ko": "중심"
+          "ko": "중심",
+          "en": "center"
         },
         {
           "es": "avenida",
-          "ko": "대로"
+          "ko": "대로",
+          "en": "avenue"
         },
         {
           "es": "manzana",
-          "ko": "블록"
+          "ko": "블록",
+          "en": "apple"
         },
         {
           "es": "zona",
-          "ko": "구역"
+          "ko": "구역",
+          "en": "zone"
         },
         {
           "es": "capital",
-          "ko": "수도"
+          "ko": "수도",
+          "en": "capital"
         }
       ]
     },
@@ -57,43 +67,53 @@
       "words": [
         {
           "es": "metrópoli",
-          "ko": "대도시"
+          "ko": "대도시",
+          "en": "metropolis"
         },
         {
           "es": "distrito",
-          "ko": "지구"
+          "ko": "지구",
+          "en": "district"
         },
         {
           "es": "urbanización",
-          "ko": "주택단지"
+          "ko": "주택단지",
+          "en": "housing development"
         },
         {
           "es": "vecindario",
-          "ko": "이웃"
+          "ko": "이웃",
+          "en": "neighborhood"
         },
         {
           "es": "habitante",
-          "ko": "주민"
+          "ko": "주민",
+          "en": "inhabitant"
         },
         {
           "es": "edificio",
-          "ko": "건물"
+          "ko": "건물",
+          "en": "building"
         },
         {
           "es": "hospital",
-          "ko": "병원"
+          "ko": "병원",
+          "en": "hospital"
         },
         {
           "es": "escuela",
-          "ko": "학교"
+          "ko": "학교",
+          "en": "school"
         },
         {
           "es": "iglesia",
-          "ko": "교회"
+          "ko": "교회",
+          "en": "church"
         },
         {
           "es": "banco",
-          "ko": "은행"
+          "ko": "은행",
+          "en": "bank"
         }
       ]
     },
@@ -104,43 +124,53 @@
       "words": [
         {
           "es": "biblioteca",
-          "ko": "도서관"
+          "ko": "도서관",
+          "en": "library"
         },
         {
           "es": "museo",
-          "ko": "박물관"
+          "ko": "박물관",
+          "en": "museum"
         },
         {
           "es": "teatro",
-          "ko": "극장"
+          "ko": "극장",
+          "en": "theater"
         },
         {
           "es": "restaurante",
-          "ko": "식당"
+          "ko": "식당",
+          "en": "restaurant"
         },
         {
           "es": "tienda",
-          "ko": "가게"
+          "ko": "가게",
+          "en": "store"
         },
         {
           "es": "farmacia",
-          "ko": "약국"
+          "ko": "약국",
+          "en": "pharmacy"
         },
         {
           "es": "supermercado",
-          "ko": "슈퍼마켓"
+          "ko": "슈퍼마켓",
+          "en": "supermarket"
         },
         {
           "es": "oficina",
-          "ko": "사무실"
+          "ko": "사무실",
+          "en": "office"
         },
         {
           "es": "hotel",
-          "ko": "호텔"
+          "ko": "호텔",
+          "en": "hotel"
         },
         {
           "es": "ayuntamiento",
-          "ko": "시청"
+          "ko": "시청",
+          "en": "city hall"
         }
       ]
     },
@@ -151,43 +181,53 @@
       "words": [
         {
           "es": "estación",
-          "ko": "역"
+          "ko": "역",
+          "en": "station"
         },
         {
           "es": "aeropuerto",
-          "ko": "공항"
+          "ko": "공항",
+          "en": "airport"
         },
         {
           "es": "correos",
-          "ko": "우체국"
+          "ko": "우체국",
+          "en": "post office"
         },
         {
           "es": "comisaría",
-          "ko": "경찰서"
+          "ko": "경찰서",
+          "en": "police station"
         },
         {
           "es": "bomberos",
-          "ko": "소방서"
+          "ko": "소방서",
+          "en": "fire station"
         },
         {
           "es": "gasolinera",
-          "ko": "주유소"
+          "ko": "주유소",
+          "en": "gas station"
         },
         {
           "es": "gimnasio",
-          "ko": "체육관"
+          "ko": "체육관",
+          "en": "gym"
         },
         {
           "es": "estadio",
-          "ko": "경기장"
+          "ko": "경기장",
+          "en": "stadium"
         },
         {
           "es": "cementerio",
-          "ko": "묘지"
+          "ko": "묘지",
+          "en": "cemetery"
         },
         {
           "es": "mercado",
-          "ko": "시장"
+          "ko": "시장",
+          "en": "market"
         }
       ]
     },
@@ -198,43 +238,53 @@
       "words": [
         {
           "es": "guardería",
-          "ko": "어린이집"
+          "ko": "어린이집",
+          "en": "daycare"
         },
         {
           "es": "universidad",
-          "ko": "대학교"
+          "ko": "대학교",
+          "en": "university"
         },
         {
           "es": "embajada",
-          "ko": "대사관"
+          "ko": "대사관",
+          "en": "embassy"
         },
         {
           "es": "tribunal",
-          "ko": "법원"
+          "ko": "법원",
+          "en": "court"
         },
         {
           "es": "prisión",
-          "ko": "감옥"
+          "ko": "감옥",
+          "en": "prison"
         },
         {
           "es": "coche",
-          "ko": "자동차"
+          "ko": "자동차",
+          "en": "car"
         },
         {
           "es": "autobús",
-          "ko": "버스"
+          "ko": "버스",
+          "en": "bus"
         },
         {
           "es": "tren",
-          "ko": "기차"
+          "ko": "기차",
+          "en": "train"
         },
         {
           "es": "metro",
-          "ko": "지하철"
+          "ko": "지하철",
+          "en": "subway"
         },
         {
           "es": "taxi",
-          "ko": "택시"
+          "ko": "택시",
+          "en": "taxi"
         }
       ]
     },
@@ -245,43 +295,53 @@
       "words": [
         {
           "es": "bicicleta",
-          "ko": "자전거"
+          "ko": "자전거",
+          "en": "bicycle"
         },
         {
           "es": "motocicleta",
-          "ko": "오토바이"
+          "ko": "오토바이",
+          "en": "motorcycle"
         },
         {
           "es": "avión",
-          "ko": "비행기"
+          "ko": "비행기",
+          "en": "airplane"
         },
         {
           "es": "barco",
-          "ko": "배"
+          "ko": "배",
+          "en": "ship"
         },
         {
           "es": "tranvía",
-          "ko": "트램"
+          "ko": "트램",
+          "en": "tram"
         },
         {
           "es": "camión",
-          "ko": "트럭"
+          "ko": "트럭",
+          "en": "truck"
         },
         {
           "es": "ambulancia",
-          "ko": "구급차"
+          "ko": "구급차",
+          "en": "ambulance"
         },
         {
           "es": "helicóptero",
-          "ko": "헬리콥터"
+          "ko": "헬리콥터",
+          "en": "helicopter"
         },
         {
           "es": "patinete",
-          "ko": "킥보드"
+          "ko": "킥보드",
+          "en": "scooter"
         },
         {
           "es": "furgoneta",
-          "ko": "승합차"
+          "ko": "승합차",
+          "en": "van"
         }
       ]
     },
@@ -292,43 +352,53 @@
       "words": [
         {
           "es": "puente",
-          "ko": "다리"
+          "ko": "다리",
+          "en": "bridge"
         },
         {
           "es": "túnel",
-          "ko": "터널"
+          "ko": "터널",
+          "en": "tunnel"
         },
         {
           "es": "autopista",
-          "ko": "고속도로"
+          "ko": "고속도로",
+          "en": "highway"
         },
         {
           "es": "semáforo",
-          "ko": "신호등"
+          "ko": "신호등",
+          "en": "traffic light"
         },
         {
           "es": "parada",
-          "ko": "정류장"
+          "ko": "정류장",
+          "en": "stop"
         },
         {
           "es": "cruce",
-          "ko": "교차로"
+          "ko": "교차로",
+          "en": "intersection"
         },
         {
           "es": "rotonda",
-          "ko": "로터리"
+          "ko": "로터리",
+          "en": "roundabout"
         },
         {
           "es": "acera",
-          "ko": "인도"
+          "ko": "인도",
+          "en": "sidewalk"
         },
         {
           "es": "carril",
-          "ko": "차선"
+          "ko": "차선",
+          "en": "lane"
         },
         {
           "es": "peaje",
-          "ko": "톨게이트"
+          "ko": "톨게이트",
+          "en": "toll"
         }
       ]
     },
@@ -339,43 +409,53 @@
       "words": [
         {
           "es": "paso de peatones",
-          "ko": "횡단보도"
+          "ko": "횡단보도",
+          "en": "crosswalk"
         },
         {
           "es": "aparcamiento",
-          "ko": "주차장"
+          "ko": "주차장",
+          "en": "parking lot"
         },
         {
           "es": "carretera",
-          "ko": "도로"
+          "ko": "도로",
+          "en": "road"
         },
         {
           "es": "vía",
-          "ko": "선로"
+          "ko": "선로",
+          "en": "track"
         },
         {
           "es": "terminal",
-          "ko": "터미널"
+          "ko": "터미널",
+          "en": "terminal"
         },
         {
           "es": "norte",
-          "ko": "북쪽"
+          "ko": "북쪽",
+          "en": "north"
         },
         {
           "es": "sur",
-          "ko": "남쪽"
+          "ko": "남쪽",
+          "en": "south"
         },
         {
           "es": "este",
-          "ko": "동쪽"
+          "ko": "동쪽",
+          "en": "east"
         },
         {
           "es": "oeste",
-          "ko": "서쪽"
+          "ko": "서쪽",
+          "en": "west"
         },
         {
           "es": "derecha",
-          "ko": "오른쪽"
+          "ko": "오른쪽",
+          "en": "right"
         }
       ]
     },
@@ -386,43 +466,53 @@
       "words": [
         {
           "es": "izquierda",
-          "ko": "왼쪽"
+          "ko": "왼쪽",
+          "en": "left"
         },
         {
           "es": "arriba",
-          "ko": "위"
+          "ko": "위",
+          "en": "above"
         },
         {
           "es": "abajo",
-          "ko": "아래"
+          "ko": "아래",
+          "en": "below"
         },
         {
           "es": "cerca",
-          "ko": "가까이"
+          "ko": "가까이",
+          "en": "near"
         },
         {
           "es": "lejos",
-          "ko": "멀리"
+          "ko": "멀리",
+          "en": "far"
         },
         {
           "es": "enfrente",
-          "ko": "맞은편"
+          "ko": "맞은편",
+          "en": "across from"
         },
         {
           "es": "detrás",
-          "ko": "뒤"
+          "ko": "뒤",
+          "en": "behind"
         },
         {
           "es": "esquina",
-          "ko": "모퉁이"
+          "ko": "모퉁이",
+          "en": "corner"
         },
         {
           "es": "al lado",
-          "ko": "옆"
+          "ko": "옆",
+          "en": "next to"
         },
         {
           "es": "entre",
-          "ko": "사이"
+          "ko": "사이",
+          "en": "between"
         }
       ]
     },
@@ -433,43 +523,53 @@
       "words": [
         {
           "es": "camino",
-          "ko": "길"
+          "ko": "길",
+          "en": "path"
         },
         {
           "es": "callejón",
-          "ko": "골목"
+          "ko": "골목",
+          "en": "alley"
         },
         {
           "es": "bulevar",
-          "ko": "큰길"
+          "ko": "큰길",
+          "en": "boulevard"
         },
         {
           "es": "paseo",
-          "ko": "산책로"
+          "ko": "산책로",
+          "en": "promenade"
         },
         {
           "es": "glorieta",
-          "ko": "원형광장"
+          "ko": "원형광장",
+          "en": "roundabout"
         },
         {
           "es": "farola",
-          "ko": "가로등"
+          "ko": "가로등",
+          "en": "streetlight"
         },
         {
           "es": "banco público",
-          "ko": "벤치"
+          "ko": "벤치",
+          "en": "bench"
         },
         {
           "es": "buzón",
-          "ko": "우체통"
+          "ko": "우체통",
+          "en": "mailbox"
         },
         {
           "es": "alcantarilla",
-          "ko": "하수구"
+          "ko": "하수구",
+          "en": "drain"
         },
         {
           "es": "bordillo",
-          "ko": "연석"
+          "ko": "연석",
+          "en": "curb"
         }
       ]
     },
@@ -480,403 +580,503 @@
       "words": [
         {
           "es": "ciudad",
-          "ko": "도시"
+          "ko": "도시",
+          "en": "city"
         },
         {
           "es": "pueblo",
-          "ko": "마을"
+          "ko": "마을",
+          "en": "people"
         },
         {
           "es": "calle",
-          "ko": "거리"
+          "ko": "거리",
+          "en": "street"
         },
         {
           "es": "plaza",
-          "ko": "광장"
+          "ko": "광장",
+          "en": "square"
         },
         {
           "es": "barrio",
-          "ko": "동네"
+          "ko": "동네",
+          "en": "neighborhood"
         },
         {
           "es": "centro",
-          "ko": "중심"
+          "ko": "중심",
+          "en": "center"
         },
         {
           "es": "avenida",
-          "ko": "대로"
+          "ko": "대로",
+          "en": "avenue"
         },
         {
           "es": "manzana",
-          "ko": "블록"
+          "ko": "블록",
+          "en": "apple"
         },
         {
           "es": "zona",
-          "ko": "구역"
+          "ko": "구역",
+          "en": "zone"
         },
         {
           "es": "capital",
-          "ko": "수도"
+          "ko": "수도",
+          "en": "capital"
         },
         {
           "es": "metrópoli",
-          "ko": "대도시"
+          "ko": "대도시",
+          "en": "metropolis"
         },
         {
           "es": "distrito",
-          "ko": "지구"
+          "ko": "지구",
+          "en": "district"
         },
         {
           "es": "urbanización",
-          "ko": "주택단지"
+          "ko": "주택단지",
+          "en": "housing development"
         },
         {
           "es": "vecindario",
-          "ko": "이웃"
+          "ko": "이웃",
+          "en": "neighborhood"
         },
         {
           "es": "habitante",
-          "ko": "주민"
+          "ko": "주민",
+          "en": "inhabitant"
         },
         {
           "es": "edificio",
-          "ko": "건물"
+          "ko": "건물",
+          "en": "building"
         },
         {
           "es": "hospital",
-          "ko": "병원"
+          "ko": "병원",
+          "en": "hospital"
         },
         {
           "es": "escuela",
-          "ko": "학교"
+          "ko": "학교",
+          "en": "school"
         },
         {
           "es": "iglesia",
-          "ko": "교회"
+          "ko": "교회",
+          "en": "church"
         },
         {
           "es": "banco",
-          "ko": "은행"
+          "ko": "은행",
+          "en": "bank"
         },
         {
           "es": "biblioteca",
-          "ko": "도서관"
+          "ko": "도서관",
+          "en": "library"
         },
         {
           "es": "museo",
-          "ko": "박물관"
+          "ko": "박물관",
+          "en": "museum"
         },
         {
           "es": "teatro",
-          "ko": "극장"
+          "ko": "극장",
+          "en": "theater"
         },
         {
           "es": "restaurante",
-          "ko": "식당"
+          "ko": "식당",
+          "en": "restaurant"
         },
         {
           "es": "tienda",
-          "ko": "가게"
+          "ko": "가게",
+          "en": "store"
         },
         {
           "es": "farmacia",
-          "ko": "약국"
+          "ko": "약국",
+          "en": "pharmacy"
         },
         {
           "es": "supermercado",
-          "ko": "슈퍼마켓"
+          "ko": "슈퍼마켓",
+          "en": "supermarket"
         },
         {
           "es": "oficina",
-          "ko": "사무실"
+          "ko": "사무실",
+          "en": "office"
         },
         {
           "es": "hotel",
-          "ko": "호텔"
+          "ko": "호텔",
+          "en": "hotel"
         },
         {
           "es": "ayuntamiento",
-          "ko": "시청"
+          "ko": "시청",
+          "en": "city hall"
         },
         {
           "es": "estación",
-          "ko": "역"
+          "ko": "역",
+          "en": "station"
         },
         {
           "es": "aeropuerto",
-          "ko": "공항"
+          "ko": "공항",
+          "en": "airport"
         },
         {
           "es": "correos",
-          "ko": "우체국"
+          "ko": "우체국",
+          "en": "post office"
         },
         {
           "es": "comisaría",
-          "ko": "경찰서"
+          "ko": "경찰서",
+          "en": "police station"
         },
         {
           "es": "bomberos",
-          "ko": "소방서"
+          "ko": "소방서",
+          "en": "fire station"
         },
         {
           "es": "gasolinera",
-          "ko": "주유소"
+          "ko": "주유소",
+          "en": "gas station"
         },
         {
           "es": "gimnasio",
-          "ko": "체육관"
+          "ko": "체육관",
+          "en": "gym"
         },
         {
           "es": "estadio",
-          "ko": "경기장"
+          "ko": "경기장",
+          "en": "stadium"
         },
         {
           "es": "cementerio",
-          "ko": "묘지"
+          "ko": "묘지",
+          "en": "cemetery"
         },
         {
           "es": "mercado",
-          "ko": "시장"
+          "ko": "시장",
+          "en": "market"
         },
         {
           "es": "guardería",
-          "ko": "어린이집"
+          "ko": "어린이집",
+          "en": "daycare"
         },
         {
           "es": "universidad",
-          "ko": "대학교"
+          "ko": "대학교",
+          "en": "university"
         },
         {
           "es": "embajada",
-          "ko": "대사관"
+          "ko": "대사관",
+          "en": "embassy"
         },
         {
           "es": "tribunal",
-          "ko": "법원"
+          "ko": "법원",
+          "en": "court"
         },
         {
           "es": "prisión",
-          "ko": "감옥"
+          "ko": "감옥",
+          "en": "prison"
         },
         {
           "es": "coche",
-          "ko": "자동차"
+          "ko": "자동차",
+          "en": "car"
         },
         {
           "es": "autobús",
-          "ko": "버스"
+          "ko": "버스",
+          "en": "bus"
         },
         {
           "es": "tren",
-          "ko": "기차"
+          "ko": "기차",
+          "en": "train"
         },
         {
           "es": "metro",
-          "ko": "지하철"
+          "ko": "지하철",
+          "en": "subway"
         },
         {
           "es": "taxi",
-          "ko": "택시"
+          "ko": "택시",
+          "en": "taxi"
         },
         {
           "es": "bicicleta",
-          "ko": "자전거"
+          "ko": "자전거",
+          "en": "bicycle"
         },
         {
           "es": "motocicleta",
-          "ko": "오토바이"
+          "ko": "오토바이",
+          "en": "motorcycle"
         },
         {
           "es": "avión",
-          "ko": "비행기"
+          "ko": "비행기",
+          "en": "airplane"
         },
         {
           "es": "barco",
-          "ko": "배"
+          "ko": "배",
+          "en": "ship"
         },
         {
           "es": "tranvía",
-          "ko": "트램"
+          "ko": "트램",
+          "en": "tram"
         },
         {
           "es": "camión",
-          "ko": "트럭"
+          "ko": "트럭",
+          "en": "truck"
         },
         {
           "es": "ambulancia",
-          "ko": "구급차"
+          "ko": "구급차",
+          "en": "ambulance"
         },
         {
           "es": "helicóptero",
-          "ko": "헬리콥터"
+          "ko": "헬리콥터",
+          "en": "helicopter"
         },
         {
           "es": "patinete",
-          "ko": "킥보드"
+          "ko": "킥보드",
+          "en": "scooter"
         },
         {
           "es": "furgoneta",
-          "ko": "승합차"
+          "ko": "승합차",
+          "en": "van"
         },
         {
           "es": "puente",
-          "ko": "다리"
+          "ko": "다리",
+          "en": "bridge"
         },
         {
           "es": "túnel",
-          "ko": "터널"
+          "ko": "터널",
+          "en": "tunnel"
         },
         {
           "es": "autopista",
-          "ko": "고속도로"
+          "ko": "고속도로",
+          "en": "highway"
         },
         {
           "es": "semáforo",
-          "ko": "신호등"
+          "ko": "신호등",
+          "en": "traffic light"
         },
         {
           "es": "parada",
-          "ko": "정류장"
+          "ko": "정류장",
+          "en": "stop"
         },
         {
           "es": "cruce",
-          "ko": "교차로"
+          "ko": "교차로",
+          "en": "intersection"
         },
         {
           "es": "rotonda",
-          "ko": "로터리"
+          "ko": "로터리",
+          "en": "roundabout"
         },
         {
           "es": "acera",
-          "ko": "인도"
+          "ko": "인도",
+          "en": "sidewalk"
         },
         {
           "es": "carril",
-          "ko": "차선"
+          "ko": "차선",
+          "en": "lane"
         },
         {
           "es": "peaje",
-          "ko": "톨게이트"
+          "ko": "톨게이트",
+          "en": "toll"
         },
         {
           "es": "paso de peatones",
-          "ko": "횡단보도"
+          "ko": "횡단보도",
+          "en": "crosswalk"
         },
         {
           "es": "aparcamiento",
-          "ko": "주차장"
+          "ko": "주차장",
+          "en": "parking lot"
         },
         {
           "es": "carretera",
-          "ko": "도로"
+          "ko": "도로",
+          "en": "road"
         },
         {
           "es": "vía",
-          "ko": "선로"
+          "ko": "선로",
+          "en": "track"
         },
         {
           "es": "terminal",
-          "ko": "터미널"
+          "ko": "터미널",
+          "en": "terminal"
         },
         {
           "es": "norte",
-          "ko": "북쪽"
+          "ko": "북쪽",
+          "en": "north"
         },
         {
           "es": "sur",
-          "ko": "남쪽"
+          "ko": "남쪽",
+          "en": "south"
         },
         {
           "es": "este",
-          "ko": "동쪽"
+          "ko": "동쪽",
+          "en": "east"
         },
         {
           "es": "oeste",
-          "ko": "서쪽"
+          "ko": "서쪽",
+          "en": "west"
         },
         {
           "es": "derecha",
-          "ko": "오른쪽"
+          "ko": "오른쪽",
+          "en": "right"
         },
         {
           "es": "izquierda",
-          "ko": "왼쪽"
+          "ko": "왼쪽",
+          "en": "left"
         },
         {
           "es": "arriba",
-          "ko": "위"
+          "ko": "위",
+          "en": "above"
         },
         {
           "es": "abajo",
-          "ko": "아래"
+          "ko": "아래",
+          "en": "below"
         },
         {
           "es": "cerca",
-          "ko": "가까이"
+          "ko": "가까이",
+          "en": "near"
         },
         {
           "es": "lejos",
-          "ko": "멀리"
+          "ko": "멀리",
+          "en": "far"
         },
         {
           "es": "enfrente",
-          "ko": "맞은편"
+          "ko": "맞은편",
+          "en": "across from"
         },
         {
           "es": "detrás",
-          "ko": "뒤"
+          "ko": "뒤",
+          "en": "behind"
         },
         {
           "es": "esquina",
-          "ko": "모퉁이"
+          "ko": "모퉁이",
+          "en": "corner"
         },
         {
           "es": "al lado",
-          "ko": "옆"
+          "ko": "옆",
+          "en": "next to"
         },
         {
           "es": "entre",
-          "ko": "사이"
+          "ko": "사이",
+          "en": "between"
         },
         {
           "es": "camino",
-          "ko": "길"
+          "ko": "길",
+          "en": "path"
         },
         {
           "es": "callejón",
-          "ko": "골목"
+          "ko": "골목",
+          "en": "alley"
         },
         {
           "es": "bulevar",
-          "ko": "큰길"
+          "ko": "큰길",
+          "en": "boulevard"
         },
         {
           "es": "paseo",
-          "ko": "산책로"
+          "ko": "산책로",
+          "en": "promenade"
         },
         {
           "es": "glorieta",
-          "ko": "원형광장"
+          "ko": "원형광장",
+          "en": "roundabout"
         },
         {
           "es": "farola",
-          "ko": "가로등"
+          "ko": "가로등",
+          "en": "streetlight"
         },
         {
           "es": "banco público",
-          "ko": "벤치"
+          "ko": "벤치",
+          "en": "bench"
         },
         {
           "es": "buzón",
-          "ko": "우체통"
+          "ko": "우체통",
+          "en": "mailbox"
         },
         {
           "es": "alcantarilla",
-          "ko": "하수구"
+          "ko": "하수구",
+          "en": "drain"
         },
         {
           "es": "bordillo",
-          "ko": "연석"
+          "ko": "연석",
+          "en": "curb"
         }
       ]
     },
@@ -887,43 +1087,53 @@
       "words": [
         {
           "es": "señal",
-          "ko": "표지판"
+          "ko": "표지판",
+          "en": "signal"
         },
         {
           "es": "pavimento",
-          "ko": "포장도로"
+          "ko": "포장도로",
+          "en": "pavement"
         },
         {
           "es": "atasco",
-          "ko": "교통체증"
+          "ko": "교통체증",
+          "en": "traffic jam"
         },
         {
           "es": "peatón",
-          "ko": "보행자"
+          "ko": "보행자",
+          "en": "pedestrian"
         },
         {
           "es": "bocacalle",
-          "ko": "골목 입구"
+          "ko": "골목 입구",
+          "en": "side street"
         },
         {
           "es": "policía",
-          "ko": "경찰"
+          "ko": "경찰",
+          "en": "police"
         },
         {
           "es": "bombero",
-          "ko": "소방관"
+          "ko": "소방관",
+          "en": "firefighter"
         },
         {
           "es": "basura",
-          "ko": "쓰레기"
+          "ko": "쓰레기",
+          "en": "trash"
         },
         {
           "es": "reciclaje",
-          "ko": "재활용"
+          "ko": "재활용",
+          "en": "recycling"
         },
         {
           "es": "electricidad",
-          "ko": "전기"
+          "ko": "전기",
+          "en": "electricity"
         }
       ]
     },
@@ -934,43 +1144,53 @@
       "words": [
         {
           "es": "agua potable",
-          "ko": "수돗물"
+          "ko": "수돗물",
+          "en": "tap water"
         },
         {
           "es": "alcantarillado",
-          "ko": "하수도"
+          "ko": "하수도",
+          "en": "sewage"
         },
         {
           "es": "transporte público",
-          "ko": "대중교통"
+          "ko": "대중교통",
+          "en": "public transport"
         },
         {
           "es": "emergencia",
-          "ko": "응급"
+          "ko": "응급",
+          "en": "emergency"
         },
         {
           "es": "impuesto",
-          "ko": "세금"
+          "ko": "세금",
+          "en": "tax"
         },
         {
           "es": "servicio",
-          "ko": "서비스"
+          "ko": "서비스",
+          "en": "service"
         },
         {
           "es": "gobierno",
-          "ko": "정부"
+          "ko": "정부",
+          "en": "government"
         },
         {
           "es": "alcalde",
-          "ko": "시장님"
+          "ko": "시장님",
+          "en": "mayor"
         },
         {
           "es": "ciudadano",
-          "ko": "시민"
+          "ko": "시민",
+          "en": "citizen"
         },
         {
           "es": "funcionario",
-          "ko": "공무원"
+          "ko": "공무원",
+          "en": "official"
         }
       ]
     },
@@ -981,43 +1201,53 @@
       "words": [
         {
           "es": "vuelo",
-          "ko": "항공편"
+          "ko": "항공편",
+          "en": "flight"
         },
         {
           "es": "equipaje",
-          "ko": "짐"
+          "ko": "짐",
+          "en": "luggage"
         },
         {
           "es": "maleta",
-          "ko": "여행가방"
+          "ko": "여행가방",
+          "en": "suitcase"
         },
         {
           "es": "pasaporte",
-          "ko": "여권"
+          "ko": "여권",
+          "en": "passport"
         },
         {
           "es": "embarque",
-          "ko": "탑승"
+          "ko": "탑승",
+          "en": "boarding"
         },
         {
           "es": "aterrizaje",
-          "ko": "착륙"
+          "ko": "착륙",
+          "en": "landing"
         },
         {
           "es": "despegue",
-          "ko": "이륙"
+          "ko": "이륙",
+          "en": "takeoff"
         },
         {
           "es": "aduana",
-          "ko": "세관"
+          "ko": "세관",
+          "en": "customs"
         },
         {
           "es": "piloto",
-          "ko": "조종사"
+          "ko": "조종사",
+          "en": "pilot"
         },
         {
           "es": "azafata",
-          "ko": "승무원"
+          "ko": "승무원",
+          "en": "flight attendant"
         }
       ]
     },
@@ -1028,43 +1258,53 @@
       "words": [
         {
           "es": "pista",
-          "ko": "활주로"
+          "ko": "활주로",
+          "en": "runway"
         },
         {
           "es": "tarjeta de embarque",
-          "ko": "탑승권"
+          "ko": "탑승권",
+          "en": "boarding pass"
         },
         {
           "es": "facturación",
-          "ko": "체크인"
+          "ko": "체크인",
+          "en": "check-in"
         },
         {
           "es": "puerta de embarque",
-          "ko": "탑승구"
+          "ko": "탑승구",
+          "en": "boarding gate"
         },
         {
           "es": "escala",
-          "ko": "경유"
+          "ko": "경유",
+          "en": "layover"
         },
         {
           "es": "billete",
-          "ko": "표"
+          "ko": "표",
+          "en": "bill"
         },
         {
           "es": "andén",
-          "ko": "플랫폼"
+          "ko": "플랫폼",
+          "en": "platform"
         },
         {
           "es": "horario",
-          "ko": "시간표"
+          "ko": "시간표",
+          "en": "schedule"
         },
         {
           "es": "asiento",
-          "ko": "좌석"
+          "ko": "좌석",
+          "en": "seat"
         },
         {
           "es": "ventanilla",
-          "ko": "매표소"
+          "ko": "매표소",
+          "en": "ticket window"
         }
       ]
     },
@@ -1075,43 +1315,53 @@
       "words": [
         {
           "es": "pasajero",
-          "ko": "승객"
+          "ko": "승객",
+          "en": "passenger"
         },
         {
           "es": "conductor",
-          "ko": "운전사"
+          "ko": "운전사",
+          "en": "driver"
         },
         {
           "es": "destino",
-          "ko": "목적지"
+          "ko": "목적지",
+          "en": "destination"
         },
         {
           "es": "llegada",
-          "ko": "도착"
+          "ko": "도착",
+          "en": "arrival"
         },
         {
           "es": "salida",
-          "ko": "출발"
+          "ko": "출발",
+          "en": "exit"
         },
         {
           "es": "ida",
-          "ko": "편도"
+          "ko": "편도",
+          "en": "one way"
         },
         {
           "es": "ida y vuelta",
-          "ko": "왕복"
+          "ko": "왕복",
+          "en": "round trip"
         },
         {
           "es": "retraso",
-          "ko": "지연"
+          "ko": "지연",
+          "en": "delay"
         },
         {
           "es": "conexión",
-          "ko": "환승"
+          "ko": "환승",
+          "en": "connection"
         },
         {
           "es": "taquilla",
-          "ko": "매표창구"
+          "ko": "매표창구",
+          "en": "ticket office"
         }
       ]
     },
@@ -1122,43 +1372,53 @@
       "words": [
         {
           "es": "habitación",
-          "ko": "객실"
+          "ko": "객실",
+          "en": "room"
         },
         {
           "es": "reserva",
-          "ko": "예약"
+          "ko": "예약",
+          "en": "reservation"
         },
         {
           "es": "recepción",
-          "ko": "프런트"
+          "ko": "프런트",
+          "en": "reception"
         },
         {
           "es": "llave",
-          "ko": "열쇠"
+          "ko": "열쇠",
+          "en": "key"
         },
         {
           "es": "huésped",
-          "ko": "투숙객"
+          "ko": "투숙객",
+          "en": "guest"
         },
         {
           "es": "alojamiento",
-          "ko": "숙소"
+          "ko": "숙소",
+          "en": "accommodation"
         },
         {
           "es": "pensión",
-          "ko": "민박"
+          "ko": "민박",
+          "en": "bed and breakfast"
         },
         {
           "es": "hostal",
-          "ko": "호스텔"
+          "ko": "호스텔",
+          "en": "hostel"
         },
         {
           "es": "suite",
-          "ko": "스위트룸"
+          "ko": "스위트룸",
+          "en": "suite"
         },
         {
           "es": "desayuno incluido",
-          "ko": "조식 포함"
+          "ko": "조식 포함",
+          "en": "breakfast included"
         }
       ]
     },
@@ -1169,43 +1429,53 @@
       "words": [
         {
           "es": "registro",
-          "ko": "체크인 수속"
+          "ko": "체크인 수속",
+          "en": "check-in"
         },
         {
           "es": "salida del hotel",
-          "ko": "체크아웃"
+          "ko": "체크아웃",
+          "en": "hotel checkout"
         },
         {
           "es": "servicio de habitaciones",
-          "ko": "룸서비스"
+          "ko": "룸서비스",
+          "en": "room service"
         },
         {
           "es": "ascensor",
-          "ko": "엘리베이터"
+          "ko": "엘리베이터",
+          "en": "elevator"
         },
         {
           "es": "conserjería",
-          "ko": "안내 데스크"
+          "ko": "안내 데스크",
+          "en": "concierge"
         },
         {
           "es": "turista",
-          "ko": "관광객"
+          "ko": "관광객",
+          "en": "tourist"
         },
         {
           "es": "monumento",
-          "ko": "기념물"
+          "ko": "기념물",
+          "en": "monument"
         },
         {
           "es": "catedral",
-          "ko": "대성당"
+          "ko": "대성당",
+          "en": "cathedral"
         },
         {
           "es": "castillo",
-          "ko": "성"
+          "ko": "성",
+          "en": "castle"
         },
         {
           "es": "palacio",
-          "ko": "궁전"
+          "ko": "궁전",
+          "en": "palace"
         }
       ]
     },
@@ -1216,43 +1486,53 @@
       "words": [
         {
           "es": "ruinas",
-          "ko": "유적"
+          "ko": "유적",
+          "en": "ruins"
         },
         {
           "es": "guía",
-          "ko": "가이드"
+          "ko": "가이드",
+          "en": "guide"
         },
         {
           "es": "recuerdo",
-          "ko": "기념품"
+          "ko": "기념품",
+          "en": "souvenir"
         },
         {
           "es": "excursión",
-          "ko": "소풍"
+          "ko": "소풍",
+          "en": "excursion"
         },
         {
           "es": "fotografía",
-          "ko": "사진"
+          "ko": "사진",
+          "en": "photography"
         },
         {
           "es": "mirador",
-          "ko": "전망대"
+          "ko": "전망대",
+          "en": "viewpoint"
         },
         {
           "es": "patrimonio",
-          "ko": "유산"
+          "ko": "유산",
+          "en": "heritage"
         },
         {
           "es": "templo",
-          "ko": "사원"
+          "ko": "사원",
+          "en": "temple"
         },
         {
           "es": "estatua",
-          "ko": "동상"
+          "ko": "동상",
+          "en": "statue"
         },
         {
           "es": "torre",
-          "ko": "탑"
+          "ko": "탑",
+          "en": "tower"
         }
       ]
     },
@@ -1263,43 +1543,53 @@
       "words": [
         {
           "es": "mapa",
-          "ko": "지도"
+          "ko": "지도",
+          "en": "map"
         },
         {
           "es": "brújula",
-          "ko": "나침반"
+          "ko": "나침반",
+          "en": "compass"
         },
         {
           "es": "ruta",
-          "ko": "경로"
+          "ko": "경로",
+          "en": "route"
         },
         {
           "es": "dirección",
-          "ko": "방향"
+          "ko": "방향",
+          "en": "address"
         },
         {
           "es": "coordenadas",
-          "ko": "좌표"
+          "ko": "좌표",
+          "en": "coordinates"
         },
         {
           "es": "navegador",
-          "ko": "내비게이션"
+          "ko": "내비게이션",
+          "en": "navigator"
         },
         {
           "es": "ubicación",
-          "ko": "위치"
+          "ko": "위치",
+          "en": "location"
         },
         {
           "es": "distancia",
-          "ko": "거리감"
+          "ko": "거리감",
+          "en": "distance"
         },
         {
           "es": "kilómetro",
-          "ko": "킬로미터"
+          "ko": "킬로미터",
+          "en": "kilometer"
         },
         {
           "es": "plano",
-          "ko": "도면"
+          "ko": "도면",
+          "en": "blueprint"
         }
       ]
     },
@@ -1310,43 +1600,53 @@
       "words": [
         {
           "es": "punto de referencia",
-          "ko": "랜드마크"
+          "ko": "랜드마크",
+          "en": "landmark"
         },
         {
           "es": "itinerario",
-          "ko": "여행 일정"
+          "ko": "여행 일정",
+          "en": "itinerary"
         },
         {
           "es": "atajo",
-          "ko": "지름길"
+          "ko": "지름길",
+          "en": "shortcut"
         },
         {
           "es": "desvío",
-          "ko": "우회로"
+          "ko": "우회로",
+          "en": "detour"
         },
         {
           "es": "indicación",
-          "ko": "안내"
+          "ko": "안내",
+          "en": "indication"
         },
         {
           "es": "tráfico",
-          "ko": "교통"
+          "ko": "교통",
+          "en": "traffic"
         },
         {
           "es": "ruido",
-          "ko": "소음"
+          "ko": "소음",
+          "en": "noise"
         },
         {
           "es": "contaminación",
-          "ko": "오염"
+          "ko": "오염",
+          "en": "pollution"
         },
         {
           "es": "multitud",
-          "ko": "군중"
+          "ko": "군중",
+          "en": "crowd"
         },
         {
           "es": "prisa",
-          "ko": "서두름"
+          "ko": "서두름",
+          "en": "hurry"
         }
       ]
     },
@@ -1357,403 +1657,503 @@
       "words": [
         {
           "es": "señal",
-          "ko": "표지판"
+          "ko": "표지판",
+          "en": "signal"
         },
         {
           "es": "pavimento",
-          "ko": "포장도로"
+          "ko": "포장도로",
+          "en": "pavement"
         },
         {
           "es": "atasco",
-          "ko": "교통체증"
+          "ko": "교통체증",
+          "en": "traffic jam"
         },
         {
           "es": "peatón",
-          "ko": "보행자"
+          "ko": "보행자",
+          "en": "pedestrian"
         },
         {
           "es": "bocacalle",
-          "ko": "골목 입구"
+          "ko": "골목 입구",
+          "en": "side street"
         },
         {
           "es": "policía",
-          "ko": "경찰"
+          "ko": "경찰",
+          "en": "police"
         },
         {
           "es": "bombero",
-          "ko": "소방관"
+          "ko": "소방관",
+          "en": "firefighter"
         },
         {
           "es": "basura",
-          "ko": "쓰레기"
+          "ko": "쓰레기",
+          "en": "trash"
         },
         {
           "es": "reciclaje",
-          "ko": "재활용"
+          "ko": "재활용",
+          "en": "recycling"
         },
         {
           "es": "electricidad",
-          "ko": "전기"
+          "ko": "전기",
+          "en": "electricity"
         },
         {
           "es": "agua potable",
-          "ko": "수돗물"
+          "ko": "수돗물",
+          "en": "tap water"
         },
         {
           "es": "alcantarillado",
-          "ko": "하수도"
+          "ko": "하수도",
+          "en": "sewage"
         },
         {
           "es": "transporte público",
-          "ko": "대중교통"
+          "ko": "대중교통",
+          "en": "public transport"
         },
         {
           "es": "emergencia",
-          "ko": "응급"
+          "ko": "응급",
+          "en": "emergency"
         },
         {
           "es": "impuesto",
-          "ko": "세금"
+          "ko": "세금",
+          "en": "tax"
         },
         {
           "es": "servicio",
-          "ko": "서비스"
+          "ko": "서비스",
+          "en": "service"
         },
         {
           "es": "gobierno",
-          "ko": "정부"
+          "ko": "정부",
+          "en": "government"
         },
         {
           "es": "alcalde",
-          "ko": "시장님"
+          "ko": "시장님",
+          "en": "mayor"
         },
         {
           "es": "ciudadano",
-          "ko": "시민"
+          "ko": "시민",
+          "en": "citizen"
         },
         {
           "es": "funcionario",
-          "ko": "공무원"
+          "ko": "공무원",
+          "en": "official"
         },
         {
           "es": "vuelo",
-          "ko": "항공편"
+          "ko": "항공편",
+          "en": "flight"
         },
         {
           "es": "equipaje",
-          "ko": "짐"
+          "ko": "짐",
+          "en": "luggage"
         },
         {
           "es": "maleta",
-          "ko": "여행가방"
+          "ko": "여행가방",
+          "en": "suitcase"
         },
         {
           "es": "pasaporte",
-          "ko": "여권"
+          "ko": "여권",
+          "en": "passport"
         },
         {
           "es": "embarque",
-          "ko": "탑승"
+          "ko": "탑승",
+          "en": "boarding"
         },
         {
           "es": "aterrizaje",
-          "ko": "착륙"
+          "ko": "착륙",
+          "en": "landing"
         },
         {
           "es": "despegue",
-          "ko": "이륙"
+          "ko": "이륙",
+          "en": "takeoff"
         },
         {
           "es": "aduana",
-          "ko": "세관"
+          "ko": "세관",
+          "en": "customs"
         },
         {
           "es": "piloto",
-          "ko": "조종사"
+          "ko": "조종사",
+          "en": "pilot"
         },
         {
           "es": "azafata",
-          "ko": "승무원"
+          "ko": "승무원",
+          "en": "flight attendant"
         },
         {
           "es": "pista",
-          "ko": "활주로"
+          "ko": "활주로",
+          "en": "runway"
         },
         {
           "es": "tarjeta de embarque",
-          "ko": "탑승권"
+          "ko": "탑승권",
+          "en": "boarding pass"
         },
         {
           "es": "facturación",
-          "ko": "체크인"
+          "ko": "체크인",
+          "en": "check-in"
         },
         {
           "es": "puerta de embarque",
-          "ko": "탑승구"
+          "ko": "탑승구",
+          "en": "boarding gate"
         },
         {
           "es": "escala",
-          "ko": "경유"
+          "ko": "경유",
+          "en": "layover"
         },
         {
           "es": "billete",
-          "ko": "표"
+          "ko": "표",
+          "en": "bill"
         },
         {
           "es": "andén",
-          "ko": "플랫폼"
+          "ko": "플랫폼",
+          "en": "platform"
         },
         {
           "es": "horario",
-          "ko": "시간표"
+          "ko": "시간표",
+          "en": "schedule"
         },
         {
           "es": "asiento",
-          "ko": "좌석"
+          "ko": "좌석",
+          "en": "seat"
         },
         {
           "es": "ventanilla",
-          "ko": "매표소"
+          "ko": "매표소",
+          "en": "ticket window"
         },
         {
           "es": "pasajero",
-          "ko": "승객"
+          "ko": "승객",
+          "en": "passenger"
         },
         {
           "es": "conductor",
-          "ko": "운전사"
+          "ko": "운전사",
+          "en": "driver"
         },
         {
           "es": "destino",
-          "ko": "목적지"
+          "ko": "목적지",
+          "en": "destination"
         },
         {
           "es": "llegada",
-          "ko": "도착"
+          "ko": "도착",
+          "en": "arrival"
         },
         {
           "es": "salida",
-          "ko": "출발"
+          "ko": "출발",
+          "en": "exit"
         },
         {
           "es": "ida",
-          "ko": "편도"
+          "ko": "편도",
+          "en": "one way"
         },
         {
           "es": "ida y vuelta",
-          "ko": "왕복"
+          "ko": "왕복",
+          "en": "round trip"
         },
         {
           "es": "retraso",
-          "ko": "지연"
+          "ko": "지연",
+          "en": "delay"
         },
         {
           "es": "conexión",
-          "ko": "환승"
+          "ko": "환승",
+          "en": "connection"
         },
         {
           "es": "taquilla",
-          "ko": "매표창구"
+          "ko": "매표창구",
+          "en": "ticket office"
         },
         {
           "es": "habitación",
-          "ko": "객실"
+          "ko": "객실",
+          "en": "room"
         },
         {
           "es": "reserva",
-          "ko": "예약"
+          "ko": "예약",
+          "en": "reservation"
         },
         {
           "es": "recepción",
-          "ko": "프런트"
+          "ko": "프런트",
+          "en": "reception"
         },
         {
           "es": "llave",
-          "ko": "열쇠"
+          "ko": "열쇠",
+          "en": "key"
         },
         {
           "es": "huésped",
-          "ko": "투숙객"
+          "ko": "투숙객",
+          "en": "guest"
         },
         {
           "es": "alojamiento",
-          "ko": "숙소"
+          "ko": "숙소",
+          "en": "accommodation"
         },
         {
           "es": "pensión",
-          "ko": "민박"
+          "ko": "민박",
+          "en": "bed and breakfast"
         },
         {
           "es": "hostal",
-          "ko": "호스텔"
+          "ko": "호스텔",
+          "en": "hostel"
         },
         {
           "es": "suite",
-          "ko": "스위트룸"
+          "ko": "스위트룸",
+          "en": "suite"
         },
         {
           "es": "desayuno incluido",
-          "ko": "조식 포함"
+          "ko": "조식 포함",
+          "en": "breakfast included"
         },
         {
           "es": "registro",
-          "ko": "체크인 수속"
+          "ko": "체크인 수속",
+          "en": "check-in"
         },
         {
           "es": "salida del hotel",
-          "ko": "체크아웃"
+          "ko": "체크아웃",
+          "en": "hotel checkout"
         },
         {
           "es": "servicio de habitaciones",
-          "ko": "룸서비스"
+          "ko": "룸서비스",
+          "en": "room service"
         },
         {
           "es": "ascensor",
-          "ko": "엘리베이터"
+          "ko": "엘리베이터",
+          "en": "elevator"
         },
         {
           "es": "conserjería",
-          "ko": "안내 데스크"
+          "ko": "안내 데스크",
+          "en": "concierge"
         },
         {
           "es": "turista",
-          "ko": "관광객"
+          "ko": "관광객",
+          "en": "tourist"
         },
         {
           "es": "monumento",
-          "ko": "기념물"
+          "ko": "기념물",
+          "en": "monument"
         },
         {
           "es": "catedral",
-          "ko": "대성당"
+          "ko": "대성당",
+          "en": "cathedral"
         },
         {
           "es": "castillo",
-          "ko": "성"
+          "ko": "성",
+          "en": "castle"
         },
         {
           "es": "palacio",
-          "ko": "궁전"
+          "ko": "궁전",
+          "en": "palace"
         },
         {
           "es": "ruinas",
-          "ko": "유적"
+          "ko": "유적",
+          "en": "ruins"
         },
         {
           "es": "guía",
-          "ko": "가이드"
+          "ko": "가이드",
+          "en": "guide"
         },
         {
           "es": "recuerdo",
-          "ko": "기념품"
+          "ko": "기념품",
+          "en": "souvenir"
         },
         {
           "es": "excursión",
-          "ko": "소풍"
+          "ko": "소풍",
+          "en": "excursion"
         },
         {
           "es": "fotografía",
-          "ko": "사진"
+          "ko": "사진",
+          "en": "photography"
         },
         {
           "es": "mirador",
-          "ko": "전망대"
+          "ko": "전망대",
+          "en": "viewpoint"
         },
         {
           "es": "patrimonio",
-          "ko": "유산"
+          "ko": "유산",
+          "en": "heritage"
         },
         {
           "es": "templo",
-          "ko": "사원"
+          "ko": "사원",
+          "en": "temple"
         },
         {
           "es": "estatua",
-          "ko": "동상"
+          "ko": "동상",
+          "en": "statue"
         },
         {
           "es": "torre",
-          "ko": "탑"
+          "ko": "탑",
+          "en": "tower"
         },
         {
           "es": "mapa",
-          "ko": "지도"
+          "ko": "지도",
+          "en": "map"
         },
         {
           "es": "brújula",
-          "ko": "나침반"
+          "ko": "나침반",
+          "en": "compass"
         },
         {
           "es": "ruta",
-          "ko": "경로"
+          "ko": "경로",
+          "en": "route"
         },
         {
           "es": "dirección",
-          "ko": "방향"
+          "ko": "방향",
+          "en": "address"
         },
         {
           "es": "coordenadas",
-          "ko": "좌표"
+          "ko": "좌표",
+          "en": "coordinates"
         },
         {
           "es": "navegador",
-          "ko": "내비게이션"
+          "ko": "내비게이션",
+          "en": "navigator"
         },
         {
           "es": "ubicación",
-          "ko": "위치"
+          "ko": "위치",
+          "en": "location"
         },
         {
           "es": "distancia",
-          "ko": "거리감"
+          "ko": "거리감",
+          "en": "distance"
         },
         {
           "es": "kilómetro",
-          "ko": "킬로미터"
+          "ko": "킬로미터",
+          "en": "kilometer"
         },
         {
           "es": "plano",
-          "ko": "도면"
+          "ko": "도면",
+          "en": "blueprint"
         },
         {
           "es": "punto de referencia",
-          "ko": "랜드마크"
+          "ko": "랜드마크",
+          "en": "landmark"
         },
         {
           "es": "itinerario",
-          "ko": "여행 일정"
+          "ko": "여행 일정",
+          "en": "itinerary"
         },
         {
           "es": "atajo",
-          "ko": "지름길"
+          "ko": "지름길",
+          "en": "shortcut"
         },
         {
           "es": "desvío",
-          "ko": "우회로"
+          "ko": "우회로",
+          "en": "detour"
         },
         {
           "es": "indicación",
-          "ko": "안내"
+          "ko": "안내",
+          "en": "indication"
         },
         {
           "es": "tráfico",
-          "ko": "교통"
+          "ko": "교통",
+          "en": "traffic"
         },
         {
           "es": "ruido",
-          "ko": "소음"
+          "ko": "소음",
+          "en": "noise"
         },
         {
           "es": "contaminación",
-          "ko": "오염"
+          "ko": "오염",
+          "en": "pollution"
         },
         {
           "es": "multitud",
-          "ko": "군중"
+          "ko": "군중",
+          "en": "crowd"
         },
         {
           "es": "prisa",
-          "ko": "서두름"
+          "ko": "서두름",
+          "en": "hurry"
         }
       ]
     },
@@ -1764,43 +2164,53 @@
       "words": [
         {
           "es": "vivienda",
-          "ko": "주거"
+          "ko": "주거",
+          "en": "housing"
         },
         {
           "es": "alquiler",
-          "ko": "임대"
+          "ko": "임대",
+          "en": "rent"
         },
         {
           "es": "piso",
-          "ko": "아파트"
+          "ko": "아파트",
+          "en": "apartment"
         },
         {
           "es": "comunidad",
-          "ko": "공동체"
+          "ko": "공동체",
+          "en": "community"
         },
         {
           "es": "convivencia",
-          "ko": "공존"
+          "ko": "공존",
+          "en": "coexistence"
         },
         {
           "es": "ocio",
-          "ko": "여가"
+          "ko": "여가",
+          "en": "leisure"
         },
         {
           "es": "vida nocturna",
-          "ko": "야간 생활"
+          "ko": "야간 생활",
+          "en": "nightlife"
         },
         {
           "es": "trabajo",
-          "ko": "일"
+          "ko": "일",
+          "en": "work"
         },
         {
           "es": "commuter",
-          "ko": "통근자"
+          "ko": "통근자",
+          "en": "commuter"
         },
         {
           "es": "rascacielos",
-          "ko": "고층 빌딩"
+          "ko": "고층 빌딩",
+          "en": "skyscraper"
         }
       ]
     },
@@ -1811,43 +2221,53 @@
       "words": [
         {
           "es": "campo",
-          "ko": "시골"
+          "ko": "시골",
+          "en": "field"
         },
         {
           "es": "granja",
-          "ko": "농장"
+          "ko": "농장",
+          "en": "farm"
         },
         {
           "es": "aldea",
-          "ko": "작은 마을"
+          "ko": "작은 마을",
+          "en": "village"
         },
         {
           "es": "suburbio",
-          "ko": "교외"
+          "ko": "교외",
+          "en": "suburb"
         },
         {
           "es": "naturaleza",
-          "ko": "자연"
+          "ko": "자연",
+          "en": "nature"
         },
         {
           "es": "bosque",
-          "ko": "숲"
+          "ko": "숲",
+          "en": "forest"
         },
         {
           "es": "río",
-          "ko": "강"
+          "ko": "강",
+          "en": "river"
         },
         {
           "es": "montaña",
-          "ko": "산"
+          "ko": "산",
+          "en": "mountain"
         },
         {
           "es": "lago",
-          "ko": "호수"
+          "ko": "호수",
+          "en": "lake"
         },
         {
           "es": "pradera",
-          "ko": "초원"
+          "ko": "초원",
+          "en": "prairie"
         }
       ]
     },
@@ -1858,43 +2278,53 @@
       "words": [
         {
           "es": "cosecha",
-          "ko": "수확"
+          "ko": "수확",
+          "en": "harvest"
         },
         {
           "es": "ganado",
-          "ko": "가축"
+          "ko": "가축",
+          "en": "livestock"
         },
         {
           "es": "huerto",
-          "ko": "과수원"
+          "ko": "과수원",
+          "en": "orchard"
         },
         {
           "es": "tranquilidad",
-          "ko": "평온"
+          "ko": "평온",
+          "en": "tranquility"
         },
         {
           "es": "paisaje",
-          "ko": "풍경"
+          "ko": "풍경",
+          "en": "landscape"
         },
         {
           "es": "construcción",
-          "ko": "건설"
+          "ko": "건설",
+          "en": "construction"
         },
         {
           "es": "arquitecto",
-          "ko": "건축가"
+          "ko": "건축가",
+          "en": "architect"
         },
         {
           "es": "plano arquitectónico",
-          "ko": "설계도"
+          "ko": "설계도",
+          "en": "floor plan"
         },
         {
           "es": "ladrillo",
-          "ko": "벽돌"
+          "ko": "벽돌",
+          "en": "brick"
         },
         {
           "es": "cemento",
-          "ko": "시멘트"
+          "ko": "시멘트",
+          "en": "cement"
         }
       ]
     },
@@ -1905,43 +2335,53 @@
       "words": [
         {
           "es": "acero",
-          "ko": "철강"
+          "ko": "철강",
+          "en": "steel"
         },
         {
           "es": "grúa",
-          "ko": "크레인"
+          "ko": "크레인",
+          "en": "crane"
         },
         {
           "es": "andamio",
-          "ko": "비계"
+          "ko": "비계",
+          "en": "scaffold"
         },
         {
           "es": "cimiento",
-          "ko": "기초"
+          "ko": "기초",
+          "en": "foundation"
         },
         {
           "es": "techo",
-          "ko": "지붕"
+          "ko": "지붕",
+          "en": "roof"
         },
         {
           "es": "muro",
-          "ko": "벽"
+          "ko": "벽",
+          "en": "wall"
         },
         {
           "es": "columna",
-          "ko": "기둥"
+          "ko": "기둥",
+          "en": "column"
         },
         {
           "es": "escalera",
-          "ko": "계단"
+          "ko": "계단",
+          "en": "stairs"
         },
         {
           "es": "obrero",
-          "ko": "노동자"
+          "ko": "노동자",
+          "en": "worker"
         },
         {
           "es": "renovación",
-          "ko": "리모델링"
+          "ko": "리모델링",
+          "en": "renovation"
         }
       ]
     },
@@ -1952,43 +2392,53 @@
       "words": [
         {
           "es": "parque",
-          "ko": "공원"
+          "ko": "공원",
+          "en": "park"
         },
         {
           "es": "jardín",
-          "ko": "정원"
+          "ko": "정원",
+          "en": "garden"
         },
         {
           "es": "fuente",
-          "ko": "분수"
+          "ko": "분수",
+          "en": "fountain"
         },
         {
           "es": "césped",
-          "ko": "잔디"
+          "ko": "잔디",
+          "en": "lawn"
         },
         {
           "es": "columpio",
-          "ko": "그네"
+          "ko": "그네",
+          "en": "swing"
         },
         {
           "es": "tobogán",
-          "ko": "미끄럼틀"
+          "ko": "미끄럼틀",
+          "en": "slide"
         },
         {
           "es": "piscina",
-          "ko": "수영장"
+          "ko": "수영장",
+          "en": "swimming pool"
         },
         {
           "es": "sendero",
-          "ko": "오솔길"
+          "ko": "오솔길",
+          "en": "trail"
         },
         {
           "es": "lago artificial",
-          "ko": "인공 호수"
+          "ko": "인공 호수",
+          "en": "artificial lake"
         },
         {
           "es": "zona infantil",
-          "ko": "놀이터"
+          "ko": "놀이터",
+          "en": "playground"
         }
       ]
     },
@@ -1999,43 +2449,53 @@
       "words": [
         {
           "es": "área de picnic",
-          "ko": "피크닉 구역"
+          "ko": "피크닉 구역",
+          "en": "picnic area"
         },
         {
           "es": "cancha",
-          "ko": "운동장"
+          "ko": "운동장",
+          "en": "court"
         },
         {
           "es": "árbol",
-          "ko": "나무"
+          "ko": "나무",
+          "en": "tree"
         },
         {
           "es": "flor",
-          "ko": "꽃"
+          "ko": "꽃",
+          "en": "flower"
         },
         {
           "es": "banco del parque",
-          "ko": "공원 벤치"
+          "ko": "공원 벤치",
+          "en": "park bench"
         },
         {
           "es": "velocidad",
-          "ko": "속도"
+          "ko": "속도",
+          "en": "speed"
         },
         {
           "es": "multa",
-          "ko": "벌금"
+          "ko": "벌금",
+          "en": "fine"
         },
         {
           "es": "permiso de conducir",
-          "ko": "운전면허"
+          "ko": "운전면허",
+          "en": "driver's license"
         },
         {
           "es": "cinturón de seguridad",
-          "ko": "안전벨트"
+          "ko": "안전벨트",
+          "en": "seatbelt"
         },
         {
           "es": "adelantamiento",
-          "ko": "추월"
+          "ko": "추월",
+          "en": "overtaking"
         }
       ]
     },
@@ -2046,43 +2506,53 @@
       "words": [
         {
           "es": "freno",
-          "ko": "브레이크"
+          "ko": "브레이크",
+          "en": "brake"
         },
         {
           "es": "volante",
-          "ko": "핸들"
+          "ko": "핸들",
+          "en": "steering wheel"
         },
         {
           "es": "gasolina",
-          "ko": "휘발유"
+          "ko": "휘발유",
+          "en": "gasoline"
         },
         {
           "es": "neumático",
-          "ko": "타이어"
+          "ko": "타이어",
+          "en": "tire"
         },
         {
           "es": "accidente",
-          "ko": "사고"
+          "ko": "사고",
+          "en": "accident"
         },
         {
           "es": "seguro",
-          "ko": "보험"
+          "ko": "보험",
+          "en": "insurance"
         },
         {
           "es": "matrícula",
-          "ko": "번호판"
+          "ko": "번호판",
+          "en": "tuition"
         },
         {
           "es": "retrovisor",
-          "ko": "백미러"
+          "ko": "백미러",
+          "en": "rearview mirror"
         },
         {
           "es": "intermitente",
-          "ko": "방향지시등"
+          "ko": "방향지시등",
+          "en": "turn signal"
         },
         {
           "es": "límite de velocidad",
-          "ko": "속도 제한"
+          "ko": "속도 제한",
+          "en": "speed limit"
         }
       ]
     },
@@ -2093,43 +2563,53 @@
       "words": [
         {
           "es": "mudanza",
-          "ko": "이사"
+          "ko": "이사",
+          "en": "moving"
         },
         {
           "es": "dirección postal",
-          "ko": "주소"
+          "ko": "주소",
+          "en": "postal address"
         },
         {
           "es": "código postal",
-          "ko": "우편번호"
+          "ko": "우편번호",
+          "en": "zip code"
         },
         {
           "es": "inquilino",
-          "ko": "세입자"
+          "ko": "세입자",
+          "en": "tenant"
         },
         {
           "es": "propietario",
-          "ko": "집주인"
+          "ko": "집주인",
+          "en": "owner"
         },
         {
           "es": "contrato",
-          "ko": "계약"
+          "ko": "계약",
+          "en": "contract"
         },
         {
           "es": "depósito",
-          "ko": "보증금"
+          "ko": "보증금",
+          "en": "deposit"
         },
         {
           "es": "inmobiliaria",
-          "ko": "부동산"
+          "ko": "부동산",
+          "en": "real estate"
         },
         {
           "es": "hipoteca",
-          "ko": "주택담보대출"
+          "ko": "주택담보대출",
+          "en": "mortgage"
         },
         {
           "es": "vecino",
-          "ko": "이웃 사람"
+          "ko": "이웃 사람",
+          "en": "neighbor"
         }
       ]
     },
@@ -2140,43 +2620,53 @@
       "words": [
         {
           "es": "empadronamiento",
-          "ko": "주민등록"
+          "ko": "주민등록",
+          "en": "census registration"
         },
         {
           "es": "casa",
-          "ko": "집"
+          "ko": "집",
+          "en": "house"
         },
         {
           "es": "paquete",
-          "ko": "택배"
+          "ko": "택배",
+          "en": "package"
         },
         {
           "es": "cartero",
-          "ko": "우편배달부"
+          "ko": "우편배달부",
+          "en": "mailman"
         },
         {
           "es": "portero",
-          "ko": "경비원"
+          "ko": "경비원",
+          "en": "gatekeeper"
         },
         {
           "es": "pobreza",
-          "ko": "빈곤"
+          "ko": "빈곤",
+          "en": "poverty"
         },
         {
           "es": "delincuencia",
-          "ko": "범죄"
+          "ko": "범죄",
+          "en": "crime"
         },
         {
           "es": "desempleo",
-          "ko": "실업"
+          "ko": "실업",
+          "en": "unemployment"
         },
         {
           "es": "desigualdad",
-          "ko": "불평등"
+          "ko": "불평등",
+          "en": "inequality"
         },
         {
           "es": "sobrepoblación",
-          "ko": "과밀"
+          "ko": "과밀",
+          "en": "overpopulation"
         }
       ]
     },
@@ -2187,43 +2677,53 @@
       "words": [
         {
           "es": "smog",
-          "ko": "스모그"
+          "ko": "스모그",
+          "en": "smog"
         },
         {
           "es": "congestión",
-          "ko": "혼잡"
+          "ko": "혼잡",
+          "en": "congestion"
         },
         {
           "es": "gentrificación",
-          "ko": "젠트리피케이션"
+          "ko": "젠트리피케이션",
+          "en": "gentrification"
         },
         {
           "es": "sostenibilidad",
-          "ko": "지속 가능성"
+          "ko": "지속 가능성",
+          "en": "sustainability"
         },
         {
           "es": "energía renovable",
-          "ko": "재생 에너지"
+          "ko": "재생 에너지",
+          "en": "renewable energy"
         },
         {
           "es": "zona verde",
-          "ko": "녹지"
+          "ko": "녹지",
+          "en": "green area"
         },
         {
           "es": "transporte sostenible",
-          "ko": "친환경 교통"
+          "ko": "친환경 교통",
+          "en": "sustainable transport"
         },
         {
           "es": "reciclaje urbano",
-          "ko": "도시 재활용"
+          "ko": "도시 재활용",
+          "en": "urban recycling"
         },
         {
           "es": "vivienda social",
-          "ko": "공공 주택"
+          "ko": "공공 주택",
+          "en": "social housing"
         },
         {
           "es": "planificación urbana",
-          "ko": "도시 계획"
+          "ko": "도시 계획",
+          "en": "urban planning"
         }
       ]
     },
@@ -2234,403 +2734,503 @@
       "words": [
         {
           "es": "vivienda",
-          "ko": "주거"
+          "ko": "주거",
+          "en": "housing"
         },
         {
           "es": "alquiler",
-          "ko": "임대"
+          "ko": "임대",
+          "en": "rent"
         },
         {
           "es": "piso",
-          "ko": "아파트"
+          "ko": "아파트",
+          "en": "apartment"
         },
         {
           "es": "comunidad",
-          "ko": "공동체"
+          "ko": "공동체",
+          "en": "community"
         },
         {
           "es": "convivencia",
-          "ko": "공존"
+          "ko": "공존",
+          "en": "coexistence"
         },
         {
           "es": "ocio",
-          "ko": "여가"
+          "ko": "여가",
+          "en": "leisure"
         },
         {
           "es": "vida nocturna",
-          "ko": "야간 생활"
+          "ko": "야간 생활",
+          "en": "nightlife"
         },
         {
           "es": "trabajo",
-          "ko": "일"
+          "ko": "일",
+          "en": "work"
         },
         {
           "es": "commuter",
-          "ko": "통근자"
+          "ko": "통근자",
+          "en": "commuter"
         },
         {
           "es": "rascacielos",
-          "ko": "고층 빌딩"
+          "ko": "고층 빌딩",
+          "en": "skyscraper"
         },
         {
           "es": "campo",
-          "ko": "시골"
+          "ko": "시골",
+          "en": "field"
         },
         {
           "es": "granja",
-          "ko": "농장"
+          "ko": "농장",
+          "en": "farm"
         },
         {
           "es": "aldea",
-          "ko": "작은 마을"
+          "ko": "작은 마을",
+          "en": "village"
         },
         {
           "es": "suburbio",
-          "ko": "교외"
+          "ko": "교외",
+          "en": "suburb"
         },
         {
           "es": "naturaleza",
-          "ko": "자연"
+          "ko": "자연",
+          "en": "nature"
         },
         {
           "es": "bosque",
-          "ko": "숲"
+          "ko": "숲",
+          "en": "forest"
         },
         {
           "es": "río",
-          "ko": "강"
+          "ko": "강",
+          "en": "river"
         },
         {
           "es": "montaña",
-          "ko": "산"
+          "ko": "산",
+          "en": "mountain"
         },
         {
           "es": "lago",
-          "ko": "호수"
+          "ko": "호수",
+          "en": "lake"
         },
         {
           "es": "pradera",
-          "ko": "초원"
+          "ko": "초원",
+          "en": "prairie"
         },
         {
           "es": "cosecha",
-          "ko": "수확"
+          "ko": "수확",
+          "en": "harvest"
         },
         {
           "es": "ganado",
-          "ko": "가축"
+          "ko": "가축",
+          "en": "livestock"
         },
         {
           "es": "huerto",
-          "ko": "과수원"
+          "ko": "과수원",
+          "en": "orchard"
         },
         {
           "es": "tranquilidad",
-          "ko": "평온"
+          "ko": "평온",
+          "en": "tranquility"
         },
         {
           "es": "paisaje",
-          "ko": "풍경"
+          "ko": "풍경",
+          "en": "landscape"
         },
         {
           "es": "construcción",
-          "ko": "건설"
+          "ko": "건설",
+          "en": "construction"
         },
         {
           "es": "arquitecto",
-          "ko": "건축가"
+          "ko": "건축가",
+          "en": "architect"
         },
         {
           "es": "plano arquitectónico",
-          "ko": "설계도"
+          "ko": "설계도",
+          "en": "floor plan"
         },
         {
           "es": "ladrillo",
-          "ko": "벽돌"
+          "ko": "벽돌",
+          "en": "brick"
         },
         {
           "es": "cemento",
-          "ko": "시멘트"
+          "ko": "시멘트",
+          "en": "cement"
         },
         {
           "es": "acero",
-          "ko": "철강"
+          "ko": "철강",
+          "en": "steel"
         },
         {
           "es": "grúa",
-          "ko": "크레인"
+          "ko": "크레인",
+          "en": "crane"
         },
         {
           "es": "andamio",
-          "ko": "비계"
+          "ko": "비계",
+          "en": "scaffold"
         },
         {
           "es": "cimiento",
-          "ko": "기초"
+          "ko": "기초",
+          "en": "foundation"
         },
         {
           "es": "techo",
-          "ko": "지붕"
+          "ko": "지붕",
+          "en": "roof"
         },
         {
           "es": "muro",
-          "ko": "벽"
+          "ko": "벽",
+          "en": "wall"
         },
         {
           "es": "columna",
-          "ko": "기둥"
+          "ko": "기둥",
+          "en": "column"
         },
         {
           "es": "escalera",
-          "ko": "계단"
+          "ko": "계단",
+          "en": "stairs"
         },
         {
           "es": "obrero",
-          "ko": "노동자"
+          "ko": "노동자",
+          "en": "worker"
         },
         {
           "es": "renovación",
-          "ko": "리모델링"
+          "ko": "리모델링",
+          "en": "renovation"
         },
         {
           "es": "parque",
-          "ko": "공원"
+          "ko": "공원",
+          "en": "park"
         },
         {
           "es": "jardín",
-          "ko": "정원"
+          "ko": "정원",
+          "en": "garden"
         },
         {
           "es": "fuente",
-          "ko": "분수"
+          "ko": "분수",
+          "en": "fountain"
         },
         {
           "es": "césped",
-          "ko": "잔디"
+          "ko": "잔디",
+          "en": "lawn"
         },
         {
           "es": "columpio",
-          "ko": "그네"
+          "ko": "그네",
+          "en": "swing"
         },
         {
           "es": "tobogán",
-          "ko": "미끄럼틀"
+          "ko": "미끄럼틀",
+          "en": "slide"
         },
         {
           "es": "piscina",
-          "ko": "수영장"
+          "ko": "수영장",
+          "en": "swimming pool"
         },
         {
           "es": "sendero",
-          "ko": "오솔길"
+          "ko": "오솔길",
+          "en": "trail"
         },
         {
           "es": "lago artificial",
-          "ko": "인공 호수"
+          "ko": "인공 호수",
+          "en": "artificial lake"
         },
         {
           "es": "zona infantil",
-          "ko": "놀이터"
+          "ko": "놀이터",
+          "en": "playground"
         },
         {
           "es": "área de picnic",
-          "ko": "피크닉 구역"
+          "ko": "피크닉 구역",
+          "en": "picnic area"
         },
         {
           "es": "cancha",
-          "ko": "운동장"
+          "ko": "운동장",
+          "en": "court"
         },
         {
           "es": "árbol",
-          "ko": "나무"
+          "ko": "나무",
+          "en": "tree"
         },
         {
           "es": "flor",
-          "ko": "꽃"
+          "ko": "꽃",
+          "en": "flower"
         },
         {
           "es": "banco del parque",
-          "ko": "공원 벤치"
+          "ko": "공원 벤치",
+          "en": "park bench"
         },
         {
           "es": "velocidad",
-          "ko": "속도"
+          "ko": "속도",
+          "en": "speed"
         },
         {
           "es": "multa",
-          "ko": "벌금"
+          "ko": "벌금",
+          "en": "fine"
         },
         {
           "es": "permiso de conducir",
-          "ko": "운전면허"
+          "ko": "운전면허",
+          "en": "driver's license"
         },
         {
           "es": "cinturón de seguridad",
-          "ko": "안전벨트"
+          "ko": "안전벨트",
+          "en": "seatbelt"
         },
         {
           "es": "adelantamiento",
-          "ko": "추월"
+          "ko": "추월",
+          "en": "overtaking"
         },
         {
           "es": "freno",
-          "ko": "브레이크"
+          "ko": "브레이크",
+          "en": "brake"
         },
         {
           "es": "volante",
-          "ko": "핸들"
+          "ko": "핸들",
+          "en": "steering wheel"
         },
         {
           "es": "gasolina",
-          "ko": "휘발유"
+          "ko": "휘발유",
+          "en": "gasoline"
         },
         {
           "es": "neumático",
-          "ko": "타이어"
+          "ko": "타이어",
+          "en": "tire"
         },
         {
           "es": "accidente",
-          "ko": "사고"
+          "ko": "사고",
+          "en": "accident"
         },
         {
           "es": "seguro",
-          "ko": "보험"
+          "ko": "보험",
+          "en": "insurance"
         },
         {
           "es": "matrícula",
-          "ko": "번호판"
+          "ko": "번호판",
+          "en": "tuition"
         },
         {
           "es": "retrovisor",
-          "ko": "백미러"
+          "ko": "백미러",
+          "en": "rearview mirror"
         },
         {
           "es": "intermitente",
-          "ko": "방향지시등"
+          "ko": "방향지시등",
+          "en": "turn signal"
         },
         {
           "es": "límite de velocidad",
-          "ko": "속도 제한"
+          "ko": "속도 제한",
+          "en": "speed limit"
         },
         {
           "es": "mudanza",
-          "ko": "이사"
+          "ko": "이사",
+          "en": "moving"
         },
         {
           "es": "dirección postal",
-          "ko": "주소"
+          "ko": "주소",
+          "en": "postal address"
         },
         {
           "es": "código postal",
-          "ko": "우편번호"
+          "ko": "우편번호",
+          "en": "zip code"
         },
         {
           "es": "inquilino",
-          "ko": "세입자"
+          "ko": "세입자",
+          "en": "tenant"
         },
         {
           "es": "propietario",
-          "ko": "집주인"
+          "ko": "집주인",
+          "en": "owner"
         },
         {
           "es": "contrato",
-          "ko": "계약"
+          "ko": "계약",
+          "en": "contract"
         },
         {
           "es": "depósito",
-          "ko": "보증금"
+          "ko": "보증금",
+          "en": "deposit"
         },
         {
           "es": "inmobiliaria",
-          "ko": "부동산"
+          "ko": "부동산",
+          "en": "real estate"
         },
         {
           "es": "hipoteca",
-          "ko": "주택담보대출"
+          "ko": "주택담보대출",
+          "en": "mortgage"
         },
         {
           "es": "vecino",
-          "ko": "이웃 사람"
+          "ko": "이웃 사람",
+          "en": "neighbor"
         },
         {
           "es": "empadronamiento",
-          "ko": "주민등록"
+          "ko": "주민등록",
+          "en": "census registration"
         },
         {
           "es": "casa",
-          "ko": "집"
+          "ko": "집",
+          "en": "house"
         },
         {
           "es": "paquete",
-          "ko": "택배"
+          "ko": "택배",
+          "en": "package"
         },
         {
           "es": "cartero",
-          "ko": "우편배달부"
+          "ko": "우편배달부",
+          "en": "mailman"
         },
         {
           "es": "portero",
-          "ko": "경비원"
+          "ko": "경비원",
+          "en": "gatekeeper"
         },
         {
           "es": "pobreza",
-          "ko": "빈곤"
+          "ko": "빈곤",
+          "en": "poverty"
         },
         {
           "es": "delincuencia",
-          "ko": "범죄"
+          "ko": "범죄",
+          "en": "crime"
         },
         {
           "es": "desempleo",
-          "ko": "실업"
+          "ko": "실업",
+          "en": "unemployment"
         },
         {
           "es": "desigualdad",
-          "ko": "불평등"
+          "ko": "불평등",
+          "en": "inequality"
         },
         {
           "es": "sobrepoblación",
-          "ko": "과밀"
+          "ko": "과밀",
+          "en": "overpopulation"
         },
         {
           "es": "smog",
-          "ko": "스모그"
+          "ko": "스모그",
+          "en": "smog"
         },
         {
           "es": "congestión",
-          "ko": "혼잡"
+          "ko": "혼잡",
+          "en": "congestion"
         },
         {
           "es": "gentrificación",
-          "ko": "젠트리피케이션"
+          "ko": "젠트리피케이션",
+          "en": "gentrification"
         },
         {
           "es": "sostenibilidad",
-          "ko": "지속 가능성"
+          "ko": "지속 가능성",
+          "en": "sustainability"
         },
         {
           "es": "energía renovable",
-          "ko": "재생 에너지"
+          "ko": "재생 에너지",
+          "en": "renewable energy"
         },
         {
           "es": "zona verde",
-          "ko": "녹지"
+          "ko": "녹지",
+          "en": "green area"
         },
         {
           "es": "transporte sostenible",
-          "ko": "친환경 교통"
+          "ko": "친환경 교통",
+          "en": "sustainable transport"
         },
         {
           "es": "reciclaje urbano",
-          "ko": "도시 재활용"
+          "ko": "도시 재활용",
+          "en": "urban recycling"
         },
         {
           "es": "vivienda social",
-          "ko": "공공 주택"
+          "ko": "공공 주택",
+          "en": "social housing"
         },
         {
           "es": "planificación urbana",
-          "ko": "도시 계획"
+          "ko": "도시 계획",
+          "en": "urban planning"
         }
       ]
     }

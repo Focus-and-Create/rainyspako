@@ -10,43 +10,53 @@
       "words": [
         {
           "es": "ciencia",
-          "ko": "과학"
+          "ko": "과학",
+          "en": "science"
         },
         {
           "es": "científico",
-          "ko": "과학자"
+          "ko": "과학자",
+          "en": "scientist"
         },
         {
           "es": "investigación",
-          "ko": "연구"
+          "ko": "연구",
+          "en": "research"
         },
         {
           "es": "experimento",
-          "ko": "실험"
+          "ko": "실험",
+          "en": "experiment"
         },
         {
           "es": "teoría",
-          "ko": "이론"
+          "ko": "이론",
+          "en": "theory"
         },
         {
           "es": "dato",
-          "ko": "데이터"
+          "ko": "데이터",
+          "en": "data"
         },
         {
           "es": "resultado",
-          "ko": "결과"
+          "ko": "결과",
+          "en": "result"
         },
         {
           "es": "prueba",
-          "ko": "증거"
+          "ko": "증거",
+          "en": "evidence"
         },
         {
           "es": "laboratorio",
-          "ko": "실험실"
+          "ko": "실험실",
+          "en": "laboratory"
         },
         {
           "es": "microscopio",
-          "ko": "현미경"
+          "ko": "현미경",
+          "en": "microscope"
         }
       ]
     },
@@ -57,43 +67,53 @@
       "words": [
         {
           "es": "telescopio",
-          "ko": "망원경"
+          "ko": "망원경",
+          "en": "telescope"
         },
         {
           "es": "fórmula",
-          "ko": "공식"
+          "ko": "공식",
+          "en": "formula"
         },
         {
           "es": "análisis",
-          "ko": "분석"
+          "ko": "분석",
+          "en": "analysis"
         },
         {
           "es": "método",
-          "ko": "방법"
+          "ko": "방법",
+          "en": "method"
         },
         {
           "es": "descubrimiento",
-          "ko": "발견"
+          "ko": "발견",
+          "en": "discovery"
         },
         {
           "es": "matemáticas",
-          "ko": "수학"
+          "ko": "수학",
+          "en": "mathematics"
         },
         {
           "es": "número",
-          "ko": "숫자"
+          "ko": "숫자",
+          "en": "number"
         },
         {
           "es": "ecuación",
-          "ko": "방정식"
+          "ko": "방정식",
+          "en": "equation"
         },
         {
           "es": "suma",
-          "ko": "덧셈"
+          "ko": "덧셈",
+          "en": "addition"
         },
         {
           "es": "resta",
-          "ko": "뺄셈"
+          "ko": "뺄셈",
+          "en": "subtraction"
         }
       ]
     },
@@ -104,43 +124,53 @@
       "words": [
         {
           "es": "multiplicación",
-          "ko": "곱셈"
+          "ko": "곱셈",
+          "en": "multiplication"
         },
         {
           "es": "división",
-          "ko": "나눗셈"
+          "ko": "나눗셈",
+          "en": "division"
         },
         {
           "es": "fracción",
-          "ko": "분수"
+          "ko": "분수",
+          "en": "fraction"
         },
         {
           "es": "porcentaje",
-          "ko": "백분율"
+          "ko": "백분율",
+          "en": "percentage"
         },
         {
           "es": "geometría",
-          "ko": "기하학"
+          "ko": "기하학",
+          "en": "geometry"
         },
         {
           "es": "álgebra",
-          "ko": "대수학"
+          "ko": "대수학",
+          "en": "algebra"
         },
         {
           "es": "estadística",
-          "ko": "통계"
+          "ko": "통계",
+          "en": "statistics"
         },
         {
           "es": "gráfico",
-          "ko": "그래프"
+          "ko": "그래프",
+          "en": "graph"
         },
         {
           "es": "cálculo",
-          "ko": "계산"
+          "ko": "계산",
+          "en": "calculus"
         },
         {
           "es": "promedio",
-          "ko": "평균"
+          "ko": "평균",
+          "en": "average"
         }
       ]
     },
@@ -151,43 +181,53 @@
       "words": [
         {
           "es": "física",
-          "ko": "물리학"
+          "ko": "물리학",
+          "en": "physics"
         },
         {
           "es": "fuerza",
-          "ko": "힘"
+          "ko": "힘",
+          "en": "strength"
         },
         {
           "es": "gravedad",
-          "ko": "중력"
+          "ko": "중력",
+          "en": "gravity"
         },
         {
           "es": "velocidad",
-          "ko": "속도"
+          "ko": "속도",
+          "en": "speed"
         },
         {
           "es": "energía",
-          "ko": "에너지"
+          "ko": "에너지",
+          "en": "energy"
         },
         {
           "es": "masa",
-          "ko": "질량"
+          "ko": "질량",
+          "en": "dough"
         },
         {
           "es": "peso",
-          "ko": "무게"
+          "ko": "무게",
+          "en": "weight"
         },
         {
           "es": "presión",
-          "ko": "압력"
+          "ko": "압력",
+          "en": "pressure"
         },
         {
           "es": "temperatura",
-          "ko": "온도"
+          "ko": "온도",
+          "en": "temperature"
         },
         {
           "es": "onda",
-          "ko": "파동"
+          "ko": "파동",
+          "en": "wave"
         }
       ]
     },
@@ -198,43 +238,53 @@
       "words": [
         {
           "es": "luz",
-          "ko": "빛"
+          "ko": "빛",
+          "en": "light"
         },
         {
           "es": "sonido",
-          "ko": "소리"
+          "ko": "소리",
+          "en": "sound"
         },
         {
           "es": "magnetismo",
-          "ko": "자기"
+          "ko": "자기",
+          "en": "magnetism"
         },
         {
           "es": "fricción",
-          "ko": "마찰"
+          "ko": "마찰",
+          "en": "friction"
         },
         {
           "es": "movimiento",
-          "ko": "운동"
+          "ko": "운동",
+          "en": "movement"
         },
         {
           "es": "química",
-          "ko": "화학"
+          "ko": "화학",
+          "en": "chemistry"
         },
         {
           "es": "átomo",
-          "ko": "원자"
+          "ko": "원자",
+          "en": "atom"
         },
         {
           "es": "molécula",
-          "ko": "분자"
+          "ko": "분자",
+          "en": "molecule"
         },
         {
           "es": "elemento",
-          "ko": "원소"
+          "ko": "원소",
+          "en": "element"
         },
         {
           "es": "compuesto",
-          "ko": "화합물"
+          "ko": "화합물",
+          "en": "compound"
         }
       ]
     },
@@ -245,43 +295,53 @@
       "words": [
         {
           "es": "reacción",
-          "ko": "반응"
+          "ko": "반응",
+          "en": "reaction"
         },
         {
           "es": "ácido",
-          "ko": "산"
+          "ko": "산",
+          "en": "acid"
         },
         {
           "es": "base",
-          "ko": "염기"
+          "ko": "염기",
+          "en": "base"
         },
         {
           "es": "oxígeno",
-          "ko": "산소"
+          "ko": "산소",
+          "en": "oxygen"
         },
         {
           "es": "hidrógeno",
-          "ko": "수소"
+          "ko": "수소",
+          "en": "hydrogen"
         },
         {
           "es": "carbono",
-          "ko": "탄소"
+          "ko": "탄소",
+          "en": "carbon"
         },
         {
           "es": "solución",
-          "ko": "용액"
+          "ko": "용액",
+          "en": "solution"
         },
         {
           "es": "gas",
-          "ko": "기체"
+          "ko": "기체",
+          "en": "gas"
         },
         {
           "es": "líquido",
-          "ko": "액체"
+          "ko": "액체",
+          "en": "liquid"
         },
         {
           "es": "sólido",
-          "ko": "고체"
+          "ko": "고체",
+          "en": "solid"
         }
       ]
     },
@@ -292,43 +352,53 @@
       "words": [
         {
           "es": "biología",
-          "ko": "생물학"
+          "ko": "생물학",
+          "en": "biology"
         },
         {
           "es": "célula",
-          "ko": "세포"
+          "ko": "세포",
+          "en": "cell"
         },
         {
           "es": "gen",
-          "ko": "유전자"
+          "ko": "유전자",
+          "en": "gene"
         },
         {
           "es": "ADN",
-          "ko": "DNA"
+          "ko": "DNA",
+          "en": "DNA"
         },
         {
           "es": "evolución",
-          "ko": "진화"
+          "ko": "진화",
+          "en": "evolution"
         },
         {
           "es": "especie",
-          "ko": "종"
+          "ko": "종",
+          "en": "species"
         },
         {
           "es": "organismo",
-          "ko": "유기체"
+          "ko": "유기체",
+          "en": "organism"
         },
         {
           "es": "bacteria",
-          "ko": "세균"
+          "ko": "세균",
+          "en": "bacteria"
         },
         {
           "es": "virus",
-          "ko": "바이러스"
+          "ko": "바이러스",
+          "en": "virus"
         },
         {
           "es": "fotosíntesis",
-          "ko": "광합성"
+          "ko": "광합성",
+          "en": "photosynthesis"
         }
       ]
     },
@@ -339,43 +409,53 @@
       "words": [
         {
           "es": "ecosistema",
-          "ko": "생태계"
+          "ko": "생태계",
+          "en": "ecosystem"
         },
         {
           "es": "proteína",
-          "ko": "단백질"
+          "ko": "단백질",
+          "en": "protein"
         },
         {
           "es": "nutriente",
-          "ko": "영양소"
+          "ko": "영양소",
+          "en": "nutrient"
         },
         {
           "es": "reproducción",
-          "ko": "생식"
+          "ko": "생식",
+          "en": "reproduction"
         },
         {
           "es": "herencia",
-          "ko": "유전"
+          "ko": "유전",
+          "en": "genetics"
         },
         {
           "es": "cuerpo",
-          "ko": "몸"
+          "ko": "몸",
+          "en": "body"
         },
         {
           "es": "cerebro",
-          "ko": "뇌"
+          "ko": "뇌",
+          "en": "brain"
         },
         {
           "es": "corazón",
-          "ko": "심장"
+          "ko": "심장",
+          "en": "heart"
         },
         {
           "es": "pulmón",
-          "ko": "폐"
+          "ko": "폐",
+          "en": "lung"
         },
         {
           "es": "hueso",
-          "ko": "뼈"
+          "ko": "뼈",
+          "en": "bone"
         }
       ]
     },
@@ -386,43 +466,53 @@
       "words": [
         {
           "es": "músculo",
-          "ko": "근육"
+          "ko": "근육",
+          "en": "muscle"
         },
         {
           "es": "nervio",
-          "ko": "신경"
+          "ko": "신경",
+          "en": "nerve"
         },
         {
           "es": "sangre",
-          "ko": "혈액"
+          "ko": "혈액",
+          "en": "blood"
         },
         {
           "es": "órgano",
-          "ko": "장기"
+          "ko": "장기",
+          "en": "organ"
         },
         {
           "es": "tejido",
-          "ko": "조직"
+          "ko": "조직",
+          "en": "knitting"
         },
         {
           "es": "esqueleto",
-          "ko": "골격"
+          "ko": "골격",
+          "en": "skeleton"
         },
         {
           "es": "digestión",
-          "ko": "소화"
+          "ko": "소화",
+          "en": "digestion"
         },
         {
           "es": "respiración",
-          "ko": "호흡"
+          "ko": "호흡",
+          "en": "breathing"
         },
         {
           "es": "circulación",
-          "ko": "순환"
+          "ko": "순환",
+          "en": "circulation"
         },
         {
           "es": "sentido",
-          "ko": "감각"
+          "ko": "감각",
+          "en": "sense"
         }
       ]
     },
@@ -433,43 +523,53 @@
       "words": [
         {
           "es": "medicina",
-          "ko": "의학"
+          "ko": "의학",
+          "en": "medicine"
         },
         {
           "es": "salud",
-          "ko": "건강"
+          "ko": "건강",
+          "en": "health"
         },
         {
           "es": "enfermedad",
-          "ko": "질병"
+          "ko": "질병",
+          "en": "illness"
         },
         {
           "es": "vacuna",
-          "ko": "백신"
+          "ko": "백신",
+          "en": "vaccine"
         },
         {
           "es": "tratamiento",
-          "ko": "치료"
+          "ko": "치료",
+          "en": "treatment"
         },
         {
           "es": "diagnóstico",
-          "ko": "진단"
+          "ko": "진단",
+          "en": "diagnosis"
         },
         {
           "es": "síntoma",
-          "ko": "증상"
+          "ko": "증상",
+          "en": "symptom"
         },
         {
           "es": "cirugía",
-          "ko": "수술"
+          "ko": "수술",
+          "en": "surgery"
         },
         {
           "es": "medicamento",
-          "ko": "약물"
+          "ko": "약물",
+          "en": "medication"
         },
         {
           "es": "antibiótico",
-          "ko": "항생제"
+          "ko": "항생제",
+          "en": "antibiotic"
         }
       ]
     },
@@ -480,403 +580,503 @@
       "words": [
         {
           "es": "ciencia",
-          "ko": "과학"
+          "ko": "과학",
+          "en": "science"
         },
         {
           "es": "científico",
-          "ko": "과학자"
+          "ko": "과학자",
+          "en": "scientist"
         },
         {
           "es": "investigación",
-          "ko": "연구"
+          "ko": "연구",
+          "en": "research"
         },
         {
           "es": "experimento",
-          "ko": "실험"
+          "ko": "실험",
+          "en": "experiment"
         },
         {
           "es": "teoría",
-          "ko": "이론"
+          "ko": "이론",
+          "en": "theory"
         },
         {
           "es": "dato",
-          "ko": "데이터"
+          "ko": "데이터",
+          "en": "data"
         },
         {
           "es": "resultado",
-          "ko": "결과"
+          "ko": "결과",
+          "en": "result"
         },
         {
           "es": "prueba",
-          "ko": "증거"
+          "ko": "증거",
+          "en": "evidence"
         },
         {
           "es": "laboratorio",
-          "ko": "실험실"
+          "ko": "실험실",
+          "en": "laboratory"
         },
         {
           "es": "microscopio",
-          "ko": "현미경"
+          "ko": "현미경",
+          "en": "microscope"
         },
         {
           "es": "telescopio",
-          "ko": "망원경"
+          "ko": "망원경",
+          "en": "telescope"
         },
         {
           "es": "fórmula",
-          "ko": "공식"
+          "ko": "공식",
+          "en": "formula"
         },
         {
           "es": "análisis",
-          "ko": "분석"
+          "ko": "분석",
+          "en": "analysis"
         },
         {
           "es": "método",
-          "ko": "방법"
+          "ko": "방법",
+          "en": "method"
         },
         {
           "es": "descubrimiento",
-          "ko": "발견"
+          "ko": "발견",
+          "en": "discovery"
         },
         {
           "es": "matemáticas",
-          "ko": "수학"
+          "ko": "수학",
+          "en": "mathematics"
         },
         {
           "es": "número",
-          "ko": "숫자"
+          "ko": "숫자",
+          "en": "number"
         },
         {
           "es": "ecuación",
-          "ko": "방정식"
+          "ko": "방정식",
+          "en": "equation"
         },
         {
           "es": "suma",
-          "ko": "덧셈"
+          "ko": "덧셈",
+          "en": "addition"
         },
         {
           "es": "resta",
-          "ko": "뺄셈"
+          "ko": "뺄셈",
+          "en": "subtraction"
         },
         {
           "es": "multiplicación",
-          "ko": "곱셈"
+          "ko": "곱셈",
+          "en": "multiplication"
         },
         {
           "es": "división",
-          "ko": "나눗셈"
+          "ko": "나눗셈",
+          "en": "division"
         },
         {
           "es": "fracción",
-          "ko": "분수"
+          "ko": "분수",
+          "en": "fraction"
         },
         {
           "es": "porcentaje",
-          "ko": "백분율"
+          "ko": "백분율",
+          "en": "percentage"
         },
         {
           "es": "geometría",
-          "ko": "기하학"
+          "ko": "기하학",
+          "en": "geometry"
         },
         {
           "es": "álgebra",
-          "ko": "대수학"
+          "ko": "대수학",
+          "en": "algebra"
         },
         {
           "es": "estadística",
-          "ko": "통계"
+          "ko": "통계",
+          "en": "statistics"
         },
         {
           "es": "gráfico",
-          "ko": "그래프"
+          "ko": "그래프",
+          "en": "graph"
         },
         {
           "es": "cálculo",
-          "ko": "계산"
+          "ko": "계산",
+          "en": "calculus"
         },
         {
           "es": "promedio",
-          "ko": "평균"
+          "ko": "평균",
+          "en": "average"
         },
         {
           "es": "física",
-          "ko": "물리학"
+          "ko": "물리학",
+          "en": "physics"
         },
         {
           "es": "fuerza",
-          "ko": "힘"
+          "ko": "힘",
+          "en": "strength"
         },
         {
           "es": "gravedad",
-          "ko": "중력"
+          "ko": "중력",
+          "en": "gravity"
         },
         {
           "es": "velocidad",
-          "ko": "속도"
+          "ko": "속도",
+          "en": "speed"
         },
         {
           "es": "energía",
-          "ko": "에너지"
+          "ko": "에너지",
+          "en": "energy"
         },
         {
           "es": "masa",
-          "ko": "질량"
+          "ko": "질량",
+          "en": "dough"
         },
         {
           "es": "peso",
-          "ko": "무게"
+          "ko": "무게",
+          "en": "weight"
         },
         {
           "es": "presión",
-          "ko": "압력"
+          "ko": "압력",
+          "en": "pressure"
         },
         {
           "es": "temperatura",
-          "ko": "온도"
+          "ko": "온도",
+          "en": "temperature"
         },
         {
           "es": "onda",
-          "ko": "파동"
+          "ko": "파동",
+          "en": "wave"
         },
         {
           "es": "luz",
-          "ko": "빛"
+          "ko": "빛",
+          "en": "light"
         },
         {
           "es": "sonido",
-          "ko": "소리"
+          "ko": "소리",
+          "en": "sound"
         },
         {
           "es": "magnetismo",
-          "ko": "자기"
+          "ko": "자기",
+          "en": "magnetism"
         },
         {
           "es": "fricción",
-          "ko": "마찰"
+          "ko": "마찰",
+          "en": "friction"
         },
         {
           "es": "movimiento",
-          "ko": "운동"
+          "ko": "운동",
+          "en": "movement"
         },
         {
           "es": "química",
-          "ko": "화학"
+          "ko": "화학",
+          "en": "chemistry"
         },
         {
           "es": "átomo",
-          "ko": "원자"
+          "ko": "원자",
+          "en": "atom"
         },
         {
           "es": "molécula",
-          "ko": "분자"
+          "ko": "분자",
+          "en": "molecule"
         },
         {
           "es": "elemento",
-          "ko": "원소"
+          "ko": "원소",
+          "en": "element"
         },
         {
           "es": "compuesto",
-          "ko": "화합물"
+          "ko": "화합물",
+          "en": "compound"
         },
         {
           "es": "reacción",
-          "ko": "반응"
+          "ko": "반응",
+          "en": "reaction"
         },
         {
           "es": "ácido",
-          "ko": "산"
+          "ko": "산",
+          "en": "acid"
         },
         {
           "es": "base",
-          "ko": "염기"
+          "ko": "염기",
+          "en": "base"
         },
         {
           "es": "oxígeno",
-          "ko": "산소"
+          "ko": "산소",
+          "en": "oxygen"
         },
         {
           "es": "hidrógeno",
-          "ko": "수소"
+          "ko": "수소",
+          "en": "hydrogen"
         },
         {
           "es": "carbono",
-          "ko": "탄소"
+          "ko": "탄소",
+          "en": "carbon"
         },
         {
           "es": "solución",
-          "ko": "용액"
+          "ko": "용액",
+          "en": "solution"
         },
         {
           "es": "gas",
-          "ko": "기체"
+          "ko": "기체",
+          "en": "gas"
         },
         {
           "es": "líquido",
-          "ko": "액체"
+          "ko": "액체",
+          "en": "liquid"
         },
         {
           "es": "sólido",
-          "ko": "고체"
+          "ko": "고체",
+          "en": "solid"
         },
         {
           "es": "biología",
-          "ko": "생물학"
+          "ko": "생물학",
+          "en": "biology"
         },
         {
           "es": "célula",
-          "ko": "세포"
+          "ko": "세포",
+          "en": "cell"
         },
         {
           "es": "gen",
-          "ko": "유전자"
+          "ko": "유전자",
+          "en": "gene"
         },
         {
           "es": "ADN",
-          "ko": "DNA"
+          "ko": "DNA",
+          "en": "DNA"
         },
         {
           "es": "evolución",
-          "ko": "진화"
+          "ko": "진화",
+          "en": "evolution"
         },
         {
           "es": "especie",
-          "ko": "종"
+          "ko": "종",
+          "en": "species"
         },
         {
           "es": "organismo",
-          "ko": "유기체"
+          "ko": "유기체",
+          "en": "organism"
         },
         {
           "es": "bacteria",
-          "ko": "세균"
+          "ko": "세균",
+          "en": "bacteria"
         },
         {
           "es": "virus",
-          "ko": "바이러스"
+          "ko": "바이러스",
+          "en": "virus"
         },
         {
           "es": "fotosíntesis",
-          "ko": "광합성"
+          "ko": "광합성",
+          "en": "photosynthesis"
         },
         {
           "es": "ecosistema",
-          "ko": "생태계"
+          "ko": "생태계",
+          "en": "ecosystem"
         },
         {
           "es": "proteína",
-          "ko": "단백질"
+          "ko": "단백질",
+          "en": "protein"
         },
         {
           "es": "nutriente",
-          "ko": "영양소"
+          "ko": "영양소",
+          "en": "nutrient"
         },
         {
           "es": "reproducción",
-          "ko": "생식"
+          "ko": "생식",
+          "en": "reproduction"
         },
         {
           "es": "herencia",
-          "ko": "유전"
+          "ko": "유전",
+          "en": "genetics"
         },
         {
           "es": "cuerpo",
-          "ko": "몸"
+          "ko": "몸",
+          "en": "body"
         },
         {
           "es": "cerebro",
-          "ko": "뇌"
+          "ko": "뇌",
+          "en": "brain"
         },
         {
           "es": "corazón",
-          "ko": "심장"
+          "ko": "심장",
+          "en": "heart"
         },
         {
           "es": "pulmón",
-          "ko": "폐"
+          "ko": "폐",
+          "en": "lung"
         },
         {
           "es": "hueso",
-          "ko": "뼈"
+          "ko": "뼈",
+          "en": "bone"
         },
         {
           "es": "músculo",
-          "ko": "근육"
+          "ko": "근육",
+          "en": "muscle"
         },
         {
           "es": "nervio",
-          "ko": "신경"
+          "ko": "신경",
+          "en": "nerve"
         },
         {
           "es": "sangre",
-          "ko": "혈액"
+          "ko": "혈액",
+          "en": "blood"
         },
         {
           "es": "órgano",
-          "ko": "장기"
+          "ko": "장기",
+          "en": "organ"
         },
         {
           "es": "tejido",
-          "ko": "조직"
+          "ko": "조직",
+          "en": "knitting"
         },
         {
           "es": "esqueleto",
-          "ko": "골격"
+          "ko": "골격",
+          "en": "skeleton"
         },
         {
           "es": "digestión",
-          "ko": "소화"
+          "ko": "소화",
+          "en": "digestion"
         },
         {
           "es": "respiración",
-          "ko": "호흡"
+          "ko": "호흡",
+          "en": "breathing"
         },
         {
           "es": "circulación",
-          "ko": "순환"
+          "ko": "순환",
+          "en": "circulation"
         },
         {
           "es": "sentido",
-          "ko": "감각"
+          "ko": "감각",
+          "en": "sense"
         },
         {
           "es": "medicina",
-          "ko": "의학"
+          "ko": "의학",
+          "en": "medicine"
         },
         {
           "es": "salud",
-          "ko": "건강"
+          "ko": "건강",
+          "en": "health"
         },
         {
           "es": "enfermedad",
-          "ko": "질병"
+          "ko": "질병",
+          "en": "illness"
         },
         {
           "es": "vacuna",
-          "ko": "백신"
+          "ko": "백신",
+          "en": "vaccine"
         },
         {
           "es": "tratamiento",
-          "ko": "치료"
+          "ko": "치료",
+          "en": "treatment"
         },
         {
           "es": "diagnóstico",
-          "ko": "진단"
+          "ko": "진단",
+          "en": "diagnosis"
         },
         {
           "es": "síntoma",
-          "ko": "증상"
+          "ko": "증상",
+          "en": "symptom"
         },
         {
           "es": "cirugía",
-          "ko": "수술"
+          "ko": "수술",
+          "en": "surgery"
         },
         {
           "es": "medicamento",
-          "ko": "약물"
+          "ko": "약물",
+          "en": "medication"
         },
         {
           "es": "antibiótico",
-          "ko": "항생제"
+          "ko": "항생제",
+          "en": "antibiotic"
         }
       ]
     },
@@ -887,43 +1087,53 @@
       "words": [
         {
           "es": "infección",
-          "ko": "감염"
+          "ko": "감염",
+          "en": "infection"
         },
         {
           "es": "alergia",
-          "ko": "알레르기"
+          "ko": "알레르기",
+          "en": "allergy"
         },
         {
           "es": "receta",
-          "ko": "처방전"
+          "ko": "처방전",
+          "en": "recipe"
         },
         {
           "es": "hospital",
-          "ko": "병원"
+          "ko": "병원",
+          "en": "hospital"
         },
         {
           "es": "paciente",
-          "ko": "환자"
+          "ko": "환자",
+          "en": "patient"
         },
         {
           "es": "tecnología",
-          "ko": "기술"
+          "ko": "기술",
+          "en": "technology"
         },
         {
           "es": "máquina",
-          "ko": "기계"
+          "ko": "기계",
+          "en": "machine"
         },
         {
           "es": "herramienta",
-          "ko": "도구"
+          "ko": "도구",
+          "en": "tool"
         },
         {
           "es": "dispositivo",
-          "ko": "장치"
+          "ko": "장치",
+          "en": "device"
         },
         {
           "es": "sistema",
-          "ko": "시스템"
+          "ko": "시스템",
+          "en": "system"
         }
       ]
     },
@@ -934,43 +1144,53 @@
       "words": [
         {
           "es": "automático",
-          "ko": "자동"
+          "ko": "자동",
+          "en": "automatic"
         },
         {
           "es": "digital",
-          "ko": "디지털"
+          "ko": "디지털",
+          "en": "digital"
         },
         {
           "es": "electrónico",
-          "ko": "전자"
+          "ko": "전자",
+          "en": "electronic"
         },
         {
           "es": "sensor",
-          "ko": "센서"
+          "ko": "센서",
+          "en": "sensor"
         },
         {
           "es": "cable",
-          "ko": "케이블"
+          "ko": "케이블",
+          "en": "cable"
         },
         {
           "es": "batería",
-          "ko": "배터리"
+          "ko": "배터리",
+          "en": "drums"
         },
         {
           "es": "pantalla",
-          "ko": "화면"
+          "ko": "화면",
+          "en": "screen"
         },
         {
           "es": "señal",
-          "ko": "신호"
+          "ko": "신호",
+          "en": "signal"
         },
         {
           "es": "conexión",
-          "ko": "연결"
+          "ko": "연결",
+          "en": "connection"
         },
         {
           "es": "innovación",
-          "ko": "혁신"
+          "ko": "혁신",
+          "en": "innovation"
         }
       ]
     },
@@ -981,43 +1201,53 @@
       "words": [
         {
           "es": "computadora",
-          "ko": "컴퓨터"
+          "ko": "컴퓨터",
+          "en": "computer"
         },
         {
           "es": "teclado",
-          "ko": "키보드"
+          "ko": "키보드",
+          "en": "keyboard"
         },
         {
           "es": "ratón",
-          "ko": "마우스"
+          "ko": "마우스",
+          "en": "mouse"
         },
         {
           "es": "monitor",
-          "ko": "모니터"
+          "ko": "모니터",
+          "en": "monitor"
         },
         {
           "es": "disco duro",
-          "ko": "하드디스크"
+          "ko": "하드디스크",
+          "en": "hard drive"
         },
         {
           "es": "memoria",
-          "ko": "메모리"
+          "ko": "메모리",
+          "en": "memory"
         },
         {
           "es": "procesador",
-          "ko": "프로세서"
+          "ko": "프로세서",
+          "en": "processor"
         },
         {
           "es": "impresora",
-          "ko": "프린터"
+          "ko": "프린터",
+          "en": "printer"
         },
         {
           "es": "servidor",
-          "ko": "서버"
+          "ko": "서버",
+          "en": "server"
         },
         {
           "es": "portátil",
-          "ko": "노트북"
+          "ko": "노트북",
+          "en": "laptop"
         }
       ]
     },
@@ -1028,43 +1258,53 @@
       "words": [
         {
           "es": "chip",
-          "ko": "칩"
+          "ko": "칩",
+          "en": "chip"
         },
         {
           "es": "tarjeta gráfica",
-          "ko": "그래픽카드"
+          "ko": "그래픽카드",
+          "en": "graphics card"
         },
         {
           "es": "puerto",
-          "ko": "포트"
+          "ko": "포트",
+          "en": "port"
         },
         {
           "es": "altavoz",
-          "ko": "스피커"
+          "ko": "스피커",
+          "en": "speaker"
         },
         {
           "es": "cámara web",
-          "ko": "웹캠"
+          "ko": "웹캠",
+          "en": "webcam"
         },
         {
           "es": "software",
-          "ko": "소프트웨어"
+          "ko": "소프트웨어",
+          "en": "software"
         },
         {
           "es": "internet",
-          "ko": "인터넷"
+          "ko": "인터넷",
+          "en": "internet"
         },
         {
           "es": "programa",
-          "ko": "프로그램"
+          "ko": "프로그램",
+          "en": "program"
         },
         {
           "es": "archivo",
-          "ko": "파일"
+          "ko": "파일",
+          "en": "file"
         },
         {
           "es": "página web",
-          "ko": "웹페이지"
+          "ko": "웹페이지",
+          "en": "webpage"
         }
       ]
     },
@@ -1075,43 +1315,53 @@
       "words": [
         {
           "es": "navegador",
-          "ko": "브라우저"
+          "ko": "브라우저",
+          "en": "navigator"
         },
         {
           "es": "contraseña",
-          "ko": "비밀번호"
+          "ko": "비밀번호",
+          "en": "password"
         },
         {
           "es": "descargar",
-          "ko": "다운로드"
+          "ko": "다운로드",
+          "en": "to download"
         },
         {
           "es": "red",
-          "ko": "네트워크"
+          "ko": "네트워크",
+          "en": "network"
         },
         {
           "es": "correo electrónico",
-          "ko": "이메일"
+          "ko": "이메일",
+          "en": "email"
         },
         {
           "es": "base de datos",
-          "ko": "데이터베이스"
+          "ko": "데이터베이스",
+          "en": "database"
         },
         {
           "es": "nube",
-          "ko": "클라우드"
+          "ko": "클라우드",
+          "en": "cloud"
         },
         {
           "es": "código",
-          "ko": "코드"
+          "ko": "코드",
+          "en": "code"
         },
         {
           "es": "algoritmo",
-          "ko": "알고리즘"
+          "ko": "알고리즘",
+          "en": "algorithm"
         },
         {
           "es": "actualización",
-          "ko": "업데이트"
+          "ko": "업데이트",
+          "en": "update"
         }
       ]
     },
@@ -1122,43 +1372,53 @@
       "words": [
         {
           "es": "teléfono inteligente",
-          "ko": "스마트폰"
+          "ko": "스마트폰",
+          "en": "smartphone"
         },
         {
           "es": "aplicación",
-          "ko": "앱"
+          "ko": "앱",
+          "en": "app"
         },
         {
           "es": "mensaje",
-          "ko": "메시지"
+          "ko": "메시지",
+          "en": "message"
         },
         {
           "es": "notificación",
-          "ko": "알림"
+          "ko": "알림",
+          "en": "notification"
         },
         {
           "es": "selfie",
-          "ko": "셀카"
+          "ko": "셀카",
+          "en": "selfie"
         },
         {
           "es": "videollamada",
-          "ko": "영상통화"
+          "ko": "영상통화",
+          "en": "video call"
         },
         {
           "es": "wifi",
-          "ko": "와이파이"
+          "ko": "와이파이",
+          "en": "WiFi"
         },
         {
           "es": "bluetooth",
-          "ko": "블루투스"
+          "ko": "블루투스",
+          "en": "Bluetooth"
         },
         {
           "es": "captura de pantalla",
-          "ko": "스크린샷"
+          "ko": "스크린샷",
+          "en": "screenshot"
         },
         {
           "es": "almacenamiento",
-          "ko": "저장공간"
+          "ko": "저장공간",
+          "en": "storage"
         }
       ]
     },
@@ -1169,43 +1429,53 @@
       "words": [
         {
           "es": "cargador",
-          "ko": "충전기"
+          "ko": "충전기",
+          "en": "charger"
         },
         {
           "es": "funda",
-          "ko": "케이스"
+          "ko": "케이스",
+          "en": "case"
         },
         {
           "es": "red social",
-          "ko": "소셜미디어"
+          "ko": "소셜미디어",
+          "en": "social media"
         },
         {
           "es": "emoji",
-          "ko": "이모티콘"
+          "ko": "이모티콘",
+          "en": "emoji"
         },
         {
           "es": "cuenta",
-          "ko": "계정"
+          "ko": "계정",
+          "en": "bill"
         },
         {
           "es": "electricidad",
-          "ko": "전기"
+          "ko": "전기",
+          "en": "electricity"
         },
         {
           "es": "voltaje",
-          "ko": "전압"
+          "ko": "전압",
+          "en": "voltage"
         },
         {
           "es": "corriente",
-          "ko": "전류"
+          "ko": "전류",
+          "en": "current"
         },
         {
           "es": "circuito",
-          "ko": "회로"
+          "ko": "회로",
+          "en": "circuit"
         },
         {
           "es": "energía solar",
-          "ko": "태양에너지"
+          "ko": "태양에너지",
+          "en": "solar energy"
         }
       ]
     },
@@ -1216,43 +1486,53 @@
       "words": [
         {
           "es": "energía eólica",
-          "ko": "풍력에너지"
+          "ko": "풍력에너지",
+          "en": "wind energy"
         },
         {
           "es": "nuclear",
-          "ko": "원자력"
+          "ko": "원자력",
+          "en": "nuclear"
         },
         {
           "es": "combustible",
-          "ko": "연료"
+          "ko": "연료",
+          "en": "fuel"
         },
         {
           "es": "generador",
-          "ko": "발전기"
+          "ko": "발전기",
+          "en": "generator"
         },
         {
           "es": "turbina",
-          "ko": "터빈"
+          "ko": "터빈",
+          "en": "turbine"
         },
         {
           "es": "potencia",
-          "ko": "전력"
+          "ko": "전력",
+          "en": "power"
         },
         {
           "es": "enchufe",
-          "ko": "콘센트"
+          "ko": "콘센트",
+          "en": "outlet"
         },
         {
           "es": "bombilla",
-          "ko": "전구"
+          "ko": "전구",
+          "en": "light bulb"
         },
         {
           "es": "interruptor",
-          "ko": "스위치"
+          "ko": "스위치",
+          "en": "switch"
         },
         {
           "es": "renovable",
-          "ko": "재생가능한"
+          "ko": "재생가능한",
+          "en": "renewable"
         }
       ]
     },
@@ -1263,43 +1543,53 @@
       "words": [
         {
           "es": "ingeniería",
-          "ko": "공학"
+          "ko": "공학",
+          "en": "engineering"
         },
         {
           "es": "ingeniero",
-          "ko": "엔지니어"
+          "ko": "엔지니어",
+          "en": "engineer"
         },
         {
           "es": "diseño",
-          "ko": "설계"
+          "ko": "설계",
+          "en": "design"
         },
         {
           "es": "construcción",
-          "ko": "건설"
+          "ko": "건설",
+          "en": "construction"
         },
         {
           "es": "estructura",
-          "ko": "구조"
+          "ko": "구조",
+          "en": "structure"
         },
         {
           "es": "puente",
-          "ko": "다리"
+          "ko": "다리",
+          "en": "bridge"
         },
         {
           "es": "robot",
-          "ko": "로봇"
+          "ko": "로봇",
+          "en": "robot"
         },
         {
           "es": "prototipo",
-          "ko": "시제품"
+          "ko": "시제품",
+          "en": "prototype"
         },
         {
           "es": "plano",
-          "ko": "도면"
+          "ko": "도면",
+          "en": "blueprint"
         },
         {
           "es": "mecanismo",
-          "ko": "메커니즘"
+          "ko": "메커니즘",
+          "en": "mechanism"
         }
       ]
     },
@@ -1310,43 +1600,53 @@
       "words": [
         {
           "es": "tornillo",
-          "ko": "나사"
+          "ko": "나사",
+          "en": "screw"
         },
         {
           "es": "engranaje",
-          "ko": "톱니바퀴"
+          "ko": "톱니바퀴",
+          "en": "gear"
         },
         {
           "es": "tubería",
-          "ko": "배관"
+          "ko": "배관",
+          "en": "pipe"
         },
         {
           "es": "soldadura",
-          "ko": "용접"
+          "ko": "용접",
+          "en": "welding"
         },
         {
           "es": "automatización",
-          "ko": "자동화"
+          "ko": "자동화",
+          "en": "automation"
         },
         {
           "es": "espacio",
-          "ko": "우주"
+          "ko": "우주",
+          "en": "space"
         },
         {
           "es": "satélite",
-          "ko": "위성"
+          "ko": "위성",
+          "en": "satellite"
         },
         {
           "es": "cohete",
-          "ko": "로켓"
+          "ko": "로켓",
+          "en": "rocket"
         },
         {
           "es": "estación espacial",
-          "ko": "우주정거장"
+          "ko": "우주정거장",
+          "en": "space station"
         },
         {
           "es": "astronauta",
-          "ko": "우주비행사"
+          "ko": "우주비행사",
+          "en": "astronaut"
         }
       ]
     },
@@ -1357,403 +1657,503 @@
       "words": [
         {
           "es": "infección",
-          "ko": "감염"
+          "ko": "감염",
+          "en": "infection"
         },
         {
           "es": "alergia",
-          "ko": "알레르기"
+          "ko": "알레르기",
+          "en": "allergy"
         },
         {
           "es": "receta",
-          "ko": "처방전"
+          "ko": "처방전",
+          "en": "recipe"
         },
         {
           "es": "hospital",
-          "ko": "병원"
+          "ko": "병원",
+          "en": "hospital"
         },
         {
           "es": "paciente",
-          "ko": "환자"
+          "ko": "환자",
+          "en": "patient"
         },
         {
           "es": "tecnología",
-          "ko": "기술"
+          "ko": "기술",
+          "en": "technology"
         },
         {
           "es": "máquina",
-          "ko": "기계"
+          "ko": "기계",
+          "en": "machine"
         },
         {
           "es": "herramienta",
-          "ko": "도구"
+          "ko": "도구",
+          "en": "tool"
         },
         {
           "es": "dispositivo",
-          "ko": "장치"
+          "ko": "장치",
+          "en": "device"
         },
         {
           "es": "sistema",
-          "ko": "시스템"
+          "ko": "시스템",
+          "en": "system"
         },
         {
           "es": "automático",
-          "ko": "자동"
+          "ko": "자동",
+          "en": "automatic"
         },
         {
           "es": "digital",
-          "ko": "디지털"
+          "ko": "디지털",
+          "en": "digital"
         },
         {
           "es": "electrónico",
-          "ko": "전자"
+          "ko": "전자",
+          "en": "electronic"
         },
         {
           "es": "sensor",
-          "ko": "센서"
+          "ko": "센서",
+          "en": "sensor"
         },
         {
           "es": "cable",
-          "ko": "케이블"
+          "ko": "케이블",
+          "en": "cable"
         },
         {
           "es": "batería",
-          "ko": "배터리"
+          "ko": "배터리",
+          "en": "drums"
         },
         {
           "es": "pantalla",
-          "ko": "화면"
+          "ko": "화면",
+          "en": "screen"
         },
         {
           "es": "señal",
-          "ko": "신호"
+          "ko": "신호",
+          "en": "signal"
         },
         {
           "es": "conexión",
-          "ko": "연결"
+          "ko": "연결",
+          "en": "connection"
         },
         {
           "es": "innovación",
-          "ko": "혁신"
+          "ko": "혁신",
+          "en": "innovation"
         },
         {
           "es": "computadora",
-          "ko": "컴퓨터"
+          "ko": "컴퓨터",
+          "en": "computer"
         },
         {
           "es": "teclado",
-          "ko": "키보드"
+          "ko": "키보드",
+          "en": "keyboard"
         },
         {
           "es": "ratón",
-          "ko": "마우스"
+          "ko": "마우스",
+          "en": "mouse"
         },
         {
           "es": "monitor",
-          "ko": "모니터"
+          "ko": "모니터",
+          "en": "monitor"
         },
         {
           "es": "disco duro",
-          "ko": "하드디스크"
+          "ko": "하드디스크",
+          "en": "hard drive"
         },
         {
           "es": "memoria",
-          "ko": "메모리"
+          "ko": "메모리",
+          "en": "memory"
         },
         {
           "es": "procesador",
-          "ko": "프로세서"
+          "ko": "프로세서",
+          "en": "processor"
         },
         {
           "es": "impresora",
-          "ko": "프린터"
+          "ko": "프린터",
+          "en": "printer"
         },
         {
           "es": "servidor",
-          "ko": "서버"
+          "ko": "서버",
+          "en": "server"
         },
         {
           "es": "portátil",
-          "ko": "노트북"
+          "ko": "노트북",
+          "en": "laptop"
         },
         {
           "es": "chip",
-          "ko": "칩"
+          "ko": "칩",
+          "en": "chip"
         },
         {
           "es": "tarjeta gráfica",
-          "ko": "그래픽카드"
+          "ko": "그래픽카드",
+          "en": "graphics card"
         },
         {
           "es": "puerto",
-          "ko": "포트"
+          "ko": "포트",
+          "en": "port"
         },
         {
           "es": "altavoz",
-          "ko": "스피커"
+          "ko": "스피커",
+          "en": "speaker"
         },
         {
           "es": "cámara web",
-          "ko": "웹캠"
+          "ko": "웹캠",
+          "en": "webcam"
         },
         {
           "es": "software",
-          "ko": "소프트웨어"
+          "ko": "소프트웨어",
+          "en": "software"
         },
         {
           "es": "internet",
-          "ko": "인터넷"
+          "ko": "인터넷",
+          "en": "internet"
         },
         {
           "es": "programa",
-          "ko": "프로그램"
+          "ko": "프로그램",
+          "en": "program"
         },
         {
           "es": "archivo",
-          "ko": "파일"
+          "ko": "파일",
+          "en": "file"
         },
         {
           "es": "página web",
-          "ko": "웹페이지"
+          "ko": "웹페이지",
+          "en": "webpage"
         },
         {
           "es": "navegador",
-          "ko": "브라우저"
+          "ko": "브라우저",
+          "en": "navigator"
         },
         {
           "es": "contraseña",
-          "ko": "비밀번호"
+          "ko": "비밀번호",
+          "en": "password"
         },
         {
           "es": "descargar",
-          "ko": "다운로드"
+          "ko": "다운로드",
+          "en": "to download"
         },
         {
           "es": "red",
-          "ko": "네트워크"
+          "ko": "네트워크",
+          "en": "network"
         },
         {
           "es": "correo electrónico",
-          "ko": "이메일"
+          "ko": "이메일",
+          "en": "email"
         },
         {
           "es": "base de datos",
-          "ko": "데이터베이스"
+          "ko": "데이터베이스",
+          "en": "database"
         },
         {
           "es": "nube",
-          "ko": "클라우드"
+          "ko": "클라우드",
+          "en": "cloud"
         },
         {
           "es": "código",
-          "ko": "코드"
+          "ko": "코드",
+          "en": "code"
         },
         {
           "es": "algoritmo",
-          "ko": "알고리즘"
+          "ko": "알고리즘",
+          "en": "algorithm"
         },
         {
           "es": "actualización",
-          "ko": "업데이트"
+          "ko": "업데이트",
+          "en": "update"
         },
         {
           "es": "teléfono inteligente",
-          "ko": "스마트폰"
+          "ko": "스마트폰",
+          "en": "smartphone"
         },
         {
           "es": "aplicación",
-          "ko": "앱"
+          "ko": "앱",
+          "en": "app"
         },
         {
           "es": "mensaje",
-          "ko": "메시지"
+          "ko": "메시지",
+          "en": "message"
         },
         {
           "es": "notificación",
-          "ko": "알림"
+          "ko": "알림",
+          "en": "notification"
         },
         {
           "es": "selfie",
-          "ko": "셀카"
+          "ko": "셀카",
+          "en": "selfie"
         },
         {
           "es": "videollamada",
-          "ko": "영상통화"
+          "ko": "영상통화",
+          "en": "video call"
         },
         {
           "es": "wifi",
-          "ko": "와이파이"
+          "ko": "와이파이",
+          "en": "WiFi"
         },
         {
           "es": "bluetooth",
-          "ko": "블루투스"
+          "ko": "블루투스",
+          "en": "Bluetooth"
         },
         {
           "es": "captura de pantalla",
-          "ko": "스크린샷"
+          "ko": "스크린샷",
+          "en": "screenshot"
         },
         {
           "es": "almacenamiento",
-          "ko": "저장공간"
+          "ko": "저장공간",
+          "en": "storage"
         },
         {
           "es": "cargador",
-          "ko": "충전기"
+          "ko": "충전기",
+          "en": "charger"
         },
         {
           "es": "funda",
-          "ko": "케이스"
+          "ko": "케이스",
+          "en": "case"
         },
         {
           "es": "red social",
-          "ko": "소셜미디어"
+          "ko": "소셜미디어",
+          "en": "social media"
         },
         {
           "es": "emoji",
-          "ko": "이모티콘"
+          "ko": "이모티콘",
+          "en": "emoji"
         },
         {
           "es": "cuenta",
-          "ko": "계정"
+          "ko": "계정",
+          "en": "bill"
         },
         {
           "es": "electricidad",
-          "ko": "전기"
+          "ko": "전기",
+          "en": "electricity"
         },
         {
           "es": "voltaje",
-          "ko": "전압"
+          "ko": "전압",
+          "en": "voltage"
         },
         {
           "es": "corriente",
-          "ko": "전류"
+          "ko": "전류",
+          "en": "current"
         },
         {
           "es": "circuito",
-          "ko": "회로"
+          "ko": "회로",
+          "en": "circuit"
         },
         {
           "es": "energía solar",
-          "ko": "태양에너지"
+          "ko": "태양에너지",
+          "en": "solar energy"
         },
         {
           "es": "energía eólica",
-          "ko": "풍력에너지"
+          "ko": "풍력에너지",
+          "en": "wind energy"
         },
         {
           "es": "nuclear",
-          "ko": "원자력"
+          "ko": "원자력",
+          "en": "nuclear"
         },
         {
           "es": "combustible",
-          "ko": "연료"
+          "ko": "연료",
+          "en": "fuel"
         },
         {
           "es": "generador",
-          "ko": "발전기"
+          "ko": "발전기",
+          "en": "generator"
         },
         {
           "es": "turbina",
-          "ko": "터빈"
+          "ko": "터빈",
+          "en": "turbine"
         },
         {
           "es": "potencia",
-          "ko": "전력"
+          "ko": "전력",
+          "en": "power"
         },
         {
           "es": "enchufe",
-          "ko": "콘센트"
+          "ko": "콘센트",
+          "en": "outlet"
         },
         {
           "es": "bombilla",
-          "ko": "전구"
+          "ko": "전구",
+          "en": "light bulb"
         },
         {
           "es": "interruptor",
-          "ko": "스위치"
+          "ko": "스위치",
+          "en": "switch"
         },
         {
           "es": "renovable",
-          "ko": "재생가능한"
+          "ko": "재생가능한",
+          "en": "renewable"
         },
         {
           "es": "ingeniería",
-          "ko": "공학"
+          "ko": "공학",
+          "en": "engineering"
         },
         {
           "es": "ingeniero",
-          "ko": "엔지니어"
+          "ko": "엔지니어",
+          "en": "engineer"
         },
         {
           "es": "diseño",
-          "ko": "설계"
+          "ko": "설계",
+          "en": "design"
         },
         {
           "es": "construcción",
-          "ko": "건설"
+          "ko": "건설",
+          "en": "construction"
         },
         {
           "es": "estructura",
-          "ko": "구조"
+          "ko": "구조",
+          "en": "structure"
         },
         {
           "es": "puente",
-          "ko": "다리"
+          "ko": "다리",
+          "en": "bridge"
         },
         {
           "es": "robot",
-          "ko": "로봇"
+          "ko": "로봇",
+          "en": "robot"
         },
         {
           "es": "prototipo",
-          "ko": "시제품"
+          "ko": "시제품",
+          "en": "prototype"
         },
         {
           "es": "plano",
-          "ko": "도면"
+          "ko": "도면",
+          "en": "blueprint"
         },
         {
           "es": "mecanismo",
-          "ko": "메커니즘"
+          "ko": "메커니즘",
+          "en": "mechanism"
         },
         {
           "es": "tornillo",
-          "ko": "나사"
+          "ko": "나사",
+          "en": "screw"
         },
         {
           "es": "engranaje",
-          "ko": "톱니바퀴"
+          "ko": "톱니바퀴",
+          "en": "gear"
         },
         {
           "es": "tubería",
-          "ko": "배관"
+          "ko": "배관",
+          "en": "pipe"
         },
         {
           "es": "soldadura",
-          "ko": "용접"
+          "ko": "용접",
+          "en": "welding"
         },
         {
           "es": "automatización",
-          "ko": "자동화"
+          "ko": "자동화",
+          "en": "automation"
         },
         {
           "es": "espacio",
-          "ko": "우주"
+          "ko": "우주",
+          "en": "space"
         },
         {
           "es": "satélite",
-          "ko": "위성"
+          "ko": "위성",
+          "en": "satellite"
         },
         {
           "es": "cohete",
-          "ko": "로켓"
+          "ko": "로켓",
+          "en": "rocket"
         },
         {
           "es": "estación espacial",
-          "ko": "우주정거장"
+          "ko": "우주정거장",
+          "en": "space station"
         },
         {
           "es": "astronauta",
-          "ko": "우주비행사"
+          "ko": "우주비행사",
+          "en": "astronaut"
         }
       ]
     },
@@ -1764,43 +2164,53 @@
       "words": [
         {
           "es": "órbita",
-          "ko": "궤도"
+          "ko": "궤도",
+          "en": "orbit"
         },
         {
           "es": "nave espacial",
-          "ko": "우주선"
+          "ko": "우주선",
+          "en": "spaceship"
         },
         {
           "es": "lanzamiento",
-          "ko": "발사"
+          "ko": "발사",
+          "en": "launch"
         },
         {
           "es": "sonda",
-          "ko": "탐사선"
+          "ko": "탐사선",
+          "en": "probe"
         },
         {
           "es": "galaxia",
-          "ko": "은하"
+          "ko": "은하",
+          "en": "galaxy"
         },
         {
           "es": "planeta",
-          "ko": "행성"
+          "ko": "행성",
+          "en": "planet"
         },
         {
           "es": "estrella",
-          "ko": "별"
+          "ko": "별",
+          "en": "star"
         },
         {
           "es": "agujero negro",
-          "ko": "블랙홀"
+          "ko": "블랙홀",
+          "en": "black hole"
         },
         {
           "es": "gravedad cero",
-          "ko": "무중력"
+          "ko": "무중력",
+          "en": "zero gravity"
         },
         {
           "es": "exploración",
-          "ko": "탐사"
+          "ko": "탐사",
+          "en": "exploration"
         }
       ]
     },
@@ -1811,43 +2221,53 @@
       "words": [
         {
           "es": "inteligencia artificial",
-          "ko": "인공지능"
+          "ko": "인공지능",
+          "en": "artificial intelligence"
         },
         {
           "es": "aprendizaje automático",
-          "ko": "머신러닝"
+          "ko": "머신러닝",
+          "en": "machine learning"
         },
         {
           "es": "red neuronal",
-          "ko": "신경망"
+          "ko": "신경망",
+          "en": "neural network"
         },
         {
           "es": "reconocimiento",
-          "ko": "인식"
+          "ko": "인식",
+          "en": "recognition"
         },
         {
           "es": "asistente virtual",
-          "ko": "가상비서"
+          "ko": "가상비서",
+          "en": "virtual assistant"
         },
         {
           "es": "chatbot",
-          "ko": "챗봇"
+          "ko": "챗봇",
+          "en": "chatbot"
         },
         {
           "es": "automatizado",
-          "ko": "자동화된"
+          "ko": "자동화된",
+          "en": "automated"
         },
         {
           "es": "predicción",
-          "ko": "예측"
+          "ko": "예측",
+          "en": "prediction"
         },
         {
           "es": "clasificación",
-          "ko": "분류"
+          "ko": "분류",
+          "en": "classification"
         },
         {
           "es": "modelo",
-          "ko": "모델"
+          "ko": "모델",
+          "en": "model"
         }
       ]
     },
@@ -1858,43 +2278,53 @@
       "words": [
         {
           "es": "entrenamiento",
-          "ko": "훈련"
+          "ko": "훈련",
+          "en": "training"
         },
         {
           "es": "voz artificial",
-          "ko": "인공음성"
+          "ko": "인공음성",
+          "en": "artificial voice"
         },
         {
           "es": "conducción autónoma",
-          "ko": "자율주행"
+          "ko": "자율주행",
+          "en": "autonomous driving"
         },
         {
           "es": "procesamiento",
-          "ko": "처리"
+          "ko": "처리",
+          "en": "processing"
         },
         {
           "es": "aprendizaje profundo",
-          "ko": "딥러닝"
+          "ko": "딥러닝",
+          "en": "deep learning"
         },
         {
           "es": "medio ambiente",
-          "ko": "환경"
+          "ko": "환경",
+          "en": "environment"
         },
         {
           "es": "sostenibilidad",
-          "ko": "지속가능성"
+          "ko": "지속가능성",
+          "en": "sustainability"
         },
         {
           "es": "contaminación",
-          "ko": "오염"
+          "ko": "오염",
+          "en": "pollution"
         },
         {
           "es": "reciclaje",
-          "ko": "재활용"
+          "ko": "재활용",
+          "en": "recycling"
         },
         {
           "es": "cambio climático",
-          "ko": "기후변화"
+          "ko": "기후변화",
+          "en": "climate change"
         }
       ]
     },
@@ -1905,43 +2335,53 @@
       "words": [
         {
           "es": "emisión",
-          "ko": "배출"
+          "ko": "배출",
+          "en": "emission"
         },
         {
           "es": "huella de carbono",
-          "ko": "탄소발자국"
+          "ko": "탄소발자국",
+          "en": "carbon footprint"
         },
         {
           "es": "biodiversidad",
-          "ko": "생물다양성"
+          "ko": "생물다양성",
+          "en": "biodiversity"
         },
         {
           "es": "deforestación",
-          "ko": "산림파괴"
+          "ko": "산림파괴",
+          "en": "deforestation"
         },
         {
           "es": "capa de ozono",
-          "ko": "오존층"
+          "ko": "오존층",
+          "en": "ozone layer"
         },
         {
           "es": "efecto invernadero",
-          "ko": "온실효과"
+          "ko": "온실효과",
+          "en": "greenhouse effect"
         },
         {
           "es": "residuo",
-          "ko": "폐기물"
+          "ko": "폐기물",
+          "en": "waste"
         },
         {
           "es": "conservación",
-          "ko": "보존"
+          "ko": "보존",
+          "en": "conservation"
         },
         {
           "es": "ecológico",
-          "ko": "친환경적인"
+          "ko": "친환경적인",
+          "en": "ecological"
         },
         {
           "es": "recurso natural",
-          "ko": "천연자원"
+          "ko": "천연자원",
+          "en": "natural resource"
         }
       ]
     },
@@ -1952,43 +2392,53 @@
       "words": [
         {
           "es": "material",
-          "ko": "재료"
+          "ko": "재료",
+          "en": "material"
         },
         {
           "es": "metal",
-          "ko": "금속"
+          "ko": "금속",
+          "en": "metal"
         },
         {
           "es": "plástico",
-          "ko": "플라스틱"
+          "ko": "플라스틱",
+          "en": "plastic"
         },
         {
           "es": "acero",
-          "ko": "강철"
+          "ko": "강철",
+          "en": "steel"
         },
         {
           "es": "aluminio",
-          "ko": "알루미늄"
+          "ko": "알루미늄",
+          "en": "aluminum"
         },
         {
           "es": "cerámica",
-          "ko": "세라믹"
+          "ko": "세라믹",
+          "en": "ceramics"
         },
         {
           "es": "fibra",
-          "ko": "섬유"
+          "ko": "섬유",
+          "en": "fiber"
         },
         {
           "es": "fabricación",
-          "ko": "제조"
+          "ko": "제조",
+          "en": "manufacturing"
         },
         {
           "es": "fábrica",
-          "ko": "공장"
+          "ko": "공장",
+          "en": "factory"
         },
         {
           "es": "producción",
-          "ko": "생산"
+          "ko": "생산",
+          "en": "production"
         }
       ]
     },
@@ -1999,43 +2449,53 @@
       "words": [
         {
           "es": "ensamblaje",
-          "ko": "조립"
+          "ko": "조립",
+          "en": "assembly"
         },
         {
           "es": "calidad",
-          "ko": "품질"
+          "ko": "품질",
+          "en": "quality"
         },
         {
           "es": "molde",
-          "ko": "금형"
+          "ko": "금형",
+          "en": "mold"
         },
         {
           "es": "materia prima",
-          "ko": "원자재"
+          "ko": "원자재",
+          "en": "raw material"
         },
         {
           "es": "nanotecnología",
-          "ko": "나노기술"
+          "ko": "나노기술",
+          "en": "nanotechnology"
         },
         {
           "es": "hipótesis",
-          "ko": "가설"
+          "ko": "가설",
+          "en": "hypothesis"
         },
         {
           "es": "observación",
-          "ko": "관찰"
+          "ko": "관찰",
+          "en": "observation"
         },
         {
           "es": "variable",
-          "ko": "변수"
+          "ko": "변수",
+          "en": "variable"
         },
         {
           "es": "conclusión",
-          "ko": "결론"
+          "ko": "결론",
+          "en": "conclusion"
         },
         {
           "es": "muestra",
-          "ko": "표본"
+          "ko": "표본",
+          "en": "sample"
         }
       ]
     },
@@ -2046,43 +2506,53 @@
       "words": [
         {
           "es": "medición",
-          "ko": "측정"
+          "ko": "측정",
+          "en": "measurement"
         },
         {
           "es": "control",
-          "ko": "대조군"
+          "ko": "대조군",
+          "en": "control"
         },
         {
           "es": "publicación",
-          "ko": "논문"
+          "ko": "논문",
+          "en": "publication"
         },
         {
           "es": "revisión",
-          "ko": "검토"
+          "ko": "검토",
+          "en": "review"
         },
         {
           "es": "evidencia",
-          "ko": "증거자료"
+          "ko": "증거자료",
+          "en": "evidence"
         },
         {
           "es": "precisión",
-          "ko": "정밀도"
+          "ko": "정밀도",
+          "en": "precision"
         },
         {
           "es": "error",
-          "ko": "오차"
+          "ko": "오차",
+          "en": "error"
         },
         {
           "es": "reproducibilidad",
-          "ko": "재현성"
+          "ko": "재현성",
+          "en": "reproducibility"
         },
         {
           "es": "verificación",
-          "ko": "검증"
+          "ko": "검증",
+          "en": "verification"
         },
         {
           "es": "simulación",
-          "ko": "시뮬레이션"
+          "ko": "시뮬레이션",
+          "en": "simulation"
         }
       ]
     },
@@ -2093,43 +2563,53 @@
       "words": [
         {
           "es": "invención",
-          "ko": "발명"
+          "ko": "발명",
+          "en": "invention"
         },
         {
           "es": "inventor",
-          "ko": "발명가"
+          "ko": "발명가",
+          "en": "inventor"
         },
         {
           "es": "patente",
-          "ko": "특허"
+          "ko": "특허",
+          "en": "patent"
         },
         {
           "es": "bombilla eléctrica",
-          "ko": "전등"
+          "ko": "전등",
+          "en": "electric bulb"
         },
         {
           "es": "motor",
-          "ko": "엔진"
+          "ko": "엔진",
+          "en": "engine"
         },
         {
           "es": "imprenta",
-          "ko": "인쇄기"
+          "ko": "인쇄기",
+          "en": "printing press"
         },
         {
           "es": "teléfono",
-          "ko": "전화기"
+          "ko": "전화기",
+          "en": "telephone"
         },
         {
           "es": "avión",
-          "ko": "비행기"
+          "ko": "비행기",
+          "en": "airplane"
         },
         {
           "es": "brújula",
-          "ko": "나침반"
+          "ko": "나침반",
+          "en": "compass"
         },
         {
           "es": "penicilina",
-          "ko": "페니실린"
+          "ko": "페니실린",
+          "en": "penicillin"
         }
       ]
     },
@@ -2140,43 +2620,53 @@
       "words": [
         {
           "es": "rueda",
-          "ko": "바퀴"
+          "ko": "바퀴",
+          "en": "wheel"
         },
         {
           "es": "pólvora",
-          "ko": "화약"
+          "ko": "화약",
+          "en": "gunpowder"
         },
         {
           "es": "semiconductor",
-          "ko": "반도체"
+          "ko": "반도체",
+          "en": "semiconductor"
         },
         {
           "es": "láser",
-          "ko": "레이저"
+          "ko": "레이저",
+          "en": "laser"
         },
         {
           "es": "radar",
-          "ko": "레이더"
+          "ko": "레이더",
+          "en": "radar"
         },
         {
           "es": "investigar",
-          "ko": "연구하다"
+          "ko": "연구하다",
+          "en": "to research"
         },
         {
           "es": "experimentar",
-          "ko": "실험하다"
+          "ko": "실험하다",
+          "en": "to experiment"
         },
         {
           "es": "medir",
-          "ko": "측정하다"
+          "ko": "측정하다",
+          "en": "to measure"
         },
         {
           "es": "observar",
-          "ko": "관찰하다"
+          "ko": "관찰하다",
+          "en": "to observe"
         },
         {
           "es": "calcular",
-          "ko": "계산하다"
+          "ko": "계산하다",
+          "en": "to calculate"
         }
       ]
     },
@@ -2187,43 +2677,53 @@
       "words": [
         {
           "es": "comprobar",
-          "ko": "확인하다"
+          "ko": "확인하다",
+          "en": "to check"
         },
         {
           "es": "analizar",
-          "ko": "분석하다"
+          "ko": "분석하다",
+          "en": "to analyze"
         },
         {
           "es": "desarrollar",
-          "ko": "개발하다"
+          "ko": "개발하다",
+          "en": "to develop"
         },
         {
           "es": "programar",
-          "ko": "프로그래밍하다"
+          "ko": "프로그래밍하다",
+          "en": "to program"
         },
         {
           "es": "inventar",
-          "ko": "발명하다"
+          "ko": "발명하다",
+          "en": "to invent"
         },
         {
           "es": "resolver",
-          "ko": "해결하다"
+          "ko": "해결하다",
+          "en": "to solve"
         },
         {
           "es": "demostrar",
-          "ko": "증명하다"
+          "ko": "증명하다",
+          "en": "to demonstrate"
         },
         {
           "es": "clasificar",
-          "ko": "분류하다"
+          "ko": "분류하다",
+          "en": "to classify"
         },
         {
           "es": "transformar",
-          "ko": "변환하다"
+          "ko": "변환하다",
+          "en": "to transform"
         },
         {
           "es": "conectar",
-          "ko": "연결하다"
+          "ko": "연결하다",
+          "en": "to connect"
         }
       ]
     },
@@ -2234,403 +2734,503 @@
       "words": [
         {
           "es": "órbita",
-          "ko": "궤도"
+          "ko": "궤도",
+          "en": "orbit"
         },
         {
           "es": "nave espacial",
-          "ko": "우주선"
+          "ko": "우주선",
+          "en": "spaceship"
         },
         {
           "es": "lanzamiento",
-          "ko": "발사"
+          "ko": "발사",
+          "en": "launch"
         },
         {
           "es": "sonda",
-          "ko": "탐사선"
+          "ko": "탐사선",
+          "en": "probe"
         },
         {
           "es": "galaxia",
-          "ko": "은하"
+          "ko": "은하",
+          "en": "galaxy"
         },
         {
           "es": "planeta",
-          "ko": "행성"
+          "ko": "행성",
+          "en": "planet"
         },
         {
           "es": "estrella",
-          "ko": "별"
+          "ko": "별",
+          "en": "star"
         },
         {
           "es": "agujero negro",
-          "ko": "블랙홀"
+          "ko": "블랙홀",
+          "en": "black hole"
         },
         {
           "es": "gravedad cero",
-          "ko": "무중력"
+          "ko": "무중력",
+          "en": "zero gravity"
         },
         {
           "es": "exploración",
-          "ko": "탐사"
+          "ko": "탐사",
+          "en": "exploration"
         },
         {
           "es": "inteligencia artificial",
-          "ko": "인공지능"
+          "ko": "인공지능",
+          "en": "artificial intelligence"
         },
         {
           "es": "aprendizaje automático",
-          "ko": "머신러닝"
+          "ko": "머신러닝",
+          "en": "machine learning"
         },
         {
           "es": "red neuronal",
-          "ko": "신경망"
+          "ko": "신경망",
+          "en": "neural network"
         },
         {
           "es": "reconocimiento",
-          "ko": "인식"
+          "ko": "인식",
+          "en": "recognition"
         },
         {
           "es": "asistente virtual",
-          "ko": "가상비서"
+          "ko": "가상비서",
+          "en": "virtual assistant"
         },
         {
           "es": "chatbot",
-          "ko": "챗봇"
+          "ko": "챗봇",
+          "en": "chatbot"
         },
         {
           "es": "automatizado",
-          "ko": "자동화된"
+          "ko": "자동화된",
+          "en": "automated"
         },
         {
           "es": "predicción",
-          "ko": "예측"
+          "ko": "예측",
+          "en": "prediction"
         },
         {
           "es": "clasificación",
-          "ko": "분류"
+          "ko": "분류",
+          "en": "classification"
         },
         {
           "es": "modelo",
-          "ko": "모델"
+          "ko": "모델",
+          "en": "model"
         },
         {
           "es": "entrenamiento",
-          "ko": "훈련"
+          "ko": "훈련",
+          "en": "training"
         },
         {
           "es": "voz artificial",
-          "ko": "인공음성"
+          "ko": "인공음성",
+          "en": "artificial voice"
         },
         {
           "es": "conducción autónoma",
-          "ko": "자율주행"
+          "ko": "자율주행",
+          "en": "autonomous driving"
         },
         {
           "es": "procesamiento",
-          "ko": "처리"
+          "ko": "처리",
+          "en": "processing"
         },
         {
           "es": "aprendizaje profundo",
-          "ko": "딥러닝"
+          "ko": "딥러닝",
+          "en": "deep learning"
         },
         {
           "es": "medio ambiente",
-          "ko": "환경"
+          "ko": "환경",
+          "en": "environment"
         },
         {
           "es": "sostenibilidad",
-          "ko": "지속가능성"
+          "ko": "지속가능성",
+          "en": "sustainability"
         },
         {
           "es": "contaminación",
-          "ko": "오염"
+          "ko": "오염",
+          "en": "pollution"
         },
         {
           "es": "reciclaje",
-          "ko": "재활용"
+          "ko": "재활용",
+          "en": "recycling"
         },
         {
           "es": "cambio climático",
-          "ko": "기후변화"
+          "ko": "기후변화",
+          "en": "climate change"
         },
         {
           "es": "emisión",
-          "ko": "배출"
+          "ko": "배출",
+          "en": "emission"
         },
         {
           "es": "huella de carbono",
-          "ko": "탄소발자국"
+          "ko": "탄소발자국",
+          "en": "carbon footprint"
         },
         {
           "es": "biodiversidad",
-          "ko": "생물다양성"
+          "ko": "생물다양성",
+          "en": "biodiversity"
         },
         {
           "es": "deforestación",
-          "ko": "산림파괴"
+          "ko": "산림파괴",
+          "en": "deforestation"
         },
         {
           "es": "capa de ozono",
-          "ko": "오존층"
+          "ko": "오존층",
+          "en": "ozone layer"
         },
         {
           "es": "efecto invernadero",
-          "ko": "온실효과"
+          "ko": "온실효과",
+          "en": "greenhouse effect"
         },
         {
           "es": "residuo",
-          "ko": "폐기물"
+          "ko": "폐기물",
+          "en": "waste"
         },
         {
           "es": "conservación",
-          "ko": "보존"
+          "ko": "보존",
+          "en": "conservation"
         },
         {
           "es": "ecológico",
-          "ko": "친환경적인"
+          "ko": "친환경적인",
+          "en": "ecological"
         },
         {
           "es": "recurso natural",
-          "ko": "천연자원"
+          "ko": "천연자원",
+          "en": "natural resource"
         },
         {
           "es": "material",
-          "ko": "재료"
+          "ko": "재료",
+          "en": "material"
         },
         {
           "es": "metal",
-          "ko": "금속"
+          "ko": "금속",
+          "en": "metal"
         },
         {
           "es": "plástico",
-          "ko": "플라스틱"
+          "ko": "플라스틱",
+          "en": "plastic"
         },
         {
           "es": "acero",
-          "ko": "강철"
+          "ko": "강철",
+          "en": "steel"
         },
         {
           "es": "aluminio",
-          "ko": "알루미늄"
+          "ko": "알루미늄",
+          "en": "aluminum"
         },
         {
           "es": "cerámica",
-          "ko": "세라믹"
+          "ko": "세라믹",
+          "en": "ceramics"
         },
         {
           "es": "fibra",
-          "ko": "섬유"
+          "ko": "섬유",
+          "en": "fiber"
         },
         {
           "es": "fabricación",
-          "ko": "제조"
+          "ko": "제조",
+          "en": "manufacturing"
         },
         {
           "es": "fábrica",
-          "ko": "공장"
+          "ko": "공장",
+          "en": "factory"
         },
         {
           "es": "producción",
-          "ko": "생산"
+          "ko": "생산",
+          "en": "production"
         },
         {
           "es": "ensamblaje",
-          "ko": "조립"
+          "ko": "조립",
+          "en": "assembly"
         },
         {
           "es": "calidad",
-          "ko": "품질"
+          "ko": "품질",
+          "en": "quality"
         },
         {
           "es": "molde",
-          "ko": "금형"
+          "ko": "금형",
+          "en": "mold"
         },
         {
           "es": "materia prima",
-          "ko": "원자재"
+          "ko": "원자재",
+          "en": "raw material"
         },
         {
           "es": "nanotecnología",
-          "ko": "나노기술"
+          "ko": "나노기술",
+          "en": "nanotechnology"
         },
         {
           "es": "hipótesis",
-          "ko": "가설"
+          "ko": "가설",
+          "en": "hypothesis"
         },
         {
           "es": "observación",
-          "ko": "관찰"
+          "ko": "관찰",
+          "en": "observation"
         },
         {
           "es": "variable",
-          "ko": "변수"
+          "ko": "변수",
+          "en": "variable"
         },
         {
           "es": "conclusión",
-          "ko": "결론"
+          "ko": "결론",
+          "en": "conclusion"
         },
         {
           "es": "muestra",
-          "ko": "표본"
+          "ko": "표본",
+          "en": "sample"
         },
         {
           "es": "medición",
-          "ko": "측정"
+          "ko": "측정",
+          "en": "measurement"
         },
         {
           "es": "control",
-          "ko": "대조군"
+          "ko": "대조군",
+          "en": "control"
         },
         {
           "es": "publicación",
-          "ko": "논문"
+          "ko": "논문",
+          "en": "publication"
         },
         {
           "es": "revisión",
-          "ko": "검토"
+          "ko": "검토",
+          "en": "review"
         },
         {
           "es": "evidencia",
-          "ko": "증거자료"
+          "ko": "증거자료",
+          "en": "evidence"
         },
         {
           "es": "precisión",
-          "ko": "정밀도"
+          "ko": "정밀도",
+          "en": "precision"
         },
         {
           "es": "error",
-          "ko": "오차"
+          "ko": "오차",
+          "en": "error"
         },
         {
           "es": "reproducibilidad",
-          "ko": "재현성"
+          "ko": "재현성",
+          "en": "reproducibility"
         },
         {
           "es": "verificación",
-          "ko": "검증"
+          "ko": "검증",
+          "en": "verification"
         },
         {
           "es": "simulación",
-          "ko": "시뮬레이션"
+          "ko": "시뮬레이션",
+          "en": "simulation"
         },
         {
           "es": "invención",
-          "ko": "발명"
+          "ko": "발명",
+          "en": "invention"
         },
         {
           "es": "inventor",
-          "ko": "발명가"
+          "ko": "발명가",
+          "en": "inventor"
         },
         {
           "es": "patente",
-          "ko": "특허"
+          "ko": "특허",
+          "en": "patent"
         },
         {
           "es": "bombilla eléctrica",
-          "ko": "전등"
+          "ko": "전등",
+          "en": "electric bulb"
         },
         {
           "es": "motor",
-          "ko": "엔진"
+          "ko": "엔진",
+          "en": "engine"
         },
         {
           "es": "imprenta",
-          "ko": "인쇄기"
+          "ko": "인쇄기",
+          "en": "printing press"
         },
         {
           "es": "teléfono",
-          "ko": "전화기"
+          "ko": "전화기",
+          "en": "telephone"
         },
         {
           "es": "avión",
-          "ko": "비행기"
+          "ko": "비행기",
+          "en": "airplane"
         },
         {
           "es": "brújula",
-          "ko": "나침반"
+          "ko": "나침반",
+          "en": "compass"
         },
         {
           "es": "penicilina",
-          "ko": "페니실린"
+          "ko": "페니실린",
+          "en": "penicillin"
         },
         {
           "es": "rueda",
-          "ko": "바퀴"
+          "ko": "바퀴",
+          "en": "wheel"
         },
         {
           "es": "pólvora",
-          "ko": "화약"
+          "ko": "화약",
+          "en": "gunpowder"
         },
         {
           "es": "semiconductor",
-          "ko": "반도체"
+          "ko": "반도체",
+          "en": "semiconductor"
         },
         {
           "es": "láser",
-          "ko": "레이저"
+          "ko": "레이저",
+          "en": "laser"
         },
         {
           "es": "radar",
-          "ko": "레이더"
+          "ko": "레이더",
+          "en": "radar"
         },
         {
           "es": "investigar",
-          "ko": "연구하다"
+          "ko": "연구하다",
+          "en": "to research"
         },
         {
           "es": "experimentar",
-          "ko": "실험하다"
+          "ko": "실험하다",
+          "en": "to experiment"
         },
         {
           "es": "medir",
-          "ko": "측정하다"
+          "ko": "측정하다",
+          "en": "to measure"
         },
         {
           "es": "observar",
-          "ko": "관찰하다"
+          "ko": "관찰하다",
+          "en": "to observe"
         },
         {
           "es": "calcular",
-          "ko": "계산하다"
+          "ko": "계산하다",
+          "en": "to calculate"
         },
         {
           "es": "comprobar",
-          "ko": "확인하다"
+          "ko": "확인하다",
+          "en": "to check"
         },
         {
           "es": "analizar",
-          "ko": "분석하다"
+          "ko": "분석하다",
+          "en": "to analyze"
         },
         {
           "es": "desarrollar",
-          "ko": "개발하다"
+          "ko": "개발하다",
+          "en": "to develop"
         },
         {
           "es": "programar",
-          "ko": "프로그래밍하다"
+          "ko": "프로그래밍하다",
+          "en": "to program"
         },
         {
           "es": "inventar",
-          "ko": "발명하다"
+          "ko": "발명하다",
+          "en": "to invent"
         },
         {
           "es": "resolver",
-          "ko": "해결하다"
+          "ko": "해결하다",
+          "en": "to solve"
         },
         {
           "es": "demostrar",
-          "ko": "증명하다"
+          "ko": "증명하다",
+          "en": "to demonstrate"
         },
         {
           "es": "clasificar",
-          "ko": "분류하다"
+          "ko": "분류하다",
+          "en": "to classify"
         },
         {
           "es": "transformar",
-          "ko": "변환하다"
+          "ko": "변환하다",
+          "en": "to transform"
         },
         {
           "es": "conectar",
-          "ko": "연결하다"
+          "ko": "연결하다",
+          "en": "to connect"
         }
       ]
     }

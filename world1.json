@@ -10,43 +10,53 @@
       "words": [
         {
           "es": "hola",
-          "ko": "안녕"
+          "ko": "안녕",
+          "en": "hello"
         },
         {
           "es": "adiós",
-          "ko": "안녕히 가세요"
+          "ko": "안녕히 가세요",
+          "en": "goodbye"
         },
         {
           "es": "buenos días",
-          "ko": "좋은 아침"
+          "ko": "좋은 아침",
+          "en": "good morning"
         },
         {
           "es": "buenas tardes",
-          "ko": "좋은 오후"
+          "ko": "좋은 오후",
+          "en": "good afternoon"
         },
         {
           "es": "buenas noches",
-          "ko": "좋은 밤"
+          "ko": "좋은 밤",
+          "en": "good night"
         },
         {
           "es": "sí",
-          "ko": "네"
+          "ko": "네",
+          "en": "yes"
         },
         {
           "es": "no",
-          "ko": "아니요"
+          "ko": "아니요",
+          "en": "no"
         },
         {
           "es": "por favor",
-          "ko": "제발"
+          "ko": "제발",
+          "en": "please"
         },
         {
           "es": "gracias",
-          "ko": "감사합니다"
+          "ko": "감사합니다",
+          "en": "thank you"
         },
         {
           "es": "de nada",
-          "ko": "천만에요"
+          "ko": "천만에요",
+          "en": "you're welcome"
         }
       ]
     },
@@ -57,43 +67,53 @@
       "words": [
         {
           "es": "perdón",
-          "ko": "죄송합니다"
+          "ko": "죄송합니다",
+          "en": "sorry"
         },
         {
           "es": "lo siento",
-          "ko": "미안합니다"
+          "ko": "미안합니다",
+          "en": "I'm sorry"
         },
         {
           "es": "bienvenido",
-          "ko": "환영합니다"
+          "ko": "환영합니다",
+          "en": "welcome"
         },
         {
           "es": "hasta luego",
-          "ko": "나중에 봐요"
+          "ko": "나중에 봐요",
+          "en": "see you later"
         },
         {
           "es": "hasta mañana",
-          "ko": "내일 봐요"
+          "ko": "내일 봐요",
+          "en": "see you tomorrow"
         },
         {
           "es": "¿cómo estás?",
-          "ko": "어떻게 지내?"
+          "ko": "어떻게 지내?",
+          "en": "How are you?"
         },
         {
           "es": "bien",
-          "ko": "좋아요"
+          "ko": "좋아요",
+          "en": "well"
         },
         {
           "es": "mal",
-          "ko": "나빠요"
+          "ko": "나빠요",
+          "en": "bad"
         },
         {
           "es": "más o menos",
-          "ko": "그저 그래요"
+          "ko": "그저 그래요",
+          "en": "more or less"
         },
         {
           "es": "mucho gusto",
-          "ko": "만나서 반갑습니다"
+          "ko": "만나서 반갑습니다",
+          "en": "nice to meet you"
         }
       ]
     },
@@ -104,43 +124,53 @@
       "words": [
         {
           "es": "igualmente",
-          "ko": "저도요"
+          "ko": "저도요",
+          "en": "likewise"
         },
         {
           "es": "con permiso",
-          "ko": "실례합니다"
+          "ko": "실례합니다",
+          "en": "excuse me"
         },
         {
           "es": "disculpe",
-          "ko": "실례지만"
+          "ko": "실례지만",
+          "en": "excuse me"
         },
         {
           "es": "salud",
-          "ko": "건강"
+          "ko": "건강",
+          "en": "health"
         },
         {
           "es": "felicidades",
-          "ko": "축하합니다"
+          "ko": "축하합니다",
+          "en": "congratulations"
         },
         {
           "es": "buena suerte",
-          "ko": "행운을 빌어요"
+          "ko": "행운을 빌어요",
+          "en": "good luck"
         },
         {
           "es": "nos vemos",
-          "ko": "또 만나요"
+          "ko": "또 만나요",
+          "en": "see you"
         },
         {
           "es": "cuídate",
-          "ko": "몸 조심해"
+          "ko": "몸 조심해",
+          "en": "take care"
         },
         {
           "es": "buen viaje",
-          "ko": "좋은 여행 되세요"
+          "ko": "좋은 여행 되세요",
+          "en": "bon voyage"
         },
         {
           "es": "¡claro!",
-          "ko": "물론이죠!"
+          "ko": "물론이죠!",
+          "en": "Of course!"
         }
       ]
     },
@@ -151,43 +181,53 @@
       "words": [
         {
           "es": "yo",
-          "ko": "나"
+          "ko": "나",
+          "en": "I"
         },
         {
           "es": "tú",
-          "ko": "너"
+          "ko": "너",
+          "en": "you"
         },
         {
           "es": "él",
-          "ko": "그"
+          "ko": "그",
+          "en": "he"
         },
         {
           "es": "ella",
-          "ko": "그녀"
+          "ko": "그녀",
+          "en": "she"
         },
         {
           "es": "nosotros",
-          "ko": "우리"
+          "ko": "우리",
+          "en": "we"
         },
         {
           "es": "ellos",
-          "ko": "그들"
+          "ko": "그들",
+          "en": "they"
         },
         {
           "es": "usted",
-          "ko": "당신"
+          "ko": "당신",
+          "en": "you (formal)"
         },
         {
           "es": "ustedes",
-          "ko": "당신들"
+          "ko": "당신들",
+          "en": "you all"
         },
         {
           "es": "esto",
-          "ko": "이것"
+          "ko": "이것",
+          "en": "this"
         },
         {
           "es": "eso",
-          "ko": "그것"
+          "ko": "그것",
+          "en": "that"
         }
       ]
     },
@@ -198,43 +238,53 @@
       "words": [
         {
           "es": "aquello",
-          "ko": "저것"
+          "ko": "저것",
+          "en": "that"
         },
         {
           "es": "aquí",
-          "ko": "여기"
+          "ko": "여기",
+          "en": "here"
         },
         {
           "es": "ahí",
-          "ko": "거기"
+          "ko": "거기",
+          "en": "there"
         },
         {
           "es": "allí",
-          "ko": "저기"
+          "ko": "저기",
+          "en": "over there"
         },
         {
           "es": "mi",
-          "ko": "나의"
+          "ko": "나의",
+          "en": "my"
         },
         {
           "es": "uno",
-          "ko": "일"
+          "ko": "일",
+          "en": "one"
         },
         {
           "es": "dos",
-          "ko": "이"
+          "ko": "이",
+          "en": "two"
         },
         {
           "es": "tres",
-          "ko": "삼"
+          "ko": "삼",
+          "en": "three"
         },
         {
           "es": "cuatro",
-          "ko": "사"
+          "ko": "사",
+          "en": "four"
         },
         {
           "es": "cinco",
-          "ko": "오"
+          "ko": "오",
+          "en": "five"
         }
       ]
     },
@@ -245,43 +295,53 @@
       "words": [
         {
           "es": "seis",
-          "ko": "육"
+          "ko": "육",
+          "en": "six"
         },
         {
           "es": "siete",
-          "ko": "칠"
+          "ko": "칠",
+          "en": "seven"
         },
         {
           "es": "ocho",
-          "ko": "팔"
+          "ko": "팔",
+          "en": "eight"
         },
         {
           "es": "nueve",
-          "ko": "구"
+          "ko": "구",
+          "en": "nine"
         },
         {
           "es": "diez",
-          "ko": "십"
+          "ko": "십",
+          "en": "ten"
         },
         {
           "es": "once",
-          "ko": "십일"
+          "ko": "십일",
+          "en": "eleven"
         },
         {
           "es": "doce",
-          "ko": "십이"
+          "ko": "십이",
+          "en": "twelve"
         },
         {
           "es": "trece",
-          "ko": "십삼"
+          "ko": "십삼",
+          "en": "thirteen"
         },
         {
           "es": "catorce",
-          "ko": "십사"
+          "ko": "십사",
+          "en": "fourteen"
         },
         {
           "es": "quince",
-          "ko": "십오"
+          "ko": "십오",
+          "en": "fifteen"
         }
       ]
     },
@@ -292,43 +352,53 @@
       "words": [
         {
           "es": "dieciséis",
-          "ko": "십육"
+          "ko": "십육",
+          "en": "sixteen"
         },
         {
           "es": "diecisiete",
-          "ko": "십칠"
+          "ko": "십칠",
+          "en": "seventeen"
         },
         {
           "es": "dieciocho",
-          "ko": "십팔"
+          "ko": "십팔",
+          "en": "eighteen"
         },
         {
           "es": "diecinueve",
-          "ko": "십구"
+          "ko": "십구",
+          "en": "nineteen"
         },
         {
           "es": "veinte",
-          "ko": "이십"
+          "ko": "이십",
+          "en": "twenty"
         },
         {
           "es": "veintiuno",
-          "ko": "이십일"
+          "ko": "이십일",
+          "en": "twenty-one"
         },
         {
           "es": "treinta",
-          "ko": "삼십"
+          "ko": "삼십",
+          "en": "thirty"
         },
         {
           "es": "cuarenta",
-          "ko": "사십"
+          "ko": "사십",
+          "en": "forty"
         },
         {
           "es": "cincuenta",
-          "ko": "오십"
+          "ko": "오십",
+          "en": "fifty"
         },
         {
           "es": "sesenta",
-          "ko": "육십"
+          "ko": "육십",
+          "en": "sixty"
         }
       ]
     },
@@ -339,43 +409,53 @@
       "words": [
         {
           "es": "setenta",
-          "ko": "칠십"
+          "ko": "칠십",
+          "en": "seventy"
         },
         {
           "es": "ochenta",
-          "ko": "팔십"
+          "ko": "팔십",
+          "en": "eighty"
         },
         {
           "es": "noventa",
-          "ko": "구십"
+          "ko": "구십",
+          "en": "ninety"
         },
         {
           "es": "cien",
-          "ko": "백"
+          "ko": "백",
+          "en": "hundred"
         },
         {
           "es": "mil",
-          "ko": "천"
+          "ko": "천",
+          "en": "thousand"
         },
         {
           "es": "primero",
-          "ko": "첫 번째"
+          "ko": "첫 번째",
+          "en": "first"
         },
         {
           "es": "segundo",
-          "ko": "두 번째"
+          "ko": "두 번째",
+          "en": "second"
         },
         {
           "es": "tercero",
-          "ko": "세 번째"
+          "ko": "세 번째",
+          "en": "third"
         },
         {
           "es": "cuarto",
-          "ko": "네 번째"
+          "ko": "네 번째",
+          "en": "fourth"
         },
         {
           "es": "quinto",
-          "ko": "다섯 번째"
+          "ko": "다섯 번째",
+          "en": "fifth"
         }
       ]
     },
@@ -386,43 +466,53 @@
       "words": [
         {
           "es": "sexto",
-          "ko": "여섯 번째"
+          "ko": "여섯 번째",
+          "en": "sixth"
         },
         {
           "es": "séptimo",
-          "ko": "일곱 번째"
+          "ko": "일곱 번째",
+          "en": "seventh"
         },
         {
           "es": "octavo",
-          "ko": "여덟 번째"
+          "ko": "여덟 번째",
+          "en": "eighth"
         },
         {
           "es": "noveno",
-          "ko": "아홉 번째"
+          "ko": "아홉 번째",
+          "en": "ninth"
         },
         {
           "es": "décimo",
-          "ko": "열 번째"
+          "ko": "열 번째",
+          "en": "tenth"
         },
         {
           "es": "último",
-          "ko": "마지막"
+          "ko": "마지막",
+          "en": "last"
         },
         {
           "es": "medio",
-          "ko": "반"
+          "ko": "반",
+          "en": "half"
         },
         {
           "es": "doble",
-          "ko": "두 배"
+          "ko": "두 배",
+          "en": "double"
         },
         {
           "es": "par",
-          "ko": "짝수"
+          "ko": "짝수",
+          "en": "even"
         },
         {
           "es": "impar",
-          "ko": "홀수"
+          "ko": "홀수",
+          "en": "odd"
         }
       ]
     },
@@ -433,43 +523,53 @@
       "words": [
         {
           "es": "rojo",
-          "ko": "빨간색"
+          "ko": "빨간색",
+          "en": "red"
         },
         {
           "es": "azul",
-          "ko": "파란색"
+          "ko": "파란색",
+          "en": "blue"
         },
         {
           "es": "verde",
-          "ko": "초록색"
+          "ko": "초록색",
+          "en": "green"
         },
         {
           "es": "amarillo",
-          "ko": "노란색"
+          "ko": "노란색",
+          "en": "yellow"
         },
         {
           "es": "negro",
-          "ko": "검은색"
+          "ko": "검은색",
+          "en": "black"
         },
         {
           "es": "blanco",
-          "ko": "흰색"
+          "ko": "흰색",
+          "en": "white"
         },
         {
           "es": "gris",
-          "ko": "회색"
+          "ko": "회색",
+          "en": "gray"
         },
         {
           "es": "marrón",
-          "ko": "갈색"
+          "ko": "갈색",
+          "en": "brown"
         },
         {
           "es": "naranja",
-          "ko": "주황색"
+          "ko": "주황색",
+          "en": "orange"
         },
         {
           "es": "rosa",
-          "ko": "분홍색"
+          "ko": "분홍색",
+          "en": "pink"
         }
       ]
     },
@@ -480,403 +580,503 @@
       "words": [
         {
           "es": "hola",
-          "ko": "안녕"
+          "ko": "안녕",
+          "en": "hello"
         },
         {
           "es": "adiós",
-          "ko": "안녕히 가세요"
+          "ko": "안녕히 가세요",
+          "en": "goodbye"
         },
         {
           "es": "buenos días",
-          "ko": "좋은 아침"
+          "ko": "좋은 아침",
+          "en": "good morning"
         },
         {
           "es": "buenas tardes",
-          "ko": "좋은 오후"
+          "ko": "좋은 오후",
+          "en": "good afternoon"
         },
         {
           "es": "buenas noches",
-          "ko": "좋은 밤"
+          "ko": "좋은 밤",
+          "en": "good night"
         },
         {
           "es": "sí",
-          "ko": "네"
+          "ko": "네",
+          "en": "yes"
         },
         {
           "es": "no",
-          "ko": "아니요"
+          "ko": "아니요",
+          "en": "no"
         },
         {
           "es": "por favor",
-          "ko": "제발"
+          "ko": "제발",
+          "en": "please"
         },
         {
           "es": "gracias",
-          "ko": "감사합니다"
+          "ko": "감사합니다",
+          "en": "thank you"
         },
         {
           "es": "de nada",
-          "ko": "천만에요"
+          "ko": "천만에요",
+          "en": "you're welcome"
         },
         {
           "es": "perdón",
-          "ko": "죄송합니다"
+          "ko": "죄송합니다",
+          "en": "sorry"
         },
         {
           "es": "lo siento",
-          "ko": "미안합니다"
+          "ko": "미안합니다",
+          "en": "I'm sorry"
         },
         {
           "es": "bienvenido",
-          "ko": "환영합니다"
+          "ko": "환영합니다",
+          "en": "welcome"
         },
         {
           "es": "hasta luego",
-          "ko": "나중에 봐요"
+          "ko": "나중에 봐요",
+          "en": "see you later"
         },
         {
           "es": "hasta mañana",
-          "ko": "내일 봐요"
+          "ko": "내일 봐요",
+          "en": "see you tomorrow"
         },
         {
           "es": "¿cómo estás?",
-          "ko": "어떻게 지내?"
+          "ko": "어떻게 지내?",
+          "en": "How are you?"
         },
         {
           "es": "bien",
-          "ko": "좋아요"
+          "ko": "좋아요",
+          "en": "well"
         },
         {
           "es": "mal",
-          "ko": "나빠요"
+          "ko": "나빠요",
+          "en": "bad"
         },
         {
           "es": "más o menos",
-          "ko": "그저 그래요"
+          "ko": "그저 그래요",
+          "en": "more or less"
         },
         {
           "es": "mucho gusto",
-          "ko": "만나서 반갑습니다"
+          "ko": "만나서 반갑습니다",
+          "en": "nice to meet you"
         },
         {
           "es": "igualmente",
-          "ko": "저도요"
+          "ko": "저도요",
+          "en": "likewise"
         },
         {
           "es": "con permiso",
-          "ko": "실례합니다"
+          "ko": "실례합니다",
+          "en": "excuse me"
         },
         {
           "es": "disculpe",
-          "ko": "실례지만"
+          "ko": "실례지만",
+          "en": "excuse me"
         },
         {
           "es": "salud",
-          "ko": "건강"
+          "ko": "건강",
+          "en": "health"
         },
         {
           "es": "felicidades",
-          "ko": "축하합니다"
+          "ko": "축하합니다",
+          "en": "congratulations"
         },
         {
           "es": "buena suerte",
-          "ko": "행운을 빌어요"
+          "ko": "행운을 빌어요",
+          "en": "good luck"
         },
         {
           "es": "nos vemos",
-          "ko": "또 만나요"
+          "ko": "또 만나요",
+          "en": "see you"
         },
         {
           "es": "cuídate",
-          "ko": "몸 조심해"
+          "ko": "몸 조심해",
+          "en": "take care"
         },
         {
           "es": "buen viaje",
-          "ko": "좋은 여행 되세요"
+          "ko": "좋은 여행 되세요",
+          "en": "bon voyage"
         },
         {
           "es": "¡claro!",
-          "ko": "물론이죠!"
+          "ko": "물론이죠!",
+          "en": "Of course!"
         },
         {
           "es": "yo",
-          "ko": "나"
+          "ko": "나",
+          "en": "I"
         },
         {
           "es": "tú",
-          "ko": "너"
+          "ko": "너",
+          "en": "you"
         },
         {
           "es": "él",
-          "ko": "그"
+          "ko": "그",
+          "en": "he"
         },
         {
           "es": "ella",
-          "ko": "그녀"
+          "ko": "그녀",
+          "en": "she"
         },
         {
           "es": "nosotros",
-          "ko": "우리"
+          "ko": "우리",
+          "en": "we"
         },
         {
           "es": "ellos",
-          "ko": "그들"
+          "ko": "그들",
+          "en": "they"
         },
         {
           "es": "usted",
-          "ko": "당신"
+          "ko": "당신",
+          "en": "you (formal)"
         },
         {
           "es": "ustedes",
-          "ko": "당신들"
+          "ko": "당신들",
+          "en": "you all"
         },
         {
           "es": "esto",
-          "ko": "이것"
+          "ko": "이것",
+          "en": "this"
         },
         {
           "es": "eso",
-          "ko": "그것"
+          "ko": "그것",
+          "en": "that"
         },
         {
           "es": "aquello",
-          "ko": "저것"
+          "ko": "저것",
+          "en": "that"
         },
         {
           "es": "aquí",
-          "ko": "여기"
+          "ko": "여기",
+          "en": "here"
         },
         {
           "es": "ahí",
-          "ko": "거기"
+          "ko": "거기",
+          "en": "there"
         },
         {
           "es": "allí",
-          "ko": "저기"
+          "ko": "저기",
+          "en": "over there"
         },
         {
           "es": "mi",
-          "ko": "나의"
+          "ko": "나의",
+          "en": "my"
         },
         {
           "es": "uno",
-          "ko": "일"
+          "ko": "일",
+          "en": "one"
         },
         {
           "es": "dos",
-          "ko": "이"
+          "ko": "이",
+          "en": "two"
         },
         {
           "es": "tres",
-          "ko": "삼"
+          "ko": "삼",
+          "en": "three"
         },
         {
           "es": "cuatro",
-          "ko": "사"
+          "ko": "사",
+          "en": "four"
         },
         {
           "es": "cinco",
-          "ko": "오"
+          "ko": "오",
+          "en": "five"
         },
         {
           "es": "seis",
-          "ko": "육"
+          "ko": "육",
+          "en": "six"
         },
         {
           "es": "siete",
-          "ko": "칠"
+          "ko": "칠",
+          "en": "seven"
         },
         {
           "es": "ocho",
-          "ko": "팔"
+          "ko": "팔",
+          "en": "eight"
         },
         {
           "es": "nueve",
-          "ko": "구"
+          "ko": "구",
+          "en": "nine"
         },
         {
           "es": "diez",
-          "ko": "십"
+          "ko": "십",
+          "en": "ten"
         },
         {
           "es": "once",
-          "ko": "십일"
+          "ko": "십일",
+          "en": "eleven"
         },
         {
           "es": "doce",
-          "ko": "십이"
+          "ko": "십이",
+          "en": "twelve"
         },
         {
           "es": "trece",
-          "ko": "십삼"
+          "ko": "십삼",
+          "en": "thirteen"
         },
         {
           "es": "catorce",
-          "ko": "십사"
+          "ko": "십사",
+          "en": "fourteen"
         },
         {
           "es": "quince",
-          "ko": "십오"
+          "ko": "십오",
+          "en": "fifteen"
         },
         {
           "es": "dieciséis",
-          "ko": "십육"
+          "ko": "십육",
+          "en": "sixteen"
         },
         {
           "es": "diecisiete",
-          "ko": "십칠"
+          "ko": "십칠",
+          "en": "seventeen"
         },
         {
           "es": "dieciocho",
-          "ko": "십팔"
+          "ko": "십팔",
+          "en": "eighteen"
         },
         {
           "es": "diecinueve",
-          "ko": "십구"
+          "ko": "십구",
+          "en": "nineteen"
         },
         {
           "es": "veinte",
-          "ko": "이십"
+          "ko": "이십",
+          "en": "twenty"
         },
         {
           "es": "veintiuno",
-          "ko": "이십일"
+          "ko": "이십일",
+          "en": "twenty-one"
         },
         {
           "es": "treinta",
-          "ko": "삼십"
+          "ko": "삼십",
+          "en": "thirty"
         },
         {
           "es": "cuarenta",
-          "ko": "사십"
+          "ko": "사십",
+          "en": "forty"
         },
         {
           "es": "cincuenta",
-          "ko": "오십"
+          "ko": "오십",
+          "en": "fifty"
         },
         {
           "es": "sesenta",
-          "ko": "육십"
+          "ko": "육십",
+          "en": "sixty"
         },
         {
           "es": "setenta",
-          "ko": "칠십"
+          "ko": "칠십",
+          "en": "seventy"
         },
         {
           "es": "ochenta",
-          "ko": "팔십"
+          "ko": "팔십",
+          "en": "eighty"
         },
         {
           "es": "noventa",
-          "ko": "구십"
+          "ko": "구십",
+          "en": "ninety"
         },
         {
           "es": "cien",
-          "ko": "백"
+          "ko": "백",
+          "en": "hundred"
         },
         {
           "es": "mil",
-          "ko": "천"
+          "ko": "천",
+          "en": "thousand"
         },
         {
           "es": "primero",
-          "ko": "첫 번째"
+          "ko": "첫 번째",
+          "en": "first"
         },
         {
           "es": "segundo",
-          "ko": "두 번째"
+          "ko": "두 번째",
+          "en": "second"
         },
         {
           "es": "tercero",
-          "ko": "세 번째"
+          "ko": "세 번째",
+          "en": "third"
         },
         {
           "es": "cuarto",
-          "ko": "네 번째"
+          "ko": "네 번째",
+          "en": "fourth"
         },
         {
           "es": "quinto",
-          "ko": "다섯 번째"
+          "ko": "다섯 번째",
+          "en": "fifth"
         },
         {
           "es": "sexto",
-          "ko": "여섯 번째"
+          "ko": "여섯 번째",
+          "en": "sixth"
         },
         {
           "es": "séptimo",
-          "ko": "일곱 번째"
+          "ko": "일곱 번째",
+          "en": "seventh"
         },
         {
           "es": "octavo",
-          "ko": "여덟 번째"
+          "ko": "여덟 번째",
+          "en": "eighth"
         },
         {
           "es": "noveno",
-          "ko": "아홉 번째"
+          "ko": "아홉 번째",
+          "en": "ninth"
         },
         {
           "es": "décimo",
-          "ko": "열 번째"
+          "ko": "열 번째",
+          "en": "tenth"
         },
         {
           "es": "último",
-          "ko": "마지막"
+          "ko": "마지막",
+          "en": "last"
         },
         {
           "es": "medio",
-          "ko": "반"
+          "ko": "반",
+          "en": "half"
         },
         {
           "es": "doble",
-          "ko": "두 배"
+          "ko": "두 배",
+          "en": "double"
         },
         {
           "es": "par",
-          "ko": "짝수"
+          "ko": "짝수",
+          "en": "even"
         },
         {
           "es": "impar",
-          "ko": "홀수"
+          "ko": "홀수",
+          "en": "odd"
         },
         {
           "es": "rojo",
-          "ko": "빨간색"
+          "ko": "빨간색",
+          "en": "red"
         },
         {
           "es": "azul",
-          "ko": "파란색"
+          "ko": "파란색",
+          "en": "blue"
         },
         {
           "es": "verde",
-          "ko": "초록색"
+          "ko": "초록색",
+          "en": "green"
         },
         {
           "es": "amarillo",
-          "ko": "노란색"
+          "ko": "노란색",
+          "en": "yellow"
         },
         {
           "es": "negro",
-          "ko": "검은색"
+          "ko": "검은색",
+          "en": "black"
         },
         {
           "es": "blanco",
-          "ko": "흰색"
+          "ko": "흰색",
+          "en": "white"
         },
         {
           "es": "gris",
-          "ko": "회색"
+          "ko": "회색",
+          "en": "gray"
         },
         {
           "es": "marrón",
-          "ko": "갈색"
+          "ko": "갈색",
+          "en": "brown"
         },
         {
           "es": "naranja",
-          "ko": "주황색"
+          "ko": "주황색",
+          "en": "orange"
         },
         {
           "es": "rosa",
-          "ko": "분홍색"
+          "ko": "분홍색",
+          "en": "pink"
         }
       ]
     },
@@ -887,43 +1087,53 @@
       "words": [
         {
           "es": "morado",
-          "ko": "보라색"
+          "ko": "보라색",
+          "en": "purple"
         },
         {
           "es": "celeste",
-          "ko": "하늘색"
+          "ko": "하늘색",
+          "en": "sky blue"
         },
         {
           "es": "dorado",
-          "ko": "금색"
+          "ko": "금색",
+          "en": "golden"
         },
         {
           "es": "plateado",
-          "ko": "은색"
+          "ko": "은색",
+          "en": "silver"
         },
         {
           "es": "oscuro",
-          "ko": "어두운"
+          "ko": "어두운",
+          "en": "dark"
         },
         {
           "es": "grande",
-          "ko": "큰"
+          "ko": "큰",
+          "en": "big"
         },
         {
           "es": "pequeño",
-          "ko": "작은"
+          "ko": "작은",
+          "en": "small"
         },
         {
           "es": "largo",
-          "ko": "긴"
+          "ko": "긴",
+          "en": "long"
         },
         {
           "es": "corto",
-          "ko": "짧은"
+          "ko": "짧은",
+          "en": "short"
         },
         {
           "es": "alto",
-          "ko": "높은"
+          "ko": "높은",
+          "en": "tall"
         }
       ]
     },
@@ -934,43 +1144,53 @@
       "words": [
         {
           "es": "bajo",
-          "ko": "낮은"
+          "ko": "낮은",
+          "en": "short"
         },
         {
           "es": "nuevo",
-          "ko": "새로운"
+          "ko": "새로운",
+          "en": "new"
         },
         {
           "es": "viejo",
-          "ko": "오래된"
+          "ko": "오래된",
+          "en": "old"
         },
         {
           "es": "joven",
-          "ko": "젊은"
+          "ko": "젊은",
+          "en": "young"
         },
         {
           "es": "bueno",
-          "ko": "좋은"
+          "ko": "좋은",
+          "en": "good"
         },
         {
           "es": "malo",
-          "ko": "나쁜"
+          "ko": "나쁜",
+          "en": "bad"
         },
         {
           "es": "bonito",
-          "ko": "예쁜"
+          "ko": "예쁜",
+          "en": "pretty"
         },
         {
           "es": "feo",
-          "ko": "못생긴"
+          "ko": "못생긴",
+          "en": "ugly"
         },
         {
           "es": "fácil",
-          "ko": "쉬운"
+          "ko": "쉬운",
+          "en": "easy"
         },
         {
           "es": "difícil",
-          "ko": "어려운"
+          "ko": "어려운",
+          "en": "difficult"
         }
       ]
     },
@@ -981,43 +1201,53 @@
       "words": [
         {
           "es": "caliente",
-          "ko": "뜨거운"
+          "ko": "뜨거운",
+          "en": "hot"
         },
         {
           "es": "frío",
-          "ko": "차가운"
+          "ko": "차가운",
+          "en": "cold"
         },
         {
           "es": "rápido",
-          "ko": "빠른"
+          "ko": "빠른",
+          "en": "fast"
         },
         {
           "es": "lento",
-          "ko": "느린"
+          "ko": "느린",
+          "en": "slow"
         },
         {
           "es": "redondo",
-          "ko": "둥근"
+          "ko": "둥근",
+          "en": "round"
         },
         {
           "es": "cuadrado",
-          "ko": "네모난"
+          "ko": "네모난",
+          "en": "square"
         },
         {
           "es": "ancho",
-          "ko": "넓은"
+          "ko": "넓은",
+          "en": "wide"
         },
         {
           "es": "estrecho",
-          "ko": "좁은"
+          "ko": "좁은",
+          "en": "narrow"
         },
         {
           "es": "pesado",
-          "ko": "무거운"
+          "ko": "무거운",
+          "en": "heavy"
         },
         {
           "es": "ligero",
-          "ko": "가벼운"
+          "ko": "가벼운",
+          "en": "light"
         }
       ]
     },
@@ -1028,43 +1258,53 @@
       "words": [
         {
           "es": "duro",
-          "ko": "단단한"
+          "ko": "단단한",
+          "en": "hard"
         },
         {
           "es": "suave",
-          "ko": "부드러운"
+          "ko": "부드러운",
+          "en": "soft"
         },
         {
           "es": "lleno",
-          "ko": "가득 찬"
+          "ko": "가득 찬",
+          "en": "full"
         },
         {
           "es": "vacío",
-          "ko": "빈"
+          "ko": "빈",
+          "en": "empty"
         },
         {
           "es": "limpio",
-          "ko": "깨끗한"
+          "ko": "깨끗한",
+          "en": "clean"
         },
         {
           "es": "ser",
-          "ko": "~이다"
+          "ko": "~이다",
+          "en": "to be"
         },
         {
           "es": "estar",
-          "ko": "~에 있다"
+          "ko": "~에 있다",
+          "en": "to be"
         },
         {
           "es": "tener",
-          "ko": "가지다"
+          "ko": "가지다",
+          "en": "to have"
         },
         {
           "es": "hacer",
-          "ko": "하다"
+          "ko": "하다",
+          "en": "to do"
         },
         {
           "es": "ir",
-          "ko": "가다"
+          "ko": "가다",
+          "en": "to go"
         }
       ]
     },
@@ -1075,43 +1315,53 @@
       "words": [
         {
           "es": "venir",
-          "ko": "오다"
+          "ko": "오다",
+          "en": "to come"
         },
         {
           "es": "querer",
-          "ko": "원하다"
+          "ko": "원하다",
+          "en": "to want"
         },
         {
           "es": "poder",
-          "ko": "할 수 있다"
+          "ko": "할 수 있다",
+          "en": "power"
         },
         {
           "es": "saber",
-          "ko": "알다"
+          "ko": "알다",
+          "en": "to know"
         },
         {
           "es": "hablar",
-          "ko": "말하다"
+          "ko": "말하다",
+          "en": "to speak"
         },
         {
           "es": "comer",
-          "ko": "먹다"
+          "ko": "먹다",
+          "en": "to eat"
         },
         {
           "es": "beber",
-          "ko": "마시다"
+          "ko": "마시다",
+          "en": "to drink"
         },
         {
           "es": "dormir",
-          "ko": "자다"
+          "ko": "자다",
+          "en": "to sleep"
         },
         {
           "es": "ver",
-          "ko": "보다"
+          "ko": "보다",
+          "en": "to see"
         },
         {
           "es": "dar",
-          "ko": "주다"
+          "ko": "주다",
+          "en": "to give"
         }
       ]
     },
@@ -1122,43 +1372,53 @@
       "words": [
         {
           "es": "poner",
-          "ko": "놓다"
+          "ko": "놓다",
+          "en": "to put"
         },
         {
           "es": "decir",
-          "ko": "말하다"
+          "ko": "말하다",
+          "en": "to say"
         },
         {
           "es": "salir",
-          "ko": "나가다"
+          "ko": "나가다",
+          "en": "to go out"
         },
         {
           "es": "llevar",
-          "ko": "가져가다"
+          "ko": "가져가다",
+          "en": "to carry"
         },
         {
           "es": "llamar",
-          "ko": "부르다"
+          "ko": "부르다",
+          "en": "to call"
         },
         {
           "es": "pasar",
-          "ko": "지나가다"
+          "ko": "지나가다",
+          "en": "to pass"
         },
         {
           "es": "seguir",
-          "ko": "따르다"
+          "ko": "따르다",
+          "en": "to follow"
         },
         {
           "es": "creer",
-          "ko": "믿다"
+          "ko": "믿다",
+          "en": "to believe"
         },
         {
           "es": "encontrar",
-          "ko": "찾다"
+          "ko": "찾다",
+          "en": "to find"
         },
         {
           "es": "pensar",
-          "ko": "생각하다"
+          "ko": "생각하다",
+          "en": "to think"
         }
       ]
     },
@@ -1169,43 +1429,53 @@
       "words": [
         {
           "es": "sentir",
-          "ko": "느끼다"
+          "ko": "느끼다",
+          "en": "to feel"
         },
         {
           "es": "vivir",
-          "ko": "살다"
+          "ko": "살다",
+          "en": "to live"
         },
         {
           "es": "morir",
-          "ko": "죽다"
+          "ko": "죽다",
+          "en": "to die"
         },
         {
           "es": "nacer",
-          "ko": "태어나다"
+          "ko": "태어나다",
+          "en": "to be born"
         },
         {
           "es": "trabajar",
-          "ko": "일하다"
+          "ko": "일하다",
+          "en": "to work"
         },
         {
           "es": "¿qué?",
-          "ko": "무엇?"
+          "ko": "무엇?",
+          "en": "What?"
         },
         {
           "es": "¿quién?",
-          "ko": "누구?"
+          "ko": "누구?",
+          "en": "Who?"
         },
         {
           "es": "¿dónde?",
-          "ko": "어디?"
+          "ko": "어디?",
+          "en": "Where?"
         },
         {
           "es": "¿cuándo?",
-          "ko": "언제?"
+          "ko": "언제?",
+          "en": "When?"
         },
         {
           "es": "¿por qué?",
-          "ko": "왜?"
+          "ko": "왜?",
+          "en": "Why?"
         }
       ]
     },
@@ -1216,43 +1486,53 @@
       "words": [
         {
           "es": "¿cómo?",
-          "ko": "어떻게?"
+          "ko": "어떻게?",
+          "en": "How?"
         },
         {
           "es": "¿cuánto?",
-          "ko": "얼마?"
+          "ko": "얼마?",
+          "en": "How much?"
         },
         {
           "es": "¿cuántos?",
-          "ko": "몇 개?"
+          "ko": "몇 개?",
+          "en": "How many?"
         },
         {
           "es": "¿cuál?",
-          "ko": "어느 것?"
+          "ko": "어느 것?",
+          "en": "Which?"
         },
         {
           "es": "¿de quién?",
-          "ko": "누구의?"
+          "ko": "누구의?",
+          "en": "Whose?"
         },
         {
           "es": "¿adónde?",
-          "ko": "어디로?"
+          "ko": "어디로?",
+          "en": "Where to?"
         },
         {
           "es": "¿de dónde?",
-          "ko": "어디에서?"
+          "ko": "어디에서?",
+          "en": "Where from?"
         },
         {
           "es": "¿para qué?",
-          "ko": "무엇을 위해?"
+          "ko": "무엇을 위해?",
+          "en": "What for?"
         },
         {
           "es": "¿verdad?",
-          "ko": "그렇지?"
+          "ko": "그렇지?",
+          "en": "Right?"
         },
         {
           "es": "¿cierto?",
-          "ko": "맞지?"
+          "ko": "맞지?",
+          "en": "Right?"
         }
       ]
     },
@@ -1263,43 +1543,53 @@
       "words": [
         {
           "es": "en",
-          "ko": "~에"
+          "ko": "~에",
+          "en": "in"
         },
         {
           "es": "de",
-          "ko": "~의"
+          "ko": "~의",
+          "en": "of"
         },
         {
           "es": "a",
-          "ko": "~으로"
+          "ko": "~으로",
+          "en": "to"
         },
         {
           "es": "con",
-          "ko": "~와 함께"
+          "ko": "~와 함께",
+          "en": "with"
         },
         {
           "es": "sin",
-          "ko": "~없이"
+          "ko": "~없이",
+          "en": "without"
         },
         {
           "es": "para",
-          "ko": "~을 위해"
+          "ko": "~을 위해",
+          "en": "for"
         },
         {
           "es": "por",
-          "ko": "~때문에"
+          "ko": "~때문에",
+          "en": "by"
         },
         {
           "es": "sobre",
-          "ko": "~위에"
+          "ko": "~위에",
+          "en": "envelope"
         },
         {
           "es": "entre",
-          "ko": "~사이에"
+          "ko": "~사이에",
+          "en": "between"
         },
         {
           "es": "hacia",
-          "ko": "~쪽으로"
+          "ko": "~쪽으로",
+          "en": "towards"
         }
       ]
     },
@@ -1310,43 +1600,53 @@
       "words": [
         {
           "es": "delante de",
-          "ko": "~앞에"
+          "ko": "~앞에",
+          "en": "in front of"
         },
         {
           "es": "detrás de",
-          "ko": "~뒤에"
+          "ko": "~뒤에",
+          "en": "behind"
         },
         {
           "es": "cerca de",
-          "ko": "~근처에"
+          "ko": "~근처에",
+          "en": "near to"
         },
         {
           "es": "lejos de",
-          "ko": "~에서 멀리"
+          "ko": "~에서 멀리",
+          "en": "far from"
         },
         {
           "es": "dentro de",
-          "ko": "~안에"
+          "ko": "~안에",
+          "en": "inside"
         },
         {
           "es": "y",
-          "ko": "그리고"
+          "ko": "그리고",
+          "en": "and"
         },
         {
           "es": "o",
-          "ko": "또는"
+          "ko": "또는",
+          "en": "or"
         },
         {
           "es": "pero",
-          "ko": "하지만"
+          "ko": "하지만",
+          "en": "but"
         },
         {
           "es": "porque",
-          "ko": "왜냐하면"
+          "ko": "왜냐하면",
+          "en": "because"
         },
         {
           "es": "si",
-          "ko": "만약"
+          "ko": "만약",
+          "en": "if"
         }
       ]
     },
@@ -1357,403 +1657,503 @@
       "words": [
         {
           "es": "morado",
-          "ko": "보라색"
+          "ko": "보라색",
+          "en": "purple"
         },
         {
           "es": "celeste",
-          "ko": "하늘색"
+          "ko": "하늘색",
+          "en": "sky blue"
         },
         {
           "es": "dorado",
-          "ko": "금색"
+          "ko": "금색",
+          "en": "golden"
         },
         {
           "es": "plateado",
-          "ko": "은색"
+          "ko": "은색",
+          "en": "silver"
         },
         {
           "es": "oscuro",
-          "ko": "어두운"
+          "ko": "어두운",
+          "en": "dark"
         },
         {
           "es": "grande",
-          "ko": "큰"
+          "ko": "큰",
+          "en": "big"
         },
         {
           "es": "pequeño",
-          "ko": "작은"
+          "ko": "작은",
+          "en": "small"
         },
         {
           "es": "largo",
-          "ko": "긴"
+          "ko": "긴",
+          "en": "long"
         },
         {
           "es": "corto",
-          "ko": "짧은"
+          "ko": "짧은",
+          "en": "short"
         },
         {
           "es": "alto",
-          "ko": "높은"
+          "ko": "높은",
+          "en": "tall"
         },
         {
           "es": "bajo",
-          "ko": "낮은"
+          "ko": "낮은",
+          "en": "short"
         },
         {
           "es": "nuevo",
-          "ko": "새로운"
+          "ko": "새로운",
+          "en": "new"
         },
         {
           "es": "viejo",
-          "ko": "오래된"
+          "ko": "오래된",
+          "en": "old"
         },
         {
           "es": "joven",
-          "ko": "젊은"
+          "ko": "젊은",
+          "en": "young"
         },
         {
           "es": "bueno",
-          "ko": "좋은"
+          "ko": "좋은",
+          "en": "good"
         },
         {
           "es": "malo",
-          "ko": "나쁜"
+          "ko": "나쁜",
+          "en": "bad"
         },
         {
           "es": "bonito",
-          "ko": "예쁜"
+          "ko": "예쁜",
+          "en": "pretty"
         },
         {
           "es": "feo",
-          "ko": "못생긴"
+          "ko": "못생긴",
+          "en": "ugly"
         },
         {
           "es": "fácil",
-          "ko": "쉬운"
+          "ko": "쉬운",
+          "en": "easy"
         },
         {
           "es": "difícil",
-          "ko": "어려운"
+          "ko": "어려운",
+          "en": "difficult"
         },
         {
           "es": "caliente",
-          "ko": "뜨거운"
+          "ko": "뜨거운",
+          "en": "hot"
         },
         {
           "es": "frío",
-          "ko": "차가운"
+          "ko": "차가운",
+          "en": "cold"
         },
         {
           "es": "rápido",
-          "ko": "빠른"
+          "ko": "빠른",
+          "en": "fast"
         },
         {
           "es": "lento",
-          "ko": "느린"
+          "ko": "느린",
+          "en": "slow"
         },
         {
           "es": "redondo",
-          "ko": "둥근"
+          "ko": "둥근",
+          "en": "round"
         },
         {
           "es": "cuadrado",
-          "ko": "네모난"
+          "ko": "네모난",
+          "en": "square"
         },
         {
           "es": "ancho",
-          "ko": "넓은"
+          "ko": "넓은",
+          "en": "wide"
         },
         {
           "es": "estrecho",
-          "ko": "좁은"
+          "ko": "좁은",
+          "en": "narrow"
         },
         {
           "es": "pesado",
-          "ko": "무거운"
+          "ko": "무거운",
+          "en": "heavy"
         },
         {
           "es": "ligero",
-          "ko": "가벼운"
+          "ko": "가벼운",
+          "en": "light"
         },
         {
           "es": "duro",
-          "ko": "단단한"
+          "ko": "단단한",
+          "en": "hard"
         },
         {
           "es": "suave",
-          "ko": "부드러운"
+          "ko": "부드러운",
+          "en": "soft"
         },
         {
           "es": "lleno",
-          "ko": "가득 찬"
+          "ko": "가득 찬",
+          "en": "full"
         },
         {
           "es": "vacío",
-          "ko": "빈"
+          "ko": "빈",
+          "en": "empty"
         },
         {
           "es": "limpio",
-          "ko": "깨끗한"
+          "ko": "깨끗한",
+          "en": "clean"
         },
         {
           "es": "ser",
-          "ko": "~이다"
+          "ko": "~이다",
+          "en": "to be"
         },
         {
           "es": "estar",
-          "ko": "~에 있다"
+          "ko": "~에 있다",
+          "en": "to be"
         },
         {
           "es": "tener",
-          "ko": "가지다"
+          "ko": "가지다",
+          "en": "to have"
         },
         {
           "es": "hacer",
-          "ko": "하다"
+          "ko": "하다",
+          "en": "to do"
         },
         {
           "es": "ir",
-          "ko": "가다"
+          "ko": "가다",
+          "en": "to go"
         },
         {
           "es": "venir",
-          "ko": "오다"
+          "ko": "오다",
+          "en": "to come"
         },
         {
           "es": "querer",
-          "ko": "원하다"
+          "ko": "원하다",
+          "en": "to want"
         },
         {
           "es": "poder",
-          "ko": "할 수 있다"
+          "ko": "할 수 있다",
+          "en": "power"
         },
         {
           "es": "saber",
-          "ko": "알다"
+          "ko": "알다",
+          "en": "to know"
         },
         {
           "es": "hablar",
-          "ko": "말하다"
+          "ko": "말하다",
+          "en": "to speak"
         },
         {
           "es": "comer",
-          "ko": "먹다"
+          "ko": "먹다",
+          "en": "to eat"
         },
         {
           "es": "beber",
-          "ko": "마시다"
+          "ko": "마시다",
+          "en": "to drink"
         },
         {
           "es": "dormir",
-          "ko": "자다"
+          "ko": "자다",
+          "en": "to sleep"
         },
         {
           "es": "ver",
-          "ko": "보다"
+          "ko": "보다",
+          "en": "to see"
         },
         {
           "es": "dar",
-          "ko": "주다"
+          "ko": "주다",
+          "en": "to give"
         },
         {
           "es": "poner",
-          "ko": "놓다"
+          "ko": "놓다",
+          "en": "to put"
         },
         {
           "es": "decir",
-          "ko": "말하다"
+          "ko": "말하다",
+          "en": "to say"
         },
         {
           "es": "salir",
-          "ko": "나가다"
+          "ko": "나가다",
+          "en": "to go out"
         },
         {
           "es": "llevar",
-          "ko": "가져가다"
+          "ko": "가져가다",
+          "en": "to carry"
         },
         {
           "es": "llamar",
-          "ko": "부르다"
+          "ko": "부르다",
+          "en": "to call"
         },
         {
           "es": "pasar",
-          "ko": "지나가다"
+          "ko": "지나가다",
+          "en": "to pass"
         },
         {
           "es": "seguir",
-          "ko": "따르다"
+          "ko": "따르다",
+          "en": "to follow"
         },
         {
           "es": "creer",
-          "ko": "믿다"
+          "ko": "믿다",
+          "en": "to believe"
         },
         {
           "es": "encontrar",
-          "ko": "찾다"
+          "ko": "찾다",
+          "en": "to find"
         },
         {
           "es": "pensar",
-          "ko": "생각하다"
+          "ko": "생각하다",
+          "en": "to think"
         },
         {
           "es": "sentir",
-          "ko": "느끼다"
+          "ko": "느끼다",
+          "en": "to feel"
         },
         {
           "es": "vivir",
-          "ko": "살다"
+          "ko": "살다",
+          "en": "to live"
         },
         {
           "es": "morir",
-          "ko": "죽다"
+          "ko": "죽다",
+          "en": "to die"
         },
         {
           "es": "nacer",
-          "ko": "태어나다"
+          "ko": "태어나다",
+          "en": "to be born"
         },
         {
           "es": "trabajar",
-          "ko": "일하다"
+          "ko": "일하다",
+          "en": "to work"
         },
         {
           "es": "¿qué?",
-          "ko": "무엇?"
+          "ko": "무엇?",
+          "en": "What?"
         },
         {
           "es": "¿quién?",
-          "ko": "누구?"
+          "ko": "누구?",
+          "en": "Who?"
         },
         {
           "es": "¿dónde?",
-          "ko": "어디?"
+          "ko": "어디?",
+          "en": "Where?"
         },
         {
           "es": "¿cuándo?",
-          "ko": "언제?"
+          "ko": "언제?",
+          "en": "When?"
         },
         {
           "es": "¿por qué?",
-          "ko": "왜?"
+          "ko": "왜?",
+          "en": "Why?"
         },
         {
           "es": "¿cómo?",
-          "ko": "어떻게?"
+          "ko": "어떻게?",
+          "en": "How?"
         },
         {
           "es": "¿cuánto?",
-          "ko": "얼마?"
+          "ko": "얼마?",
+          "en": "How much?"
         },
         {
           "es": "¿cuántos?",
-          "ko": "몇 개?"
+          "ko": "몇 개?",
+          "en": "How many?"
         },
         {
           "es": "¿cuál?",
-          "ko": "어느 것?"
+          "ko": "어느 것?",
+          "en": "Which?"
         },
         {
           "es": "¿de quién?",
-          "ko": "누구의?"
+          "ko": "누구의?",
+          "en": "Whose?"
         },
         {
           "es": "¿adónde?",
-          "ko": "어디로?"
+          "ko": "어디로?",
+          "en": "Where to?"
         },
         {
           "es": "¿de dónde?",
-          "ko": "어디에서?"
+          "ko": "어디에서?",
+          "en": "Where from?"
         },
         {
           "es": "¿para qué?",
-          "ko": "무엇을 위해?"
+          "ko": "무엇을 위해?",
+          "en": "What for?"
         },
         {
           "es": "¿verdad?",
-          "ko": "그렇지?"
+          "ko": "그렇지?",
+          "en": "Right?"
         },
         {
           "es": "¿cierto?",
-          "ko": "맞지?"
+          "ko": "맞지?",
+          "en": "Right?"
         },
         {
           "es": "en",
-          "ko": "~에"
+          "ko": "~에",
+          "en": "in"
         },
         {
           "es": "de",
-          "ko": "~의"
+          "ko": "~의",
+          "en": "of"
         },
         {
           "es": "a",
-          "ko": "~으로"
+          "ko": "~으로",
+          "en": "to"
         },
         {
           "es": "con",
-          "ko": "~와 함께"
+          "ko": "~와 함께",
+          "en": "with"
         },
         {
           "es": "sin",
-          "ko": "~없이"
+          "ko": "~없이",
+          "en": "without"
         },
         {
           "es": "para",
-          "ko": "~을 위해"
+          "ko": "~을 위해",
+          "en": "for"
         },
         {
           "es": "por",
-          "ko": "~때문에"
+          "ko": "~때문에",
+          "en": "by"
         },
         {
           "es": "sobre",
-          "ko": "~위에"
+          "ko": "~위에",
+          "en": "envelope"
         },
         {
           "es": "entre",
-          "ko": "~사이에"
+          "ko": "~사이에",
+          "en": "between"
         },
         {
           "es": "hacia",
-          "ko": "~쪽으로"
+          "ko": "~쪽으로",
+          "en": "towards"
         },
         {
           "es": "delante de",
-          "ko": "~앞에"
+          "ko": "~앞에",
+          "en": "in front of"
         },
         {
           "es": "detrás de",
-          "ko": "~뒤에"
+          "ko": "~뒤에",
+          "en": "behind"
         },
         {
           "es": "cerca de",
-          "ko": "~근처에"
+          "ko": "~근처에",
+          "en": "near to"
         },
         {
           "es": "lejos de",
-          "ko": "~에서 멀리"
+          "ko": "~에서 멀리",
+          "en": "far from"
         },
         {
           "es": "dentro de",
-          "ko": "~안에"
+          "ko": "~안에",
+          "en": "inside"
         },
         {
           "es": "y",
-          "ko": "그리고"
+          "ko": "그리고",
+          "en": "and"
         },
         {
           "es": "o",
-          "ko": "또는"
+          "ko": "또는",
+          "en": "or"
         },
         {
           "es": "pero",
-          "ko": "하지만"
+          "ko": "하지만",
+          "en": "but"
         },
         {
           "es": "porque",
-          "ko": "왜냐하면"
+          "ko": "왜냐하면",
+          "en": "because"
         },
         {
           "es": "si",
-          "ko": "만약"
+          "ko": "만약",
+          "en": "if"
         }
       ]
     },
@@ -1764,43 +2164,53 @@
       "words": [
         {
           "es": "cuando",
-          "ko": "~할 때"
+          "ko": "~할 때",
+          "en": "when"
         },
         {
           "es": "mientras",
-          "ko": "~하는 동안"
+          "ko": "~하는 동안",
+          "en": "while"
         },
         {
           "es": "aunque",
-          "ko": "비록 ~이지만"
+          "ko": "비록 ~이지만",
+          "en": "although"
         },
         {
           "es": "también",
-          "ko": "또한"
+          "ko": "또한",
+          "en": "also"
         },
         {
           "es": "tampoco",
-          "ko": "~도 아니다"
+          "ko": "~도 아니다",
+          "en": "neither"
         },
         {
           "es": "sin embargo",
-          "ko": "그러나"
+          "ko": "그러나",
+          "en": "however"
         },
         {
           "es": "además",
-          "ko": "게다가"
+          "ko": "게다가",
+          "en": "furthermore"
         },
         {
           "es": "entonces",
-          "ko": "그러면"
+          "ko": "그러면",
+          "en": "then"
         },
         {
           "es": "ni",
-          "ko": "~도 ~도 아닌"
+          "ko": "~도 ~도 아닌",
+          "en": "neither"
         },
         {
           "es": "pues",
-          "ko": "그러니까"
+          "ko": "그러니까",
+          "en": "well"
         }
       ]
     },
@@ -1811,43 +2221,53 @@
       "words": [
         {
           "es": "lunes",
-          "ko": "월요일"
+          "ko": "월요일",
+          "en": "Monday"
         },
         {
           "es": "martes",
-          "ko": "화요일"
+          "ko": "화요일",
+          "en": "Tuesday"
         },
         {
           "es": "miércoles",
-          "ko": "수요일"
+          "ko": "수요일",
+          "en": "Wednesday"
         },
         {
           "es": "jueves",
-          "ko": "목요일"
+          "ko": "목요일",
+          "en": "Thursday"
         },
         {
           "es": "viernes",
-          "ko": "금요일"
+          "ko": "금요일",
+          "en": "Friday"
         },
         {
           "es": "sábado",
-          "ko": "토요일"
+          "ko": "토요일",
+          "en": "Saturday"
         },
         {
           "es": "domingo",
-          "ko": "일요일"
+          "ko": "일요일",
+          "en": "Sunday"
         },
         {
           "es": "fin de semana",
-          "ko": "주말"
+          "ko": "주말",
+          "en": "weekend"
         },
         {
           "es": "día laborable",
-          "ko": "평일"
+          "ko": "평일",
+          "en": "weekday"
         },
         {
           "es": "hoy",
-          "ko": "오늘"
+          "ko": "오늘",
+          "en": "today"
         }
       ]
     },
@@ -1858,43 +2278,53 @@
       "words": [
         {
           "es": "mañana",
-          "ko": "내일"
+          "ko": "내일",
+          "en": "tomorrow"
         },
         {
           "es": "ayer",
-          "ko": "어제"
+          "ko": "어제",
+          "en": "yesterday"
         },
         {
           "es": "anteayer",
-          "ko": "그저께"
+          "ko": "그저께",
+          "en": "the day before yesterday"
         },
         {
           "es": "pasado mañana",
-          "ko": "모레"
+          "ko": "모레",
+          "en": "day after tomorrow"
         },
         {
           "es": "esta semana",
-          "ko": "이번 주"
+          "ko": "이번 주",
+          "en": "this week"
         },
         {
           "es": "enero",
-          "ko": "1월"
+          "ko": "1월",
+          "en": "January"
         },
         {
           "es": "febrero",
-          "ko": "2월"
+          "ko": "2월",
+          "en": "February"
         },
         {
           "es": "marzo",
-          "ko": "3월"
+          "ko": "3월",
+          "en": "March"
         },
         {
           "es": "abril",
-          "ko": "4월"
+          "ko": "4월",
+          "en": "April"
         },
         {
           "es": "mayo",
-          "ko": "5월"
+          "ko": "5월",
+          "en": "May"
         }
       ]
     },
@@ -1905,43 +2335,53 @@
       "words": [
         {
           "es": "junio",
-          "ko": "6월"
+          "ko": "6월",
+          "en": "June"
         },
         {
           "es": "julio",
-          "ko": "7월"
+          "ko": "7월",
+          "en": "July"
         },
         {
           "es": "agosto",
-          "ko": "8월"
+          "ko": "8월",
+          "en": "August"
         },
         {
           "es": "septiembre",
-          "ko": "9월"
+          "ko": "9월",
+          "en": "September"
         },
         {
           "es": "octubre",
-          "ko": "10월"
+          "ko": "10월",
+          "en": "October"
         },
         {
           "es": "noviembre",
-          "ko": "11월"
+          "ko": "11월",
+          "en": "November"
         },
         {
           "es": "diciembre",
-          "ko": "12월"
+          "ko": "12월",
+          "en": "December"
         },
         {
           "es": "primavera",
-          "ko": "봄"
+          "ko": "봄",
+          "en": "spring"
         },
         {
           "es": "verano",
-          "ko": "여름"
+          "ko": "여름",
+          "en": "summer"
         },
         {
           "es": "otoño",
-          "ko": "가을"
+          "ko": "가을",
+          "en": "autumn"
         }
       ]
     },
@@ -1952,43 +2392,53 @@
       "words": [
         {
           "es": "padre",
-          "ko": "아버지"
+          "ko": "아버지",
+          "en": "father"
         },
         {
           "es": "madre",
-          "ko": "어머니"
+          "ko": "어머니",
+          "en": "mother"
         },
         {
           "es": "hijo",
-          "ko": "아들"
+          "ko": "아들",
+          "en": "son"
         },
         {
           "es": "hija",
-          "ko": "딸"
+          "ko": "딸",
+          "en": "daughter"
         },
         {
           "es": "hermano",
-          "ko": "형제"
+          "ko": "형제",
+          "en": "brother"
         },
         {
           "es": "hermana",
-          "ko": "자매"
+          "ko": "자매",
+          "en": "sister"
         },
         {
           "es": "abuelo",
-          "ko": "할아버지"
+          "ko": "할아버지",
+          "en": "grandfather"
         },
         {
           "es": "abuela",
-          "ko": "할머니"
+          "ko": "할머니",
+          "en": "grandmother"
         },
         {
           "es": "tío",
-          "ko": "삼촌"
+          "ko": "삼촌",
+          "en": "uncle"
         },
         {
           "es": "tía",
-          "ko": "이모"
+          "ko": "이모",
+          "en": "aunt"
         }
       ]
     },
@@ -1999,43 +2449,53 @@
       "words": [
         {
           "es": "primo",
-          "ko": "사촌"
+          "ko": "사촌",
+          "en": "cousin"
         },
         {
           "es": "esposo",
-          "ko": "남편"
+          "ko": "남편",
+          "en": "husband"
         },
         {
           "es": "esposa",
-          "ko": "아내"
+          "ko": "아내",
+          "en": "wife"
         },
         {
           "es": "familia",
-          "ko": "가족"
+          "ko": "가족",
+          "en": "family"
         },
         {
           "es": "bebé",
-          "ko": "아기"
+          "ko": "아기",
+          "en": "baby"
         },
         {
           "es": "cabeza",
-          "ko": "머리"
+          "ko": "머리",
+          "en": "head"
         },
         {
           "es": "ojo",
-          "ko": "눈"
+          "ko": "눈",
+          "en": "eye"
         },
         {
           "es": "nariz",
-          "ko": "코"
+          "ko": "코",
+          "en": "nose"
         },
         {
           "es": "boca",
-          "ko": "입"
+          "ko": "입",
+          "en": "mouth"
         },
         {
           "es": "oreja",
-          "ko": "귀"
+          "ko": "귀",
+          "en": "ear"
         }
       ]
     },
@@ -2046,43 +2506,53 @@
       "words": [
         {
           "es": "mano",
-          "ko": "손"
+          "ko": "손",
+          "en": "hand"
         },
         {
           "es": "pie",
-          "ko": "발"
+          "ko": "발",
+          "en": "foot"
         },
         {
           "es": "brazo",
-          "ko": "팔"
+          "ko": "팔",
+          "en": "arm"
         },
         {
           "es": "pierna",
-          "ko": "다리"
+          "ko": "다리",
+          "en": "leg"
         },
         {
           "es": "dedo",
-          "ko": "손가락"
+          "ko": "손가락",
+          "en": "finger"
         },
         {
           "es": "corazón",
-          "ko": "심장"
+          "ko": "심장",
+          "en": "heart"
         },
         {
           "es": "estómago",
-          "ko": "위"
+          "ko": "위",
+          "en": "stomach"
         },
         {
           "es": "espalda",
-          "ko": "등"
+          "ko": "등",
+          "en": "back"
         },
         {
           "es": "cuello",
-          "ko": "목"
+          "ko": "목",
+          "en": "neck"
         },
         {
           "es": "diente",
-          "ko": "이빨"
+          "ko": "이빨",
+          "en": "tooth"
         }
       ]
     },
@@ -2093,43 +2563,53 @@
       "words": [
         {
           "es": "¿qué hora es?",
-          "ko": "몇 시예요?"
+          "ko": "몇 시예요?",
+          "en": "What time is it?"
         },
         {
           "es": "no entiendo",
-          "ko": "이해 못 해요"
+          "ko": "이해 못 해요",
+          "en": "I don't understand"
         },
         {
           "es": "no sé",
-          "ko": "몰라요"
+          "ko": "몰라요",
+          "en": "I don't know"
         },
         {
           "es": "tengo hambre",
-          "ko": "배고파요"
+          "ko": "배고파요",
+          "en": "I'm hungry"
         },
         {
           "es": "tengo sed",
-          "ko": "목말라요"
+          "ko": "목말라요",
+          "en": "I'm thirsty"
         },
         {
           "es": "estoy cansado",
-          "ko": "피곤해요"
+          "ko": "피곤해요",
+          "en": "I'm tired"
         },
         {
           "es": "tengo sueño",
-          "ko": "졸려요"
+          "ko": "졸려요",
+          "en": "I'm sleepy"
         },
         {
           "es": "¡ayuda!",
-          "ko": "도와주세요!"
+          "ko": "도와주세요!",
+          "en": "Help!"
         },
         {
           "es": "me llamo",
-          "ko": "제 이름은"
+          "ko": "제 이름은",
+          "en": "my name is"
         },
         {
           "es": "¿cuánto cuesta?",
-          "ko": "얼마예요?"
+          "ko": "얼마예요?",
+          "en": "How much does it cost?"
         }
       ]
     },
@@ -2140,43 +2620,53 @@
       "words": [
         {
           "es": "está bien",
-          "ko": "괜찮아요"
+          "ko": "괜찮아요",
+          "en": "it's okay"
         },
         {
           "es": "no importa",
-          "ko": "상관없어요"
+          "ko": "상관없어요",
+          "en": "it doesn't matter"
         },
         {
           "es": "un momento",
-          "ko": "잠깐만요"
+          "ko": "잠깐만요",
+          "en": "one moment"
         },
         {
           "es": "¡vamos!",
-          "ko": "가자!"
+          "ko": "가자!",
+          "en": "Let's go!"
         },
         {
           "es": "otra vez",
-          "ko": "다시 한번"
+          "ko": "다시 한번",
+          "en": "again"
         },
         {
           "es": "me gusta",
-          "ko": "좋아해요"
+          "ko": "좋아해요",
+          "en": "I like it"
         },
         {
           "es": "no me gusta",
-          "ko": "싫어해요"
+          "ko": "싫어해요",
+          "en": "I don't like it"
         },
         {
           "es": "creo que sí",
-          "ko": "그런 것 같아요"
+          "ko": "그런 것 같아요",
+          "en": "I think so"
         },
         {
           "es": "creo que no",
-          "ko": "아닌 것 같아요"
+          "ko": "아닌 것 같아요",
+          "en": "I don't think so"
         },
         {
           "es": "¡qué bonito!",
-          "ko": "정말 예쁘다!"
+          "ko": "정말 예쁘다!",
+          "en": "How beautiful!"
         }
       ]
     },
@@ -2187,43 +2677,53 @@
       "words": [
         {
           "es": "¡qué rico!",
-          "ko": "정말 맛있다!"
+          "ko": "정말 맛있다!",
+          "en": "How delicious!"
         },
         {
           "es": "con mucho gusto",
-          "ko": "기꺼이요"
+          "ko": "기꺼이요",
+          "en": "with pleasure"
         },
         {
           "es": "¡buen provecho!",
-          "ko": "맛있게 드세요!"
+          "ko": "맛있게 드세요!",
+          "en": "Enjoy your meal!"
         },
         {
           "es": "¿me puede ayudar?",
-          "ko": "도와줄 수 있나요?"
+          "ko": "도와줄 수 있나요?",
+          "en": "Can you help me?"
         },
         {
           "es": "¿dónde está el baño?",
-          "ko": "화장실이 어디예요?"
+          "ko": "화장실이 어디예요?",
+          "en": "Where is the bathroom?"
         },
         {
           "es": "mucho",
-          "ko": "많이"
+          "ko": "많이",
+          "en": "a lot"
         },
         {
           "es": "poco",
-          "ko": "조금"
+          "ko": "조금",
+          "en": "a little"
         },
         {
           "es": "todo",
-          "ko": "전부"
+          "ko": "전부",
+          "en": "everything"
         },
         {
           "es": "nada",
-          "ko": "아무것도"
+          "ko": "아무것도",
+          "en": "nothing"
         },
         {
           "es": "siempre",
-          "ko": "항상"
+          "ko": "항상",
+          "en": "always"
         }
       ]
     },
@@ -2234,403 +2734,503 @@
       "words": [
         {
           "es": "cuando",
-          "ko": "~할 때"
+          "ko": "~할 때",
+          "en": "when"
         },
         {
           "es": "mientras",
-          "ko": "~하는 동안"
+          "ko": "~하는 동안",
+          "en": "while"
         },
         {
           "es": "aunque",
-          "ko": "비록 ~이지만"
+          "ko": "비록 ~이지만",
+          "en": "although"
         },
         {
           "es": "también",
-          "ko": "또한"
+          "ko": "또한",
+          "en": "also"
         },
         {
           "es": "tampoco",
-          "ko": "~도 아니다"
+          "ko": "~도 아니다",
+          "en": "neither"
         },
         {
           "es": "sin embargo",
-          "ko": "그러나"
+          "ko": "그러나",
+          "en": "however"
         },
         {
           "es": "además",
-          "ko": "게다가"
+          "ko": "게다가",
+          "en": "furthermore"
         },
         {
           "es": "entonces",
-          "ko": "그러면"
+          "ko": "그러면",
+          "en": "then"
         },
         {
           "es": "ni",
-          "ko": "~도 ~도 아닌"
+          "ko": "~도 ~도 아닌",
+          "en": "neither"
         },
         {
           "es": "pues",
-          "ko": "그러니까"
+          "ko": "그러니까",
+          "en": "well"
         },
         {
           "es": "lunes",
-          "ko": "월요일"
+          "ko": "월요일",
+          "en": "Monday"
         },
         {
           "es": "martes",
-          "ko": "화요일"
+          "ko": "화요일",
+          "en": "Tuesday"
         },
         {
           "es": "miércoles",
-          "ko": "수요일"
+          "ko": "수요일",
+          "en": "Wednesday"
         },
         {
           "es": "jueves",
-          "ko": "목요일"
+          "ko": "목요일",
+          "en": "Thursday"
         },
         {
           "es": "viernes",
-          "ko": "금요일"
+          "ko": "금요일",
+          "en": "Friday"
         },
         {
           "es": "sábado",
-          "ko": "토요일"
+          "ko": "토요일",
+          "en": "Saturday"
         },
         {
           "es": "domingo",
-          "ko": "일요일"
+          "ko": "일요일",
+          "en": "Sunday"
         },
         {
           "es": "fin de semana",
-          "ko": "주말"
+          "ko": "주말",
+          "en": "weekend"
         },
         {
           "es": "día laborable",
-          "ko": "평일"
+          "ko": "평일",
+          "en": "weekday"
         },
         {
           "es": "hoy",
-          "ko": "오늘"
+          "ko": "오늘",
+          "en": "today"
         },
         {
           "es": "mañana",
-          "ko": "내일"
+          "ko": "내일",
+          "en": "tomorrow"
         },
         {
           "es": "ayer",
-          "ko": "어제"
+          "ko": "어제",
+          "en": "yesterday"
         },
         {
           "es": "anteayer",
-          "ko": "그저께"
+          "ko": "그저께",
+          "en": "the day before yesterday"
         },
         {
           "es": "pasado mañana",
-          "ko": "모레"
+          "ko": "모레",
+          "en": "day after tomorrow"
         },
         {
           "es": "esta semana",
-          "ko": "이번 주"
+          "ko": "이번 주",
+          "en": "this week"
         },
         {
           "es": "enero",
-          "ko": "1월"
+          "ko": "1월",
+          "en": "January"
         },
         {
           "es": "febrero",
-          "ko": "2월"
+          "ko": "2월",
+          "en": "February"
         },
         {
           "es": "marzo",
-          "ko": "3월"
+          "ko": "3월",
+          "en": "March"
         },
         {
           "es": "abril",
-          "ko": "4월"
+          "ko": "4월",
+          "en": "April"
         },
         {
           "es": "mayo",
-          "ko": "5월"
+          "ko": "5월",
+          "en": "May"
         },
         {
           "es": "junio",
-          "ko": "6월"
+          "ko": "6월",
+          "en": "June"
         },
         {
           "es": "julio",
-          "ko": "7월"
+          "ko": "7월",
+          "en": "July"
         },
         {
           "es": "agosto",
-          "ko": "8월"
+          "ko": "8월",
+          "en": "August"
         },
         {
           "es": "septiembre",
-          "ko": "9월"
+          "ko": "9월",
+          "en": "September"
         },
         {
           "es": "octubre",
-          "ko": "10월"
+          "ko": "10월",
+          "en": "October"
         },
         {
           "es": "noviembre",
-          "ko": "11월"
+          "ko": "11월",
+          "en": "November"
         },
         {
           "es": "diciembre",
-          "ko": "12월"
+          "ko": "12월",
+          "en": "December"
         },
         {
           "es": "primavera",
-          "ko": "봄"
+          "ko": "봄",
+          "en": "spring"
         },
         {
           "es": "verano",
-          "ko": "여름"
+          "ko": "여름",
+          "en": "summer"
         },
         {
           "es": "otoño",
-          "ko": "가을"
+          "ko": "가을",
+          "en": "autumn"
         },
         {
           "es": "padre",
-          "ko": "아버지"
+          "ko": "아버지",
+          "en": "father"
         },
         {
           "es": "madre",
-          "ko": "어머니"
+          "ko": "어머니",
+          "en": "mother"
         },
         {
           "es": "hijo",
-          "ko": "아들"
+          "ko": "아들",
+          "en": "son"
         },
         {
           "es": "hija",
-          "ko": "딸"
+          "ko": "딸",
+          "en": "daughter"
         },
         {
           "es": "hermano",
-          "ko": "형제"
+          "ko": "형제",
+          "en": "brother"
         },
         {
           "es": "hermana",
-          "ko": "자매"
+          "ko": "자매",
+          "en": "sister"
         },
         {
           "es": "abuelo",
-          "ko": "할아버지"
+          "ko": "할아버지",
+          "en": "grandfather"
         },
         {
           "es": "abuela",
-          "ko": "할머니"
+          "ko": "할머니",
+          "en": "grandmother"
         },
         {
           "es": "tío",
-          "ko": "삼촌"
+          "ko": "삼촌",
+          "en": "uncle"
         },
         {
           "es": "tía",
-          "ko": "이모"
+          "ko": "이모",
+          "en": "aunt"
         },
         {
           "es": "primo",
-          "ko": "사촌"
+          "ko": "사촌",
+          "en": "cousin"
         },
         {
           "es": "esposo",
-          "ko": "남편"
+          "ko": "남편",
+          "en": "husband"
         },
         {
           "es": "esposa",
-          "ko": "아내"
+          "ko": "아내",
+          "en": "wife"
         },
         {
           "es": "familia",
-          "ko": "가족"
+          "ko": "가족",
+          "en": "family"
         },
         {
           "es": "bebé",
-          "ko": "아기"
+          "ko": "아기",
+          "en": "baby"
         },
         {
           "es": "cabeza",
-          "ko": "머리"
+          "ko": "머리",
+          "en": "head"
         },
         {
           "es": "ojo",
-          "ko": "눈"
+          "ko": "눈",
+          "en": "eye"
         },
         {
           "es": "nariz",
-          "ko": "코"
+          "ko": "코",
+          "en": "nose"
         },
         {
           "es": "boca",
-          "ko": "입"
+          "ko": "입",
+          "en": "mouth"
         },
         {
           "es": "oreja",
-          "ko": "귀"
+          "ko": "귀",
+          "en": "ear"
         },
         {
           "es": "mano",
-          "ko": "손"
+          "ko": "손",
+          "en": "hand"
         },
         {
           "es": "pie",
-          "ko": "발"
+          "ko": "발",
+          "en": "foot"
         },
         {
           "es": "brazo",
-          "ko": "팔"
+          "ko": "팔",
+          "en": "arm"
         },
         {
           "es": "pierna",
-          "ko": "다리"
+          "ko": "다리",
+          "en": "leg"
         },
         {
           "es": "dedo",
-          "ko": "손가락"
+          "ko": "손가락",
+          "en": "finger"
         },
         {
           "es": "corazón",
-          "ko": "심장"
+          "ko": "심장",
+          "en": "heart"
         },
         {
           "es": "estómago",
-          "ko": "위"
+          "ko": "위",
+          "en": "stomach"
         },
         {
           "es": "espalda",
-          "ko": "등"
+          "ko": "등",
+          "en": "back"
         },
         {
           "es": "cuello",
-          "ko": "목"
+          "ko": "목",
+          "en": "neck"
         },
         {
           "es": "diente",
-          "ko": "이빨"
+          "ko": "이빨",
+          "en": "tooth"
         },
         {
           "es": "¿qué hora es?",
-          "ko": "몇 시예요?"
+          "ko": "몇 시예요?",
+          "en": "What time is it?"
         },
         {
           "es": "no entiendo",
-          "ko": "이해 못 해요"
+          "ko": "이해 못 해요",
+          "en": "I don't understand"
         },
         {
           "es": "no sé",
-          "ko": "몰라요"
+          "ko": "몰라요",
+          "en": "I don't know"
         },
         {
           "es": "tengo hambre",
-          "ko": "배고파요"
+          "ko": "배고파요",
+          "en": "I'm hungry"
         },
         {
           "es": "tengo sed",
-          "ko": "목말라요"
+          "ko": "목말라요",
+          "en": "I'm thirsty"
         },
         {
           "es": "estoy cansado",
-          "ko": "피곤해요"
+          "ko": "피곤해요",
+          "en": "I'm tired"
         },
         {
           "es": "tengo sueño",
-          "ko": "졸려요"
+          "ko": "졸려요",
+          "en": "I'm sleepy"
         },
         {
           "es": "¡ayuda!",
-          "ko": "도와주세요!"
+          "ko": "도와주세요!",
+          "en": "Help!"
         },
         {
           "es": "me llamo",
-          "ko": "제 이름은"
+          "ko": "제 이름은",
+          "en": "my name is"
         },
         {
           "es": "¿cuánto cuesta?",
-          "ko": "얼마예요?"
+          "ko": "얼마예요?",
+          "en": "How much does it cost?"
         },
         {
           "es": "está bien",
-          "ko": "괜찮아요"
+          "ko": "괜찮아요",
+          "en": "it's okay"
         },
         {
           "es": "no importa",
-          "ko": "상관없어요"
+          "ko": "상관없어요",
+          "en": "it doesn't matter"
         },
         {
           "es": "un momento",
-          "ko": "잠깐만요"
+          "ko": "잠깐만요",
+          "en": "one moment"
         },
         {
           "es": "¡vamos!",
-          "ko": "가자!"
+          "ko": "가자!",
+          "en": "Let's go!"
         },
         {
           "es": "otra vez",
-          "ko": "다시 한번"
+          "ko": "다시 한번",
+          "en": "again"
         },
         {
           "es": "me gusta",
-          "ko": "좋아해요"
+          "ko": "좋아해요",
+          "en": "I like it"
         },
         {
           "es": "no me gusta",
-          "ko": "싫어해요"
+          "ko": "싫어해요",
+          "en": "I don't like it"
         },
         {
           "es": "creo que sí",
-          "ko": "그런 것 같아요"
+          "ko": "그런 것 같아요",
+          "en": "I think so"
         },
         {
           "es": "creo que no",
-          "ko": "아닌 것 같아요"
+          "ko": "아닌 것 같아요",
+          "en": "I don't think so"
         },
         {
           "es": "¡qué bonito!",
-          "ko": "정말 예쁘다!"
+          "ko": "정말 예쁘다!",
+          "en": "How beautiful!"
         },
         {
           "es": "¡qué rico!",
-          "ko": "정말 맛있다!"
+          "ko": "정말 맛있다!",
+          "en": "How delicious!"
         },
         {
           "es": "con mucho gusto",
-          "ko": "기꺼이요"
+          "ko": "기꺼이요",
+          "en": "with pleasure"
         },
         {
           "es": "¡buen provecho!",
-          "ko": "맛있게 드세요!"
+          "ko": "맛있게 드세요!",
+          "en": "Enjoy your meal!"
         },
         {
           "es": "¿me puede ayudar?",
-          "ko": "도와줄 수 있나요?"
+          "ko": "도와줄 수 있나요?",
+          "en": "Can you help me?"
         },
         {
           "es": "¿dónde está el baño?",
-          "ko": "화장실이 어디예요?"
+          "ko": "화장실이 어디예요?",
+          "en": "Where is the bathroom?"
         },
         {
           "es": "mucho",
-          "ko": "많이"
+          "ko": "많이",
+          "en": "a lot"
         },
         {
           "es": "poco",
-          "ko": "조금"
+          "ko": "조금",
+          "en": "a little"
         },
         {
           "es": "todo",
-          "ko": "전부"
+          "ko": "전부",
+          "en": "everything"
         },
         {
           "es": "nada",
-          "ko": "아무것도"
+          "ko": "아무것도",
+          "en": "nothing"
         },
         {
           "es": "siempre",
-          "ko": "항상"
+          "ko": "항상",
+          "en": "always"
         }
       ]
     }

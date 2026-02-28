@@ -27,7 +27,7 @@ const Game = {
         // 현재 스테이지 정보
         worldId: 1,
         stageNum: 1,
-        mode: 'es-to-ko',              // 'es-to-ko' 또는 'ko-to-es'
+        mode: 'es-to-ko',              // 'es-to-ko' | 'ko-to-es' | 'es-to-en' | 'en-to-es'
         
         // 게임 진행 상태
         score: 0,                      // 현재 점수
@@ -119,9 +119,35 @@ const Game = {
     },
 
     // =========================================
+    // 모드 유틸
+    // =========================================
+
+    /**
+     * 모드에 따라 단어 카드에 표시할 텍스트 반환
+     * es-to-ko / es-to-en → 스페인어 표시
+     * ko-to-es / en-to-es → 각각 한국어 / 영어 표시
+     */
+    getDisplayText: function(word) {
+        const mode = this.state.mode;
+        if (mode === 'ko-to-es') return word.korean;
+        if (mode === 'en-to-es') return word.english || word.spanish;
+        return word.spanish; // es-to-ko, es-to-en
+    },
+
+    /**
+     * 모드에 따라 정답 텍스트 반환 (사용자가 입력해야 하는 값)
+     */
+    getAnswerText: function(word) {
+        const mode = this.state.mode;
+        if (mode === 'es-to-ko' || mode === 'ko-to-es') return word.korean;
+        if (mode === 'es-to-en' || mode === 'en-to-es') return word.english || '';
+        return word.korean;
+    },
+
+    // =========================================
     // 게임 시작/종료
     // =========================================
-    
+
     /**
      * 스테이지 시작
      * @param {number} worldId - 월드 ID
@@ -130,6 +156,19 @@ const Game = {
      * @param {Array|null} customPool - 커스텀 단어 풀 (복습 모드용)
      */
     startStage: function(worldId, stageNum, mode = 'es-to-ko', customPool = null) {
+        // 적응형 속도 계수: 최근 정확도가 낮으면 느리게 시작
+        let speedModifier = 1.0;
+        if (!customPool) {
+            const prevResult = Storage.getStageResult(getStageId(worldId, stageNum));
+            if (prevResult && prevResult.lastAccuracy !== null && prevResult.lastAccuracy !== undefined) {
+                const acc = prevResult.lastAccuracy;
+                if (acc < 60)      speedModifier = 0.50;
+                else if (acc < 75) speedModifier = 0.65;
+                else if (acc < 85) speedModifier = 0.80;
+                // acc >= 85: 1.0 (정상 속도)
+            }
+        }
+
         // 상태 초기화
         const worldConfig = getWorldConfig(worldId);
         this.state = {
@@ -150,7 +189,8 @@ const Game = {
             startTime: performance.now(),
             elapsedTime: 0,
             lastSpawnTime: 0,
-            currentSpeed: worldConfig ? worldConfig.baseSpeed : 0.4
+            currentSpeed: worldConfig ? worldConfig.baseSpeed : 0.4,
+            speedModifier: speedModifier
         };
 
         // 게임 오브젝트 초기화
@@ -288,12 +328,12 @@ const Game = {
         // 스테이지 진행률 계산 (0~1)
         const progressRatio = this.state.correctCount / this.state.targetWords;
         
-        // 속도 업데이트 (진행에 따라 증가)
+        // 속도 업데이트 (진행에 따라 증가, 적응형 계수 적용)
         this.state.currentSpeed = calculateSpeed(
             this.state.worldId,
             this.state.stageNum,
             progressRatio
-        );
+        ) * (this.state.speedModifier || 1.0);
         
         // 새 단어 생성 체크
         this.trySpawnWord(now);
@@ -349,6 +389,7 @@ const Game = {
             id: this.nextWordId++,
             spanish: word.es,
             korean: word.ko,
+            english: word.en || '',
             x: x,
             y: -30,                        // 화면 위에서 시작
             speed: this.state.currentSpeed,
@@ -438,16 +479,13 @@ const Game = {
      * 매칭 상태 업데이트
      */
     updateMatchedState: function() {
-        // 모드에 따라 비교 대상 결정
-        const isEsToKo = this.state.mode === 'es-to-ko';
-
         // 정규화된 입력 (구두점·공백 제거)
         const normInput = this.normalizeForMatch(this.currentInput);
 
         // 각 단어의 매칭 상태 업데이트
         this.activeWords.forEach(word => {
             // 비교할 정답
-            const answer = isEsToKo ? word.korean : word.spanish;
+            const answer = this.getAnswerText(word);
             const normAnswer = this.normalizeForMatch(answer);
 
             // 현재 입력이 정답의 시작 부분과 일치하는지 확인
@@ -468,12 +506,9 @@ const Game = {
             return;
         }
         
-        // 모드에 따라 비교 대상 결정
-        const isEsToKo = this.state.mode === 'es-to-ko';
-        
         // 정답인 단어 찾기
         const matchIndex = this.activeWords.findIndex(word => {
-            const answer = isEsToKo ? word.korean : word.spanish;
+            const answer = this.getAnswerText(word);
             return this.answersMatch(answer, this.currentInput);
         });
         
@@ -655,12 +690,11 @@ const Game = {
         this.state.wrongCount += 1;
 
         // 피드백 메시지 표시 (화면에 있는 단어 중 가장 가까운 것의 뜻 보여주기)
-        const isEsToKo = this.state.mode === 'es-to-ko';
         if (this.activeWords.length > 0) {
             // 현재 입력과 가장 가까운 단어 찾기
             const hints = this.activeWords.map(w => {
-                const display = isEsToKo ? w.spanish : w.korean;
-                const answer = isEsToKo ? w.korean : w.spanish;
+                const display = this.getDisplayText(w);
+                const answer = this.getAnswerText(w);
                 return `${display} = ${answer}`;
             }).join('  |  ');
 
@@ -694,7 +728,7 @@ const Game = {
 
         // 놓친 단어 피드백 표시
         this.feedbacks.push({
-            text: `${word.spanish} = ${word.korean}`,
+            text: `${this.getDisplayText(word)} = ${this.getAnswerText(word)}`,
             y: CONFIG.CANVAS.DEATH_LINE_Y - 30,
             alpha: 1.0,
             time: performance.now()
@@ -725,7 +759,7 @@ const Game = {
         // 결과 저장 (리뷰 모드가 아닐 때만 스테이지 결과 저장)
         if (!this.state.isReviewMode) {
             const stageId = getStageId(this.state.worldId, this.state.stageNum);
-            Storage.saveStageResult(stageId, stars, this.state.score);
+            Storage.saveStageResult(stageId, stars, this.state.score, this.calculateAccuracy());
         }
 
         // 통계 업데이트 (항상)
@@ -889,11 +923,10 @@ const Game = {
      */
     renderWords: function() {
         const ctx = this.ctx;
-        const isEsToKo = this.state.mode === 'es-to-ko';
 
         // 각 단어 렌더링
         this.activeWords.forEach(word => {
-            const displayText = isEsToKo ? word.spanish : word.korean;
+            const displayText = this.getDisplayText(word);
             const fontSize = CONFIG.RENDER.WORD_FONT_SIZE;
 
             // 배경 캡슐
@@ -996,9 +1029,10 @@ const Game = {
         } else {
             ctx.font = `${CONFIG.RENDER.INPUT_FONT_SIZE - 4}px ${CONFIG.RENDER.FONT_FAMILY}`;
             ctx.fillStyle = 'rgba(155, 138, 176, 0.7)';
-            const placeholder = this.state.mode === 'es-to-ko'
-                ? '한국어로 입력하세요'
-                : 'Escribe en español';
+            const mode = this.state.mode;
+            const placeholder = (mode === 'es-to-ko' || mode === 'ko-to-es')
+                ? (mode === 'es-to-ko' ? '한국어로 입력하세요' : 'Escribe en español')
+                : (mode === 'es-to-en' ? 'Type in English' : 'Escribe en español');
             ctx.fillText(placeholder, W / 2, inputY);
         }
     },
