@@ -179,7 +179,6 @@ const App = {
 
         // 적응형 속도 배지
         this.elements.slowModeBadge = document.getElementById('slow-mode-badge');
-        this.elements.statsModeSelect = document.getElementById('stats-mode-select');
     },
     
     /**
@@ -320,13 +319,6 @@ const App = {
                 this.applyModeSetting(e.target.value);
             });
         }
-
-        if (this.elements.statsModeSelect) {
-            this.elements.statsModeSelect.addEventListener('change', (e) => {
-                this.applyModeSetting(e.target.value);
-            });
-        }
-
         // Stats 버튼
         const statsBtn = document.getElementById('stats-btn');
         if (statsBtn) {
@@ -384,7 +376,6 @@ const App = {
         Storage.setSetting('mode', nextMode);
 
         if (this.elements.modeSelect) this.elements.modeSelect.value = nextMode;
-        if (this.elements.statsModeSelect) this.elements.statsModeSelect.value = nextMode;
     },
 
     // =========================================
@@ -551,34 +542,29 @@ const App = {
     // =========================================
     // 게임 제어
     // =========================================
+
+    /**
+     * 공통 스테이지 진입 처리
+     * @param {number} worldId
+     * @param {number} stageNum
+     */
+    enterStage: function(worldId, stageNum) {
+        this.populateWordPanels(worldId, stageNum);
+        this.showScreen('game');
+
+        if (this.elements.inputField) {
+            this.elements.inputField.value = '';
+        }
+
+        Game.startStage(worldId, stageNum, this.currentMode);
+    },
     
     /**
      * 선택된 스테이지 시작
      */
     startSelectedStage: function() {
-        // 모달 숨기기
         this.hideStageModal();
-
-        // 단어 참조 패널 채우기
-        this.populateWordPanels(
-            this.selectedStage.worldId,
-            this.selectedStage.stageNum
-        );
-
-        // 게임 화면으로 전환
-        this.showScreen('game');
-
-        // 입력 필드 초기화
-        if (this.elements.inputField) {
-            this.elements.inputField.value = '';
-        }
-
-        // 게임 시작
-        Game.startStage(
-            this.selectedStage.worldId,
-            this.selectedStage.stageNum,
-            this.currentMode
-        );
+        this.enterStage(this.selectedStage.worldId, this.selectedStage.stageNum);
     },
 
     /**
@@ -615,26 +601,7 @@ const App = {
      * 현재 스테이지 재시도
      */
     retryStage: function() {
-        // 단어 패널 채우기
-        this.populateWordPanels(
-            this.selectedStage.worldId,
-            this.selectedStage.stageNum
-        );
-
-        // 게임 화면으로 전환
-        this.showScreen('game');
-
-        // 입력 필드 초기화
-        if (this.elements.inputField) {
-            this.elements.inputField.value = '';
-        }
-
-        // 게임 시작
-        Game.startStage(
-            this.selectedStage.worldId,
-            this.selectedStage.stageNum,
-            this.currentMode
-        );
+        this.enterStage(this.selectedStage.worldId, this.selectedStage.stageNum);
     },
     
     /**
@@ -667,19 +634,7 @@ const App = {
             stageNum: nextStageNum
         };
         
-        // 단어 패널 채우기
-        this.populateWordPanels(nextWorldId, nextStageNum);
-
-        // 게임 화면으로 전환
-        this.showScreen('game');
-
-        // 입력 필드 초기화
-        if (this.elements.inputField) {
-            this.elements.inputField.value = '';
-        }
-
-        // 게임 시작
-        Game.startStage(nextWorldId, nextStageNum, this.currentMode);
+        this.enterStage(nextWorldId, nextStageNum);
     },
     
     /**
@@ -874,11 +829,6 @@ const App = {
                 bar.style.opacity = i === bars.length - 1 ? '1' : '0.72';
             });
         }
-
-        if (this.elements.statsModeSelect) {
-            this.elements.statsModeSelect.value = this.currentMode;
-        }
-
         // 모달 표시
         document.getElementById('stats-modal').classList.remove('hidden');
     },

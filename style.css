@@ -958,8 +958,6 @@ a {
 .stats-hero { display:flex; justify-content:space-between; align-items:flex-end; gap:12px; padding:20px 24px; background:rgba(244,140,37,0.1); width:100%; box-sizing:border-box; }
 .stats-hero-title { font-size:34px; font-weight:900; color:#0f172a; }
 .stats-hero-subtitle { color:#64748b; }
-.stats-mode-section { padding: 0 24px 12px; width: 100%; }
-
 .dashboard-grid {
     grid-template-columns: repeat(5, minmax(0,1fr));
     gap: 10px;
