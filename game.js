@@ -938,8 +938,7 @@ const Game = {
         // 피드백 메시지 렌더링
         this.renderFeedbacks();
 
-        // 현재 입력 표시
-        this.renderInput();
+        // 입력은 하단 HTML 입력창(#input-field)만 사용
     },
     
     /**

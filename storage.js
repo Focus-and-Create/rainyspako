@@ -43,6 +43,14 @@ const Storage = {
                 musicEnabled: false      // 배경음악 비활성화
             });
         }
+
+        // 스테이지 점프 데이터가 없으면 초기화
+        if (!this._get(CONFIG.STORAGE_KEYS.STAGE_JUMP)) {
+            this._set(CONFIG.STORAGE_KEYS.STAGE_JUMP, {
+                date: this._getTodayKey(),
+                used: 0
+            });
+        }
     },
 
     // =========================================
@@ -195,6 +203,88 @@ const Storage = {
         
         // 모든 스테이지 해제 시 마지막 스테이지 반환
         return lastUnlocked;
+    },
+
+    /**
+     * 오늘 날짜 키(로컬 타임존) 반환
+     * @returns {string} YYYY-MM-DD 형태 날짜 문자열
+     */
+    _getTodayKey: function() {
+        const now = new Date();
+        const year = now.getFullYear();
+        const month = String(now.getMonth() + 1).padStart(2, '0');
+        const day = String(now.getDate()).padStart(2, '0');
+        return `${year}-${month}-${day}`;
+    },
+
+    /**
+     * 스테이지 점프 데이터 조회(날짜 경과 시 자동 리셋)
+     * @returns {{date: string, used: number}}
+     */
+    _getStageJumpData: function() {
+        const today = this._getTodayKey();
+        const raw = this._get(CONFIG.STORAGE_KEYS.STAGE_JUMP) || {};
+        const used = Number.isFinite(raw.used) ? raw.used : 0;
+
+        if (raw.date === today) {
+            return {
+                date: today,
+                used: Math.max(0, Math.floor(used))
+            };
+        }
+
+        const resetData = { date: today, used: 0 };
+        this._set(CONFIG.STORAGE_KEYS.STAGE_JUMP, resetData);
+        return resetData;
+    },
+
+    /**
+     * 현재 점프 사용 현황 반환
+     * @returns {{dailyLimit: number, used: number, remaining: number}}
+     */
+    getStageJumpStatus: function() {
+        const dailyLimit = CONFIG.STAGE_JUMP?.DAILY_LIMIT || 3;
+        const data = this._getStageJumpData();
+        const remaining = Math.max(0, dailyLimit - data.used);
+
+        return {
+            dailyLimit,
+            used: data.used,
+            remaining
+        };
+    },
+
+    /**
+     * 잠긴 스테이지 점프 사용 처리
+     * @param {number} worldId - 월드 ID
+     * @param {number} stageNum - 스테이지 번호
+     * @returns {{success: boolean, usedJump: boolean, remaining: number}}
+     */
+    useStageJump: function(worldId, stageNum) {
+        // 이미 해제된 스테이지는 점프 소모 없음
+        if (this.isStageUnlocked(worldId, stageNum)) {
+            const status = this.getStageJumpStatus();
+            return { success: true, usedJump: false, remaining: status.remaining };
+        }
+
+        const status = this.getStageJumpStatus();
+        if (status.remaining <= 0) {
+            return { success: false, usedJump: false, remaining: 0 };
+        }
+
+        const data = this._getStageJumpData();
+        const nextData = {
+            date: data.date,
+            used: data.used + 1
+        };
+        const saved = this._set(CONFIG.STORAGE_KEYS.STAGE_JUMP, nextData);
+        const remaining = Math.max(0, status.dailyLimit - nextData.used);
+
+        return {
+            success: !!saved,
+            usedJump: !!saved,
+            remaining: saved ? remaining : status.remaining
+        };
     },
 
     // =========================================
