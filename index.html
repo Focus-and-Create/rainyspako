@@ -203,17 +203,6 @@
             <p id="best-score" class="best-score">First Try!</p>
             <p id="jump-info" class="jump-info"></p>
             
-            <!-- 모드 선택 -->
-            <div class="mode-select-container">
-                <label for="mode-select" class="mode-label">Mode</label>
-                <select id="mode-select" class="mode-select">
-                    <option value="es-to-ko">Spanish → Korean</option>
-                    <option value="ko-to-es">Korean → Spanish</option>
-                    <option value="es-to-en">Spanish → English</option>
-                    <option value="en-to-es">English → Spanish</option>
-                </select>
-            </div>
-            
             <button id="start-btn" class="btn btn-primary btn-large">Start</button>
         </div>
     </div>
@@ -245,6 +234,17 @@
                     <p class="stats-hero-subtitle" id="stats-greeting">Great job today, keep the streak alive!</p>
                 </div>
                 <button id="stats-resume-btn" class="btn btn-primary">Resume Game</button>
+            </section>
+
+
+            <section class="mode-select-container stats-mode-container">
+                <label for="stats-mode-select" class="mode-label">Mode</label>
+                <select id="stats-mode-select" class="mode-select">
+                    <option value="es-to-ko">Spanish → Korean</option>
+                    <option value="ko-to-es">Korean → Spanish</option>
+                    <option value="es-to-en">Spanish → English</option>
+                    <option value="en-to-es">English → Spanish</option>
+                </select>
             </section>
 
             <section class="stats-grid dashboard-grid">

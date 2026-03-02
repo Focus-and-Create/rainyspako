@@ -903,6 +903,10 @@ a {
     gap: var(--spacing-sm);
 }
 
+.stats-mode-container {
+    margin-top: calc(var(--spacing-sm) * -0.5);
+}
+
 .mode-label {
     font-size: 12px;
     color: var(--color-text-muted);

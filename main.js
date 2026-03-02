@@ -56,7 +56,7 @@ const App = {
         
         // 스테이지 선택 모달
         stageModal: null,
-        modeSelect: null,
+        statsModeSelect: null,
         startBtn: null,
         closeModalBtn: null,
         jumpInfo: null,
@@ -168,7 +168,7 @@ const App = {
         
         // 스테이지 선택 모달
         this.elements.stageModal = document.getElementById('stage-modal');
-        this.elements.modeSelect = document.getElementById('mode-select');
+        this.elements.statsModeSelect = document.getElementById('stats-mode-select');
         this.elements.startBtn = document.getElementById('start-btn');
         this.elements.closeModalBtn = document.getElementById('close-modal-btn');
         this.elements.jumpInfo = document.getElementById('jump-info');
@@ -315,9 +315,9 @@ const App = {
             });
         }
         
-        // 모드 선택
-        if (this.elements.modeSelect) {
-            this.elements.modeSelect.addEventListener('change', (e) => {
+        // 통계 모달 내 모드 선택
+        if (this.elements.statsModeSelect) {
+            this.elements.statsModeSelect.addEventListener('change', (e) => {
                 this.applyModeSetting(e.target.value);
             });
         }
@@ -377,7 +377,7 @@ const App = {
         this.currentMode = nextMode;
         Storage.setSetting('mode', nextMode);
 
-        if (this.elements.modeSelect) this.elements.modeSelect.value = nextMode;
+        if (this.elements.statsModeSelect) this.elements.statsModeSelect.value = nextMode;
     },
 
     // =========================================
@@ -549,11 +549,6 @@ const App = {
                 this.elements.startBtn.disabled = true;
                 this.elements.startBtn.textContent = '점프 횟수 소진';
             }
-        }
-
-        // 현재 학습 모드 반영
-        if (this.elements.modeSelect) {
-            this.elements.modeSelect.value = this.currentMode;
         }
 
         // 모달 표시
@@ -825,6 +820,10 @@ const App = {
         if (usernameDisplay) usernameDisplay.textContent = username;
         const greeting = document.getElementById('stats-greeting');
         if (greeting) greeting.textContent = `${username}님, 오늘도 화이팅!`;
+
+        if (this.elements.statsModeSelect) {
+            this.elements.statsModeSelect.value = this.currentMode;
+        }
 
         const stats = Storage.getStats();
 
