@@ -713,6 +713,11 @@ a {
     transform: scale(0.97);
 }
 
+.btn:disabled {
+    opacity: 0.55;
+    cursor: not-allowed;
+}
+
 .btn-primary {
     background: var(--gradient-accent);
     color: #ffffff;
@@ -878,6 +883,17 @@ a {
 .best-score {
     font-size: 15px;
     color: var(--color-text-secondary);
+}
+
+.jump-info {
+    font-size: 13px;
+    color: var(--color-text-muted);
+    margin-top: calc(var(--spacing-sm) * -0.5);
+}
+
+.jump-info.warning {
+    color: var(--color-danger);
+    font-weight: 700;
 }
 
 .mode-select-container {

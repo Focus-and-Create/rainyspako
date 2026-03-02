@@ -59,6 +59,7 @@ const App = {
         modeSelect: null,
         startBtn: null,
         closeModalBtn: null,
+        jumpInfo: null,
 
         // 로그인 화면
         usernameInput: null,
@@ -170,6 +171,7 @@ const App = {
         this.elements.modeSelect = document.getElementById('mode-select');
         this.elements.startBtn = document.getElementById('start-btn');
         this.elements.closeModalBtn = document.getElementById('close-modal-btn');
+        this.elements.jumpInfo = document.getElementById('jump-info');
         this.elements.modalTitle = document.getElementById('modal-title');
 
         // 로그인 화면
@@ -523,6 +525,32 @@ const App = {
             }
         }
         
+        const isUnlocked = Storage.isStageUnlocked(worldId, stageNum);
+        const jumpStatus = Storage.getStageJumpStatus();
+
+        if (this.elements.jumpInfo) {
+            if (isUnlocked) {
+                this.elements.jumpInfo.textContent = `점프 잔여: ${jumpStatus.remaining}/${jumpStatus.dailyLimit}`;
+                this.elements.jumpInfo.classList.remove('warning');
+            } else {
+                this.elements.jumpInfo.textContent = `잠긴 스테이지 점프: 오늘 ${jumpStatus.remaining}/${jumpStatus.dailyLimit}회 남음`;
+                this.elements.jumpInfo.classList.toggle('warning', jumpStatus.remaining <= 0);
+            }
+        }
+
+        if (this.elements.startBtn) {
+            if (isUnlocked) {
+                this.elements.startBtn.disabled = false;
+                this.elements.startBtn.textContent = 'Start';
+            } else if (jumpStatus.remaining > 0) {
+                this.elements.startBtn.disabled = false;
+                this.elements.startBtn.textContent = `점프해서 시작 (${jumpStatus.remaining}/${jumpStatus.dailyLimit})`;
+            } else {
+                this.elements.startBtn.disabled = true;
+                this.elements.startBtn.textContent = '점프 횟수 소진';
+            }
+        }
+
         // 현재 학습 모드 반영
         if (this.elements.modeSelect) {
             this.elements.modeSelect.value = this.currentMode;
@@ -563,8 +591,24 @@ const App = {
      * 선택된 스테이지 시작
      */
     startSelectedStage: function() {
+        const { worldId, stageNum } = this.selectedStage;
+        const isUnlocked = Storage.isStageUnlocked(worldId, stageNum);
+
+        if (!isUnlocked) {
+            const jumpResult = Storage.useStageJump(worldId, stageNum);
+            if (!jumpResult.success) {
+                alert('오늘 점프 횟수를 모두 사용했습니다. 내일 다시 시도해 주세요!');
+                this.showStageModal(worldId, stageNum);
+                return;
+            }
+
+            if (jumpResult.usedJump) {
+                alert(`스테이지 점프 사용! 오늘 남은 점프: ${jumpResult.remaining}회`);
+            }
+        }
+
         this.hideStageModal();
-        this.enterStage(this.selectedStage.worldId, this.selectedStage.stageNum);
+        this.enterStage(worldId, stageNum);
     },
 
     /**
