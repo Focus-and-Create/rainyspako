@@ -211,10 +211,8 @@ const StageMap = {
             const sy = y + this.scrollY;
             this.tilePositions.forEach((t, idx) => {
                 if (x >= t.x && x <= t.x + t.width && sy >= t.y && sy <= t.y + t.height) {
-                    if (Storage.isStageUnlocked(t.worldId, t.stageNum)) {
-                        isOverClickable = true;
-                        newHoveredIdx = idx;
-                    }
+                    isOverClickable = true;
+                    newHoveredIdx = idx;
                 }
             });
         }
@@ -227,9 +225,7 @@ const StageMap = {
     },
 
     handleTileClick: function(tile) {
-        if (Storage.isStageUnlocked(tile.worldId, tile.stageNum)) {
-            if (this.onStageSelect) this.onStageSelect(tile.worldId, tile.stageNum);
-        }
+        if (this.onStageSelect) this.onStageSelect(tile.worldId, tile.stageNum);
     },
 
     handleScroll: function(deltaY) {

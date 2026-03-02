@@ -74,6 +74,13 @@ const CONFIG = {
     },
 
     // =========================================
+    // 스테이지 점프 설정
+    // =========================================
+    STAGE_JUMP: {
+        DAILY_LIMIT: 3                 // 하루 스테이지 점프 가능 횟수
+    },
+
+    // =========================================
     // 렌더링 설정
     // =========================================
     RENDER: {
@@ -115,7 +122,8 @@ const CONFIG = {
         WRONG_WORDS: 'spanish_rain_wrong_words',
         STATS: 'spanish_rain_stats',
         SETTINGS: 'spanish_rain_settings',
-        PROFILE: 'spanish_rain_profile'
+        PROFILE: 'spanish_rain_profile',
+        STAGE_JUMP: 'spanish_rain_stage_jump'
     }
 };
 
