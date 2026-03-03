@@ -2729,6 +2729,63 @@
     },
     {
       "stage": 33,
+      "type": "learning",
+      "category": "에피소드 3 · 복습 세트",
+      "words": [
+        {
+          "es": "sonda",
+          "ko": "탐사선",
+          "en": "probe"
+        },
+        {
+          "es": "modelo",
+          "ko": "모델",
+          "en": "model"
+        },
+        {
+          "es": "medio ambiente",
+          "ko": "환경",
+          "en": "environment"
+        },
+        {
+          "es": "deforestación",
+          "ko": "산림파괴",
+          "en": "deforestation"
+        },
+        {
+          "es": "fabricación",
+          "ko": "제조",
+          "en": "manufacturing"
+        },
+        {
+          "es": "observación",
+          "ko": "관찰",
+          "en": "observation"
+        },
+        {
+          "es": "reproducibilidad",
+          "ko": "재현성",
+          "en": "reproducibility"
+        },
+        {
+          "es": "patente",
+          "ko": "특허",
+          "en": "patent"
+        },
+        {
+          "es": "radar",
+          "ko": "레이더",
+          "en": "radar"
+        },
+        {
+          "es": "desarrollar",
+          "ko": "개발하다",
+          "en": "to develop"
+        }
+      ]
+    },
+    {
+      "stage": 34,
       "category": "에피소드 3 보스 · 누적 복습",
       "type": "boss",
       "words": [

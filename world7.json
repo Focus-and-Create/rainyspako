@@ -2729,6 +2729,63 @@
     },
     {
       "stage": 33,
+      "type": "learning",
+      "category": "에피소드 3 · 복습 세트",
+      "words": [
+        {
+          "es": "arte",
+          "ko": "미술",
+          "en": "art"
+        },
+        {
+          "es": "facultad",
+          "ko": "학부",
+          "en": "faculty"
+        },
+        {
+          "es": "nota",
+          "ko": "성적",
+          "en": "grade"
+        },
+        {
+          "es": "puntuación",
+          "ko": "점수",
+          "en": "score"
+        },
+        {
+          "es": "análisis",
+          "ko": "분석",
+          "en": "analysis"
+        },
+        {
+          "es": "trabajar",
+          "ko": "일하다",
+          "en": "to work"
+        },
+        {
+          "es": "producir",
+          "ko": "생산하다",
+          "en": "to produce"
+        },
+        {
+          "es": "margen de beneficio",
+          "ko": "이윤",
+          "en": "profit margin"
+        },
+        {
+          "es": "trabajo en equipo",
+          "ko": "팀워크",
+          "en": "teamwork"
+        },
+        {
+          "es": "estrés laboral",
+          "ko": "업무 스트레스",
+          "en": "work stress"
+        }
+      ]
+    },
+    {
+      "stage": 34,
       "category": "에피소드 3 보스 · 누적 복습",
       "type": "boss",
       "words": [

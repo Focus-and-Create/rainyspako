@@ -2729,6 +2729,63 @@
     },
     {
       "stage": 33,
+      "type": "learning",
+      "category": "에피소드 3 · 복습 세트",
+      "words": [
+        {
+          "es": "colador",
+          "ko": "체",
+          "en": "strainer"
+        },
+        {
+          "es": "especial del día",
+          "ko": "오늘의 특선",
+          "en": "daily special"
+        },
+        {
+          "es": "tenedor",
+          "ko": "포크",
+          "en": "fork"
+        },
+        {
+          "es": "jarra",
+          "ko": "물병",
+          "en": "pitcher"
+        },
+        {
+          "es": "ácido",
+          "ko": "신",
+          "en": "acid"
+        },
+        {
+          "es": "maduro",
+          "ko": "익은",
+          "en": "ripe"
+        },
+        {
+          "es": "miel",
+          "ko": "꿀",
+          "en": "honey"
+        },
+        {
+          "es": "gazpacho",
+          "ko": "가스파초",
+          "en": "gazpacho"
+        },
+        {
+          "es": "enchilada",
+          "ko": "엔칠라다",
+          "en": "enchilada"
+        },
+        {
+          "es": "preparar",
+          "ko": "준비하다",
+          "en": "to prepare"
+        }
+      ]
+    },
+    {
+      "stage": 34,
       "category": "에피소드 3 보스 · 누적 복습",
       "type": "boss",
       "words": [

@@ -937,9 +937,6 @@ const Game = {
 
         // 피드백 메시지 렌더링
         this.renderFeedbacks();
-
-        // 현재 입력 표시
-        this.renderInput();
     },
     
     /**
@@ -1003,64 +1000,6 @@ const Game = {
         });
     },
     
-    /**
-     * 현재 입력 렌더링
-     */
-    renderInput: function() {
-        const ctx = this.ctx;
-        const W = CONFIG.CANVAS.WIDTH;
-        const H = CONFIG.CANVAS.HEIGHT;
-
-        // 입력창 영역
-        const inputY = H - 50;
-        const inputWidth = 320;
-        const inputHeight = 42;
-        const inputX = (W - inputWidth) / 2;
-        const radius = inputHeight / 2;
-
-        // 둥근 입력창 배경
-        ctx.beginPath();
-        ctx.moveTo(inputX + radius, inputY - inputHeight / 2);
-        ctx.lineTo(inputX + inputWidth - radius, inputY - inputHeight / 2);
-        ctx.arcTo(inputX + inputWidth, inputY - inputHeight / 2, inputX + inputWidth, inputY, radius);
-        ctx.arcTo(inputX + inputWidth, inputY + inputHeight / 2, inputX + inputWidth - radius, inputY + inputHeight / 2, radius);
-        ctx.lineTo(inputX + radius, inputY + inputHeight / 2);
-        ctx.arcTo(inputX, inputY + inputHeight / 2, inputX, inputY, radius);
-        ctx.arcTo(inputX, inputY - inputHeight / 2, inputX + radius, inputY - inputHeight / 2, radius);
-        ctx.closePath();
-
-        ctx.fillStyle = 'rgba(255, 255, 255, 0.88)';
-        ctx.fill();
-
-        // 테두리 (입력이 있으면 accent 색상)
-        if (this.currentInput) {
-            ctx.strokeStyle = 'rgba(233, 30, 140, 0.55)';
-            ctx.lineWidth = 2;
-        } else {
-            ctx.strokeStyle = 'rgba(160, 100, 200, 0.28)';
-            ctx.lineWidth = 1.5;
-        }
-        ctx.stroke();
-
-        // 입력 텍스트
-        ctx.textAlign = 'center';
-        ctx.textBaseline = 'middle';
-
-        if (this.currentInput) {
-            ctx.font = `bold ${CONFIG.RENDER.INPUT_FONT_SIZE}px ${CONFIG.RENDER.FONT_FAMILY}`;
-            ctx.fillStyle = '#1a1040';
-            ctx.fillText(this.currentInput, W / 2, inputY);
-        } else {
-            ctx.font = `${CONFIG.RENDER.INPUT_FONT_SIZE - 4}px ${CONFIG.RENDER.FONT_FAMILY}`;
-            ctx.fillStyle = 'rgba(155, 138, 176, 0.7)';
-            const mode = this.state.mode;
-            const placeholder = (mode === 'es-to-ko' || mode === 'ko-to-es')
-                ? (mode === 'es-to-ko' ? '한국어로 입력하세요' : 'Escribe en español')
-                : (mode === 'es-to-en' ? 'Type in English' : 'Escribe en español');
-            ctx.fillText(placeholder, W / 2, inputY);
-        }
-    },
-
     /**
      * 피드백 메시지 렌더링
      */

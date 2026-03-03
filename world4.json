@@ -2729,6 +2729,63 @@
     },
     {
       "stage": 33,
+      "type": "learning",
+      "category": "에피소드 3 · 복습 세트",
+      "words": [
+        {
+          "es": "calabaza",
+          "ko": "호박",
+          "en": "pumpkin"
+        },
+        {
+          "es": "diamante",
+          "ko": "다이아몬드",
+          "en": "diamond"
+        },
+        {
+          "es": "mineral",
+          "ko": "광물",
+          "en": "mineral"
+        },
+        {
+          "es": "órbita",
+          "ko": "궤도",
+          "en": "orbit"
+        },
+        {
+          "es": "biodiversidad",
+          "ko": "생물 다양성",
+          "en": "biodiversity"
+        },
+        {
+          "es": "capa de ozono",
+          "ko": "오존층",
+          "en": "ozone layer"
+        },
+        {
+          "es": "deslizamiento",
+          "ko": "산사태",
+          "en": "landslide"
+        },
+        {
+          "es": "fertilizante",
+          "ko": "비료",
+          "en": "fertilizer"
+        },
+        {
+          "es": "pastoreo",
+          "ko": "목축",
+          "en": "livestock grazing"
+        },
+        {
+          "es": "regar",
+          "ko": "물을 주다",
+          "en": "to water"
+        }
+      ]
+    },
+    {
+      "stage": 34,
       "category": "에피소드 3 보스 · 누적 복습",
       "type": "boss",
       "words": [

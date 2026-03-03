@@ -2729,6 +2729,63 @@
     },
     {
       "stage": 33,
+      "type": "learning",
+      "category": "에피소드 3 · 복습 세트",
+      "words": [
+        {
+          "es": "mareo",
+          "ko": "어지러움",
+          "en": "dizziness"
+        },
+        {
+          "es": "tratamiento",
+          "ko": "치료",
+          "en": "treatment"
+        },
+        {
+          "es": "abogado",
+          "ko": "변호사",
+          "en": "lawyer"
+        },
+        {
+          "es": "periodista",
+          "ko": "기자",
+          "en": "journalist"
+        },
+        {
+          "es": "diseñador",
+          "ko": "디자이너",
+          "en": "designer"
+        },
+        {
+          "es": "voluntad",
+          "ko": "의지",
+          "en": "will"
+        },
+        {
+          "es": "honradez",
+          "ko": "정직",
+          "en": "honesty"
+        },
+        {
+          "es": "hablar",
+          "ko": "말하다",
+          "en": "to speak"
+        },
+        {
+          "es": "prometer",
+          "ko": "약속하다",
+          "en": "to promise"
+        },
+        {
+          "es": "respetar",
+          "ko": "존중하다",
+          "en": "to respect"
+        }
+      ]
+    },
+    {
+      "stage": 34,
       "category": "에피소드 3 보스 · 누적 복습",
       "type": "boss",
       "words": [
