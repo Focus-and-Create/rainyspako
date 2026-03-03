@@ -2729,6 +2729,63 @@
     },
     {
       "stage": 33,
+      "type": "learning",
+      "category": "에피소드 3 · 복습 세트",
+      "words": [
+        {
+          "es": "toalla",
+          "ko": "수건",
+          "en": "towel"
+        },
+        {
+          "es": "tienda de campaña",
+          "ko": "텐트",
+          "en": "tent"
+        },
+        {
+          "es": "fuegos artificiales",
+          "ko": "불꽃놀이",
+          "en": "fireworks"
+        },
+        {
+          "es": "decoración",
+          "ko": "장식",
+          "en": "decoration"
+        },
+        {
+          "es": "vestuario",
+          "ko": "무대 의상",
+          "en": "wardrobe"
+        },
+        {
+          "es": "ópera",
+          "ko": "오페라",
+          "en": "opera"
+        },
+        {
+          "es": "cerámica",
+          "ko": "도자기",
+          "en": "ceramics"
+        },
+        {
+          "es": "hashtag",
+          "ko": "해시태그",
+          "en": "hashtag"
+        },
+        {
+          "es": "cantar",
+          "ko": "노래하다",
+          "en": "to sing"
+        },
+        {
+          "es": "leer",
+          "ko": "읽다",
+          "en": "to read"
+        }
+      ]
+    },
+    {
+      "stage": 34,
       "category": "에피소드 3 보스 · 누적 복습",
       "type": "boss",
       "words": [

@@ -2729,6 +2729,63 @@
     },
     {
       "stage": 33,
+      "type": "learning",
+      "category": "에피소드 3 · 복습 세트",
+      "words": [
+        {
+          "es": "ocio",
+          "ko": "여가",
+          "en": "leisure"
+        },
+        {
+          "es": "pradera",
+          "ko": "초원",
+          "en": "prairie"
+        },
+        {
+          "es": "paisaje",
+          "ko": "풍경",
+          "en": "landscape"
+        },
+        {
+          "es": "acero",
+          "ko": "철강",
+          "en": "steel"
+        },
+        {
+          "es": "sendero",
+          "ko": "오솔길",
+          "en": "trail"
+        },
+        {
+          "es": "cinturón de seguridad",
+          "ko": "안전벨트",
+          "en": "seatbelt"
+        },
+        {
+          "es": "volante",
+          "ko": "핸들",
+          "en": "steering wheel"
+        },
+        {
+          "es": "depósito",
+          "ko": "보증금",
+          "en": "deposit"
+        },
+        {
+          "es": "casa",
+          "ko": "집",
+          "en": "house"
+        },
+        {
+          "es": "vivienda social",
+          "ko": "공공 주택",
+          "en": "social housing"
+        }
+      ]
+    },
+    {
+      "stage": 34,
       "category": "에피소드 3 보스 · 누적 복습",
       "type": "boss",
       "words": [

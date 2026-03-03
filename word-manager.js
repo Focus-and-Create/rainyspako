@@ -272,8 +272,8 @@ const WordManager = {
      */
     isBossStage: function(worldId, stageNum) {
         const stageData = this.getStageData(worldId, stageNum);
-        if (stageData?.type === 'boss') {
-            return true;
+        if (stageData) {
+            return stageData.type === 'boss';
         }
 
         return stageNum % CONFIG.REVIEW.REVIEW_STAGE_INTERVAL === 0;

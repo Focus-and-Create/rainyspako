@@ -2729,6 +2729,63 @@
     },
     {
       "stage": 33,
+      "type": "learning",
+      "category": "에피소드 3 · 복습 세트",
+      "words": [
+        {
+          "es": "reparar",
+          "ko": "수리하다",
+          "en": "to repair"
+        },
+        {
+          "es": "bolígrafo",
+          "ko": "볼펜",
+          "en": "pen"
+        },
+        {
+          "es": "mochila",
+          "ko": "배낭",
+          "en": "backpack"
+        },
+        {
+          "es": "trueno",
+          "ko": "천둥",
+          "en": "thunder"
+        },
+        {
+          "es": "número",
+          "ko": "번호",
+          "en": "number"
+        },
+        {
+          "es": "señal",
+          "ko": "신호",
+          "en": "signal"
+        },
+        {
+          "es": "código postal",
+          "ko": "우편번호",
+          "en": "zip code"
+        },
+        {
+          "es": "lavandería",
+          "ko": "세탁소",
+          "en": "laundromat"
+        },
+        {
+          "es": "biblioteca",
+          "ko": "도서관",
+          "en": "library"
+        },
+        {
+          "es": "robo",
+          "ko": "도둑질",
+          "en": "robbery"
+        }
+      ]
+    },
+    {
+      "stage": 34,
       "category": "에피소드 3 보스 · 누적 복습",
       "type": "boss",
       "words": [

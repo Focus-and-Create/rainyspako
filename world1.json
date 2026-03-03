@@ -2729,6 +2729,63 @@
     },
     {
       "stage": 33,
+      "type": "learning",
+      "category": "에피소드 3 · 복습 세트",
+      "words": [
+        {
+          "es": "mientras",
+          "ko": "~하는 동안",
+          "en": "while"
+        },
+        {
+          "es": "lunes",
+          "ko": "월요일",
+          "en": "Monday"
+        },
+        {
+          "es": "esta semana",
+          "ko": "이번 주",
+          "en": "this week"
+        },
+        {
+          "es": "septiembre",
+          "ko": "9월",
+          "en": "September"
+        },
+        {
+          "es": "hija",
+          "ko": "딸",
+          "en": "daughter"
+        },
+        {
+          "es": "esposa",
+          "ko": "아내",
+          "en": "wife"
+        },
+        {
+          "es": "pie",
+          "ko": "발",
+          "en": "foot"
+        },
+        {
+          "es": "me llamo",
+          "ko": "제 이름은",
+          "en": "my name is"
+        },
+        {
+          "es": "no importa",
+          "ko": "상관없어요",
+          "en": "it doesn't matter"
+        },
+        {
+          "es": "siempre",
+          "ko": "항상",
+          "en": "always"
+        }
+      ]
+    },
+    {
+      "stage": 34,
       "category": "에피소드 3 보스 · 누적 복습",
       "type": "boss",
       "words": [

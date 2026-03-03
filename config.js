@@ -19,16 +19,16 @@ const CONFIG = {
     // 월드 설정
     // =========================================
     WORLDS: [
-        { id: 1,  name: 'Supervivencia',  nameKo: '생존·기초기능어', stages: 33, baseSpeed: 0.3,  speedIncrement: 0.015, color: '#4a9c6d' },
-        { id: 2,  name: 'Personas',       nameKo: '사람·가족',      stages: 33, baseSpeed: 0.35, speedIncrement: 0.018, color: '#c9a227' },
-        { id: 3,  name: 'Casa y Lugar',   nameKo: '집·위치',        stages: 33, baseSpeed: 0.4,  speedIncrement: 0.02,  color: '#a23b72' },
-        { id: 4,  name: 'Comida y Compra',nameKo: '음식·쇼핑',      stages: 33, baseSpeed: 0.45, speedIncrement: 0.02,  color: '#2e86ab' },
-        { id: 5,  name: 'Escuela y Trabajo', nameKo: '학교·일상동사', stages: 33, baseSpeed: 0.5,  speedIncrement: 0.022, color: '#e07a5f' },
-        { id: 6,  name: 'Ciudad y Tránsito', nameKo: '도시·교통',     stages: 33, baseSpeed: 0.55, speedIncrement: 0.022, color: '#81b29a' },
-        { id: 7,  name: 'Viaje y Problemas', nameKo: '여행·문제해결',  stages: 33, baseSpeed: 0.6,  speedIncrement: 0.025, color: '#f2cc8f' },
-        { id: 8,  name: 'Salud',          nameKo: '건강·병원',       stages: 33, baseSpeed: 0.65, speedIncrement: 0.025, color: '#6d6875' },
-        { id: 9,  name: 'Opinión y Emoción', nameKo: '취미·감정·의견', stages: 33, baseSpeed: 0.7,  speedIncrement: 0.028, color: '#e63946' },
-        { id: 10, name: 'Sociedad y Naturaleza', nameKo: '사회·자연·추상', stages: 33, baseSpeed: 0.75, speedIncrement: 0.03,  color: '#457b9d' }
+        { id: 1,  name: 'Supervivencia',  nameKo: '생존·기초기능어', stages: 34, baseSpeed: 0.3,  speedIncrement: 0.015, color: '#4a9c6d' },
+        { id: 2,  name: 'Personas',       nameKo: '사람·가족',      stages: 34, baseSpeed: 0.35, speedIncrement: 0.018, color: '#c9a227' },
+        { id: 3,  name: 'Casa y Lugar',   nameKo: '집·위치',        stages: 34, baseSpeed: 0.4,  speedIncrement: 0.02,  color: '#a23b72' },
+        { id: 4,  name: 'Comida y Compra',nameKo: '음식·쇼핑',      stages: 34, baseSpeed: 0.45, speedIncrement: 0.02,  color: '#2e86ab' },
+        { id: 5,  name: 'Escuela y Trabajo', nameKo: '학교·일상동사', stages: 34, baseSpeed: 0.5,  speedIncrement: 0.022, color: '#e07a5f' },
+        { id: 6,  name: 'Ciudad y Tránsito', nameKo: '도시·교통',     stages: 34, baseSpeed: 0.55, speedIncrement: 0.022, color: '#81b29a' },
+        { id: 7,  name: 'Viaje y Problemas', nameKo: '여행·문제해결',  stages: 34, baseSpeed: 0.6,  speedIncrement: 0.025, color: '#f2cc8f' },
+        { id: 8,  name: 'Salud',          nameKo: '건강·병원',       stages: 34, baseSpeed: 0.65, speedIncrement: 0.025, color: '#6d6875' },
+        { id: 9,  name: 'Opinión y Emoción', nameKo: '취미·감정·의견', stages: 34, baseSpeed: 0.7,  speedIncrement: 0.028, color: '#e63946' },
+        { id: 10, name: 'Sociedad y Naturaleza', nameKo: '사회·자연·추상', stages: 34, baseSpeed: 0.75, speedIncrement: 0.03,  color: '#457b9d' }
     ],
 
     // =========================================
@@ -99,8 +99,8 @@ const CONFIG = {
         TILE_SIZE: 66,                 // 보드게임 타일 크기 (px)
         TILE_GAP: 6,                   // 타일 간 간격
         TILE_RADIUS: 12,               // 타일 둥근 모서리
-        BOARD_COLS: 10,                // 보드 가로 칸 수
-        BOARD_ROWS: 7,                 // 보드 세로 칸 수
+        BOARD_COLS: 11,                // 보드 가로 칸 수
+        BOARD_ROWS: 8,                 // 보드 세로 칸 수
         TOP_Y: 80,                     // 상단 여백 (헤더 아래)
         // 보드게임 타일 컬러 팔레트 (밝고 다채로운 파스텔톤)
         TILE_COLORS: [

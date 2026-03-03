@@ -2729,6 +2729,63 @@
     },
     {
       "stage": 33,
+      "type": "learning",
+      "category": "에피소드 3 · 복습 세트",
+      "words": [
+        {
+          "es": "prejuicio",
+          "ko": "편견",
+          "en": "prejudice"
+        },
+        {
+          "es": "frontera",
+          "ko": "국경",
+          "en": "border"
+        },
+        {
+          "es": "educación",
+          "ko": "교육",
+          "en": "education"
+        },
+        {
+          "es": "beca",
+          "ko": "장학금",
+          "en": "scholarship"
+        },
+        {
+          "es": "paciente",
+          "ko": "환자",
+          "en": "patient"
+        },
+        {
+          "es": "farmacia",
+          "ko": "약국",
+          "en": "pharmacy"
+        },
+        {
+          "es": "superpotencia",
+          "ko": "강대국",
+          "en": "superpower"
+        },
+        {
+          "es": "petición",
+          "ko": "청원",
+          "en": "petition"
+        },
+        {
+          "es": "cambio social",
+          "ko": "사회 변화",
+          "en": "social change"
+        },
+        {
+          "es": "defender",
+          "ko": "방어하다",
+          "en": "to defend"
+        }
+      ]
+    },
+    {
+      "stage": 34,
       "category": "에피소드 3 보스 · 누적 복습",
       "type": "boss",
       "words": [
