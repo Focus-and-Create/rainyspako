@@ -7,5 +7,5 @@
  *
  * anon key는 공개키입니다 (RLS가 데이터를 보호합니다).
  */
-const SUPABASE_URL = 'https://YOUR_PROJECT_ID.supabase.co';
-const SUPABASE_ANON_KEY = 'YOUR_ANON_KEY';
+const SUPABASE_URL = 'https://vrlnttzegykotxjadxwf.supabase.co';
+const SUPABASE_ANON_KEY = 'sb_publishable_-vcjioVlevq7KOvnb1pX5A_WyABTPtf';
