@@ -129,7 +129,7 @@ const App = {
         Game.onGameOver = (result) => this.showResult(result, false);
         Game.onStateUpdate = (state) => this.updateGameUI(state);
 
-        // Google OAuth 버튼 표시 여부 확인 후 서버 인증 확인
+        // Supabase 인증 확인
         const user = await AuthClient.init();
         if (user) {
             // 로그인 상태: 서버 데이터 동기화 후 맵으로
@@ -138,7 +138,6 @@ const App = {
             this.showScreen('map');
         } else {
             // 미로그인: 로그인 화면
-            this._updateGoogleButton();
             this.showScreen('login');
         }
 
@@ -514,15 +513,6 @@ const App = {
         this._showLoginForm(tab);
         if (tab === 'login') setTimeout(() => this.elements.loginEmail?.focus(), 50);
         else setTimeout(() => this.elements.registerEmail?.focus(), 50);
-    },
-
-    /**
-     * Google OAuth 버튼 표시 여부 업데이트
-     */
-    _updateGoogleButton: function() {
-        if (this.elements.googleLoginBtn) {
-            this.elements.googleLoginBtn.classList.toggle('hidden', !AuthClient.isGoogleEnabled());
-        }
     },
 
     /**

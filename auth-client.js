@@ -1,103 +1,102 @@
 /**
  * auth-client.js
- * 프론트엔드 인증 클라이언트
- * 서버 API와 통신하여 로그인/회원가입/데이터 동기화 처리
+ * Supabase 기반 인증 + 데이터 동기화 클라이언트
  */
 
 const AuthClient = {
-    /** @type {{id:number, email:string, username:string}|null} */
-    _user: null,
+    /** @type {import('@supabase/supabase-js').SupabaseClient} */
+    _sb: null,
 
-    /** @type {boolean} Google OAuth 활성화 여부 */
-    _googleEnabled: false,
+    /** @type {{id:string, email:string, username:string}|null} */
+    _user: null,
 
     // =========================================
     // 초기화
     // =========================================
 
-    /**
-     * 서버에서 현재 로그인 상태 및 설정 확인
-     * @returns {Promise<{id,email,username}|null>}
-     */
     async init() {
-        // Google OAuth 활성화 여부 확인
-        try {
-            const pRes = await fetch('/api/auth/providers');
-            if (pRes.ok) {
-                const { google } = await pRes.json();
-                this._googleEnabled = !!google;
-            }
-        } catch { /* ignore */ }
+        // Supabase 클라이언트 생성
+        this._sb = supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
 
-        // 현재 세션 확인
-        return this.fetchMe();
+        // 기존 세션 확인
+        const { data: { session } } = await this._sb.auth.getSession();
+        if (session?.user) {
+            await this._loadUserProfile(session.user);
+        }
+
+        // 인증 상태 변경 리스너
+        this._sb.auth.onAuthStateChange(async (event, session) => {
+            if (event === 'SIGNED_OUT') {
+                this._user = null;
+            }
+        });
+
+        return this._user;
     },
 
     /**
-     * /api/auth/me 로 현재 유저 확인
+     * auth.users에서 user_profiles 닉네임을 가져와 _user에 세팅
      */
-    async fetchMe() {
-        try {
-            const res = await fetch('/api/auth/me');
-            if (!res.ok) { this._user = null; return null; }
-            const { user } = await res.json();
-            this._user = user;
-            return user;
-        } catch {
-            this._user = null;
-            return null;
-        }
+    async _loadUserProfile(authUser) {
+        const { data } = await this._sb
+            .from('user_profiles')
+            .select('username')
+            .eq('user_id', authUser.id)
+            .single();
+
+        this._user = {
+            id: authUser.id,
+            email: authUser.email,
+            username: data?.username || authUser.user_metadata?.full_name || authUser.email.split('@')[0]
+        };
     },
 
     // =========================================
     // 인증
     // =========================================
 
-    /**
-     * 이메일/비밀번호 로그인
-     * @throws {Error} 실패 시 한국어 에러 메시지
-     */
     async login(email, password) {
-        const res = await fetch('/api/auth/login', {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({ email, password })
-        });
-        const data = await res.json();
-        if (!res.ok) throw new Error(data.error || '로그인에 실패했습니다');
-        this._user = data.user;
-        return data.user;
+        const { data, error } = await this._sb.auth.signInWithPassword({ email, password });
+        if (error) throw new Error(this._translateError(error));
+        await this._loadUserProfile(data.user);
+        return this._user;
     },
 
-    /**
-     * 이메일/비밀번호 회원가입
-     * @throws {Error} 실패 시 한국어 에러 메시지
-     */
     async register(email, password, username) {
-        const res = await fetch('/api/auth/register', {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({ email, password, username })
+        const { data, error } = await this._sb.auth.signUp({
+            email,
+            password,
+            options: { data: { username: username || email.split('@')[0] } }
         });
-        const data = await res.json();
-        if (!res.ok) throw new Error(data.error || '회원가입에 실패했습니다');
-        this._user = data.user;
-        return data.user;
+        if (error) throw new Error(this._translateError(error));
+        if (data.user) await this._loadUserProfile(data.user);
+        return this._user;
     },
 
-    /**
-     * 로그아웃
-     */
     async logout() {
-        await fetch('/api/auth/logout', { method: 'POST' });
+        await this._sb.auth.signOut();
         this._user = null;
     },
 
+    async loginWithGoogle() {
+        const { error } = await this._sb.auth.signInWithOAuth({
+            provider: 'google',
+            options: { redirectTo: window.location.origin }
+        });
+        if (error) throw new Error(this._translateError(error));
+    },
+
     /**
-     * Google OAuth 로그인 (페이지 이동)
+     * Supabase 에러 메시지 한국어 변환
      */
-    loginWithGoogle() {
-        window.location.href = '/api/auth/google';
+    _translateError(error) {
+        const msg = error.message || '';
+        if (msg.includes('Invalid login')) return '이메일 또는 비밀번호가 올바르지 않습니다';
+        if (msg.includes('already registered')) return '이미 사용 중인 이메일입니다';
+        if (msg.includes('Password should be')) return '비밀번호는 6자 이상이어야 합니다';
+        if (msg.includes('valid email')) return '올바른 이메일 형식이 아닙니다';
+        if (msg.includes('Email not confirmed')) return '이메일 인증이 필요합니다. 받은 편지함을 확인해주세요';
+        return msg || '오류가 발생했습니다';
     },
 
     // =========================================
@@ -106,29 +105,33 @@ const AuthClient = {
 
     getUser() { return this._user; },
     isLoggedIn() { return !!this._user; },
-    isGoogleEnabled() { return this._googleEnabled; },
+    isGoogleEnabled() { return true; }, // Supabase에서 Google 설정 시 항상 사용 가능
 
     // =========================================
     // 데이터 동기화
     // =========================================
 
-    /**
-     * 로그인 후 서버 데이터를 localStorage로 복원
-     * 서버에 데이터가 없고 로컬에 데이터가 있으면 서버로 마이그레이션
-     */
     async syncAfterLogin() {
-        try {
-            const res = await fetch('/api/user/data');
-            if (!res.ok) return;
-            const { stageResults, stats, jumpUsage } = await res.json();
+        if (!this._user) return;
+        const userId = this._user.id;
 
-            const hasServerData = stageResults?.length > 0 || stats !== null;
+        try {
+            // 서버 데이터 조회
+            const [stageRes, statsRes, jumpRes] = await Promise.all([
+                this._sb.from('stage_results').select('*').eq('user_id', userId),
+                this._sb.from('user_stats').select('*').eq('user_id', userId).single(),
+                this._sb.from('jump_usage').select('*').eq('user_id', userId).single()
+            ]);
+
+            const stageResults = stageRes.data || [];
+            const stats = statsRes.data;
+            const jumpUsage = jumpRes.data;
+
+            const hasServerData = stageResults.length > 0 || !!stats;
 
             if (!hasServerData) {
-                // 첫 로그인: 로컬 데이터를 서버로 마이그레이션
-                await this._migrateLocalToServer();
+                await this._migrateLocalToServer(userId);
             } else {
-                // 기존 계정: 서버 데이터를 로컬로 복원
                 this._restoreToLocalStorage(stageResults, stats, jumpUsage);
             }
 
@@ -141,10 +144,7 @@ const AuthClient = {
         }
     },
 
-    /**
-     * 로컬 데이터를 서버로 업로드 (첫 로그인 마이그레이션)
-     */
-    async _migrateLocalToServer() {
+    async _migrateLocalToServer(userId) {
         const stageResults = this._collectLocalStageResults();
         const rawStats = localStorage.getItem('stats');
         const stats = rawStats ? JSON.parse(rawStats) : null;
@@ -153,23 +153,50 @@ const AuthClient = {
         const rawWrong = localStorage.getItem('wrongWords');
         const wrongWords = rawWrong ? JSON.parse(rawWrong) : [];
 
-        if (stageResults.length === 0 && !stats) return; // 로컬 데이터 없음
+        if (stageResults.length === 0 && !stats) return;
 
         try {
-            await fetch('/api/user/migrate', {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({ stageResults, stats, jumpUsage, wrongWords })
-            });
+            // 스테이지 결과 마이그레이션
+            if (stageResults.length > 0) {
+                const rows = stageResults.map(r => ({
+                    user_id: userId,
+                    stage_id: r.stageId,
+                    stars: r.stars,
+                    best_score: r.bestScore,
+                    last_accuracy: r.lastAccuracy
+                }));
+                await this._sb.from('stage_results').upsert(rows);
+            }
+
+            // 통계 마이그레이션
+            if (stats) {
+                await this._sb.from('user_stats').upsert({
+                    user_id: userId,
+                    total_games: stats.totalGames || 0,
+                    total_score: stats.totalScore || 0,
+                    total_correct: stats.totalCorrect || 0,
+                    total_wrong: stats.totalWrong || 0,
+                    current_streak: stats.currentStreak || 0,
+                    last_played: stats.lastPlayDate || null,
+                    wrong_words: wrongWords
+                });
+            }
+
+            // 점프 마이그레이션
+            if (jumpUsage) {
+                await this._sb.from('jump_usage').upsert({
+                    user_id: userId,
+                    used_today: jumpUsage.usedToday || 0,
+                    last_date: jumpUsage.lastDate || ''
+                });
+            }
+
             console.log('AuthClient: 로컬 데이터 마이그레이션 완료');
         } catch (err) {
             console.warn('AuthClient: 마이그레이션 실패', err);
         }
     },
 
-    /**
-     * localStorage에서 스테이지 결과 수집
-     */
     _collectLocalStageResults() {
         const results = [];
         for (let i = 0; i < localStorage.length; i++) {
@@ -189,11 +216,7 @@ const AuthClient = {
         return results;
     },
 
-    /**
-     * 서버 데이터를 localStorage로 복원
-     */
     _restoreToLocalStorage(stageResults, stats, jumpUsage) {
-        // 스테이지 결과 복원
         if (stageResults?.length) {
             stageResults.forEach(r => {
                 localStorage.setItem(`stage_${r.stage_id}`, JSON.stringify({
@@ -204,7 +227,6 @@ const AuthClient = {
             });
         }
 
-        // 통계 복원
         if (stats) {
             localStorage.setItem('stats', JSON.stringify({
                 totalGames: stats.total_games,
@@ -215,11 +237,10 @@ const AuthClient = {
                 lastPlayed: stats.last_played
             }));
             if (stats.wrong_words) {
-                localStorage.setItem('wrongWords', stats.wrong_words);
+                localStorage.setItem('wrongWords', JSON.stringify(stats.wrong_words));
             }
         }
 
-        // 점프 사용 복원
         if (jumpUsage) {
             localStorage.setItem('jumpUsage', JSON.stringify({
                 usedToday: jumpUsage.used_today,
@@ -228,51 +249,58 @@ const AuthClient = {
         }
     },
 
-    /**
-     * 스테이지 결과를 서버에 비동기 저장 (fire-and-forget)
-     */
+    // =========================================
+    // Fire-and-forget 동기화 (storage.js에서 호출)
+    // =========================================
+
     syncStageResult(stageId, stars, bestScore, lastAccuracy) {
         if (!this._user) return;
-        fetch('/api/user/stage', {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({ stageId, stars, bestScore, lastAccuracy })
-        }).catch(err => console.warn('AuthClient: stage sync failed', err));
+        this._sb.from('stage_results').upsert({
+            user_id: this._user.id,
+            stage_id: stageId,
+            stars, best_score: bestScore, last_accuracy: lastAccuracy,
+            updated_at: new Date().toISOString()
+        }).then(({ error }) => {
+            if (error) console.warn('AuthClient: stage sync failed', error);
+        });
     },
 
-    /**
-     * 통계를 서버에 비동기 저장 (fire-and-forget)
-     */
     syncStats(stats, wrongWords) {
         if (!this._user) return;
-        fetch('/api/user/stats', {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({ ...stats, wrongWords })
-        }).catch(err => console.warn('AuthClient: stats sync failed', err));
+        this._sb.from('user_stats').upsert({
+            user_id: this._user.id,
+            total_games: stats.totalGames,
+            total_score: stats.totalScore,
+            total_correct: stats.totalCorrect,
+            total_wrong: stats.totalWrong,
+            current_streak: stats.currentStreak,
+            last_played: stats.lastPlayed,
+            wrong_words: wrongWords || [],
+            updated_at: new Date().toISOString()
+        }).then(({ error }) => {
+            if (error) console.warn('AuthClient: stats sync failed', error);
+        });
     },
 
-    /**
-     * 점프 사용 현황을 서버에 비동기 저장 (fire-and-forget)
-     */
     syncJumpUsage(usedToday, lastDate) {
         if (!this._user) return;
-        fetch('/api/user/jump', {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({ usedToday, lastDate })
-        }).catch(err => console.warn('AuthClient: jump sync failed', err));
+        this._sb.from('jump_usage').upsert({
+            user_id: this._user.id,
+            used_today: usedToday,
+            last_date: lastDate
+        }).then(({ error }) => {
+            if (error) console.warn('AuthClient: jump sync failed', error);
+        });
     },
 
-    /**
-     * 닉네임을 서버에 비동기 저장 (fire-and-forget)
-     */
     syncProfile(username) {
         if (!this._user) return;
-        fetch('/api/user/profile', {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({ username })
-        }).catch(err => console.warn('AuthClient: profile sync failed', err));
+        this._sb.from('user_profiles').upsert({
+            user_id: this._user.id,
+            username,
+            updated_at: new Date().toISOString()
+        }).then(({ error }) => {
+            if (error) console.warn('AuthClient: profile sync failed', error);
+        });
     }
 };
