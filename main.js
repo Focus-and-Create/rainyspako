@@ -65,6 +65,14 @@ const App = {
         usernameInput: null,
         loginBtn: null,
         loginBackBtn: null,
+        loginEmail: null,
+        loginPassword: null,
+        registerUsername: null,
+        registerEmail: null,
+        registerPassword: null,
+        registerBtn: null,
+        googleLoginBtn: null,
+        loginSubmitEditBtn: null,
 
         // 적응형 속도 배지
         slowModeBadge: null
@@ -82,23 +90,22 @@ const App = {
      */
     init: async function() {
         console.log('App: 초기화 시작');
-        
+
         // DOM 요소 참조 가져오기
         this.cacheElements();
-        
+
         // 이벤트 리스너 등록
         this.bindEvents();
-        
+
         // 스토리지 초기화
         Storage.init();
         this.applyModeSetting(Storage.getSetting('mode') || 'es-to-ko');
-        
+
         // 단어 데이터 로드
         const loaded = await WordManager.loadAll();
-        
+
         if (!loaded) {
             console.error('App: 단어 데이터 로드 실패');
-            // 로딩 화면에 에러 메시지 표시
             const loadingText = document.querySelector('.loading-text');
             if (loadingText) {
                 loadingText.textContent = '데이터 로드에 실패했습니다. 페이지를 새로고침해 주세요.';
@@ -109,25 +116,30 @@ const App = {
             }
             return;
         }
-        
+
         // 맵 초기화
         StageMap.init(this.elements.mapCanvas);
         StageMap.onStageSelect = (worldId, stageNum) => {
             this.showStageModal(worldId, stageNum);
         };
-        
+
         // 게임 초기화
         Game.init(this.elements.gameCanvas);
         Game.onStageClear = (result) => this.showResult(result, true);
         Game.onGameOver = (result) => this.showResult(result, false);
         Game.onStateUpdate = (state) => this.updateGameUI(state);
-        
-        // 프로필 확인 → 없으면 로그인 화면, 있으면 맵으로
-        const profile = Storage.getProfile();
-        if (!profile || !profile.username) {
-            this.showScreen('login');
-        } else {
+
+        // Google OAuth 버튼 표시 여부 확인 후 서버 인증 확인
+        const user = await AuthClient.init();
+        if (user) {
+            // 로그인 상태: 서버 데이터 동기화 후 맵으로
+            Storage.saveProfile({ username: user.username });
+            await AuthClient.syncAfterLogin();
             this.showScreen('map');
+        } else {
+            // 미로그인: 로그인 화면
+            this._updateGoogleButton();
+            this.showScreen('login');
         }
 
         console.log('App: 초기화 완료');
@@ -178,6 +190,14 @@ const App = {
         this.elements.usernameInput = document.getElementById('username-input');
         this.elements.loginBtn = document.getElementById('login-btn');
         this.elements.loginBackBtn = document.getElementById('login-back-btn');
+        this.elements.loginEmail = document.getElementById('login-email');
+        this.elements.loginPassword = document.getElementById('login-password');
+        this.elements.registerUsername = document.getElementById('register-username');
+        this.elements.registerEmail = document.getElementById('register-email');
+        this.elements.registerPassword = document.getElementById('register-password');
+        this.elements.registerBtn = document.getElementById('register-btn');
+        this.elements.googleLoginBtn = document.getElementById('google-login-btn');
+        this.elements.loginSubmitEditBtn = document.getElementById('login-submit-edit-btn');
 
         // 적응형 속도 배지
         this.elements.slowModeBadge = document.getElementById('slow-mode-badge');
@@ -187,26 +207,54 @@ const App = {
      * 이벤트 리스너 바인딩
      */
     bindEvents: function() {
+        // 탭 전환
+        document.getElementById('auth-tabs')?.addEventListener('click', (e) => {
+            const tab = e.target.closest('.auth-tab');
+            if (tab) this._switchAuthTab(tab.dataset.tab);
+        });
+
         // 로그인 버튼
         if (this.elements.loginBtn) {
-            this.elements.loginBtn.addEventListener('click', () => {
-                this.handleLoginSubmit();
+            this.elements.loginBtn.addEventListener('click', () => this.handleLogin());
+        }
+        // 엔터 키로 로그인
+        [this.elements.loginEmail, this.elements.loginPassword].forEach(el => {
+            el?.addEventListener('keydown', (e) => {
+                if (e.key === 'Enter') { e.preventDefault(); this.handleLogin(); }
+            });
+        });
+
+        // 회원가입 버튼
+        if (this.elements.registerBtn) {
+            this.elements.registerBtn.addEventListener('click', () => this.handleRegister());
+        }
+        [this.elements.registerEmail, this.elements.registerPassword].forEach(el => {
+            el?.addEventListener('keydown', (e) => {
+                if (e.key === 'Enter') { e.preventDefault(); this.handleRegister(); }
+            });
+        });
+
+        // Google 로그인 버튼
+        if (this.elements.googleLoginBtn) {
+            this.elements.googleLoginBtn.addEventListener('click', () => {
+                AuthClient.loginWithGoogle();
             });
         }
 
-        // 로그인 입력 필드 - 엔터로 제출
+        // 닉네임 변경 제출 버튼
+        if (this.elements.loginSubmitEditBtn) {
+            this.elements.loginSubmitEditBtn.addEventListener('click', () => this.handleEditName());
+        }
         if (this.elements.usernameInput) {
             this.elements.usernameInput.addEventListener('keydown', (e) => {
-                if (e.key === 'Enter') {
-                    e.preventDefault();
-                    this.handleLoginSubmit();
-                }
+                if (e.key === 'Enter') { e.preventDefault(); this.handleEditName(); }
             });
         }
 
-        // 로그인 화면 돌아가기 버튼
+        // 돌아가기 버튼
         if (this.elements.loginBackBtn) {
             this.elements.loginBackBtn.addEventListener('click', () => {
+                this._loginIsEditing = false;
                 this.showScreen('map');
             });
         }
@@ -404,15 +452,18 @@ const App = {
 
             case 'login':
                 this.elements.loginScreen?.classList.remove('hidden');
-                if (!this._loginIsEditing) {
-                    // 기본 상태로 초기화
-                    const subtitle = document.getElementById('login-subtitle');
-                    if (subtitle) subtitle.textContent = '스페인어 단어 비를 피해라!';
-                    const btn = this.elements.loginBtn;
-                    if (btn) btn.textContent = '시작하기';
-                    this.elements.loginBackBtn?.classList.add('hidden');
+                if (this._loginIsEditing) {
+                    // 닉네임 변경 모드
+                    this._showLoginForm('edit');
+                    const profile = Storage.getProfile();
+                    if (this.elements.usernameInput) {
+                        this.elements.usernameInput.value = profile?.username || '';
+                    }
+                    setTimeout(() => this.elements.usernameInput?.focus(), 80);
+                } else {
+                    this._showLoginForm('login');
+                    setTimeout(() => this.elements.loginEmail?.focus(), 80);
                 }
-                setTimeout(() => this.elements.usernameInput?.focus(), 80);
                 break;
 
             case 'map':
@@ -443,19 +494,93 @@ const App = {
     // =========================================
 
     /**
-     * 로그인 폼 제출 처리
+     * 로그인 폼 표시 전환 (login | register | edit)
      */
-    handleLoginSubmit: function() {
+    _showLoginForm: function(mode) {
+        document.getElementById('form-login')?.classList.toggle('hidden', mode !== 'login');
+        document.getElementById('form-register')?.classList.toggle('hidden', mode !== 'register');
+        document.getElementById('form-edit-name')?.classList.toggle('hidden', mode !== 'edit');
+        document.getElementById('auth-tabs')?.classList.toggle('hidden', mode === 'edit');
+
+        // 탭 active 상태 동기화
+        document.getElementById('tab-login')?.classList.toggle('active', mode === 'login');
+        document.getElementById('tab-register')?.classList.toggle('active', mode === 'register');
+    },
+
+    /**
+     * 탭 전환
+     */
+    _switchAuthTab: function(tab) {
+        this._showLoginForm(tab);
+        if (tab === 'login') setTimeout(() => this.elements.loginEmail?.focus(), 50);
+        else setTimeout(() => this.elements.registerEmail?.focus(), 50);
+    },
+
+    /**
+     * Google OAuth 버튼 표시 여부 업데이트
+     */
+    _updateGoogleButton: function() {
+        if (this.elements.googleLoginBtn) {
+            this.elements.googleLoginBtn.classList.toggle('hidden', !AuthClient.isGoogleEnabled());
+        }
+    },
+
+    /**
+     * 이메일/비밀번호 로그인 처리
+     */
+    handleLogin: async function() {
+        const email = this.elements.loginEmail?.value.trim();
+        const password = this.elements.loginPassword?.value;
+        const errorEl = document.getElementById('login-error');
+
+        if (errorEl) errorEl.classList.add('hidden');
+        if (this.elements.loginBtn) this.elements.loginBtn.disabled = true;
+
+        try {
+            const user = await AuthClient.login(email, password);
+            Storage.saveProfile({ username: user.username });
+            await AuthClient.syncAfterLogin();
+            this.showScreen('map');
+        } catch (err) {
+            if (errorEl) { errorEl.textContent = err.message; errorEl.classList.remove('hidden'); }
+        } finally {
+            if (this.elements.loginBtn) this.elements.loginBtn.disabled = false;
+        }
+    },
+
+    /**
+     * 회원가입 처리
+     */
+    handleRegister: async function() {
+        const username = this.elements.registerUsername?.value.trim();
+        const email = this.elements.registerEmail?.value.trim();
+        const password = this.elements.registerPassword?.value;
+        const errorEl = document.getElementById('register-error');
+
+        if (errorEl) errorEl.classList.add('hidden');
+        if (this.elements.registerBtn) this.elements.registerBtn.disabled = true;
+
+        try {
+            const user = await AuthClient.register(email, password, username);
+            Storage.saveProfile({ username: user.username });
+            await AuthClient.syncAfterLogin();
+            this.showScreen('map');
+        } catch (err) {
+            if (errorEl) { errorEl.textContent = err.message; errorEl.classList.remove('hidden'); }
+        } finally {
+            if (this.elements.registerBtn) this.elements.registerBtn.disabled = false;
+        }
+    },
+
+    /**
+     * 닉네임 변경 처리
+     */
+    handleEditName: async function() {
         const input = this.elements.usernameInput;
-        const raw = input ? input.value.trim() : '';
-        const username = raw || 'Player';
+        const username = input ? (input.value.trim() || 'Player') : 'Player';
 
-        Storage.saveProfile({ username });
-
-        // 돌아가기 버튼 숨기기
-        this.elements.loginBackBtn?.classList.add('hidden');
+        Storage.saveProfile({ username }); // localStorage + 서버 동기화
         this._loginIsEditing = false;
-
         this.showScreen('map');
     },
 
@@ -464,19 +589,6 @@ const App = {
      */
     openLoginForEdit: function() {
         this._loginIsEditing = true;
-
-        const subtitle = document.getElementById('login-subtitle');
-        const btn = this.elements.loginBtn;
-        const input = this.elements.usernameInput;
-
-        if (subtitle) subtitle.textContent = '닉네임을 변경합니다';
-        if (btn) btn.textContent = '변경하기';
-
-        const profile = Storage.getProfile();
-        if (input) input.value = profile ? (profile.username || '') : '';
-
-        this.elements.loginBackBtn?.classList.remove('hidden');
-
         this.showScreen('login');
     },
 

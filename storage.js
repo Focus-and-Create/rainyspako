@@ -116,16 +116,22 @@ const Storage = {
         const existing = progress[stageId] || {};
 
         progress[stageId] = {
-            // 별점·점수는 최고 기록 유지
             stars: Math.max(stars, existing.stars || 0),
             bestScore: Math.max(score, existing.bestScore || 0),
             clearedAt: existing.clearedAt || new Date().toISOString(),
-            // 정확도·플레이횟수는 항상 최신값으로 갱신
             lastAccuracy: (accuracy !== undefined && accuracy !== null) ? accuracy : (existing.lastAccuracy ?? null),
             playCount: (existing.playCount || 0) + 1
         };
 
-        return this._set(CONFIG.STORAGE_KEYS.PROGRESS, progress);
+        this._set(CONFIG.STORAGE_KEYS.PROGRESS, progress);
+
+        // 서버 동기화 (fire-and-forget)
+        if (typeof AuthClient !== 'undefined') {
+            const saved = progress[stageId];
+            AuthClient.syncStageResult(stageId, saved.stars, saved.bestScore, saved.lastAccuracy);
+        }
+
+        return true;
     },
     
     /**
@@ -280,6 +286,11 @@ const Storage = {
         const saved = this._set(CONFIG.STORAGE_KEYS.STAGE_JUMP, nextData);
         const remaining = Math.max(0, status.dailyLimit - nextData.used);
 
+        // 서버 동기화 (fire-and-forget)
+        if (saved && typeof AuthClient !== 'undefined') {
+            AuthClient.syncJumpUsage(nextData.used, nextData.date);
+        }
+
         return {
             success: !!saved,
             usedJump: !!saved,
@@ -416,6 +427,19 @@ const Storage = {
         
         // 저장
         this._set(CONFIG.STORAGE_KEYS.STATS, stats);
+
+        // 서버 동기화 (fire-and-forget)
+        if (typeof AuthClient !== 'undefined') {
+            const wrongWords = this._get(CONFIG.STORAGE_KEYS.WRONG_WORDS) || [];
+            AuthClient.syncStats({
+                totalGames: stats.totalGames,
+                totalScore: stats.totalScore,
+                totalCorrect: stats.totalCorrect,
+                totalWrong: stats.totalWrong,
+                currentStreak: stats.currentStreak,
+                lastPlayed: stats.lastPlayDate
+            }, wrongWords);
+        }
     },
     
     /**
@@ -482,6 +506,11 @@ const Storage = {
      */
     saveProfile: function(profile) {
         this._set(CONFIG.STORAGE_KEYS.PROFILE, profile);
+
+        // 서버 동기화 (fire-and-forget)
+        if (typeof AuthClient !== 'undefined' && profile?.username) {
+            AuthClient.syncProfile(profile.username);
+        }
     },
 
     // =========================================
