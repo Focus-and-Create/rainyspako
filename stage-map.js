@@ -596,12 +596,8 @@ const StageMap = {
                 this._renderCurrentArrow(ctx, tx + tw / 2, ty - 10);
             }
 
-            // 내용물: 번호 / 잠금 / 카테고리
+            // 내용물: 번호 / 잠금
             if (isUnlocked) {
-                // 카테고리 (주제)
-                const category = isBoss ? 'BOSS' : WordManager.getStageCategory(tile.worldId, tile.stageNum);
-                const shortCat = category.length > 5 ? category.substring(0, 5) + '..' : category;
-
                 if (isBoss) {
                     this._renderCrown(ctx, tx + tw / 2, ty + th * 0.22, 8 * sc);
                     ctx.font = `bold ${Math.round(11 * sc)}px ${CONFIG.RENDER.FONT_FAMILY}`;
@@ -615,12 +611,7 @@ const StageMap = {
                     ctx.fillStyle = textColor;
                     ctx.textAlign = 'center';
                     ctx.textBaseline = 'middle';
-                    ctx.fillText(tile.stageNum.toString(), tx + tw / 2, ty + th * 0.32);
-
-                    // 주제 텍스트 (타일 안에 작게)
-                    ctx.font = `${Math.round(8 * sc)}px ${CONFIG.RENDER.FONT_FAMILY}`;
-                    ctx.fillStyle = this._darkenColor(tileColor, 0.45);
-                    ctx.fillText(shortCat, tx + tw / 2, ty + th * 0.55);
+                    ctx.fillText(tile.stageNum.toString(), tx + tw / 2, ty + th * 0.4);
                 }
 
                 // 별점 (클리어)
@@ -643,6 +634,17 @@ const StageMap = {
                 ctx.arc(tx + tw - 6 * sc, ty + 6 * sc, 4 * sc, 0, Math.PI * 2);
                 ctx.fillStyle = perfDot;
                 ctx.fill();
+            }
+
+            // 카테고리 텍스트 (타일 바깥 아래)
+            if (isUnlocked && !isBoss) {
+                const category = WordManager.getStageCategory(tile.worldId, tile.stageNum);
+                const shortCat = category.length > 5 ? category.substring(0, 5) + '..' : category;
+                ctx.font = `bold ${Math.round(7 * sc)}px ${CONFIG.RENDER.FONT_FAMILY}`;
+                ctx.fillStyle = '#6b5b8a';
+                ctx.textAlign = 'center';
+                ctx.textBaseline = 'top';
+                ctx.fillText(shortCat, tx + tw / 2, ty + th + 3);
             }
 
             ctx.restore();
