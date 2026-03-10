@@ -185,7 +185,7 @@ const StageMap = {
         const { x, y } = this._toLogical(e);
 
         // 월드 전환 화살표
-        if (y < 70) {
+        if (y < 60) {
             if (x < 65 && this.currentWorldId > 1) { this.prevWorld(); return; }
             if (x > CONFIG.CANVAS.WIDTH - 65 && this.currentWorldId < CONFIG.WORLDS.length) { this.nextWorld(); return; }
         }
@@ -202,7 +202,7 @@ const StageMap = {
         let isOverClickable = false;
         let newHoveredIdx = -1;
 
-        if (y < 70) {
+        if (y < 60) {
             if (x < 65 && this.currentWorldId > 1) isOverClickable = true;
             if (x > CONFIG.CANVAS.WIDTH - 65 && this.currentWorldId < CONFIG.WORLDS.length) isOverClickable = true;
         }
@@ -260,7 +260,7 @@ const StageMap = {
         this.renderBoardPaths();
         this.renderTiles();
         this.renderHeaderOverlay();
-        this.renderWorldHeader(world);
+        this.renderWorldInfoHeader(world);
     },
 
     renderBackground: function(world) {
@@ -653,30 +653,90 @@ const StageMap = {
         const ctx = this.ctx;
         const W = CONFIG.CANVAS.WIDTH;
         // 배경 상단 색상(#fff9c4)에 맞춘 밝은 오버레이
-        const h = ctx.createLinearGradient(0, 0, 0, 75);
+        const h = ctx.createLinearGradient(0, 0, 0, 120);
         h.addColorStop(0,    'rgba(255, 249, 200, 0.97)');
-        h.addColorStop(0.65, 'rgba(255, 249, 200, 0.75)');
+        h.addColorStop(0.7,  'rgba(255, 249, 200, 0.80)');
         h.addColorStop(1,    'rgba(255, 249, 200, 0)');
         ctx.fillStyle = h;
-        ctx.fillRect(0, 0, W, 75);
+        ctx.fillRect(0, 0, W, 120);
     },
 
-    renderWorldHeader: function(world) {
+    renderWorldInfoHeader: function(world) {
         const ctx = this.ctx;
         const W = CONFIG.CANVAS.WIDTH;
+        const cx = W / 2;
 
-        ctx.font = `bold 18px ${CONFIG.RENDER.FONT_FAMILY}`;
-        ctx.fillStyle = world.color;
+        // 월드 아이콘 (컬러 원 + 번호)
+        const iconX = cx - 120;
+        const iconY = 36;
+        ctx.save();
+        ctx.beginPath();
+        ctx.arc(iconX, iconY, 22, 0, Math.PI * 2);
+        const iconGrad = ctx.createLinearGradient(iconX, iconY - 22, iconX, iconY + 22);
+        iconGrad.addColorStop(0, this._lightenColor(world.color, 0.2));
+        iconGrad.addColorStop(1, world.color);
+        ctx.fillStyle = iconGrad;
+        ctx.shadowColor = this._hexToRgba(world.color, 0.4);
+        ctx.shadowBlur = 12;
+        ctx.fill();
+        ctx.shadowColor = 'transparent';
+        ctx.shadowBlur = 0;
+
+        ctx.font = `bold 17px ${CONFIG.RENDER.FONT_FAMILY}`;
+        ctx.fillStyle = '#ffffff';
         ctx.textAlign = 'center';
         ctx.textBaseline = 'middle';
-        ctx.fillText(`World ${world.id}`, W / 2, 24);
+        ctx.fillText(world.id.toString(), iconX, iconY);
+        ctx.restore();
 
-        ctx.font = `11px ${CONFIG.RENDER.FONT_FAMILY}`;
+        // 월드 이름 + 한국어 부제
+        ctx.textAlign = 'left';
+        ctx.textBaseline = 'middle';
+        ctx.font = `bold 22px ${CONFIG.RENDER.FONT_FAMILY}`;
+        ctx.fillStyle = '#1a1040';
+        ctx.fillText(world.name, iconX + 32, iconY - 8);
+
+        ctx.font = `13px ${CONFIG.RENDER.FONT_FAMILY}`;
         ctx.fillStyle = '#4a3870';
-        ctx.fillText(world.nameKo, W / 2, 42);
+        ctx.fillText(world.nameKo, iconX + 32, iconY + 14);
 
-        if (this.currentWorldId > 1) this._renderArrowBtn(ctx, 35, 28, 'left');
-        if (this.currentWorldId < CONFIG.WORLDS.length) this._renderArrowBtn(ctx, W - 35, 28, 'right');
+        // 진행률
+        const totalStages = world.stages;
+        let clearedCount = 0;
+        for (let s = 1; s <= totalStages; s++) {
+            const result = Storage.getStageResult(getStageId(world.id, s));
+            if (result && result.stars > 0) clearedCount++;
+        }
+
+        // 진행률 바
+        const barW = 200;
+        const barH = 8;
+        const barX = cx + 80;
+        const barY = iconY - 4;
+
+        this._roundRect(ctx, barX, barY, barW, barH, 4);
+        ctx.fillStyle = 'rgba(160, 140, 200, 0.2)';
+        ctx.fill();
+
+        if (clearedCount > 0) {
+            const fillW = (clearedCount / totalStages) * barW;
+            this._roundRect(ctx, barX, barY, Math.max(fillW, barH), barH, 4);
+            const barGrad = ctx.createLinearGradient(barX, barY, barX + fillW, barY);
+            barGrad.addColorStop(0, world.color);
+            barGrad.addColorStop(1, this._lightenColor(world.color, 0.3));
+            ctx.fillStyle = barGrad;
+            ctx.fill();
+        }
+
+        // 진행률 텍스트
+        ctx.font = `bold 11px ${CONFIG.RENDER.FONT_FAMILY}`;
+        ctx.fillStyle = '#9b8ab0';
+        ctx.textAlign = 'center';
+        ctx.fillText(`${clearedCount} / ${totalStages}`, barX + barW / 2, barY + barH + 14);
+
+        // 월드 전환 화살표
+        if (this.currentWorldId > 1) this._renderArrowBtn(ctx, 35, iconY, 'left');
+        if (this.currentWorldId < CONFIG.WORLDS.length) this._renderArrowBtn(ctx, W - 35, iconY, 'right');
     },
 
     // =========================================

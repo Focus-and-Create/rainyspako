@@ -99,9 +99,9 @@ const CONFIG = {
         TILE_SIZE: 66,                 // 보드게임 타일 크기 (px)
         TILE_GAP: 6,                   // 타일 간 간격
         TILE_RADIUS: 12,               // 타일 둥근 모서리
-        BOARD_COLS: 11,                // 보드 가로 칸 수
-        BOARD_ROWS: 8,                 // 보드 세로 칸 수
-        TOP_Y: 80,                     // 상단 여백 (헤더 아래)
+        BOARD_COLS: 13,                // 보드 가로 칸 수
+        BOARD_ROWS: 6,                 // 보드 세로 칸 수
+        TOP_Y: 130,                    // 상단 여백 (월드 정보 헤더 아래)
         // 보드게임 타일 컬러 팔레트 (밝고 다채로운 파스텔톤)
         TILE_COLORS: [
             '#FF6B8A', '#FFB347', '#87CEEB', '#98FB98',
