@@ -163,8 +163,8 @@ const StageMap = {
             innerH: (rows - 2) * step - gap
         };
 
-        // 스크롤 (보드 아래 월드 정보 패널 공간 포함)
-        const contentHeight = startY + boardH + 30 + 130 + 30;
+        // 스크롤
+        const contentHeight = startY + boardH + 40;
         this.maxScrollY = Math.max(0, contentHeight - CONFIG.CANVAS.HEIGHT);
         this.scrollY = Math.min(this.scrollY, this.maxScrollY);
     },
@@ -259,7 +259,6 @@ const StageMap = {
         this.renderBackground(world);
         this.renderBoardPaths();
         this.renderTiles();
-        this.renderBoardCenter(world);
         this.renderHeaderOverlay();
         this.renderWorldHeader(world);
     },
