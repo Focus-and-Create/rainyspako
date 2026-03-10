@@ -163,8 +163,8 @@ const StageMap = {
             innerH: (rows - 2) * step - gap
         };
 
-        // 스크롤
-        const contentHeight = startY + boardH + 40;
+        // 스크롤 (보드 아래 월드 정보 패널 공간 포함)
+        const contentHeight = startY + boardH + 30 + 130 + 30;
         this.maxScrollY = Math.max(0, contentHeight - CONFIG.CANVAS.HEIGHT);
         this.scrollY = Math.min(this.scrollY, this.maxScrollY);
     },
@@ -303,22 +303,27 @@ const StageMap = {
     },
 
     /**
-     * 보드 가운데 영역 (월드 주제 표시)
+     * 보드 아래쪽 영역 (월드 주제 표시)
      */
     renderBoardCenter: function(world) {
         const ctx = this.ctx;
         const bi = this.boardInfo;
         if (!bi) return;
 
-        const cx = bi.innerX + bi.innerW / 2;
-        const cy = bi.innerY + bi.innerH / 2 - this.scrollY;
+        const cx = bi.startX + bi.boardW / 2;
+        const baseY = bi.startY + bi.boardH + 30 - this.scrollY;
 
-        // 가운데 배경 (살짝 밝은 톤)
+        // 배경 패널
+        const panelW = bi.boardW * 0.7;
+        const panelH = 130;
+        const panelX = cx - panelW / 2;
+        const panelY = baseY;
+
         ctx.save();
-        this._roundRect(ctx, bi.innerX, bi.innerY - this.scrollY, bi.innerW, bi.innerH, 14);
-        const centerBg = ctx.createRadialGradient(cx, cy, 20, cx, cy, bi.innerW * 0.6);
-        centerBg.addColorStop(0, 'rgba(255, 255, 255, 0.65)');
-        centerBg.addColorStop(1, 'rgba(255, 255, 255, 0.2)');
+        this._roundRect(ctx, panelX, panelY, panelW, panelH, 16);
+        const centerBg = ctx.createRadialGradient(cx, panelY + panelH / 2, 20, cx, panelY + panelH / 2, panelW * 0.5);
+        centerBg.addColorStop(0, 'rgba(255, 255, 255, 0.75)');
+        centerBg.addColorStop(1, 'rgba(255, 255, 255, 0.3)');
         ctx.fillStyle = centerBg;
         ctx.fill();
 
@@ -331,38 +336,38 @@ const StageMap = {
         ctx.restore();
 
         // 월드 아이콘 (컬러 원)
+        const iconY = panelY + 30;
         ctx.save();
         ctx.beginPath();
-        ctx.arc(cx, cy - 50, 28, 0, Math.PI * 2);
-        const iconGrad = ctx.createLinearGradient(cx, cy - 78, cx, cy - 22);
+        ctx.arc(cx - 100, iconY, 20, 0, Math.PI * 2);
+        const iconGrad = ctx.createLinearGradient(cx - 100, iconY - 20, cx - 100, iconY + 20);
         iconGrad.addColorStop(0, this._lightenColor(world.color, 0.2));
         iconGrad.addColorStop(1, world.color);
         ctx.fillStyle = iconGrad;
         ctx.shadowColor = this._hexToRgba(world.color, 0.4);
-        ctx.shadowBlur = 16;
+        ctx.shadowBlur = 12;
         ctx.fill();
         ctx.shadowColor = 'transparent';
         ctx.shadowBlur = 0;
 
         // 월드 번호
-        ctx.font = `bold 22px ${CONFIG.RENDER.FONT_FAMILY}`;
+        ctx.font = `bold 16px ${CONFIG.RENDER.FONT_FAMILY}`;
         ctx.fillStyle = '#ffffff';
         ctx.textAlign = 'center';
         ctx.textBaseline = 'middle';
-        ctx.fillText(world.id.toString(), cx, cy - 50);
+        ctx.fillText(world.id.toString(), cx - 100, iconY);
         ctx.restore();
 
-        // 월드 이름
-        ctx.font = `bold 24px ${CONFIG.RENDER.FONT_FAMILY}`;
-        ctx.fillStyle = '#1a1040';
-        ctx.textAlign = 'center';
+        // 월드 이름 + 한국어 부제
+        ctx.textAlign = 'left';
         ctx.textBaseline = 'middle';
-        ctx.fillText(world.name, cx, cy - 5);
+        ctx.font = `bold 20px ${CONFIG.RENDER.FONT_FAMILY}`;
+        ctx.fillStyle = '#1a1040';
+        ctx.fillText(world.name, cx - 70, iconY - 8);
 
-        // 한국어 부제
-        ctx.font = `14px ${CONFIG.RENDER.FONT_FAMILY}`;
+        ctx.font = `13px ${CONFIG.RENDER.FONT_FAMILY}`;
         ctx.fillStyle = '#4a3870';
-        ctx.fillText(world.nameKo, cx, cy + 22);
+        ctx.fillText(world.nameKo, cx - 70, iconY + 14);
 
         // 진행률
         const totalStages = world.stages;
@@ -373,10 +378,10 @@ const StageMap = {
         }
 
         // 진행률 바
-        const barW = 140;
+        const barW = panelW - 40;
         const barH = 8;
-        const barX = cx - barW / 2;
-        const barY = cy + 50;
+        const barX = panelX + 20;
+        const barY = panelY + panelH - 40;
 
         // 배경
         this._roundRect(ctx, barX, barY, barW, barH, 4);
@@ -399,10 +404,6 @@ const StageMap = {
         ctx.fillStyle = '#9b8ab0';
         ctx.textAlign = 'center';
         ctx.fillText(`${clearedCount} / ${totalStages}`, cx, barY + barH + 16);
-
-        // 주사위 아이콘 (장식)
-        this._renderDice(ctx, cx - 80, cy + 45);
-        this._renderDice(ctx, cx + 68, cy + 45);
     },
 
     /**
@@ -596,8 +597,12 @@ const StageMap = {
                 this._renderCurrentArrow(ctx, tx + tw / 2, ty - 10);
             }
 
-            // 내용물: 번호 / 잠금
+            // 내용물: 번호 / 잠금 / 카테고리
             if (isUnlocked) {
+                // 카테고리 (주제)
+                const category = isBoss ? 'BOSS' : WordManager.getStageCategory(tile.worldId, tile.stageNum);
+                const shortCat = category.length > 5 ? category.substring(0, 5) + '..' : category;
+
                 if (isBoss) {
                     this._renderCrown(ctx, tx + tw / 2, ty + th * 0.22, 8 * sc);
                     ctx.font = `bold ${Math.round(11 * sc)}px ${CONFIG.RENDER.FONT_FAMILY}`;
@@ -611,7 +616,12 @@ const StageMap = {
                     ctx.fillStyle = textColor;
                     ctx.textAlign = 'center';
                     ctx.textBaseline = 'middle';
-                    ctx.fillText(tile.stageNum.toString(), tx + tw / 2, ty + th * 0.4);
+                    ctx.fillText(tile.stageNum.toString(), tx + tw / 2, ty + th * 0.32);
+
+                    // 주제 텍스트 (타일 안에 작게)
+                    ctx.font = `${Math.round(8 * sc)}px ${CONFIG.RENDER.FONT_FAMILY}`;
+                    ctx.fillStyle = this._darkenColor(tileColor, 0.45);
+                    ctx.fillText(shortCat, tx + tw / 2, ty + th * 0.55);
                 }
 
                 // 별점 (클리어)
@@ -634,17 +644,6 @@ const StageMap = {
                 ctx.arc(tx + tw - 6 * sc, ty + 6 * sc, 4 * sc, 0, Math.PI * 2);
                 ctx.fillStyle = perfDot;
                 ctx.fill();
-            }
-
-            // 카테고리 텍스트 (타일 바깥 아래)
-            if (isUnlocked && !isBoss) {
-                const category = WordManager.getStageCategory(tile.worldId, tile.stageNum);
-                const shortCat = category.length > 5 ? category.substring(0, 5) + '..' : category;
-                ctx.font = `bold ${Math.round(7 * sc)}px ${CONFIG.RENDER.FONT_FAMILY}`;
-                ctx.fillStyle = '#6b5b8a';
-                ctx.textAlign = 'center';
-                ctx.textBaseline = 'top';
-                ctx.fillText(shortCat, tx + tw / 2, ty + th + 3);
             }
 
             ctx.restore();
