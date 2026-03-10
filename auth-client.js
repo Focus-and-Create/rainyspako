@@ -81,7 +81,7 @@ const AuthClient = {
     async loginWithGoogle() {
         const { error } = await this._sb.auth.signInWithOAuth({
             provider: 'google',
-            options: { redirectTo: window.location.origin }
+            options: { redirectTo: window.location.href.split('?')[0].split('#')[0] }
         });
         if (error) throw new Error(this._translateError(error));
     },
