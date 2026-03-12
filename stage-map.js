@@ -463,7 +463,7 @@ const StageMap = {
     },
 
     /**
-     * 타일 렌더링
+     * 타일 렌더링 (2-패스: 본체 → 배지/오버레이)
      */
     renderTiles: function() {
         const ctx = this.ctx;
@@ -471,9 +471,13 @@ const StageMap = {
         const tileSize = CONFIG.MAP.TILE_SIZE;
         const radius = CONFIG.MAP.TILE_RADIUS;
 
+        // 타일 데이터를 미리 계산 (2패스에서 재사용)
+        const tileData = [];
+
+        // ── 1패스: 타일 본체 + 내부 콘텐츠 ──
         this.tilePositions.forEach((tile, idx) => {
             const drawY = tile.y - this.scrollY;
-            if (drawY < -tileSize - 10 || drawY > CONFIG.CANVAS.HEIGHT + 10) return;
+            if (drawY < -tileSize - 20 || drawY > CONFIG.CANVAS.HEIGHT + 20) return;
 
             const isUnlocked = Storage.isStageUnlocked(tile.worldId, tile.stageNum);
             const stageId = getStageId(tile.worldId, tile.stageNum);
@@ -534,6 +538,9 @@ const StageMap = {
             const tw = tileSize * sc;
             const th = tileSize * sc;
 
+            // 2패스용 데이터 저장
+            tileData.push({ tile, tx, ty, tw, th, sc, isUnlocked, isCurrent, isLast, isBoss, isCleared, isHovered, tileColor, perfDot, result });
+
             // 그림자
             if (isUnlocked) {
                 ctx.shadowColor = isCurrent ? 'rgba(255,215,0,0.5)' : 'rgba(0,0,0,0.3)';
@@ -583,19 +590,6 @@ const StageMap = {
                 ctx.restore();
             }
 
-            // START / GOAL 배지
-            if (tile.stageNum === 1) {
-                this._renderBadgeLabel(ctx, tx + tw / 2, ty - 8, 'START', '#10b981', '#059669');
-            }
-            if (isLast) {
-                this._renderBadgeLabel(ctx, tx + tw / 2, ty - 8, 'GOAL', '#f59e0b', '#d97706');
-            }
-
-            // 현재 위치 화살표
-            if (isCurrent && tile.stageNum !== 1 && !isLast) {
-                this._renderCurrentArrow(ctx, tx + tw / 2, ty - 10);
-            }
-
             // 내용물: 번호 / 잠금 / 카테고리
             if (isUnlocked) {
                 // 카테고리 (주제)
@@ -632,6 +626,26 @@ const StageMap = {
                 this._renderLockIcon(ctx, tx + tw / 2, ty + th * 0.42, 9 * sc);
             }
 
+            ctx.restore();
+        });
+
+        // ── 2패스: 배지, 화살표, 도트 (항상 타일 위에 렌더링) ──
+        tileData.forEach(d => {
+            const { tile, tx, ty, tw, th, sc, isUnlocked, isCurrent, isLast, isBoss, isCleared, perfDot } = d;
+
+            // START / GOAL 배지
+            if (tile.stageNum === 1) {
+                this._renderBadgeLabel(ctx, tx + tw / 2, ty - 8, 'START', '#10b981', '#059669');
+            }
+            if (isLast) {
+                this._renderBadgeLabel(ctx, tx + tw / 2, ty - 8, 'GOAL', '#f59e0b', '#d97706');
+            }
+
+            // 현재 위치 화살표
+            if (isCurrent && tile.stageNum !== 1 && !isLast) {
+                this._renderCurrentArrow(ctx, tx + tw / 2, ty - 10);
+            }
+
             // 보스 배지
             if (isBoss && isUnlocked) {
                 this._renderSmallBadge(ctx, tx + 5, ty + 5, 'B', '#fbbf24', '#f59e0b');
@@ -644,8 +658,6 @@ const StageMap = {
                 ctx.fillStyle = perfDot;
                 ctx.fill();
             }
-
-            ctx.restore();
         });
     },
 
@@ -760,17 +772,29 @@ const StageMap = {
     _renderBadgeLabel: function(ctx, x, y, text, c1, c2) {
         ctx.save();
         ctx.font = `bold 9px ${CONFIG.RENDER.FONT_FAMILY}`;
-        const tw = ctx.measureText(text).width + 12;
-        const th = 16;
+        const tw = ctx.measureText(text).width + 14;
+        const th = 17;
+
+        // 흰색 배경 테두리 (가독성 확보)
+        ctx.shadowColor = 'rgba(0,0,0,0.2)';
+        ctx.shadowBlur = 4;
+        ctx.shadowOffsetY = 1;
+        this._roundRect(ctx, x - tw / 2 - 1, y - th / 2 - 1, tw + 2, th + 2, 9);
+        ctx.fillStyle = '#ffffff';
+        ctx.fill();
+        ctx.shadowColor = 'transparent';
+        ctx.shadowBlur = 0;
+        ctx.shadowOffsetY = 0;
+
+        // 컬러 배지
         this._roundRect(ctx, x - tw / 2, y - th / 2, tw, th, 8);
         const g = ctx.createLinearGradient(x - tw / 2, y, x + tw / 2, y);
         g.addColorStop(0, c1);
         g.addColorStop(1, c2);
         ctx.fillStyle = g;
         ctx.fill();
-        ctx.strokeStyle = 'rgba(255,255,255,0.3)';
-        ctx.lineWidth = 1;
-        ctx.stroke();
+
+        // 텍스트
         ctx.fillStyle = '#fff';
         ctx.textAlign = 'center';
         ctx.textBaseline = 'middle';
