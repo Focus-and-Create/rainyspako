@@ -36,7 +36,7 @@ const App = {
         // 캔버스
         mapCanvas: null,
         gameCanvas: null,
-        
+
         // 게임 UI
         scoreDisplay: null,
         livesDisplay: null,
@@ -44,6 +44,7 @@ const App = {
         progressBar: null,
         inputField: null,
         pauseBtn: null,
+        cardZone: null,
         
         // 결과 화면
         resultStars: null,
@@ -204,7 +205,10 @@ const App = {
         this.elements.googleLoginBtn = document.getElementById('google-login-btn');
         this.elements.loginSubmitEditBtn = document.getElementById('login-submit-edit-btn');
 
-        // 적응형 속도 배지
+        // 카드 존
+        this.elements.cardZone = document.getElementById('card-zone');
+
+        // 적응형 속도 배지 (미사용이지만 참조 유지)
         this.elements.slowModeBadge = document.getElementById('slow-mode-badge');
 
         // 짝 잇기 게임
@@ -719,7 +723,6 @@ const App = {
      * @param {number} stageNum
      */
     enterStage: function(worldId, stageNum) {
-        this.populateWordPanels(worldId, stageNum);
         this.showScreen('game');
 
         if (this.elements.inputField) {
@@ -930,25 +933,9 @@ const App = {
             this.elements.progressBar.style.width = `${state.progress}%`;
         }
         
-        // 입력 필드 동기화
-        if (this.elements.inputField &&
-            document.activeElement !== this.elements.inputField) {
-            this.elements.inputField.value = state.currentInput;
-        }
-
-        // 적응형 속도 배지
-        if (this.elements.slowModeBadge) {
-            const mod = state.speedModifier || 1.0;
-            if (mod < 1.0) {
-                let label;
-                if (mod <= 0.5)      label = '🐢 연습 모드 ×0.5 — 천천히 익혀봐요!';
-                else if (mod <= 0.65) label = '🐢 연습 모드 ×0.65 — 조금 더 연습!';
-                else                  label = '🐢 연습 모드 ×0.8 — 거의 다 왔어요!';
-                this.elements.slowModeBadge.textContent = label;
-                this.elements.slowModeBadge.classList.remove('hidden');
-            } else {
-                this.elements.slowModeBadge.classList.add('hidden');
-            }
+        // 입력 필드 동기화 (카드 정답 후 초기화)
+        if (this.elements.inputField && state.currentInput === '') {
+            this.elements.inputField.value = '';
         }
     },
     
