@@ -727,7 +727,6 @@ const App = {
      * @param {number} stageNum
      */
     enterStage: function(worldId, stageNum) {
-        this.populateWordPanels(worldId, stageNum);
         this.showScreen('game');
 
         if (this.elements.inputField) {
@@ -938,25 +937,9 @@ const App = {
             this.elements.progressBar.style.width = `${state.progress}%`;
         }
         
-        // 입력 필드 동기화
-        if (this.elements.inputField &&
-            document.activeElement !== this.elements.inputField) {
-            this.elements.inputField.value = state.currentInput;
-        }
-
-        // 적응형 속도 배지
-        if (this.elements.slowModeBadge) {
-            const mod = state.speedModifier || 1.0;
-            if (mod < 1.0) {
-                let label;
-                if (mod <= 0.5)       label = '🐢 연습 모드 ×0.5 — 천천히 익혀봐요!';
-                else if (mod <= 0.65) label = '🐢 연습 모드 ×0.65 — 조금 더 연습!';
-                else                  label = '🐢 연습 모드 ×0.8 — 거의 다 왔어요!';
-                this.elements.slowModeBadge.textContent = label;
-                this.elements.slowModeBadge.classList.remove('hidden');
-            } else {
-                this.elements.slowModeBadge.classList.add('hidden');
-            }
+        // 입력 필드 동기화 (카드 정답 후 초기화)
+        if (this.elements.inputField && state.currentInput === '') {
+            this.elements.inputField.value = '';
         }
     },
     
