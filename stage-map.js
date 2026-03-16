@@ -633,14 +633,6 @@ const StageMap = {
         tileData.forEach(d => {
             const { tile, tx, ty, tw, th, sc, isUnlocked, isCurrent, isLast, isBoss, isCleared, perfDot } = d;
 
-            // START / GOAL 배지
-            if (tile.stageNum === 1) {
-                this._renderBadgeLabel(ctx, tx + tw / 2, ty - 8, 'START', '#10b981', '#059669');
-            }
-            if (isLast) {
-                this._renderBadgeLabel(ctx, tx + tw / 2, ty - 8, 'GOAL', '#f59e0b', '#d97706');
-            }
-
             // 현재 위치 화살표
             if (isCurrent && tile.stageNum !== 1 && !isLast) {
                 this._renderCurrentArrow(ctx, tx + tw / 2, ty - 10);

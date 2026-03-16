@@ -61,6 +61,12 @@ const App = {
         closeModalBtn: null,
         jumpInfo: null,
 
+        // 짝 잇기 게임
+        matchModeBtn: null,
+        matchView: null,
+        mapCanvasWrap: null,
+        matchGrid: null,
+
         // 로그인 화면
         usernameInput: null,
         loginBtn: null,
@@ -200,6 +206,12 @@ const App = {
 
         // 적응형 속도 배지
         this.elements.slowModeBadge = document.getElementById('slow-mode-badge');
+
+        // 짝 잇기 게임
+        this.elements.matchModeBtn = document.getElementById('match-mode-btn');
+        this.elements.matchView = document.getElementById('match-view');
+        this.elements.mapCanvasWrap = document.getElementById('map-canvas-wrap');
+        this.elements.matchGrid = document.getElementById('match-grid');
     },
     
     /**
@@ -410,6 +422,39 @@ const App = {
                 this.hideStatsModal();
                 this.openLoginForEdit();
             });
+        }
+
+        // 짝 잇기 토글 버튼
+        if (this.elements.matchModeBtn) {
+            this.elements.matchModeBtn.addEventListener('click', () => {
+                this.toggleMatchView();
+            });
+        }
+
+        // 짝 잇기 카드 클릭 (이벤트 위임)
+        if (this.elements.matchGrid) {
+            this.elements.matchGrid.addEventListener('click', (e) => {
+                const card = e.target.closest('.mc');
+                if (card) MatchGame.handleClick(parseInt(card.dataset.idx, 10));
+            });
+        }
+    },
+
+    /** @type {boolean} 짝 잇기 뷰가 열려 있는지 */
+    _matchViewOpen: false,
+
+    toggleMatchView: function() {
+        this._matchViewOpen = !this._matchViewOpen;
+        const open = this._matchViewOpen;
+
+        this.elements.mapCanvasWrap?.classList.toggle('hidden', open);
+        this.elements.matchView?.classList.toggle('hidden', !open);
+        if (this.elements.matchModeBtn) {
+            this.elements.matchModeBtn.querySelector('span').textContent = open ? 'Map' : 'Match';
+        }
+
+        if (open) {
+            MatchGame.init(this.elements.matchGrid);
         }
     },
 
