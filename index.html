@@ -171,14 +171,29 @@
             <div id="progress-bar" class="progress-fill"></div>
         </div>
 
-        <!-- 콤보 표시 -->
-        <div id="combo-display" class="combo-display hidden"></div>
+        <!-- 연습 모드 배지 (속도 감소 시) -->
+        <div id="slow-mode-badge" class="slow-mode-badge hidden"></div>
 
-        <!-- 카드 존 -->
-        <div id="card-zone" class="card-zone">
-            <div id="card-progress" class="card-progress">1 / 18</div>
-            <div id="card-word" class="card-word"></div>
-            <div id="card-hint" class="card-hint hidden"></div>
+        <!-- 게임 본문 (단어 패널 + 캔버스) -->
+        <div class="game-body">
+            <!-- 콤보 표시 (캔버스 우상단 오버레이) -->
+            <div id="combo-display" class="combo-display hidden"></div>
+            <!-- 왼쪽 단어 참조 패널 -->
+            <div id="word-panel-left" class="word-panel">
+                <div class="word-panel-title">Words</div>
+                <div class="word-panel-list" id="word-list-left"></div>
+            </div>
+
+            <!-- 게임 캔버스 -->
+            <div class="canvas-container">
+                <canvas id="game-canvas"></canvas>
+            </div>
+
+            <!-- 오른쪽 단어 참조 패널 -->
+            <div id="word-panel-right" class="word-panel">
+                <div class="word-panel-title">Words</div>
+                <div class="word-panel-list" id="word-list-right"></div>
+            </div>
         </div>
 
         <!-- 특수문자 입력 바 -->
