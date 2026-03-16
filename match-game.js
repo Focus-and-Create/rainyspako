@@ -2,7 +2,7 @@
  * match-game.js
  * 단어 짝 잇기 미니게임
  * 4×5 카드 그리드, 스페인어↔한국어 짝 맞추기
- * 절반(5쌍) 매칭되면 새 단어로 리필
+ * 커리큘럼 순서대로 단어 출제, 절반(5쌍) 매칭되면 리필
  */
 
 const MatchGame = {
@@ -10,7 +10,7 @@ const MatchGame = {
     ROWS: 5,
     HALF: 5,       // 이 수만큼 맞추면 리필
 
-    _pool: [],         // 전체 단어 풀 (셔플됨)
+    _pool: [],         // 커리큘럼 순서 단어 풀
     _poolIdx: 0,
     _pairCounter: 0,   // 고유 pairId 발급용
 
@@ -35,26 +35,45 @@ const MatchGame = {
         this._render();
     },
 
-    /** WordManager에서 모든 단어를 수집해 셔플 */
+    /**
+     * 클리어한 스테이지의 단어를 커리큘럼 순서대로 수집
+     * 아직 하나도 안 클리어했으면 1-1 단어 사용
+     */
     _buildPool: function() {
         const words = [];
-        for (const worldId in WordManager._wordData) {
-            const stages = WordManager._wordData[worldId];
-            if (!Array.isArray(stages)) continue;
-            for (const stage of stages) {
-                if (!Array.isArray(stage.words)) continue;
-                for (const w of stage.words) {
+        let hasClearedAny = false;
+
+        for (const world of CONFIG.WORLDS) {
+            for (let s = 1; s <= world.stages; s++) {
+                const stageId = getStageId(world.id, s);
+                const result = Storage.getStageResult(stageId);
+                const cleared = result && result.stars >= 1;
+                if (!cleared) continue;
+
+                hasClearedAny = true;
+                const stageWords = WordManager.getStageWords(world.id, s);
+                for (const w of stageWords) {
                     if (w.es && w.ko) words.push({ es: w.es, ko: w.ko });
                 }
             }
         }
-        // 중복 제거 (es 기준)
+
+        // 한 스테이지도 안 클리어했으면 1-1 단어 사용
+        if (!hasClearedAny) {
+            const starter = WordManager.getStageWords(1, 1);
+            for (const w of starter) {
+                if (w.es && w.ko) words.push({ es: w.es, ko: w.ko });
+            }
+        }
+
+        // 중복 제거 (es 기준) — 커리큘럼 순서 유지
         const seen = new Set();
         const unique = [];
         for (const w of words) {
             if (!seen.has(w.es)) { seen.add(w.es); unique.push(w); }
         }
-        this._pool = this._shuffle(unique);
+
+        this._pool = unique;
         this._poolIdx = 0;
         this._pairCounter = 0;
     },
@@ -68,14 +87,12 @@ const MatchGame = {
         return a;
     },
 
-    /** 풀에서 n쌍 뽑기 (끝에 달하면 재셔플해서 순환) */
+    /** 풀에서 n쌍 뽑기 (끝에 달하면 처음부터 순환) */
     _draw: function(n) {
         const result = [];
         for (let i = 0; i < n; i++) {
-            if (this._poolIdx >= this._pool.length) {
-                this._pool = this._shuffle(this._pool);
-                this._poolIdx = 0;
-            }
+            if (this._pool.length === 0) break;
+            if (this._poolIdx >= this._pool.length) this._poolIdx = 0;
             result.push(this._pool[this._poolIdx++]);
         }
         return result;
@@ -108,7 +125,6 @@ const MatchGame = {
     _refill: function() {
         const newPairs = this._draw(this.HALF);
         const newCards = this._makePairCards(newPairs);
-        // 새 카드를 셔플 후 매칭된 슬롯에 순서대로 끼워넣기
         let ni = 0;
         for (let i = 0; i < this._cards.length; i++) {
             if (this._cards[i].matched) {
@@ -137,7 +153,7 @@ const MatchGame = {
         });
     },
 
-    /** 특정 카드 요소만 갱신 (전체 리렌더 없이) */
+    /** 특정 카드 요소만 갱신 */
     _updateCard: function(idx) {
         if (!this._container) return;
         const el = this._container.querySelector(`[data-idx="${idx}"]`);
@@ -184,7 +200,6 @@ const MatchGame = {
                 this._matchedCount++;
 
                 if (this._matchedCount >= this.HALF) {
-                    // 0.35초 후 리필 (매칭 애니메이션 끝난 뒤)
                     this._locked = true;
                     setTimeout(() => {
                         this._refill();
@@ -192,10 +207,12 @@ const MatchGame = {
                     }, 350);
                 }
             } else {
-                // 오답: 빨간 플래시 후 둘 다 선택 해제
+                // 오답: 두 카드 모두 강조 해제 + 빨간 플래시
                 this._locked = true;
                 const prevEl = this._container?.querySelector(`[data-idx="${prev}"]`);
                 const curEl = this._container?.querySelector(`[data-idx="${idx}"]`);
+                // mc-selected 제거 후 mc-wrong 표시
+                prevEl?.classList.remove('mc-selected');
                 [prevEl, curEl].forEach(el => { if (el) el.classList.add('mc-wrong'); });
                 setTimeout(() => {
                     [prevEl, curEl].forEach(el => { if (el) el.classList.remove('mc-wrong'); });
