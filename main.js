@@ -34,7 +34,7 @@ const App = {
         resultScreen: null,
         
         // 캔버스
-        mapCanvas: null,
+        stageGridWrap: null,
         gameCanvas: null,
 
         // 게임 UI
@@ -65,7 +65,7 @@ const App = {
         // 짝 잇기 게임
         matchModeBtn: null,
         matchView: null,
-        mapCanvasWrap: null,
+        stageGridContainer: null,
         matchGrid: null,
 
         // 로그인 화면
@@ -124,9 +124,9 @@ const App = {
             return;
         }
 
-        // 맵 초기화
-        StageMap.init(this.elements.mapCanvas);
-        StageMap.onStageSelect = (worldId, stageNum) => {
+        // 스테이지 그리드 초기화
+        StageGrid.init(this.elements.stageGridContainer);
+        StageGrid.onStageSelect = (worldId, stageNum) => {
             this.showStageModal(worldId, stageNum);
         };
 
@@ -162,8 +162,9 @@ const App = {
         this.elements.gameScreen = document.getElementById('game-screen');
         this.elements.resultScreen = document.getElementById('result-screen');
         
-        // 캔버스
-        this.elements.mapCanvas = document.getElementById('map-canvas');
+        // 스테이지 그리드
+        this.elements.stageGridWrap = document.getElementById('stage-grid-wrap');
+        this.elements.stageGridContainer = document.getElementById('stage-grid-container');
         this.elements.gameCanvas = document.getElementById('game-canvas');
         
         // 게임 UI
@@ -214,7 +215,6 @@ const App = {
         // 짝 잇기 게임
         this.elements.matchModeBtn = document.getElementById('match-mode-btn');
         this.elements.matchView = document.getElementById('match-view');
-        this.elements.mapCanvasWrap = document.getElementById('map-canvas-wrap');
         this.elements.matchGrid = document.getElementById('match-grid');
     },
     
@@ -455,7 +455,7 @@ const App = {
         this._matchViewOpen = !this._matchViewOpen;
         const open = this._matchViewOpen;
 
-        this.elements.mapCanvasWrap?.classList.toggle('hidden', open);
+        this.elements.stageGridWrap?.classList.toggle('hidden', open);
         this.elements.matchView?.classList.toggle('hidden', !open);
         if (this.elements.matchModeBtn) {
             this.elements.matchModeBtn.querySelector('span').textContent = open ? 'Map' : 'Match';
@@ -520,8 +520,8 @@ const App = {
 
             case 'map':
                 this.elements.mapScreen?.classList.remove('hidden');
-                // 맵 렌더링
-                StageMap.render();
+                // 스테이지 그리드 렌더링
+                StageGrid.render();
                 break;
                 
             case 'game':
