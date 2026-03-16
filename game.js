@@ -293,8 +293,9 @@ const Game = {
                 this._showCard();
             }, 500);
         } else {
-            // 오답: 라이프 감소, 정답 힌트 표시 후 다음 카드
-            this.state.lives = Math.max(0, this.state.lives - 1);
+            // 오답: 감점 후 정답 힌트 표시 → 다음 카드 (게임오버 없음)
+            const penalty = Math.floor(CONFIG.GAME.BASE_SCORE * 1.5);
+            this.state.score = Math.max(0, this.state.score - penalty);
             this.state.combo = 0;
             this.state.wrongCount++;
             Storage.recordWrongWord(this._currentWord.spanish, this._currentWord.korean);
@@ -304,12 +305,6 @@ const Game = {
                 hintEl.className = 'card-hint card-hint-wrong';
             }
             if (this.onStateUpdate) this.onStateUpdate(this.getDisplayState());
-
-            if (this.state.lives <= 0) {
-                this._showingHint = true;
-                setTimeout(() => this.handleGameOver(), 1200);
-                return;
-            }
 
             this._showingHint = true;
             setTimeout(() => {
@@ -500,20 +495,20 @@ const Game = {
             this.state.maxCombo = this.state.combo;
         }
         
-        // 점수 계산
-        let points = CONFIG.GAME.BASE_SCORE;
-        
+        // 점수 계산 (카드 모드: 기본 3배)
+        let points = CONFIG.GAME.BASE_SCORE * 3;
+
         // 콤보 보너스 적용
         const comboMultiplier = Math.min(
             1 + (this.state.combo - 1) * CONFIG.GAME.COMBO_MULTIPLIER,
             CONFIG.GAME.MAX_COMBO_MULTIPLIER
         );
         points = Math.floor(points * comboMultiplier);
-        
+
         // 속도 보너스 (빠르게 맞췄을 때)
         const answerTime = performance.now() - word.spawnTime;
         if (answerTime < CONFIG.GAME.SPEED_BONUS_THRESHOLD) {
-            points += CONFIG.GAME.SPEED_BONUS_POINTS;
+            points += CONFIG.GAME.SPEED_BONUS_POINTS * 3;
         }
         
         // 점수 추가
