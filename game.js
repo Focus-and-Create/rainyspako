@@ -304,7 +304,9 @@ const Game = {
                 this._showCard();
             }, 500);
         } else {
-            // 오답: 라이프 감소, 정답 힌트 표시 후 다음 카드
+            // 오답: 감점, 라이프 감소, 정답 힌트 표시 후 다음 카드
+            const penalty = Math.floor(CONFIG.GAME.BASE_SCORE * 0.5);
+            this.state.score = Math.max(0, this.state.score - penalty);
             this.state.lives = Math.max(0, this.state.lives - 1);
             this.state.combo = 0;
             this.state.wrongCount++;

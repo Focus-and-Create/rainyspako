@@ -204,7 +204,7 @@ const MatchGame = {
                     setTimeout(() => {
                         this._refill();
                         this._render();
-                    }, 350);
+                    }, 900);
                 }
             } else {
                 // 오답: 두 카드 모두 강조 해제 + 빨간 플래시
