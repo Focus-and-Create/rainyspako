@@ -1677,6 +1677,27 @@ a {
 }
 
 /* ========================================= */
+/* 게임 헤더 인라인 모드 선택 */
+/* ========================================= */
+.mode-select-inline {
+    appearance: none;
+    background: rgba(255,255,255,0.7);
+    border: 1.5px solid var(--color-accent-light);
+    border-radius: 8px;
+    color: var(--color-text-primary);
+    font-size: 12px;
+    font-weight: 600;
+    padding: 4px 8px;
+    cursor: pointer;
+    outline: none;
+}
+
+.mode-select-inline:focus {
+    border-color: var(--color-accent);
+    box-shadow: 0 0 0 2px var(--color-accent-glow);
+}
+
+/* ========================================= */
 /* 스테이지 그리드 */
 /* ========================================= */
 .stage-grid-wrap {

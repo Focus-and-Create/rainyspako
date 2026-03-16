@@ -384,7 +384,26 @@ const WordManager = {
         });
         
         return result;
-    }
+    },
+
+    /**
+     * 커리큘럼에서 현재 진행할 스테이지 찾기
+     * 아직 결과가 없는 첫 번째 스테이지를 반환
+     * 모두 완료됐으면 처음으로 돌아감
+     * @returns {{worldId: number, stageNum: number}}
+     */
+    findCurrentStage: function() {
+        for (const world of CONFIG.WORLDS) {
+            for (let s = 1; s <= world.stages; s++) {
+                const stageId = getStageId(world.id, s);
+                if (!Storage.getStageResult(stageId)) {
+                    return { worldId: world.id, stageNum: s };
+                }
+            }
+        }
+        // 모든 스테이지 완료 → 처음부터 다시
+        return { worldId: CONFIG.WORLDS[0].id, stageNum: 1 };
+    },
 };
 
 // 모듈 내보내기 (ES6 모듈 사용 시)
