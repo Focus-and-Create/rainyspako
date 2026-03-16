@@ -36,6 +36,19 @@ const MatchGame = {
     },
 
     /**
+     * 현재 모드에서 카드 한 쌍의 텍스트를 반환
+     * @returns {{ src: string, tgt: string } | null}
+     */
+    _getPair: function(w) {
+        const mode = (typeof App !== 'undefined' && App.currentMode) ? App.currentMode : 'es-to-ko';
+        if (mode === 'es-to-ko') return w.ko ? { src: w.es, tgt: w.ko } : null;
+        if (mode === 'ko-to-es') return w.ko ? { src: w.ko, tgt: w.es } : null;
+        if (mode === 'es-to-en') return w.en ? { src: w.es, tgt: w.en } : null;
+        if (mode === 'en-to-es') return w.en ? { src: w.en, tgt: w.es } : null;
+        return w.ko ? { src: w.es, tgt: w.ko } : null;
+    },
+
+    /**
      * 클리어한 스테이지의 단어를 커리큘럼 순서대로 수집
      * 아직 하나도 안 클리어했으면 1-1 단어 사용
      */
@@ -53,24 +66,26 @@ const MatchGame = {
                 hasClearedAny = true;
                 const stageWords = WordManager.getStageWords(world.id, s);
                 for (const w of stageWords) {
-                    if (w.es && w.ko) words.push({ es: w.es, ko: w.ko });
+                    if (w.es) words.push(w);
                 }
             }
         }
 
-        // 한 스테이지도 안 클리어했으면 1-1 단어 사용
         if (!hasClearedAny) {
             const starter = WordManager.getStageWords(1, 1);
             for (const w of starter) {
-                if (w.es && w.ko) words.push({ es: w.es, ko: w.ko });
+                if (w.es) words.push(w);
             }
         }
 
-        // 중복 제거 (es 기준) — 커리큘럼 순서 유지
+        // 중복 제거 (es 기준) + 현재 모드로 페어 생성 가능한 것만
         const seen = new Set();
         const unique = [];
         for (const w of words) {
-            if (!seen.has(w.es)) { seen.add(w.es); unique.push(w); }
+            if (!seen.has(w.es) && this._getPair(w)) {
+                seen.add(w.es);
+                unique.push(w);
+            }
         }
 
         this._pool = unique;
@@ -99,12 +114,14 @@ const MatchGame = {
     },
 
     /** 단어쌍 배열로 카드 20장 만들고 셔플 */
-    _makePairCards: function(pairs) {
+    _makePairCards: function(words) {
         const cards = [];
-        for (const pair of pairs) {
+        for (const w of words) {
+            const pair = this._getPair(w);
+            if (!pair) continue;
             const pid = this._pairCounter++;
-            cards.push({ pairId: pid, type: 'es', text: pair.es, matched: false });
-            cards.push({ pairId: pid, type: 'ko', text: pair.ko, matched: false });
+            cards.push({ pairId: pid, type: 'src', text: pair.src, matched: false });
+            cards.push({ pairId: pid, type: 'tgt', text: pair.tgt, matched: false });
         }
         return this._shuffle(cards);
     },
@@ -145,7 +162,7 @@ const MatchGame = {
         this._container.innerHTML = '';
         this._cards.forEach((card, idx) => {
             const el = document.createElement('div');
-            el.className = 'mc' + (card.type === 'ko' ? ' mc-ko' : ' mc-es');
+            el.className = 'mc' + (card.type === 'tgt' ? ' mc-tgt' : ' mc-src');
             if (card.matched) el.classList.add('mc-matched');
             el.dataset.idx = idx;
             el.textContent = card.text;
@@ -159,7 +176,7 @@ const MatchGame = {
         const el = this._container.querySelector(`[data-idx="${idx}"]`);
         if (!el) return;
         const card = this._cards[idx];
-        el.className = 'mc' + (card.type === 'ko' ? ' mc-ko' : ' mc-es');
+        el.className = 'mc' + (card.type === 'tgt' ? ' mc-tgt' : ' mc-src');
         if (card.matched) el.classList.add('mc-matched');
         if (idx === this._selected) el.classList.add('mc-selected');
         el.textContent = card.text;

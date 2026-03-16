@@ -1633,15 +1633,15 @@ a {
     transform: scale(0.95);
 }
 
-/* 스페인어 카드 */
-.mc-es {
+/* 소스 언어 카드 (파랑) */
+.mc-src {
     background: linear-gradient(135deg, #e3f2fd, #bbdefb);
     color: #0d47a1;
     border: 2px solid #90caf9;
 }
 
-/* 한국어 카드 */
-.mc-ko {
+/* 타겟 언어 카드 (핑크) */
+.mc-tgt {
     background: linear-gradient(135deg, #fce4ec, #f8bbd0);
     color: #880e4f;
     border: 2px solid #f48fb1;
