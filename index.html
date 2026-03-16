@@ -126,14 +126,22 @@
         <div class="screen-header">
             <h1 class="app-title">Spanish Rain</h1>
             <div class="header-buttons">
+                <button id="match-mode-btn" class="icon-btn" aria-label="짝 잇기">
+                    <span>Match</span>
+                </button>
                 <button id="stats-btn" class="icon-btn" aria-label="통계">
                     <span>Stats</span>
                 </button>
             </div>
         </div>
         
-        <div class="canvas-container map-canvas-container">
+        <div class="canvas-container map-canvas-container" id="map-canvas-wrap">
             <canvas id="map-canvas"></canvas>
+        </div>
+
+        <!-- 짝 잇기 게임 뷰 -->
+        <div id="match-view" class="match-view hidden">
+            <div id="match-grid" class="match-grid"></div>
         </div>
     </div>
 
@@ -362,6 +370,7 @@
     <script src="word-manager.js?v=15"></script>
     <script src="game.js?v=15"></script>
     <script src="stage-map.js?v=15"></script>
+    <script src="match-game.js?v=15"></script>
     <script src="main.js?v=15"></script>
 </body>
 </html>
