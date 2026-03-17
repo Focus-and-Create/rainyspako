@@ -42,6 +42,9 @@ const Game = {
     // 카드 모드 상태
     // =========================================
 
+    /** 세션 전체 누적 점수 (스테이지 간 이월됨) */
+    sessionScore: 0,
+
     /** @type {Array<Object>} 카드 큐 (순서대로 보여줄 단어 목록) */
     _cardQueue: [],
 
@@ -158,7 +161,7 @@ const Game = {
             worldId: worldId,
             stageNum: stageNum,
             mode: mode,
-            score: 0,
+            score: this.sessionScore,
             lives: CONFIG.GAME.INITIAL_LIVES,
             combo: 0,
             maxCombo: 0,
@@ -563,6 +566,9 @@ const Game = {
         // 게임 정지
         this.stop();
 
+        // 세션 누적 점수 저장 (다음 스테이지로 이월)
+        this.sessionScore = this.state.score;
+
         // 별점 계산
         const stars = this.calculateStars();
 
@@ -606,6 +612,9 @@ const Game = {
         // 게임 정지
         this.stop();
         
+        // 세션 점수 초기화 (게임 오버로 세션 종료)
+        this.sessionScore = 0;
+
         // 통계 업데이트 (점수는 저장하지 않음)
         Storage.updateStats(
             0,
