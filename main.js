@@ -44,7 +44,6 @@ const App = {
         retryBtn: null,
 
         // 통계 모달
-        statsModeSelect: null,
 
         // 로그인 화면
         usernameInput: null,
@@ -149,7 +148,6 @@ const App = {
         this.elements.retryBtn = document.getElementById('retry-btn');
 
         // 통계 모달
-        this.elements.statsModeSelect = document.getElementById('stats-mode-select');
 
         // 로그인 화면
         this.elements.usernameInput = document.getElementById('username-input');
@@ -303,13 +301,6 @@ const App = {
             });
         }
 
-        // 통계 모달 내 모드 선택
-        if (this.elements.statsModeSelect) {
-            this.elements.statsModeSelect.addEventListener('change', (e) => {
-                this.applyModeSetting(e.target.value);
-            });
-        }
-
         // 짝 잇기 / 타이핑 전환 버튼
         const viewToggleBtn = document.getElementById('game-view-toggle');
         if (viewToggleBtn) {
@@ -347,25 +338,47 @@ const App = {
             });
         }
 
-        const statsResumeBtn = document.getElementById('stats-resume-btn');
-        if (statsResumeBtn) {
-            statsResumeBtn.addEventListener('click', () => {
-                this.hideStatsModal();
-            });
-        }
-
-        const statsShareBtn = document.getElementById('stats-share-btn');
-        if (statsShareBtn) {
-            statsShareBtn.addEventListener('click', async () => {
-                await this.shareStatsSummary();
-            });
-        }
-
+        // 인라인 닉네임 편집
         const statsChangeNameBtn = document.getElementById('stats-change-name-btn');
+        const statsUsernameDisplay = document.getElementById('stats-username-display');
+        const statsNameInput = document.getElementById('stats-name-input');
+
+        const saveInlineName = () => {
+            const name = statsNameInput ? (statsNameInput.value.trim() || 'Player') : 'Player';
+            Storage.saveProfile({ username: name });
+            if (statsUsernameDisplay) {
+                statsUsernameDisplay.textContent = name;
+                statsUsernameDisplay.classList.remove('hidden');
+            }
+            if (statsNameInput) statsNameInput.classList.add('hidden');
+            if (statsChangeNameBtn) statsChangeNameBtn.textContent = '✏';
+        };
+
         if (statsChangeNameBtn) {
             statsChangeNameBtn.addEventListener('click', () => {
-                this.hideStatsModal();
-                this.openLoginForEdit();
+                const isEditing = statsNameInput && !statsNameInput.classList.contains('hidden');
+                if (isEditing) {
+                    saveInlineName();
+                } else {
+                    if (statsUsernameDisplay) statsUsernameDisplay.classList.add('hidden');
+                    if (statsNameInput) {
+                        statsNameInput.value = statsUsernameDisplay ? statsUsernameDisplay.textContent : '';
+                        statsNameInput.classList.remove('hidden');
+                        statsNameInput.focus();
+                    }
+                    statsChangeNameBtn.textContent = '✓';
+                }
+            });
+        }
+
+        if (statsNameInput) {
+            statsNameInput.addEventListener('keydown', (e) => {
+                if (e.key === 'Enter') { e.preventDefault(); saveInlineName(); }
+                if (e.key === 'Escape') {
+                    statsNameInput.classList.add('hidden');
+                    if (statsUsernameDisplay) statsUsernameDisplay.classList.remove('hidden');
+                    if (statsChangeNameBtn) statsChangeNameBtn.textContent = '✏';
+                }
             });
         }
 
@@ -443,7 +456,6 @@ const App = {
         this.currentMode = nextMode;
         Storage.setSetting('mode', nextMode);
 
-        if (this.elements.statsModeSelect) this.elements.statsModeSelect.value = nextMode;
         if (this.elements.gameModeSelect) this.elements.gameModeSelect.value = nextMode;
     },
 
@@ -695,10 +707,6 @@ const App = {
         if (usernameDisplay) usernameDisplay.textContent = username;
         const greeting = document.getElementById('stats-greeting');
         if (greeting) greeting.textContent = `${username}님, 오늘도 화이팅!`;
-
-        if (this.elements.statsModeSelect) {
-            this.elements.statsModeSelect.value = this.currentMode;
-        }
 
         const stats = Storage.getStats();
 

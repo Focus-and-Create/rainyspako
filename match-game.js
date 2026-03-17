@@ -232,7 +232,14 @@ const MatchGame = {
                     }, 600);
                 }
             } else {
-                // 오답: 두 카드 모두 강조 해제 + 빨간 플래시
+                // 오답: 감점 + 빨간 플래시
+                if (typeof Game !== 'undefined' && Game.state) {
+                    const penalty = CONFIG.GAME.BASE_SCORE;
+                    Game.state.score = Math.max(Game.sessionScore, Game.state.score - penalty);
+                    if (typeof App !== 'undefined' && App.elements && App.elements.scoreDisplay) {
+                        App.elements.scoreDisplay.textContent = Game.state.score.toLocaleString();
+                    }
+                }
                 this._locked = true;
                 const prevEl = this._container?.querySelector(`[data-idx="${prev}"]`);
                 const curEl = this._container?.querySelector(`[data-idx="${idx}"]`);
