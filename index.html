@@ -141,6 +141,7 @@
                     <option value="es-to-en">ES→EN</option>
                     <option value="en-to-es">EN→ES</option>
                 </select>
+                <button id="game-view-toggle" class="icon-btn" title="짝 잇기 / 타이핑 전환">Match</button>
                 <button id="stats-btn" class="icon-btn" aria-label="통계">☰</button>
                 <button id="pause-btn" class="icon-btn" aria-label="일시정지">II</button>
             </div>
@@ -154,11 +155,15 @@
         <!-- 콤보 표시 -->
         <div id="combo-display" class="combo-display hidden"></div>
 
-        <!-- 카드 존 -->
-        <div id="card-zone" class="card-zone">
-            <div id="card-progress" class="card-progress">1 / 18</div>
-            <div id="card-word" class="card-word"></div>
-            <div id="card-hint" class="card-hint hidden"></div>
+        <!-- 타이핑 게임 뷰 -->
+        <div id="typing-view">
+            <!-- 카드 그리드 (동적 렌더링) -->
+            <div id="card-grid" class="card-grid"></div>
+        </div>
+
+        <!-- 짝 잇기 게임 뷰 -->
+        <div id="match-view" class="match-view hidden">
+            <div id="match-grid" class="match-grid"></div>
         </div>
 
         <!-- 특수문자 입력 바 -->

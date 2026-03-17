@@ -102,8 +102,9 @@ const App = {
 
         // 게임 초기화
         Game.init(null);
-        Game.onStageClear = (result) => this.showResult(result, true);
-        Game.onGameOver = (result) => this.showResult(result, false);
+        // 스테이지 클리어 / 게임오버 모두 결과 화면 없이 자동으로 다음 세션 시작
+        Game.onStageClear = () => { if (!this._matchViewOpen) this._startFreshGame(); };
+        Game.onGameOver  = () => { if (!this._matchViewOpen) this._retryGame(); };
         Game.onStateUpdate = (state) => this.updateGameUI(state);
 
         // Supabase 인증 확인
@@ -303,7 +304,11 @@ const App = {
         if (this.elements.gameModeSelect) {
             this.elements.gameModeSelect.addEventListener('change', (e) => {
                 this.applyModeSetting(e.target.value);
-                this._startFreshGame();
+                if (this._matchViewOpen) {
+                    MatchGame.init(document.getElementById('match-grid'));
+                } else {
+                    this._startFreshGame();
+                }
             });
         }
 
@@ -311,6 +316,21 @@ const App = {
         if (this.elements.statsModeSelect) {
             this.elements.statsModeSelect.addEventListener('change', (e) => {
                 this.applyModeSetting(e.target.value);
+            });
+        }
+
+        // 짝 잇기 / 타이핑 전환 버튼
+        const viewToggleBtn = document.getElementById('game-view-toggle');
+        if (viewToggleBtn) {
+            viewToggleBtn.addEventListener('click', () => this._toggleGameView());
+        }
+
+        // 짝 잇기 카드 클릭 (이벤트 위임)
+        const matchGrid = document.getElementById('match-grid');
+        if (matchGrid) {
+            matchGrid.addEventListener('click', (e) => {
+                const card = e.target.closest('.mc');
+                if (card) MatchGame.handleClick(parseInt(card.dataset.idx, 10));
             });
         }
 
@@ -363,6 +383,9 @@ const App = {
     /** @type {{worldId:number, stageNum:number}|null} 마지막으로 시작한 세션의 스테이지 */
     _lastAutoStage: null,
 
+    /** @type {boolean} 짝 잇기 뷰가 열려 있는지 */
+    _matchViewOpen: false,
+
     /**
      * 새 게임 세션 시작 (커리큘럼 자동 탐색)
      */
@@ -377,12 +400,41 @@ const App = {
      * 마지막 세션 재시도
      */
     _retryGame: function() {
+        if (this._matchViewOpen) return;
         this.showScreen('game');
         if (this.elements.inputField) this.elements.inputField.value = '';
         if (this._lastAutoStage) {
             Game.startStage(this._lastAutoStage.worldId, this._lastAutoStage.stageNum, this.currentMode);
         } else {
             Game.startAutoSession(this.currentMode);
+        }
+    },
+
+    /**
+     * 타이핑 ↔ 짝 잇기 게임 뷰 전환
+     */
+    _toggleGameView: function() {
+        this._matchViewOpen = !this._matchViewOpen;
+        const typingView = document.getElementById('typing-view');
+        const matchView  = document.getElementById('match-view');
+        const inputArea  = document.querySelector('.input-container');
+        const specialBar = document.getElementById('special-chars-bar');
+        const toggleBtn  = document.getElementById('game-view-toggle');
+        const progressCt = document.querySelector('.progress-container');
+
+        typingView?.classList.toggle('hidden', this._matchViewOpen);
+        matchView?.classList.toggle('hidden', !this._matchViewOpen);
+        inputArea?.classList.toggle('hidden', this._matchViewOpen);
+        specialBar?.classList.toggle('hidden', this._matchViewOpen);
+        progressCt?.classList.toggle('hidden', this._matchViewOpen);
+
+        if (toggleBtn) toggleBtn.textContent = this._matchViewOpen ? 'Type' : 'Match';
+
+        if (this._matchViewOpen) {
+            Game.stop();
+            MatchGame.init(document.getElementById('match-grid'));
+        } else {
+            this._startFreshGame();
         }
     },
 
