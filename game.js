@@ -470,8 +470,7 @@ const Game = {
     normalizeForMatch: function(text) {
         return text
             .replace(/[¡¿!?.,;:'"]/g, '')  // 구두점 제거
-            .replace(/\s+/g, ' ')            // 여러 공백 → 단일 공백
-            .trim()
+            .replace(/\s/g, '')              // 공백 전부 제거 (띄어쓰기 무시)
             .toLowerCase();
     },
 

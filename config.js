@@ -47,7 +47,7 @@ const CONFIG = {
     // =========================================
     GAME: {
         INITIAL_LIVES: 3,              // 시작 라이프 수
-        BASE_SCORE: 100,               // 기본 정답 점수
+        BASE_SCORE: 7,                 // 기본 정답 점수 (타이핑 ×3=21, 매치 ×2=14)
         COMBO_MULTIPLIER: 0.1,         // 콤보당 점수 배율 증가 (10%)
         MAX_COMBO_MULTIPLIER: 3.0,     // 최대 콤보 배율
         SPEED_BONUS_THRESHOLD: 3000,   // 빠른 정답 보너스 기준 (밀리초)
