@@ -130,6 +130,15 @@ const Game = {
     // =========================================
 
     /**
+     * 커리큘럼 자동 세션 시작 (스테이지 선택 없이)
+     * @param {string} mode - 게임 모드
+     */
+    startAutoSession: function(mode = 'es-to-ko') {
+        const stage = WordManager.findCurrentStage();
+        this.startStage(stage.worldId, stage.stageNum, mode);
+    },
+
+    /**
      * 스테이지 시작
      * @param {number} worldId - 월드 ID
      * @param {number} stageNum - 스테이지 번호

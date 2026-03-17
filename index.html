@@ -122,29 +122,6 @@
     <!-- ========================================= -->
     <!-- 맵 화면 -->
     <!-- ========================================= -->
-    <div id="map-screen" class="screen hidden">
-        <div class="screen-header">
-            <h1 class="app-title">Spanish Rain</h1>
-            <div class="header-buttons">
-                <button id="match-mode-btn" class="icon-btn" aria-label="짝 잇기">
-                    <span>Match</span>
-                </button>
-                <button id="stats-btn" class="icon-btn" aria-label="통계">
-                    <span>Stats</span>
-                </button>
-            </div>
-        </div>
-        
-        <!-- 스테이지 카드 그리드 -->
-        <div id="stage-grid-wrap" class="stage-grid-wrap">
-            <div id="stage-grid-container"></div>
-        </div>
-
-        <!-- 짝 잇기 게임 뷰 -->
-        <div id="match-view" class="match-view hidden">
-            <div id="match-grid" class="match-grid"></div>
-        </div>
-    </div>
 
     <!-- ========================================= -->
     <!-- 게임 화면 -->
@@ -156,9 +133,15 @@
                 <span class="stat-label">Score</span>
                 <span id="score-display" class="stat-value">0</span>
             </div>
-            
-            <div style="display:flex;gap:6px;">
-                <button id="exit-game-btn" class="icon-btn" aria-label="맵으로 돌아가기" title="맵으로 돌아가기">↩</button>
+
+            <div style="display:flex;align-items:center;gap:6px;">
+                <select id="game-mode-select" class="mode-select-inline">
+                    <option value="es-to-ko">ES→KO</option>
+                    <option value="ko-to-es">KO→ES</option>
+                    <option value="es-to-en">ES→EN</option>
+                    <option value="en-to-es">EN→ES</option>
+                </select>
+                <button id="stats-btn" class="icon-btn" aria-label="통계">☰</button>
                 <button id="pause-btn" class="icon-btn" aria-label="일시정지">II</button>
             </div>
         </div>
@@ -236,31 +219,12 @@
             
             <!-- 버튼들 -->
             <div class="result-buttons">
-                <button id="next-btn" class="btn btn-primary">Next Stage</button>
+                <button id="next-btn" class="btn btn-primary">Next Round</button>
                 <button id="retry-btn" class="btn btn-secondary">Retry</button>
-                <button id="map-btn" class="btn btn-secondary">Map</button>
             </div>
         </div>
     </div>
 
-    <!-- ========================================= -->
-    <!-- 스테이지 선택 모달 -->
-    <!-- ========================================= -->
-    <div id="stage-modal" class="modal hidden">
-        <div class="modal-backdrop"></div>
-        <div class="modal-content">
-            <button id="close-modal-btn" class="modal-close" aria-label="닫기">X</button>
-            
-            <h3 id="modal-title" class="modal-title">Stage 1-1</h3>
-            
-            <span id="review-badge" class="review-badge hidden">Review Stage</span>
-            
-            <p id="best-score" class="best-score">First Try!</p>
-            <p id="jump-info" class="jump-info"></p>
-            
-            <button id="start-btn" class="btn btn-primary btn-large">Start</button>
-        </div>
-    </div>
 
     <!-- ========================================= -->
     <!-- 통계 모달 -->

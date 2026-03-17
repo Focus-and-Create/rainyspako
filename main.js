@@ -12,12 +12,6 @@ const App = {
     /** @type {string} 현재 화면 ('loading'|'map'|'game'|'result') */
     currentScreen: 'loading',
     
-    /** @type {Object} 현재 선택된 스테이지 정보 */
-    selectedStage: {
-        worldId: 1,
-        stageNum: 1
-    },
-    
     /** @type {string} 현재 게임 모드 */
     currentMode: 'es-to-ko',
 
@@ -29,13 +23,8 @@ const App = {
         // 화면 컨테이너
         loadingScreen: null,
         loginScreen: null,
-        mapScreen: null,
         gameScreen: null,
         resultScreen: null,
-        
-        // 캔버스
-        stageGridWrap: null,
-        gameCanvas: null,
 
         // 게임 UI
         scoreDisplay: null,
@@ -45,7 +34,8 @@ const App = {
         inputField: null,
         pauseBtn: null,
         cardZone: null,
-        
+        gameModeSelect: null,
+
         // 결과 화면
         resultStars: null,
         resultScore: null,
@@ -53,20 +43,9 @@ const App = {
         resultCombo: null,
         nextBtn: null,
         retryBtn: null,
-        mapBtn: null,
-        
-        // 스테이지 선택 모달
-        stageModal: null,
-        statsModeSelect: null,
-        startBtn: null,
-        closeModalBtn: null,
-        jumpInfo: null,
 
-        // 짝 잇기 게임
-        matchModeBtn: null,
-        matchView: null,
-        stageGridContainer: null,
-        matchGrid: null,
+        // 통계 모달
+        statsModeSelect: null,
 
         // 로그인 화면
         usernameInput: null,
@@ -80,9 +59,6 @@ const App = {
         registerBtn: null,
         googleLoginBtn: null,
         loginSubmitEditBtn: null,
-
-        // 적응형 속도 배지
-        slowModeBadge: null
     },
 
     /** @type {boolean} 로그인 화면이 닉네임 변경 모드인지 여부 */
@@ -124,14 +100,8 @@ const App = {
             return;
         }
 
-        // 스테이지 그리드 초기화
-        StageGrid.init(this.elements.stageGridContainer);
-        StageGrid.onStageSelect = (worldId, stageNum) => {
-            this.showStageModal(worldId, stageNum);
-        };
-
         // 게임 초기화
-        Game.init(this.elements.gameCanvas);
+        Game.init(null);
         Game.onStageClear = (result) => this.showResult(result, true);
         Game.onGameOver = (result) => this.showResult(result, false);
         Game.onStateUpdate = (state) => this.updateGameUI(state);
@@ -139,10 +109,10 @@ const App = {
         // Supabase 인증 확인
         const user = await AuthClient.init();
         if (user) {
-            // 로그인 상태: 서버 데이터 동기화 후 맵으로
+            // 로그인 상태: 서버 데이터 동기화 후 바로 게임 시작
             Storage.saveProfile({ username: user.username });
             await AuthClient.syncAfterLogin();
-            this.showScreen('map');
+            this._startFreshGame();
         } else {
             // 미로그인: 로그인 화면
             this.showScreen('login');
@@ -158,15 +128,9 @@ const App = {
         // 화면 컨테이너
         this.elements.loadingScreen = document.getElementById('loading-screen');
         this.elements.loginScreen = document.getElementById('login-screen');
-        this.elements.mapScreen = document.getElementById('map-screen');
         this.elements.gameScreen = document.getElementById('game-screen');
         this.elements.resultScreen = document.getElementById('result-screen');
-        
-        // 스테이지 그리드
-        this.elements.stageGridWrap = document.getElementById('stage-grid-wrap');
-        this.elements.stageGridContainer = document.getElementById('stage-grid-container');
-        this.elements.gameCanvas = document.getElementById('game-canvas');
-        
+
         // 게임 UI
         this.elements.scoreDisplay = document.getElementById('score-display');
         this.elements.livesDisplay = document.getElementById('lives-display');
@@ -174,8 +138,9 @@ const App = {
         this.elements.progressBar = document.getElementById('progress-bar');
         this.elements.inputField = document.getElementById('input-field');
         this.elements.pauseBtn = document.getElementById('pause-btn');
-        this.elements.exitGameBtn = document.getElementById('exit-game-btn');
-        
+        this.elements.cardZone = document.getElementById('card-zone');
+        this.elements.gameModeSelect = document.getElementById('game-mode-select');
+
         // 결과 화면
         this.elements.resultStars = document.getElementById('result-stars');
         this.elements.resultScore = document.getElementById('result-score');
@@ -183,15 +148,9 @@ const App = {
         this.elements.resultCombo = document.getElementById('result-combo');
         this.elements.nextBtn = document.getElementById('next-btn');
         this.elements.retryBtn = document.getElementById('retry-btn');
-        this.elements.mapBtn = document.getElementById('map-btn');
-        
-        // 스테이지 선택 모달
-        this.elements.stageModal = document.getElementById('stage-modal');
+
+        // 통계 모달
         this.elements.statsModeSelect = document.getElementById('stats-mode-select');
-        this.elements.startBtn = document.getElementById('start-btn');
-        this.elements.closeModalBtn = document.getElementById('close-modal-btn');
-        this.elements.jumpInfo = document.getElementById('jump-info');
-        this.elements.modalTitle = document.getElementById('modal-title');
 
         // 로그인 화면
         this.elements.usernameInput = document.getElementById('username-input');
@@ -205,17 +164,6 @@ const App = {
         this.elements.registerBtn = document.getElementById('register-btn');
         this.elements.googleLoginBtn = document.getElementById('google-login-btn');
         this.elements.loginSubmitEditBtn = document.getElementById('login-submit-edit-btn');
-
-        // 카드 존
-        this.elements.cardZone = document.getElementById('card-zone');
-
-        // 적응형 속도 배지 (미사용이지만 참조 유지)
-        this.elements.slowModeBadge = document.getElementById('slow-mode-badge');
-
-        // 짝 잇기 게임
-        this.elements.matchModeBtn = document.getElementById('match-mode-btn');
-        this.elements.matchView = document.getElementById('match-view');
-        this.elements.matchGrid = document.getElementById('match-grid');
     },
     
     /**
@@ -270,7 +218,7 @@ const App = {
         if (this.elements.loginBackBtn) {
             this.elements.loginBackBtn.addEventListener('click', () => {
                 this._loginIsEditing = false;
-                this.showScreen('map');
+                this._startFreshGame();
             });
         }
 
@@ -331,14 +279,6 @@ const App = {
             });
         }
         
-        // 게임 종료 (맵으로 돌아가기) 버튼
-        if (this.elements.exitGameBtn) {
-            this.elements.exitGameBtn.addEventListener('click', () => {
-                Game.stop();
-                this.showScreen('map');
-            });
-        }
-
         // 일시정지 버튼
         if (this.elements.pauseBtn) {
             this.elements.pauseBtn.addEventListener('click', () => {
@@ -349,46 +289,32 @@ const App = {
         // 결과 화면 버튼들
         if (this.elements.nextBtn) {
             this.elements.nextBtn.addEventListener('click', () => {
-                this.startNextStage();
+                this._startFreshGame();
             });
         }
-        
+
         if (this.elements.retryBtn) {
             this.elements.retryBtn.addEventListener('click', () => {
-                this.retryStage();
+                this._retryGame();
             });
         }
-        
-        if (this.elements.mapBtn) {
-            this.elements.mapBtn.addEventListener('click', () => {
-                this.showScreen('map');
+
+        // 게임 헤더 모드 선택
+        if (this.elements.gameModeSelect) {
+            this.elements.gameModeSelect.addEventListener('change', (e) => {
+                this.applyModeSetting(e.target.value);
+                this._startFreshGame();
             });
         }
-        
-        // 모달 버튼들
-        if (this.elements.startBtn) {
-            this.elements.startBtn.addEventListener('click', () => {
-                this.startSelectedStage();
-            });
-        }
-        
-        if (this.elements.closeModalBtn) {
-            this.elements.closeModalBtn.addEventListener('click', () => {
-                this.hideStageModal();
-            });
-        }
-        
+
         // 통계 모달 내 모드 선택
         if (this.elements.statsModeSelect) {
             this.elements.statsModeSelect.addEventListener('change', (e) => {
                 this.applyModeSetting(e.target.value);
-                // 짝 잇기가 열려 있으면 새 모드로 재시작
-                if (this._matchViewOpen && this.elements.matchGrid) {
-                    MatchGame.init(this.elements.matchGrid);
-                }
             });
         }
-        // Stats 버튼
+
+        // Stats 버튼 (게임 헤더)
         const statsBtn = document.getElementById('stats-btn');
         if (statsBtn) {
             statsBtn.addEventListener('click', () => {
@@ -432,37 +358,31 @@ const App = {
             });
         }
 
-        // 짝 잇기 토글 버튼
-        if (this.elements.matchModeBtn) {
-            this.elements.matchModeBtn.addEventListener('click', () => {
-                this.toggleMatchView();
-            });
-        }
-
-        // 짝 잇기 카드 클릭 (이벤트 위임)
-        if (this.elements.matchGrid) {
-            this.elements.matchGrid.addEventListener('click', (e) => {
-                const card = e.target.closest('.mc');
-                if (card) MatchGame.handleClick(parseInt(card.dataset.idx, 10));
-            });
-        }
     },
 
-    /** @type {boolean} 짝 잇기 뷰가 열려 있는지 */
-    _matchViewOpen: false,
+    /** @type {{worldId:number, stageNum:number}|null} 마지막으로 시작한 세션의 스테이지 */
+    _lastAutoStage: null,
 
-    toggleMatchView: function() {
-        this._matchViewOpen = !this._matchViewOpen;
-        const open = this._matchViewOpen;
+    /**
+     * 새 게임 세션 시작 (커리큘럼 자동 탐색)
+     */
+    _startFreshGame: function() {
+        this.showScreen('game');
+        if (this.elements.inputField) this.elements.inputField.value = '';
+        Game.startAutoSession(this.currentMode);
+        this._lastAutoStage = { worldId: Game.state.worldId, stageNum: Game.state.stageNum };
+    },
 
-        this.elements.stageGridWrap?.classList.toggle('hidden', open);
-        this.elements.matchView?.classList.toggle('hidden', !open);
-        if (this.elements.matchModeBtn) {
-            this.elements.matchModeBtn.querySelector('span').textContent = open ? 'Map' : 'Match';
-        }
-
-        if (open) {
-            MatchGame.init(this.elements.matchGrid);
+    /**
+     * 마지막 세션 재시도
+     */
+    _retryGame: function() {
+        this.showScreen('game');
+        if (this.elements.inputField) this.elements.inputField.value = '';
+        if (this._lastAutoStage) {
+            Game.startStage(this._lastAutoStage.worldId, this._lastAutoStage.stageNum, this.currentMode);
+        } else {
+            Game.startAutoSession(this.currentMode);
         }
     },
 
@@ -478,6 +398,7 @@ const App = {
         Storage.setSetting('mode', nextMode);
 
         if (this.elements.statsModeSelect) this.elements.statsModeSelect.value = nextMode;
+        if (this.elements.gameModeSelect) this.elements.gameModeSelect.value = nextMode;
     },
 
     // =========================================
@@ -492,7 +413,6 @@ const App = {
         // 모든 화면 숨기기
         this.elements.loadingScreen?.classList.add('hidden');
         this.elements.loginScreen?.classList.add('hidden');
-        this.elements.mapScreen?.classList.add('hidden');
         this.elements.gameScreen?.classList.add('hidden');
         this.elements.resultScreen?.classList.add('hidden');
 
@@ -518,12 +438,6 @@ const App = {
                 }
                 break;
 
-            case 'map':
-                this.elements.mapScreen?.classList.remove('hidden');
-                // 스테이지 그리드 렌더링
-                StageGrid.render();
-                break;
-                
             case 'game':
                 this.elements.gameScreen?.classList.remove('hidden');
                 // 입력 필드 포커스
@@ -583,7 +497,7 @@ const App = {
             const user = await AuthClient.login(email, password);
             Storage.saveProfile({ username: user.username });
             await AuthClient.syncAfterLogin();
-            this.showScreen('map');
+            this._startFreshGame();
         } catch (err) {
             if (errorEl) { errorEl.textContent = err.message; errorEl.classList.remove('hidden'); }
         } finally {
@@ -607,7 +521,7 @@ const App = {
             const user = await AuthClient.register(email, password, username);
             Storage.saveProfile({ username: user.username });
             await AuthClient.syncAfterLogin();
-            this.showScreen('map');
+            this._startFreshGame();
         } catch (err) {
             if (errorEl) { errorEl.textContent = err.message; errorEl.classList.remove('hidden'); }
         } finally {
@@ -624,7 +538,7 @@ const App = {
 
         Storage.saveProfile({ username }); // localStorage + 서버 동기화
         this._loginIsEditing = false;
-        this.showScreen('map');
+        this._startFreshGame();
     },
 
     /**
@@ -636,199 +550,8 @@ const App = {
     },
 
     // =========================================
-    // 스테이지 선택 모달
-    // =========================================
-    
-    /**
-     * 스테이지 선택 모달 표시
-     * @param {number} worldId - 월드 ID
-     * @param {number} stageNum - 스테이지 번호
-     */
-    showStageModal: function(worldId, stageNum) {
-        // 선택 정보 저장
-        this.selectedStage = { worldId, stageNum };
-        
-        // 모달 제목 업데이트
-        const world = getWorldConfig(worldId);
-        if (this.elements.modalTitle) {
-            const category = WordManager.getStageCategory(worldId, stageNum);
-            if (WordManager.isBossStage(worldId, stageNum)) {
-                this.elements.modalTitle.textContent = `Stage ${worldId}-${stageNum} · BOSS · ${category}`;
-            } else if (WordManager.isReviewStage(worldId, stageNum)) {
-                this.elements.modalTitle.textContent = `Stage ${worldId}-${stageNum} · Review`;
-            } else {
-                this.elements.modalTitle.textContent = `Stage ${worldId}-${stageNum} · ${category}`;
-            }
-        }
-        
-        // 복습 스테이지 표시
-        const isReview = WordManager.isReviewStage(worldId, stageNum);
-        const reviewBadge = document.getElementById('review-badge');
-        if (reviewBadge) {
-            reviewBadge.classList.toggle('hidden', !isReview);
-        }
-        
-        // 베스트 기록 표시
-        const stageId = getStageId(worldId, stageNum);
-        const result = Storage.getStageResult(stageId);
-        const bestScore = document.getElementById('best-score');
-        if (bestScore) {
-            if (result) {
-                bestScore.textContent = `Best: ${result.bestScore}점`;
-            } else {
-                bestScore.textContent = 'First Try!';
-            }
-        }
-        
-        const isUnlocked = Storage.isStageUnlocked(worldId, stageNum);
-        const jumpStatus = Storage.getStageJumpStatus();
-
-        if (this.elements.jumpInfo) {
-            if (isUnlocked) {
-                this.elements.jumpInfo.textContent = `점프 잔여: ${jumpStatus.remaining}/${jumpStatus.dailyLimit}`;
-                this.elements.jumpInfo.classList.remove('warning');
-            } else {
-                this.elements.jumpInfo.textContent = `잠긴 스테이지 점프: 오늘 ${jumpStatus.remaining}/${jumpStatus.dailyLimit}회 남음`;
-                this.elements.jumpInfo.classList.toggle('warning', jumpStatus.remaining <= 0);
-            }
-        }
-
-        if (this.elements.startBtn) {
-            if (isUnlocked) {
-                this.elements.startBtn.disabled = false;
-                this.elements.startBtn.textContent = 'Start';
-            } else if (jumpStatus.remaining > 0) {
-                this.elements.startBtn.disabled = false;
-                this.elements.startBtn.textContent = `점프해서 시작 (${jumpStatus.remaining}/${jumpStatus.dailyLimit})`;
-            } else {
-                this.elements.startBtn.disabled = true;
-                this.elements.startBtn.textContent = '점프 횟수 소진';
-            }
-        }
-
-        // 모달 표시
-        this.elements.stageModal?.classList.remove('hidden');
-    },
-    
-    /**
-     * 스테이지 선택 모달 숨기기
-     */
-    hideStageModal: function() {
-        this.elements.stageModal?.classList.add('hidden');
-    },
-
-    // =========================================
     // 게임 제어
     // =========================================
-
-    /**
-     * 공통 스테이지 진입 처리
-     * @param {number} worldId
-     * @param {number} stageNum
-     */
-    enterStage: function(worldId, stageNum) {
-        this.showScreen('game');
-
-        if (this.elements.inputField) {
-            this.elements.inputField.value = '';
-        }
-
-        Game.startStage(worldId, stageNum, this.currentMode);
-    },
-    
-    /**
-     * 선택된 스테이지 시작
-     */
-    startSelectedStage: function() {
-        const { worldId, stageNum } = this.selectedStage;
-        const isUnlocked = Storage.isStageUnlocked(worldId, stageNum);
-
-        if (!isUnlocked) {
-            const jumpResult = Storage.useStageJump(worldId, stageNum);
-            if (!jumpResult.success) {
-                alert('오늘 점프 횟수를 모두 사용했습니다. 내일 다시 시도해 주세요!');
-                this.showStageModal(worldId, stageNum);
-                return;
-            }
-
-            if (jumpResult.usedJump) {
-                alert(`스테이지 점프 사용! 오늘 남은 점프: ${jumpResult.remaining}회`);
-            }
-        }
-
-        this.hideStageModal();
-        this.enterStage(worldId, stageNum);
-    },
-
-    /**
-     * 단어 참조 패널 채우기 (단어 + 뜻 표시)
-     * @param {number} worldId - 월드 ID
-     * @param {number} stageNum - 스테이지 번호
-     */
-    populateWordPanels: function(worldId, stageNum) {
-        const words = WordManager.getStageWords(worldId, stageNum);
-        const leftList = document.getElementById('word-list-left');
-        const rightList = document.getElementById('word-list-right');
-        if (!leftList || !rightList) return;
-
-        // 단어를 반으로 나눠서 양쪽 패널에 배치
-        const mid = Math.ceil(words.length / 2);
-        const leftWords = words.slice(0, mid);
-        const rightWords = words.slice(mid);
-
-        const mode = this.currentMode || 'es-to-ko';
-        const buildHTML = (wordArr) => wordArr.map(w => {
-            let left, right;
-            if (mode === 'es-to-ko') { left = w.es; right = w.ko; }
-            else if (mode === 'ko-to-es') { left = w.ko; right = w.es; }
-            else if (mode === 'es-to-en') { left = w.es; right = w.en || ''; }
-            else { left = w.en || ''; right = w.es; } // en-to-es
-            return `<div class="word-pair"><span class="word-es">${left}</span><span class="word-arrow">→</span><span class="word-ko">${right}</span></div>`;
-        }).join('');
-
-        leftList.innerHTML = buildHTML(leftWords);
-        rightList.innerHTML = buildHTML(rightWords);
-    },
-    
-    /**
-     * 현재 스테이지 재시도
-     */
-    retryStage: function() {
-        this.enterStage(this.selectedStage.worldId, this.selectedStage.stageNum);
-    },
-    
-    /**
-     * 다음 스테이지 시작
-     */
-    startNextStage: function() {
-        const { worldId, stageNum } = this.selectedStage;
-        const world = getWorldConfig(worldId);
-        
-        // 다음 스테이지 계산
-        let nextWorldId = worldId;
-        let nextStageNum = stageNum + 1;
-        
-        // 월드의 마지막 스테이지였으면 다음 월드로
-        if (nextStageNum > world.stages) {
-            nextWorldId += 1;
-            nextStageNum = 1;
-            
-            // 마지막 월드였으면 맵으로 돌아가기
-            if (nextWorldId > CONFIG.WORLDS.length) {
-                alert('축하합니다! 모든 스테이지를 클리어했습니다!');
-                this.showScreen('map');
-                return;
-            }
-        }
-        
-        // 다음 스테이지 선택
-        this.selectedStage = {
-            worldId: nextWorldId,
-            stageNum: nextStageNum
-        };
-        
-        this.enterStage(nextWorldId, nextStageNum);
-    },
     
     /**
      * 일시정지 토글
@@ -1083,25 +806,16 @@ const App = {
             this.elements.resultCombo.textContent = result.maxCombo || 0;
         }
         
-        // 리뷰 모드 여부 확인
-        const isReview = result.isReviewMode;
-
-        // 다음 버튼 표시/숨기기 (리뷰 모드에서는 항상 숨김)
-        if (this.elements.nextBtn) {
-            this.elements.nextBtn.classList.toggle('hidden', !isCleared || isReview);
-        }
-
         // 결과 타이틀
         const resultTitle = document.getElementById('result-title');
         if (resultTitle) {
-            if (isReview) {
-                resultTitle.textContent = isCleared ? 'Review Complete!' : 'Review Over';
-            } else {
-                resultTitle.textContent = isCleared ? 'Stage Clear!' : 'Game Over';
-            }
+            resultTitle.textContent = isCleared ? 'Round Clear!' : 'Round Over';
             resultTitle.classList.toggle('cleared', isCleared);
             resultTitle.classList.toggle('failed', !isCleared);
         }
+
+        this.elements.nextBtn?.classList.remove('hidden');
+        this.elements.retryBtn?.classList.remove('hidden');
     }
 };
 
