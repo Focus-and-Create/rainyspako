@@ -32,7 +32,6 @@ const App = {
         comboDisplay: null,
         progressBar: null,
         inputField: null,
-        pauseBtn: null,
         cardZone: null,
         gameModeSelect: null,
 
@@ -138,7 +137,6 @@ const App = {
         this.elements.comboDisplay = document.getElementById('combo-display');
         this.elements.progressBar = document.getElementById('progress-bar');
         this.elements.inputField = document.getElementById('input-field');
-        this.elements.pauseBtn = document.getElementById('pause-btn');
         this.elements.cardZone = document.getElementById('card-zone');
         this.elements.gameModeSelect = document.getElementById('game-mode-select');
 
@@ -280,13 +278,6 @@ const App = {
             });
         }
         
-        // 일시정지 버튼
-        if (this.elements.pauseBtn) {
-            this.elements.pauseBtn.addEventListener('click', () => {
-                this.togglePause();
-            });
-        }
-        
         // 결과 화면 버튼들
         if (this.elements.nextBtn) {
             this.elements.nextBtn.addEventListener('click', () => {
@@ -390,6 +381,7 @@ const App = {
      * 새 게임 세션 시작 (커리큘럼 자동 탐색)
      */
     _startFreshGame: function() {
+        Game.sessionScore = 0;
         this.showScreen('game');
         if (this.elements.inputField) this.elements.inputField.value = '';
         Game.startAutoSession(this.currentMode);
@@ -401,6 +393,7 @@ const App = {
      */
     _retryGame: function() {
         if (this._matchViewOpen) return;
+        Game.sessionScore = 0;
         this.showScreen('game');
         if (this.elements.inputField) this.elements.inputField.value = '';
         if (this._lastAutoStage) {
@@ -602,27 +595,6 @@ const App = {
     },
 
     // =========================================
-    // 게임 제어
-    // =========================================
-    
-    /**
-     * 일시정지 토글
-     */
-    togglePause: function() {
-        if (Game.state.isPaused) {
-            Game.resume();
-            if (this.elements.pauseBtn) {
-                this.elements.pauseBtn.textContent = 'II';
-            }
-        } else {
-            Game.pause();
-            if (this.elements.pauseBtn) {
-                this.elements.pauseBtn.textContent = '▶';
-            }
-        }
-    },
-
-    // =========================================
     // 키보드 입력 처리
     // =========================================
     
@@ -631,17 +603,6 @@ const App = {
      * @param {KeyboardEvent} e - 키보드 이벤트
      */
     handleGameKeydown: function(e) {
-        // ESC: 일시정지
-        if (e.key === 'Escape') {
-            this.togglePause();
-            return;
-        }
-
-        // 일시정지 중에는 다른 입력 무시
-        if (Game.state.isPaused) {
-            return;
-        }
-
         // 입력 필드가 포커스되어 있으면 직접 처리하지 않음
         if (document.activeElement === this.elements.inputField) {
             return;
