@@ -247,7 +247,8 @@ const Game = {
     },
 
     /**
-     * 현재 카드 인덱스의 단어를 DOM에 표시
+     * 카드 그리드 렌더링 (현재 + 예정 단어를 격자로 표시)
+     * 최대 9장을 2열 그리드로 배치. 첫 번째 카드가 입력 대상.
      */
     _showCard: function() {
         if (this._cardIdx >= this._cardQueue.length) {
@@ -258,20 +259,24 @@ const Game = {
         this._currentWord = this._cardQueue[this._cardIdx];
         this._currentWord.spawnTime = performance.now();
 
-        const wordEl = document.getElementById('card-word');
-        const hintEl = document.getElementById('card-hint');
-        const progressEl = document.getElementById('card-progress');
+        const container = document.getElementById('card-grid');
+        if (!container) return;
 
-        if (wordEl) wordEl.textContent = this.getDisplayText(this._currentWord);
-        if (hintEl) {
-            hintEl.textContent = '';
-            hintEl.className = 'card-hint hidden';
-        }
-        if (progressEl) {
-            progressEl.textContent = `${this._cardIdx + 1} / ${this._cardQueue.length}`;
-        }
+        const windowEnd = Math.min(this._cardIdx + 9, this._cardQueue.length);
+        const visible = this._cardQueue.slice(this._cardIdx, windowEnd);
+
+        container.innerHTML = visible.map((card, i) => {
+            const cls = i === 0 ? 'cg cg-active' : 'cg cg-upcoming';
+            const text = this.getDisplayText(card);
+            return `<div class="${cls}" data-qidx="${this._cardIdx + i}"><span class="cg-word">${this._esc(text)}</span></div>`;
+        }).join('');
 
         if (this.onStateUpdate) this.onStateUpdate(this.getDisplayState());
+    },
+
+    /** HTML 특수문자 이스케이프 */
+    _esc: function(s) {
+        return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
     },
 
     /**
@@ -285,13 +290,14 @@ const Game = {
         const isCorrect = this.answersMatch(answer, this.currentInput);
         this.currentInput = '';
 
-        const hintEl = document.getElementById('card-hint');
+        // 활성 카드 DOM 업데이트
+        const activeCard = document.querySelector('.cg-active');
 
         if (isCorrect) {
             this.handleCorrectAnswer(this._currentWord);
-            if (hintEl) {
-                hintEl.textContent = `✓ ${answer}`;
-                hintEl.className = 'card-hint card-hint-correct';
+            if (activeCard) {
+                activeCard.classList.replace('cg-active', 'cg-ok');
+                activeCard.querySelector('.cg-word').textContent = `✓ ${answer}`;
             }
             if (this.onStateUpdate) this.onStateUpdate(this.getDisplayState());
             this._showingHint = true;
@@ -302,16 +308,16 @@ const Game = {
                 this._showCard();
             }, 500);
         } else {
-            // 오답: 감점 후 정답 힌트 표시 → 다음 카드 (게임오버 없음)
+            // 오답: 감점 후 정답 힌트 표시 → 다음 카드
             const penalty = Math.floor(CONFIG.GAME.BASE_SCORE * 1.5);
             this.state.score = Math.max(0, this.state.score - penalty);
             this.state.combo = 0;
             this.state.wrongCount++;
             Storage.recordWrongWord(this._currentWord.spanish, this._currentWord.korean);
 
-            if (hintEl) {
-                hintEl.textContent = `✗  ${answer}`;
-                hintEl.className = 'card-hint card-hint-wrong';
+            if (activeCard) {
+                activeCard.classList.replace('cg-active', 'cg-wrong');
+                activeCard.querySelector('.cg-word').textContent = `✗ ${answer}`;
             }
             if (this.onStateUpdate) this.onStateUpdate(this.getDisplayState());
 
