@@ -266,11 +266,13 @@ const Game = {
         const container = document.getElementById('card-grid');
         if (!container) return;
 
-        // 현재 카드부터 최대 8장 표시 (2열 × 4행)
-        const windowEnd = Math.min(this._cardIdx + 8, this._cardQueue.length);
+        // 4×4 = 16칸 항상 채움 (남은 카드가 16장 미만이면 빈 칸으로 패딩)
+        const windowEnd = Math.min(this._cardIdx + 16, this._cardQueue.length);
         const visible = this._cardQueue.slice(this._cardIdx, windowEnd);
+        while (visible.length < 16) visible.push(null);
 
         container.innerHTML = visible.map((card, i) => {
+            if (!card) return `<div class="cg cg-empty"></div>`;
             const cls = i === 0 ? 'cg cg-active' : 'cg cg-upcoming';
             const text = this.getDisplayText(card);
             return `<div class="${cls}"><span class="cg-word">${this._esc(text)}</span></div>`;
