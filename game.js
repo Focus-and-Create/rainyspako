@@ -191,6 +191,7 @@ const Game = {
         this._showingHint = false;
         this.currentInput = '';
         this.nextWordId = 1;
+        this._refillPoolIdx = 0;
 
         // 단어 풀 생성
         if (customPool) {
@@ -268,6 +269,20 @@ const Game = {
      * 새 카드로 이동할 때만 전체 리렌더. 오답 재시도는 DOM만 수정.
      */
     _showCard: function() {
+        // 남은 카드가 16장 미만이면 풀에서 새 카드 추가 (끝없이 이어짐)
+        while (this._cardQueue.length - this._cardIdx < 16 && this.wordPool.length > 0) {
+            const w = this.wordPool[this._refillPoolIdx % this.wordPool.length];
+            this._refillPoolIdx++;
+            this._cardQueue.push({
+                id: this.nextWordId++,
+                spanish: w.es,
+                korean: w.ko,
+                english: w.en || '',
+                isReview: w.isReview || false,
+                spawnTime: 0
+            });
+        }
+
         if (this._cardIdx >= this._cardQueue.length) {
             this.handleStageClear();
             return;
@@ -289,8 +304,8 @@ const Game = {
             if (!card) return `<div class="cg cg-empty"></div>`;
             const cls = i === 0 ? 'cg cg-active' : 'cg cg-upcoming';
             const text = this.getDisplayText(card);
-            // 1~2행(인덱스 0-7): 단어와 뜻 병기
-            const hint = i < 8 ? `<span class="cg-hint">${this._esc(this.getAnswerText(card))}</span>` : '';
+            // 3~4행(인덱스 8-15): 단어와 뜻 병기
+            const hint = i >= 8 ? `<span class="cg-hint">${this._esc(this.getAnswerText(card))}</span>` : '';
             return `<div class="${cls}"><span class="cg-word">${this._esc(text)}</span>${hint}</div>`;
         }).join('');
 
@@ -333,7 +348,7 @@ const Game = {
             // 오답: 첫 번째만 감점/기록, 이후엔 그냥 재시도
             if (!this._wrongOnCurrent) {
                 const penalty = Math.floor(CONFIG.GAME.BASE_SCORE * 1.5);
-                this.state.score = Math.max(0, this.state.score - penalty);
+                this.state.score = Math.max(this._stageStartScore, this.state.score - penalty);
                 this.state.combo = 0;
                 this.state.wrongCount++;
                 Storage.recordWrongWord(this._currentWord.spanish, this._currentWord.korean);
@@ -628,6 +643,7 @@ const Game = {
         this.stop();
         
         // 점수는 게임 오버에도 유지 (localStorage에 영속)
+        this.sessionScore = this.state.score;
         Storage.setGlobalScore(this.state.score);
 
         // 통계 업데이트 (정답/오답 수만)
