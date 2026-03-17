@@ -422,6 +422,9 @@ const App = {
         if (toggleBtn) toggleBtn.textContent = this._matchViewOpen ? 'Type' : 'Match';
 
         if (this._matchViewOpen) {
+            // 타이핑 → 매치: 현재 점수 보존 후 정지
+            Game.sessionScore = Game.state.score;
+            Storage.setGlobalScore(Game.state.score);
             Game.stop();
             MatchGame.init(document.getElementById('match-grid'));
         } else {

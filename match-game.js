@@ -8,7 +8,7 @@
 const MatchGame = {
     COLS: 4,
     ROWS: 5,
-    HALF: 1,       // 1쌍 맞출 때마다 즉시 리필
+    HALF: 5,       // 5쌍(10장) 소거 시 리필
 
     _pool: [],         // 커리큘럼 순서 단어 풀
     _poolIdx: 0,
@@ -215,6 +215,14 @@ const MatchGame = {
                 this._updateCard(prev);
                 this._updateCard(idx);
                 this._matchedCount++;
+
+                // 점수 지급
+                if (typeof Game !== 'undefined' && Game.state && Game.state.isRunning !== false) {
+                    Game.state.score = (Game.state.score || 0) + CONFIG.GAME.BASE_SCORE * 2;
+                    if (typeof App !== 'undefined' && App.elements && App.elements.scoreDisplay) {
+                        App.elements.scoreDisplay.textContent = Game.state.score.toLocaleString();
+                    }
+                }
 
                 if (this._matchedCount >= this.HALF) {
                     this._locked = true;
