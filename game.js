@@ -51,6 +51,9 @@ const Game = {
     /** @type {Object|null} 현재 보여주는 단어 */
     _currentWord: null,
 
+    /** @type {boolean} 현재 카드에서 이미 오답 처리했는지 (중복 감점 방지) */
+    _wrongOnCurrent: false,
+
     /** @type {boolean} 힌트 표시 중 (입력 잠금) */
     _showingHint: false,
 
@@ -247,8 +250,8 @@ const Game = {
     },
 
     /**
-     * 카드 그리드 렌더링 (현재 + 예정 단어를 격자로 표시)
-     * 최대 9장을 2열 그리드로 배치. 첫 번째 카드가 입력 대상.
+     * 카드 그리드 렌더링 (현재 + 예정 단어를 2열 격자로 표시)
+     * 새 카드로 이동할 때만 전체 리렌더. 오답 재시도는 DOM만 수정.
      */
     _showCard: function() {
         if (this._cardIdx >= this._cardQueue.length) {
@@ -258,17 +261,21 @@ const Game = {
 
         this._currentWord = this._cardQueue[this._cardIdx];
         this._currentWord.spawnTime = performance.now();
+        this._wrongOnCurrent = false;
 
         const container = document.getElementById('card-grid');
         if (!container) return;
 
-        const windowEnd = Math.min(this._cardIdx + 9, this._cardQueue.length);
+        // 4×4 = 16칸 항상 채움 (남은 카드가 16장 미만이면 빈 칸으로 패딩)
+        const windowEnd = Math.min(this._cardIdx + 16, this._cardQueue.length);
         const visible = this._cardQueue.slice(this._cardIdx, windowEnd);
+        while (visible.length < 16) visible.push(null);
 
         container.innerHTML = visible.map((card, i) => {
+            if (!card) return `<div class="cg cg-empty"></div>`;
             const cls = i === 0 ? 'cg cg-active' : 'cg cg-upcoming';
             const text = this.getDisplayText(card);
-            return `<div class="${cls}" data-qidx="${this._cardIdx + i}"><span class="cg-word">${this._esc(text)}</span></div>`;
+            return `<div class="${cls}"><span class="cg-word">${this._esc(text)}</span></div>`;
         }).join('');
 
         if (this.onStateUpdate) this.onStateUpdate(this.getDisplayState());
@@ -290,7 +297,6 @@ const Game = {
         const isCorrect = this.answersMatch(answer, this.currentInput);
         this.currentInput = '';
 
-        // 활성 카드 DOM 업데이트
         const activeCard = document.querySelector('.cg-active');
 
         if (isCorrect) {
@@ -308,12 +314,15 @@ const Game = {
                 this._showCard();
             }, 500);
         } else {
-            // 오답: 감점 후 정답 힌트 표시 → 다음 카드
-            const penalty = Math.floor(CONFIG.GAME.BASE_SCORE * 1.5);
-            this.state.score = Math.max(0, this.state.score - penalty);
-            this.state.combo = 0;
-            this.state.wrongCount++;
-            Storage.recordWrongWord(this._currentWord.spanish, this._currentWord.korean);
+            // 오답: 첫 번째만 감점/기록, 이후엔 그냥 재시도
+            if (!this._wrongOnCurrent) {
+                const penalty = Math.floor(CONFIG.GAME.BASE_SCORE * 1.5);
+                this.state.score = Math.max(0, this.state.score - penalty);
+                this.state.combo = 0;
+                this.state.wrongCount++;
+                Storage.recordWrongWord(this._currentWord.spanish, this._currentWord.korean);
+                this._wrongOnCurrent = true;
+            }
 
             if (activeCard) {
                 activeCard.classList.replace('cg-active', 'cg-wrong');
@@ -321,12 +330,16 @@ const Game = {
             }
             if (this.onStateUpdate) this.onStateUpdate(this.getDisplayState());
 
+            // 정답 보여주고 같은 카드 다시 활성화 (다음 카드로 안 넘어감)
             this._showingHint = true;
             setTimeout(() => {
                 if (!this.state.isRunning) return;
                 this._showingHint = false;
-                this._cardIdx++;
-                this._showCard();
+                const card = document.querySelector('.cg-wrong');
+                if (card) {
+                    card.classList.replace('cg-wrong', 'cg-active');
+                    card.querySelector('.cg-word').textContent = this.getDisplayText(this._currentWord);
+                }
             }, 1200);
         }
     },
