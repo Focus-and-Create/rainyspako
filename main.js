@@ -381,7 +381,6 @@ const App = {
      * 새 게임 세션 시작 (커리큘럼 자동 탐색)
      */
     _startFreshGame: function() {
-        Game.sessionScore = 0;
         this.showScreen('game');
         if (this.elements.inputField) this.elements.inputField.value = '';
         Game.startAutoSession(this.currentMode);
@@ -393,7 +392,6 @@ const App = {
      */
     _retryGame: function() {
         if (this._matchViewOpen) return;
-        Game.sessionScore = 0;
         this.showScreen('game');
         if (this.elements.inputField) this.elements.inputField.value = '';
         if (this._lastAutoStage) {

@@ -8,7 +8,7 @@
 const MatchGame = {
     COLS: 4,
     ROWS: 5,
-    HALF: 5,       // 이 수만큼 맞추면 리필
+    HALF: 1,       // 1쌍 맞출 때마다 즉시 리필
 
     _pool: [],         // 커리큘럼 순서 단어 풀
     _poolIdx: 0,
@@ -221,7 +221,7 @@ const MatchGame = {
                     setTimeout(() => {
                         this._refill();
                         this._render();
-                    }, 900);
+                    }, 600);
                 }
             } else {
                 // 오답: 두 카드 모두 강조 해제 + 빨간 플래시
