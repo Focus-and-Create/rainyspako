@@ -457,6 +457,18 @@ const Storage = {
         };
     },
 
+    /** 영구 누적 점수 조회 */
+    getGlobalScore: function() {
+        return ((this._get(CONFIG.STORAGE_KEYS.STATS) || {}).globalScore) || 0;
+    },
+
+    /** 영구 누적 점수 저장 */
+    setGlobalScore: function(score) {
+        const stats = this._get(CONFIG.STORAGE_KEYS.STATS) || {};
+        stats.globalScore = score;
+        this._set(CONFIG.STORAGE_KEYS.STATS, stats);
+    },
+
     // =========================================
     // 설정 관리
     // =========================================

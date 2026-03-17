@@ -42,8 +42,11 @@ const Game = {
     // 카드 모드 상태
     // =========================================
 
-    /** 세션 전체 누적 점수 (스테이지 간 이월됨) */
+    /** 전체 누적 점수 (절대 초기화되지 않음, localStorage 영속) */
     sessionScore: 0,
+
+    /** 이번 스테이지 시작 시점의 점수 (통계 델타 계산용) */
+    _stageStartScore: 0,
 
     /** @type {Array<Object>} 카드 큐 (순서대로 보여줄 단어 목록) */
     _cardQueue: [],
@@ -152,6 +155,13 @@ const Game = {
      * @param {Array|null} customPool - 커스텀 단어 풀 (복습 모드용)
      */
     startStage: function(worldId, stageNum, mode = 'es-to-ko', customPool = null) {
+        // 처음 호출 시 localStorage에서 누적 점수 복원
+        if (!this._scoreLoaded) {
+            this.sessionScore = Storage.getGlobalScore();
+            this._scoreLoaded = true;
+        }
+        this._stageStartScore = this.sessionScore;
+
         // 상태 초기화
         this.state = {
             isRunning: true,
@@ -162,6 +172,7 @@ const Game = {
             stageNum: stageNum,
             mode: mode,
             score: this.sessionScore,
+            // _stageStartScore는 startStage 진입 시 갱신됨
             lives: CONFIG.GAME.INITIAL_LIVES,
             combo: 0,
             maxCombo: 0,
@@ -278,7 +289,9 @@ const Game = {
             if (!card) return `<div class="cg cg-empty"></div>`;
             const cls = i === 0 ? 'cg cg-active' : 'cg cg-upcoming';
             const text = this.getDisplayText(card);
-            return `<div class="${cls}"><span class="cg-word">${this._esc(text)}</span></div>`;
+            // 1~2행(인덱스 0-7): 단어와 뜻 병기
+            const hint = i < 8 ? `<span class="cg-hint">${this._esc(this.getAnswerText(card))}</span>` : '';
+            return `<div class="${cls}"><span class="cg-word">${this._esc(text)}</span>${hint}</div>`;
         }).join('');
 
         if (this.onStateUpdate) this.onStateUpdate(this.getDisplayState());
@@ -566,8 +579,9 @@ const Game = {
         // 게임 정지
         this.stop();
 
-        // 세션 누적 점수 저장 (다음 스테이지로 이월)
+        // 누적 점수 이월 + localStorage 영속 저장
         this.sessionScore = this.state.score;
+        Storage.setGlobalScore(this.state.score);
 
         // 별점 계산
         const stars = this.calculateStars();
@@ -578,9 +592,10 @@ const Game = {
             Storage.saveStageResult(stageId, stars, this.state.score, this.calculateAccuracy());
         }
 
-        // 통계 업데이트 (항상)
+        // 통계 업데이트: 이번 스테이지에서 획득한 점수만 추가
+        const stagePoints = this.state.score - this._stageStartScore;
         Storage.updateStats(
-            this.state.score,
+            stagePoints,
             this.state.correctCount,
             this.state.wrongCount
         );
@@ -612,10 +627,10 @@ const Game = {
         // 게임 정지
         this.stop();
         
-        // 세션 점수 초기화 (게임 오버로 세션 종료)
-        this.sessionScore = 0;
+        // 점수는 게임 오버에도 유지 (localStorage에 영속)
+        Storage.setGlobalScore(this.state.score);
 
-        // 통계 업데이트 (점수는 저장하지 않음)
+        // 통계 업데이트 (정답/오답 수만)
         Storage.updateStats(
             0,
             this.state.correctCount,

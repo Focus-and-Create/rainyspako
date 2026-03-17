@@ -36,7 +36,7 @@
     --gradient-accent: linear-gradient(135deg, #e91e8c, #ff5722);
     --gradient-gold: linear-gradient(135deg, #ffc107, #ff9800);
     --gradient-danger: linear-gradient(135deg, #f44336, #ff5722);
-    --gradient-bg: linear-gradient(135deg, #fff9c4 0%, #fce4ec 35%, #e3f2fd 70%, #e8f5e9 100%);
+    --gradient-bg: #ffffff;
 
     /* 폰트 */
     --font-family: 'Noto Sans KR', -apple-system, BlinkMacSystemFont, sans-serif;
@@ -1685,6 +1685,15 @@ a {
 
 .cg-word {
     display: block;
+}
+
+.cg-hint {
+    display: block;
+    font-size: 10px;
+    font-weight: 500;
+    opacity: 0.6;
+    margin-top: 2px;
+    line-height: 1.2;
 }
 
 .match-grid {
