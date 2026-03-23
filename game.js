@@ -1,7 +1,7 @@
 /**
  * game.js
  * 게임 코어 로직
- * 게임 루프, 렌더링, 충돌 감지, 점수/콤보 시스템
+ * "가랑비" 모델: 스테이지 경계 없이 연속 플레이, 복습+새 단어가 자연스럽게 흐름
  */
 
 const Game = {
@@ -32,6 +32,8 @@ const Game = {
         maxCombo: 0,
         correctCount: 0,
         wrongCount: 0,
+        /** 다음 스테이지 진행까지 남은 정답 수 추적용 */
+        waveCorrect: 0,
         targetWords: 18,
         startTime: 0,
         elapsedTime: 0,
@@ -85,10 +87,7 @@ const Game = {
     
     /** @type {Function|null} 게임 오버 콜백 */
     onGameOver: null,
-    
-    /** @type {Function|null} 스테이지 클리어 콜백 */
-    onStageClear: null,
-    
+
     /** @type {Function|null} 상태 업데이트 콜백 (UI 갱신용) */
     onStateUpdate: null,
 
@@ -172,12 +171,12 @@ const Game = {
             stageNum: stageNum,
             mode: mode,
             score: this.sessionScore,
-            // _stageStartScore는 startStage 진입 시 갱신됨
             lives: CONFIG.GAME.INITIAL_LIVES,
             combo: 0,
             maxCombo: 0,
             correctCount: 0,
             wrongCount: 0,
+            waveCorrect: 0,
             targetWords: CONFIG.STAGE.WORDS_TO_CLEAR,
             startTime: performance.now(),
             elapsedTime: 0,
@@ -196,13 +195,6 @@ const Game = {
         // 단어 풀 생성
         if (customPool) {
             this.wordPool = customPool;
-        } else if (WordManager.isBossStage(worldId, stageNum)) {
-            this.wordPool = WordManager.createBossPool(worldId, stageNum);
-        } else if (WordManager.isReviewStage(worldId, stageNum)) {
-            this.wordPool = WordManager.createReviewPool();
-            if (this.wordPool.length === 0) {
-                this.wordPool = WordManager.createWordPool(worldId, stageNum);
-            }
         } else {
             this.wordPool = WordManager.createWordPool(worldId, stageNum);
         }
@@ -211,7 +203,7 @@ const Game = {
         this._buildCardQueue();
         this._showCard();
 
-        console.log(`Game: ${customPool ? 'Review' : `스테이지 ${worldId}-${stageNum}`} 시작 (카드 모드, ${this._cardQueue.length}장)`);
+        console.log(`Game: 스테이지 ${worldId}-${stageNum} 시작 (연속 모드, 풀 ${this.wordPool.length}개)`);
     },
     
     pause: function() {
@@ -269,7 +261,7 @@ const Game = {
      * 새 카드로 이동할 때만 전체 리렌더. 오답 재시도는 DOM만 수정.
      */
     _showCard: function() {
-        // 남은 카드가 16장 미만이면 풀에서 새 카드 추가 (끝없이 이어짐)
+        // 남은 카드가 16장 미만이면 풀에서 새 카드 추가 (그리드 채우기용)
         while (this._cardQueue.length - this._cardIdx < 16 && this.wordPool.length > 0) {
             const w = this.wordPool[this._refillPoolIdx % this.wordPool.length];
             this._refillPoolIdx++;
@@ -284,7 +276,7 @@ const Game = {
         }
 
         if (this._cardIdx >= this._cardQueue.length) {
-            this.handleStageClear();
+            // 풀이 비어있을 리 없지만 방어 코드
             return;
         }
 
@@ -338,6 +330,7 @@ const Game = {
             }
             if (this.onStateUpdate) this.onStateUpdate(this.getDisplayState());
             this._showingHint = true;
+
             setTimeout(() => {
                 if (!this.state.isRunning) return;
                 this._showingHint = false;
@@ -547,12 +540,12 @@ const Game = {
     handleCorrectAnswer: function(word) {
         // 콤보 증가
         this.state.combo += 1;
-        
+
         // 최대 콤보 갱신
         if (this.state.combo > this.state.maxCombo) {
             this.state.maxCombo = this.state.combo;
         }
-        
+
         // 점수 계산 (카드 모드: 기본 3배)
         let points = CONFIG.GAME.BASE_SCORE * 3;
 
@@ -568,69 +561,72 @@ const Game = {
         if (answerTime < CONFIG.GAME.SPEED_BONUS_THRESHOLD) {
             points += CONFIG.GAME.SPEED_BONUS_POINTS * 3;
         }
-        
+
         // 점수 추가
         this.state.score += points;
-        
+
         // 정답 카운트 증가
         this.state.correctCount += 1;
-        
+        this.state.waveCorrect += 1;
+
         // 틀린 단어였다면 복습 기록 갱신
         Storage.recordCorrectWord(word.spanish);
-        
-        console.log(`정답: ${word.spanish} (+${points}점, 콤보 ${this.state.combo})`);
-    },
-    
 
-    // =========================================
-    // 게임 종료 처리
-    // =========================================
-    
-    /**
-     * 스테이지 클리어 처리
-     */
-    handleStageClear: function() {
-        // 게임 정지
-        this.stop();
-
-        // 누적 점수 이월 + localStorage 영속 저장
+        // 누적 점수 영속 저장
         this.sessionScore = this.state.score;
         Storage.setGlobalScore(this.state.score);
 
-        // 별점 계산
-        const stars = this.calculateStars();
+        // 가랑비 진행: targetWords(18)개 맞출 때마다 조용히 스테이지 저장 → 다음 단어 합류
+        if (this.state.waveCorrect >= this.state.targetWords) {
+            this._advanceWave();
+        }
 
-        // 결과 저장 (리뷰 모드가 아닐 때만 스테이지 결과 저장)
+        console.log(`정답: ${word.spanish} (+${points}점, 콤보 ${this.state.combo})`);
+    },
+
+    /**
+     * 조용한 스테이지 진행 — 게임을 멈추지 않고 현재 스테이지를 저장하고
+     * 다음 스테이지 단어를 풀에 합침 (가랑비에 젖듯)
+     */
+    _advanceWave: function() {
+        const { worldId, stageNum } = this.state;
+
+        // 현재 스테이지 결과 조용히 저장
         if (!this.state.isReviewMode) {
-            const stageId = getStageId(this.state.worldId, this.state.stageNum);
-            Storage.saveStageResult(stageId, stars, this.state.score, this.calculateAccuracy());
+            const stageId = getStageId(worldId, stageNum);
+            const accuracy = this.calculateAccuracy();
+            const stars = this.calculateStars();
+            Storage.saveStageResult(stageId, stars, this.state.score, accuracy);
+
+            // 통계 업데이트
+            const stagePoints = this.state.score - this._stageStartScore;
+            Storage.updateStats(stagePoints, this.state.targetWords, this.state.wrongCount);
         }
 
-        // 통계 업데이트: 이번 스테이지에서 획득한 점수만 추가
-        const stagePoints = this.state.score - this._stageStartScore;
-        Storage.updateStats(
-            stagePoints,
-            this.state.correctCount,
-            this.state.wrongCount
-        );
+        // 다음 스테이지 찾기
+        const next = WordManager.findNextStage(worldId, stageNum);
 
-        console.log(`${this.state.isReviewMode ? '복습' : '스테이지'} 클리어! 별 ${stars}개, 점수 ${this.state.score}`);
-
-        // 콜백 호출
-        if (this.onStageClear) {
-            this.onStageClear({
-                worldId: this.state.worldId,
-                stageNum: this.state.stageNum,
-                stars: stars,
-                score: this.state.score,
-                maxCombo: this.state.maxCombo,
-                accuracy: this.calculateAccuracy(),
-                elapsedTime: this.state.elapsedTime,
-                isReviewMode: this.state.isReviewMode
-            });
+        // 다음 스테이지 단어를 현재 풀에 합치기
+        const newWords = WordManager.createWordPool(next.worldId, next.stageNum);
+        for (const w of newWords) {
+            this.wordPool.push(w);
         }
+
+        // 상태 갱신: 다음 스테이지로 이동, wave 카운터 리셋
+        this.state.worldId = next.worldId;
+        this.state.stageNum = next.stageNum;
+        this.state.waveCorrect = 0;
+        this.state.wrongCount = 0;
+        this._stageStartScore = this.state.score;
+
+        console.log(`가랑비: ${worldId}-${stageNum} 저장 → ${next.worldId}-${next.stageNum} 단어 합류 (풀 ${this.wordPool.length}개)`);
     },
     
+
+    // =========================================
+    // 게임 종료 처리 (유저가 화면을 나갈 때만)
+    // =========================================
+
     /**
      * 게임 오버 처리
      */
@@ -718,12 +714,13 @@ const Game = {
      * @returns {Object} 표시용 상태 객체
      */
     getDisplayState: function() {
-        const total = this._cardQueue.length || 1;
+        const target = this.state.targetWords || 1;
         return {
             score: this.state.score,
             lives: this.state.lives,
             combo: this.state.combo,
-            progress: Math.min(Math.round((this._cardIdx / total) * 100), 100),
+            // waveCorrect 기반 진행도 (0~99%, 100%에 도달하면 _advanceWave가 리셋)
+            progress: Math.min(Math.round((this.state.waveCorrect / target) * 100), 99),
             currentInput: this.currentInput,
             isRunning: this.state.isRunning,
             isPaused: this.state.isPaused,
