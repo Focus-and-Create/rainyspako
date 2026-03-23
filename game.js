@@ -269,7 +269,7 @@ const Game = {
      * 새 카드로 이동할 때만 전체 리렌더. 오답 재시도는 DOM만 수정.
      */
     _showCard: function() {
-        // 남은 카드가 16장 미만이면 풀에서 새 카드 추가 (끝없이 이어짐)
+        // 남은 카드가 16장 미만이면 풀에서 새 카드 추가 (그리드 채우기용)
         while (this._cardQueue.length - this._cardIdx < 16 && this.wordPool.length > 0) {
             const w = this.wordPool[this._refillPoolIdx % this.wordPool.length];
             this._refillPoolIdx++;
@@ -338,6 +338,15 @@ const Game = {
             }
             if (this.onStateUpdate) this.onStateUpdate(this.getDisplayState());
             this._showingHint = true;
+
+            // 클리어 조건 체크: correctCount가 targetWords에 도달하면 스테이지 클리어
+            if (this.state.correctCount >= this.state.targetWords) {
+                setTimeout(() => {
+                    this.handleStageClear();
+                }, 600);
+                return;
+            }
+
             setTimeout(() => {
                 if (!this.state.isRunning) return;
                 this._showingHint = false;
@@ -718,12 +727,12 @@ const Game = {
      * @returns {Object} 표시용 상태 객체
      */
     getDisplayState: function() {
-        const total = this._cardQueue.length || 1;
+        const target = this.state.targetWords || 1;
         return {
             score: this.state.score,
             lives: this.state.lives,
             combo: this.state.combo,
-            progress: Math.min(Math.round((this._cardIdx / total) * 100), 100),
+            progress: Math.min(Math.round((this.state.correctCount / target) * 100), 100),
             currentInput: this.currentInput,
             isRunning: this.state.isRunning,
             isPaused: this.state.isPaused,
