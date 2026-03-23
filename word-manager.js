@@ -404,6 +404,26 @@ const WordManager = {
         // 모든 스테이지 완료 → 처음부터 다시
         return { worldId: CONFIG.WORLDS[0].id, stageNum: 1 };
     },
+
+    /**
+     * 특정 스테이지의 다음 스테이지 반환 (커리큘럼 순서)
+     * @param {number} worldId
+     * @param {number} stageNum
+     * @returns {{worldId: number, stageNum: number}}
+     */
+    findNextStage: function(worldId, stageNum) {
+        const world = getWorldConfig(worldId);
+        if (world && stageNum < world.stages) {
+            return { worldId: worldId, stageNum: stageNum + 1 };
+        }
+        // 다음 월드로
+        const idx = CONFIG.WORLDS.findIndex(w => w.id === worldId);
+        if (idx >= 0 && idx < CONFIG.WORLDS.length - 1) {
+            return { worldId: CONFIG.WORLDS[idx + 1].id, stageNum: 1 };
+        }
+        // 마지막 월드 → 처음으로
+        return { worldId: CONFIG.WORLDS[0].id, stageNum: 1 };
+    },
 };
 
 // 모듈 내보내기 (ES6 모듈 사용 시)

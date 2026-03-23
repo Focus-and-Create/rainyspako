@@ -98,11 +98,9 @@ const App = {
             return;
         }
 
-        // 게임 초기화
+        // 게임 초기화 (가랑비 모델: 스테이지 클리어 없이 연속 플레이)
         Game.init(null);
-        // 스테이지 클리어 / 게임오버 모두 결과 화면 없이 자동으로 다음 세션 시작
-        Game.onStageClear = () => { if (!this._matchViewOpen) this._startFreshGame(); };
-        Game.onGameOver  = () => { if (!this._matchViewOpen) this._retryGame(); };
+        Game.onGameOver  = () => { if (!this._matchViewOpen) this._startFreshGame(); };
         Game.onStateUpdate = (state) => this.updateGameUI(state);
 
         // Supabase 인증 확인
