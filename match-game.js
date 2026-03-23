@@ -216,9 +216,11 @@ const MatchGame = {
                 this._updateCard(idx);
                 this._matchedCount++;
 
-                // 점수 지급
-                if (typeof Game !== 'undefined' && Game.state && Game.state.isRunning !== false) {
+                // 점수 지급 (매치 모드에서는 isRunning이 false이므로 체크하지 않음)
+                if (typeof Game !== 'undefined' && Game.state) {
                     Game.state.score = (Game.state.score || 0) + CONFIG.GAME.BASE_SCORE * 2;
+                    Game.sessionScore = Game.state.score;
+                    Storage.setGlobalScore(Game.state.score);
                     if (typeof App !== 'undefined' && App.elements && App.elements.scoreDisplay) {
                         App.elements.scoreDisplay.textContent = Game.state.score.toLocaleString();
                     }
@@ -236,6 +238,7 @@ const MatchGame = {
                 if (typeof Game !== 'undefined' && Game.state) {
                     const penalty = CONFIG.GAME.BASE_SCORE;
                     Game.state.score = Math.max(Game.sessionScore, Game.state.score - penalty);
+                    Storage.setGlobalScore(Game.state.score);
                     if (typeof App !== 'undefined' && App.elements && App.elements.scoreDisplay) {
                         App.elements.scoreDisplay.textContent = Game.state.score.toLocaleString();
                     }
