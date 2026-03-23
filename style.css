@@ -482,11 +482,11 @@ a {
 /* 입력 필드 */
 /* ========================================= */
 .input-container {
-    flex: 1;
-    min-height: 72px;
+    flex: 1.2;
+    min-height: 80px;
     width: 100%;
     max-width: var(--canvas-width);
-    padding: 10px var(--spacing-lg);
+    padding: 12px var(--spacing-lg);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -529,7 +529,7 @@ a {
     display: flex;
     align-items: center;
     gap: var(--spacing-xs);
-    padding: 6px var(--spacing-lg) 4px;
+    padding: 10px var(--spacing-lg) 8px;
     background: linear-gradient(0deg, rgba(255, 240, 250, 0.9), rgba(255, 248, 255, 0.85));
     border-top: 1px solid rgba(233, 30, 140, 0.1);
     flex-wrap: nowrap;
@@ -1632,7 +1632,7 @@ a {
     grid-template-rows: repeat(4, 1fr);
     gap: 6px;
     width: 100%;
-    padding: 8px 8px 4px;
+    padding: 8px 8px 12px;
 }
 
 /* 개별 카드: 셀을 꽉 채움 */
