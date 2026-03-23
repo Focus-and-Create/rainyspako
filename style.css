@@ -482,11 +482,11 @@ a {
 /* 입력 필드 */
 /* ========================================= */
 .input-container {
-    flex: 1.2;
-    min-height: 80px;
+    flex: 0.6;
+    min-height: 0;
     width: 100%;
     max-width: var(--canvas-width);
-    padding: 12px var(--spacing-lg);
+    padding: 8px var(--spacing-lg);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -524,12 +524,14 @@ a {
 /* 특수문자 입력 바 */
 /* ========================================= */
 .special-chars-bar {
+    flex: 0.4;
+    min-height: 0;
     width: 100%;
     max-width: var(--canvas-width);
     display: flex;
     align-items: center;
     gap: var(--spacing-xs);
-    padding: 10px var(--spacing-lg) 8px;
+    padding: 4px var(--spacing-lg);
     background: linear-gradient(0deg, rgba(255, 240, 250, 0.9), rgba(255, 248, 255, 0.85));
     border-top: 1px solid rgba(233, 30, 140, 0.1);
     flex-wrap: nowrap;
@@ -1632,7 +1634,7 @@ a {
     grid-template-rows: repeat(4, 1fr);
     gap: 6px;
     width: 100%;
-    padding: 8px 8px 12px;
+    padding: 8px;
 }
 
 /* 개별 카드: 셀을 꽉 채움 */
@@ -1715,7 +1717,7 @@ a {
     grid-template-rows: repeat(5, 1fr);
     gap: 6px;
     width: 100%;
-    padding: 8px 8px 4px;
+    padding: 8px;
 }
 
 /* 카드 기본 */
