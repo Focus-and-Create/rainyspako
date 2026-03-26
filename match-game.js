@@ -171,6 +171,7 @@ const MatchGame = {
     _makePairCards: function(words) {
         const cards = [];
         for (const w of words) {
+            if (w?.es) this._wordMap[w.es] = w;
             const pair = this._getPair(w);
             if (!pair) continue;
             const pid = this._pairCounter++;
@@ -230,17 +231,27 @@ const MatchGame = {
         const words = this._composeWords(this.HALF, exclude);
         const used = new Set([...exclude, ...words.map(w => w.es)]);
 
-        // 단어 풀이 부족한 상황에서도 리필이 멈추지 않도록 보강
+        // 1차 보강: 방금 제거된(매칭된) 단어를 우선 재사용해서 보드를 항상 채움
+        if (words.length < this.HALF) {
+            const matchedFallback = [];
+            const matchedSeen = new Set();
+            for (const c of this._cards) {
+                if (!c.matched || !c.es || matchedSeen.has(c.es) || used.has(c.es)) continue;
+                const w = this._wordMap[c.es];
+                if (w && this._getPair(w)) {
+                    matchedSeen.add(c.es);
+                    matchedFallback.push(w);
+                }
+            }
+            const extra = this._drawWeighted(this.HALF - words.length, used, matchedFallback);
+            for (const w of extra) { words.push(w); used.add(w.es); }
+        }
+
+        // 2차 보강: 그래도 부족하면 전체 인덱스에서 유니크 단어만 보충(중복 금지)
         if (words.length < this.HALF) {
             const fallbackPool = Object.values(this._wordMap).filter(w => w?.es && this._getPair(w));
             const extra = this._drawWeighted(this.HALF - words.length, used, fallbackPool);
             for (const w of extra) { words.push(w); used.add(w.es); }
-
-            // 마지막 안전장치: 중복 허용으로라도 빈 칸 없이 리필
-            while (words.length < this.HALF && fallbackPool.length > 0) {
-                const pick = fallbackPool[Math.floor(Math.random() * fallbackPool.length)];
-                words.push(pick);
-            }
         }
         const newCards = this._makePairCards(words);
         let ni = 0;
