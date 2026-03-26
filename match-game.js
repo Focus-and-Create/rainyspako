@@ -268,7 +268,6 @@ const MatchGame = {
 
     /** 리필: 5쌍 = 1 새 단어 + 2 최근 + 2 복습 (보드 잔여와 중복 없음) */
     _refill: function() {
-        const selectedAtStart = this._selected;
         const exclude = new Set();
         for (const c of this._cards) {
             if (!c.matched) exclude.add(c.es);
@@ -283,10 +282,8 @@ const MatchGame = {
         this._matchedCount = 0;
 
         const finishRefill = () => {
-            if (this._selected === selectedAtStart) {
-                this._selected = (selectedAtStart !== null && this._cards[selectedAtStart] && !this._cards[selectedAtStart].matched)
-                    ? selectedAtStart
-                    : null;
+            if (this._selected !== null && this._cards[this._selected]?.matched) {
+                this._selected = null;
             }
             if (this._selected !== null) this._updateCard(this._selected);
             this._isRefilling = false;
