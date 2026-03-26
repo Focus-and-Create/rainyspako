@@ -268,7 +268,7 @@ const MatchGame = {
     },
 
     /**
-     * 1+2+2 구성으로 단어 뽑기
+     * 현재 모드/상태에 맞춰 리필 단어를 뽑기
      * @param {number} total - 총 뽑을 쌍 수
      * @param {Set<string>} exclude - 제외 단어
      * @returns {Array} 선택된 단어 배열
@@ -314,7 +314,7 @@ const MatchGame = {
         return words;
     },
 
-    /** 처음 20장 딜: 1 새 단어 + 2 최근 + 7 복습 */
+    /** 처음 20장 딜: 모드에 따라 새 단어 포함 + 최근/복습 혼합 */
     _deal: function() {
         const words = this._composeWords(10, new Set());
         this._cards = this._makePairCards(words);
@@ -377,11 +377,16 @@ const MatchGame = {
         const extraCards = cards.filter(c => c.type !== 'tgt' && c.type !== 'src');
         const arranged = [];
         for (const slot of matchedSlots) {
-            const col = slot % this.COLS;
-            if (col < 2) {
+            const expectedType = this._cards[slot]?.type;
+            if (expectedType === 'tgt') {
                 arranged.push(tgtCards.length > 0 ? tgtCards.shift() : (srcCards.shift() || extraCards.shift()));
-            } else {
+            } else if (expectedType === 'src') {
                 arranged.push(srcCards.length > 0 ? srcCards.shift() : (tgtCards.shift() || extraCards.shift()));
+            } else {
+                const col = slot % this.COLS;
+                arranged.push(col < 2
+                    ? (tgtCards.shift() || srcCards.shift() || extraCards.shift())
+                    : (srcCards.shift() || tgtCards.shift() || extraCards.shift()));
             }
         }
         return arranged.filter(Boolean);
