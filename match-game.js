@@ -15,6 +15,8 @@ const MatchGame = {
     _curriculum: [],   // 아직 소개되지 않은 단어 큐
     _newWord: null,    // 현재 학습 중인 새 단어
     _mastery: {},      // { spanish: 정답횟수 }
+    _newWordStreak: {}, // { spanish: 연속 정답횟수 }
+    _graduatedWords: {}, // { spanish: true } 현재 curriculum에서 졸업 처리된 단어
     _pairCounter: 0,
 
     _cards: [],
@@ -26,6 +28,7 @@ const MatchGame = {
     _curriculumStageId: null,
     _sorted: false,
     _matchMode: 'fast',  // 'fast' = 새 단어 2개, 'review' = 복습 집중
+    _refillMode: 'flow', // 'flow' = 5쌍 제거 시 리필, 'clear' = 전부 제거 시 리필
     _newWords: [],       // fast 모드에서 현재 학습 중인 새 단어들
 
     NEW_WORD_MASTERY: 3,
@@ -60,6 +63,8 @@ const MatchGame = {
         this._recentPool = [];
         this._curriculum = [];
         this._mastery = {};
+        this._newWordStreak = {};
+        this._graduatedWords = {};
         this._newWord = null;
         this._newWords = [];
         this._pairCounter = 0;
@@ -139,7 +144,11 @@ const MatchGame = {
         // fast 모드: 2개씩 소개
         const count = this._matchMode === 'fast' ? 2 : 1;
         for (let i = 0; i < count && this._curriculum.length > 0; i++) {
-            this._newWords.push(this._curriculum.shift());
+            const nextWord = this._curriculum.shift();
+            this._newWords.push(nextWord);
+            if (nextWord && nextWord.es && typeof this._newWordStreak[nextWord.es] !== 'number') {
+                this._newWordStreak[nextWord.es] = 0;
+            }
         }
         this._newWord = this._newWords[0]; // 호환용
         this._saveProgressState();
@@ -164,6 +173,19 @@ const MatchGame = {
                 }
             });
             this._mastery = restoredMastery;
+            this._newWordStreak = {};
+            this._graduatedWords = {};
+
+            // 이전 세션에서 졸업한 새 단어는 curriculum에서 제거하고 복습 풀로 유지
+            const savedGraduatedEs = Array.isArray(saved.graduatedEs) ? saved.graduatedEs : [];
+            savedGraduatedEs.forEach(es => {
+                if (!es) return;
+                this._graduatedWords[es] = true;
+                if (curriculumMap[es]) {
+                    this._pool.push(curriculumMap[es]);
+                    delete curriculumMap[es];
+                }
+            });
 
             const nextCurriculum = [];
             const savedCurriculumEs = Array.isArray(saved.curriculumEs) ? saved.curriculumEs : [];
@@ -179,12 +201,14 @@ const MatchGame = {
             // 새 단어 목록 복원
             const savedNewWords = Array.isArray(saved.newWordEsList) ? saved.newWordEsList
                 : saved.newWordEs ? [saved.newWordEs] : [];
+            const savedStreak = saved.newWordStreak || {};
             this._newWords = [];
             for (const es of savedNewWords) {
                 const idx = this._curriculum.findIndex(w => w.es === es);
                 if (idx >= 0) {
                     this._newWords.push(this._curriculum[idx]);
                     this._curriculum.splice(idx, 1);
+                    this._newWordStreak[es] = Math.max(0, savedStreak[es] || 0);
                 }
             }
             this._newWord = this._newWords[0] || null;
@@ -201,7 +225,9 @@ const MatchGame = {
                 newWordEs: this._newWord ? this._newWord.es : null,
                 newWordEsList: this._newWords.map(w => w.es),
                 curriculumEs: this._curriculum.map(w => w.es),
-                mastery: this._mastery
+                graduatedEs: Object.keys(this._graduatedWords),
+                mastery: this._mastery,
+                newWordStreak: this._newWordStreak
             };
             localStorage.setItem(this.STORAGE_KEY, JSON.stringify(payload));
         } catch (e) {
@@ -258,7 +284,7 @@ const MatchGame = {
     },
 
     /**
-     * 1+2+2 구성으로 단어 뽑기
+     * 현재 모드/상태에 맞춰 리필 단어를 뽑기
      * @param {number} total - 총 뽑을 쌍 수
      * @param {Set<string>} exclude - 제외 단어
      * @returns {Array} 선택된 단어 배열
@@ -304,7 +330,7 @@ const MatchGame = {
         return words;
     },
 
-    /** 처음 20장 딜: 1 새 단어 + 2 최근 + 7 복습 */
+    /** 처음 20장 딜: 모드에 따라 새 단어 포함 + 최근/복습 혼합 */
     _deal: function() {
         const words = this._composeWords(10, new Set());
         this._cards = this._makePairCards(words);
@@ -324,20 +350,22 @@ const MatchGame = {
             if (!c.matched) exclude.add(c.es);
         }
         const words = this._composeWords(this.HALF, exclude);
-        const newCards = this._makePairCards(words);
+        let newCards = this._makePairCards(words);
         const matchedSlots = [];
         for (let i = 0; i < this._cards.length; i++) {
             if (this._cards[i].matched) matchedSlots.push(i);
+        }
+        if (this._sorted) {
+            newCards = this._arrangeCardsForSortedSlots(newCards, matchedSlots);
+        }
+        if (newCards.length > matchedSlots.length) {
+            newCards = newCards.slice(0, matchedSlots.length);
         }
 
         this._matchedCount = 0;
 
         const finishRefill = () => {
-            if (this._sorted) {
-                this._applySortedLayout();
-                this._selected = null;
-                this._render();
-            } else if (selectedAtStart !== null && this._cards[selectedAtStart] && !this._cards[selectedAtStart].matched) {
+            if (selectedAtStart !== null && this._cards[selectedAtStart] && !this._cards[selectedAtStart].matched) {
                 this._selected = selectedAtStart;
                 this._updateCard(selectedAtStart);
             }
@@ -355,11 +383,35 @@ const MatchGame = {
             const slot = matchedSlots[si++];
             if (ni < newCards.length) {
                 this._cards[slot] = newCards[ni++];
-                this._updateCard(slot);
+            } else if (this._cards[slot]) {
+                // 예외적으로 새 카드 수가 부족할 때도 슬롯이 닫힌 상태로 남지 않게 처리
+                this._cards[slot].matched = false;
             }
-            setTimeout(placeNext, 90);
+            this._updateCard(slot);
+            setTimeout(placeNext, this._sorted ? 55 : 90);
         };
         placeNext();
+    },
+
+    _arrangeCardsForSortedSlots: function(cards, matchedSlots) {
+        const tgtCards = cards.filter(c => c.type === 'tgt');
+        const srcCards = cards.filter(c => c.type === 'src');
+        const extraCards = cards.filter(c => c.type !== 'tgt' && c.type !== 'src');
+        const arranged = [];
+        for (const slot of matchedSlots) {
+            const expectedType = this._cards[slot]?.type;
+            if (expectedType === 'tgt') {
+                arranged.push(tgtCards.length > 0 ? tgtCards.shift() : (srcCards.shift() || extraCards.shift()));
+            } else if (expectedType === 'src') {
+                arranged.push(srcCards.length > 0 ? srcCards.shift() : (tgtCards.shift() || extraCards.shift()));
+            } else {
+                const col = slot % this.COLS;
+                arranged.push(col < 2
+                    ? (tgtCards.shift() || srcCards.shift() || extraCards.shift())
+                    : (srcCards.shift() || tgtCards.shift() || extraCards.shift()));
+            }
+        }
+        return arranged.filter(Boolean);
     },
 
     // =========================================
@@ -464,6 +516,11 @@ const MatchGame = {
         }
     },
 
+    setRefillMode: function(mode) {
+        if (mode !== 'flow' && mode !== 'clear') return;
+        this._refillMode = mode;
+    },
+
     // =========================================
     // 입력 처리
     // =========================================
@@ -513,19 +570,26 @@ const MatchGame = {
                 const wordEs = card.es || prevCard.es;
                 if (wordEs) {
                     this._mastery[wordEs] = (this._mastery[wordEs] || 0) + 1;
+                    const isCurrentNewWord = this._newWords.some(w => w && w.es === wordEs);
+                    if (isCurrentNewWord) {
+                        this._newWordStreak[wordEs] = (this._newWordStreak[wordEs] || 0) + 1;
+                    }
                     this._saveProgressState();
 
                     // 새 단어 졸업 체크
-                    const graduatingIdx = this._newWords.findIndex(w => w && w.es === wordEs && this._mastery[wordEs] >= this.NEW_WORD_MASTERY);
+                    const graduatingIdx = this._newWords.findIndex(w => w && w.es === wordEs && (this._newWordStreak[wordEs] || 0) >= this.NEW_WORD_MASTERY);
                     if (graduatingIdx >= 0) {
                         const graduated = this._newWords[graduatingIdx];
                         this._pool.push(graduated);
                         this._newWords.splice(graduatingIdx, 1);
+                        delete this._newWordStreak[graduated.es];
+                        this._graduatedWords[graduated.es] = true;
                         console.log(`매치 가랑비: "${graduated.es}" 졸업 → 기존 풀 합류`);
                         if (this._newWords.length === 0) {
                             this._introduceNextWord();
                         }
                         this._newWord = this._newWords[0] || null;
+                        this._saveProgressState();
                     }
                 }
 
@@ -539,7 +603,10 @@ const MatchGame = {
                     }
                 }
 
-                if (this._matchedCount >= this.HALF) {
+                const shouldRefill = this._refillMode === 'clear'
+                    ? this._cards.every(c => c.matched)
+                    : this._matchedCount >= this.HALF;
+                if (shouldRefill) {
                     this._locked = true;
                     this._isRefilling = true;
                     setTimeout(() => {
@@ -548,6 +615,13 @@ const MatchGame = {
                 }
             } else {
                 // 오답
+                const wrongWords = [prevCard?.es, card?.es].filter(Boolean);
+                for (const wrongEs of wrongWords) {
+                    if (this._newWords.some(w => w && w.es === wrongEs)) {
+                        this._newWordStreak[wrongEs] = 0;
+                    }
+                }
+                if (wrongWords.length > 0) this._saveProgressState();
                 if (typeof Game !== 'undefined' && Game.state) {
                     const penalty = CONFIG.GAME.BASE_SCORE;
                     Game.state.score = Math.max(Game.sessionScore, Game.state.score - penalty);

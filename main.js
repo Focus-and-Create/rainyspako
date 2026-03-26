@@ -304,6 +304,20 @@ const App = {
         if (viewToggleBtn) {
             viewToggleBtn.addEventListener('click', () => this._toggleGameView());
         }
+        const gameSettingsBtn = document.getElementById('game-settings-btn');
+        const gameSettingsPanel = document.getElementById('game-settings-panel');
+        if (gameSettingsBtn && gameSettingsPanel) {
+            gameSettingsBtn.addEventListener('click', (e) => {
+                e.stopPropagation();
+                gameSettingsPanel.classList.toggle('hidden');
+            });
+            document.addEventListener('click', (e) => {
+                if (gameSettingsPanel.classList.contains('hidden')) return;
+                if (!gameSettingsPanel.contains(e.target) && e.target !== gameSettingsBtn) {
+                    gameSettingsPanel.classList.add('hidden');
+                }
+            });
+        }
 
         // 짝 잇기 카드 클릭 (이벤트 위임)
         const matchGrid = document.getElementById('match-grid');
@@ -326,13 +340,27 @@ const App = {
         // 매치 학습 모드 버튼
         const matchModeFast = document.getElementById('match-mode-fast');
         const matchModeReview = document.getElementById('match-mode-review');
+        const matchRefillFlow = document.getElementById('match-refill-flow');
+        const matchRefillClear = document.getElementById('match-refill-clear');
         const setMatchModeUI = (mode) => {
             if (matchModeFast) matchModeFast.classList.toggle('match-mode-active', mode === 'fast');
             if (matchModeReview) matchModeReview.classList.toggle('match-mode-active', mode === 'review');
             MatchGame.setMatchMode(mode);
+            Storage.setSetting('matchMode', mode);
+        };
+        const setRefillModeUI = (mode) => {
+            if (matchRefillFlow) matchRefillFlow.classList.toggle('match-mode-active', mode === 'flow');
+            if (matchRefillClear) matchRefillClear.classList.toggle('match-mode-active', mode === 'clear');
+            MatchGame.setRefillMode(mode);
+            Storage.setSetting('matchRefillMode', mode);
         };
         if (matchModeFast) matchModeFast.addEventListener('click', () => setMatchModeUI('fast'));
         if (matchModeReview) matchModeReview.addEventListener('click', () => setMatchModeUI('review'));
+        if (matchRefillFlow) matchRefillFlow.addEventListener('click', () => setRefillModeUI('flow'));
+        if (matchRefillClear) matchRefillClear.addEventListener('click', () => setRefillModeUI('clear'));
+
+        setMatchModeUI(Storage.getSetting('matchMode') || 'fast');
+        setRefillModeUI(Storage.getSetting('matchRefillMode') || 'flow');
 
         // Stats 버튼 (게임 헤더)
         const statsBtn = document.getElementById('stats-btn');
@@ -406,7 +434,7 @@ const App = {
     _lastAutoStage: null,
 
     /** @type {boolean} 짝 잇기 뷰가 열려 있는지 */
-    _matchViewOpen: false,
+    _matchViewOpen: true,
 
     /**
      * 새 게임 세션 시작 (커리큘럼 자동 탐색)
@@ -416,6 +444,15 @@ const App = {
         if (this.elements.inputField) this.elements.inputField.value = '';
         Game.startAutoSession(this.currentMode);
         this._lastAutoStage = { worldId: Game.state.worldId, stageNum: Game.state.stageNum };
+        this._syncGameViewUI();
+        if (this._matchViewOpen) {
+            Game.sessionScore = Game.state.score;
+            Storage.setGlobalScore(Game.state.score);
+            Game.stop();
+            MatchGame.init(document.getElementById('match-grid'));
+            MatchGame.setMatchMode(Storage.getSetting('matchMode') || 'fast');
+            MatchGame.setRefillMode(Storage.getSetting('matchRefillMode') || 'flow');
+        }
     },
 
     /**
@@ -437,6 +474,21 @@ const App = {
      */
     _toggleGameView: function() {
         this._matchViewOpen = !this._matchViewOpen;
+        this._syncGameViewUI();
+        if (this._matchViewOpen) {
+            // 타이핑 → 매치: 현재 점수 보존 후 정지
+            Game.sessionScore = Game.state.score;
+            Storage.setGlobalScore(Game.state.score);
+            Game.stop();
+            MatchGame.init(document.getElementById('match-grid'));
+            MatchGame.setMatchMode(Storage.getSetting('matchMode') || 'fast');
+            MatchGame.setRefillMode(Storage.getSetting('matchRefillMode') || 'flow');
+        } else {
+            this._startFreshGame();
+        }
+    },
+
+    _syncGameViewUI: function() {
         const typingView = document.getElementById('typing-view');
         const matchView  = document.getElementById('match-view');
         const inputArea  = document.querySelector('.input-container');
@@ -451,16 +503,6 @@ const App = {
         progressCt?.classList.toggle('hidden', this._matchViewOpen);
 
         if (toggleBtn) toggleBtn.textContent = this._matchViewOpen ? 'Type' : 'Match';
-
-        if (this._matchViewOpen) {
-            // 타이핑 → 매치: 현재 점수 보존 후 정지
-            Game.sessionScore = Game.state.score;
-            Storage.setGlobalScore(Game.state.score);
-            Game.stop();
-            MatchGame.init(document.getElementById('match-grid'));
-        } else {
-            this._startFreshGame();
-        }
     },
 
     /**

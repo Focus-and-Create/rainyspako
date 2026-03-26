@@ -135,14 +135,39 @@
             </div>
 
             <div style="display:flex;align-items:center;gap:6px;">
+                <button id="game-view-toggle" class="icon-btn" title="짝 잇기 / 타이핑 전환">Match</button>
+                <button id="game-settings-btn" class="icon-btn" aria-label="게임 설정">⚙</button>
+                <button id="stats-btn" class="icon-btn" aria-label="통계">☰</button>
+            </div>
+        </div>
+
+        <div id="game-settings-panel" class="game-settings-panel hidden">
+            <div class="game-settings-row">
+                <span class="game-settings-label">학습 모드</span>
                 <select id="game-mode-select" class="mode-select-inline">
                     <option value="es-to-ko">ES→KO</option>
                     <option value="ko-to-es">KO→ES</option>
                     <option value="es-to-en">ES→EN</option>
                     <option value="en-to-es">EN→ES</option>
                 </select>
-                <button id="game-view-toggle" class="icon-btn" title="짝 잇기 / 타이핑 전환">Match</button>
-                <button id="stats-btn" class="icon-btn" aria-label="통계">☰</button>
+            </div>
+            <div class="game-settings-row">
+                <span class="game-settings-label">매치 학습</span>
+                <div class="match-mode-btns">
+                    <button id="match-mode-fast" class="match-tool-btn match-mode-active" title="새 단어 2개씩 추가">빠른 학습</button>
+                    <button id="match-mode-review" class="match-tool-btn" title="복습 집중">복습</button>
+                </div>
+            </div>
+            <div class="game-settings-row">
+                <span class="game-settings-label">리필 방식</span>
+                <div class="match-mode-btns">
+                    <button id="match-refill-flow" class="match-tool-btn match-mode-active" title="5쌍 제거 시 리필">흐름형</button>
+                    <button id="match-refill-clear" class="match-tool-btn" title="전체 제거 후 리필">클리어형</button>
+                </div>
+            </div>
+            <div class="game-settings-row">
+                <span class="game-settings-label">정렬</span>
+                <button id="match-sort-btn" class="match-tool-btn" title="뜻↔단어 정렬">정렬</button>
             </div>
         </div>
         
@@ -191,13 +216,6 @@
 
         <!-- 짝 잇기 게임 뷰 -->
         <div id="match-view" class="match-view hidden">
-            <div class="match-toolbar">
-                <button id="match-sort-btn" class="match-tool-btn" title="뜻↔단어 정렬">정렬</button>
-                <div class="match-mode-btns">
-                    <button id="match-mode-fast" class="match-tool-btn match-mode-active" title="새 단어 2개씩 추가">빠른 학습</button>
-                    <button id="match-mode-review" class="match-tool-btn" title="복습 집중">복습</button>
-                </div>
-            </div>
             <div id="match-grid" class="match-grid"></div>
         </div>
     </div>

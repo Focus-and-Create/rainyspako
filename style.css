@@ -1649,6 +1649,32 @@ a {
     gap: 4px;
 }
 
+.game-settings-panel {
+    width: 100%;
+    max-width: var(--canvas-width);
+    margin: 6px auto 4px;
+    padding: 10px;
+    border-radius: var(--radius-md);
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.game-settings-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+}
+
+.game-settings-label {
+    font-size: 12px;
+    color: var(--color-text-muted);
+    font-weight: 700;
+}
+
 /* =========================================
  * 카드 그리드 (타이핑 게임)
  * ========================================= */
