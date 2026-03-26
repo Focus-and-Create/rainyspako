@@ -161,16 +161,15 @@ const MatchGame = {
             });
             this._mastery = restoredMastery;
 
-            const nextCurriculum = [];
-            const savedCurriculumEs = Array.isArray(saved.curriculumEs) ? saved.curriculumEs : [];
-            savedCurriculumEs.forEach(es => {
-                if (curriculumMap[es]) {
-                    nextCurriculum.push(curriculumMap[es]);
-                    delete curriculumMap[es];
-                }
-            });
-            Object.values(curriculumMap).forEach(w => nextCurriculum.push(w));
-            this._curriculum = nextCurriculum;
+            const hasSavedCurriculum = Array.isArray(saved.curriculumEs);
+            if (hasSavedCurriculum) {
+                const nextCurriculum = [];
+                saved.curriculumEs.forEach(es => {
+                    if (curriculumMap[es]) nextCurriculum.push(curriculumMap[es]);
+                });
+                // 저장된 커리큘럼 목록에 없는 단어는 이미 소개/완료된 것으로 간주하여 재추가하지 않음
+                this._curriculum = nextCurriculum;
+            }
 
             if (saved.newWordEs) {
                 const idx = this._curriculum.findIndex(w => w.es === saved.newWordEs);
