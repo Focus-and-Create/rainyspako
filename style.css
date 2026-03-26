@@ -1673,6 +1673,14 @@ a {
     opacity: 0.65;
 }
 
+/* 새 단어 카드 (예정 카드 중 학습 중인 신규 단어) */
+.cg-upcoming.cg-new {
+    background: linear-gradient(135deg, #e8f5e9, #c8e6c9);
+    color: #1b5e20;
+    border: 2px solid #81c784;
+    opacity: 0.8;
+}
+
 /* 정답 처리 */
 .cg-ok {
     background: linear-gradient(135deg, #e8f5e9, #a5d6a7);
@@ -1748,6 +1756,13 @@ a {
     background: linear-gradient(135deg, #e3f2fd, #bbdefb);
     color: #0d47a1;
     border: 2px solid #90caf9;
+}
+
+/* 새 단어 카드 (매치 게임, src만) */
+.mc-src.mc-new {
+    background: linear-gradient(135deg, #e8f5e9, #c8e6c9);
+    color: #1b5e20;
+    border: 2px solid #81c784;
 }
 
 /* 타겟 언어 카드 (핑크) */
