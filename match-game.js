@@ -336,6 +336,7 @@ const MatchGame = {
         const words = this._composeWords(this.HALF, exclude);
         let newCards = this._makePairCards(words);
         const matchedSlots = [];
+        const shouldAnimateRefill = !this._sorted;
         for (let i = 0; i < this._cards.length; i++) {
             if (this._cards[i].matched) matchedSlots.push(i);
         }
@@ -364,9 +365,9 @@ const MatchGame = {
             const slot = matchedSlots[si++];
             if (ni < newCards.length) {
                 this._cards[slot] = newCards[ni++];
-                this._updateCard(slot);
+                if (shouldAnimateRefill) this._updateCard(slot);
             }
-            setTimeout(placeNext, this._sorted ? 55 : 90);
+            setTimeout(placeNext, shouldAnimateRefill ? 90 : 0);
         };
         placeNext();
     },
