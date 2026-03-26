@@ -24,6 +24,7 @@ const MatchGame = {
     _container: null,
 
     NEW_WORD_MASTERY: 3,
+    REFILL_DELAY_MS: 1200,
 
     // =========================================
     // 초기화
@@ -216,12 +217,12 @@ const MatchGame = {
 
     /** 리필: 5쌍 = 1 새 단어 + 2 최근 + 2 복습 (보드 잔여와 중복 없음) */
     _refill: function() {
+        const prevSelected = this._selected;
         const exclude = new Set();
         for (const c of this._cards) {
             if (!c.matched) exclude.add(c.es);
         }
         const words = this._composeWords(this.HALF, exclude);
-        words.push(...fromPool);
         const newCards = this._makePairCards(words);
         let ni = 0;
         for (let i = 0; i < this._cards.length; i++) {
@@ -230,7 +231,9 @@ const MatchGame = {
             }
         }
         this._matchedCount = 0;
-        this._selected = null;
+        this._selected = (prevSelected !== null && this._cards[prevSelected] && !this._cards[prevSelected].matched)
+            ? prevSelected
+            : null;
         this._locked = false;
     },
 
@@ -329,7 +332,7 @@ const MatchGame = {
                     setTimeout(() => {
                         this._refill();
                         this._render();
-                    }, 600);
+                    }, this.REFILL_DELAY_MS);
                 }
             } else {
                 // 오답
