@@ -126,13 +126,14 @@ const MatchGame = {
 
     /**
      * 가중치 기반 단어 뽑기: 많이 맞힌 단어는 덜 나옴
+     * @param {number} n - 뽑을 개수
+     * @param {Set<string>} exclude - 제외할 단어 es Set
      */
-    _drawWeighted: function(n) {
+    _drawWeighted: function(n, exclude = new Set()) {
         if (this._pool.length === 0) return [];
         const result = [];
-        const used = new Set();
+        const used = new Set(exclude);
         for (let i = 0; i < n; i++) {
-            // 아직 안 뽑힌 단어만 대상
             const candidates = this._pool.filter(w => !used.has(w.es));
             if (candidates.length === 0) break;
             const weights = candidates.map(w => 1 / (1 + (this._mastery[w.es] || 0)));
@@ -161,15 +162,17 @@ const MatchGame = {
         return this._shuffle(cards);
     },
 
-    /** 처음 20장 딜: 9쌍 기존 + 1쌍 새 단어 */
+    /** 처음 20장 딜: 9쌍 기존 + 1쌍 새 단어 (중복 없음) */
     _deal: function() {
         const words = [];
+        const exclude = new Set();
         // 새 단어 1쌍
         if (this._newWord && this._getPair(this._newWord)) {
             words.push(this._newWord);
+            exclude.add(this._newWord.es);
         }
-        // 나머지는 기존 풀에서
-        const fromPool = this._drawWeighted(10 - words.length);
+        // 나머지는 기존 풀에서 (새 단어 제외)
+        const fromPool = this._drawWeighted(10 - words.length, exclude);
         words.push(...fromPool);
         this._cards = this._makePairCards(words);
         this._matchedCount = 0;
@@ -177,15 +180,21 @@ const MatchGame = {
         this._locked = false;
     },
 
-    /** 리필: 5쌍 중 1쌍은 새 단어, 4쌍은 기존 풀 (가중치 기반) */
+    /** 리필: 5쌍 중 1쌍은 새 단어, 4쌍은 기존 풀 (보드 잔여 카드와 중복 없음) */
     _refill: function() {
+        // 보드에 남아있는(미매칭) 카드의 단어를 제외 대상으로
+        const exclude = new Set();
+        for (const c of this._cards) {
+            if (!c.matched) exclude.add(c.es);
+        }
         const words = [];
         // 새 단어 1쌍
-        if (this._newWord && this._getPair(this._newWord)) {
+        if (this._newWord && this._getPair(this._newWord) && !exclude.has(this._newWord.es)) {
             words.push(this._newWord);
+            exclude.add(this._newWord.es);
         }
         // 나머지 기존 풀에서
-        const fromPool = this._drawWeighted(this.HALF - words.length);
+        const fromPool = this._drawWeighted(this.HALF - words.length, exclude);
         words.push(...fromPool);
         const newCards = this._makePairCards(words);
         let ni = 0;
