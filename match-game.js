@@ -395,7 +395,7 @@ const MatchGame = {
                     : (srcCards.shift() || tgtCards.shift() || extraCards.shift()));
             }
         }
-        return arranged;
+        return arranged.filter(Boolean);
     },
 
     // =========================================
