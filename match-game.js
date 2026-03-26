@@ -343,6 +343,9 @@ const MatchGame = {
         if (this._sorted) {
             newCards = this._arrangeCardsForSortedSlots(newCards, matchedSlots);
         }
+        if (newCards.length > matchedSlots.length) {
+            newCards = newCards.slice(0, matchedSlots.length);
+        }
 
         this._matchedCount = 0;
 
@@ -365,9 +368,12 @@ const MatchGame = {
             const slot = matchedSlots[si++];
             if (ni < newCards.length) {
                 this._cards[slot] = newCards[ni++];
-                if (shouldAnimateRefill) this._updateCard(slot);
+            } else if (this._cards[slot]) {
+                // 예외적으로 새 카드 수가 부족할 때도 슬롯이 닫힌 상태로 남지 않게 처리
+                this._cards[slot].matched = false;
             }
-            setTimeout(placeNext, shouldAnimateRefill ? 90 : 0);
+            this._updateCard(slot);
+            setTimeout(placeNext, this._sorted ? 55 : 90);
         };
         placeNext();
     },
