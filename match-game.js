@@ -16,6 +16,7 @@ const MatchGame = {
     _newWord: null,    // 현재 학습 중인 새 단어
     _mastery: {},      // { spanish: 정답횟수 }
     _newWordStreak: {}, // { spanish: 연속 정답횟수 }
+    _graduatedWords: {}, // { spanish: true } 현재 curriculum에서 졸업 처리된 단어
     _pairCounter: 0,
 
     _cards: [],
@@ -63,6 +64,7 @@ const MatchGame = {
         this._curriculum = [];
         this._mastery = {};
         this._newWordStreak = {};
+        this._graduatedWords = {};
         this._newWord = null;
         this._newWords = [];
         this._pairCounter = 0;
@@ -172,6 +174,18 @@ const MatchGame = {
             });
             this._mastery = restoredMastery;
             this._newWordStreak = {};
+            this._graduatedWords = {};
+
+            // 이전 세션에서 졸업한 새 단어는 curriculum에서 제거하고 복습 풀로 유지
+            const savedGraduatedEs = Array.isArray(saved.graduatedEs) ? saved.graduatedEs : [];
+            savedGraduatedEs.forEach(es => {
+                if (!es) return;
+                this._graduatedWords[es] = true;
+                if (curriculumMap[es]) {
+                    this._pool.push(curriculumMap[es]);
+                    delete curriculumMap[es];
+                }
+            });
 
             const nextCurriculum = [];
             const savedCurriculumEs = Array.isArray(saved.curriculumEs) ? saved.curriculumEs : [];
@@ -211,6 +225,7 @@ const MatchGame = {
                 newWordEs: this._newWord ? this._newWord.es : null,
                 newWordEsList: this._newWords.map(w => w.es),
                 curriculumEs: this._curriculum.map(w => w.es),
+                graduatedEs: Object.keys(this._graduatedWords),
                 mastery: this._mastery,
                 newWordStreak: this._newWordStreak
             };
@@ -569,6 +584,7 @@ const MatchGame = {
                         this._pool.push(graduated);
                         this._newWords.splice(graduatingIdx, 1);
                         delete this._newWordStreak[graduated.es];
+                        this._graduatedWords[graduated.es] = true;
                         console.log(`매치 가랑비: "${graduated.es}" 졸업 → 기존 풀 합류`);
                         if (this._newWords.length === 0) {
                             this._introduceNextWord();
