@@ -1607,7 +1607,7 @@ a {
     align-items: center;
     width: 100%;
     max-width: var(--canvas-width);
-    overflow: hidden;
+    overflow: visible;
     padding: 0;
 }
 
@@ -1726,6 +1726,7 @@ a {
     gap: 6px;
     width: 100%;
     padding: 8px;
+    overflow: visible;
 }
 
 /* 카드 기본 */
@@ -1765,11 +1766,11 @@ a {
     border: 2px solid #81c784;
 }
 
-/* 타겟 언어 카드 (핑크) */
+/* 타겟 언어 카드 (흰색) */
 .mc-tgt {
-    background: linear-gradient(135deg, #fce4ec, #f8bbd0);
-    color: #880e4f;
-    border: 2px solid #f48fb1;
+    background: #ffffff;
+    color: #333;
+    border: 2px solid #ddd;
 }
 
 /* 선택됨 */

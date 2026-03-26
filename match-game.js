@@ -10,7 +10,8 @@ const MatchGame = {
     ROWS: 5,
     HALF: 5,       // 5쌍(10장) 소거 시 리필
 
-    _pool: [],         // 이미 소개된 단어 풀 (가중치 기반 출제)
+    _pool: [],         // 전체 복습 풀
+    _recentPool: [],   // 최근 3스테이지 단어 풀
     _curriculum: [],   // 아직 소개되지 않은 단어 큐
     _newWord: null,    // 현재 학습 중인 새 단어
     _mastery: {},      // { spanish: 정답횟수 }
@@ -49,57 +50,67 @@ const MatchGame = {
      */
     _buildPool: function() {
         this._pool = [];
+        this._recentPool = [];
         this._curriculum = [];
         this._mastery = {};
         this._newWord = null;
         this._pairCounter = 0;
 
-        const poolWords = [];
+        // 클리어한 스테이지를 순서대로 수집
+        const clearedStages = [];  // [{worldId, stageNum, words}]
         let hasClearedAny = false;
-        let lastCleared = null;
 
         for (const world of CONFIG.WORLDS) {
             for (let s = 1; s <= world.stages; s++) {
                 const stageId = getStageId(world.id, s);
                 const result = Storage.getStageResult(stageId);
-                const cleared = result && result.stars >= 1;
-                if (!cleared) {
-                    // 첫 미클리어 스테이지의 단어 → curriculum
-                    if (!lastCleared || (lastCleared && this._curriculum.length === 0)) {
-                        const stageWords = WordManager.getStageWords(world.id, s);
-                        for (const w of stageWords) {
-                            if (w.es && this._getPair(w)) {
-                                this._curriculum.push(w);
-                            }
-                        }
+                if (result && result.stars >= 1) {
+                    hasClearedAny = true;
+                    const stageWords = WordManager.getStageWords(world.id, s);
+                    clearedStages.push({ worldId: world.id, stageNum: s, words: stageWords });
+                } else if (this._curriculum.length === 0) {
+                    // 첫 미클리어 스테이지 → curriculum
+                    const stageWords = WordManager.getStageWords(world.id, s);
+                    for (const w of stageWords) {
+                        if (w.es && this._getPair(w)) this._curriculum.push(w);
                     }
-                    continue;
-                }
-                hasClearedAny = true;
-                lastCleared = { worldId: world.id, stageNum: s };
-                const stageWords = WordManager.getStageWords(world.id, s);
-                for (const w of stageWords) {
-                    if (w.es) poolWords.push(w);
                 }
             }
         }
 
         if (!hasClearedAny) {
             const starter = WordManager.getStageWords(1, 1);
-            for (const w of starter) {
-                if (w.es) poolWords.push(w);
+            clearedStages.push({ worldId: 1, stageNum: 1, words: starter });
+        }
+
+        // 최근 3스테이지 vs 나머지 분리
+        const recentCount = 3;
+        const recentStages = clearedStages.slice(-recentCount);
+        const olderStages = clearedStages.slice(0, -recentCount);
+
+        const seen = new Set();
+
+        // 최근 3스테이지 → _recentPool
+        for (const stage of recentStages) {
+            for (const w of stage.words) {
+                if (w.es && !seen.has(w.es) && this._getPair(w)) {
+                    seen.add(w.es);
+                    this._recentPool.push(w);
+                }
             }
         }
 
-        // 중복 제거 + 페어 가능한 것만
-        const seen = new Set();
-        for (const w of poolWords) {
-            if (!seen.has(w.es) && this._getPair(w)) {
-                seen.add(w.es);
-                this._pool.push(w);
+        // 나머지 → _pool (전체 복습)
+        for (const stage of olderStages) {
+            for (const w of stage.words) {
+                if (w.es && !seen.has(w.es) && this._getPair(w)) {
+                    seen.add(w.es);
+                    this._pool.push(w);
+                }
             }
         }
-        // curriculum에서 pool과 중복 제거
+
+        // curriculum에서 pool/recent과 중복 제거
         this._curriculum = this._curriculum.filter(w => !seen.has(w.es));
 
         // 첫 번째 새 단어 소개
@@ -129,12 +140,13 @@ const MatchGame = {
      * @param {number} n - 뽑을 개수
      * @param {Set<string>} exclude - 제외할 단어 es Set
      */
-    _drawWeighted: function(n, exclude = new Set()) {
-        if (this._pool.length === 0) return [];
+    _drawWeighted: function(n, exclude = new Set(), pool = null) {
+        const source = pool || this._pool;
+        if (source.length === 0) return [];
         const result = [];
         const used = new Set(exclude);
         for (let i = 0; i < n; i++) {
-            const candidates = this._pool.filter(w => !used.has(w.es));
+            const candidates = source.filter(w => !used.has(w.es));
             if (candidates.length === 0) break;
             const weights = candidates.map(w => 1 / (1 + (this._mastery[w.es] || 0)));
             const total = weights.reduce((a, b) => a + b, 0);
@@ -162,39 +174,53 @@ const MatchGame = {
         return this._shuffle(cards);
     },
 
-    /** 처음 20장 딜: 9쌍 기존 + 1쌍 새 단어 (중복 없음) */
-    _deal: function() {
+    /**
+     * 1+2+2 구성으로 단어 뽑기
+     * @param {number} total - 총 뽑을 쌍 수
+     * @param {Set<string>} exclude - 제외 단어
+     * @returns {Array} 선택된 단어 배열
+     */
+    _composeWords: function(total, exclude) {
         const words = [];
-        const exclude = new Set();
-        // 새 단어 1쌍
-        if (this._newWord && this._getPair(this._newWord)) {
+        const used = new Set(exclude);
+
+        // 1) 새 단어 1쌍
+        if (this._newWord && this._getPair(this._newWord) && !used.has(this._newWord.es)) {
             words.push(this._newWord);
-            exclude.add(this._newWord.es);
+            used.add(this._newWord.es);
         }
-        // 나머지는 기존 풀에서 (새 단어 제외)
-        const fromPool = this._drawWeighted(10 - words.length, exclude);
-        words.push(...fromPool);
+
+        // 2) 최근 3스테이지에서 2쌍
+        const recentTarget = Math.min(2, total - words.length);
+        const fromRecent = this._drawWeighted(recentTarget, used, this._recentPool);
+        for (const w of fromRecent) { words.push(w); used.add(w.es); }
+
+        // 3) 전체 복습 풀에서 나머지
+        const reviewTarget = total - words.length;
+        // 전체 풀(pool + recentPool)에서 뽑기 (recent이 부족하면 여기서 보충)
+        const allPool = [...this._pool, ...this._recentPool];
+        const fromReview = this._drawWeighted(reviewTarget, used, allPool);
+        for (const w of fromReview) { words.push(w); used.add(w.es); }
+
+        return words;
+    },
+
+    /** 처음 20장 딜: 1 새 단어 + 2 최근 + 7 복습 */
+    _deal: function() {
+        const words = this._composeWords(10, new Set());
         this._cards = this._makePairCards(words);
         this._matchedCount = 0;
         this._selected = null;
         this._locked = false;
     },
 
-    /** 리필: 5쌍 중 1쌍은 새 단어, 4쌍은 기존 풀 (보드 잔여 카드와 중복 없음) */
+    /** 리필: 5쌍 = 1 새 단어 + 2 최근 + 2 복습 (보드 잔여와 중복 없음) */
     _refill: function() {
-        // 보드에 남아있는(미매칭) 카드의 단어를 제외 대상으로
         const exclude = new Set();
         for (const c of this._cards) {
             if (!c.matched) exclude.add(c.es);
         }
-        const words = [];
-        // 새 단어 1쌍
-        if (this._newWord && this._getPair(this._newWord) && !exclude.has(this._newWord.es)) {
-            words.push(this._newWord);
-            exclude.add(this._newWord.es);
-        }
-        // 나머지 기존 풀에서
-        const fromPool = this._drawWeighted(this.HALF - words.length, exclude);
+        const words = this._composeWords(this.HALF, exclude);
         words.push(...fromPool);
         const newCards = this._makePairCards(words);
         let ni = 0;
