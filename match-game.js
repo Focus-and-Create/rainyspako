@@ -27,6 +27,7 @@ const MatchGame = {
     _curriculumStageId: null,
     _sorted: false,
     _matchMode: 'fast',  // 'fast' = 새 단어 2개, 'review' = 복습 집중
+    _refillMode: 'flow', // 'flow' = 5쌍 제거 시 리필, 'clear' = 전부 제거 시 리필
     _newWords: [],       // fast 모드에서 현재 학습 중인 새 단어들
 
     NEW_WORD_MASTERY: 3,
@@ -501,6 +502,11 @@ const MatchGame = {
         }
     },
 
+    setRefillMode: function(mode) {
+        if (mode !== 'flow' && mode !== 'clear') return;
+        this._refillMode = mode;
+    },
+
     // =========================================
     // 입력 처리
     // =========================================
@@ -582,7 +588,10 @@ const MatchGame = {
                     }
                 }
 
-                if (this._matchedCount >= this.HALF) {
+                const shouldRefill = this._refillMode === 'clear'
+                    ? this._cards.every(c => c.matched)
+                    : this._matchedCount >= this.HALF;
+                if (shouldRefill) {
                     this._locked = true;
                     this._isRefilling = true;
                     setTimeout(() => {
