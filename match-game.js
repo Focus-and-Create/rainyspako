@@ -21,6 +21,7 @@ const MatchGame = {
     _selected: null,
     _matchedCount: 0,
     _locked: false,
+    _isRefilling: false,
     _container: null,
 
     NEW_WORD_MASTERY: 3,
@@ -227,28 +228,50 @@ const MatchGame = {
         this._matchedCount = 0;
         this._selected = null;
         this._locked = false;
+        this._isRefilling = false;
     },
 
     /** 리필: 5쌍 = 1 새 단어 + 2 최근 + 2 복습 (보드 잔여와 중복 없음) */
     _refill: function() {
-        const prevSelected = this._selected;
+        const selectedAtStart = this._selected;
         const exclude = new Set();
         for (const c of this._cards) {
             if (!c.matched) exclude.add(c.es);
         }
         const words = this._composeWords(this.HALF, exclude);
         const newCards = this._makePairCards(words);
-        let ni = 0;
+        const matchedSlots = [];
         for (let i = 0; i < this._cards.length; i++) {
-            if (this._cards[i].matched && ni < newCards.length) {
-                this._cards[i] = newCards[ni++];
-            }
+            if (this._cards[i].matched) matchedSlots.push(i);
         }
+
         this._matchedCount = 0;
-        this._selected = (prevSelected !== null && this._cards[prevSelected] && !this._cards[prevSelected].matched)
-            ? prevSelected
-            : null;
-        this._locked = false;
+
+        const finishRefill = () => {
+            if (this._selected === selectedAtStart) {
+                this._selected = (selectedAtStart !== null && this._cards[selectedAtStart] && !this._cards[selectedAtStart].matched)
+                    ? selectedAtStart
+                    : null;
+            }
+            this._isRefilling = false;
+            this._locked = false;
+        };
+
+        let ni = 0;
+        let si = 0;
+        const placeNext = () => {
+            if (si >= matchedSlots.length) {
+                finishRefill();
+                return;
+            }
+            const slot = matchedSlots[si++];
+            if (ni < newCards.length) {
+                this._cards[slot] = newCards[ni++];
+                this._updateCard(slot);
+            }
+            setTimeout(placeNext, 90);
+        };
+        placeNext();
     },
 
     // =========================================
@@ -291,8 +314,22 @@ const MatchGame = {
     // =========================================
 
     handleClick: function(idx) {
-        if (this._locked) return;
         const card = this._cards[idx];
+
+        if (this._locked) {
+            if (!this._isRefilling || card.matched) return;
+            const prev = this._selected;
+            if (prev === idx) {
+                this._selected = null;
+                this._updateCard(idx);
+                return;
+            }
+            this._selected = idx;
+            this._updateCard(idx);
+            if (prev !== null && prev !== idx) this._updateCard(prev);
+            return;
+        }
+
         if (card.matched) return;
 
         if (this._selected === idx) {
@@ -343,9 +380,9 @@ const MatchGame = {
 
                 if (this._matchedCount >= this.HALF) {
                     this._locked = true;
+                    this._isRefilling = true;
                     setTimeout(() => {
                         this._refill();
-                        this._render();
                     }, this.REFILL_DELAY_MS);
                 }
             } else {
