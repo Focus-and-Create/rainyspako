@@ -181,6 +181,24 @@ const MatchGame = {
         return this._shuffle(cards);
     },
 
+    _addPairTexts: function(word, textSet) {
+        const pair = this._getPair(word);
+        if (!pair) return;
+        textSet.add(pair.src);
+        textSet.add(pair.tgt);
+    },
+
+    _drawCompatible: function(n, usedEs, usedTexts, pool) {
+        const candidates = (pool || [])
+            .filter(w => w?.es && !usedEs.has(w.es) && this._getPair(w))
+            .filter(w => {
+                const pair = this._getPair(w);
+                return !usedTexts.has(pair.src) && !usedTexts.has(pair.tgt);
+            });
+        if (candidates.length === 0 || n <= 0) return [];
+        return this._shuffle(candidates).slice(0, n);
+    },
+
     /**
      * 1+2+2 구성으로 단어 뽑기
      * @param {number} total - 총 뽑을 쌍 수
@@ -225,11 +243,26 @@ const MatchGame = {
     _refill: function() {
         const prevSelected = this._selected;
         const exclude = new Set();
+        const usedTexts = new Set();
         for (const c of this._cards) {
-            if (!c.matched) exclude.add(c.es);
+            if (!c.matched) {
+                exclude.add(c.es);
+                usedTexts.add(c.text);
+            }
         }
-        const words = this._composeWords(this.HALF, exclude);
-        const used = new Set([...exclude, ...words.map(w => w.es)]);
+        const composed = this._composeWords(this.HALF, exclude);
+        const words = [];
+        const used = new Set(exclude);
+        for (const w of composed) {
+            if (!w?.es || used.has(w.es)) continue;
+            const pair = this._getPair(w);
+            if (!pair) continue;
+            if (usedTexts.has(pair.src) || usedTexts.has(pair.tgt)) continue;
+            words.push(w);
+            used.add(w.es);
+            usedTexts.add(pair.src);
+            usedTexts.add(pair.tgt);
+        }
 
         // 1차 보강: 방금 제거된(매칭된) 단어를 우선 재사용해서 보드를 항상 채움
         if (words.length < this.HALF) {
@@ -243,15 +276,17 @@ const MatchGame = {
                     matchedFallback.push(w);
                 }
             }
-            const extra = this._drawWeighted(this.HALF - words.length, used, matchedFallback);
+            const extra = this._drawCompatible(this.HALF - words.length, used, usedTexts, matchedFallback);
             for (const w of extra) { words.push(w); used.add(w.es); }
+            extra.forEach(w => this._addPairTexts(w, usedTexts));
         }
 
         // 2차 보강: 그래도 부족하면 전체 인덱스에서 유니크 단어만 보충(중복 금지)
         if (words.length < this.HALF) {
             const fallbackPool = Object.values(this._wordMap).filter(w => w?.es && this._getPair(w));
-            const extra = this._drawWeighted(this.HALF - words.length, used, fallbackPool);
+            const extra = this._drawCompatible(this.HALF - words.length, used, usedTexts, fallbackPool);
             for (const w of extra) { words.push(w); used.add(w.es); }
+            extra.forEach(w => this._addPairTexts(w, usedTexts));
         }
         const newCards = this._makePairCards(words);
         let ni = 0;
