@@ -13,6 +13,7 @@ const MatchGame = {
     _pool: [],         // 전체 복습 풀
     _recentPool: [],   // 최근 3스테이지 단어 풀
     _curriculum: [],   // 아직 소개되지 않은 단어 큐
+    _wordMap: {},      // { spanish: wordObj }
     _newWord: null,    // 현재 학습 중인 새 단어
     _mastery: {},      // { spanish: 정답횟수 }
     _pairCounter: 0,
@@ -24,6 +25,7 @@ const MatchGame = {
     _container: null,
 
     NEW_WORD_MASTERY: 3,
+    REFILL_DELAY_MS: 1200,
 
     // =========================================
     // 초기화
@@ -52,6 +54,7 @@ const MatchGame = {
         this._pool = [];
         this._recentPool = [];
         this._curriculum = [];
+        this._wordMap = {};
         this._mastery = {};
         this._newWord = null;
         this._pairCounter = 0;
@@ -67,10 +70,12 @@ const MatchGame = {
                 if (result && result.stars >= 1) {
                     hasClearedAny = true;
                     const stageWords = WordManager.getStageWords(world.id, s);
+                    stageWords.forEach(w => { if (w?.es) this._wordMap[w.es] = w; });
                     clearedStages.push({ worldId: world.id, stageNum: s, words: stageWords });
                 } else if (this._curriculum.length === 0) {
                     // 첫 미클리어 스테이지 → curriculum
                     const stageWords = WordManager.getStageWords(world.id, s);
+                    stageWords.forEach(w => { if (w?.es) this._wordMap[w.es] = w; });
                     for (const w of stageWords) {
                         if (w.es && this._getPair(w)) this._curriculum.push(w);
                     }
@@ -80,6 +85,7 @@ const MatchGame = {
 
         if (!hasClearedAny) {
             const starter = WordManager.getStageWords(1, 1);
+            starter.forEach(w => { if (w?.es) this._wordMap[w.es] = w; });
             clearedStages.push({ worldId: 1, stageNum: 1, words: starter });
         }
 
@@ -216,12 +222,26 @@ const MatchGame = {
 
     /** 리필: 5쌍 = 1 새 단어 + 2 최근 + 2 복습 (보드 잔여와 중복 없음) */
     _refill: function() {
+        const prevSelected = this._selected;
         const exclude = new Set();
         for (const c of this._cards) {
             if (!c.matched) exclude.add(c.es);
         }
         const words = this._composeWords(this.HALF, exclude);
-        words.push(...fromPool);
+        const used = new Set([...exclude, ...words.map(w => w.es)]);
+
+        // 단어 풀이 부족한 상황에서도 리필이 멈추지 않도록 보강
+        if (words.length < this.HALF) {
+            const fallbackPool = Object.values(this._wordMap).filter(w => w?.es && this._getPair(w));
+            const extra = this._drawWeighted(this.HALF - words.length, used, fallbackPool);
+            for (const w of extra) { words.push(w); used.add(w.es); }
+
+            // 마지막 안전장치: 중복 허용으로라도 빈 칸 없이 리필
+            while (words.length < this.HALF && fallbackPool.length > 0) {
+                const pick = fallbackPool[Math.floor(Math.random() * fallbackPool.length)];
+                words.push(pick);
+            }
+        }
         const newCards = this._makePairCards(words);
         let ni = 0;
         for (let i = 0; i < this._cards.length; i++) {
@@ -230,7 +250,9 @@ const MatchGame = {
             }
         }
         this._matchedCount = 0;
-        this._selected = null;
+        this._selected = (prevSelected !== null && this._cards[prevSelected] && !this._cards[prevSelected].matched)
+            ? prevSelected
+            : null;
         this._locked = false;
     },
 
@@ -329,7 +351,7 @@ const MatchGame = {
                     setTimeout(() => {
                         this._refill();
                         this._render();
-                    }, 600);
+                    }, this.REFILL_DELAY_MS);
                 }
             } else {
                 // 오답
