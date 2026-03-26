@@ -352,6 +352,7 @@ const MatchGame = {
         const words = this._composeWords(this.HALF, exclude);
         let newCards = this._makePairCards(words);
         const matchedSlots = [];
+        const shouldAnimateRefill = !this._sorted;
         for (let i = 0; i < this._cards.length; i++) {
             if (this._cards[i].matched) matchedSlots.push(i);
         }
