@@ -2,7 +2,7 @@
  * match-game.js
  * 단어 짝 잇기 미니게임
  * 4×5 카드 그리드, 스페인어↔한국어 짝 맞추기
- * 커리큘럼 순서대로 단어 출제, 절반(5쌍) 매칭되면 리필
+ * 가랑비 모델: 리필 5쌍 중 1쌍은 새 단어, 나머지는 가중치 기반 복습
  */
 
 const MatchGame = {
@@ -10,24 +10,24 @@ const MatchGame = {
     ROWS: 5,
     HALF: 5,       // 5쌍(10장) 소거 시 리필
 
-    _pool: [],         // 커리큘럼 순서 단어 풀
-    _poolIdx: 0,
-    _pairCounter: 0,   // 고유 pairId 발급용
+    _pool: [],         // 이미 소개된 단어 풀 (가중치 기반 출제)
+    _curriculum: [],   // 아직 소개되지 않은 단어 큐
+    _newWord: null,    // 현재 학습 중인 새 단어
+    _mastery: {},      // { spanish: 정답횟수 }
+    _pairCounter: 0,
 
-    _cards: [],        // 현재 보드 (20개)
-    _selected: null,   // 선택된 카드 인덱스
-    _matchedCount: 0,  // 이번 라운드에서 맞춘 쌍 수
-    _locked: false,    // 오답 처리 중 입력 잠금
-
+    _cards: [],
+    _selected: null,
+    _matchedCount: 0,
+    _locked: false,
     _container: null,
+
+    NEW_WORD_MASTERY: 3,
 
     // =========================================
     // 초기화
     // =========================================
 
-    /**
-     * @param {HTMLElement} container - .match-grid 요소
-     */
     init: function(container) {
         this._container = container;
         this._buildPool();
@@ -35,10 +35,6 @@ const MatchGame = {
         this._render();
     },
 
-    /**
-     * 현재 모드에서 카드 한 쌍의 텍스트를 반환
-     * @returns {{ src: string, tgt: string } | null}
-     */
     _getPair: function(w) {
         const mode = (typeof App !== 'undefined' && App.currentMode) ? App.currentMode : 'es-to-ko';
         if (mode === 'es-to-ko') return w.ko ? { src: w.es, tgt: w.ko } : null;
@@ -49,24 +45,41 @@ const MatchGame = {
     },
 
     /**
-     * 클리어한 스테이지의 단어를 커리큘럼 순서대로 수집
-     * 아직 하나도 안 클리어했으면 1-1 단어 사용
+     * 클리어한 스테이지 단어 → pool, 다음 스테이지 단어 → curriculum
      */
     _buildPool: function() {
-        const words = [];
+        this._pool = [];
+        this._curriculum = [];
+        this._mastery = {};
+        this._newWord = null;
+        this._pairCounter = 0;
+
+        const poolWords = [];
         let hasClearedAny = false;
+        let lastCleared = null;
 
         for (const world of CONFIG.WORLDS) {
             for (let s = 1; s <= world.stages; s++) {
                 const stageId = getStageId(world.id, s);
                 const result = Storage.getStageResult(stageId);
                 const cleared = result && result.stars >= 1;
-                if (!cleared) continue;
-
+                if (!cleared) {
+                    // 첫 미클리어 스테이지의 단어 → curriculum
+                    if (!lastCleared || (lastCleared && this._curriculum.length === 0)) {
+                        const stageWords = WordManager.getStageWords(world.id, s);
+                        for (const w of stageWords) {
+                            if (w.es && this._getPair(w)) {
+                                this._curriculum.push(w);
+                            }
+                        }
+                    }
+                    continue;
+                }
                 hasClearedAny = true;
+                lastCleared = { worldId: world.id, stageNum: s };
                 const stageWords = WordManager.getStageWords(world.id, s);
                 for (const w of stageWords) {
-                    if (w.es) words.push(w);
+                    if (w.es) poolWords.push(w);
                 }
             }
         }
@@ -74,23 +87,32 @@ const MatchGame = {
         if (!hasClearedAny) {
             const starter = WordManager.getStageWords(1, 1);
             for (const w of starter) {
-                if (w.es) words.push(w);
+                if (w.es) poolWords.push(w);
             }
         }
 
-        // 중복 제거 (es 기준) + 현재 모드로 페어 생성 가능한 것만
+        // 중복 제거 + 페어 가능한 것만
         const seen = new Set();
-        const unique = [];
-        for (const w of words) {
+        for (const w of poolWords) {
             if (!seen.has(w.es) && this._getPair(w)) {
                 seen.add(w.es);
-                unique.push(w);
+                this._pool.push(w);
             }
         }
+        // curriculum에서 pool과 중복 제거
+        this._curriculum = this._curriculum.filter(w => !seen.has(w.es));
 
-        this._pool = unique;
-        this._poolIdx = 0;
-        this._pairCounter = 0;
+        // 첫 번째 새 단어 소개
+        this._introduceNextWord();
+    },
+
+    _introduceNextWord: function() {
+        if (this._curriculum.length === 0) {
+            this._newWord = null;
+            return;
+        }
+        this._newWord = this._curriculum.shift();
+        console.log(`매치 가랑비: 새 단어 소개 → ${this._newWord.es}`);
     },
 
     _shuffle: function(arr) {
@@ -102,49 +124,73 @@ const MatchGame = {
         return a;
     },
 
-    /** 풀에서 n쌍 뽑기 (끝에 달하면 처음부터 순환) */
-    _draw: function(n) {
+    /**
+     * 가중치 기반 단어 뽑기: 많이 맞힌 단어는 덜 나옴
+     */
+    _drawWeighted: function(n) {
+        if (this._pool.length === 0) return [];
         const result = [];
+        const used = new Set();
         for (let i = 0; i < n; i++) {
-            if (this._pool.length === 0) break;
-            if (this._poolIdx >= this._pool.length) this._poolIdx = 0;
-            result.push(this._pool[this._poolIdx++]);
+            // 아직 안 뽑힌 단어만 대상
+            const candidates = this._pool.filter(w => !used.has(w.es));
+            if (candidates.length === 0) break;
+            const weights = candidates.map(w => 1 / (1 + (this._mastery[w.es] || 0)));
+            const total = weights.reduce((a, b) => a + b, 0);
+            let r = Math.random() * total;
+            let picked = candidates[candidates.length - 1];
+            for (let j = 0; j < candidates.length; j++) {
+                r -= weights[j];
+                if (r <= 0) { picked = candidates[j]; break; }
+            }
+            result.push(picked);
+            used.add(picked.es);
         }
         return result;
     },
 
-    /** 단어쌍 배열로 카드 20장 만들고 셔플 */
     _makePairCards: function(words) {
         const cards = [];
         for (const w of words) {
             const pair = this._getPair(w);
             if (!pair) continue;
             const pid = this._pairCounter++;
-            cards.push({ pairId: pid, type: 'src', text: pair.src, matched: false });
-            cards.push({ pairId: pid, type: 'tgt', text: pair.tgt, matched: false });
+            cards.push({ pairId: pid, type: 'src', text: pair.src, es: w.es, matched: false });
+            cards.push({ pairId: pid, type: 'tgt', text: pair.tgt, es: w.es, matched: false });
         }
         return this._shuffle(cards);
     },
 
-    /** 처음 20장 딜 */
+    /** 처음 20장 딜: 9쌍 기존 + 1쌍 새 단어 */
     _deal: function() {
-        const pairs = this._draw(10);
-        this._cards = this._makePairCards(pairs);
+        const words = [];
+        // 새 단어 1쌍
+        if (this._newWord && this._getPair(this._newWord)) {
+            words.push(this._newWord);
+        }
+        // 나머지는 기존 풀에서
+        const fromPool = this._drawWeighted(10 - words.length);
+        words.push(...fromPool);
+        this._cards = this._makePairCards(words);
         this._matchedCount = 0;
         this._selected = null;
         this._locked = false;
     },
 
-    /**
-     * 절반 맞췄을 때: 매칭된 10자리에 새 5쌍(10장) 채워 넣기
-     * 남은 5쌍은 제자리 유지
-     */
+    /** 리필: 5쌍 중 1쌍은 새 단어, 4쌍은 기존 풀 (가중치 기반) */
     _refill: function() {
-        const newPairs = this._draw(this.HALF);
-        const newCards = this._makePairCards(newPairs);
+        const words = [];
+        // 새 단어 1쌍
+        if (this._newWord && this._getPair(this._newWord)) {
+            words.push(this._newWord);
+        }
+        // 나머지 기존 풀에서
+        const fromPool = this._drawWeighted(this.HALF - words.length);
+        words.push(...fromPool);
+        const newCards = this._makePairCards(words);
         let ni = 0;
         for (let i = 0; i < this._cards.length; i++) {
-            if (this._cards[i].matched) {
+            if (this._cards[i].matched && ni < newCards.length) {
                 this._cards[i] = newCards[ni++];
             }
         }
@@ -170,7 +216,6 @@ const MatchGame = {
         });
     },
 
-    /** 특정 카드 요소만 갱신 */
     _updateCard: function(idx) {
         if (!this._container) return;
         const el = this._container.querySelector(`[data-idx="${idx}"]`);
@@ -191,7 +236,6 @@ const MatchGame = {
         const card = this._cards[idx];
         if (card.matched) return;
 
-        // 이미 선택된 카드 재클릭 → 선택 해제
         if (this._selected === idx) {
             this._selected = null;
             this._updateCard(idx);
@@ -199,24 +243,36 @@ const MatchGame = {
         }
 
         if (this._selected === null) {
-            // 첫 번째 카드 선택
             this._selected = idx;
             this._updateCard(idx);
         } else {
-            // 두 번째 카드 선택 → 검사
             const prev = this._selected;
             const prevCard = this._cards[prev];
             this._selected = null;
 
             if (prevCard.pairId === card.pairId && prevCard.type !== card.type) {
-                // 정답!
+                // 정답
                 prevCard.matched = true;
                 card.matched = true;
                 this._updateCard(prev);
                 this._updateCard(idx);
                 this._matchedCount++;
 
-                // 점수 지급 (매치 모드에서는 isRunning이 false이므로 체크하지 않음)
+                // mastery 추적
+                const wordEs = card.es || prevCard.es;
+                if (wordEs) {
+                    this._mastery[wordEs] = (this._mastery[wordEs] || 0) + 1;
+
+                    // 새 단어 졸업 체크
+                    if (this._newWord && wordEs === this._newWord.es
+                        && this._mastery[wordEs] >= this.NEW_WORD_MASTERY) {
+                        this._pool.push(this._newWord);
+                        console.log(`매치 가랑비: "${this._newWord.es}" 졸업 → 기존 풀 합류`);
+                        this._introduceNextWord();
+                    }
+                }
+
+                // 점수 지급
                 if (typeof Game !== 'undefined' && Game.state) {
                     Game.state.score = (Game.state.score || 0) + CONFIG.GAME.BASE_SCORE * 2;
                     Game.sessionScore = Game.state.score;
@@ -234,7 +290,7 @@ const MatchGame = {
                     }, 600);
                 }
             } else {
-                // 오답: 감점 + 빨간 플래시
+                // 오답
                 if (typeof Game !== 'undefined' && Game.state) {
                     const penalty = CONFIG.GAME.BASE_SCORE;
                     Game.state.score = Math.max(Game.sessionScore, Game.state.score - penalty);
@@ -246,7 +302,6 @@ const MatchGame = {
                 this._locked = true;
                 const prevEl = this._container?.querySelector(`[data-idx="${prev}"]`);
                 const curEl = this._container?.querySelector(`[data-idx="${idx}"]`);
-                // mc-selected 제거 후 mc-wrong 표시
                 prevEl?.classList.remove('mc-selected');
                 [prevEl, curEl].forEach(el => { if (el) el.classList.add('mc-wrong'); });
                 setTimeout(() => {

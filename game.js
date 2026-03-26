@@ -66,6 +66,25 @@ const Game = {
     _showingHint: false,
 
     // =========================================
+    // 가랑비 학습 상태
+    // =========================================
+
+    /** 세션 내 단어별 정답 횟수 { spanish: count } */
+    _mastery: {},
+
+    /** 아직 소개되지 않은 단어 큐 (커리큘럼 순서) */
+    _curriculum: [],
+
+    /** 이미 소개된 단어 풀 (가중치 기반 출제) */
+    _knownPool: [],
+
+    /** 현재 학습 중인 새 단어 (3번 맞히면 졸업) */
+    _newWord: null,
+
+    /** 새 단어 졸업에 필요한 정답 수 */
+    NEW_WORD_MASTERY: 3,
+
+    // =========================================
     // 공용 오브젝트
     // =========================================
 
@@ -190,20 +209,33 @@ const Game = {
         this._showingHint = false;
         this.currentInput = '';
         this.nextWordId = 1;
-        this._refillPoolIdx = 0;
 
-        // 단어 풀 생성
-        if (customPool) {
-            this.wordPool = customPool;
-        } else {
-            this.wordPool = WordManager.createWordPool(worldId, stageNum);
+        // 가랑비 학습 상태 초기화
+        this._mastery = {};
+        this._curriculum = [];
+        this._knownPool = [];
+        this._newWord = null;
+
+        // 단어 풀 생성 → knownPool에 넣기
+        const pool = customPool || WordManager.createWordPool(worldId, stageNum);
+        const seen = new Set();
+        for (const w of pool) {
+            if (!seen.has(w.es)) {
+                seen.add(w.es);
+                this._knownPool.push(w);
+            }
         }
+        // wordPool은 호환성을 위해 유지
+        this.wordPool = this._knownPool;
+
+        // 첫 번째 새 단어 소개 (커리큘럼이 있으면)
+        this._introduceNextWord();
 
         // 카드 큐 빌드 후 첫 카드 표시
         this._buildCardQueue();
         this._showCard();
 
-        console.log(`Game: 스테이지 ${worldId}-${stageNum} 시작 (연속 모드, 풀 ${this.wordPool.length}개)`);
+        console.log(`Game: 스테이지 ${worldId}-${stageNum} 시작 (가랑비 모드, 풀 ${this._knownPool.length}개)`);
     },
     
     pause: function() {
@@ -229,54 +261,77 @@ const Game = {
     // =========================================
 
     /**
-     * wordPool에서 카드 큐 생성 (중복 제거, 셔플, targetWords개)
+     * 초기 카드 큐 생성 (16장을 _pickNextWord로 채움)
      */
     _buildCardQueue: function() {
-        const seen = new Set();
-        const unique = [];
-        for (const w of this.wordPool) {
-            if (!seen.has(w.es)) {
-                seen.add(w.es);
-                unique.push({
-                    id: this.nextWordId++,
-                    spanish: w.es,
-                    korean: w.ko,
-                    english: w.en || '',
-                    isReview: w.isReview || false,
-                    spawnTime: 0
-                });
-            }
+        this._cardQueue = [];
+        for (let i = 0; i < 16; i++) {
+            this._cardQueue.push(this._makeCard(this._pickNextWord()));
         }
-        // 셔플
-        for (let i = unique.length - 1; i > 0; i--) {
-            const j = Math.floor(Math.random() * (i + 1));
-            [unique[i], unique[j]] = [unique[j], unique[i]];
-        }
-        this._cardQueue = unique.slice(0, this.state.targetWords);
-        this.state.targetWords = this._cardQueue.length;
+    },
+
+    /** 단어 객체 → 카드 객체 변환 */
+    _makeCard: function(w) {
+        return {
+            id: this.nextWordId++,
+            spanish: w.es,
+            korean: w.ko,
+            english: w.en || '',
+            isReview: w.isReview || false,
+            isNew: w._isNew || false,
+            spawnTime: 0
+        };
     },
 
     /**
-     * 카드 그리드 렌더링 (현재 + 예정 단어를 2열 격자로 표시)
-     * 새 카드로 이동할 때만 전체 리렌더. 오답 재시도는 DOM만 수정.
+     * 가중치 기반 다음 단어 선택
+     * - 새 단어(학습 중): ~30% 확률로 등장
+     * - 기존 단어: 가중치 = 1 / (1 + 맞힌횟수) → 많이 맞힌 단어일수록 덜 나옴
+     */
+    _pickNextWord: function() {
+        // 새 단어가 학습 중이면 30% 확률로 새 단어 출제
+        if (this._newWord && Math.random() < 0.3) {
+            return { ...this._newWord, _isNew: true };
+        }
+
+        // knownPool에서 가중치 기반 랜덤 선택
+        const pool = this._knownPool;
+        if (pool.length === 0) {
+            return this._newWord || { es: '...', ko: '...', en: '' };
+        }
+
+        const weights = pool.map(w => 1 / (1 + (this._mastery[w.es] || 0)));
+        const total = weights.reduce((a, b) => a + b, 0);
+        let r = Math.random() * total;
+        for (let i = 0; i < pool.length; i++) {
+            r -= weights[i];
+            if (r <= 0) return pool[i];
+        }
+        return pool[pool.length - 1];
+    },
+
+    /**
+     * 커리큘럼에서 다음 새 단어를 소개
+     */
+    _introduceNextWord: function() {
+        if (this._curriculum.length === 0) {
+            this._newWord = null;
+            return;
+        }
+        this._newWord = this._curriculum.shift();
+        console.log(`가랑비: 새 단어 소개 → ${this._newWord.es}`);
+    },
+
+    /**
+     * 카드 그리드 렌더링
      */
     _showCard: function() {
-        // 남은 카드가 16장 미만이면 풀에서 새 카드 추가 (그리드 채우기용)
-        while (this._cardQueue.length - this._cardIdx < 16 && this.wordPool.length > 0) {
-            const w = this.wordPool[this._refillPoolIdx % this.wordPool.length];
-            this._refillPoolIdx++;
-            this._cardQueue.push({
-                id: this.nextWordId++,
-                spanish: w.es,
-                korean: w.ko,
-                english: w.en || '',
-                isReview: w.isReview || false,
-                spawnTime: 0
-            });
+        // 남은 카드가 16장 미만이면 _pickNextWord로 채움
+        while (this._cardQueue.length - this._cardIdx < 16) {
+            this._cardQueue.push(this._makeCard(this._pickNextWord()));
         }
 
         if (this._cardIdx >= this._cardQueue.length) {
-            // 풀이 비어있을 리 없지만 방어 코드
             return;
         }
 
@@ -569,19 +624,30 @@ const Game = {
         this.state.correctCount += 1;
         this.state.waveCorrect += 1;
 
+        // mastery 추적
+        this._mastery[word.spanish] = (this._mastery[word.spanish] || 0) + 1;
+
         // 틀린 단어였다면 복습 기록 갱신
         Storage.recordCorrectWord(word.spanish);
+
+        // 새 단어 졸업 체크: 3번 맞히면 knownPool에 합류 → 다음 새 단어 소개
+        if (this._newWord && word.spanish === this._newWord.es
+            && this._mastery[word.spanish] >= this.NEW_WORD_MASTERY) {
+            this._knownPool.push(this._newWord);
+            console.log(`가랑비: "${this._newWord.es}" 졸업 → 기존 풀 합류 (${this._knownPool.length}개)`);
+            this._introduceNextWord();
+        }
 
         // 누적 점수 영속 저장
         this.sessionScore = this.state.score;
         Storage.setGlobalScore(this.state.score);
 
-        // 가랑비 진행: targetWords(18)개 맞출 때마다 조용히 스테이지 저장 → 다음 단어 합류
+        // 가랑비 진행: targetWords(18)개 맞출 때마다 조용히 스테이지 저장 → 다음 단어 커리큘럼에 추가
         if (this.state.waveCorrect >= this.state.targetWords) {
             this._advanceWave();
         }
 
-        console.log(`정답: ${word.spanish} (+${points}점, 콤보 ${this.state.combo})`);
+        console.log(`정답: ${word.spanish} (+${points}점, 콤보 ${this.state.combo}, mastery ${this._mastery[word.spanish]})`);
     },
 
     /**
@@ -606,20 +672,34 @@ const Game = {
         // 다음 스테이지 찾기
         const next = WordManager.findNextStage(worldId, stageNum);
 
-        // 다음 스테이지 단어를 현재 풀에 합치기
-        const newWords = WordManager.createWordPool(next.worldId, next.stageNum);
-        for (const w of newWords) {
-            this.wordPool.push(w);
+        // 다음 스테이지의 신규 단어만 커리큘럼에 추가 (중복 제거)
+        const nextWords = WordManager.getStageWords(next.worldId, next.stageNum);
+        const knownSet = new Set(this._knownPool.map(w => w.es));
+        const currSet = new Set(this._curriculum.map(w => w.es));
+        if (this._newWord) { knownSet.add(this._newWord.es); currSet.add(this._newWord.es); }
+        for (const w of nextWords) {
+            if (w.es && !knownSet.has(w.es) && !currSet.has(w.es)) {
+                this._curriculum.push({
+                    es: w.es, ko: w.ko,
+                    en: w.en || '',
+                    isReview: false
+                });
+            }
         }
 
-        // 상태 갱신: 다음 스테이지로 이동, wave 카운터 리셋
+        // 새 단어가 없으면 소개 시작
+        if (!this._newWord) {
+            this._introduceNextWord();
+        }
+
+        // 상태 갱신
         this.state.worldId = next.worldId;
         this.state.stageNum = next.stageNum;
         this.state.waveCorrect = 0;
         this.state.wrongCount = 0;
         this._stageStartScore = this.state.score;
 
-        console.log(`가랑비: ${worldId}-${stageNum} 저장 → ${next.worldId}-${next.stageNum} 단어 합류 (풀 ${this.wordPool.length}개)`);
+        console.log(`가랑비: ${worldId}-${stageNum} 저장 → ${next.worldId}-${next.stageNum} 커리큘럼 ${this._curriculum.length}개 대기`);
     },
     
 
