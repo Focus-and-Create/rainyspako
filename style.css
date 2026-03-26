@@ -1605,10 +1605,48 @@ a {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
     width: 100%;
     max-width: var(--canvas-width);
     overflow: visible;
     padding: 0;
+}
+
+.match-toolbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 6px 8px;
+    gap: 8px;
+    flex-shrink: 0;
+}
+
+.match-tool-btn {
+    padding: 5px 12px;
+    border-radius: var(--radius-md);
+    border: 1.5px solid #ccc;
+    background: #fff;
+    font-size: 13px;
+    font-weight: 600;
+    color: #555;
+    cursor: pointer;
+    transition: background 0.15s, border-color 0.15s, color 0.15s;
+}
+
+.match-tool-btn:active {
+    transform: scale(0.96);
+}
+
+.match-tool-btn.match-mode-active {
+    background: var(--color-accent, #4a90d9);
+    color: #fff;
+    border-color: var(--color-accent, #4a90d9);
+}
+
+.match-mode-btns {
+    display: flex;
+    gap: 4px;
 }
 
 /* =========================================
@@ -1718,7 +1756,7 @@ a {
 }
 
 .match-grid {
-    flex: 0 1 auto;
+    flex: 1;
     min-height: 0;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -1726,8 +1764,7 @@ a {
     gap: 6px;
     width: 100%;
     padding: 8px;
-    height: min(70vh, 600px);
-    margin-bottom: 12px;
+    max-height: min(72vh, 620px);
     overflow: visible;
 }
 
