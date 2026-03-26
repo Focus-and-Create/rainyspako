@@ -349,7 +349,8 @@ const Game = {
 
         container.innerHTML = visible.map((card, i) => {
             if (!card) return `<div class="cg cg-empty"></div>`;
-            const cls = i === 0 ? 'cg cg-active' : 'cg cg-upcoming';
+            let cls = i === 0 ? 'cg cg-active' : 'cg cg-upcoming';
+            if (card.isNew) cls += ' cg-new';
             const text = this.getDisplayText(card);
             // 3~4행(인덱스 8-15): 단어와 뜻 병기
             const hint = i >= 8 ? `<span class="cg-hint">${this._esc(this.getAnswerText(card))}</span>` : '';

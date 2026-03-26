@@ -210,10 +210,16 @@ const MatchGame = {
             const el = document.createElement('div');
             el.className = 'mc' + (card.type === 'tgt' ? ' mc-tgt' : ' mc-src');
             if (card.matched) el.classList.add('mc-matched');
+            if (this._isNewCard(card)) el.classList.add('mc-new');
             el.dataset.idx = idx;
             el.textContent = card.text;
             this._container.appendChild(el);
         });
+    },
+
+    /** 새 단어 카드인지 판별 (src 쪽만) */
+    _isNewCard: function(card) {
+        return this._newWord && card.es === this._newWord.es && card.type === 'src';
     },
 
     _updateCard: function(idx) {
@@ -223,6 +229,7 @@ const MatchGame = {
         const card = this._cards[idx];
         el.className = 'mc' + (card.type === 'tgt' ? ' mc-tgt' : ' mc-src');
         if (card.matched) el.classList.add('mc-matched');
+        if (this._isNewCard(card)) el.classList.add('mc-new');
         if (idx === this._selected) el.classList.add('mc-selected');
         el.textContent = card.text;
     },
