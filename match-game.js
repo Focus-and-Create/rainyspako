@@ -23,7 +23,6 @@ const MatchGame = {
     _locked: false,
     _isRefilling: false,
     _container: null,
-    _progress: null,
 
     NEW_WORD_MASTERY: 3,
     REFILL_DELAY_MS: 1200,
@@ -37,21 +36,6 @@ const MatchGame = {
         this._buildPool();
         this._deal();
         this._render();
-    },
-
-    _loadProgress: function() {
-        const raw = (typeof Storage !== 'undefined' && Storage.getSetting)
-            ? Storage.getSetting('matchProgress')
-            : null;
-        const masteredEs = Array.isArray(raw?.masteredEs) ? raw.masteredEs : [];
-        const mastery = (raw?.mastery && typeof raw.mastery === 'object') ? raw.mastery : {};
-        const currentNewWordEs = (typeof raw?.currentNewWordEs === 'string') ? raw.currentNewWordEs : null;
-        this._progress = { masteredEs, mastery, currentNewWordEs };
-    },
-
-    _saveProgress: function() {
-        if (typeof Storage === 'undefined' || !Storage.setSetting || !this._progress) return;
-        Storage.setSetting('matchProgress', this._progress);
     },
 
     _getPair: function(w) {
@@ -73,8 +57,12 @@ const MatchGame = {
         this._mastery = {};
         this._newWord = null;
         this._pairCounter = 0;
-        this._loadProgress();
-        this._mastery = { ...(this._progress?.mastery || {}) };
+        const matchProgress = (typeof Storage !== 'undefined' && Storage.getSetting)
+            ? (Storage.getSetting('matchProgress') || {})
+            : {};
+        this._mastery = (matchProgress.mastery && typeof matchProgress.mastery === 'object')
+            ? { ...matchProgress.mastery }
+            : {};
 
         // 클리어한 스테이지를 순서대로 수집
         const clearedStages = [];  // [{worldId, stageNum, words}]
@@ -131,11 +119,11 @@ const MatchGame = {
         }
 
         // curriculum에서 pool/recent과 중복 제거
-        const masteredSet = new Set(this._progress?.masteredEs || []);
+        const masteredSet = new Set(Array.isArray(matchProgress.masteredEs) ? matchProgress.masteredEs : []);
         this._curriculum = this._curriculum.filter(w => !seen.has(w.es) && !masteredSet.has(w.es));
 
         // 저장된 새 단어가 남아 있으면 우선 복원
-        const savedEs = this._progress?.currentNewWordEs;
+        const savedEs = (typeof matchProgress.currentNewWordEs === 'string') ? matchProgress.currentNewWordEs : null;
         if (savedEs) {
             const idx = this._curriculum.findIndex(w => w.es === savedEs);
             if (idx >= 0) {
@@ -149,16 +137,18 @@ const MatchGame = {
     _introduceNextWord: function() {
         if (this._curriculum.length === 0) {
             this._newWord = null;
-            if (this._progress) {
-                this._progress.currentNewWordEs = null;
-                this._saveProgress();
+            if (typeof Storage !== 'undefined' && Storage.getSetting && Storage.setSetting) {
+                const progress = Storage.getSetting('matchProgress') || {};
+                progress.currentNewWordEs = null;
+                Storage.setSetting('matchProgress', progress);
             }
             return;
         }
         this._newWord = this._curriculum.shift();
-        if (this._progress) {
-            this._progress.currentNewWordEs = this._newWord.es;
-            this._saveProgress();
+        if (typeof Storage !== 'undefined' && Storage.getSetting && Storage.setSetting) {
+            const progress = Storage.getSetting('matchProgress') || {};
+            progress.currentNewWordEs = this._newWord.es;
+            Storage.setSetting('matchProgress', progress);
         }
         console.log(`매치 가랑비: 새 단어 소개 → ${this._newWord.es}`);
     },
@@ -391,9 +381,10 @@ const MatchGame = {
                 const wordEs = card.es || prevCard.es;
                 if (wordEs) {
                     this._mastery[wordEs] = (this._mastery[wordEs] || 0) + 1;
-                    if (this._progress) {
-                        this._progress.mastery = { ...this._mastery };
-                        this._saveProgress();
+                    if (typeof Storage !== 'undefined' && Storage.getSetting && Storage.setSetting) {
+                        const progress = Storage.getSetting('matchProgress') || {};
+                        progress.mastery = { ...this._mastery };
+                        Storage.setSetting('matchProgress', progress);
                     }
 
                     // 새 단어 졸업 체크
@@ -401,12 +392,13 @@ const MatchGame = {
                         && this._mastery[wordEs] >= this.NEW_WORD_MASTERY) {
                         const graduatedEs = this._newWord.es;
                         this._pool.push(this._newWord);
-                        if (this._progress) {
-                            if (!this._progress.masteredEs.includes(graduatedEs)) {
-                                this._progress.masteredEs.push(graduatedEs);
-                            }
-                            this._progress.currentNewWordEs = null;
-                            this._saveProgress();
+                        if (typeof Storage !== 'undefined' && Storage.getSetting && Storage.setSetting) {
+                            const progress = Storage.getSetting('matchProgress') || {};
+                            const mastered = Array.isArray(progress.masteredEs) ? progress.masteredEs : [];
+                            if (!mastered.includes(graduatedEs)) mastered.push(graduatedEs);
+                            progress.masteredEs = mastered;
+                            progress.currentNewWordEs = null;
+                            Storage.setSetting('matchProgress', progress);
                         }
                         console.log(`매치 가랑비: "${this._newWord.es}" 졸업 → 기존 풀 합류`);
                         this._introduceNextWord();
