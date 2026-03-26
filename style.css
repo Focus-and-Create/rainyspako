@@ -1718,7 +1718,7 @@ a {
 }
 
 .match-grid {
-    flex: 0 1 auto;
+    flex: 4;
     min-height: 0;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -1726,7 +1726,7 @@ a {
     gap: 6px;
     width: 100%;
     padding: 8px;
-    height: min(62vh, 520px);
+    height: min(70vh, 600px);
     margin-bottom: 12px;
     overflow: visible;
 }
@@ -1740,7 +1740,7 @@ a {
     text-align: center;
     font-size: clamp(17px, 2.15vh, 21px);
     font-weight: 700;
-    padding: 8px 6px;
+    padding: 10px 6px;
     cursor: pointer;
     user-select: none;
     transition: transform 0.12s, box-shadow 0.12s, opacity 0.2s;
