@@ -24,6 +24,9 @@ const MatchGame = {
     _isRefilling: false,
     _container: null,
     _curriculumStageId: null,
+    _sorted: false,
+    _matchMode: 'fast',  // 'fast' = 새 단어 2개, 'review' = 복습 집중
+    _newWords: [],       // fast 모드에서 현재 학습 중인 새 단어들
 
     NEW_WORD_MASTERY: 3,
     REFILL_DELAY_MS: 1200,
@@ -58,6 +61,7 @@ const MatchGame = {
         this._curriculum = [];
         this._mastery = {};
         this._newWord = null;
+        this._newWords = [];
         this._pairCounter = 0;
         this._curriculumStageId = null;
 
@@ -126,14 +130,20 @@ const MatchGame = {
     },
 
     _introduceNextWord: function() {
-        if (this._curriculum.length === 0) {
+        this._newWords = [];
+        if (this._matchMode === 'review' || this._curriculum.length === 0) {
             this._newWord = null;
             this._saveProgressState();
             return;
         }
-        this._newWord = this._curriculum.shift();
+        // fast 모드: 2개씩 소개
+        const count = this._matchMode === 'fast' ? 2 : 1;
+        for (let i = 0; i < count && this._curriculum.length > 0; i++) {
+            this._newWords.push(this._curriculum.shift());
+        }
+        this._newWord = this._newWords[0]; // 호환용
         this._saveProgressState();
-        console.log(`매치 가랑비: 새 단어 소개 → ${this._newWord.es}`);
+        console.log(`매치 가랑비: 새 단어 소개 → ${this._newWords.map(w => w.es).join(', ')}`);
     },
 
     _restoreProgressState: function() {
@@ -166,13 +176,18 @@ const MatchGame = {
             Object.values(curriculumMap).forEach(w => nextCurriculum.push(w));
             this._curriculum = nextCurriculum;
 
-            if (saved.newWordEs) {
-                const idx = this._curriculum.findIndex(w => w.es === saved.newWordEs);
+            // 새 단어 목록 복원
+            const savedNewWords = Array.isArray(saved.newWordEsList) ? saved.newWordEsList
+                : saved.newWordEs ? [saved.newWordEs] : [];
+            this._newWords = [];
+            for (const es of savedNewWords) {
+                const idx = this._curriculum.findIndex(w => w.es === es);
                 if (idx >= 0) {
-                    this._newWord = this._curriculum[idx];
+                    this._newWords.push(this._curriculum[idx]);
                     this._curriculum.splice(idx, 1);
                 }
             }
+            this._newWord = this._newWords[0] || null;
         } catch (e) {
             console.warn('매치 가랑비 진행도 복원 실패:', e);
         }
@@ -184,6 +199,7 @@ const MatchGame = {
             const payload = {
                 curriculumStageId: this._curriculumStageId,
                 newWordEs: this._newWord ? this._newWord.es : null,
+                newWordEsList: this._newWords.map(w => w.es),
                 curriculumEs: this._curriculum.map(w => w.es),
                 mastery: this._mastery
             };
@@ -251,10 +267,12 @@ const MatchGame = {
         const words = [];
         const used = new Set(exclude);
 
-        // 1) 새 단어 1쌍
-        if (this._newWord && this._getPair(this._newWord) && !used.has(this._newWord.es)) {
-            words.push(this._newWord);
-            used.add(this._newWord.es);
+        // 1) 새 단어 (fast: 2쌍, review: 0쌍)
+        for (const nw of this._newWords) {
+            if (nw && this._getPair(nw) && !used.has(nw.es)) {
+                words.push(nw);
+                used.add(nw.es);
+            }
         }
 
         // 2) 최근 3스테이지에서 2쌍
@@ -315,7 +333,11 @@ const MatchGame = {
         this._matchedCount = 0;
 
         const finishRefill = () => {
-            if (selectedAtStart !== null && this._cards[selectedAtStart] && !this._cards[selectedAtStart].matched) {
+            if (this._sorted) {
+                this._applySortedLayout();
+                this._selected = null;
+                this._render();
+            } else if (selectedAtStart !== null && this._cards[selectedAtStart] && !this._cards[selectedAtStart].matched) {
                 this._selected = selectedAtStart;
                 this._updateCard(selectedAtStart);
             }
@@ -360,7 +382,8 @@ const MatchGame = {
 
     /** 새 단어 카드인지 판별 (src 쪽만) */
     _isNewCard: function(card) {
-        return this._newWord && card.es === this._newWord.es && card.type === 'src';
+        if (card.type !== 'src') return false;
+        return this._newWords.some(w => w && card.es === w.es);
     },
 
     _updateCard: function(idx) {
@@ -373,6 +396,72 @@ const MatchGame = {
         if (this._isNewCard(card)) el.classList.add('mc-new');
         if (idx === this._selected) el.classList.add('mc-selected');
         el.textContent = card.text;
+    },
+
+    // =========================================
+    // 정렬 & 모드
+    // =========================================
+
+    /** 정렬 토글: 뜻(왼쪽) / 단어(오른쪽) 분리 배치 */
+    toggleSort: function() {
+        this._sorted = !this._sorted;
+        if (this._sorted) {
+            this._applySortedLayout();
+        } else {
+            // 셔플 복원
+            const unmatched = this._cards.filter(c => !c.matched);
+            const matched = this._cards.filter(c => c.matched);
+            const shuffled = this._shuffle(unmatched);
+            let ui = 0, mi = 0;
+            for (let i = 0; i < this._cards.length; i++) {
+                if (this._cards[i].matched) {
+                    this._cards[i] = matched[mi++];
+                } else {
+                    this._cards[i] = shuffled[ui++];
+                }
+            }
+        }
+        this._selected = null;
+        this._render();
+    },
+
+    _applySortedLayout: function() {
+        const tgtCards = [];
+        const srcCards = [];
+        const matchedCards = [];
+        for (const c of this._cards) {
+            if (c.matched) { matchedCards.push(c); continue; }
+            if (c.type === 'tgt') tgtCards.push(c);
+            else srcCards.push(c);
+        }
+        // 왼쪽 2열(뜻), 오른쪽 2열(단어), 각각 셔플
+        const tgtShuffled = this._shuffle(tgtCards);
+        const srcShuffled = this._shuffle(srcCards);
+        const sorted = new Array(this.COLS * this.ROWS);
+        let ti = 0, si = 0, mi = 0;
+        for (let row = 0; row < this.ROWS; row++) {
+            for (let col = 0; col < this.COLS; col++) {
+                const idx = row * this.COLS + col;
+                if (col < 2) {
+                    sorted[idx] = ti < tgtShuffled.length ? tgtShuffled[ti++] : (mi < matchedCards.length ? matchedCards[mi++] : this._cards[idx]);
+                } else {
+                    sorted[idx] = si < srcShuffled.length ? srcShuffled[si++] : (mi < matchedCards.length ? matchedCards[mi++] : this._cards[idx]);
+                }
+            }
+        }
+        this._cards = sorted;
+    },
+
+    /** 학습 모드 변경 */
+    setMatchMode: function(mode) {
+        if (mode !== 'fast' && mode !== 'review') return;
+        this._matchMode = mode;
+        // 모드 변경 시 재초기화
+        if (this._container) {
+            this._buildPool();
+            this._deal();
+            this._render();
+        }
     },
 
     // =========================================
@@ -427,11 +516,16 @@ const MatchGame = {
                     this._saveProgressState();
 
                     // 새 단어 졸업 체크
-                    if (this._newWord && wordEs === this._newWord.es
-                        && this._mastery[wordEs] >= this.NEW_WORD_MASTERY) {
-                        this._pool.push(this._newWord);
-                        console.log(`매치 가랑비: "${this._newWord.es}" 졸업 → 기존 풀 합류`);
-                        this._introduceNextWord();
+                    const graduatingIdx = this._newWords.findIndex(w => w && w.es === wordEs && this._mastery[wordEs] >= this.NEW_WORD_MASTERY);
+                    if (graduatingIdx >= 0) {
+                        const graduated = this._newWords[graduatingIdx];
+                        this._pool.push(graduated);
+                        this._newWords.splice(graduatingIdx, 1);
+                        console.log(`매치 가랑비: "${graduated.es}" 졸업 → 기존 풀 합류`);
+                        if (this._newWords.length === 0) {
+                            this._introduceNextWord();
+                        }
+                        this._newWord = this._newWords[0] || null;
                     }
                 }
 

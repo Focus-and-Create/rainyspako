@@ -314,6 +314,26 @@ const App = {
             });
         }
 
+        // 매치 정렬 버튼
+        const matchSortBtn = document.getElementById('match-sort-btn');
+        if (matchSortBtn) {
+            matchSortBtn.addEventListener('click', () => {
+                MatchGame.toggleSort();
+                matchSortBtn.classList.toggle('match-mode-active', MatchGame._sorted);
+            });
+        }
+
+        // 매치 학습 모드 버튼
+        const matchModeFast = document.getElementById('match-mode-fast');
+        const matchModeReview = document.getElementById('match-mode-review');
+        const setMatchModeUI = (mode) => {
+            if (matchModeFast) matchModeFast.classList.toggle('match-mode-active', mode === 'fast');
+            if (matchModeReview) matchModeReview.classList.toggle('match-mode-active', mode === 'review');
+            MatchGame.setMatchMode(mode);
+        };
+        if (matchModeFast) matchModeFast.addEventListener('click', () => setMatchModeUI('fast'));
+        if (matchModeReview) matchModeReview.addEventListener('click', () => setMatchModeUI('review'));
+
         // Stats 버튼 (게임 헤더)
         const statsBtn = document.getElementById('stats-btn');
         if (statsBtn) {
