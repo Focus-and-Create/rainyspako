@@ -203,6 +203,20 @@ const MatchGame = {
         const fromReview = this._drawWeighted(reviewTarget, used, allPool);
         for (const w of fromReview) { words.push(w); used.add(w.es); }
 
+        // 풀이 작은 초기 구간에서는 exclude 때문에 5쌍을 못 채울 수 있음.
+        // 이때는 중복 허용으로라도 슬롯을 채워 리필이 멈추지 않게 한다.
+        if (words.length < total) {
+            const fallbackPool = [...this._recentPool, ...this._pool]
+                .filter(w => w && w.es && this._getPair(w));
+
+            if (fallbackPool.length > 0) {
+                while (words.length < total) {
+                    const pick = fallbackPool[Math.floor(Math.random() * fallbackPool.length)];
+                    words.push(pick);
+                }
+            }
+        }
+
         return words;
     },
 
