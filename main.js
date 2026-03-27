@@ -383,6 +383,15 @@ const App = {
                 this.hideStatsModal();
             });
         }
+        const statsProgressSection = document.querySelector('.stats-progress-section');
+        if (statsProgressSection) {
+            statsProgressSection.addEventListener('click', () => {
+                const unlockedWordsBox = document.getElementById('stats-unlocked-words');
+                if (!unlockedWordsBox) return;
+                const isOpen = unlockedWordsBox.classList.toggle('hidden');
+                statsProgressSection.classList.toggle('expanded', !isOpen);
+            });
+        }
 
         // 인라인 닉네임 편집
         const statsChangeNameBtn = document.getElementById('stats-change-name-btn');
@@ -804,6 +813,7 @@ const App = {
         document.getElementById('stats-total-stages').textContent = totalStages;
         const progressPct = totalStages > 0 ? Math.round((clearedCount / totalStages) * 100) : 0;
         document.getElementById('stats-progress-fill').style.width = `${progressPct}%`;
+        this.renderUnlockedWords();
 
         // 최근 활동 바(간이 시각화)
         const bars = document.querySelectorAll('#stats-week-bars .bar');
@@ -850,6 +860,42 @@ const App = {
      */
     hideStatsModal: function() {
         document.getElementById('stats-modal').classList.add('hidden');
+        document.getElementById('stats-unlocked-words')?.classList.add('hidden');
+        document.querySelector('.stats-progress-section')?.classList.remove('expanded');
+    },
+
+    /**
+     * 잠금 해제 단어 목록 렌더링
+     */
+    renderUnlockedWords: function() {
+        const unlockedWordsBox = document.getElementById('stats-unlocked-words');
+        if (!unlockedWordsBox) return;
+
+        const unlockedWords = [];
+        const seen = new Set();
+
+        CONFIG.WORLDS.forEach((world) => {
+            for (let stage = 1; stage <= world.stages; stage++) {
+                if (!Storage.isStageUnlocked(world.id, stage)) continue;
+                const words = WordManager.getStageWords(world.id, stage) || [];
+                words.forEach((word) => {
+                    if (!word?.es || seen.has(word.es)) return;
+                    seen.add(word.es);
+                    unlockedWords.push(word);
+                });
+            }
+        });
+
+        if (unlockedWords.length === 0) {
+            unlockedWordsBox.innerHTML = '<p class="stats-unlocked-empty">아직 해금된 단어가 없습니다.</p>';
+            return;
+        }
+
+        unlockedWordsBox.innerHTML = unlockedWords
+            .map((word) => (
+                `<span class="stats-word-chip"><strong>${word.es}</strong><em>${word.ko || '-'}</em></span>`
+            ))
+            .join('');
     },
 
     /**
