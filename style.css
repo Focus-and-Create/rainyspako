@@ -134,54 +134,85 @@ body::-webkit-scrollbar,
 /* ========================================= */
 /* 로딩 화면 */
 /* ========================================= */
+#loading-screen {
+    background: #ffffff;
+}
+
 .loading-content {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     height: 100%;
-    gap: var(--spacing-lg);
+    gap: 0;
     position: relative;
+    max-width: 400px;
+    padding: 0 32px;
+}
+
+.loading-icon-box {
+    width: 128px;
+    height: 128px;
+    background: #f2f4f4;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 56px;
+    margin-bottom: 48px;
 }
 
 .loading-title {
-    font-size: 56px;
-    font-weight: 700;
-    background: var(--gradient-accent);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    letter-spacing: 3px;
-    text-shadow: none;
+    font-size: 30px;
+    font-weight: 900;
+    color: #0053db;
+    letter-spacing: -0.05em;
     position: relative;
+    background: none;
+    -webkit-text-fill-color: initial;
 }
 
 .loading-title::after {
-    content: 'Spanish Rain';
-    position: absolute;
-    top: 0;
-    left: 0;
-    background: var(--gradient-accent);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    filter: blur(18px);
-    opacity: 0.4;
-    z-index: -1;
+    display: none;
+}
+
+.loading-subtitle {
+    font-size: 10px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: #5a6061;
+    margin-top: 8px;
+    opacity: 0.6;
+}
+
+.loading-bar-section {
+    width: 100%;
+    margin-top: 48px;
+}
+
+.loading-bar-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 12px;
 }
 
 .loading-text {
-    font-size: 15px;
-    color: var(--color-text-secondary);
-    letter-spacing: 2px;
-    text-transform: uppercase;
+    font-size: 14px;
+    color: #5a6061;
+    font-weight: 500;
+    letter-spacing: -0.02em;
+}
+
+.loading-pct {
+    font-size: 12px;
+    color: #0053db;
+    font-weight: 700;
 }
 
 .loading-bar {
-    width: 240px;
-    height: 3px;
-    background-color: var(--color-bg-light);
-    border-radius: var(--radius-full);
+    width: 100%;
+    height: 4px;
+    background-color: #e2e2e2;
     overflow: hidden;
     position: relative;
 }
@@ -189,10 +220,9 @@ body::-webkit-scrollbar,
 .loading-progress {
     width: 0%;
     height: 100%;
-    background: var(--gradient-accent);
-    border-radius: var(--radius-full);
-    animation: loading-slide 1.8s ease-in-out infinite;
-    box-shadow: 0 0 10px var(--color-accent-glow);
+    background: #0053db;
+    animation: loading-slide 2.5s ease-in-out infinite;
+    box-shadow: none;
 }
 
 @keyframes loading-slide {
@@ -201,8 +231,8 @@ body::-webkit-scrollbar,
         margin-left: 0%;
     }
     50% {
-        width: 60%;
-        margin-left: 20%;
+        width: 65%;
+        margin-left: 15%;
     }
     100% {
         width: 0%;
@@ -210,30 +240,14 @@ body::-webkit-scrollbar,
     }
 }
 
-/* 비 내리는 효과 (로딩 화면 배경) */
-#loading-screen::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-image:
-        linear-gradient(180deg, transparent 90%, rgba(233, 30, 140, 0.04) 100%),
-        repeating-linear-gradient(
-            90deg,
-            transparent,
-            transparent 98px,
-            rgba(233, 30, 140, 0.025) 98px,
-            rgba(233, 30, 140, 0.025) 100px
-        );
-    pointer-events: none;
-    animation: rain-fall 0.8s linear infinite;
-}
-
-@keyframes rain-fall {
-    0% { background-position: 0 0; }
-    100% { background-position: 0 40px; }
+.loading-quote {
+    font-size: 12px;
+    color: #5a6061;
+    font-style: italic;
+    opacity: 0.7;
+    margin-top: 32px;
+    text-align: center;
+    line-height: 1.6;
 }
 
 /* ========================================= */
@@ -395,30 +409,31 @@ a {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: var(--spacing-sm) var(--spacing-lg);
+    padding: 12px 24px;
     background: #ffffff;
 }
 
 .game-stat {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    gap: 2px;
+    align-items: flex-start;
+    gap: 0;
 }
 
 .stat-label {
     font-size: 10px;
-    color: var(--color-text-muted);
+    color: #0053db;
     text-transform: uppercase;
-    letter-spacing: 1.5px;
+    letter-spacing: 2px;
     font-weight: 700;
 }
 
 .stat-value {
-    font-size: 26px;
-    font-weight: 700;
-    color: var(--color-text-primary);
-    letter-spacing: -0.5px;
+    font-size: 28px;
+    font-weight: 900;
+    color: #2d3435;
+    letter-spacing: -0.03em;
+    line-height: 1.1;
 }
 
 .lives-hearts {
@@ -758,28 +773,28 @@ a {
 }
 
 .icon-btn {
-    padding: var(--spacing-sm) var(--spacing-md);
+    padding: 8px 16px;
     min-width: 42px;
     height: 42px;
     display: flex;
     align-items: center;
     justify-content: center;
     font-size: 13px;
-    font-weight: 700;
-    color: var(--color-text-secondary);
-    background-color: rgba(255, 255, 255, 0.75);
-    border: 1px solid rgba(180, 140, 220, 0.3);
-    border-radius: var(--radius-md);
+    font-weight: 600;
+    color: #2d3435;
+    background-color: #ffffff;
+    border: 1px solid #dde4e5;
+    border-radius: 0;
     cursor: pointer;
     transition: all 0.2s ease;
-    backdrop-filter: blur(8px);
-    -webkit-backdrop-filter: blur(8px);
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
 }
 
 .icon-btn:hover {
-    background-color: #ffffff;
-    color: var(--color-accent);
-    border-color: var(--color-accent);
+    background-color: #f2f4f4;
+    color: #0053db;
+    border-color: #adb3b4;
 }
 
 /* ========================================= */
@@ -1799,7 +1814,7 @@ a {
 
 /* 개별 카드: 셀을 꽉 채움 */
 .cg {
-    border-radius: var(--radius-md);
+    border-radius: 0;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -1810,7 +1825,7 @@ a {
     font-weight: 700;
     line-height: 1.3;
     word-break: break-word;
-    box-shadow: var(--shadow-sm);
+    box-shadow: none;
     overflow: hidden;
     transition: background 0.15s, border-color 0.15s, opacity 0.2s;
     user-select: none;
@@ -1818,32 +1833,32 @@ a {
 
 /* 활성 카드 */
 .cg-active {
-    background: linear-gradient(135deg, #e8f5e9, #c8e6c9);
+    background: #e8f5e9;
     color: #1b5e20;
     border: 2.5px solid #66bb6a;
-    box-shadow: 0 0 0 3px rgba(102,187,106,0.35), var(--shadow-md);
+    box-shadow: none;
     font-size: 16px;
 }
 
 /* 예정 카드 */
 .cg-upcoming {
-    background: linear-gradient(135deg, #e3f2fd, #bbdefb);
+    background: #e3f2fd;
     color: #0d47a1;
-    border: 2px solid #90caf9;
-    opacity: 0.65;
+    border: 2px solid #bbdefb;
+    opacity: 0.7;
 }
 
 /* 새 단어 카드 (예정 카드 중 학습 중인 신규 단어) */
 .cg-upcoming.cg-new {
-    background: linear-gradient(135deg, #e8f5e9, #c8e6c9);
+    background: #e8f5e9;
     color: #1b5e20;
-    border: 2px solid #81c784;
-    opacity: 0.8;
+    border: 2px solid #a5d6a7;
+    opacity: 0.85;
 }
 
 /* 정답 처리 */
 .cg-ok {
-    background: linear-gradient(135deg, #e8f5e9, #a5d6a7);
+    background: #e8f5e9;
     color: #2e7d32;
     border: 2px solid #66bb6a;
     opacity: 0.85;
@@ -1851,7 +1866,7 @@ a {
 
 /* 오답 처리 */
 .cg-wrong {
-    background: linear-gradient(135deg, #ffebee, #ffcdd2);
+    background: #ffebee;
     color: #c62828;
     border: 2px solid #ef9a9a;
 }
@@ -1892,7 +1907,7 @@ a {
 
 /* 카드 기본 */
 .mc {
-    border-radius: var(--radius-md);
+    border-radius: 0;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -1905,7 +1920,7 @@ a {
     transition: transform 0.12s, box-shadow 0.12s, opacity 0.2s;
     line-height: 1.35;
     word-break: break-word;
-    box-shadow: var(--shadow-sm);
+    box-shadow: none;
     overflow: hidden;
 }
 
@@ -1915,29 +1930,29 @@ a {
 
 /* 소스 언어 카드 (파랑) */
 .mc-src {
-    background: linear-gradient(135deg, #e3f2fd, #bbdefb);
+    background: #e3f2fd;
     color: #0d47a1;
-    border: 2px solid #90caf9;
+    border: 2px solid #bbdefb;
 }
 
 /* 새 단어 카드 (매치 게임, src만) */
 .mc-src.mc-new {
-    background: linear-gradient(135deg, #e8f5e9, #c8e6c9);
+    background: #e8f5e9;
     color: #1b5e20;
-    border: 2px solid #81c784;
+    border: 2px solid #a5d6a7;
 }
 
 /* 타겟 언어 카드 (흰색) */
 .mc-tgt {
     background: #ffffff;
     color: #333;
-    border: 2px solid #ddd;
+    border: 2px solid #dde4e5;
 }
 
 /* 선택됨 */
 .mc-selected {
-    transform: scale(1.06) translateY(-2px);
-    box-shadow: 0 0 0 3px var(--color-accent), var(--shadow-md);
+    transform: scale(1.03) translateY(-1px);
+    box-shadow: 0 0 0 2.5px #0053db;
 }
 
 /* 매칭됨 → 투명하게 */
@@ -1950,9 +1965,9 @@ a {
 /* 오답 플래시 */
 .mc-wrong {
     animation: mc-shake 0.5s ease;
-    background: linear-gradient(135deg, #ffebee, #ffcdd2) !important;
-    border-color: var(--color-danger) !important;
-    color: var(--color-danger) !important;
+    background: #ffebee !important;
+    border-color: #ef4444 !important;
+    color: #c62828 !important;
 }
 
 @keyframes mc-shake {

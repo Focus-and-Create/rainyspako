@@ -11,7 +11,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&display=swap" rel="stylesheet">
     
     <!-- 스타일시트 -->
-    <link rel="stylesheet" href="style.css?v=15">
+    <link rel="stylesheet" href="style.css?v=16">
 </head>
 <body>
     <!-- ========================================= -->
@@ -19,11 +19,19 @@
     <!-- ========================================= -->
     <div id="loading-screen" class="screen">
         <div class="loading-content">
+            <div class="loading-icon-box">☔</div>
             <h1 class="loading-title">Spanish Rain</h1>
-            <p class="loading-text">Loading...</p>
-            <div class="loading-bar">
-                <div class="loading-progress"></div>
+            <p class="loading-subtitle">Linguistic Journal</p>
+            <div class="loading-bar-section">
+                <div class="loading-bar-head">
+                    <span class="loading-text">Loading...</span>
+                    <span class="loading-pct" id="loading-pct"></span>
+                </div>
+                <div class="loading-bar">
+                    <div class="loading-progress"></div>
+                </div>
             </div>
+            <p class="loading-quote">"La lluvia en Sevilla es una pura maravilla."</p>
         </div>
     </div>
 
