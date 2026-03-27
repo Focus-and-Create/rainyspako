@@ -377,20 +377,9 @@ const MatchGame = {
 
         if (this._sorted) this._applySortedLayout();
 
-        // 전체 리렌더 대신 변경된 슬롯만 부분 업데이트 (fade-in)
-        for (const slot of matchedSlots) {
-            this._updateCard(slot);
-            const el = this._container && this._container.querySelector(`[data-idx="${slot}"]`);
-            if (el) {
-                el.classList.remove('mc-matched');
-                el.classList.add('mc-refill-in');
-                el.addEventListener('animationend', function handler() {
-                    el.classList.remove('mc-refill-in');
-                    el.removeEventListener('animationend', handler);
-                }, { once: true });
-            }
-        }
-
+        // matchedSlots 세트 (애니메이션용)
+        const refillSet = new Set(matchedSlots);
+        this._renderWithRefill(refillSet);
         this._isRefilling = false;
         this._locked = false;
     },
@@ -430,6 +419,27 @@ const MatchGame = {
             if (this._isNewCard(card)) el.classList.add('mc-new');
             el.dataset.idx = idx;
             el.textContent = card.text;
+            this._container.appendChild(el);
+        });
+    },
+
+    /** 리필 시 전체 렌더 (리필된 슬롯만 페이드인 애니메이션) */
+    _renderWithRefill: function(refillSet) {
+        if (!this._container) return;
+        this._container.innerHTML = '';
+        this._cards.forEach((card, idx) => {
+            const el = document.createElement('div');
+            el.className = 'mc' + (card.type === 'tgt' ? ' mc-tgt' : ' mc-src');
+            if (card.matched) el.classList.add('mc-matched');
+            if (this._isNewCard(card)) el.classList.add('mc-new');
+            el.dataset.idx = idx;
+            el.textContent = card.text;
+            if (refillSet.has(idx)) {
+                el.classList.add('mc-refill-in');
+                el.addEventListener('animationend', function() {
+                    el.classList.remove('mc-refill-in');
+                }, { once: true });
+            }
             this._container.appendChild(el);
         });
     },
