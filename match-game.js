@@ -375,14 +375,10 @@ const MatchGame = {
 
         this._matchedCount = 0;
 
-        if (this._sorted) {
-            this._applySortedLayout();
-            this._render();
-        } else {
-            // flow 모드에서는 매칭된 슬롯만 갱신하여 기존 카드 자리/상태를 유지
-            for (const slot of matchedSlots) {
-                this._updateCard(slot);
-            }
+        // 리필 시에는 정렬 여부와 관계없이 매칭된 슬롯만 갱신
+        // (미매칭 카드의 위치/인덱스 절대 고정)
+        for (const slot of matchedSlots) {
+            this._updateCard(slot);
         }
 
         // 비정렬 모드에서는 리필된 슬롯만 페이드인
