@@ -375,10 +375,11 @@ const MatchGame = {
 
         this._matchedCount = 0;
 
-        if (this._sorted) this._applySortedLayout();
-
-        // 리필 직후에는 전체 렌더로 DOM 인덱스와 카드 데이터를 항상 동기화한다.
-        this._render();
+        // 리필 시에는 정렬 여부와 관계없이 매칭된 슬롯만 갱신
+        // (미매칭 카드의 위치/인덱스 절대 고정)
+        for (const slot of matchedSlots) {
+            this._updateCard(slot);
+        }
 
         // 비정렬 모드에서는 리필된 슬롯만 페이드인
         if (shouldAnimateRefill) {
