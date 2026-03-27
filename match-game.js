@@ -82,10 +82,12 @@ const MatchGame = {
                     hasClearedAny = true;
                     const stageWords = WordManager.getStageWords(world.id, s);
                     clearedStages.push({ worldId: world.id, stageNum: s, words: stageWords });
-                } else if (this._curriculum.length === 0) {
-                    // 첫 미클리어 스테이지 → curriculum
+                } else {
+                    // 미클리어 스테이지 전체를 curriculum에 순서대로 적재
                     const stageWords = WordManager.getStageWords(world.id, s);
-                    this._curriculumStageId = `${world.id}-${s}`;
+                    if (!this._curriculumStageId) {
+                        this._curriculumStageId = `${world.id}-${s}`;
+                    }
                     for (const w of stageWords) {
                         if (w.es && this._getPair(w)) this._curriculum.push(w);
                     }
@@ -136,8 +138,29 @@ const MatchGame = {
 
     _introduceNextWord: function() {
         this._newWords = [];
-        if (this._matchMode === 'review' || this._curriculum.length === 0) {
+        if (this._matchMode === 'review') {
             this._newWord = null;
+            this._saveProgressState();
+            return;
+        }
+        if (this._curriculum.length === 0) {
+            // 커리큘럼이 비어도 fast 모드에서는 학습 강조 카드 2개를 유지
+            const fallbackNew = [...this._recentPool, ...this._pool]
+                .filter(w => w && w.es && this._getPair(w))
+                .sort((a, b) => {
+                    const ma = this._mastery[a.es] || 0;
+                    const mb = this._mastery[b.es] || 0;
+                    if (ma !== mb) return ma - mb;
+                    return a.es.localeCompare(b.es);
+                })
+                .slice(0, 2);
+            this._newWords = fallbackNew;
+            this._newWords.forEach((w) => {
+                if (typeof this._newWordStreak[w.es] !== 'number') {
+                    this._newWordStreak[w.es] = 0;
+                }
+            });
+            this._newWord = this._newWords[0] || null;
             this._saveProgressState();
             return;
         }
@@ -605,7 +628,9 @@ const MatchGame = {
                     const graduatingIdx = this._newWords.findIndex(w => w && w.es === wordEs && (this._newWordStreak[wordEs] || 0) >= this.NEW_WORD_MASTERY);
                     if (graduatingIdx >= 0) {
                         const graduated = this._newWords[graduatingIdx];
-                        this._pool.push(graduated);
+                        if (!this._pool.some(w => w.es === graduated.es) && !this._recentPool.some(w => w.es === graduated.es)) {
+                            this._pool.push(graduated);
+                        }
                         this._newWords.splice(graduatingIdx, 1);
                         delete this._newWordStreak[graduated.es];
                         this._graduatedWords[graduated.es] = true;
