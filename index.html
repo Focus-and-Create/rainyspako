@@ -11,7 +11,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&display=swap" rel="stylesheet">
     
     <!-- 스타일시트 -->
-    <link rel="stylesheet" href="style.css?v=16">
+    <link rel="stylesheet" href="style.css?v=17">
 </head>
 <body>
     <!-- ========================================= -->
@@ -137,15 +137,25 @@
     <div id="game-screen" class="screen hidden">
         <!-- 게임 헤더 -->
         <div class="game-header">
-            <div class="game-stat">
-                <span class="stat-label">Score</span>
-                <span id="score-display" class="stat-value">0</span>
+            <div class="game-header-left">
+                <span class="game-logo">Spanish Rain</span>
+                <nav class="game-nav">
+                    <button id="game-view-toggle" class="game-nav-link game-nav-active" title="짝 잇기 / 타이핑 전환">Match</button>
+                </nav>
             </div>
 
-            <div style="display:flex;align-items:center;gap:6px;">
-                <button id="game-view-toggle" class="icon-btn" title="짝 잇기 / 타이핑 전환">Match</button>
-                <button id="game-settings-btn" class="icon-btn" aria-label="게임 설정">⚙</button>
-                <button id="stats-btn" class="icon-btn" aria-label="통계">☰</button>
+            <div class="game-header-right">
+                <div class="game-header-badge">
+                    <span class="game-header-badge-label">Score</span>
+                    <span id="score-display" class="game-header-badge-value">0</span>
+                </div>
+                <div id="combo-display" class="combo-display hidden"></div>
+                <button id="game-settings-btn" class="game-header-icon" aria-label="게임 설정">
+                    <span class="game-header-icon-sym">⚙</span>
+                </button>
+                <button id="stats-btn" class="game-header-icon" aria-label="통계">
+                    <span class="game-header-icon-sym">☰</span>
+                </button>
             </div>
         </div>
 
@@ -178,35 +188,16 @@
                 <button id="match-sort-btn" class="match-tool-btn" title="뜻↔단어 정렬">정렬</button>
             </div>
         </div>
-        
+
         <!-- 진행도 바 -->
         <div class="progress-container">
             <div id="progress-bar" class="progress-fill"></div>
         </div>
 
-        <!-- 콤보 표시 -->
-        <div id="combo-display" class="combo-display hidden"></div>
-
         <!-- 타이핑 게임 뷰 -->
         <div id="typing-view">
             <!-- 카드 그리드 (동적 렌더링, 4×4) -->
             <div id="card-grid" class="card-grid"></div>
-
-            <!-- 특수문자 입력 바 -->
-            <div class="special-chars-bar" id="special-chars-bar">
-                <span class="special-chars-label">Esp:</span>
-                <button class="special-char-btn" data-char="á" title="á (Ctrl+A)">á</button>
-                <button class="special-char-btn" data-char="é" title="é (Ctrl+E)">é</button>
-                <button class="special-char-btn" data-char="í" title="í (Ctrl+I)">í</button>
-                <button class="special-char-btn" data-char="ó" title="ó (Ctrl+O)">ó</button>
-                <button class="special-char-btn" data-char="ú" title="ú (Ctrl+U)">ú</button>
-                <button class="special-char-btn" data-char="ü" title="ü">ü</button>
-                <button class="special-char-btn" data-char="ñ" title="ñ (Ctrl+N)">ñ</button>
-                <button class="special-char-btn" data-char="Ñ" title="Ñ (Ctrl+Shift+N)">Ñ</button>
-                <button class="special-char-btn" data-char="¡" title="¡">¡</button>
-                <button class="special-char-btn" data-char="¿" title="¿">¿</button>
-                <span class="special-chars-shortcut">Ctrl+N = ñ</span>
-            </div>
 
             <!-- 입력 필드 -->
             <div class="input-container">
@@ -219,6 +210,21 @@
                     autocapitalize="off"
                     spellcheck="false"
                 >
+            </div>
+
+            <!-- 특수문자 입력 바 -->
+            <div class="special-chars-bar" id="special-chars-bar">
+                <button class="special-char-btn" data-char="á" title="á (Ctrl+A)">á</button>
+                <button class="special-char-btn" data-char="é" title="é (Ctrl+E)">é</button>
+                <button class="special-char-btn" data-char="í" title="í (Ctrl+I)">í</button>
+                <button class="special-char-btn" data-char="ó" title="ó (Ctrl+O)">ó</button>
+                <button class="special-char-btn" data-char="ú" title="ú (Ctrl+U)">ú</button>
+                <button class="special-char-btn" data-char="ü" title="ü">ü</button>
+                <button class="special-char-btn" data-char="ñ" title="ñ (Ctrl+N)">ñ</button>
+                <button class="special-char-btn" data-char="Ñ" title="Ñ (Ctrl+Shift+N)">Ñ</button>
+                <button class="special-char-btn" data-char="¡" title="¡">¡</button>
+                <button class="special-char-btn" data-char="¿" title="¿">¿</button>
+                <span class="special-chars-shortcut">Ctrl+N = ñ</span>
             </div>
         </div>
 
