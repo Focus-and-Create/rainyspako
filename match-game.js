@@ -377,17 +377,21 @@ const MatchGame = {
 
         if (this._sorted) this._applySortedLayout();
 
-        // 전체 리렌더 대신 변경된 슬롯만 부분 업데이트 (fade-in)
-        for (const slot of matchedSlots) {
-            this._updateCard(slot);
-            const el = this._container && this._container.querySelector(`[data-idx="${slot}"]`);
-            if (el) {
-                el.classList.remove('mc-matched');
-                el.classList.add('mc-refill-in');
-                el.addEventListener('animationend', function handler() {
-                    el.classList.remove('mc-refill-in');
-                    el.removeEventListener('animationend', handler);
-                }, { once: true });
+        // 리필 직후에는 전체 렌더로 DOM 인덱스와 카드 데이터를 항상 동기화한다.
+        this._render();
+
+        // 비정렬 모드에서는 리필된 슬롯만 페이드인
+        if (shouldAnimateRefill) {
+            for (const slot of matchedSlots) {
+                const el = this._container && this._container.querySelector(`[data-idx="${slot}"]`);
+                if (el) {
+                    el.classList.remove('mc-matched');
+                    el.classList.add('mc-refill-in');
+                    el.addEventListener('animationend', function handler() {
+                        el.classList.remove('mc-refill-in');
+                        el.removeEventListener('animationend', handler);
+                    }, { once: true });
+                }
             }
         }
 
