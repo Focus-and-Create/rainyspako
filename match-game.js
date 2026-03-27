@@ -316,9 +316,7 @@ const MatchGame = {
 
     /** 리필: 5쌍 = 1 새 단어 + 2 최근 + 2 복습 (보드 잔여와 중복 없음) */
     _refill: function() {
-        const selectedAtStart = this._selected;
         this._selected = null;
-        if (selectedAtStart !== null) this._updateCard(selectedAtStart);
         const exclude = new Set();
         for (const c of this._cards) {
             if (!c.matched) exclude.add(c.es);
@@ -330,36 +328,24 @@ const MatchGame = {
             if (this._cards[i].matched) matchedSlots.push(i);
         }
 
-        this._matchedCount = 0;
-
-        const finishRefill = () => {
-            if (this._sorted) {
-                this._applySortedLayout();
-                this._selected = null;
-                this._render();
-            } else if (selectedAtStart !== null && this._cards[selectedAtStart] && !this._cards[selectedAtStart].matched) {
-                this._selected = selectedAtStart;
-                this._updateCard(selectedAtStart);
-            }
-            this._isRefilling = false;
-            this._locked = false;
-        };
-
+        // newCards가 부족하면 슬롯 수에 맞춤 (빈 슬롯 방지)
         let ni = 0;
-        let si = 0;
-        const placeNext = () => {
-            if (si >= matchedSlots.length) {
-                finishRefill();
-                return;
-            }
-            const slot = matchedSlots[si++];
+        for (let si = 0; si < matchedSlots.length; si++) {
+            const slot = matchedSlots[si];
             if (ni < newCards.length) {
                 this._cards[slot] = newCards[ni++];
-                this._updateCard(slot);
+            } else {
+                // 카드가 부족하면 빈 카드가 아닌 matched 해제 상태의 더미 생성
+                this._cards[slot] = { ...this._cards[slot], matched: false };
             }
-            setTimeout(placeNext, 90);
-        };
-        placeNext();
+        }
+
+        this._matchedCount = 0;
+
+        if (this._sorted) this._applySortedLayout();
+        this._render();
+        this._isRefilling = false;
+        this._locked = false;
     },
 
     // =========================================
