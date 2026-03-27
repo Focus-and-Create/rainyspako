@@ -955,7 +955,7 @@ a {
 /* 통계 모달 */
 /* ========================================= */
 /* Stats Dashboard - 클린 디자인 */
-.stats-dashboard {
+.modal-content.stats-dashboard {
     max-width: 672px;
     width: min(94vw, 672px);
     max-height: 92vh;
@@ -1379,6 +1379,9 @@ a {
 
     .modal-content {
         padding: var(--spacing-lg);
+    }
+    .modal-content.stats-dashboard {
+        padding: 0;
     }
 
     /* Stats 모달 모바일 */
