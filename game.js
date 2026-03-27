@@ -81,6 +81,9 @@ const Game = {
     /** 현재 학습 중인 새 단어 (3번 맞히면 졸업) */
     _newWord: null,
 
+    /** 최근 졸업한 단어 (최대 10개, 가중치 부스트) */
+    _recentGrads: [],
+
     /** 새 단어 졸업에 필요한 정답 수 */
     NEW_WORD_MASTERY: 3,
 
@@ -215,6 +218,7 @@ const Game = {
         this._curriculum = [];
         this._knownPool = [];
         this._newWord = null;
+        this._recentGrads = [];
 
         // 단어 풀 생성 → knownPool에 넣기
         const pool = customPool || WordManager.createWordPool(worldId, stageNum);
@@ -301,7 +305,12 @@ const Game = {
             return this._newWord || { es: '...', ko: '...', en: '' };
         }
 
-        const weights = pool.map(w => 1 / (1 + (this._mastery[w.es] || 0)));
+        // 최근 졸업 단어 Set (가중치 3배 부스트)
+        const recentSet = new Set(this._recentGrads);
+        const weights = pool.map(w => {
+            const base = 1 / (1 + (this._mastery[w.es] || 0));
+            return recentSet.has(w.es) ? base * 3 : base;
+        });
         const total = weights.reduce((a, b) => a + b, 0);
         let r = Math.random() * total;
         for (let i = 0; i < pool.length; i++) {
@@ -650,6 +659,9 @@ const Game = {
         if (this._newWord && word.spanish === this._newWord.es
             && this._mastery[word.spanish] >= this.NEW_WORD_MASTERY) {
             this._knownPool.push(this._newWord);
+            // 최근 졸업 링버퍼에 추가 (최대 10개)
+            this._recentGrads.push(this._newWord.es);
+            if (this._recentGrads.length > 10) this._recentGrads.shift();
             console.log(`가랑비: "${this._newWord.es}" 졸업 → 기존 풀 합류 (${this._knownPool.length}개)`);
             this._introduceNextWord();
         }
