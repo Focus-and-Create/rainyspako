@@ -282,9 +282,13 @@ const MatchGame = {
             if (candidates.length === 0) break;
             const weights = candidates.map(w => {
                 const mastery = this._mastery[w.es] || 0;
+                let base;
                 // 7회 이상 맞힌 카드는 가중치를 더 낮춰 노출 빈도 감소
-                if (mastery >= 7) return 1 / (1 + mastery * 2.5);
-                return 1 / (1 + mastery);
+                if (mastery >= 7) base = 1 / (1 + mastery * 2.5);
+                else base = 1 / (1 + mastery);
+                // 최근 졸업 단어 부스트 (3배)
+                if (this._graduatedWords[w.es]) base *= 3;
+                return base;
             });
             const total = weights.reduce((a, b) => a + b, 0);
             let r = Math.random() * total;
@@ -646,7 +650,7 @@ const MatchGame = {
                     if (graduatingIdx >= 0) {
                         const graduated = this._newWords[graduatingIdx];
                         if (!this._pool.some(w => w.es === graduated.es) && !this._recentPool.some(w => w.es === graduated.es)) {
-                            this._pool.push(graduated);
+                            this._recentPool.push(graduated);
                         }
                         this._newWords.splice(graduatingIdx, 1);
                         delete this._newWordStreak[graduated.es];
