@@ -376,7 +376,21 @@ const MatchGame = {
         this._matchedCount = 0;
 
         if (this._sorted) this._applySortedLayout();
-        this._render();
+
+        // 전체 리렌더 대신 변경된 슬롯만 부분 업데이트 (fade-in)
+        for (const slot of matchedSlots) {
+            this._updateCard(slot);
+            const el = this._container && this._container.querySelector(`[data-idx="${slot}"]`);
+            if (el) {
+                el.classList.remove('mc-matched');
+                el.classList.add('mc-refill-in');
+                el.addEventListener('animationend', function handler() {
+                    el.classList.remove('mc-refill-in');
+                    el.removeEventListener('animationend', handler);
+                }, { once: true });
+            }
+        }
+
         this._isRefilling = false;
         this._locked = false;
     },

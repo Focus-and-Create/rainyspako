@@ -2043,6 +2043,16 @@ a {
     color: #c62828 !important;
 }
 
+/* 리필 페이드인 */
+.mc-refill-in {
+    animation: mc-fade-in 0.4s ease-out;
+}
+
+@keyframes mc-fade-in {
+    0% { opacity: 0; transform: scale(0.9); }
+    100% { opacity: 1; transform: scale(1); }
+}
+
 @keyframes mc-shake {
     0%, 100% { transform: translateX(0); }
     20%       { transform: translateX(-5px); }
