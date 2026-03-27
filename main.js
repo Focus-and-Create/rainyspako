@@ -98,6 +98,10 @@ const App = {
             return;
         }
 
+        // 저장된 게임 뷰 복원 (match/typing)
+        const savedView = Storage.getSetting('gameView');
+        if (savedView === 'typing') this._matchViewOpen = false;
+
         // 게임 초기화 (가랑비 모델: 스테이지 클리어 없이 연속 플레이)
         Game.init(null);
         Game.onGameOver  = () => { if (!this._matchViewOpen) this._startFreshGame(); };
@@ -309,6 +313,8 @@ const App = {
         if (gameSettingsBtn && gameSettingsPanel) {
             gameSettingsBtn.addEventListener('click', (e) => {
                 e.stopPropagation();
+                const header = document.querySelector('.game-header');
+                if (header) gameSettingsPanel.style.top = header.offsetHeight + 'px';
                 gameSettingsPanel.classList.toggle('hidden');
             });
             document.addEventListener('click', (e) => {
@@ -483,6 +489,7 @@ const App = {
      */
     _toggleGameView: function() {
         this._matchViewOpen = !this._matchViewOpen;
+        Storage.setSetting('gameView', this._matchViewOpen ? 'match' : 'typing');
         this._syncGameViewUI();
         if (this._matchViewOpen) {
             // 타이핑 → 매치: 현재 점수 보존 후 정지

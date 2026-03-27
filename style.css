@@ -1889,11 +1889,27 @@ a {
     padding: 12px 24px;
     border-radius: 0;
     border: none;
-    border-bottom: 1px solid #f2f4f4;
+    border-bottom: 1px solid #e0e3e3;
     background: #fff;
     display: flex;
     flex-direction: column;
     gap: 10px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 20;
+    box-sizing: border-box;
+    transform-origin: top center;
+    animation: settings-unfold 0.25s ease-out forwards;
+}
+
+.game-settings-panel.hidden {
+    display: none;
+}
+
+@keyframes settings-unfold {
+    0% { opacity: 0; transform: translateX(-50%) scaleY(0); }
+    100% { opacity: 1; transform: translateX(-50%) scaleY(1); }
 }
 
 .game-settings-row {
@@ -2106,6 +2122,20 @@ a {
 @keyframes mc-fade-in {
     0% { opacity: 0; transform: scale(0.9); }
     100% { opacity: 1; transform: scale(1); }
+}
+
+/* 카드 스태거 등장 애니메이션 */
+@keyframes card-stagger-in {
+    0% { opacity: 0; transform: translateY(8px) scale(0.92); }
+    100% { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+.mc-stagger-in {
+    animation: card-stagger-in 0.3s ease-out both;
+}
+
+.cg-stagger-in {
+    animation: card-stagger-in 0.3s ease-out both;
 }
 
 @keyframes mc-shake {
