@@ -15,7 +15,7 @@ const MatchGame = {
     _curriculum: [],   // 아직 소개되지 않은 단어 큐
     _newWord: null,    // 현재 학습 중인 새 단어
     _mastery: {},      // { spanish: 정답횟수 }
-    _newWordStreak: {}, // { spanish: 연속 정답횟수 }
+    _newWordStreak: {}, // { spanish: 새 단어 정답 누적횟수 }
     _graduatedWords: {}, // { spanish: true } 현재 curriculum에서 졸업 처리된 단어
     _pairCounter: 0,
 
@@ -82,10 +82,12 @@ const MatchGame = {
                     hasClearedAny = true;
                     const stageWords = WordManager.getStageWords(world.id, s);
                     clearedStages.push({ worldId: world.id, stageNum: s, words: stageWords });
-                } else if (this._curriculum.length === 0) {
-                    // 첫 미클리어 스테이지 → curriculum
+                } else {
+                    // 미클리어 스테이지 전체를 curriculum에 순서대로 적재
                     const stageWords = WordManager.getStageWords(world.id, s);
-                    this._curriculumStageId = `${world.id}-${s}`;
+                    if (!this._curriculumStageId) {
+                        this._curriculumStageId = `${world.id}-${s}`;
+                    }
                     for (const w of stageWords) {
                         if (w.es && this._getPair(w)) this._curriculum.push(w);
                     }
@@ -136,8 +138,29 @@ const MatchGame = {
 
     _introduceNextWord: function() {
         this._newWords = [];
-        if (this._matchMode === 'review' || this._curriculum.length === 0) {
+        if (this._matchMode === 'review') {
             this._newWord = null;
+            this._saveProgressState();
+            return;
+        }
+        if (this._curriculum.length === 0) {
+            // 커리큘럼이 비어도 fast 모드에서는 학습 강조 카드 2개를 유지
+            const fallbackNew = [...this._recentPool, ...this._pool]
+                .filter(w => w && w.es && this._getPair(w))
+                .sort((a, b) => {
+                    const ma = this._mastery[a.es] || 0;
+                    const mb = this._mastery[b.es] || 0;
+                    if (ma !== mb) return ma - mb;
+                    return a.es.localeCompare(b.es);
+                })
+                .slice(0, 2);
+            this._newWords = fallbackNew;
+            this._newWords.forEach((w) => {
+                if (typeof this._newWordStreak[w.es] !== 'number') {
+                    this._newWordStreak[w.es] = 0;
+                }
+            });
+            this._newWord = this._newWords[0] || null;
             this._saveProgressState();
             return;
         }
@@ -257,7 +280,12 @@ const MatchGame = {
         for (let i = 0; i < n; i++) {
             const candidates = source.filter(w => !used.has(w.es));
             if (candidates.length === 0) break;
-            const weights = candidates.map(w => 1 / (1 + (this._mastery[w.es] || 0)));
+            const weights = candidates.map(w => {
+                const mastery = this._mastery[w.es] || 0;
+                // 7회 이상 맞힌 카드는 가중치를 더 낮춰 노출 빈도 감소
+                if (mastery >= 7) return 1 / (1 + mastery * 2.5);
+                return 1 / (1 + mastery);
+            });
             const total = weights.reduce((a, b) => a + b, 0);
             let r = Math.random() * total;
             let picked = candidates[candidates.length - 1];
@@ -314,15 +342,27 @@ const MatchGame = {
         for (const w of fromReview) { words.push(w); used.add(w.es); }
 
         // 풀이 작은 초기 구간에서는 exclude 때문에 5쌍을 못 채울 수 있음.
-        // 이때는 중복 허용으로라도 슬롯을 채워 리필이 멈추지 않게 한다.
+        // 이때는 "자기 멋대로" 랜덤 반복 대신, 새 단어 우선 + 숙련도 낮은 단어 우선으로 채운다.
         if (words.length < total) {
-            const fallbackPool = [...this._recentPool, ...this._pool]
-                .filter(w => w && w.es && this._getPair(w));
+            const selectedEs = new Set(words.map(w => w.es));
+            const priorityNewWords = this._newWords
+                .filter(w => w && w.es && this._getPair(w) && !selectedEs.has(w.es));
+            const fallbackReview = [...this._recentPool, ...this._pool]
+                .filter(w => w && w.es && this._getPair(w) && !selectedEs.has(w.es))
+                .sort((a, b) => {
+                    const ma = this._mastery[a.es] || 0;
+                    const mb = this._mastery[b.es] || 0;
+                    if (ma !== mb) return ma - mb;
+                    return a.es.localeCompare(b.es);
+                });
+            const fallbackPool = [...priorityNewWords, ...fallbackReview];
 
             if (fallbackPool.length > 0) {
+                let fi = 0;
                 while (words.length < total) {
-                    const pick = fallbackPool[Math.floor(Math.random() * fallbackPool.length)];
+                    const pick = fallbackPool[fi % fallbackPool.length];
                     words.push(pick);
+                    fi++;
                 }
             }
         }
@@ -375,10 +415,11 @@ const MatchGame = {
 
         this._matchedCount = 0;
 
-        if (this._sorted) this._applySortedLayout();
-
-        // 리필 직후에는 전체 렌더로 DOM 인덱스와 카드 데이터를 항상 동기화한다.
-        this._render();
+        // 리필 시에는 정렬 여부와 관계없이 매칭된 슬롯만 갱신
+        // (미매칭 카드의 위치/인덱스 절대 고정)
+        for (const slot of matchedSlots) {
+            this._updateCard(slot);
+        }
 
         // 비정렬 모드에서는 리필된 슬롯만 페이드인
         if (shouldAnimateRefill) {
@@ -578,6 +619,7 @@ const MatchGame = {
                     this._mastery[wordEs] = (this._mastery[wordEs] || 0) + 1;
                     const isCurrentNewWord = this._newWords.some(w => w && w.es === wordEs);
                     if (isCurrentNewWord) {
+                        // 빠른 학습: 새 단어 2개를 각각 3회 정답 시 졸업
                         this._newWordStreak[wordEs] = (this._newWordStreak[wordEs] || 0) + 1;
                     }
                     this._saveProgressState();
@@ -586,7 +628,9 @@ const MatchGame = {
                     const graduatingIdx = this._newWords.findIndex(w => w && w.es === wordEs && (this._newWordStreak[wordEs] || 0) >= this.NEW_WORD_MASTERY);
                     if (graduatingIdx >= 0) {
                         const graduated = this._newWords[graduatingIdx];
-                        this._pool.push(graduated);
+                        if (!this._pool.some(w => w.es === graduated.es) && !this._recentPool.some(w => w.es === graduated.es)) {
+                            this._pool.push(graduated);
+                        }
                         this._newWords.splice(graduatingIdx, 1);
                         delete this._newWordStreak[graduated.es];
                         this._graduatedWords[graduated.es] = true;
@@ -622,11 +666,6 @@ const MatchGame = {
             } else {
                 // 오답
                 const wrongWords = [prevCard?.es, card?.es].filter(Boolean);
-                for (const wrongEs of wrongWords) {
-                    if (this._newWords.some(w => w && w.es === wrongEs)) {
-                        this._newWordStreak[wrongEs] = 0;
-                    }
-                }
                 if (wrongWords.length > 0) this._saveProgressState();
                 if (typeof Game !== 'undefined' && Game.state) {
                     const penalty = CONFIG.GAME.BASE_SCORE;
