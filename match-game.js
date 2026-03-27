@@ -329,17 +329,27 @@ const MatchGame = {
             }
         }
 
-        // 2) 최근 3스테이지에서 2쌍
-        const recentTarget = Math.min(2, total - words.length);
+        // 2) 최근 3스테이지 위주 복습
+        // 기본 비율: (새2, 최근2, 안정복습1) per 5쌍
+        const unit = Math.max(1, Math.round(total / 5));
+        const recentQuota = 2 * unit;
+        const recentTarget = Math.min(recentQuota, total - words.length);
         const fromRecent = this._drawWeighted(recentTarget, used, this._recentPool);
         for (const w of fromRecent) { words.push(w); used.add(w.es); }
 
-        // 3) 전체 복습 풀에서 나머지
-        const reviewTarget = total - words.length;
-        // 전체 풀(pool + recentPool)에서 뽑기 (recent이 부족하면 여기서 보충)
-        const allPool = [...this._pool, ...this._recentPool];
-        const fromReview = this._drawWeighted(reviewTarget, used, allPool);
-        for (const w of fromReview) { words.push(w); used.add(w.es); }
+        // 3) 안정적 복습 풀(_pool)에서 채우기
+        const stableQuota = Math.max(1, unit);
+        const stableTarget = Math.min(stableQuota, total - words.length);
+        const fromStable = this._drawWeighted(stableTarget, used, this._pool);
+        for (const w of fromStable) { words.push(w); used.add(w.es); }
+
+        // 4) 아직 부족하면 전체 복습 풀에서 보충
+        const remainTarget = total - words.length;
+        if (remainTarget > 0) {
+            const allPool = [...this._recentPool, ...this._pool];
+            const fromRemaining = this._drawWeighted(remainTarget, used, allPool);
+            for (const w of fromRemaining) { words.push(w); used.add(w.es); }
+        }
 
         // 풀이 작은 초기 구간에서는 exclude 때문에 5쌍을 못 채울 수 있음.
         // 이때는 "자기 멋대로" 랜덤 반복 대신, 새 단어 우선 + 숙련도 낮은 단어 우선으로 채운다.
