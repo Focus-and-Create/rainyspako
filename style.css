@@ -404,12 +404,13 @@ a {
 /* 게임 화면 헤더 */
 /* ========================================= */
 .game-header {
+    position: relative;
     width: 100%;
     max-width: var(--canvas-width);
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 12px 24px;
+    padding: 16px 24px;
     background: #ffffff;
     border-bottom: 1px solid #f2f4f4;
 }
@@ -421,7 +422,7 @@ a {
 }
 
 .game-logo {
-    font-size: 18px;
+    font-size: 24px;
     font-weight: 900;
     letter-spacing: -0.05em;
     color: #0053db;
@@ -435,11 +436,11 @@ a {
 .game-nav-link {
     background: none;
     border: none;
-    font-size: 14px;
-    font-weight: 500;
+    font-size: 18px;
+    font-weight: 700;
     color: #757c7d;
     cursor: pointer;
-    padding: 4px 0;
+    padding: 6px 0;
     letter-spacing: -0.02em;
     transition: color 0.2s;
     border-bottom: 2px solid transparent;
@@ -458,30 +459,43 @@ a {
 .game-header-right {
     display: flex;
     align-items: center;
-    gap: 16px;
+    gap: 12px;
+    margin-left: auto;
+    min-height: 54px;
+    z-index: 1;
 }
 
 .game-header-badge {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
     display: flex;
+    flex-direction: column;
     align-items: center;
-    gap: 6px;
+    justify-content: center;
+    gap: 2px;
+    min-width: 180px;
+    pointer-events: none;
 }
 
 .game-header-badge-label {
-    font-size: 13px;
+    font-size: 15px;
     font-weight: 700;
     color: #0053db;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
 }
 
 .game-header-badge-value {
-    font-size: 13px;
-    font-weight: 700;
+    font-size: 44px;
+    font-weight: 900;
+    line-height: 0.95;
     color: #0053db;
 }
 
 .game-header-icon {
-    width: 36px;
-    height: 36px;
+    width: 44px;
+    height: 44px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -497,7 +511,7 @@ a {
 }
 
 .game-header-icon-sym {
-    font-size: 18px;
+    font-size: 22px;
     color: #5a6061;
 }
 
@@ -538,7 +552,7 @@ a {
     position: relative;
     top: auto;
     right: auto;
-    font-size: 11px;
+    font-size: 14px;
     font-weight: 900;
     color: #0053db;
     text-shadow: none;
@@ -548,7 +562,7 @@ a {
     pointer-events: none;
     background: #dbe1ff;
     border-radius: 0;
-    padding: 2px 8px;
+    padding: 4px 10px;
     backdrop-filter: none;
     text-transform: uppercase;
 }
@@ -597,8 +611,8 @@ a {
 }
 
 .game-input:focus {
-    background-color: #ffffff;
-    box-shadow: inset 0 0 0 2px #0053db;
+    background-color: #f2f4f4;
+    box-shadow: none;
 }
 
 .game-input::placeholder {
@@ -631,12 +645,12 @@ a {
 }
 
 .special-char-btn {
-    width: 40px;
-    height: 40px;
+    width: 46px;
+    height: 46px;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 16px;
+    font-size: 22px;
     font-family: var(--font-family);
     font-weight: 700;
     color: #2d3435;
@@ -661,8 +675,9 @@ a {
 }
 
 .special-chars-shortcut {
-    font-size: 9px;
-    color: #adb3b4;
+    font-size: 16px;
+    color: #5a6061;
+    font-weight: 700;
     margin-left: auto;
     white-space: nowrap;
     flex-shrink: 0;
@@ -1149,7 +1164,7 @@ a {
 
 /* Stats 섹션 공통 타이틀 */
 .stats-section-title {
-    font-size: 10px;
+    font-size: 12px;
     font-weight: 700;
     color: #5a6061;
     text-transform: uppercase;
@@ -1170,6 +1185,10 @@ a {
     width: 100%;
     box-sizing: border-box;
     border-bottom: none;
+    cursor: pointer;
+}
+.dashboard-progress.expanded {
+    background: #fafbff;
 }
 .stats-progress-head {
     display: flex;
@@ -1205,6 +1224,39 @@ a {
     color: #757c7d;
     text-transform: uppercase;
     letter-spacing: .8px;
+}
+.stats-unlocked-words {
+    margin-top: 16px;
+    padding-top: 14px;
+    border-top: 1px solid #ebeeef;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    max-height: 240px;
+    overflow-y: auto;
+}
+.stats-word-chip {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 10px;
+    background: #ffffff;
+    border: 1px solid #d8e2ff;
+    border-radius: 12px;
+    font-size: 13px;
+    color: #2d3435;
+}
+.stats-word-chip strong {
+    color: #0053db;
+    font-weight: 700;
+}
+.stats-word-chip em {
+    font-style: normal;
+    color: #5a6061;
+}
+.stats-unlocked-empty {
+    font-size: 14px;
+    color: #5a6061;
 }
 
 /* 숫자 통계 그리드 - 벤토 스타일 */
@@ -1804,11 +1856,11 @@ a {
 }
 
 .match-tool-btn {
-    padding: 6px 14px;
+    padding: 10px 16px;
     border-radius: 0;
     border: 1px solid #dde4e5;
     background: #fff;
-    font-size: 12px;
+    font-size: 15px;
     font-weight: 600;
     color: #5a6061;
     cursor: pointer;
@@ -1852,7 +1904,7 @@ a {
 }
 
 .game-settings-label {
-    font-size: 11px;
+    font-size: 14px;
     color: #5a6061;
     font-weight: 700;
     text-transform: uppercase;
@@ -1869,14 +1921,16 @@ a {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
     width: 100%;
     max-width: var(--canvas-width);
 }
 
 /* 카드 그리드: 4열 × 4행, 4/5 비율로 매치 게임과 카드 크기 통일 */
 .card-grid {
-    flex: 4;
-    min-height: 0;
+    flex: 1;
+    height: min(72vh, 620px);
+    min-height: min(72vh, 620px);
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(4, 1fr);
@@ -1906,19 +1960,19 @@ a {
 
 /* 활성 카드 */
 .cg-active {
-    background: #e8f5e9;
-    color: #1b5e20;
-    border: 2.5px solid #66bb6a;
+    background: #e3f2fd;
+    color: #0d47a1;
+    border: 2.5px solid #64b5f6;
     box-shadow: none;
     font-size: 16px;
 }
 
 /* 예정 카드 */
 .cg-upcoming {
-    background: #e3f2fd;
-    color: #0d47a1;
-    border: 2px solid #bbdefb;
-    opacity: 0.7;
+    background: #ffffff;
+    color: #4c5354;
+    border: 2px solid #dde4e5;
+    opacity: 1;
 }
 
 /* 새 단어 카드 (예정 카드 중 학습 중인 신규 단어) */
@@ -1967,7 +2021,8 @@ a {
 
 .match-grid {
     flex: 1;
-    min-height: 0;
+    height: min(72vh, 620px);
+    min-height: min(72vh, 620px);
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(5, 1fr);
@@ -2070,10 +2125,10 @@ a {
     border: 1px solid #dde4e5;
     border-radius: 0;
     color: #2d3435;
-    font-size: 12px;
+    font-size: 15px;
     font-weight: 600;
-    padding: 0 12px;
-    height: 34px;
+    padding: 0 14px;
+    height: 42px;
     box-sizing: border-box;
     cursor: pointer;
     outline: none;
