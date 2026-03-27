@@ -233,6 +233,7 @@ const Game = {
 
         // 카드 큐 빌드 후 첫 카드 표시
         this._buildCardQueue();
+        this._firstRender = true;
         this._showCard();
 
         console.log(`Game: 스테이지 ${worldId}-${stageNum} 시작 (가랑비 모드, 풀 ${this._knownPool.length}개)`);
@@ -347,15 +348,29 @@ const Game = {
         const visible = this._cardQueue.slice(this._cardIdx, windowEnd);
         while (visible.length < 16) visible.push(null);
 
+        const stagger = this._firstRender;
         container.innerHTML = visible.map((card, i) => {
             if (!card) return `<div class="cg cg-empty"></div>`;
             let cls = i === 0 ? 'cg cg-active' : 'cg cg-upcoming';
             if (card.isNew) cls += ' cg-new';
+            if (stagger) cls += ' cg-stagger-in';
             const text = this.getDisplayText(card);
             // 3~4행(인덱스 8-15): 단어와 뜻 병기
             const hint = i >= 8 ? `<span class="cg-hint">${this._esc(this.getAnswerText(card))}</span>` : '';
-            return `<div class="${cls}"><span class="cg-word">${this._esc(text)}</span>${hint}</div>`;
+            const delay = stagger ? ` style="animation-delay:${i * 30}ms"` : '';
+            return `<div class="${cls}"${delay}><span class="cg-word">${this._esc(text)}</span>${hint}</div>`;
         }).join('');
+
+        if (stagger) {
+            this._firstRender = false;
+            container.querySelectorAll('.cg-stagger-in').forEach(el => {
+                el.addEventListener('animationend', function handler() {
+                    el.classList.remove('cg-stagger-in');
+                    el.style.animationDelay = '';
+                    el.removeEventListener('animationend', handler);
+                }, { once: true });
+            });
+        }
 
         if (this.onStateUpdate) this.onStateUpdate(this.getDisplayState());
     },

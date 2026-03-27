@@ -483,9 +483,16 @@ const MatchGame = {
             el.className = 'mc' + (card.type === 'tgt' ? ' mc-tgt' : ' mc-src');
             if (card.matched) el.classList.add('mc-matched');
             if (this._isNewCard(card)) el.classList.add('mc-new');
+            el.classList.add('mc-stagger-in');
+            el.style.animationDelay = (idx * 30) + 'ms';
             el.dataset.idx = idx;
             el.textContent = card.text;
             this._container.appendChild(el);
+            el.addEventListener('animationend', function handler() {
+                el.classList.remove('mc-stagger-in');
+                el.style.animationDelay = '';
+                el.removeEventListener('animationend', handler);
+            }, { once: true });
         });
     },
 
