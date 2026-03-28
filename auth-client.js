@@ -137,7 +137,7 @@ const AuthClient = {
 
             // 프로필 동기화
             if (this._user) {
-                localStorage.setItem('profile', JSON.stringify({ username: this._user.username }));
+                localStorage.setItem('spanish_rain_profile', JSON.stringify({ username: this._user.username }));
             }
         } catch (err) {
             console.warn('AuthClient: 동기화 실패', err);
@@ -146,11 +146,11 @@ const AuthClient = {
 
     async _migrateLocalToServer(userId) {
         const stageResults = this._collectLocalStageResults();
-        const rawStats = localStorage.getItem('stats');
+        const rawStats = localStorage.getItem('spanish_rain_stats');
         const stats = rawStats ? JSON.parse(rawStats) : null;
-        const rawJump = localStorage.getItem('jumpUsage');
+        const rawJump = localStorage.getItem('spanish_rain_stage_jump');
         const jumpUsage = rawJump ? JSON.parse(rawJump) : null;
-        const rawWrong = localStorage.getItem('wrongWords');
+        const rawWrong = localStorage.getItem('spanish_rain_wrong_words');
         const wrongWords = rawWrong ? JSON.parse(rawWrong) : [];
 
         if (stageResults.length === 0 && !stats) return;
@@ -186,8 +186,8 @@ const AuthClient = {
             if (jumpUsage) {
                 await this._sb.from('jump_usage').upsert({
                     user_id: userId,
-                    used_today: jumpUsage.usedToday || 0,
-                    last_date: jumpUsage.lastDate || ''
+                    used_today: jumpUsage.used || 0,
+                    last_date: jumpUsage.date || ''
                 });
             }
 
@@ -199,52 +199,53 @@ const AuthClient = {
 
     _collectLocalStageResults() {
         const results = [];
-        for (let i = 0; i < localStorage.length; i++) {
-            const key = localStorage.key(i);
-            if (key?.startsWith('stage_')) {
-                try {
-                    const data = JSON.parse(localStorage.getItem(key));
-                    results.push({
-                        stageId: key.replace('stage_', ''),
-                        stars: data.stars || 0,
-                        bestScore: data.bestScore || 0,
-                        lastAccuracy: data.lastAccuracy ?? null
-                    });
-                } catch { /* skip */ }
+        try {
+            const raw = localStorage.getItem('spanish_rain_progress');
+            if (!raw) return results;
+            const progress = JSON.parse(raw);
+            for (const [stageId, data] of Object.entries(progress)) {
+                results.push({
+                    stageId,
+                    stars: data.stars || 0,
+                    bestScore: data.bestScore || 0,
+                    lastAccuracy: data.lastAccuracy ?? null
+                });
             }
-        }
+        } catch { /* skip */ }
         return results;
     },
 
     _restoreToLocalStorage(stageResults, stats, jumpUsage) {
         if (stageResults?.length) {
+            const progress = {};
             stageResults.forEach(r => {
-                localStorage.setItem(`stage_${r.stage_id}`, JSON.stringify({
+                progress[r.stage_id] = {
                     stars: r.stars,
                     bestScore: r.best_score,
                     lastAccuracy: r.last_accuracy
-                }));
+                };
             });
+            localStorage.setItem('spanish_rain_progress', JSON.stringify(progress));
         }
 
         if (stats) {
-            localStorage.setItem('stats', JSON.stringify({
+            localStorage.setItem('spanish_rain_stats', JSON.stringify({
                 totalGames: stats.total_games,
                 totalScore: stats.total_score,
                 totalCorrect: stats.total_correct,
                 totalWrong: stats.total_wrong,
                 currentStreak: stats.current_streak,
-                lastPlayed: stats.last_played
+                lastPlayDate: stats.last_played
             }));
             if (stats.wrong_words) {
-                localStorage.setItem('wrongWords', JSON.stringify(stats.wrong_words));
+                localStorage.setItem('spanish_rain_wrong_words', JSON.stringify(stats.wrong_words));
             }
         }
 
         if (jumpUsage) {
-            localStorage.setItem('jumpUsage', JSON.stringify({
-                usedToday: jumpUsage.used_today,
-                lastDate: jumpUsage.last_date
+            localStorage.setItem('spanish_rain_stage_jump', JSON.stringify({
+                date: jumpUsage.last_date,
+                used: jumpUsage.used_today
             }));
         }
     },
