@@ -98,9 +98,9 @@ const App = {
             return;
         }
 
-        // 저장된 게임 뷰 복원 (match/typing)
-        const savedView = Storage.getSetting('gameView');
-        if (savedView === 'typing') this._matchViewOpen = false;
+        // 타입 모드는 비활성화: 항상 매치 뷰 고정
+        this._matchViewOpen = true;
+        Storage.setSetting('gameView', 'match');
 
         // 게임 초기화 (가랑비 모델: 스테이지 클리어 없이 연속 플레이)
         Game.init(null);
@@ -303,11 +303,6 @@ const App = {
             });
         }
 
-        // 짝 잇기 / 타이핑 전환 버튼
-        const viewToggleBtn = document.getElementById('game-view-toggle');
-        if (viewToggleBtn) {
-            viewToggleBtn.addEventListener('click', () => this._toggleGameView());
-        }
         const gameSettingsBtn = document.getElementById('game-settings-btn');
         const gameSettingsPanel = document.getElementById('game-settings-panel');
         if (gameSettingsBtn && gameSettingsPanel) {
@@ -509,7 +504,6 @@ const App = {
         const matchView  = document.getElementById('match-view');
         const inputArea  = document.querySelector('.input-container');
         const specialBar = document.getElementById('special-chars-bar');
-        const toggleBtn  = document.getElementById('game-view-toggle');
         const progressCt = document.querySelector('.progress-container');
 
         typingView?.classList.toggle('hidden', this._matchViewOpen);
@@ -518,7 +512,6 @@ const App = {
         specialBar?.classList.toggle('hidden', this._matchViewOpen);
         progressCt?.classList.toggle('hidden', this._matchViewOpen);
 
-        if (toggleBtn) toggleBtn.textContent = this._matchViewOpen ? 'Type' : 'Match';
     },
 
     /**
