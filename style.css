@@ -2099,6 +2099,12 @@ a {
     box-shadow: 0 0 0 2.5px #0053db;
 }
 
+/* 선택 시 같은 진영 카드는 살짝 흐리게 (반대 진영 선택지 강조) */
+#match-grid:has(.mc-src.mc-selected) .mc-src:not(.mc-selected):not(.mc-matched),
+#match-grid:has(.mc-tgt.mc-selected) .mc-tgt:not(.mc-selected):not(.mc-matched) {
+    opacity: 0.45;
+}
+
 /* 매칭됨 → 투명하게 */
 .mc-matched {
     opacity: 0;
