@@ -21,7 +21,7 @@ const MatchGame = {
 
     _cards: [],
     _selected: null,
-    _pendingSelect: null,
+    _pendingClicks: [],
     _matchedCount: 0,
     _locked: false,
     _isRefilling: false,
@@ -391,7 +391,7 @@ const MatchGame = {
         this._cards = this._makePairCards(words);
         this._matchedCount = 0;
         this._selected = null;
-        this._pendingSelect = null;
+        this._pendingClicks = [];
         this._locked = false;
         this._isRefilling = false;
     },
@@ -454,7 +454,7 @@ const MatchGame = {
 
         this._isRefilling = false;
         this._locked = false;
-        this._flushPendingSelection();
+        this._flushPendingClicks();
     },
 
     _arrangeCardsForSortedSlots: function(cards, matchedSlots) {
@@ -521,15 +521,16 @@ const MatchGame = {
         el.textContent = card.text;
     },
 
-    _flushPendingSelection: function() {
-        if (this._locked || this._pendingSelect === null) return;
-        const idx = this._pendingSelect;
-        this._pendingSelect = null;
-        const card = this._cards[idx];
-        if (!card || card.matched) return;
-        if (this._selected !== null && this._selected !== idx) this._updateCard(this._selected);
-        this._selected = idx;
-        this._updateCard(idx);
+    _flushPendingClicks: function() {
+        if (this._locked || this._pendingClicks.length === 0) return;
+        const queued = this._pendingClicks.slice();
+        this._pendingClicks = [];
+        for (const idx of queued) {
+            if (this._locked) break;
+            const card = this._cards[idx];
+            if (!card || card.matched) continue;
+            this.handleClick(idx);
+        }
     },
 
     // =========================================
@@ -613,14 +614,15 @@ const MatchGame = {
         if (this._locked) {
             if (!card || card.matched) return;
             const prev = this._selected;
-            this._pendingSelect = idx;
+            this._pendingClicks.push(idx);
+            if (this._pendingClicks.length > 2) this._pendingClicks.shift();
             this._selected = idx;
             this._updateCard(idx);
             if (prev !== null && prev !== idx) this._updateCard(prev);
             return;
         }
 
-        this._pendingSelect = null;
+        this._pendingClicks = [];
 
         if (card.matched) return;
 
@@ -716,7 +718,7 @@ const MatchGame = {
                 setTimeout(() => {
                     [prevEl, curEl].forEach(el => { if (el) el.classList.remove('mc-wrong'); });
                     this._locked = false;
-                    this._flushPendingSelection();
+                    this._flushPendingClicks();
                 }, 500);
             }
         }
