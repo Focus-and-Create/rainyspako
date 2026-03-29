@@ -597,16 +597,6 @@ const MatchGame = {
         const card = this._cards[idx];
 
         if (this._locked) {
-            if (!this._isRefilling || card.matched) return;
-            const prev = this._selected;
-            if (prev === idx) {
-                this._selected = null;
-                this._updateCard(idx);
-                return;
-            }
-            this._selected = idx;
-            this._updateCard(idx);
-            if (prev !== null && prev !== idx) this._updateCard(prev);
             return;
         }
 
