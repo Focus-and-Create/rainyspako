@@ -330,13 +330,17 @@ const App = {
         }
 
         // 매치 정렬 버튼
-        const matchSortBtn = document.getElementById('match-sort-btn');
-        if (matchSortBtn) {
-            matchSortBtn.addEventListener('click', () => {
-                MatchGame.toggleSort();
-                matchSortBtn.classList.toggle('match-mode-active', MatchGame._sorted);
-            });
-        }
+        const matchSortMessy = document.getElementById('match-sort-messy');
+        const matchSortClean = document.getElementById('match-sort-clean');
+        const setSortModeUI = (mode) => {
+            const useClean = mode === 'clean';
+            if (matchSortMessy) matchSortMessy.classList.toggle('match-mode-active', !useClean);
+            if (matchSortClean) matchSortClean.classList.toggle('match-mode-active', useClean);
+            MatchGame.setSorted(useClean);
+            Storage.setSetting('matchSortMode', mode);
+        };
+        if (matchSortMessy) matchSortMessy.addEventListener('click', () => setSortModeUI('messy'));
+        if (matchSortClean) matchSortClean.addEventListener('click', () => setSortModeUI('clean'));
 
         // 매치 학습 모드 버튼
         const matchModeFast = document.getElementById('match-mode-fast');
@@ -362,6 +366,7 @@ const App = {
 
         setMatchModeUI(Storage.getSetting('matchMode') || 'fast');
         setRefillModeUI(Storage.getSetting('matchRefillMode') || 'flow');
+        setSortModeUI(Storage.getSetting('matchSortMode') || 'messy');
 
         // Stats 버튼 (게임 헤더)
         const statsBtn = document.getElementById('stats-btn');
@@ -453,11 +458,14 @@ const App = {
         this.showScreen('game');
         if (this.elements.inputField) this.elements.inputField.value = '';
         Game.startAutoSession(this.currentMode);
+        const globalScore = Storage.getGlobalScore();
+        Game.state.score = globalScore;
+        if (this.elements.scoreDisplay) this.elements.scoreDisplay.textContent = globalScore.toLocaleString();
         this._lastAutoStage = { worldId: Game.state.worldId, stageNum: Game.state.stageNum };
         this._syncGameViewUI();
         if (this._matchViewOpen) {
-            Game.sessionScore = Game.state.score;
-            Storage.setGlobalScore(Game.state.score);
+            Game.sessionScore = 0;
+            Storage.incrementMatchSession();
             Game.stop();
             MatchGame.init(document.getElementById('match-grid'));
             MatchGame.setMatchMode(Storage.getSetting('matchMode') || 'fast');
@@ -780,7 +788,7 @@ const App = {
         const stats = Storage.getStats();
 
         const totalGames = stats.totalGames || 0;
-        const totalScore = stats.totalScore || 0;
+        const totalScore = stats.globalScore || 0;
         const totalCorrect = stats.totalCorrect || 0;
         const totalWrong = stats.totalWrong || 0;
         const streak = stats.currentStreak || 0;
@@ -799,16 +807,9 @@ const App = {
         const ratio = totalWrong > 0 ? `${(totalCorrect / totalWrong).toFixed(1)}:1` : `${totalCorrect}:0`;
         document.getElementById('stats-ratio').textContent = ratio;
 
-        // 진행률 계산
-        const totalStages = CONFIG.WORLDS.reduce((sum, w) => sum + w.stages, 0);
-        let clearedCount = 0;
-        CONFIG.WORLDS.forEach(w => {
-            for (let s = 1; s <= w.stages; s++) {
-                const stageId = getStageId(w.id, s);
-                const result = Storage.getStageResult(stageId);
-                if (result && result.stars > 0) clearedCount++;
-            }
-        });
+        // 진행률 계산 (스테이지 대신 정답 누적 기준)
+        const clearedCount = totalCorrect;
+        const totalStages = Math.max(100, Math.ceil((clearedCount + 1) / 100) * 100);
         document.getElementById('stats-cleared-count').textContent = clearedCount;
         document.getElementById('stats-total-stages').textContent = totalStages;
         const progressPct = totalStages > 0 ? Math.round((clearedCount / totalStages) * 100) : 0;
@@ -837,11 +838,13 @@ const App = {
         const accuracy = document.getElementById('stats-accuracy')?.textContent || '0%';
         const streak = document.getElementById('stats-streak')?.textContent || '0';
         const progress = `${document.getElementById('stats-cleared-count')?.textContent || '0'}/${document.getElementById('stats-total-stages')?.textContent || '0'}`;
+        const score = document.getElementById('stats-total-score')?.textContent || '0';
         const text = `Spanish Rain 성과
-- Games: ${totalGames}
+- Sessions: ${totalGames}
+- Score: ${score}
 - Accuracy: ${accuracy}
 - Streak: ${streak}
-- Stage: ${progress}`;
+- Mastery: ${progress} correct`;
 
         try {
             if (navigator.share) {

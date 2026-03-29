@@ -539,7 +539,13 @@ const MatchGame = {
 
     /** 정렬 토글: 뜻(왼쪽) / 단어(오른쪽) 분리 배치 */
     toggleSort: function() {
-        this._sorted = !this._sorted;
+        this.setSorted(!this._sorted);
+    },
+
+    setSorted: function(enabled) {
+        const next = !!enabled;
+        if (next === this._sorted) return;
+        this._sorted = next;
         if (this._sorted) {
             this._applySortedLayout();
         } else {
@@ -680,9 +686,10 @@ const MatchGame = {
 
                 // 점수 지급
                 if (typeof Game !== 'undefined' && Game.state) {
-                    Game.state.score = (Game.state.score || 0) + CONFIG.GAME.BASE_SCORE * 2;
-                    Game.sessionScore = Game.state.score;
+                    Game.state.score = (Game.state.score || 0) + CONFIG.GAME.BASE_SCORE;
+                    Game.sessionScore += CONFIG.GAME.BASE_SCORE;
                     Storage.setGlobalScore(Game.state.score);
+                    Storage.recordMatchAttempt(true, CONFIG.GAME.BASE_SCORE);
                     if (typeof App !== 'undefined' && App.elements && App.elements.scoreDisplay) {
                         App.elements.scoreDisplay.textContent = Game.state.score.toLocaleString();
                     }
@@ -704,8 +711,9 @@ const MatchGame = {
                 if (wrongWords.length > 0) this._saveProgressState();
                 if (typeof Game !== 'undefined' && Game.state) {
                     const penalty = CONFIG.GAME.BASE_SCORE;
-                    Game.state.score = Math.max(Game.sessionScore, Game.state.score - penalty);
+                    Game.state.score = Math.max(0, Game.state.score - penalty);
                     Storage.setGlobalScore(Game.state.score);
+                    Storage.recordMatchAttempt(false, penalty);
                     if (typeof App !== 'undefined' && App.elements && App.elements.scoreDisplay) {
                         App.elements.scoreDisplay.textContent = Game.state.score.toLocaleString();
                     }

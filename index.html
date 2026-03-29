@@ -158,15 +158,6 @@
 
         <div id="game-settings-panel" class="game-settings-panel hidden">
             <div class="game-settings-row">
-                <span class="game-settings-label">학습 모드</span>
-                <select id="game-mode-select" class="mode-select-inline">
-                    <option value="es-to-ko">ES→KO</option>
-                    <option value="ko-to-es">KO→ES</option>
-                    <option value="es-to-en">ES→EN</option>
-                    <option value="en-to-es">EN→ES</option>
-                </select>
-            </div>
-            <div class="game-settings-row">
                 <span class="game-settings-label">매치 학습</span>
                 <div class="match-mode-btns">
                     <button id="match-mode-fast" class="match-tool-btn match-mode-active" title="새 단어 2개씩 추가">빠른 학습</button>
@@ -182,7 +173,10 @@
             </div>
             <div class="game-settings-row">
                 <span class="game-settings-label">정렬</span>
-                <button id="match-sort-btn" class="match-tool-btn" title="뜻↔단어 정렬">정렬</button>
+                <div class="match-mode-btns">
+                    <button id="match-sort-messy" class="match-tool-btn match-mode-active" title="자유롭게 섞인 배열">자유 배열</button>
+                    <button id="match-sort-clean" class="match-tool-btn" title="뜻/단어 정돈 배열">정돈 배열</button>
+                </div>
             </div>
         </div>
 
@@ -293,9 +287,18 @@
                         <p class="stats-hero-subtitle" id="stats-greeting">Great job today, keep the streak alive!</p>
                     </div>
                 </section>
+                <section class="stats-mode-container">
+                    <label for="game-mode-select" class="mode-label">Language Mode</label>
+                    <select id="game-mode-select" class="mode-select">
+                        <option value="es-to-ko">ES→KO</option>
+                        <option value="ko-to-es">KO→ES</option>
+                        <option value="es-to-en">ES→EN</option>
+                        <option value="en-to-es">EN→ES</option>
+                    </select>
+                </section>
 
                 <section class="stats-grid dashboard-grid">
-                    <article class="stats-item"><span class="stats-item-label">Games Played</span><span class="stats-item-value" id="stats-total-games">0</span></article>
+                    <article class="stats-item"><span class="stats-item-label">Sessions</span><span class="stats-item-value" id="stats-total-games">0</span></article>
                     <article class="stats-item"><span class="stats-item-label">Total Score</span><span class="stats-item-value" id="stats-total-score">0</span></article>
                     <article class="stats-item"><span class="stats-item-label">Accuracy</span><span class="stats-item-value" id="stats-accuracy">0%</span></article>
                     <article class="stats-item"><span class="stats-item-label">Ratio (C/W)</span><span class="stats-item-value" id="stats-ratio">0:0</span></article>
@@ -304,13 +307,13 @@
 
                 <section class="stats-progress-section dashboard-progress">
                     <div class="stats-progress-head">
-                        <h4 class="stats-section-title">Stage Progress</h4>
-                        <div class="stats-progress-chip"><span id="stats-cleared-count">0</span> / <span id="stats-total-stages">0</span> stages</div>
+                        <h4 class="stats-section-title">Match Mastery</h4>
+                        <div class="stats-progress-chip"><span id="stats-cleared-count">0</span> / <span id="stats-total-stages">100</span> correct</div>
                     </div>
                     <div class="stats-progress-track">
                         <div id="stats-progress-fill" class="stats-progress-fill"></div>
                     </div>
-                    <div class="stats-progress-label"><span>The Journey Begins</span><span>Fluent Speaker</span></div>
+                    <div class="stats-progress-label"><span>Build Accuracy</span><span>Next Goal</span></div>
                     <div id="stats-unlocked-words" class="stats-unlocked-words hidden"></div>
                 </section>
 

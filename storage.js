@@ -452,9 +452,46 @@ const Storage = {
             totalGames: 0,
             totalCorrect: 0,
             totalWrong: 0,
+            globalScore: 0,
             currentStreak: 0,
             lastPlayDate: null
         };
+    },
+
+    _touchStatsPlayDate: function(stats) {
+        const today = new Date().toDateString();
+        const lastPlay = stats.lastPlayDate;
+        if (lastPlay) {
+            const yesterday = new Date();
+            yesterday.setDate(yesterday.getDate() - 1);
+            if (lastPlay === yesterday.toDateString()) {
+                stats.currentStreak = (stats.currentStreak || 0) + 1;
+            } else if (lastPlay !== today) {
+                stats.currentStreak = 1;
+            }
+        } else {
+            stats.currentStreak = 1;
+        }
+        stats.lastPlayDate = today;
+    },
+
+    incrementMatchSession: function() {
+        const stats = this._get(CONFIG.STORAGE_KEYS.STATS) || {};
+        stats.totalGames = (stats.totalGames || 0) + 1;
+        this._touchStatsPlayDate(stats);
+        this._set(CONFIG.STORAGE_KEYS.STATS, stats);
+    },
+
+    recordMatchAttempt: function(isCorrect, scoreDelta) {
+        const stats = this._get(CONFIG.STORAGE_KEYS.STATS) || {};
+        stats.totalCorrect = (stats.totalCorrect || 0) + (isCorrect ? 1 : 0);
+        stats.totalWrong = (stats.totalWrong || 0) + (isCorrect ? 0 : 1);
+        stats.totalScore = (stats.globalScore || 0);
+        if (typeof scoreDelta === 'number' && scoreDelta > 0 && isCorrect) {
+            stats.totalEarned = (stats.totalEarned || 0) + scoreDelta;
+        }
+        this._touchStatsPlayDate(stats);
+        this._set(CONFIG.STORAGE_KEYS.STATS, stats);
     },
 
     /** 영구 누적 점수 조회 */
@@ -466,6 +503,7 @@ const Storage = {
     setGlobalScore: function(score) {
         const stats = this._get(CONFIG.STORAGE_KEYS.STATS) || {};
         stats.globalScore = score;
+        stats.totalScore = score;
         this._set(CONFIG.STORAGE_KEYS.STATS, stats);
     },
 
