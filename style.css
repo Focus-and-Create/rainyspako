@@ -1464,6 +1464,51 @@ a {
 }
 
 @media (max-width: 600px) {
+    .game-header {
+        padding: 10px 12px;
+    }
+
+    .game-logo {
+        font-size: 18px;
+    }
+
+    .game-header-badge {
+        min-width: auto;
+    }
+
+    .game-header-badge-label {
+        font-size: 11px;
+        letter-spacing: 0.04em;
+    }
+
+    .game-header-badge-value {
+        font-size: 28px;
+    }
+
+    .game-header-right {
+        gap: 4px;
+    }
+
+    .game-settings-panel {
+        padding: 10px 12px;
+        gap: 8px;
+    }
+
+    .game-settings-row {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .match-mode-btns {
+        width: 100%;
+        justify-content: flex-start;
+    }
+
+    .match-tool-btn {
+        padding: 9px 12px;
+        font-size: 13px;
+    }
+
     .word-panel {
         display: none;
     }
@@ -1879,7 +1924,9 @@ a {
 
 .match-mode-btns {
     display: flex;
-    gap: 0;
+    gap: 6px;
+    flex-wrap: wrap;
+    justify-content: flex-end;
 }
 
 .game-settings-panel {
@@ -1917,6 +1964,7 @@ a {
     align-items: center;
     justify-content: space-between;
     gap: 8px;
+    flex-wrap: wrap;
 }
 
 .game-settings-label {
@@ -2097,6 +2145,12 @@ a {
 .mc-selected {
     transform: scale(1.03) translateY(-1px);
     box-shadow: 0 0 0 2.5px #0053db;
+}
+
+/* 선택 시 같은 진영 카드는 살짝 흐리게 (반대 진영 선택지 강조) */
+#match-grid:has(.mc-src.mc-selected) .mc-src:not(.mc-selected):not(.mc-matched),
+#match-grid:has(.mc-tgt.mc-selected) .mc-tgt:not(.mc-selected):not(.mc-matched) {
+    opacity: 0.45;
 }
 
 /* 매칭됨 → 투명하게 */
