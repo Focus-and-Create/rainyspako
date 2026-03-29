@@ -21,6 +21,7 @@ const MatchGame = {
 
     _cards: [],
     _selected: null,
+    _pendingSelect: null,
     _matchedCount: 0,
     _locked: false,
     _isRefilling: false,
@@ -390,6 +391,7 @@ const MatchGame = {
         this._cards = this._makePairCards(words);
         this._matchedCount = 0;
         this._selected = null;
+        this._pendingSelect = null;
         this._locked = false;
         this._isRefilling = false;
     },
@@ -452,6 +454,7 @@ const MatchGame = {
 
         this._isRefilling = false;
         this._locked = false;
+        this._flushPendingSelection();
     },
 
     _arrangeCardsForSortedSlots: function(cards, matchedSlots) {
@@ -516,6 +519,17 @@ const MatchGame = {
         if (this._isNewCard(card)) el.classList.add('mc-new');
         if (idx === this._selected) el.classList.add('mc-selected');
         el.textContent = card.text;
+    },
+
+    _flushPendingSelection: function() {
+        if (this._locked || this._pendingSelect === null) return;
+        const idx = this._pendingSelect;
+        this._pendingSelect = null;
+        const card = this._cards[idx];
+        if (!card || card.matched) return;
+        if (this._selected !== null && this._selected !== idx) this._updateCard(this._selected);
+        this._selected = idx;
+        this._updateCard(idx);
     },
 
     // =========================================
@@ -597,8 +611,11 @@ const MatchGame = {
         const card = this._cards[idx];
 
         if (this._locked) {
+            this._pendingSelect = card && !card.matched ? idx : null;
             return;
         }
+
+        this._pendingSelect = null;
 
         if (card.matched) return;
 
@@ -694,6 +711,7 @@ const MatchGame = {
                 setTimeout(() => {
                     [prevEl, curEl].forEach(el => { if (el) el.classList.remove('mc-wrong'); });
                     this._locked = false;
+                    this._flushPendingSelection();
                 }, 500);
             }
         }
