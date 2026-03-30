@@ -461,7 +461,7 @@ const App = {
         this._lastAutoStage = { worldId: Game.state.worldId, stageNum: Game.state.stageNum };
         this._syncGameViewUI();
         if (this._matchViewOpen) {
-            Game.sessionScore = 0;
+            Game.sessionScore = globalScore;
             Storage.incrementMatchSession();
             Game.stop();
             MatchGame.init(document.getElementById('match-grid'));
@@ -520,17 +520,66 @@ const App = {
     },
 
     /**
-     * 학습 모드 설정 적용 및 저장
-     * @param {string} mode
+     * 학습 언어 설정 적용 및 저장
+     * @param {string} lang - 'ko' | 'en' (또는 레거시 'es-to-ko' 등)
      */
-    applyModeSetting: function(mode) {
-        const allowed = ['es-to-ko', 'ko-to-es', 'es-to-en', 'en-to-es'];
-        const nextMode = allowed.includes(mode) ? mode : 'es-to-ko';
+    applyModeSetting: function(lang) {
+        // 레거시 값 변환
+        if (lang === 'es-to-ko' || lang === 'ko-to-es') lang = 'ko';
+        if (lang === 'es-to-en' || lang === 'en-to-es') lang = 'en';
+        const uiLang = lang === 'en' ? 'en' : 'ko';
 
-        this.currentMode = nextMode;
-        Storage.setSetting('mode', nextMode);
+        this.currentMode = uiLang === 'en' ? 'es-to-en' : 'es-to-ko';
+        Storage.setSetting('mode', uiLang);
 
-        if (this.elements.gameModeSelect) this.elements.gameModeSelect.value = nextMode;
+        if (this.elements.gameModeSelect) this.elements.gameModeSelect.value = uiLang;
+        this.updateUILanguage(uiLang);
+    },
+
+    /**
+     * UI 표시 언어 전환 (한국어 ↔ 영어)
+     * @param {string} lang - 'ko' | 'en'
+     */
+    updateUILanguage: function(lang) {
+        const isEn = lang === 'en';
+
+        // 입력 필드 플레이스홀더
+        const inputField = document.getElementById('input-field');
+        if (inputField) inputField.placeholder = isEn ? 'Type your answer' : '정답을 입력하세요';
+
+        // 게임 설정 패널 레이블
+        const labelMode   = document.getElementById('settings-label-mode');
+        const labelRefill = document.getElementById('settings-label-refill');
+        const labelSort   = document.getElementById('settings-label-sort');
+        if (labelMode)   labelMode.textContent   = isEn ? 'Learning'  : '매치 학습';
+        if (labelRefill) labelRefill.textContent = isEn ? 'Refill'    : '리필 방식';
+        if (labelSort)   labelSort.textContent   = isEn ? 'Layout'    : '정렬';
+
+        // 매치 모드 버튼
+        const fastBtn   = document.getElementById('match-mode-fast');
+        const reviewBtn = document.getElementById('match-mode-review');
+        if (fastBtn)   fastBtn.textContent   = isEn ? 'Fast'   : '빠른 학습';
+        if (reviewBtn) reviewBtn.textContent = isEn ? 'Review' : '복습';
+
+        // 리필 버튼
+        const flowBtn  = document.getElementById('match-refill-flow');
+        const clearBtn = document.getElementById('match-refill-clear');
+        if (flowBtn)  flowBtn.textContent  = isEn ? 'Flow'  : '흐름형';
+        if (clearBtn) clearBtn.textContent = isEn ? 'Clear' : '클리어형';
+
+        // 정렬 버튼
+        const messyBtn = document.getElementById('match-sort-messy');
+        const cleanBtn = document.getElementById('match-sort-clean');
+        if (messyBtn) messyBtn.textContent = isEn ? 'Free' : '자유 배열';
+        if (cleanBtn) cleanBtn.textContent = isEn ? 'Neat' : '정돈 배열';
+
+        // 통계 모달 섹션
+        const masteryTitle = document.getElementById('stats-mastery-title');
+        const masteryUnit  = document.getElementById('stats-mastery-unit');
+        const progressLeft = document.getElementById('stats-progress-label-left');
+        if (masteryTitle) masteryTitle.textContent = isEn ? 'Correct Answers'  : '학습 정답 수';
+        if (masteryUnit)  masteryUnit.textContent  = isEn ? 'correct'          : '개 정답';
+        if (progressLeft) progressLeft.textContent = isEn ? 'Total correct'    : '누적 정답';
     },
 
     // =========================================
@@ -779,7 +828,8 @@ const App = {
         const usernameDisplay = document.getElementById('stats-username-display');
         if (usernameDisplay) usernameDisplay.textContent = username;
         const greeting = document.getElementById('stats-greeting');
-        if (greeting) greeting.textContent = `${username}님, 오늘도 화이팅!`;
+        const isEn = Storage.getSetting('mode') === 'en';
+        if (greeting) greeting.textContent = isEn ? `Keep it up, ${username}!` : `${username}님, 오늘도 화이팅!`;
 
         const stats = Storage.getStats();
 
@@ -803,13 +853,17 @@ const App = {
         const ratio = totalWrong > 0 ? `${(totalCorrect / totalWrong).toFixed(1)}:1` : `${totalCorrect}:0`;
         document.getElementById('stats-ratio').textContent = ratio;
 
-        // 진행률 계산 (스테이지 대신 정답 누적 기준)
+        // 진행률: 현재 100개 블록 내 진행도 표시
         const clearedCount = totalCorrect;
-        const totalStages = Math.max(100, Math.ceil((clearedCount + 1) / 100) * 100);
-        document.getElementById('stats-cleared-count').textContent = clearedCount;
-        document.getElementById('stats-total-stages').textContent = totalStages;
-        const progressPct = totalStages > 0 ? Math.round((clearedCount / totalStages) * 100) : 0;
+        const blockSize = 100;
+        const nextMilestone = Math.max(blockSize, Math.ceil((clearedCount + 1) / blockSize) * blockSize);
+        const blockProgress = clearedCount % blockSize;
+        const progressPct = Math.round((blockProgress / blockSize) * 100);
+        document.getElementById('stats-cleared-count').textContent = clearedCount.toLocaleString();
+        document.getElementById('stats-total-stages').textContent = nextMilestone;
         document.getElementById('stats-progress-fill').style.width = `${progressPct}%`;
+        const nextGoalEl = document.getElementById('stats-next-goal');
+        if (nextGoalEl) nextGoalEl.textContent = `→ ${nextMilestone}`;
         this.renderUnlockedWords();
 
         // 최근 활동 바(간이 시각화)
