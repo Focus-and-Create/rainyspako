@@ -158,21 +158,21 @@
 
         <div id="game-settings-panel" class="game-settings-panel hidden">
             <div class="game-settings-row">
-                <span class="game-settings-label">매치 학습</span>
+                <span class="game-settings-label" id="settings-label-mode">매치 학습</span>
                 <div class="match-mode-btns">
                     <button id="match-mode-fast" class="match-tool-btn match-mode-active" title="새 단어 2개씩 추가">빠른 학습</button>
                     <button id="match-mode-review" class="match-tool-btn" title="복습 집중">복습</button>
                 </div>
             </div>
             <div class="game-settings-row">
-                <span class="game-settings-label">리필 방식</span>
+                <span class="game-settings-label" id="settings-label-refill">리필 방식</span>
                 <div class="match-mode-btns">
                     <button id="match-refill-flow" class="match-tool-btn match-mode-active" title="5쌍 제거 시 리필">흐름형</button>
                     <button id="match-refill-clear" class="match-tool-btn" title="전체 제거 후 리필">클리어형</button>
                 </div>
             </div>
             <div class="game-settings-row">
-                <span class="game-settings-label">정렬</span>
+                <span class="game-settings-label" id="settings-label-sort">정렬</span>
                 <div class="match-mode-btns">
                     <button id="match-sort-messy" class="match-tool-btn match-mode-active" title="자유롭게 섞인 배열">자유 배열</button>
                     <button id="match-sort-clean" class="match-tool-btn" title="뜻/단어 정돈 배열">정돈 배열</button>
@@ -290,10 +290,8 @@
                 <section class="stats-mode-container">
                     <label for="game-mode-select" class="mode-label">Language Mode</label>
                     <select id="game-mode-select" class="mode-select">
-                        <option value="es-to-ko">ES→KO</option>
-                        <option value="ko-to-es">KO→ES</option>
-                        <option value="es-to-en">ES→EN</option>
-                        <option value="en-to-es">EN→ES</option>
+                        <option value="ko">한국어</option>
+                        <option value="en">English</option>
                     </select>
                 </section>
 
@@ -307,13 +305,14 @@
 
                 <section class="stats-progress-section dashboard-progress">
                     <div class="stats-progress-head">
-                        <h4 class="stats-section-title">Match Mastery</h4>
-                        <div class="stats-progress-chip"><span id="stats-cleared-count">0</span> / <span id="stats-total-stages">100</span> correct</div>
+                        <h4 class="stats-section-title" id="stats-mastery-title">학습 정답 수</h4>
+                        <div class="stats-progress-chip"><span id="stats-cleared-count">0</span> <span id="stats-mastery-unit">개 정답</span></div>
                     </div>
                     <div class="stats-progress-track">
                         <div id="stats-progress-fill" class="stats-progress-fill"></div>
                     </div>
-                    <div class="stats-progress-label"><span>Build Accuracy</span><span>Next Goal</span></div>
+                    <div class="stats-progress-label"><span id="stats-progress-label-left">누적 정답</span><span id="stats-next-goal"></span></div>
+                    <span id="stats-total-stages" style="display:none">100</span>
                     <div id="stats-unlocked-words" class="stats-unlocked-words hidden"></div>
                 </section>
 
