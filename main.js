@@ -577,9 +577,9 @@ const App = {
         const masteryTitle = document.getElementById('stats-mastery-title');
         const masteryUnit  = document.getElementById('stats-mastery-unit');
         const progressLeft = document.getElementById('stats-progress-label-left');
-        if (masteryTitle) masteryTitle.textContent = isEn ? 'Correct Answers'  : '학습 정답 수';
-        if (masteryUnit)  masteryUnit.textContent  = isEn ? 'correct'          : '개 정답';
-        if (progressLeft) progressLeft.textContent = isEn ? 'Total correct'    : '누적 정답';
+        if (masteryTitle) masteryTitle.textContent = isEn ? 'Curriculum Progress' : '커리큘럼 진도';
+        if (masteryUnit)  masteryUnit.textContent  = isEn ? 'stages'             : '스테이지';
+        if (progressLeft) progressLeft.textContent = isEn ? 'Completed'          : '완료 스테이지';
     },
 
     // =========================================
@@ -853,17 +853,15 @@ const App = {
         const ratio = totalWrong > 0 ? `${(totalCorrect / totalWrong).toFixed(1)}:1` : `${totalCorrect}:0`;
         document.getElementById('stats-ratio').textContent = ratio;
 
-        // 진행률: 현재 100개 블록 내 진행도 표시
-        const clearedCount = totalCorrect;
-        const blockSize = 100;
-        const nextMilestone = Math.max(blockSize, Math.ceil((clearedCount + 1) / blockSize) * blockSize);
-        const blockProgress = clearedCount % blockSize;
-        const progressPct = Math.round((blockProgress / blockSize) * 100);
-        document.getElementById('stats-cleared-count').textContent = clearedCount.toLocaleString();
-        document.getElementById('stats-total-stages').textContent = nextMilestone;
+        // 커리큘럼 진도율: 완료된 스테이지 수 / 전체 스테이지 수
+        const clearedStages = Storage.getClearedStageCount();
+        const totalStages = CONFIG.WORLDS.reduce((sum, w) => sum + w.stages, 0);
+        const progressPct = totalStages > 0 ? Math.round((clearedStages / totalStages) * 100) : 0;
+        document.getElementById('stats-cleared-count').textContent = clearedStages;
+        document.getElementById('stats-total-stages').textContent = totalStages;
         document.getElementById('stats-progress-fill').style.width = `${progressPct}%`;
         const nextGoalEl = document.getElementById('stats-next-goal');
-        if (nextGoalEl) nextGoalEl.textContent = `→ ${nextMilestone}`;
+        if (nextGoalEl) nextGoalEl.textContent = `${progressPct}%`;
         this.renderUnlockedWords();
 
         // 최근 활동 바(간이 시각화)
