@@ -507,6 +507,12 @@ const Storage = {
         this._set(CONFIG.STORAGE_KEYS.STATS, stats);
     },
 
+    /** 완료된 스테이지 수 (progress 키 개수) */
+    getClearedStageCount: function() {
+        const progress = this._get(CONFIG.STORAGE_KEYS.PROGRESS) || {};
+        return Object.keys(progress).length;
+    },
+
     // =========================================
     // 설정 관리
     // =========================================
