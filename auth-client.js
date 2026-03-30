@@ -191,7 +191,6 @@ const AuthClient = {
                 });
             }
 
-            console.log('AuthClient: 로컬 데이터 마이그레이션 완료');
         } catch (err) {
             console.warn('AuthClient: 마이그레이션 실패', err);
         }

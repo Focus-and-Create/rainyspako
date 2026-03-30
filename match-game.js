@@ -176,7 +176,6 @@ const MatchGame = {
         }
         this._newWord = this._newWords[0]; // 호환용
         this._saveProgressState();
-        console.log(`매치 가랑비: 새 단어 소개 → ${this._newWords.map(w => w.es).join(', ')}`);
     },
 
     _restoreProgressState: function() {
@@ -675,7 +674,6 @@ const MatchGame = {
                         this._newWords.splice(graduatingIdx, 1);
                         delete this._newWordStreak[graduated.es];
                         this._graduatedWords[graduated.es] = true;
-                        console.log(`매치 가랑비: "${graduated.es}" 졸업 → 기존 풀 합류`);
                         if (this._newWords.length === 0) {
                             this._introduceNextWord();
                         }

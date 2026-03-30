@@ -126,7 +126,6 @@ const Game = {
         this.canvas = canvas || null;
         this.ctx = null;
 
-        console.log('Game: 초기화 완료 (카드 모드)');
     },
 
     // =========================================
@@ -240,25 +239,21 @@ const Game = {
         this._firstRender = true;
         this._showCard();
 
-        console.log(`Game: 스테이지 ${worldId}-${stageNum} 시작 (가랑비 모드, 풀 ${this._knownPool.length}개)`);
     },
-    
+
     pause: function() {
         if (this.state.isPaused || !this.state.isRunning) return;
         this.state.isPaused = true;
-        console.log('Game: 일시정지');
     },
 
     resume: function() {
         if (!this.state.isPaused || !this.state.isRunning) return;
         this.state.isPaused = false;
-        console.log('Game: 재개');
     },
 
     stop: function() {
         this.state.isRunning = false;
         this._showingHint = false;
-        console.log('Game: 종료');
     },
 
     // =========================================
@@ -329,7 +324,6 @@ const Game = {
             return;
         }
         this._newWord = this._curriculum.shift();
-        console.log(`가랑비: 새 단어 소개 → ${this._newWord.es}`);
     },
 
     /**
@@ -662,7 +656,6 @@ const Game = {
             // 최근 졸업 링버퍼에 추가 (최대 10개)
             this._recentGrads.push(this._newWord.es);
             if (this._recentGrads.length > 10) this._recentGrads.shift();
-            console.log(`가랑비: "${this._newWord.es}" 졸업 → 기존 풀 합류 (${this._knownPool.length}개)`);
             this._introduceNextWord();
         }
 
@@ -675,7 +668,6 @@ const Game = {
             this._advanceWave();
         }
 
-        console.log(`정답: ${word.spanish} (+${points}점, 콤보 ${this.state.combo}, mastery ${this._mastery[word.spanish]})`);
     },
 
     /**
@@ -727,7 +719,6 @@ const Game = {
         this.state.wrongCount = 0;
         this._stageStartScore = this.state.score;
 
-        console.log(`가랑비: ${worldId}-${stageNum} 저장 → ${next.worldId}-${next.stageNum} 커리큘럼 ${this._curriculum.length}개 대기`);
     },
     
 
@@ -755,8 +746,6 @@ const Game = {
             this.state.correctCount,
             this.state.wrongCount
         );
-        
-        console.log('게임 오버');
         
         // 콜백 호출
         if (this.onGameOver) {

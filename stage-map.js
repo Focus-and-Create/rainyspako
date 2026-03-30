@@ -38,7 +38,6 @@ const StageMap = {
         this.setupEventListeners();
         this.calculateTilePositions();
 
-        console.log('StageMap: 보드게임 맵 초기화 완료');
     },
 
     setupEventListeners: function() {

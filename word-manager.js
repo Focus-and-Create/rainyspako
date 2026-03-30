@@ -70,7 +70,6 @@ const WordManager = {
             }
 
             this._isLoaded = true;
-            console.log(`WordManager: ${loaded}/${files.length} 월드 로드 완료`);
             return true;
 
         } catch (error) {
@@ -307,7 +306,6 @@ const WordManager = {
         
         // 복습할 단어가 부족하면 빈 배열 반환
         if (reviewWords.length < CONFIG.REVIEW.MIN_WRONG_FOR_REVIEW) {
-            console.log('WordManager: 복습할 단어가 충분하지 않음');
             return [];
         }
         

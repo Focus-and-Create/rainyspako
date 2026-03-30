@@ -70,8 +70,6 @@ const App = {
      * 앱 초기화
      */
     init: async function() {
-        console.log('App: 초기화 시작');
-
         // DOM 요소 참조 가져오기
         this.cacheElements();
 
@@ -119,7 +117,6 @@ const App = {
             this.showScreen('login');
         }
 
-        console.log('App: 초기화 완료');
     },
     
     /**
@@ -587,7 +584,6 @@ const App = {
         // 현재 화면 상태 업데이트
         this.currentScreen = screen;
         
-        console.log(`App: 화면 전환 -> ${screen}`);
     },
 
     // =========================================
