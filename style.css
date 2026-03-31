@@ -2442,3 +2442,62 @@ a {
     font-size: 18px;
     border-radius: 10px;
 }
+
+
+.legal-links-inline {
+    margin-top: 6px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    justify-content: center;
+    font-size: 0.82rem;
+}
+
+.legal-links-inline a {
+    color: var(--color-accent);
+    text-decoration: underline;
+}
+
+.stats-modal-footer {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+}
+
+.stats-legal-link {
+    font-size: 0.8rem;
+    color: var(--color-text-muted);
+    text-decoration: underline;
+}
+
+.policy-page {
+    margin: 0;
+    min-height: 100vh;
+    background: linear-gradient(180deg, #f6f8ff 0%, #eef2ff 100%);
+    color: var(--color-text-primary);
+    font-family: var(--font-family);
+}
+
+.policy-wrap {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 40px 20px 56px;
+    line-height: 1.7;
+}
+
+.policy-wrap h1 {
+    margin: 0 0 8px;
+    text-wrap: balance;
+}
+
+.policy-wrap h2 {
+    margin-top: 24px;
+    margin-bottom: 8px;
+}
+
+.policy-meta {
+    color: var(--color-text-muted);
+    margin-bottom: 20px;
+}
