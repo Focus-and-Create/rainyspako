@@ -1,0 +1,20 @@
+{
+  "name": "Spanish Rain - 스페인어 단어 게임",
+  "short_name": "Spanish Rain",
+  "description": "비처럼 쏟아지는 스페인어 단어를 맞추며 배우는 학습 게임. 6,100개 단어, 340 스테이지.",
+  "start_url": "/index.html",
+  "display": "standalone",
+  "background_color": "#fff9e7",
+  "theme_color": "#4a9c6d",
+  "orientation": "portrait",
+  "lang": "ko",
+  "icons": [
+    {
+      "src": "favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": ["education", "games"]
+}

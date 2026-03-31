@@ -1,0 +1,15 @@
+{
+  "name": "spanish-rain",
+  "version": "1.0.0",
+  "description": "스페인어 단어 학습 게임",
+  "private": true,
+  "scripts": {
+    "build": "node build.js",
+    "dev": "npx serve ."
+  },
+  "devDependencies": {
+    "esbuild": "^0.24.0",
+    "clean-css": "^5.3.3",
+    "html-minifier-terser": "^7.2.0"
+  }
+}

@@ -10,6 +10,12 @@ const AuthClient = {
     /** @type {{id:string, email:string, username:string}|null} */
     _user: null,
 
+    /** 로그인 시도 쓰로틀링 */
+    _loginAttempts: 0,
+    _lastAttemptTime: 0,
+    _LOGIN_MAX_ATTEMPTS: 5,
+    _LOGIN_COOLDOWN_MS: 60000,
+
     // =========================================
     // 초기화
     // =========================================
@@ -55,20 +61,46 @@ const AuthClient = {
     // 인증
     // =========================================
 
+    _checkThrottle() {
+        const now = Date.now();
+        if (now - this._lastAttemptTime > this._LOGIN_COOLDOWN_MS) {
+            this._loginAttempts = 0;
+        }
+        if (this._loginAttempts >= this._LOGIN_MAX_ATTEMPTS) {
+            const waitSec = Math.ceil((this._LOGIN_COOLDOWN_MS - (now - this._lastAttemptTime)) / 1000);
+            throw new Error(`너무 많은 시도입니다. ${waitSec}초 후에 다시 시도해주세요`);
+        }
+        this._loginAttempts++;
+        this._lastAttemptTime = now;
+    },
+
+    _validateEmail(email) {
+        if (!email || typeof email !== 'string') return false;
+        return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+    },
+
     async login(email, password) {
+        this._checkThrottle();
+        if (!this._validateEmail(email)) throw new Error('올바른 이메일 형식이 아닙니다');
+        if (!password) throw new Error('비밀번호를 입력해주세요');
         const { data, error } = await this._sb.auth.signInWithPassword({ email, password });
         if (error) throw new Error(this._translateError(error));
+        this._loginAttempts = 0;
         await this._loadUserProfile(data.user);
         return this._user;
     },
 
     async register(email, password, username) {
+        this._checkThrottle();
+        if (!this._validateEmail(email)) throw new Error('올바른 이메일 형식이 아닙니다');
+        if (!password || password.length < 6) throw new Error('비밀번호는 6자 이상이어야 합니다');
         const { data, error } = await this._sb.auth.signUp({
             email,
             password,
             options: { data: { username: username || email.split('@')[0] } }
         });
         if (error) throw new Error(this._translateError(error));
+        this._loginAttempts = 0;
         if (data.user) await this._loadUserProfile(data.user);
         return this._user;
     },
