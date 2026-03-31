@@ -105,15 +105,31 @@ const App = {
         Game.onGameOver  = () => { if (!this._matchViewOpen) this._startFreshGame(); };
         Game.onStateUpdate = (state) => this.updateGameUI(state);
 
-        // Supabase 인증 확인
-        const user = await AuthClient.init();
+        // Supabase 인증 확인 (5초 타임아웃)
+        // 인증 SDK 로드 실패/설정 오류가 있어도 로딩 화면에 갇히지 않도록 안전 처리
+        const authTimeout = new Promise(resolve => setTimeout(() => resolve(null), 5000));
+        let user = null;
+        try {
+            const authInit = (typeof AuthClient !== 'undefined' && typeof AuthClient.init === 'function')
+                ? AuthClient.init().catch((err) => {
+                    console.warn('App: 인증 초기화 실패, 비로그인으로 계속 진행', err);
+                    return null;
+                })
+                : Promise.resolve(null);
+            user = await Promise.race([authInit, authTimeout]);
+        } catch (err) {
+            console.warn('App: 인증 확인 중 예외, 비로그인으로 계속 진행', err);
+            user = null;
+        }
+
         if (user) {
             // 로그인 상태: 서버 데이터 동기화 후 바로 게임 시작
             Storage.saveProfile({ username: user.username });
-            await AuthClient.syncAfterLogin();
+            const syncTimeout = new Promise(resolve => setTimeout(resolve, 5000));
+            await Promise.race([AuthClient.syncAfterLogin(), syncTimeout]);
             this._startFreshGame();
         } else {
-            // 미로그인: 로그인 화면
+            // 미로그인/인증 실패/인증 타임아웃: 로그인 화면
             this.showScreen('login');
         }
 
@@ -195,8 +211,20 @@ const App = {
 
         // Google 로그인 버튼
         if (this.elements.googleLoginBtn) {
-            this.elements.googleLoginBtn.addEventListener('click', () => {
-                AuthClient.loginWithGoogle();
+            this.elements.googleLoginBtn.addEventListener('click', async () => {
+                const errorEl = document.getElementById('login-error');
+                if (errorEl) errorEl.classList.add('hidden');
+                this.elements.googleLoginBtn.disabled = true;
+                try {
+                    await AuthClient.loginWithGoogle();
+                } catch (err) {
+                    if (errorEl) {
+                        errorEl.textContent = err.message || 'Google 로그인에 실패했습니다.';
+                        errorEl.classList.remove('hidden');
+                    }
+                } finally {
+                    this.elements.googleLoginBtn.disabled = false;
+                }
             });
         }
 
