@@ -43,7 +43,16 @@ const App = {
         nextBtn: null,
         retryBtn: null,
 
-        // 통계 모달
+        // 로그인/법적/네트워크 UI
+        networkBanner: null,
+        authStatus: null,
+        registerConsent: null,
+        openPrivacyBtn: null,
+        openTermsBtn: null,
+        legalModal: null,
+        legalModalTitle: null,
+        legalModalBody: null,
+        closeLegalBtn: null,
 
         // 로그인 화면
         usernameInput: null,
@@ -75,6 +84,7 @@ const App = {
 
         // 이벤트 리스너 등록
         this.bindEvents();
+        this._updateNetworkBanner();
 
         // 스토리지 초기화
         Storage.init();
@@ -162,7 +172,16 @@ const App = {
         this.elements.nextBtn = document.getElementById('next-btn');
         this.elements.retryBtn = document.getElementById('retry-btn');
 
-        // 통계 모달
+        // 로그인/법적/네트워크 UI
+        this.elements.networkBanner = document.getElementById('network-banner');
+        this.elements.authStatus = document.getElementById('auth-status');
+        this.elements.registerConsent = document.getElementById('register-consent');
+        this.elements.openPrivacyBtn = document.getElementById('open-privacy-btn');
+        this.elements.openTermsBtn = document.getElementById('open-terms-btn');
+        this.elements.legalModal = document.getElementById('legal-modal');
+        this.elements.legalModalTitle = document.getElementById('legal-modal-title');
+        this.elements.legalModalBody = document.getElementById('legal-modal-body');
+        this.elements.closeLegalBtn = document.getElementById('close-legal-btn');
 
         // 로그인 화면
         this.elements.usernameInput = document.getElementById('username-input');
@@ -227,6 +246,25 @@ const App = {
                 }
             });
         }
+
+        if (this.elements.openPrivacyBtn) {
+            this.elements.openPrivacyBtn.addEventListener('click', () => this.openLegalModal('privacy'));
+        }
+        if (this.elements.openTermsBtn) {
+            this.elements.openTermsBtn.addEventListener('click', () => this.openLegalModal('terms'));
+        }
+        if (this.elements.closeLegalBtn) {
+            this.elements.closeLegalBtn.addEventListener('click', () => this.closeLegalModal());
+        }
+        this.elements.legalModal?.querySelector('.modal-backdrop')?.addEventListener('click', () => this.closeLegalModal());
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && this.elements.legalModal && !this.elements.legalModal.classList.contains('hidden')) {
+                this.closeLegalModal();
+            }
+        });
+
+        window.addEventListener('online', () => this._updateNetworkBanner());
+        window.addEventListener('offline', () => this._updateNetworkBanner());
 
         // 닉네임 변경 제출 버튼
         if (this.elements.loginSubmitEditBtn) {
@@ -699,14 +737,20 @@ const App = {
         const errorEl = document.getElementById('login-error');
 
         if (errorEl) errorEl.classList.add('hidden');
+        if (typeof navigator !== 'undefined' && navigator.onLine === false) {
+            if (errorEl) { errorEl.textContent = '오프라인 상태입니다. 네트워크 연결 후 다시 시도해 주세요.'; errorEl.classList.remove('hidden'); }
+            return;
+        }
         if (this.elements.loginBtn) this.elements.loginBtn.disabled = true;
 
         try {
             const user = await AuthClient.login(email, password);
             Storage.saveProfile({ username: user.username });
             await AuthClient.syncAfterLogin();
+            this._announceAuth('로그인 성공');
             this._startFreshGame();
         } catch (err) {
+            this._announceAuth(err.message || '로그인 실패');
             if (errorEl) { errorEl.textContent = err.message; errorEl.classList.remove('hidden'); }
         } finally {
             if (this.elements.loginBtn) this.elements.loginBtn.disabled = false;
@@ -728,14 +772,25 @@ const App = {
         const errorEl = document.getElementById('register-error');
 
         if (errorEl) errorEl.classList.add('hidden');
+
+        if (!this.elements.registerConsent?.checked) {
+            if (errorEl) {
+                errorEl.textContent = '회원가입 전에 개인정보처리방침/이용약관 동의가 필요합니다.';
+                errorEl.classList.remove('hidden');
+            }
+            return;
+        }
+
         if (this.elements.registerBtn) this.elements.registerBtn.disabled = true;
 
         try {
             const user = await AuthClient.register(email, password, username);
             Storage.saveProfile({ username: user.username });
             await AuthClient.syncAfterLogin();
+            this._announceAuth('회원가입 성공');
             this._startFreshGame();
         } catch (err) {
+            this._announceAuth(err.message || '로그인 실패');
             if (errorEl) { errorEl.textContent = err.message; errorEl.classList.remove('hidden'); }
         } finally {
             if (this.elements.registerBtn) this.elements.registerBtn.disabled = false;
@@ -760,6 +815,40 @@ const App = {
     openLoginForEdit: function() {
         this._loginIsEditing = true;
         this.showScreen('login');
+    },
+
+    _announceAuth: function(message) {
+        if (this.elements.authStatus) this.elements.authStatus.textContent = message || '';
+    },
+
+    _updateNetworkBanner: function() {
+        const offline = typeof navigator !== 'undefined' && navigator.onLine === false;
+        this.elements.networkBanner?.classList.toggle('hidden', !offline);
+        this.elements.loginBtn && (this.elements.loginBtn.disabled = offline);
+        this.elements.registerBtn && (this.elements.registerBtn.disabled = offline);
+        this.elements.googleLoginBtn && (this.elements.googleLoginBtn.disabled = offline);
+        if (offline) this._announceAuth('오프라인 상태입니다. 네트워크 연결 후 다시 시도해 주세요.');
+    },
+
+    openLegalModal: function(type) {
+        const docs = {
+            privacy: {
+                title: '개인정보처리방침',
+                body: '<p>Spanish Rain은 로그인/학습 기록 저장을 위해 이메일, 닉네임, 플레이 통계를 처리합니다.</p><ul><li>수집 항목: 이메일, 닉네임, 학습 기록/점수</li><li>보관 목적: 계정 인증, 학습 진도 저장, 서비스 개선</li><li>문의: 서비스 관리자에게 이메일로 요청</li></ul>'
+            },
+            terms: {
+                title: '이용약관',
+                body: '<p>본 서비스는 스페인어 학습을 위한 웹 애플리케이션입니다.</p><ul><li>계정 정보는 본인 책임으로 관리합니다.</li><li>비정상적인 트래픽 또는 악용 시 이용이 제한될 수 있습니다.</li><li>서비스는 사전 고지 없이 업데이트될 수 있습니다.</li></ul>'
+            }
+        };
+        const doc = docs[type] || docs.privacy;
+        if (this.elements.legalModalTitle) this.elements.legalModalTitle.textContent = doc.title;
+        if (this.elements.legalModalBody) this.elements.legalModalBody.innerHTML = doc.body;
+        this.elements.legalModal?.classList.remove('hidden');
+    },
+
+    closeLegalModal: function() {
+        this.elements.legalModal?.classList.add('hidden');
     },
 
     // =========================================

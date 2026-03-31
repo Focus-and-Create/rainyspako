@@ -10,6 +10,11 @@ const AuthClient = {
     /** @type {{id:string, email:string, username:string}|null} */
     _user: null,
 
+    // 클라이언트 UX 보호용 제한(보안 강제는 서버에서 처리 필요)
+    _loginAttemptTimes: [],
+    _LOGIN_WINDOW_MS: 60 * 1000,
+    _MAX_LOGIN_ATTEMPTS: 5,
+
     // =========================================
     // 초기화
     // =========================================
@@ -72,7 +77,20 @@ const AuthClient = {
     // 인증
     // =========================================
 
+
+    _checkAuthThrottle() {
+        const now = Date.now();
+        this._loginAttemptTimes = this._loginAttemptTimes.filter(ts => (now - ts) < this._LOGIN_WINDOW_MS);
+        if (this._loginAttemptTimes.length >= this._MAX_LOGIN_ATTEMPTS) {
+            const oldest = this._loginAttemptTimes[0];
+            const waitSec = Math.max(1, Math.ceil((this._LOGIN_WINDOW_MS - (now - oldest)) / 1000));
+            throw new Error(`요청이 너무 많습니다. ${waitSec}초 후 다시 시도해 주세요.`);
+        }
+        this._loginAttemptTimes.push(now);
+    },
+
     async login(email, password) {
+        this._checkAuthThrottle();
         await this._ensureClient();
         const { data, error } = await this._sb.auth.signInWithPassword({ email, password });
         if (error) throw new Error(this._translateError(error));
@@ -81,6 +99,7 @@ const AuthClient = {
     },
 
     async register(email, password, username) {
+        this._checkAuthThrottle();
         await this._ensureClient();
         const { data, error } = await this._sb.auth.signUp({
             email,
@@ -99,6 +118,7 @@ const AuthClient = {
     },
 
     async loginWithGoogle() {
+        this._checkAuthThrottle();
         await this._ensureClient();
         const { error } = await this._sb.auth.signInWithOAuth({
             provider: 'google',

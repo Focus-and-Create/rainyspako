@@ -27,6 +27,7 @@
     ">
 </head>
 <body>
+    <div id="network-banner" class="network-banner hidden" role="status" aria-live="polite">오프라인 상태입니다. 네트워크 연결을 확인해 주세요.</div>
     <!-- ========================================= -->
     <!-- 로딩 화면 -->
     <!-- ========================================= -->
@@ -55,6 +56,7 @@
         <div class="login-content">
             <h1 class="login-title">로그인</h1>
             <p class="login-subtitle" id="login-subtitle">학습을 계속하려면 로그인하세요.</p>
+            <p id="auth-status" class="sr-only" aria-live="polite"></p>
 
             <!-- 탭 (로그인 / 회원가입) -->
             <div class="auth-tabs" id="auth-tabs">
@@ -117,6 +119,15 @@
                     autocomplete="new-password"
                 >
                 <p class="auth-error hidden" id="register-error"></p>
+                <label class="consent-row">
+                    <input type="checkbox" id="register-consent">
+                    <span>개인정보처리방침 및 이용약관에 동의합니다.</span>
+                </label>
+                <div class="legal-links">
+                    <button type="button" class="link-btn" id="open-privacy-btn">개인정보처리방침</button>
+                    <span>·</span>
+                    <button type="button" class="link-btn" id="open-terms-btn">이용약관</button>
+                </div>
                 <button id="register-btn" class="btn btn-primary btn-large">회원가입</button>
             </div>
 
@@ -271,6 +282,21 @@
         </div>
     </div>
 
+
+
+    <!-- ========================================= -->
+    <!-- 법적 문서 모달 -->
+    <!-- ========================================= -->
+    <div id="legal-modal" class="modal hidden" role="dialog" aria-modal="true" aria-labelledby="legal-modal-title">
+        <div class="modal-backdrop"></div>
+        <div class="modal-content legal-modal-content">
+            <header class="stats-header">
+                <h3 class="modal-title" id="legal-modal-title">개인정보처리방침</h3>
+                <button id="close-legal-btn" class="stats-icon-btn" aria-label="닫기">✕</button>
+            </header>
+            <div id="legal-modal-body" class="legal-modal-body"></div>
+        </div>
+    </div>
 
     <!-- ========================================= -->
     <!-- 통계 모달 -->
