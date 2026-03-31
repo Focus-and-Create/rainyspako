@@ -14,9 +14,20 @@ const AuthClient = {
     // 초기화
     // =========================================
 
+
+    async _ensureClient() {
+        if (this._sb) return;
+
+        if (typeof supabase === 'undefined' || !SUPABASE_URL || !SUPABASE_ANON_KEY) {
+            throw new Error('로그인 서비스를 초기화할 수 없습니다. 잠시 후 다시 시도해 주세요.');
+        }
+
+        this._sb = supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
+    },
+
     async init() {
         // Supabase 클라이언트 생성
-        this._sb = supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
+        await this._ensureClient();
 
         // 기존 세션 확인
         const { data: { session } } = await this._sb.auth.getSession();
@@ -56,6 +67,7 @@ const AuthClient = {
     // =========================================
 
     async login(email, password) {
+        await this._ensureClient();
         const { data, error } = await this._sb.auth.signInWithPassword({ email, password });
         if (error) throw new Error(this._translateError(error));
         await this._loadUserProfile(data.user);
@@ -63,6 +75,7 @@ const AuthClient = {
     },
 
     async register(email, password, username) {
+        await this._ensureClient();
         const { data, error } = await this._sb.auth.signUp({
             email,
             password,
@@ -74,11 +87,13 @@ const AuthClient = {
     },
 
     async logout() {
+        await this._ensureClient();
         await this._sb.auth.signOut();
         this._user = null;
     },
 
     async loginWithGoogle() {
+        await this._ensureClient();
         const { error } = await this._sb.auth.signInWithOAuth({
             provider: 'google',
             options: { redirectTo: window.location.protocol + '//' + window.location.host + window.location.pathname }
