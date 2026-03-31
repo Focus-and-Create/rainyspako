@@ -117,6 +117,9 @@ const AuthClient = {
         if (msg.includes('Password should be')) return '비밀번호는 6자 이상이어야 합니다';
         if (msg.includes('valid email')) return '올바른 이메일 형식이 아닙니다';
         if (msg.includes('Email not confirmed')) return '이메일 인증이 필요합니다. 받은 편지함을 확인해주세요';
+        if (msg.includes('Unsupported provider')) return 'Google 로그인이 비활성화되어 있습니다. 관리자에게 문의해 주세요.';
+        if (msg.includes('redirect_uri_mismatch')) return 'Google 로그인 리디렉션 주소가 올바르지 않습니다. 관리자 설정을 확인해 주세요.';
+        if (msg.includes('popup_closed_by_user')) return 'Google 로그인 창이 닫혀 취소되었습니다.';
         return msg || '오류가 발생했습니다';
     },
 

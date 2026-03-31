@@ -211,8 +211,20 @@ const App = {
 
         // Google 로그인 버튼
         if (this.elements.googleLoginBtn) {
-            this.elements.googleLoginBtn.addEventListener('click', () => {
-                AuthClient.loginWithGoogle();
+            this.elements.googleLoginBtn.addEventListener('click', async () => {
+                const errorEl = document.getElementById('login-error');
+                if (errorEl) errorEl.classList.add('hidden');
+                this.elements.googleLoginBtn.disabled = true;
+                try {
+                    await AuthClient.loginWithGoogle();
+                } catch (err) {
+                    if (errorEl) {
+                        errorEl.textContent = err.message || 'Google 로그인에 실패했습니다.';
+                        errorEl.classList.remove('hidden');
+                    }
+                } finally {
+                    this.elements.googleLoginBtn.disabled = false;
+                }
             });
         }
 
