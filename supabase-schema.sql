@@ -1,5 +1,5 @@
 -- =========================================
--- Spanish Rain - Supabase 스키마
+-- Rainy Spako - Supabase 스키마
 -- Supabase SQL Editor에서 실행하세요
 -- =========================================
 
