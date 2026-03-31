@@ -834,11 +834,11 @@ const App = {
         const docs = {
             privacy: {
                 title: '개인정보처리방침',
-                body: '<p>Rainy Spako는 로그인/학습 기록 저장을 위해 이메일, 닉네임, 플레이 통계를 처리합니다.</p><ul><li>수집 항목: 이메일, 닉네임, 학습 기록/점수</li><li>보관 목적: 계정 인증, 학습 진도 저장, 서비스 개선</li><li>문의: 서비스 관리자에게 이메일로 요청</li></ul>'
+                body: '<p>Rainy Spako는 이메일/학습 데이터를 처리합니다. (Rainy Spako processes email and learning data.)</p><ul><li>수집 항목 / Data: 이메일, 닉네임, 학습 기록</li><li>보관/파기 / Retention & Deletion: 삭제 요청 시 30일 내 파기</li><li>문의 / Contact: focre.help@gmail.com</li></ul>'
             },
             terms: {
                 title: '이용약관',
-                body: '<p>본 서비스는 스페인어 학습을 위한 웹 애플리케이션입니다.</p><ul><li>계정 정보는 본인 책임으로 관리합니다.</li><li>비정상적인 트래픽 또는 악용 시 이용이 제한될 수 있습니다.</li><li>서비스는 사전 고지 없이 업데이트될 수 있습니다.</li></ul>'
+                body: '<p>본 서비스는 스페인어 학습용 앱입니다. (This is a Spanish learning app.)</p><ul><li>계정 정보는 본인 책임으로 관리합니다. / Keep credentials secure.</li><li>비정상 트래픽은 제한될 수 있습니다. / Abusive traffic may be blocked.</li><li>문의 / Contact: focre.help@gmail.com</li></ul>'
             }
         };
         const doc = docs[type] || docs.privacy;
