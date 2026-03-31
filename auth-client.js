@@ -18,11 +18,17 @@ const AuthClient = {
     async _ensureClient() {
         if (this._sb) return;
 
-        if (typeof supabase === 'undefined' || !SUPABASE_URL || !SUPABASE_ANON_KEY) {
-            throw new Error('로그인 서비스를 초기화할 수 없습니다. 잠시 후 다시 시도해 주세요.');
+        const sdk = (typeof window !== 'undefined' && window.supabase)
+            ? window.supabase
+            : (typeof supabase !== 'undefined' ? supabase : null);
+        const url = (typeof SUPABASE_URL === 'string') ? SUPABASE_URL : '';
+        const anonKey = (typeof SUPABASE_ANON_KEY === 'string') ? SUPABASE_ANON_KEY : '';
+
+        if (!sdk || typeof sdk.createClient !== 'function' || !url || !anonKey) {
+            throw new Error('로그인 서비스를 초기화할 수 없습니다. 페이지를 새로고침한 뒤 다시 시도해 주세요.');
         }
 
-        this._sb = supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
+        this._sb = sdk.createClient(url, anonKey);
     },
 
     async init() {
