@@ -43,7 +43,16 @@ const App = {
         nextBtn: null,
         retryBtn: null,
 
-        // 통계 모달
+        // 로그인/법적/네트워크 UI
+        networkBanner: null,
+        authStatus: null,
+        registerConsent: null,
+        openPrivacyBtn: null,
+        openTermsBtn: null,
+        legalModal: null,
+        legalModalTitle: null,
+        legalModalBody: null,
+        closeLegalBtn: null,
 
         // 로그인 화면
         usernameInput: null,
@@ -75,6 +84,7 @@ const App = {
 
         // 이벤트 리스너 등록
         this.bindEvents();
+        this._updateNetworkBanner();
 
         // 스토리지 초기화
         Storage.init();
@@ -106,8 +116,22 @@ const App = {
         Game.onStateUpdate = (state) => this.updateGameUI(state);
 
         // Supabase 인증 확인 (5초 타임아웃)
+        // 인증 SDK 로드 실패/설정 오류가 있어도 로딩 화면에 갇히지 않도록 안전 처리
         const authTimeout = new Promise(resolve => setTimeout(() => resolve(null), 5000));
-        const user = await Promise.race([AuthClient.init(), authTimeout]);
+        let user = null;
+        try {
+            const authInit = (typeof AuthClient !== 'undefined' && typeof AuthClient.init === 'function')
+                ? AuthClient.init().catch((err) => {
+                    console.warn('App: 인증 초기화 실패, 비로그인으로 계속 진행', err);
+                    return null;
+                })
+                : Promise.resolve(null);
+            user = await Promise.race([authInit, authTimeout]);
+        } catch (err) {
+            console.warn('App: 인증 확인 중 예외, 비로그인으로 계속 진행', err);
+            user = null;
+        }
+
         if (user) {
             // 로그인 상태: 서버 데이터 동기화 후 바로 게임 시작
             Storage.saveProfile({ username: user.username });
@@ -115,7 +139,7 @@ const App = {
             await Promise.race([AuthClient.syncAfterLogin(), syncTimeout]);
             this._startFreshGame();
         } else {
-            // 미로그인 또는 인증 타임아웃: 로그인 화면
+            // 미로그인/인증 실패/인증 타임아웃: 로그인 화면
             this.showScreen('login');
         }
 
@@ -148,7 +172,16 @@ const App = {
         this.elements.nextBtn = document.getElementById('next-btn');
         this.elements.retryBtn = document.getElementById('retry-btn');
 
-        // 통계 모달
+        // 로그인/법적/네트워크 UI
+        this.elements.networkBanner = document.getElementById('network-banner');
+        this.elements.authStatus = document.getElementById('auth-status');
+        this.elements.registerConsent = document.getElementById('register-consent');
+        this.elements.openPrivacyBtn = document.getElementById('open-privacy-btn');
+        this.elements.openTermsBtn = document.getElementById('open-terms-btn');
+        this.elements.legalModal = document.getElementById('legal-modal');
+        this.elements.legalModalTitle = document.getElementById('legal-modal-title');
+        this.elements.legalModalBody = document.getElementById('legal-modal-body');
+        this.elements.closeLegalBtn = document.getElementById('close-legal-btn');
 
         // 로그인 화면
         this.elements.usernameInput = document.getElementById('username-input');
@@ -197,10 +230,41 @@ const App = {
 
         // Google 로그인 버튼
         if (this.elements.googleLoginBtn) {
-            this.elements.googleLoginBtn.addEventListener('click', () => {
-                AuthClient.loginWithGoogle();
+            this.elements.googleLoginBtn.addEventListener('click', async () => {
+                const errorEl = document.getElementById('login-error');
+                if (errorEl) errorEl.classList.add('hidden');
+                this.elements.googleLoginBtn.disabled = true;
+                try {
+                    await AuthClient.loginWithGoogle();
+                } catch (err) {
+                    if (errorEl) {
+                        errorEl.textContent = err.message || 'Google 로그인에 실패했습니다.';
+                        errorEl.classList.remove('hidden');
+                    }
+                } finally {
+                    this.elements.googleLoginBtn.disabled = false;
+                }
             });
         }
+
+        if (this.elements.openPrivacyBtn) {
+            this.elements.openPrivacyBtn.addEventListener('click', () => this.openLegalModal('privacy'));
+        }
+        if (this.elements.openTermsBtn) {
+            this.elements.openTermsBtn.addEventListener('click', () => this.openLegalModal('terms'));
+        }
+        if (this.elements.closeLegalBtn) {
+            this.elements.closeLegalBtn.addEventListener('click', () => this.closeLegalModal());
+        }
+        this.elements.legalModal?.querySelector('.modal-backdrop')?.addEventListener('click', () => this.closeLegalModal());
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && this.elements.legalModal && !this.elements.legalModal.classList.contains('hidden')) {
+                this.closeLegalModal();
+            }
+        });
+
+        window.addEventListener('online', () => this._updateNetworkBanner());
+        window.addEventListener('offline', () => this._updateNetworkBanner());
 
         // 닉네임 변경 제출 버튼
         if (this.elements.loginSubmitEditBtn) {
@@ -673,14 +737,20 @@ const App = {
         const errorEl = document.getElementById('login-error');
 
         if (errorEl) errorEl.classList.add('hidden');
+        if (typeof navigator !== 'undefined' && navigator.onLine === false) {
+            if (errorEl) { errorEl.textContent = '오프라인 상태입니다. 네트워크 연결 후 다시 시도해 주세요.'; errorEl.classList.remove('hidden'); }
+            return;
+        }
         if (this.elements.loginBtn) this.elements.loginBtn.disabled = true;
 
         try {
             const user = await AuthClient.login(email, password);
             Storage.saveProfile({ username: user.username });
             await AuthClient.syncAfterLogin();
+            this._announceAuth('로그인 성공');
             this._startFreshGame();
         } catch (err) {
+            this._announceAuth(err.message || '로그인 실패');
             if (errorEl) { errorEl.textContent = err.message; errorEl.classList.remove('hidden'); }
         } finally {
             if (this.elements.loginBtn) this.elements.loginBtn.disabled = false;
@@ -702,14 +772,25 @@ const App = {
         const errorEl = document.getElementById('register-error');
 
         if (errorEl) errorEl.classList.add('hidden');
+
+        if (!this.elements.registerConsent?.checked) {
+            if (errorEl) {
+                errorEl.textContent = '회원가입 전에 개인정보처리방침/이용약관 동의가 필요합니다.';
+                errorEl.classList.remove('hidden');
+            }
+            return;
+        }
+
         if (this.elements.registerBtn) this.elements.registerBtn.disabled = true;
 
         try {
             const user = await AuthClient.register(email, password, username);
             Storage.saveProfile({ username: user.username });
             await AuthClient.syncAfterLogin();
+            this._announceAuth('회원가입 성공');
             this._startFreshGame();
         } catch (err) {
+            this._announceAuth(err.message || '로그인 실패');
             if (errorEl) { errorEl.textContent = err.message; errorEl.classList.remove('hidden'); }
         } finally {
             if (this.elements.registerBtn) this.elements.registerBtn.disabled = false;
@@ -734,6 +815,40 @@ const App = {
     openLoginForEdit: function() {
         this._loginIsEditing = true;
         this.showScreen('login');
+    },
+
+    _announceAuth: function(message) {
+        if (this.elements.authStatus) this.elements.authStatus.textContent = message || '';
+    },
+
+    _updateNetworkBanner: function() {
+        const offline = typeof navigator !== 'undefined' && navigator.onLine === false;
+        this.elements.networkBanner?.classList.toggle('hidden', !offline);
+        this.elements.loginBtn && (this.elements.loginBtn.disabled = offline);
+        this.elements.registerBtn && (this.elements.registerBtn.disabled = offline);
+        this.elements.googleLoginBtn && (this.elements.googleLoginBtn.disabled = offline);
+        if (offline) this._announceAuth('오프라인 상태입니다. 네트워크 연결 후 다시 시도해 주세요.');
+    },
+
+    openLegalModal: function(type) {
+        const docs = {
+            privacy: {
+                title: '개인정보처리방침',
+                body: '<p>Rainy Spako는 이메일/학습 데이터를 처리합니다. (Rainy Spako processes email and learning data.)</p><ul><li>수집 항목 / Data: 이메일, 닉네임, 학습 기록</li><li>보관/파기 / Retention & Deletion: 삭제 요청 시 30일 내 파기</li><li>문의 / Contact: focre.help@gmail.com</li></ul>'
+            },
+            terms: {
+                title: '이용약관',
+                body: '<p>본 서비스는 스페인어 학습용 앱입니다. (This is a Spanish learning app.)</p><ul><li>계정 정보는 본인 책임으로 관리합니다. / Keep credentials secure.</li><li>비정상 트래픽은 제한될 수 있습니다. / Abusive traffic may be blocked.</li><li>문의 / Contact: focre.help@gmail.com</li></ul>'
+            }
+        };
+        const doc = docs[type] || docs.privacy;
+        if (this.elements.legalModalTitle) this.elements.legalModalTitle.textContent = doc.title;
+        if (this.elements.legalModalBody) this.elements.legalModalBody.innerHTML = doc.body;
+        this.elements.legalModal?.classList.remove('hidden');
+    },
+
+    closeLegalModal: function() {
+        this.elements.legalModal?.classList.add('hidden');
     },
 
     // =========================================
@@ -894,7 +1009,7 @@ const App = {
         const streak = document.getElementById('stats-streak')?.textContent || '0';
         const progress = `${document.getElementById('stats-cleared-count')?.textContent || '0'}/${document.getElementById('stats-total-stages')?.textContent || '0'}`;
         const score = document.getElementById('stats-total-score')?.textContent || '0';
-        const text = `Spanish Rain 성과
+        const text = `Rainy Spako 성과
 - Sessions: ${totalGames}
 - Score: ${score}
 - Accuracy: ${accuracy}
@@ -903,7 +1018,7 @@ const App = {
 
         try {
             if (navigator.share) {
-                await navigator.share({ title: 'Spanish Rain Stats', text });
+                await navigator.share({ title: 'Rainy Spako Stats', text });
             } else if (navigator.clipboard) {
                 await navigator.clipboard.writeText(text);
                 alert('통계 요약이 클립보드에 복사되었습니다.');
