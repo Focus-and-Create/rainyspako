@@ -1654,20 +1654,8 @@ a {
     padding: var(--spacing-xl);
 }
 
-.login-logo {
-    font-size: 72px;
-    line-height: 1;
-    filter: drop-shadow(0 4px 14px rgba(233, 30, 140, 0.35));
-    animation: loginBounce 2.4s ease-in-out infinite;
-}
-
-@keyframes loginBounce {
-    0%, 100% { transform: translateY(0) rotate(-5deg); }
-    50% { transform: translateY(-14px) rotate(5deg); }
-}
-
 .login-title {
-    font-size: 2.6rem;
+    font-size: 2rem;
     font-weight: 700;
     color: var(--color-text-primary);
     letter-spacing: -0.02em;
