@@ -81,9 +81,15 @@ const AuthClient = {
     async loginWithGoogle() {
         const { error } = await this._sb.auth.signInWithOAuth({
             provider: 'google',
-            options: { redirectTo: window.location.href.split('?')[0].split('#')[0] }
+            options: { redirectTo: window.location.protocol + '//' + window.location.host + window.location.pathname }
         });
         if (error) throw new Error(this._translateError(error));
+    },
+
+    _safeParse(jsonStr) {
+        if (!jsonStr) return null;
+        try { return JSON.parse(jsonStr); }
+        catch { return null; }
     },
 
     /**
@@ -147,11 +153,11 @@ const AuthClient = {
     async _migrateLocalToServer(userId) {
         const stageResults = this._collectLocalStageResults();
         const rawStats = localStorage.getItem('spanish_rain_stats');
-        const stats = rawStats ? JSON.parse(rawStats) : null;
+        const stats = this._safeParse(rawStats);
         const rawJump = localStorage.getItem('spanish_rain_stage_jump');
-        const jumpUsage = rawJump ? JSON.parse(rawJump) : null;
+        const jumpUsage = this._safeParse(rawJump);
         const rawWrong = localStorage.getItem('spanish_rain_wrong_words');
-        const wrongWords = rawWrong ? JSON.parse(rawWrong) : [];
+        const wrongWords = this._safeParse(rawWrong) || [];
 
         if (stageResults.length === 0 && !stats) return;
 

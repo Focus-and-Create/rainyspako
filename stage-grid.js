@@ -30,10 +30,17 @@ const StageGrid = {
         const header = document.createElement('div');
         header.className = 'sg-world-header';
         header.style.setProperty('--wc', world.color);
-        header.innerHTML =
-            `<span class="sg-world-dot"></span>` +
-            `<span class="sg-world-name">${world.nameKo}</span>` +
-            `<span class="sg-world-sub">${world.name}</span>`;
+        const dot = document.createElement('span');
+        dot.className = 'sg-world-dot';
+        header.appendChild(dot);
+        const nameEl = document.createElement('span');
+        nameEl.className = 'sg-world-name';
+        nameEl.textContent = world.nameKo;
+        header.appendChild(nameEl);
+        const sub = document.createElement('span');
+        sub.className = 'sg-world-sub';
+        sub.textContent = world.name;
+        header.appendChild(sub);
         section.appendChild(header);
 
         const grid = document.createElement('div');
@@ -61,16 +68,41 @@ const StageGrid = {
             + (isBoss    ? ' sg-boss'  : '');
         card.style.setProperty('--wc', world.color);
 
-        card.innerHTML =
-            `<div class="sg-card-top">` +
-                `<span class="sg-num">${world.id}-${stageNum}</span>` +
-                (isBoss || isReview ? `<span class="sg-badge">${isBoss ? 'B' : 'R'}</span>` : '') +
-            `</div>` +
-            `<div class="sg-cat">${category}</div>` +
-            `<div class="sg-stars">` +
-                [1,2,3].map(i => `<span class="${i <= stars ? 'on' : ''}"'>★</span>`).join('') +
-            `</div>` +
-            (!unlocked ? `<div class="sg-lock">🔒</div>` : '');
+        const top = document.createElement('div');
+        top.className = 'sg-card-top';
+        const num = document.createElement('span');
+        num.className = 'sg-num';
+        num.textContent = world.id + '-' + stageNum;
+        top.appendChild(num);
+        if (isBoss || isReview) {
+            const badge = document.createElement('span');
+            badge.className = 'sg-badge';
+            badge.textContent = isBoss ? 'B' : 'R';
+            top.appendChild(badge);
+        }
+        card.appendChild(top);
+
+        const cat = document.createElement('div');
+        cat.className = 'sg-cat';
+        cat.textContent = category;
+        card.appendChild(cat);
+
+        const starsDiv = document.createElement('div');
+        starsDiv.className = 'sg-stars';
+        for (let i = 1; i <= 3; i++) {
+            const s = document.createElement('span');
+            if (i <= stars) s.className = 'on';
+            s.textContent = '★';
+            starsDiv.appendChild(s);
+        }
+        card.appendChild(starsDiv);
+
+        if (!unlocked) {
+            const lock = document.createElement('div');
+            lock.className = 'sg-lock';
+            lock.textContent = '🔒';
+            card.appendChild(lock);
+        }
 
         card.addEventListener('click', () => {
             this.onStageSelect?.(world.id, stageNum);

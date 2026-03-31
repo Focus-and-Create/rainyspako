@@ -12,6 +12,19 @@
     
     <!-- 스타일시트 -->
     <link rel="stylesheet" href="style.css?v=17">
+
+    <!-- CSP -->
+    <meta http-equiv="Content-Security-Policy" content="
+        default-src 'self';
+        script-src 'self' https://cdn.jsdelivr.net;
+        style-src 'self' 'unsafe-inline' https://fonts.googleapis.com;
+        font-src 'self' https://fonts.gstatic.com;
+        img-src 'self' data:;
+        connect-src 'self' https://*.supabase.co wss://*.supabase.co;
+        frame-ancestors 'none';
+        base-uri 'self';
+        form-action 'self';
+    ">
 </head>
 <body>
     <!-- ========================================= -->
@@ -341,7 +354,9 @@
     <!-- ========================================= -->
     <!-- 스크립트 로드 (순서 중요) -->
     <!-- ========================================= -->
-    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.49.4/dist/umd/supabase.min.js"
+            integrity="sha384-OLBgp1GsljhM2TJ+sbHjaiH9txEUvgdDTAzHv2P24donTt6/529l+9Ua0vFImLlb"
+            crossorigin="anonymous"></script>
     <script src="supabase-config.js?v=15"></script>
     <script src="config.js?v=15"></script>
     <script src="auth-client.js?v=15"></script>
