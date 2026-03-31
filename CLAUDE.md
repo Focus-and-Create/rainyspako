@@ -1,4 +1,4 @@
-# Spanish Rain - 개발 지침
+# Rainy Spako - 개발 지침
 
 ## 프로젝트 구조
 

@@ -834,7 +834,7 @@ const App = {
         const docs = {
             privacy: {
                 title: '개인정보처리방침',
-                body: '<p>Spanish Rain은 로그인/학습 기록 저장을 위해 이메일, 닉네임, 플레이 통계를 처리합니다.</p><ul><li>수집 항목: 이메일, 닉네임, 학습 기록/점수</li><li>보관 목적: 계정 인증, 학습 진도 저장, 서비스 개선</li><li>문의: 서비스 관리자에게 이메일로 요청</li></ul>'
+                body: '<p>Rainy Spako는 로그인/학습 기록 저장을 위해 이메일, 닉네임, 플레이 통계를 처리합니다.</p><ul><li>수집 항목: 이메일, 닉네임, 학습 기록/점수</li><li>보관 목적: 계정 인증, 학습 진도 저장, 서비스 개선</li><li>문의: 서비스 관리자에게 이메일로 요청</li></ul>'
             },
             terms: {
                 title: '이용약관',
@@ -1009,7 +1009,7 @@ const App = {
         const streak = document.getElementById('stats-streak')?.textContent || '0';
         const progress = `${document.getElementById('stats-cleared-count')?.textContent || '0'}/${document.getElementById('stats-total-stages')?.textContent || '0'}`;
         const score = document.getElementById('stats-total-score')?.textContent || '0';
-        const text = `Spanish Rain 성과
+        const text = `Rainy Spako 성과
 - Sessions: ${totalGames}
 - Score: ${score}
 - Accuracy: ${accuracy}
@@ -1018,7 +1018,7 @@ const App = {
 
         try {
             if (navigator.share) {
-                await navigator.share({ title: 'Spanish Rain Stats', text });
+                await navigator.share({ title: 'Rainy Spako Stats', text });
             } else if (navigator.clipboard) {
                 await navigator.clipboard.writeText(text);
                 alert('통계 요약이 클립보드에 복사되었습니다.');
