@@ -1641,6 +1641,33 @@ a {
     outline-offset: 2px;
 }
 
+
+.network-banner {
+    position: fixed;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1200;
+    padding: 10px 16px;
+    border-radius: 999px;
+    background: rgba(239, 68, 68, 0.92);
+    color: #fff;
+    font-size: 0.85rem;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.16);
+}
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
 /* ========================================= */
 /* 로그인 / 프로필 화면 */
 /* ========================================= */
@@ -1652,22 +1679,15 @@ a {
     height: 100%;
     gap: 12px;
     padding: var(--spacing-xl);
-}
-
-.login-logo {
-    font-size: 72px;
-    line-height: 1;
-    filter: drop-shadow(0 4px 14px rgba(233, 30, 140, 0.35));
-    animation: loginBounce 2.4s ease-in-out infinite;
-}
-
-@keyframes loginBounce {
-    0%, 100% { transform: translateY(0) rotate(-5deg); }
-    50% { transform: translateY(-14px) rotate(5deg); }
+    max-width: 420px;
+    margin: 0 auto;
+    background: rgba(255, 255, 255, 0.88);
+    border-radius: 24px;
+    box-shadow: 0 16px 32px rgba(28, 22, 53, 0.12);
 }
 
 .login-title {
-    font-size: 2.6rem;
+    font-size: 2rem;
     font-weight: 700;
     color: var(--color-text-primary);
     letter-spacing: -0.02em;
@@ -1755,6 +1775,14 @@ a {
 }
 
 /* 인증 에러 메시지 */
+.auth-info {
+    font-size: 0.9rem;
+    color: var(--color-text-secondary);
+    margin: 0;
+    text-align: center;
+    text-wrap: pretty;
+}
+
 .auth-error {
     font-size: 0.85rem;
     color: #ef4444;
@@ -1763,6 +1791,54 @@ a {
     border-radius: var(--radius-sm);
     padding: 8px 12px;
     margin: 0;
+}
+
+
+.consent-row {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    font-size: 0.85rem;
+    color: var(--color-text-secondary);
+}
+
+.consent-row input {
+    margin-top: 2px;
+}
+
+.legal-links {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    font-size: 0.82rem;
+    color: var(--color-text-muted);
+}
+
+.link-btn {
+    border: none;
+    background: transparent;
+    color: var(--color-accent);
+    font-size: 0.82rem;
+    cursor: pointer;
+    padding: 0;
+    text-decoration: underline;
+}
+
+.legal-modal-content {
+    max-width: 560px;
+}
+
+.legal-modal-body {
+    max-height: min(60vh, 520px);
+    overflow-y: auto;
+    padding: 0 24px 24px;
+    color: var(--color-text-secondary);
+    line-height: 1.6;
+}
+
+.legal-modal-body ul {
+    padding-left: 20px;
 }
 
 /* 구분선 */
@@ -2365,4 +2441,63 @@ a {
     justify-content: center;
     font-size: 18px;
     border-radius: 10px;
+}
+
+
+.legal-links-inline {
+    margin-top: 6px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    justify-content: center;
+    font-size: 0.82rem;
+}
+
+.legal-links-inline a {
+    color: var(--color-accent);
+    text-decoration: underline;
+}
+
+.stats-modal-footer {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+}
+
+.stats-legal-link {
+    font-size: 0.8rem;
+    color: var(--color-text-muted);
+    text-decoration: underline;
+}
+
+.policy-page {
+    margin: 0;
+    min-height: 100vh;
+    background: linear-gradient(180deg, #f6f8ff 0%, #eef2ff 100%);
+    color: var(--color-text-primary);
+    font-family: var(--font-family);
+}
+
+.policy-wrap {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 40px 20px 56px;
+    line-height: 1.7;
+}
+
+.policy-wrap h1 {
+    margin: 0 0 8px;
+    text-wrap: balance;
+}
+
+.policy-wrap h2 {
+    margin-top: 24px;
+    margin-bottom: 8px;
+}
+
+.policy-meta {
+    color: var(--color-text-muted);
+    margin-bottom: 20px;
 }

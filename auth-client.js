@@ -10,13 +10,35 @@ const AuthClient = {
     /** @type {{id:string, email:string, username:string}|null} */
     _user: null,
 
+    // 클라이언트 UX 보호용 제한(보안 강제는 서버에서 처리 필요)
+    _loginAttemptTimes: [],
+    _LOGIN_WINDOW_MS: 60 * 1000,
+    _MAX_LOGIN_ATTEMPTS: 5,
+
     // =========================================
     // 초기화
     // =========================================
 
+
+    async _ensureClient() {
+        if (this._sb) return;
+
+        const sdk = (typeof window !== 'undefined' && window.supabase)
+            ? window.supabase
+            : (typeof supabase !== 'undefined' ? supabase : null);
+        const url = (typeof SUPABASE_URL === 'string') ? SUPABASE_URL : '';
+        const anonKey = (typeof SUPABASE_ANON_KEY === 'string') ? SUPABASE_ANON_KEY : '';
+
+        if (!sdk || typeof sdk.createClient !== 'function' || !url || !anonKey) {
+            throw new Error('로그인 서비스를 초기화할 수 없습니다. 페이지를 새로고침한 뒤 다시 시도해 주세요.');
+        }
+
+        this._sb = sdk.createClient(url, anonKey);
+    },
+
     async init() {
         // Supabase 클라이언트 생성
-        this._sb = supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
+        await this._ensureClient();
 
         // 기존 세션 확인
         const { data: { session } } = await this._sb.auth.getSession();
@@ -55,7 +77,21 @@ const AuthClient = {
     // 인증
     // =========================================
 
+
+    _checkAuthThrottle() {
+        const now = Date.now();
+        this._loginAttemptTimes = this._loginAttemptTimes.filter(ts => (now - ts) < this._LOGIN_WINDOW_MS);
+        if (this._loginAttemptTimes.length >= this._MAX_LOGIN_ATTEMPTS) {
+            const oldest = this._loginAttemptTimes[0];
+            const waitSec = Math.max(1, Math.ceil((this._LOGIN_WINDOW_MS - (now - oldest)) / 1000));
+            throw new Error(`요청이 너무 많습니다. ${waitSec}초 후 다시 시도해 주세요.`);
+        }
+        this._loginAttemptTimes.push(now);
+    },
+
     async login(email, password) {
+        this._checkAuthThrottle();
+        await this._ensureClient();
         const { data, error } = await this._sb.auth.signInWithPassword({ email, password });
         if (error) throw new Error(this._translateError(error));
         await this._loadUserProfile(data.user);
@@ -63,6 +99,8 @@ const AuthClient = {
     },
 
     async register(email, password, username) {
+        this._checkAuthThrottle();
+        await this._ensureClient();
         const { data, error } = await this._sb.auth.signUp({
             email,
             password,
@@ -74,11 +112,14 @@ const AuthClient = {
     },
 
     async logout() {
+        await this._ensureClient();
         await this._sb.auth.signOut();
         this._user = null;
     },
 
     async loginWithGoogle() {
+        this._checkAuthThrottle();
+        await this._ensureClient();
         const { error } = await this._sb.auth.signInWithOAuth({
             provider: 'google',
             options: { redirectTo: window.location.protocol + '//' + window.location.host + window.location.pathname }
@@ -102,6 +143,9 @@ const AuthClient = {
         if (msg.includes('Password should be')) return '비밀번호는 6자 이상이어야 합니다';
         if (msg.includes('valid email')) return '올바른 이메일 형식이 아닙니다';
         if (msg.includes('Email not confirmed')) return '이메일 인증이 필요합니다. 받은 편지함을 확인해주세요';
+        if (msg.includes('Unsupported provider')) return 'Google 로그인이 비활성화되어 있습니다. 관리자에게 문의해 주세요.';
+        if (msg.includes('redirect_uri_mismatch')) return 'Google 로그인 리디렉션 주소가 올바르지 않습니다. 관리자 설정을 확인해 주세요.';
+        if (msg.includes('popup_closed_by_user')) return 'Google 로그인 창이 닫혀 취소되었습니다.';
         return msg || '오류가 발생했습니다';
     },
 
