@@ -688,8 +688,13 @@ const App = {
     /**
      * 회원가입 처리
      */
+    _sanitizeUsername: function(raw) {
+        if (!raw || typeof raw !== 'string') return '';
+        return raw.replace(/[<>&"'/\\]/g, '').trim().slice(0, 20);
+    },
+
     handleRegister: async function() {
-        const username = this.elements.registerUsername?.value.trim();
+        const username = this._sanitizeUsername(this.elements.registerUsername?.value);
         const email = this.elements.registerEmail?.value.trim();
         const password = this.elements.registerPassword?.value;
         const errorEl = document.getElementById('register-error');
@@ -714,7 +719,7 @@ const App = {
      */
     handleEditName: async function() {
         const input = this.elements.usernameInput;
-        const username = input ? (input.value.trim() || 'Player') : 'Player';
+        const username = this._sanitizeUsername(input?.value) || 'Player';
 
         Storage.saveProfile({ username }); // localStorage + 서버 동기화
         this._loginIsEditing = false;
@@ -938,15 +943,26 @@ const App = {
         });
 
         if (unlockedWords.length === 0) {
-            unlockedWordsBox.innerHTML = '<p class="stats-unlocked-empty">아직 해금된 단어가 없습니다.</p>';
+            unlockedWordsBox.textContent = '';
+            const emptyP = document.createElement('p');
+            emptyP.className = 'stats-unlocked-empty';
+            emptyP.textContent = '아직 해금된 단어가 없습니다.';
+            unlockedWordsBox.appendChild(emptyP);
             return;
         }
 
-        unlockedWordsBox.innerHTML = unlockedWords
-            .map((word) => (
-                `<span class="stats-word-chip"><strong>${word.es}</strong><em>${word.ko || '-'}</em></span>`
-            ))
-            .join('');
+        unlockedWordsBox.textContent = '';
+        unlockedWords.forEach((word) => {
+            const chip = document.createElement('span');
+            chip.className = 'stats-word-chip';
+            const strong = document.createElement('strong');
+            strong.textContent = word.es;
+            const em = document.createElement('em');
+            em.textContent = word.ko || '-';
+            chip.appendChild(strong);
+            chip.appendChild(em);
+            unlockedWordsBox.appendChild(chip);
+        });
     },
 
     /**
@@ -960,12 +976,14 @@ const App = {
         
         // 별점 표시
         if (this.elements.resultStars) {
-            let starsHtml = '';
+            this.elements.resultStars.textContent = '';
             for (let i = 0; i < 3; i++) {
                 const isFilled = isCleared && i < result.stars;
-                starsHtml += `<span class="star ${isFilled ? 'filled' : ''}">${isFilled ? '★' : '☆'}</span>`;
+                const star = document.createElement('span');
+                star.className = 'star' + (isFilled ? ' filled' : '');
+                star.textContent = isFilled ? '★' : '☆';
+                this.elements.resultStars.appendChild(star);
             }
-            this.elements.resultStars.innerHTML = starsHtml;
         }
         
         // 점수
