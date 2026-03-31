@@ -231,6 +231,7 @@ const AuthClient = {
             localStorage.setItem('spanish_rain_stats', JSON.stringify({
                 totalGames: stats.total_games,
                 totalScore: stats.total_score,
+                globalScore: stats.total_score,
                 totalCorrect: stats.total_correct,
                 totalWrong: stats.total_wrong,
                 currentStreak: stats.current_streak,
