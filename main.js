@@ -105,15 +105,17 @@ const App = {
         Game.onGameOver  = () => { if (!this._matchViewOpen) this._startFreshGame(); };
         Game.onStateUpdate = (state) => this.updateGameUI(state);
 
-        // Supabase 인증 확인
-        const user = await AuthClient.init();
+        // Supabase 인증 확인 (5초 타임아웃)
+        const authTimeout = new Promise(resolve => setTimeout(() => resolve(null), 5000));
+        const user = await Promise.race([AuthClient.init(), authTimeout]);
         if (user) {
             // 로그인 상태: 서버 데이터 동기화 후 바로 게임 시작
             Storage.saveProfile({ username: user.username });
-            await AuthClient.syncAfterLogin();
+            const syncTimeout = new Promise(resolve => setTimeout(resolve, 5000));
+            await Promise.race([AuthClient.syncAfterLogin(), syncTimeout]);
             this._startFreshGame();
         } else {
-            // 미로그인: 로그인 화면
+            // 미로그인 또는 인증 타임아웃: 로그인 화면
             this.showScreen('login');
         }
 
