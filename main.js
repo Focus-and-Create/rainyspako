@@ -106,8 +106,22 @@ const App = {
         Game.onStateUpdate = (state) => this.updateGameUI(state);
 
         // Supabase 인증 확인 (5초 타임아웃)
+        // 인증 SDK 로드 실패/설정 오류가 있어도 로딩 화면에 갇히지 않도록 안전 처리
         const authTimeout = new Promise(resolve => setTimeout(() => resolve(null), 5000));
-        const user = await Promise.race([AuthClient.init(), authTimeout]);
+        let user = null;
+        try {
+            const authInit = (typeof AuthClient !== 'undefined' && typeof AuthClient.init === 'function')
+                ? AuthClient.init().catch((err) => {
+                    console.warn('App: 인증 초기화 실패, 비로그인으로 계속 진행', err);
+                    return null;
+                })
+                : Promise.resolve(null);
+            user = await Promise.race([authInit, authTimeout]);
+        } catch (err) {
+            console.warn('App: 인증 확인 중 예외, 비로그인으로 계속 진행', err);
+            user = null;
+        }
+
         if (user) {
             // 로그인 상태: 서버 데이터 동기화 후 바로 게임 시작
             Storage.saveProfile({ username: user.username });
@@ -115,7 +129,7 @@ const App = {
             await Promise.race([AuthClient.syncAfterLogin(), syncTimeout]);
             this._startFreshGame();
         } else {
-            // 미로그인 또는 인증 타임아웃: 로그인 화면
+            // 미로그인/인증 실패/인증 타임아웃: 로그인 화면
             this.showScreen('login');
         }
 
