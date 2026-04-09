@@ -1,0 +1,5 @@
+name = "rainyspako"
+compatibility_date = "2026-04-09"
+
+[assets]
+directory = "."
