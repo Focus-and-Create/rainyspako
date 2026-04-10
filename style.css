@@ -1683,7 +1683,7 @@ a {
     margin: 0 auto;
     background: rgba(255, 255, 255, 0.88);
     border-radius: 24px;
-    box-shadow: 0 16px 32px rgba(28, 22, 53, 0.12);
+    box-shadow: none;
 }
 
 .login-title {
