@@ -2366,3 +2366,87 @@ a {
     font-size: 18px;
     border-radius: 10px;
 }
+
+/* ========================================= */
+/* 법적 모달 (개인정보처리방침, 이용약관) */
+/* ========================================= */
+
+.legal-modal {
+    max-width: 540px;
+    max-height: 80vh;
+    overflow-y: auto;
+    padding: 0;
+}
+.legal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 20px;
+    border-bottom: 1px solid var(--color-bg-dark);
+    position: sticky;
+    top: 0;
+    background: var(--color-surface);
+    z-index: 1;
+}
+.legal-header h3 { margin: 0; font-size: 1.1rem; }
+.legal-body {
+    padding: 20px;
+    font-size: 0.88rem;
+    line-height: 1.7;
+    color: var(--color-text-secondary);
+}
+.legal-body h4 {
+    margin: 18px 0 8px;
+    font-size: 0.95rem;
+    color: var(--color-text-primary);
+}
+.legal-body ul { padding-left: 20px; margin: 6px 0; }
+.legal-body li { margin-bottom: 4px; }
+
+/* 회원가입 동의 체크박스 */
+.auth-agree {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    font-size: 0.82rem;
+    color: var(--color-text-secondary);
+    margin: 10px 0 6px;
+    cursor: pointer;
+}
+.auth-agree input[type="checkbox"] { margin-top: 3px; }
+.auth-agree a { color: var(--color-accent); text-decoration: underline; }
+
+/* ========================================= */
+/* 접근성: reduced-motion */
+/* ========================================= */
+
+@media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+
+/* 포커스 표시 */
+:focus-visible {
+    outline: 2px solid var(--color-accent);
+    outline-offset: 2px;
+}
+
+/* 오프라인 배너 */
+.offline-banner {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: var(--color-error, #d63031);
+    color: #fff;
+    text-align: center;
+    padding: 8px;
+    font-size: 0.85rem;
+    z-index: 9999;
+    transform: translateY(-100%);
+    transition: transform 0.3s;
+}
+.offline-banner.visible { transform: translateY(0); }

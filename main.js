@@ -76,6 +76,9 @@ const App = {
         // 이벤트 리스너 등록
         this.bindEvents();
 
+        // 오프라인 감지
+        this._initOfflineDetection();
+
         // 스토리지 초기화
         Storage.init();
         this.applyModeSetting(Storage.getSetting('mode') || 'es-to-ko');
@@ -217,6 +220,27 @@ const App = {
                 this._startFreshGame();
             });
         }
+
+        // 개인정보처리방침 / 이용약관 모달
+        document.getElementById('link-privacy')?.addEventListener('click', (e) => {
+            e.preventDefault();
+            document.getElementById('privacy-modal')?.classList.remove('hidden');
+        });
+        document.getElementById('link-terms')?.addEventListener('click', (e) => {
+            e.preventDefault();
+            document.getElementById('terms-modal')?.classList.remove('hidden');
+        });
+        document.getElementById('close-privacy-btn')?.addEventListener('click', () => {
+            document.getElementById('privacy-modal')?.classList.add('hidden');
+        });
+        document.getElementById('close-terms-btn')?.addEventListener('click', () => {
+            document.getElementById('terms-modal')?.classList.add('hidden');
+        });
+        ['privacy-modal', 'terms-modal'].forEach(id => {
+            document.getElementById(id)?.querySelector('.modal-backdrop')?.addEventListener('click', () => {
+                document.getElementById(id)?.classList.add('hidden');
+            });
+        });
 
         // 키보드 입력 (게임용)
         document.addEventListener('keydown', (e) => {
@@ -688,6 +712,17 @@ const App = {
     /**
      * 회원가입 처리
      */
+    _initOfflineDetection: function() {
+        const banner = document.getElementById('offline-banner');
+        if (!banner) return;
+        const update = () => {
+            banner.classList.toggle('visible', !navigator.onLine);
+        };
+        window.addEventListener('online', update);
+        window.addEventListener('offline', update);
+        update();
+    },
+
     _sanitizeUsername: function(raw) {
         if (!raw || typeof raw !== 'string') return '';
         return raw.replace(/[<>&"'/\\]/g, '').trim().slice(0, 20);
@@ -700,6 +735,13 @@ const App = {
         const errorEl = document.getElementById('register-error');
 
         if (errorEl) errorEl.classList.add('hidden');
+
+        const agreeBox = document.getElementById('register-agree');
+        if (agreeBox && !agreeBox.checked) {
+            if (errorEl) { errorEl.textContent = '개인정보처리방침 및 이용약관에 동의해주세요'; errorEl.classList.remove('hidden'); }
+            return;
+        }
+
         if (this.elements.registerBtn) this.elements.registerBtn.disabled = true;
 
         try {
