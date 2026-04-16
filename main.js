@@ -31,6 +31,7 @@ const App = {
         livesDisplay: null,
         comboDisplay: null,
         progressBar: null,
+        progressLabel: null,
         inputField: null,
         cardZone: null,
         gameModeSelect: null,
@@ -160,6 +161,7 @@ const App = {
         this.elements.livesDisplay = document.getElementById('lives-display');
         this.elements.comboDisplay = document.getElementById('combo-display');
         this.elements.progressBar = document.getElementById('progress-bar');
+        this.elements.progressLabel = document.getElementById('progress-label');
         this.elements.inputField = document.getElementById('input-field');
         this.elements.cardZone = document.getElementById('card-zone');
         this.elements.gameModeSelect = document.getElementById('game-mode-select');
@@ -452,16 +454,6 @@ const App = {
                 this.hideStatsModal();
             });
         }
-        const statsProgressSection = document.querySelector('.stats-progress-section');
-        if (statsProgressSection) {
-            statsProgressSection.addEventListener('click', () => {
-                const unlockedWordsBox = document.getElementById('stats-unlocked-words');
-                if (!unlockedWordsBox) return;
-                const isOpen = unlockedWordsBox.classList.toggle('hidden');
-                statsProgressSection.classList.toggle('expanded', !isOpen);
-            });
-        }
-
         // 인라인 닉네임 편집
         const statsChangeNameBtn = document.getElementById('stats-change-name-btn');
         const statsUsernameDisplay = document.getElementById('stats-username-display');
@@ -639,13 +631,6 @@ const App = {
         if (messyBtn) messyBtn.textContent = isEn ? 'Free' : '자유 배열';
         if (cleanBtn) cleanBtn.textContent = isEn ? 'Neat' : '정돈 배열';
 
-        // 통계 모달 섹션
-        const masteryTitle = document.getElementById('stats-mastery-title');
-        const masteryUnit  = document.getElementById('stats-mastery-unit');
-        const progressLeft = document.getElementById('stats-progress-label-left');
-        if (masteryTitle) masteryTitle.textContent = isEn ? 'Curriculum Progress' : '커리큘럼 진도';
-        if (masteryUnit)  masteryUnit.textContent  = isEn ? 'stages'             : '스테이지';
-        if (progressLeft) progressLeft.textContent = isEn ? 'Completed'          : '완료 스테이지';
     },
 
     // =========================================
@@ -925,9 +910,13 @@ const App = {
             }
         }
         
-        // 진행도 바
+        // 진행도 바 + 라벨
         if (this.elements.progressBar) {
             this.elements.progressBar.style.width = `${state.progress}%`;
+        }
+        if (this.elements.progressLabel) {
+            this.elements.progressLabel.textContent =
+                `W${state.worldId} · S${state.stageNum} · ${state.waveCorrect} / ${state.targetWords}`;
         }
         
         // 입력 필드 동기화 (카드 정답 후 초기화)
@@ -937,11 +926,11 @@ const App = {
     },
     
     // =========================================
-    // 통계 모달
+    // 단어장 모달
     // =========================================
 
     /**
-     * 통계 모달 표시
+     * 단어장 모달 표시
      */
     showStatsModal: function() {
         // 닉네임 표시
@@ -949,33 +938,8 @@ const App = {
         const username = profile ? (profile.username || 'Player') : 'Player';
         const usernameDisplay = document.getElementById('stats-username-display');
         if (usernameDisplay) usernameDisplay.textContent = username;
-        const greeting = document.getElementById('stats-greeting');
-        const isEn = Storage.getSetting('mode') === 'en';
-        if (greeting) greeting.textContent = isEn ? `Keep it up, ${username}!` : `${username}님, 오늘도 화이팅!`;
 
-        const stats = Storage.getStats();
-
-        const totalGames = stats.totalGames || 0;
-        const totalScore = stats.globalScore || 0;
-        const totalCorrect = stats.totalCorrect || 0;
-        const totalWrong = stats.totalWrong || 0;
-        const streak = stats.currentStreak || 0;
-
-        // 값 채우기
-        document.getElementById('stats-total-games').textContent = totalGames;
-        document.getElementById('stats-total-score').textContent = totalScore.toLocaleString();
-        document.getElementById('stats-total-correct').textContent = totalCorrect.toLocaleString();
-        document.getElementById('stats-total-wrong').textContent = totalWrong.toLocaleString();
-        document.getElementById('stats-streak').textContent = `${streak} days`;
-
-        // 정확도/비율 계산
-        const total = totalCorrect + totalWrong;
-        const accuracy = total > 0 ? Math.round((totalCorrect / total) * 100) : 0;
-        document.getElementById('stats-accuracy').textContent = `${accuracy}%`;
-        const ratio = totalWrong > 0 ? `${(totalCorrect / totalWrong).toFixed(1)}:1` : `${totalCorrect}:0`;
-        document.getElementById('stats-ratio').textContent = ratio;
-
-        // 커리큘럼 진도율: 완료된 스테이지 수 / 전체 스테이지 수
+        // 커리큘럼 진도율
         const clearedStages = Storage.getClearedStageCount();
         const totalStages = CONFIG.WORLDS.reduce((sum, w) => sum + w.stages, 0);
         const progressPct = totalStages > 0 ? Math.round((clearedStages / totalStages) * 100) : 0;
@@ -984,67 +948,75 @@ const App = {
         document.getElementById('stats-progress-fill').style.width = `${progressPct}%`;
         const nextGoalEl = document.getElementById('stats-next-goal');
         if (nextGoalEl) nextGoalEl.textContent = `${progressPct}%`;
-        this.renderUnlockedWords();
 
-        // 최근 활동 바(간이 시각화)
-        const bars = document.querySelectorAll('#stats-week-bars .bar');
-        if (bars.length > 0) {
-            const seed = Math.max(1, totalGames + totalCorrect + streak);
-            bars.forEach((bar, i) => {
-                const wave = 24 + ((seed * (i + 3)) % 68);
-                bar.style.height = `${wave}%`;
-                bar.style.opacity = i === bars.length - 1 ? '1' : '0.72';
-            });
-        }
-        // 모달 표시
+        // 단어 목록 렌더링
+        this.renderWeakWords();
+        this.renderLearnedWords();
+
         document.getElementById('stats-modal').classList.remove('hidden');
     },
 
     /**
-     * 통계 공유 텍스트 복사/공유
-     */
-    shareStatsSummary: async function() {
-        const totalGames = document.getElementById('stats-total-games')?.textContent || '0';
-        const accuracy = document.getElementById('stats-accuracy')?.textContent || '0%';
-        const streak = document.getElementById('stats-streak')?.textContent || '0';
-        const progress = `${document.getElementById('stats-cleared-count')?.textContent || '0'}/${document.getElementById('stats-total-stages')?.textContent || '0'}`;
-        const score = document.getElementById('stats-total-score')?.textContent || '0';
-        const text = `Rainy Spako 성과
-- Sessions: ${totalGames}
-- Score: ${score}
-- Accuracy: ${accuracy}
-- Streak: ${streak}
-- Mastery: ${progress} correct`;
-
-        try {
-            if (navigator.share) {
-                await navigator.share({ title: 'Rainy Spako Stats', text });
-            } else if (navigator.clipboard) {
-                await navigator.clipboard.writeText(text);
-                alert('통계 요약이 클립보드에 복사되었습니다.');
-            }
-        } catch (err) {
-            console.warn('Stats share skipped:', err);
-        }
-    },
-
-    /**
-     * 통계 모달 숨기기
+     * 단어장 모달 숨기기
      */
     hideStatsModal: function() {
         document.getElementById('stats-modal').classList.add('hidden');
-        document.getElementById('stats-unlocked-words')?.classList.add('hidden');
-        document.querySelector('.stats-progress-section')?.classList.remove('expanded');
     },
 
     /**
-     * 잠금 해제 단어 목록 렌더링
+     * 취약 단어 목록 렌더링 (wrongCount > 0인 단어)
      */
-    renderUnlockedWords: function() {
-        const unlockedWordsBox = document.getElementById('stats-unlocked-words');
-        if (!unlockedWordsBox) return;
+    renderWeakWords: function() {
+        const container = document.getElementById('weak-words-list');
+        const countEl = document.getElementById('weak-words-count');
+        if (!container) return;
 
-        const unlockedWords = [];
+        const wrongWords = Storage.getWrongWords()
+            .filter(w => w.wrongCount > 0)
+            .sort((a, b) => b.wrongCount - a.wrongCount);
+
+        if (countEl) countEl.textContent = `(${wrongWords.length})`;
+
+        container.textContent = '';
+        if (wrongWords.length === 0) {
+            const p = document.createElement('p');
+            p.className = 'wordbook-empty';
+            p.textContent = '취약 단어가 없어요!';
+            container.appendChild(p);
+            return;
+        }
+
+        wrongWords.forEach((word) => {
+            const chip = document.createElement('span');
+            chip.className = 'wordbook-chip wordbook-chip-weak';
+            const strong = document.createElement('strong');
+            strong.textContent = word.es;
+            const em = document.createElement('em');
+            em.textContent = word.ko || '-';
+            const badge = document.createElement('span');
+            badge.className = 'wordbook-badge-weak';
+            badge.textContent = `✕${word.wrongCount}`;
+            chip.appendChild(strong);
+            chip.appendChild(em);
+            chip.appendChild(badge);
+            container.appendChild(chip);
+        });
+    },
+
+    /**
+     * 배운 단어 목록 렌더링 (잠금해제된 스테이지의 단어, 숙련도 표시)
+     */
+    renderLearnedWords: function() {
+        const container = document.getElementById('learned-words-list');
+        const countEl = document.getElementById('learned-words-count');
+        if (!container) return;
+
+        // 취약 단어 set
+        const wrongSet = new Map(
+            Storage.getWrongWords().map(w => [w.es, w.wrongCount])
+        );
+
+        const learnedWords = [];
         const seen = new Set();
 
         CONFIG.WORLDS.forEach((world) => {
@@ -1054,31 +1026,35 @@ const App = {
                 words.forEach((word) => {
                     if (!word?.es || seen.has(word.es)) return;
                     seen.add(word.es);
-                    unlockedWords.push(word);
+                    learnedWords.push(word);
                 });
             }
         });
 
-        if (unlockedWords.length === 0) {
-            unlockedWordsBox.textContent = '';
-            const emptyP = document.createElement('p');
-            emptyP.className = 'stats-unlocked-empty';
-            emptyP.textContent = '아직 해금된 단어가 없습니다.';
-            unlockedWordsBox.appendChild(emptyP);
+        if (countEl) countEl.textContent = `(${learnedWords.length})`;
+
+        container.textContent = '';
+        if (learnedWords.length === 0) {
+            const p = document.createElement('p');
+            p.className = 'wordbook-empty';
+            p.textContent = '아직 배운 단어가 없어요.';
+            container.appendChild(p);
             return;
         }
 
-        unlockedWordsBox.textContent = '';
-        unlockedWords.forEach((word) => {
+        learnedWords.forEach((word) => {
+            const isWeak = wrongSet.has(word.es) && wrongSet.get(word.es) > 0;
             const chip = document.createElement('span');
-            chip.className = 'stats-word-chip';
+            chip.className = isWeak
+                ? 'wordbook-chip wordbook-chip-weak'
+                : 'wordbook-chip wordbook-chip-ok';
             const strong = document.createElement('strong');
             strong.textContent = word.es;
             const em = document.createElement('em');
             em.textContent = word.ko || '-';
             chip.appendChild(strong);
             chip.appendChild(em);
-            unlockedWordsBox.appendChild(chip);
+            container.appendChild(chip);
         });
     },
 

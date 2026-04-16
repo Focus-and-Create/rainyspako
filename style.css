@@ -532,8 +532,21 @@ a {
 }
 
 /* ========================================= */
-/* 진행도 바 */
+/* 진행도 라벨 + 바 */
 /* ========================================= */
+.progress-label {
+    display: block;
+    width: 100%;
+    max-width: var(--canvas-width);
+    margin: 0 auto;
+    font-size: 11px;
+    color: #aaa;
+    text-align: right;
+    padding: 4px 6px 1px;
+    letter-spacing: 0.04em;
+    font-variant-numeric: tabular-nums;
+}
+
 .progress-container {
     width: 100%;
     max-width: var(--canvas-width);
@@ -1265,6 +1278,72 @@ a {
 .stats-unlocked-empty {
     font-size: 14px;
     color: #5a6061;
+}
+
+/* ========================================= */
+/* 단어장 섹션 */
+/* ========================================= */
+.wordbook-section {
+    padding: 20px 32px 4px;
+    border-top: 1px solid #ebeeef;
+}
+.wordbook-count {
+    font-size: 12px;
+    font-weight: normal;
+    color: #aaa;
+    margin-left: 6px;
+}
+.wordbook-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-top: 10px;
+    padding-bottom: 4px;
+}
+.wordbook-empty {
+    font-size: 13px;
+    color: #aaa;
+    margin: 4px 0;
+}
+.wordbook-chip {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 4px 9px;
+    border-radius: 20px;
+    font-size: 12px;
+    line-height: 1.4;
+}
+.wordbook-chip strong {
+    font-weight: 700;
+    font-size: 12px;
+}
+.wordbook-chip em {
+    font-style: normal;
+    font-size: 11px;
+    opacity: 0.75;
+}
+.wordbook-chip-ok {
+    background: #f0fff4;
+    border: 1px solid #86efac;
+    color: #166534;
+}
+.wordbook-chip-ok strong {
+    color: #15803d;
+}
+.wordbook-chip-weak {
+    background: #fff7ed;
+    border: 1px solid #fdba74;
+    color: #7c2d12;
+}
+.wordbook-chip-weak strong {
+    color: #c2410c;
+}
+.wordbook-badge-weak {
+    font-size: 10px;
+    font-weight: 700;
+    color: #dc2626;
+    opacity: 0.85;
 }
 
 /* 숫자 통계 그리드 - 벤토 스타일 */
