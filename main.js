@@ -1016,13 +1016,14 @@ const App = {
             return;
         }
 
+        const isEn = Storage.getSetting('mode') === 'en';
         wrongWords.forEach((word) => {
             const chip = document.createElement('span');
             chip.className = 'wordbook-chip wordbook-chip-weak';
             const strong = document.createElement('strong');
             strong.textContent = word.es;
             const em = document.createElement('em');
-            em.textContent = word.ko || '-';
+            em.textContent = (isEn ? (WordManager._enMap?.[word.es] || word.ko) : word.ko) || '-';
             const badge = document.createElement('span');
             badge.className = 'wordbook-badge-weak';
             badge.textContent = `✕${word.wrongCount}`;
@@ -1074,6 +1075,7 @@ const App = {
             return;
         }
 
+        const isEn = Storage.getSetting('mode') === 'en';
         learnedWords.forEach((word) => {
             const isWeak = wrongSet.has(word.es) && wrongSet.get(word.es) > 0;
             const chip = document.createElement('span');
@@ -1083,7 +1085,7 @@ const App = {
             const strong = document.createElement('strong');
             strong.textContent = word.es;
             const em = document.createElement('em');
-            em.textContent = word.ko || '-';
+            em.textContent = (isEn ? (word.en || WordManager._enMap?.[word.es] || word.ko) : word.ko) || '-';
             chip.appendChild(strong);
             chip.appendChild(em);
             container.appendChild(chip);
