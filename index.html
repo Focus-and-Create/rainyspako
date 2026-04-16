@@ -254,7 +254,7 @@
                     <div>
                         <h3 class="modal-title" id="stats-username-display">Rainy Spako</h3>
                         <input id="stats-name-input" class="stats-name-input hidden" type="text" placeholder="새 닉네임" autocomplete="off">
-                        <p class="stats-kicker">단어장</p>
+                        <p class="stats-kicker" id="stats-wordbook-kicker">단어장</p>
                     </div>
                 </div>
                 <div class="stats-header-actions">
@@ -273,8 +273,8 @@
 
                 <section class="stats-progress-section dashboard-progress">
                     <div class="stats-progress-head">
-                        <h4 class="stats-section-title">커리큘럼 진도</h4>
-                        <div class="stats-progress-chip"><span id="stats-cleared-count">0</span> / <span id="stats-total-stages">340</span> 스테이지</div>
+                        <h4 class="stats-section-title" id="stats-curriculum-title">커리큘럼 진도</h4>
+                        <div class="stats-progress-chip"><span id="stats-cleared-count">0</span> / <span id="stats-total-stages">340</span> <span id="stats-stage-unit">스테이지</span></div>
                     </div>
                     <div class="stats-progress-track">
                         <div id="stats-progress-fill" class="stats-progress-fill"></div>
@@ -283,12 +283,12 @@
                 </section>
 
                 <section class="wordbook-section" id="weak-words-section">
-                    <h4 class="stats-section-title">취약 단어 <span id="weak-words-count" class="wordbook-count"></span></h4>
+                    <h4 class="stats-section-title"><span id="stats-weak-title">취약 단어</span> <span id="weak-words-count" class="wordbook-count"></span></h4>
                     <div id="weak-words-list" class="wordbook-list"></div>
                 </section>
 
                 <section class="wordbook-section" id="learned-words-section">
-                    <h4 class="stats-section-title">배운 단어 <span id="learned-words-count" class="wordbook-count"></span></h4>
+                    <h4 class="stats-section-title"><span id="stats-learned-title">배운 단어</span> <span id="learned-words-count" class="wordbook-count"></span></h4>
                     <div id="learned-words-list" class="wordbook-list"></div>
                 </section>
 

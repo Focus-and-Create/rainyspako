@@ -631,6 +631,34 @@ const App = {
         if (messyBtn) messyBtn.textContent = isEn ? 'Free' : '자유 배열';
         if (cleanBtn) cleanBtn.textContent = isEn ? 'Neat' : '정돈 배열';
 
+        // 단어장 모달 텍스트
+        const wordbookKicker = document.getElementById('stats-wordbook-kicker');
+        if (wordbookKicker) wordbookKicker.textContent = isEn ? 'Vocabulary' : '단어장';
+
+        const curriculumTitle = document.getElementById('stats-curriculum-title');
+        if (curriculumTitle) curriculumTitle.textContent = isEn ? 'Curriculum Progress' : '커리큘럼 진도';
+
+        const stageUnit = document.getElementById('stats-stage-unit');
+        if (stageUnit) stageUnit.textContent = isEn ? 'stages' : '스테이지';
+
+        const weakTitle = document.getElementById('stats-weak-title');
+        if (weakTitle) weakTitle.textContent = isEn ? 'Weak Words' : '취약 단어';
+
+        const learnedTitle = document.getElementById('stats-learned-title');
+        if (learnedTitle) learnedTitle.textContent = isEn ? 'Learned Words' : '배운 단어';
+
+        const closeAction = document.getElementById('stats-close-action');
+        if (closeAction) closeAction.textContent = isEn ? 'Close' : '닫기';
+
+        const statsNameInput = document.getElementById('stats-name-input');
+        if (statsNameInput) statsNameInput.placeholder = isEn ? 'New nickname' : '새 닉네임';
+
+        // 네트워크 배너
+        const networkBanner = document.getElementById('network-banner');
+        if (networkBanner) networkBanner.textContent = isEn
+            ? 'You are offline. Please check your network connection.'
+            : '오프라인 상태입니다. 네트워크 연결을 확인해 주세요.';
+
     },
 
     // =========================================
@@ -981,7 +1009,9 @@ const App = {
         if (wrongWords.length === 0) {
             const p = document.createElement('p');
             p.className = 'wordbook-empty';
-            p.textContent = '취약 단어가 없어요!';
+            p.textContent = Storage.getSetting('mode') === 'en'
+                ? 'No weak words yet!'
+                : '취약 단어가 없어요!';
             container.appendChild(p);
             return;
         }
@@ -1037,7 +1067,9 @@ const App = {
         if (learnedWords.length === 0) {
             const p = document.createElement('p');
             p.className = 'wordbook-empty';
-            p.textContent = '아직 배운 단어가 없어요.';
+            p.textContent = Storage.getSetting('mode') === 'en'
+                ? "You haven't learned any words yet."
+                : '아직 배운 단어가 없어요.';
             container.appendChild(p);
             return;
         }
