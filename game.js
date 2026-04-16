@@ -821,7 +821,11 @@ const Game = {
             currentInput: this.currentInput,
             isRunning: this.state.isRunning,
             isPaused: this.state.isPaused,
-            speedModifier: 1.0
+            speedModifier: 1.0,
+            worldId: this.state.worldId,
+            stageNum: this.state.stageNum,
+            waveCorrect: this.state.waveCorrect,
+            targetWords: target,
         };
     }
 };
