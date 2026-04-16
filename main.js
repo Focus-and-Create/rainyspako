@@ -659,6 +659,16 @@ const App = {
             ? 'You are offline. Please check your network connection.'
             : '오프라인 상태입니다. 네트워크 연결을 확인해 주세요.';
 
+        // 법적 링크
+        const legalPrivacy = document.getElementById('legal-privacy-link');
+        if (legalPrivacy) legalPrivacy.textContent = isEn ? 'Privacy Policy' : '개인정보처리방침';
+
+        const legalTerms = document.getElementById('legal-terms-link');
+        if (legalTerms) legalTerms.textContent = isEn ? 'Terms of Service' : '이용약관';
+
+        const legalDeletion = document.getElementById('legal-deletion-link');
+        if (legalDeletion) legalDeletion.textContent = isEn ? 'Account/Data Deletion' : '계정/데이터 삭제 요청';
+
     },
 
     // =========================================

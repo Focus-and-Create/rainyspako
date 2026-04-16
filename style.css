@@ -1047,22 +1047,22 @@ a {
     font-family: var(--font-family);
     color: var(--color-text-primary);
     background-color: #ffffff;
-    border: 2px solid rgba(180, 140, 220, 0.3);
+    border: 1px solid #dde4e5;
     border-radius: var(--radius-md);
     outline: none;
     cursor: pointer;
     transition: all 0.2s ease;
     -webkit-appearance: none;
     appearance: none;
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' fill='%23e91e8c' viewBox='0 0 16 16'%3E%3Cpath d='M8 11L3 6h10z'/%3E%3C/svg%3E");
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' fill='%235a6061' viewBox='0 0 16 16'%3E%3Cpath d='M8 11L3 6h10z'/%3E%3C/svg%3E");
     background-repeat: no-repeat;
     background-position: right 12px center;
     padding-right: 36px;
 }
 
 .mode-select:focus {
-    border-color: var(--color-accent);
-    box-shadow: 0 0 0 3px var(--color-accent-glow);
+    border-color: #0053db;
+    box-shadow: 0 0 0 3px rgba(0, 83, 219, 0.12);
 }
 
 .mode-select option {
@@ -1196,13 +1196,13 @@ a {
 /* 모드 선택 (stats 내) */
 .stats-mode-container {
     padding: 16px 32px;
-    border-bottom: 1px solid #ebeeef;
     margin-top: 0;
 }
 
 /* Stage Progress 바 */
 .dashboard-progress {
-    padding: 0 32px 32px;
+    padding: 16px 32px 32px;
+    border-top: 1px solid #ebeeef;
     width: 100%;
     box-sizing: border-box;
     border-bottom: none;
