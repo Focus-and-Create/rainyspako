@@ -4,60 +4,51 @@
  * "가랑비" 모델: 스테이지 경계 없이 연속 플레이, 복습+새 단어가 자연스럽게 흐름
  */
 
-let _audioCtx = null;
-function _getAudioCtx() {
-    if (!_audioCtx || _audioCtx.state === 'closed') {
-        _audioCtx = new (window.AudioContext || window.webkitAudioContext)();
-    }
-    return _audioCtx;
-}
-
 function speakSpanish(text) {
     if (!window.speechSynthesis) return;
     const synth = window.speechSynthesis;
-    synth.cancel();
 
     function doSpeak() {
+        synth.cancel();
         const utt = new SpeechSynthesisUtterance(text);
         const voices = synth.getVoices();
-        const esVoice = voices.find(v => v.lang.startsWith('es'));
+        const esVoice = voices.find(v => /^es/i.test(v.lang));
         if (esVoice) utt.voice = esVoice;
         utt.lang = 'es-ES';
-        utt.rate = 0.9;
+        utt.rate = 0.85;
+        utt.volume = 1;
         synth.speak(utt);
     }
 
-    if (synth.getVoices().length > 0) {
+    const voices = synth.getVoices();
+    if (voices.length > 0) {
         doSpeak();
     } else {
-        synth.addEventListener('voiceschanged', doSpeak, { once: true });
-        // 일부 브라우저는 voiceschanged가 안 오므로 짧은 delay 후 재시도
-        setTimeout(() => { if (!synth.speaking) doSpeak(); }, 200);
+        synth.onvoiceschanged = () => { synth.onvoiceschanged = null; doSpeak(); };
+        setTimeout(doSpeak, 300);
     }
 }
 
 function playErrorSound() {
     try {
-        const ctx = _getAudioCtx();
-        const play = () => {
-            const osc = ctx.createOscillator();
-            const gain = ctx.createGain();
-            osc.connect(gain);
-            gain.connect(ctx.destination);
-            osc.type = 'sawtooth';
-            osc.frequency.setValueAtTime(220, ctx.currentTime);
-            osc.frequency.exponentialRampToValueAtTime(80, ctx.currentTime + 0.3);
-            gain.gain.setValueAtTime(0.3, ctx.currentTime);
-            gain.gain.exponentialRampToValueAtTime(0.001, ctx.currentTime + 0.3);
-            osc.start(ctx.currentTime);
-            osc.stop(ctx.currentTime + 0.3);
-        };
-        if (ctx.state === 'suspended') {
-            ctx.resume().then(play);
-        } else {
-            play();
-        }
-    } catch (e) { /* 오디오 미지원 환경 무시 */ }
+        const AudioCtx = window.AudioContext || window.webkitAudioContext;
+        if (!AudioCtx) return;
+        const ctx = new AudioCtx();
+        const osc = ctx.createOscillator();
+        const gain = ctx.createGain();
+        osc.connect(gain);
+        gain.connect(ctx.destination);
+        osc.type = 'square';
+        osc.frequency.setValueAtTime(300, ctx.currentTime);
+        osc.frequency.exponentialRampToValueAtTime(80, ctx.currentTime + 0.25);
+        gain.gain.setValueAtTime(0.4, ctx.currentTime);
+        gain.gain.exponentialRampToValueAtTime(0.001, ctx.currentTime + 0.25);
+        osc.start(ctx.currentTime);
+        osc.stop(ctx.currentTime + 0.25);
+        osc.onended = () => ctx.close();
+    } catch (e) {
+        console.error('[playErrorSound]', e);
+    }
 }
 
 const Game = {
