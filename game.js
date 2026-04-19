@@ -4,6 +4,32 @@
  * "가랑비" 모델: 스테이지 경계 없이 연속 플레이, 복습+새 단어가 자연스럽게 흐름
  */
 
+function speakSpanish(text) {
+    if (!window.speechSynthesis) return;
+    window.speechSynthesis.cancel();
+    const utt = new SpeechSynthesisUtterance(text);
+    utt.lang = 'es-ES';
+    utt.rate = 0.9;
+    window.speechSynthesis.speak(utt);
+}
+
+function playErrorSound() {
+    try {
+        const ctx = new (window.AudioContext || window.webkitAudioContext)();
+        const osc = ctx.createOscillator();
+        const gain = ctx.createGain();
+        osc.connect(gain);
+        gain.connect(ctx.destination);
+        osc.type = 'sawtooth';
+        osc.frequency.setValueAtTime(220, ctx.currentTime);
+        osc.frequency.exponentialRampToValueAtTime(80, ctx.currentTime + 0.3);
+        gain.gain.setValueAtTime(0.3, ctx.currentTime);
+        gain.gain.exponentialRampToValueAtTime(0.001, ctx.currentTime + 0.3);
+        osc.start(ctx.currentTime);
+        osc.stop(ctx.currentTime + 0.3);
+    } catch (e) { /* 오디오 미지원 환경 무시 */ }
+}
+
 const Game = {
     // =========================================
     // 캔버스 및 컨텍스트 (초기화만, 카드 모드에선 미사용)
@@ -397,6 +423,7 @@ const Game = {
         const activeCard = document.querySelector('.cg-active');
 
         if (isCorrect) {
+            speakSpanish(this._currentWord.spanish);
             this.handleCorrectAnswer(this._currentWord);
             if (activeCard) {
                 activeCard.classList.replace('cg-active', 'cg-ok');
@@ -422,6 +449,7 @@ const Game = {
                 this._wrongOnCurrent = true;
             }
 
+            playErrorSound();
             if (activeCard) {
                 activeCard.classList.replace('cg-active', 'cg-wrong');
                 activeCard.querySelector('.cg-word').textContent = `✗ ${answer}`;
