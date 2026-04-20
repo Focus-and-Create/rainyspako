@@ -16,7 +16,7 @@ function speakSpanish(text) {
         const esVoice = voices.find(v => /^es/i.test(v.lang));
         console.log('[speakSpanish] voices:', voices.length, 'esVoice:', esVoice?.name);
         if (esVoice) utt.voice = esVoice;
-        utt.lang = 'es-ES';
+        utt.lang = esVoice ? esVoice.lang : 'es';
         utt.rate = 0.85;
         utt.volume = 1;
         synth.speak(utt);
