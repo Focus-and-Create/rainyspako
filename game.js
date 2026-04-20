@@ -5,6 +5,7 @@
  */
 
 function speakSpanish(text) {
+    console.log('[speakSpanish] called:', text, 'synth:', !!window.speechSynthesis);
     if (!window.speechSynthesis) return;
     const synth = window.speechSynthesis;
 
@@ -13,8 +14,9 @@ function speakSpanish(text) {
         const utt = new SpeechSynthesisUtterance(text);
         const voices = synth.getVoices();
         const esVoice = voices.find(v => /^es/i.test(v.lang));
+        console.log('[speakSpanish] voices:', voices.length, 'esVoice:', esVoice?.name);
         if (esVoice) utt.voice = esVoice;
-        utt.lang = 'es-ES';
+        utt.lang = esVoice ? esVoice.lang : 'es';
         utt.rate = 0.85;
         utt.volume = 1;
         synth.speak(utt);
@@ -30,22 +32,28 @@ function speakSpanish(text) {
 }
 
 function playErrorSound() {
+    console.log('[playErrorSound] called');
     try {
         const AudioCtx = window.AudioContext || window.webkitAudioContext;
-        if (!AudioCtx) return;
+        if (!AudioCtx) { console.warn('[playErrorSound] AudioContext not supported'); return; }
         const ctx = new AudioCtx();
-        const osc = ctx.createOscillator();
-        const gain = ctx.createGain();
-        osc.connect(gain);
-        gain.connect(ctx.destination);
-        osc.type = 'square';
-        osc.frequency.setValueAtTime(300, ctx.currentTime);
-        osc.frequency.exponentialRampToValueAtTime(80, ctx.currentTime + 0.25);
-        gain.gain.setValueAtTime(0.4, ctx.currentTime);
-        gain.gain.exponentialRampToValueAtTime(0.001, ctx.currentTime + 0.25);
-        osc.start(ctx.currentTime);
-        osc.stop(ctx.currentTime + 0.25);
-        osc.onended = () => ctx.close();
+        console.log('[playErrorSound] ctx state:', ctx.state);
+        const resume = ctx.state === 'suspended' ? ctx.resume() : Promise.resolve();
+        resume.then(() => {
+            const t = ctx.currentTime + 0.01;
+            const osc = ctx.createOscillator();
+            const gain = ctx.createGain();
+            osc.connect(gain);
+            gain.connect(ctx.destination);
+            osc.type = 'square';
+            osc.frequency.setValueAtTime(300, t);
+            osc.frequency.exponentialRampToValueAtTime(80, t + 0.25);
+            gain.gain.setValueAtTime(0.4, t);
+            gain.gain.exponentialRampToValueAtTime(0.001, t + 0.25);
+            osc.start(t);
+            osc.stop(t + 0.25);
+            osc.onended = () => ctx.close();
+        });
     } catch (e) {
         console.error('[playErrorSound]', e);
     }
