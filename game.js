@@ -4,6 +4,19 @@
  * "가랑비" 모델: 스테이지 경계 없이 연속 플레이, 복습+새 단어가 자연스럽게 흐름
  */
 
+let _audioCtx = null;
+
+function _initAudio() {
+    try {
+        const AudioCtx = window.AudioContext || window.webkitAudioContext;
+        if (!AudioCtx) return;
+        if (!_audioCtx || _audioCtx.state === 'closed') {
+            _audioCtx = new AudioCtx();
+        }
+        if (_audioCtx.state === 'suspended') _audioCtx.resume();
+    } catch(e) {}
+}
+
 function speakSpanish(text) {
     console.log('[speakSpanish] called:', text, 'synth:', !!window.speechSynthesis);
     if (!window.speechSynthesis) return;
@@ -32,29 +45,22 @@ function speakSpanish(text) {
 }
 
 function playErrorSound() {
-    console.log('[playErrorSound] called');
+    console.log('[playErrorSound] called, ctx state:', _audioCtx?.state);
     try {
-        const AudioCtx = window.AudioContext || window.webkitAudioContext;
-        if (!AudioCtx) { console.warn('[playErrorSound] AudioContext not supported'); return; }
-        const ctx = new AudioCtx();
-        console.log('[playErrorSound] ctx state:', ctx.state);
-        const resume = ctx.state === 'suspended' ? ctx.resume() : Promise.resolve();
-        resume.then(() => {
-            const t = ctx.currentTime + 0.01;
-            const osc = ctx.createOscillator();
-            const gain = ctx.createGain();
-            osc.connect(gain);
-            gain.connect(ctx.destination);
-            osc.type = 'square';
-            osc.frequency.setValueAtTime(300, t);
-            osc.frequency.exponentialRampToValueAtTime(80, t + 0.25);
-            gain.gain.setValueAtTime(0.4, t);
-            gain.gain.exponentialRampToValueAtTime(0.001, t + 0.25);
-            osc.start(t);
-            osc.stop(t + 0.25);
-            osc.onended = () => ctx.close();
-        });
-    } catch (e) {
+        if (!_audioCtx || _audioCtx.state === 'closed') _initAudio();
+        if (!_audioCtx) return;
+        if (_audioCtx.state === 'suspended') _audioCtx.resume();
+        const ctx = _audioCtx;
+        const osc = ctx.createOscillator();
+        const gain = ctx.createGain();
+        osc.connect(gain);
+        gain.connect(ctx.destination);
+        osc.frequency.value = 220;
+        gain.gain.value = 0.4;
+        osc.start();
+        osc.stop(ctx.currentTime + 0.3);
+        osc.onended = () => { try { osc.disconnect(); gain.disconnect(); } catch(e){} };
+    } catch(e) {
         console.error('[playErrorSound]', e);
     }
 }
@@ -236,6 +242,7 @@ const Game = {
             this._scoreLoaded = true;
         }
         this._stageStartScore = this.sessionScore;
+        _initAudio();
 
         // 상태 초기화
         this.state = {
