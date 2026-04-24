@@ -161,6 +161,34 @@ const AuthClient = {
     // 데이터 동기화
     // =========================================
 
+    _lastSyncTime: 0,
+    _SYNC_THROTTLE_MS: 60 * 1000,
+
+    /**
+     * 서버에서 최신 진도를 가져와 localStorage에 반영.
+     * 60초 쓰로틀 적용. 업데이트 발생 시 true 반환.
+     */
+    async syncFromServer() {
+        if (!this._user) return false;
+        const now = Date.now();
+        if (now - this._lastSyncTime < this._SYNC_THROTTLE_MS) return false;
+
+        try {
+            const userId = this._user.id;
+            const [stageRes, statsRes, jumpRes] = await Promise.all([
+                this._sb.from('stage_results').select('*').eq('user_id', userId),
+                this._sb.from('user_stats').select('*').eq('user_id', userId).single(),
+                this._sb.from('jump_usage').select('*').eq('user_id', userId).single()
+            ]);
+            this._restoreToLocalStorage(stageRes.data || [], statsRes.data, jumpRes.data);
+            this._lastSyncTime = Date.now();
+            return true;
+        } catch (err) {
+            console.warn('AuthClient: syncFromServer 실패', err);
+            return false;
+        }
+    },
+
     async syncAfterLogin() {
         if (!this._user) return;
         const userId = this._user.id;

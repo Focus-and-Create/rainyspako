@@ -268,6 +268,24 @@ const App = {
         window.addEventListener('online', () => this._updateNetworkBanner());
         window.addEventListener('offline', () => this._updateNetworkBanner());
 
+        // 탭이 다시 활성화될 때 서버에서 진도 동기화
+        document.addEventListener('visibilitychange', () => {
+            if (document.visibilityState === 'visible' && typeof AuthClient !== 'undefined' && AuthClient.isLoggedIn()) {
+                AuthClient.syncFromServer().then(updated => {
+                    if (updated) this._applyServerSync();
+                });
+            }
+        });
+
+        // 5분마다 서버 진도 폴링 (다른 기기 변경 반영)
+        setInterval(() => {
+            if (typeof AuthClient !== 'undefined' && AuthClient.isLoggedIn()) {
+                AuthClient.syncFromServer().then(updated => {
+                    if (updated) this._applyServerSync();
+                });
+            }
+        }, 5 * 60 * 1000);
+
         // 닉네임 변경 제출 버튼
         if (this.elements.loginSubmitEditBtn) {
             this.elements.loginSubmitEditBtn.addEventListener('click', () => this.handleEditName());
@@ -498,6 +516,17 @@ const App = {
             });
         }
 
+    },
+
+    /**
+     * 서버 동기화 후 UI 갱신: 점수 반영 + 현재 게임 세션 재시작
+     */
+    _applyServerSync: function() {
+        const globalScore = Storage.getGlobalScore();
+        if (this.elements.scoreDisplay) this.elements.scoreDisplay.textContent = globalScore.toLocaleString();
+        if (this.currentScreen === 'game') {
+            this._startFreshGame();
+        }
     },
 
     /** @type {{worldId:number, stageNum:number}|null} 마지막으로 시작한 세션의 스테이지 */
